@@ -4,15 +4,18 @@ include_directories(${NTA_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../include/nt
 add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FontMap.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FPSLimiter.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLMConsoleOutput.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLSLProgram.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLTexture.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/HuffmanLeaf.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/HuffmanNode.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/InputManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/IOManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Logger.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/nta.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/MyEngine.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ParticleBatch2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ParticleEngine2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/PrimitiveBatch.cpp

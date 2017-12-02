@@ -33,7 +33,8 @@ namespace nta {
             seed->addRect(c, glm::vec2(glyphSurface->w, glyphSurface->h));
             SDL_FreeSurface(glyphSurface);
         }
-        seed->position();
+        static Search::SimulatedAnnealer annealer;
+        seed = (FontMap*)annealer.getSolution(seed, 1); seed->position();
         glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x), toPower2(seed->getBoundingDimensions().y));
         //create initial gray texture
         glGenTextures(1, &m_texId);
