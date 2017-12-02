@@ -3,7 +3,6 @@
 
 #include <map>
 
-#include "../Search/SimulatedAnnealer.h"
 #include "SpriteBatch.h"
 
 #define FIRST_PRINTABLE_CHAR ((char)32)  //space
@@ -21,7 +20,7 @@ namespace nta {
         glm::vec2                   size;
     };
     ///represents the organization of a texture containing the characters
-    class FontMap : public Search::AnnealNode {
+    class FontMap {
     private:
         ///a rectangle representing the location of a char in the FontMap
         struct CharRect {
@@ -47,10 +46,6 @@ namespace nta {
         ///positions map so that the topleft is at (0,0)
         void                        position();
 
-        ///returns a FontMap* that slightly differs from this one (used for simulated annealing)
-        Search::AnnealNode*         getNeighbor() const;
-        ///returns the area of this FontMap (used for simulated annealing)
-        float                       cost() const;
         friend                      SpriteFont;
     };
     ///Loads in a .ttf file, creates a font texture from it, and is then used to render text

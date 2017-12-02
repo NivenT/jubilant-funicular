@@ -26,15 +26,14 @@ namespace nta {
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Loaded font");
         Logger::writeToLog("Creating sprite font (" + toString(size) + ")...");
-        FontMap* seed = new FontMap;
+        FontMap* seed = new FontMap; // TODO: Rename now that we're no longer using simulated annealing
         SDL_Surface* glyphSurface = nullptr;
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
             glyphSurface = TTF_RenderGlyph_Blended(font, c, {255, 255, 255, 255});
             seed->addRect(c, glm::vec2(glyphSurface->w, glyphSurface->h));
             SDL_FreeSurface(glyphSurface);
         }
-        static Search::SimulatedAnnealer annealer;
-        seed = (FontMap*)annealer.getSolution(seed, 1); seed->position();
+        seed->position();
         glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x), toPower2(seed->getBoundingDimensions().y));
         //create initial gray texture
         glGenTextures(1, &m_texId);

@@ -76,17 +76,4 @@ namespace nta {
             rect.topLeft -= topLeft;
         });
     }
-    Search::AnnealNode* FontMap::getNeighbor() const {
-        FontMap* ret = new FontMap;
-        for (int i = 0; i < NUM_PRINTABLE_CHARS; i++) {
-            ret->m_rects[i] = m_rects[i];
-        }
-        char c = nta::Random::randInt(FIRST_PRINTABLE_CHAR, LAST_PRINTABLE_CHAR);
-        ret->addRect(c, m_rects[c-FIRST_PRINTABLE_CHAR].dimensions);
-        return ret;
-    }
-    float FontMap::cost() const {
-        glm::vec2 dimensions = getBoundingDimensions();
-        return dimensions.x*dimensions.y;
-    }
 }
