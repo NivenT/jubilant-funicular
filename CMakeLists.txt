@@ -1,17 +1,16 @@
 cmake_minimum_required(VERSION 2.8.7)
 
 # Allow use of project folders for IDEs like Visual Studio, so we
-# could organize projects into relevant folders: "cpr", "tests" & "external (libraries)".
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake")
 
-project(nta)
+project(jubilant-funicular)
 
 if(NOT ${CMAKE_VERSION} LESS 3.2)
     set(CMAKE_CXX_STANDARD 11)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 else()
-    message(STATUS "Checking compiler flags for C++11 support.")
+    message(STATUS "Checking compiler flags for C++14 support.")
     # Set C++11/14 support flags for various compilers
     include(CheckCXXCompilerFlag)
     check_cxx_compiler_flag("-std=c++14" COMPILER_SUPPORTS_CXX14)
@@ -43,10 +42,10 @@ else()
     endif()
 endif()
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(SDL2 REQUIRED)
-find_package(SDL2TTF REQUIRED)
+find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
