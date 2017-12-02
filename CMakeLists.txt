@@ -47,6 +47,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_mixer REQUIRED)
+find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(DevIL REQUIRED)
@@ -59,9 +60,15 @@ set(NTA_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "")
 
 add_subdirectory(src)
 
-#set(NTA_LIBRARIES ${NTA_LIBRARIES}
-#  ${SDL2_LIBRARY}
-#  ${SDL2TTF_LIBRARY}
-#  ${SDLMIXER_LIBRARY}
-#  ${GLEW_LIBRARIES}
-#)
+# Is it standard practice to bundle libraries I don't own like this?
+set(NTA_LIBRARIES nta
+  ${SDL2_LIBRARY}
+  ${SDL2_TTF_LIBRARIES}
+  ${SDL2_MIXER_LIBRARIES}
+  ${GLEW_LIBRARIES}
+  ${GLUT_LIBRARIES}
+  ${OPENGL_LIBRARIES}
+  ${IL_LIBRARIES}
+  ${ILU_LIBRARIES}
+  CACHE INTERNAL ""
+)
