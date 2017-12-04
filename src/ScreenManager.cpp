@@ -15,7 +15,7 @@ namespace nta {
         return inRange<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
     }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
-        Logger::writeToLog("Adding screen " + toString(m_screens.size()) + " to screen manger...");
+        Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to screen manger...");
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setIndices(m_screens.size(), escIndex, xIndex);
         newScreen->setWindow(((title == "") ? m_window->getTitle() : title));
@@ -25,7 +25,8 @@ namespace nta {
     }
     void ScreenManager::switchScreen(int newIndex) {
         if (inRange<int>(newIndex, 0, m_screens.size()-1)) {
-            Logger::writeToLog("Switching to screen " + toString(newIndex) + " from screen " + toString(m_currScreen) + "...");
+            Logger::writeToLog("Switching to screen " + to_string(newIndex) +
+                               " from screen " + to_string(m_currScreen) + "...");
             getCurrScreen()->offFocus();
             m_currScreen = newIndex;
             getCurrScreen()->onFocus();
@@ -51,7 +52,9 @@ namespace nta {
             case ScreenState::SWITCH:       switchScreen(currScreen->getNextIndex()); break;
             case ScreenState::SWITCH_ESC:   switchScreen(currScreen->getEscIndex()); break;
             case ScreenState::SWITCH_X:     switchScreen(currScreen->getXIndex()); break;
-            case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " + toString(m_currScreen) + " is NONE"); break;
+            case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " +
+                                                                    to_string(m_currScreen) +
+                                                                    " is NONE"); break;
             }
         }
         Logger::writeToLog("Exited screen manager");

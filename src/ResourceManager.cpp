@@ -9,7 +9,8 @@ namespace nta {
         if (imagePath.find("resources/images/") != 0)
             folder += "resources/images/";
         if (m_textureMap.find(folder+imagePath) == m_textureMap.end()) {
-            m_textureMap[folder+imagePath] = ImageLoader::readImage(folder+imagePath, minFilt, magFilt, dimensions);
+            m_textureMap[folder+imagePath] = ImageLoader::readImage(folder+imagePath, minFilt,
+                                                                    magFilt, dimensions);
         }
         return m_textureMap[folder+imagePath];
     }
@@ -51,7 +52,8 @@ namespace nta {
             Logger::writeToLog("Deleted texture");
         }
         for (auto pair : m_fontMap) {
-            Logger::writeToLog("Deleting sprite font: " + pair.first.first + " (" + toString(pair.first.second) + ")...");
+            Logger::writeToLog("Deleting sprite font: " + pair.first.first +
+                               " (" +to_string(pair.first.second) + ")...");
             delete pair.second;
             Logger::writeToLog("Deleted sprite font");
         }

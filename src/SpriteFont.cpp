@@ -25,7 +25,7 @@ namespace nta {
         }
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Loaded font");
-        Logger::writeToLog("Creating sprite font (" + toString(size) + ")...");
+        Logger::writeToLog("Creating sprite font (" + to_string(size) + ")...");
         FontMap* seed = new FontMap; // TODO: Rename now that we're no longer using simulated annealing
         SDL_Surface* glyphSurface = nullptr;
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
@@ -34,24 +34,27 @@ namespace nta {
             SDL_FreeSurface(glyphSurface);
         }
         seed->position();
-        glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x), toPower2(seed->getBoundingDimensions().y));
+        glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x),
+                                           toPower2(seed->getBoundingDimensions().y));
         //create initial gray texture
         glGenTextures(1, &m_texId);
         glBindTexture(GL_TEXTURE_2D, m_texId);
         GLubyte* graySquare = new GLubyte[dimensions.x*dimensions.y*4];
         memset(graySquare, 0x50, dimensions.x*dimensions.y*4);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dimensions.x, dimensions.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, graySquare);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dimensions.x, dimensions.y, 0, GL_RGBA,
+                     GL_UNSIGNED_BYTE, graySquare);
         //add glyphs to texture
         m_charGlyphs = new CharGlyph[NUM_PRINTABLE_CHARS];
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
             CharGlyph& cg = m_charGlyphs[c - FIRST_PRINTABLE_CHAR];
             FontMap::CharRect cr = seed->m_rects[c - FIRST_PRINTABLE_CHAR];
             cg.size = cr.dimensions;
-            cg.uvRect = glm::vec4(cr.topLeft/glm::vec2(dimensions), cr.dimensions/glm::vec2(dimensions));
+            cg.uvRect = glm::vec4(cr.topLeft/glm::vec2(dimensions),
+                                  cr.dimensions/glm::vec2(dimensions));
             cg.uvRect.y *= -1;
             glyphSurface = TTF_RenderGlyph_Blended(font, c, {255, 255, 255, 255});
-            glTexSubImage2D(GL_TEXTURE_2D, 0, cr.topLeft.x, -cr.topLeft.y, cr.dimensions.x, cr.dimensions.y, GL_RGBA,
-                            GL_UNSIGNED_BYTE, glyphSurface->pixels);
+            glTexSubImage2D(GL_TEXTURE_2D, 0, cr.topLeft.x, -cr.topLeft.y, cr.dimensions.x,
+                            cr.dimensions.y, GL_RGBA, GL_UNSIGNED_BYTE, glyphSurface->pixels);
             SDL_FreeSurface(glyphSurface);
         }
         glyphSurface = nullptr;
@@ -62,7 +65,8 @@ namespace nta {
         glBindTexture(GL_TEXTURE_2D, 0);
         TTF_CloseFont(font);
         Logger::writeToLog("Created sprite font");
-        Logger::writeToLog("Generated font has dimensions: " + toString(dimensions.x) + " x " + toString(dimensions.y));
+        Logger::writeToLog("Generated font has dimensions: " + to_string(dimensions.x) + " x " +
+                           to_string(dimensions.y));
     }
     SpriteFont::~SpriteFont() {
         if (m_texId != 0) {
@@ -93,7 +97,8 @@ namespace nta {
         }
         return dim;
     }
-    void SpriteFont::drawText(SpriteBatch& batch, crstring text, crvec2 topLeft, crvec2 scale, crvec4 color, float depth) const {
+    void SpriteFont::drawText(SpriteBatch& batch, crstring text, crvec2 topLeft, crvec2 scale,
+                              crvec4 color, float depth) const {
         glm::vec2 offset(0);
         for (char c : text) {
             if (c == '\n') {
@@ -101,12 +106,14 @@ namespace nta {
                 offset.x = 0;
             } else {
                 CharGlyph cg = m_charGlyphs[c-FIRST_PRINTABLE_CHAR];
-                batch.addGlyph(glm::vec4(topLeft+offset, cg.size*scale), cg.uvRect, m_texId, depth, color);
+                batch.addGlyph(glm::vec4(topLeft+offset, cg.size*scale), cg.uvRect, m_texId,
+                               depth, color);
                 offset.x += cg.size.x*scale.x;
             }
         }
     }
-    void SpriteFont::drawText(SpriteBatch& batch, crstring text, crvec4 posRect, crvec4 color, float depth) const {
+    void SpriteFont::drawText(SpriteBatch& batch, crstring text, crvec4 posRect, crvec4 color,
+                              float depth) const {
         glm::vec2 scale = glm::vec2(posRect[2], posRect[3])/measure(text);
         drawText(batch, text, glm::vec2(posRect.x, posRect.y), scale, color, depth);
     }

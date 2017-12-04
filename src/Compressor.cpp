@@ -83,7 +83,7 @@ namespace nta {
             compressedData.push_back(fromBinary(compressedBits.substr(i*8,8)));
         }
         compressedData.push_back(fromBinary(compressedBits.substr(8*numBytes)));
-        Logger::writeToLog("Compressed data (" + toString(100.*compressedData.size()/data.size(),4) + "%)");
+        Logger::writeToLog("Compressed data (" + to_string(100.*compressedData.size()/data.size(),4) + "%)");
         return compressedData;
     }
     std::vector<GLubyte> Compressor::decompress(const std::vector<GLubyte>& data) {

@@ -7,10 +7,11 @@ namespace nta {
     void AudioManager::init() {
         Logger::writeToLog("Initializing AudioManager...");
         if (Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG) == -1) {
-            Logger::writeErrorToLog("Failed to initialize SDL_mixer: " + toString(Mix_GetError()));
+            Logger::writeErrorToLog("Failed to initialize SDL_mixer: "
+                                    + to_string(Mix_GetError()));
         }
         if (Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1) {
-            Logger::writeErrorToLog("Failed to open audio: " + toString(Mix_GetError()));
+            Logger::writeErrorToLog("Failed to open audio: " + to_string(Mix_GetError()));
         }
         Logger::writeToLog("Initialized AudioManager");
     }
@@ -35,7 +36,8 @@ namespace nta {
             nta::Logger::writeToLog("Loading sound effect: " + folder + effectPath + "...");
             Mix_Chunk* newChunk = Mix_LoadWAV((folder+effectPath).c_str());
             if (!newChunk) {
-                nta::Logger::writeErrorToLog("Unable to load sound effect: " + toString(Mix_GetError()));
+                nta::Logger::writeErrorToLog("Unable to load sound effect: "
+                                             + to_string(Mix_GetError()));
             }
             m_effectMap[folder+effectPath] = new SoundEffect(newChunk);
             nta::Logger::writeToLog("Loaded sound effect");
@@ -51,7 +53,8 @@ namespace nta {
             nta::Logger::writeToLog("Loading music file: " + folder + musicPath + "...");
             Mix_Music* newMusic = Mix_LoadMUS((folder+musicPath).c_str());
             if (!newMusic) {
-                nta::Logger::writeErrorToLog("Unable to load music file: " + toString(Mix_GetError()));
+                nta::Logger::writeErrorToLog("Unable to load music file: "
+                                             + to_string(Mix_GetError()));
             }
             m_musicMap[folder+musicPath] = new Music(newMusic);
             nta::Logger::writeToLog("Loaded music file");

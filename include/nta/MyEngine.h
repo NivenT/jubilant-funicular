@@ -18,17 +18,19 @@ namespace nta {
 extern float changeRange(float val, float a, float b, float c, float d);
 ///Calls the first function corresponding to a true statement
 extern void cond(std::initializer_list<bool> conditions, std::initializer_list<std::function<void()>> exprs);
-/* std::to_string exists
+
+// Shoudl these be in namespace nta?
+
 ///converts input to an std::string
 template<class T>
-std::string toString(T input, std::size_t precision = 0) {
+std::string to_string(T input, std::size_t precision = 0) {
     std::ostringstream os;
     if (precision != 0)
         os.precision(precision);
     os<<input;
     return os.str();
 }
-*/
+
 ///Returns the first value corresponding to a true statement
 template<class T>
 T cond(std::initializer_list<bool> conditions, std::initializer_list<T> vals) {
@@ -39,6 +41,7 @@ T cond(std::initializer_list<bool> conditions, std::initializer_list<T> vals) {
     }
     return T();
 }
+
 ///returns whether or not min <= val <= max
 template<class T>
 bool inRange(T val, T min, T max) {
