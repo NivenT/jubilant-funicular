@@ -37,6 +37,7 @@ namespace nta {
     }
     void ScreenManager::run() {
         static Screen* currScreen = nullptr;
+				if (m_currScreen != -1) getCurrScreen()->onFocus();
         while (m_currScreen != -1) {
             currScreen = getCurrScreen();
             while (currScreen->getState() == ScreenState::RUNNING) {

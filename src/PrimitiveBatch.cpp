@@ -30,12 +30,13 @@ namespace nta {
         }
         glBindVertexArray(m_vao);
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
             glEnableVertexAttribArray(i);
         }
         glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, pos));
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE , sizeof(Vertex2D), (void*)offsetof(Vertex2D, color));
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, uv));
+				glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
         glBindVertexArray(0);
     }
     void PrimitiveBatch::begin() {

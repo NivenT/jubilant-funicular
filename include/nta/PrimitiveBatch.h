@@ -11,6 +11,10 @@ namespace nta {
         Primitive(const std::initializer_list<Vertex2D>& verts, GLuint texID, float d) : depth(d), textureID(texID) {
             vertices.insert(vertices.begin(), verts.begin(), verts.end());
         }
+			  template<class Iterator>
+				Primitive(Iterator first, Iterator last, GLuint texID, float d) : depth(d), textureID(texID) {
+					  vertices.insert(vertices.begin(), first, last);
+				}
         ///destructor
         ~Primitive() {
             depth = 0;
@@ -59,10 +63,17 @@ namespace nta {
         ///adds a primitive to the batch
         void                        addPrimitive(Primitive* primitive);
         void                        addPrimitive(const std::initializer_list<Vertex2D>& vertices, GLuint textureID, float depth = 1);
+				template<class Iterator>
+				void                        addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth = 1);
         ///renders the primitives
         void                        render() const;
     };
     typedef PrimitiveBatch PrimBatch;
+
+		template<class Iterator>
+		void PrimitiveBatch::addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth) {
+			addPrimitive(new Primitive(first, last, textureID, depth));
+		}
 }
 
 #endif // PRIMITIVEBATCH_H_INCLUDED
