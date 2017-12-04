@@ -21,13 +21,13 @@ namespace nta {
     }
     glm::mat3 Camera2D::getCameraMatrix() const {
         glm::mat3 scale = glm::mat3
-        (1.f/m_dimensions.x, 0, 0,
-         0, 1.f/m_dimensions.y, 0,
-         0, 0,                  1);
+            (1.f/m_dimensions.x, 0, 0,
+             0, 1.f/m_dimensions.y, 0,
+             0, 0,                  1);
         glm::mat3 translate = glm::mat3
-        (1, 0, -m_center.x,
-         0, 1, -m_center.y,
-         0, 0, 1);
+            (1, 0, -m_center.x,
+             0, 1, -m_center.y,
+             0, 0, 1);
         return scale * glm::transpose(translate);
     }
     glm::vec4 Camera2D::getBoundsCenter() const {

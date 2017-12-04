@@ -10,14 +10,14 @@ namespace nta {
     class Logger {
     private:
         ///the file that keeps the external log
-        static std::ofstream        m_logFile;
+        static std::ofstream m_logFile;
     public:
         ///creates the log
-        static void                 createLog();
+        static void createLog();
         ///writes an entry in the log
-        static void                 writeToLog(crstring entry);
+        static void writeToLog(crstring entry);
         ///writes entry in log and then exits program
-        static void                 writeErrorToLog(crstring error);
+        static void writeErrorToLog(crstring error);
     };
 }
 

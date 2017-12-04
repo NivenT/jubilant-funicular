@@ -10,18 +10,18 @@ namespace nta {
     class ParticleEngine2D {
     private:
         ///the particle batches
-        std::vector<ParticleBatch2D*>       m_batches;
+        std::vector<ParticleBatch2D*> m_batches;
     public:
         ///basic constructor
-                                            ParticleEngine2D();
+        ParticleEngine2D();
         ///deletes batches
-                                            ~ParticleEngine2D();
+        ~ParticleEngine2D();
         ///adds a batch
-        void                                addBatch(ParticleBatch2D* batch);
+        void addBatch(ParticleBatch2D* batch);
         ///renders all batches
-        void                                draw(SpriteBatch& batch) const;
+        void draw(SpriteBatch& batch) const;
         ///updates all batches
-        void                                update(float dt) const;
+        void update(float dt) const;
     };
 }
 

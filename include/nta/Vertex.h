@@ -16,7 +16,7 @@ namespace nta {
 		    Vertex2D(crvec2 p) : pos(p), color(glm::vec4(1)), uv(glm::vec2(0)), hasTexture(0.0) {
         }
         ///Initialized a vertex with everything
-		    Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t = 1.0) : pos(p), color(c), uv(u), hasTexture(t) {
+		    Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t = 1.0) : pos(p),color(c),uv(u),hasTexture(t) {
         }
         ///sets the position of the vertex
         void setPosition(float x, float y) {

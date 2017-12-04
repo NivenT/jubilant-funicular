@@ -12,38 +12,38 @@ namespace nta {
     class InputManager {
     private:
         ///stores whether each key is pressed or not
-        static std::unordered_map<unsigned int, bool>   m_keyMap;
+        static std::unordered_map<unsigned int, bool> m_keyMap;
         ///stores whether the key was pressed last frame or not
-        static std::unordered_map<unsigned int, bool>   m_prevKeyMap;
+        static std::unordered_map<unsigned int, bool> m_prevKeyMap;
         ///stores the location of the mouse in mouse coordinates
-        static glm::vec2                                m_mouseCoords;
+        static glm::vec2 m_mouseCoords;
         ///stores the motion of the mouse wheel
-        static MouseWheelMotion                         m_mouseWheelMotion;
+        static MouseWheelMotion m_mouseWheelMotion;
     public:
         ///returns the mouse's coordinates
-        static glm::vec2                                getMouseCoords();
+        static glm::vec2 getMouseCoords();
         ///returns the mouse's coordinates with the y axis flipped (0 represents the bottom of the screen instead of top)
-        static glm::vec2                                getMouseCoordsStandard(int height);
+        static glm::vec2 getMouseCoordsStandard(int height);
         ///returns the mouse wheel's motion
-        static MouseWheelMotion                         getMouseWheelMotion();
+        static MouseWheelMotion getMouseWheelMotion();
         ///returns whether or not specified key is pressed
-        static bool                                     isPressed(unsigned int key);
+        static bool isPressed(unsigned int key);
         ///returns whether or not the key was just pressed this frame
-        static bool                                     justPressed(unsigned int key);
+        static bool justPressed(unsigned int key);
         ///returns whether or not the key was just released this frame
-        static bool                                     justReleased(unsigned int key);
+        static bool justReleased(unsigned int key);
         ///tells InputManager that specified key was pressed
-        static void                                     pressKey(unsigned int key);
+        static void pressKey(unsigned int key);
         ///tells InputManager that specified key was released
-        static void                                     releaseKey(unsigned int key);
+        static void releaseKey(unsigned int key);
         ///tells InputManager where the mouse is
-        static void                                     setMouseCoords(float x, float y);
+        static void setMouseCoords(float x, float y);
         ///tells InputManager how the wheel is rolling
-        static void                                     setMouseWheelMotion(const MouseWheelMotion& motion);
+        static void setMouseWheelMotion(const MouseWheelMotion& motion);
         ///updates the state of m_KeyMap
-        static void                                     update(SDL_Event& event);
+        static void update(SDL_Event& event);
         ///updates the state of m_prevKeyMap
-        static void                                     updatePrev();
+        static void updatePrev();
     };
 }
 

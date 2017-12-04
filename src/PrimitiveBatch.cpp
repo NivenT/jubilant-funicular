@@ -86,11 +86,11 @@ namespace nta {
         }
         int numVertices = 0; //total number of vertices
         std::for_each(m_primitives.begin(), m_primitives.end(), [&numVertices](const Primitive* p) {
-           numVertices += p->vertices.size();
-        });
+                numVertices += p->vertices.size();
+            });
         Vertex2D vertexData[numVertices];
         m_renderBatches.emplace_back(m_primitives[0]->textureID, 0, m_primitives[0]->vertices.size(),
-                                    toPrimitiveType(m_primitives[0]->vertices.size()));
+                                     toPrimitiveType(m_primitives[0]->vertices.size()));
         int cv = 0; ///current vertex
         for (int i = 0; i < m_primitives[0]->vertices.size(); i++) {
             vertexData[cv++] = m_primitives[0]->vertices[i];
@@ -100,7 +100,7 @@ namespace nta {
             if (m_primitives[cp]->textureID != m_primitives[cp-1]->textureID ||
                 m_primitives[cp]->vertices.size() != m_primitives[cp-1]->vertices.size()) {
                 m_renderBatches.emplace_back(m_primitives[cp]->textureID, offset, m_primitives[cp]->vertices.size(),
-                                            toPrimitiveType(m_primitives[cp]->vertices.size()));
+                                             toPrimitiveType(m_primitives[cp]->vertices.size()));
             } else {
                 m_renderBatches.back().numVertices += m_primitives[cp]->vertices.size();
             }

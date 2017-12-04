@@ -8,19 +8,19 @@ namespace nta {
     class FPSLimiter : public Timer {
     private:
         ///most recently calculated fps
-        float                       m_fps;
+        float m_fps;
         ///maximum allowed fps
-        float                       m_maxFPS;
+        float m_maxFPS;
     public:
         ///constructor and destructor
-                                    FPSLimiter();
-                                    ~FPSLimiter();
+        FPSLimiter();
+        ~FPSLimiter();
         ///sets maximum allowed fps
-        void                        setMaxFPS(float maxFPS);
+        void setMaxFPS(float maxFPS);
         ///gets most recently calculated fps
-        float                       getFPS() const;
+        float getFPS() const;
         ///ends fps calculations, delaying if necessary to cap fps
-        long double                 end();
+        long double end();
     };
 }
 

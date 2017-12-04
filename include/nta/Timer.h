@@ -7,15 +7,15 @@ namespace nta {
     ///represents a timer
     class Timer {
     protected:
-        std::chrono::time_point<std::chrono::high_resolution_clock, std::chrono::nanoseconds>   m_startPoint;
+        std::chrono::time_point<std::chrono::high_resolution_clock, std::chrono::nanoseconds> m_startPoint;
     public:
         ///constructor and destructor
-                                                                                                Timer();
-        virtual                                                                                 ~Timer();
+        Timer();
+        virtual ~Timer();
         ///begins timer
-        virtual void                                                                            begin();
+        virtual void begin();
         ///return time since beginning of timer in nanoseconds
-        virtual long double                                                                     end() const;
+        virtual long double end() const;
     };
 }
 

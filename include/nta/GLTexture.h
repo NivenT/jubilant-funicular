@@ -11,18 +11,17 @@ namespace nta {
     ///represents a texture
     struct GLTexture {
         ///the id of the texture
-        GLuint                      id;
+        GLuint id;
         ///the width and height, respectively, of the texture
-        GLint                       width, height;
+        GLint width, height;
     };
     ///loads images as GLTextures
     class ImageLoader {
     private:
         ///loads in any image file
-        static                      GLTexture readImage(crstring filePath, GLint minFilt, GLint magFilt,
-                                                        crvec2 dimensions);
+        static GLTexture readImage(crstring filePath, GLint minFilt, GLint magFilt, crvec2 dimensions);
     public:
-        friend class                ResourceManager;
+        friend class ResourceManager;
     };
 }
 

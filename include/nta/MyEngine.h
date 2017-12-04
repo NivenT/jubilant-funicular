@@ -6,10 +6,10 @@
 #include <sstream>
 #include <glm/glm.hpp>
 
-typedef const std::string&  crstring; //constant reference string
-typedef const glm::vec2&    crvec2;
-typedef const glm::vec3&    crvec3;
-typedef const glm::vec4&    crvec4;
+typedef const std::string& crstring; //constant reference string
+typedef const glm::vec2& crvec2;
+typedef const glm::vec3& crvec3;
+typedef const glm::vec4& crvec4;
 namespace nta {
     ///initializes some basic stuff for the engine
     extern void init();
@@ -18,6 +18,7 @@ namespace nta {
 extern float changeRange(float val, float a, float b, float c, float d);
 ///Calls the first function corresponding to a true statement
 extern void cond(std::initializer_list<bool> conditions, std::initializer_list<std::function<void()>> exprs);
+/* std::to_string exists
 ///converts input to an std::string
 template<class T>
 std::string toString(T input, std::size_t precision = 0) {
@@ -27,6 +28,7 @@ std::string toString(T input, std::size_t precision = 0) {
     os<<input;
     return os.str();
 }
+*/
 ///Returns the first value corresponding to a true statement
 template<class T>
 T cond(std::initializer_list<bool> conditions, std::initializer_list<T> vals) {

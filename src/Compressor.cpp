@@ -3,8 +3,6 @@
 #include "Compressor.h"
 #include "Logger.h"
 
-
-
 namespace nta {
     std::map<GLubyte,std::string>    Compressor::m_encodings;
     HuffmanNode*                     Compressor::m_root;
@@ -46,12 +44,12 @@ namespace nta {
         HuffmanNode* scnsmallFreq = nullptr;
         while (byteNodes.size() > 1) {
             smallestFreq = *std::min_element(byteNodes.begin(), byteNodes.end(), [](HuffmanNode* lhs, HuffmanNode* rhs){
-                return (lhs->getFrequency() < rhs->getFrequency());
-            });
+                    return (lhs->getFrequency() < rhs->getFrequency());
+                });
             std::remove(byteNodes.begin(), byteNodes.end(), smallestFreq); byteNodes.pop_back();
             scnsmallFreq = *std::min_element(byteNodes.begin(), byteNodes.end(), [](HuffmanNode* lhs, HuffmanNode* rhs){
-                return (lhs->getFrequency() < rhs->getFrequency());
-            });
+                    return (lhs->getFrequency() < rhs->getFrequency());
+                });
             std::remove(byteNodes.begin(), byteNodes.end(), scnsmallFreq); byteNodes.pop_back();
             byteNodes.push_back(new HuffmanNode(smallestFreq, scnsmallFreq));
         }

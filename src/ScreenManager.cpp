@@ -48,10 +48,10 @@ namespace nta {
                 m_limiter.end();
             }
             switch(currScreen->getState()) {
-                case ScreenState::SWITCH:       switchScreen(currScreen->getNextIndex()); break;
-                case ScreenState::SWITCH_ESC:   switchScreen(currScreen->getEscIndex()); break;
-                case ScreenState::SWITCH_X:     switchScreen(currScreen->getXIndex()); break;
-                case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " + toString(m_currScreen) + " is NONE"); break;
+            case ScreenState::SWITCH:       switchScreen(currScreen->getNextIndex()); break;
+            case ScreenState::SWITCH_ESC:   switchScreen(currScreen->getEscIndex()); break;
+            case ScreenState::SWITCH_X:     switchScreen(currScreen->getXIndex()); break;
+            case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " + toString(m_currScreen) + " is NONE"); break;
             }
         }
         Logger::writeToLog("Exited screen manager");
