@@ -1,0 +1,54 @@
+\hypertarget{classnta_1_1GLSLProgram}{}\section{nta\+:\+:G\+L\+S\+L\+Program Class Reference}
+\label{classnta_1_1GLSLProgram}\index{nta\+::\+G\+L\+S\+L\+Program@{nta\+::\+G\+L\+S\+L\+Program}}
+
+
+represents a program written in G\+L\+SL comprised of a vertex shader and a fragment shader  
+
+
+
+
+{\ttfamily \#include $<$G\+L\+S\+L\+Program.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_ad8a89f518a3a6ecaa26125d3bbefafaa}\label{classnta_1_1GLSLProgram_ad8a89f518a3a6ecaa26125d3bbefafaa}} 
+\hyperlink{classnta_1_1GLSLProgram_ad8a89f518a3a6ecaa26125d3bbefafaa}{G\+L\+S\+L\+Program} ()
+\begin{DoxyCompactList}\small\item\em constructor and destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a8140edf8b3d89de4ebf8c4b1db404f59}\label{classnta_1_1GLSLProgram_a8140edf8b3d89de4ebf8c4b1db404f59}} 
+G\+Lint \hyperlink{classnta_1_1GLSLProgram_a8140edf8b3d89de4ebf8c4b1db404f59}{get\+Uniform\+Location} (crstring uniform\+Name) const
+\begin{DoxyCompactList}\small\item\em returns the location of a uniform in the shaders \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a6067e49c12b542735eff255047cd8ae1}\label{classnta_1_1GLSLProgram_a6067e49c12b542735eff255047cd8ae1}} 
+bool \hyperlink{classnta_1_1GLSLProgram_a6067e49c12b542735eff255047cd8ae1}{is\+Linked} () const
+\begin{DoxyCompactList}\small\item\em returns whether or not the shaders have been linked \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a708c47abebb9ca01b0eed4d1e711cef7}\label{classnta_1_1GLSLProgram_a708c47abebb9ca01b0eed4d1e711cef7}} 
+void \hyperlink{classnta_1_1GLSLProgram_a708c47abebb9ca01b0eed4d1e711cef7}{add\+Attribute} (crstring attribute\+Name)
+\begin{DoxyCompactList}\small\item\em makes an attribute useful and assigns it the next available location \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_aa1d946246f4b04ba0b947362152ec1c0}\label{classnta_1_1GLSLProgram_aa1d946246f4b04ba0b947362152ec1c0}} 
+void \hyperlink{classnta_1_1GLSLProgram_aa1d946246f4b04ba0b947362152ec1c0}{link\+Shaders} ()
+\begin{DoxyCompactList}\small\item\em links the compiled shaders to this program \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_ac5c8fffb04aec82913b78e35db9ea31f}\label{classnta_1_1GLSLProgram_ac5c8fffb04aec82913b78e35db9ea31f}} 
+void \hyperlink{classnta_1_1GLSLProgram_ac5c8fffb04aec82913b78e35db9ea31f}{use} () const
+\begin{DoxyCompactList}\small\item\em binds this program \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}\label{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}} 
+void \hyperlink{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}{unuse} () const
+\begin{DoxyCompactList}\small\item\em unbinds this program \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_ab1ef2aa9992dd8ae85793e1a1f980e1e}\label{classnta_1_1GLSLProgram_ab1ef2aa9992dd8ae85793e1a1f980e1e}} 
+class {\bfseries System\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a program written in G\+L\+SL comprised of a vertex shader and a fragment shader 
+
+Definition at line 13 of file G\+L\+S\+L\+Program.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/G\+L\+S\+L\+Program.\+h\item 
+src/G\+L\+S\+L\+Program.\+cpp\end{DoxyCompactItemize}

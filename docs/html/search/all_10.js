@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['scaledimensions',['scaleDimensions',['../d3/d28/classnta_1_1Camera2D.html#aa89b58a2a5ca0c3df56d07e2722afcd6',1,'nta::Camera2D']]],
+  ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html',1,'nta::Screen'],['../d6/d23/classnta_1_1Screen.html#a86944d19cec1189fee2945a4f8dae477',1,'nta::Screen::Screen()']]],
+  ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html',1,'nta::ScreenManager'],['../d0/dc4/classnta_1_1ScreenManager.html#a46a7adb4a69fea8e074fa2251c815bad',1,'nta::ScreenManager::ScreenManager()']]],
+  ['screenshot',['screenshot',['../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c',1,'nta::Window']]],
+  ['setcenter',['setCenter',['../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895',1,'nta::Camera2D']]],
+  ['setcolor',['setColor',['../d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c',1,'nta::Vertex2D']]],
+  ['setdimensions',['setDimensions',['../d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597',1,'nta::Window']]],
+  ['setmaxfps',['setMaxFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#ac72ab398095957d9cffa07859e1f97a4',1,'nta::FPSLimiter']]],
+  ['setmousecoords',['setMouseCoords',['../d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f',1,'nta::InputManager']]],
+  ['setmousewheelmotion',['setMouseWheelMotion',['../d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e',1,'nta::InputManager']]],
+  ['setposition',['setPosition',['../d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592',1,'nta::Vertex2D']]],
+  ['setuv',['setUV',['../d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97',1,'nta::Vertex2D']]],
+  ['setwindow',['setWindow',['../d6/d23/classnta_1_1Screen.html#a3c74cd84437e8897850ce4bae98bc8b2',1,'nta::Screen']]],
+  ['size',['size',['../d4/d26/structnta_1_1CharGlyph.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph']]],
+  ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html',1,'nta']]],
+  ['sprite',['Sprite',['../d4/d60/classnta_1_1Sprite.html',1,'nta::Sprite'],['../d4/d60/classnta_1_1Sprite.html#a5d208eb1b82f0a60155887b5f4103dbc',1,'nta::Sprite::Sprite()']]],
+  ['spritebatch',['SpriteBatch',['../d7/d3b/classnta_1_1SpriteBatch.html',1,'nta::SpriteBatch'],['../d7/d3b/classnta_1_1SpriteBatch.html#a554ec4ee678b6f97621d299e4a258f95',1,'nta::SpriteBatch::SpriteBatch()']]],
+  ['spritefont',['SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html',1,'nta']]],
+  ['stop',['stop',['../d4/dab/classnta_1_1Music.html#ade2d11ebc9273494b344e089cd7b58b8',1,'nta::Music']]],
+  ['swapbuffers',['swapBuffers',['../d4/dfb/classnta_1_1Window.html#a5fdc643079410c14855a260ace84478e',1,'nta::Window']]],
+  ['switchscreen',['switchScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660',1,'nta::ScreenManager']]],
+  ['systemmanager',['SystemManager',['../db/d25/classnta_1_1SystemManager.html',1,'nta']]]
+];

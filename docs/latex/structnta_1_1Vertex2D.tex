@@ -1,0 +1,65 @@
+\hypertarget{structnta_1_1Vertex2D}{}\section{nta\+:\+:Vertex2D Struct Reference}
+\label{structnta_1_1Vertex2D}\index{nta\+::\+Vertex2D@{nta\+::\+Vertex2D}}
+
+
+represents a vertex in 2 dimensions  
+
+
+
+
+{\ttfamily \#include $<$Vertex.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}\label{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}} 
+\hyperlink{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}{Vertex2D} ()
+\begin{DoxyCompactList}\small\item\em Initializes an \char`\"{}empty\char`\"{} vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_ab0988223c10ad83057c4ade8891b4814}\label{structnta_1_1Vertex2D_ab0988223c10ad83057c4ade8891b4814}} 
+\hyperlink{structnta_1_1Vertex2D_ab0988223c10ad83057c4ade8891b4814}{Vertex2D} (crvec2 p)
+\begin{DoxyCompactList}\small\item\em Initializes a white, textureless vertex with given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_aa2e8619f157a72c64d2438f49ec65554}\label{structnta_1_1Vertex2D_aa2e8619f157a72c64d2438f49ec65554}} 
+\hyperlink{structnta_1_1Vertex2D_aa2e8619f157a72c64d2438f49ec65554}{Vertex2D} (crvec2 p, crvec4 c)
+\begin{DoxyCompactList}\small\item\em Initialize textureless, colorful vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a1c2fe391aeb3ca6d0b8eebfbce1b5862}\label{structnta_1_1Vertex2D_a1c2fe391aeb3ca6d0b8eebfbce1b5862}} 
+\hyperlink{structnta_1_1Vertex2D_a1c2fe391aeb3ca6d0b8eebfbce1b5862}{Vertex2D} (crvec2 p, crvec4 c, crvec2 u, float t=1.\+0)
+\begin{DoxyCompactList}\small\item\em Initialized a vertex with everything. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a7079a91fd386eb3e4425c965f2ce2592}\label{structnta_1_1Vertex2D_a7079a91fd386eb3e4425c965f2ce2592}} 
+void \hyperlink{structnta_1_1Vertex2D_a7079a91fd386eb3e4425c965f2ce2592}{set\+Position} (float x, float y)
+\begin{DoxyCompactList}\small\item\em sets the position of the vertex \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a12483720589a9836dd4628b2c2bc480c}\label{structnta_1_1Vertex2D_a12483720589a9836dd4628b2c2bc480c}} 
+void \hyperlink{structnta_1_1Vertex2D_a12483720589a9836dd4628b2c2bc480c}{set\+Color} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em sets the color of the vertex \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a353285f6dc33e239b6c1290f50db1a3a}\label{structnta_1_1Vertex2D_a353285f6dc33e239b6c1290f50db1a3a}} 
+void {\bfseries set\+Color} (crvec3 c)
+\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_adb7b7e6498200e6f11965b0ecadeaa97}\label{structnta_1_1Vertex2D_adb7b7e6498200e6f11965b0ecadeaa97}} 
+void \hyperlink{structnta_1_1Vertex2D_adb7b7e6498200e6f11965b0ecadeaa97}{set\+UV} (float u, float v)
+\begin{DoxyCompactList}\small\item\em sets the uv coordinates of the vertex \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a27a44e1ca52b5a5a13d37495e9376636}\label{structnta_1_1Vertex2D_a27a44e1ca52b5a5a13d37495e9376636}} 
+glm\+::vec2 \hyperlink{structnta_1_1Vertex2D_a27a44e1ca52b5a5a13d37495e9376636}{pos}
+\begin{DoxyCompactList}\small\item\em the vertex\textquotesingle{}s position, color, and uv coordinates, respectively \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a05016aff7572c60a2cb688e67b2a4a31}\label{structnta_1_1Vertex2D_a05016aff7572c60a2cb688e67b2a4a31}} 
+glm\+::vec4 {\bfseries color}
+\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a71707b6c29cae0e883e76042e27e84d5}\label{structnta_1_1Vertex2D_a71707b6c29cae0e883e76042e27e84d5}} 
+glm\+::vec2 {\bfseries uv}
+\item 
+\mbox{\Hypertarget{structnta_1_1Vertex2D_ac1b1fb722a89abaee9cddfb59543af85}\label{structnta_1_1Vertex2D_ac1b1fb722a89abaee9cddfb59543af85}} 
+float {\bfseries has\+Texture}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a vertex in 2 dimensions 
+
+Definition at line 11 of file Vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Vertex.\+h\end{DoxyCompactItemize}

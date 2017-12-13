@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classnta_1_1AudioManager" kind="class"><name>nta::AudioManager</name>
+    <member refid="classnta_1_1AudioManager_1a745f3ef1216f7e6bf848a9eb4054c5b4" kind="variable"><name>m_effectMap</name></member>
+    <member refid="classnta_1_1AudioManager_1ae301717a98c3a7bb0ca0b588c270b122" kind="variable"><name>m_musicMap</name></member>
+    <member refid="classnta_1_1AudioManager_1a4da570a6cee16bd6450031f7910057fd" kind="function"><name>init</name></member>
+    <member refid="classnta_1_1AudioManager_1aa337e5cc1825c6e2b971e1fc173b17ce" kind="function"><name>destroy</name></member>
+    <member refid="classnta_1_1AudioManager_1a131e8ec62c63fd9a07a77d833b02b598" kind="function"><name>getSoundEffect</name></member>
+    <member refid="classnta_1_1AudioManager_1adb0a0f0efb072f57430835c849caaa39" kind="function"><name>getMusic</name></member>
+  </compound>
+  <compound refid="classnta_1_1Camera2D" kind="class"><name>nta::Camera2D</name>
+    <member refid="classnta_1_1Camera2D_1a6f63c871727ef4037b164be0b400cd89" kind="variable"><name>m_center</name></member>
+    <member refid="classnta_1_1Camera2D_1a403ec8d18fd31d5164ba81267cca555e" kind="variable"><name>m_dimensions</name></member>
+    <member refid="classnta_1_1Camera2D_1a11aada3f997c594ade11dd3c46d826f4" kind="function"><name>Camera2D</name></member>
+    <member refid="classnta_1_1Camera2D_1a69171de8322165de5f134a83e33c419a" kind="function"><name>Camera2D</name></member>
+    <member refid="classnta_1_1Camera2D_1af503a21cf73859010aefbacb1af7078c" kind="function"><name>Camera2D</name></member>
+    <member refid="classnta_1_1Camera2D_1a18046ff230e055a06c6ca750e6eea8de" kind="function"><name>~Camera2D</name></member>
+    <member refid="classnta_1_1Camera2D_1a203daa81f32279e969de57a549165297" kind="function"><name>getCameraMatrix</name></member>
+    <member refid="classnta_1_1Camera2D_1ad02d4b9a995f3919c753fd2ea6d9f8f1" kind="function"><name>getBoundsCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1af3b971aa62c8e6ca7287d0d236bb3e3d" kind="function"><name>getBoundsTopLeft</name></member>
+    <member refid="classnta_1_1Camera2D_1add5061ade3ed4eb82d3e75f6aba97f70" kind="function"><name>getCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1adbfd52308be6b9c56736400ac67b65c5" kind="function"><name>getTopLeft</name></member>
+    <member refid="classnta_1_1Camera2D_1a2f688f531a999d2b427ef63a18859e6d" kind="function"><name>getDimensions</name></member>
+    <member refid="classnta_1_1Camera2D_1afb20fb9823724babdc8d18b17336169c" kind="function"><name>mouseToGame</name></member>
+    <member refid="classnta_1_1Camera2D_1a11a7edceed0964b375fbfe154b9a9895" kind="function"><name>setCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1a5e887ee36c95789e3455ab2f3bb3f568" kind="function"><name>setCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1a3b133bef64504b488b04ce18e206544b" kind="function"><name>setDimensions</name></member>
+    <member refid="classnta_1_1Camera2D_1a253821b9dc464678c80ff92c31a8689f" kind="function"><name>setDimensions</name></member>
+    <member refid="classnta_1_1Camera2D_1a6898ed9fb83d97ede973732d62154967" kind="function"><name>translateCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1a78cff35ecd4ea38504283ffb903f92be" kind="function"><name>translateCenter</name></member>
+    <member refid="classnta_1_1Camera2D_1aa89b58a2a5ca0c3df56d07e2722afcd6" kind="function"><name>scaleDimensions</name></member>
+    <member refid="classnta_1_1Camera2D_1ae5e80a376fe4b6457e712c6bc94b8584" kind="function"><name>scaleDimensions</name></member>
+  </compound>
+  <compound refid="structnta_1_1CharGlyph" kind="struct"><name>nta::CharGlyph</name>
+    <member refid="structnta_1_1CharGlyph_1a46d9ea9c38c8bf5e1c1679e938019f53" kind="variable"><name>uvRect</name></member>
+    <member refid="structnta_1_1CharGlyph_1aa2a40e6fe48ffadb4c7c95af7e82db91" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="structnta_1_1FontMap_1_1CharRect" kind="struct"><name>nta::FontMap::CharRect</name>
+    <member refid="structnta_1_1FontMap_1_1CharRect_1a84c89136099916d5e825d487fec1fd50" kind="variable"><name>topLeft</name></member>
+    <member refid="structnta_1_1FontMap_1_1CharRect_1a3f5d24fdc091d334c532274b9a79fd0d" kind="variable"><name>dimensions</name></member>
+    <member refid="structnta_1_1FontMap_1_1CharRect_1a605388f5ce8e4e7316276d9b0df740cb" kind="variable"><name>addedToMap</name></member>
+    <member refid="structnta_1_1FontMap_1_1CharRect_1a9e46641deb5179ba8cce912f672edc61" kind="function"><name>CharRect</name></member>
+    <member refid="structnta_1_1FontMap_1_1CharRect_1aae578d461eba96e8fbf71f507b99a87f" kind="function"><name>CharRect</name></member>
+  </compound>
+  <compound refid="classnta_1_1Compressor" kind="class"><name>nta::Compressor</name>
+    <member refid="classnta_1_1Compressor_1a85e378612ff069d0bc915c87fae74e7d" kind="variable"><name>m_encodings</name></member>
+    <member refid="classnta_1_1Compressor_1a9cec9a631892c8cd4b9c2358c7ac41f4" kind="variable"><name>m_root</name></member>
+    <member refid="classnta_1_1Compressor_1affed498c6ed43db813de5c46892b9163" kind="function"><name>toBinary</name></member>
+    <member refid="classnta_1_1Compressor_1aa7950ec19d7beda1b1102d1df453861f" kind="function"><name>fromBinary</name></member>
+    <member refid="classnta_1_1Compressor_1ade1d9da3d6a4ccc45fb17a83f9d7c4ed" kind="function"><name>createTree</name></member>
+    <member refid="classnta_1_1Compressor_1aaf2c8b87946d2cee8b4edcf4c48f7f71" kind="function"><name>decompress</name></member>
+    <member refid="classnta_1_1Compressor_1ac5f5822b598309d4ef6a89edb7bdcf10" kind="function"><name>compress</name></member>
+  </compound>
+  <compound refid="classnta_1_1FontMap" kind="class"><name>nta::FontMap</name>
+    <member refid="classnta_1_1FontMap_1a24e415fd025230fce6a304a3dfd320a8" kind="variable"><name>m_rects</name></member>
+    <member refid="classnta_1_1FontMap_1af6e4081f6048d41ce15758c9cdb6092f" kind="variable"><name>SpriteFont</name></member>
+    <member refid="classnta_1_1FontMap_1aae874cb1975e6be920bf785f34f14c3e" kind="function"><name>isOverlapping</name></member>
+    <member refid="classnta_1_1FontMap_1a1839735db2d53428126d3381dc7f3928" kind="function"><name>FontMap</name></member>
+    <member refid="classnta_1_1FontMap_1a4a17763eca18891c99340872de48d7e0" kind="function"><name>~FontMap</name></member>
+    <member refid="classnta_1_1FontMap_1a3e51706b5955f482f776b0d6980750b3" kind="function"><name>getBoundingDimensions</name></member>
+    <member refid="classnta_1_1FontMap_1a718ff54c2a35546937602ee212bc66a9" kind="function"><name>addRect</name></member>
+    <member refid="classnta_1_1FontMap_1ada51488d206b4a609cc4a5401d90f43d" kind="function"><name>position</name></member>
+  </compound>
+  <compound refid="classnta_1_1FPSLimiter" kind="class"><name>nta::FPSLimiter</name>
+    <member refid="classnta_1_1FPSLimiter_1a06b2818f3bff96da37768829af13df2d" kind="variable"><name>m_fps</name></member>
+    <member refid="classnta_1_1FPSLimiter_1ae4a323afb44da70acd962cc4c395183d" kind="variable"><name>m_maxFPS</name></member>
+    <member refid="classnta_1_1FPSLimiter_1a7a866e0bc883bdd26e80e95748f4052c" kind="function"><name>FPSLimiter</name></member>
+    <member refid="classnta_1_1FPSLimiter_1a70f4becf157a9819dc79e35ed5ab058e" kind="function"><name>~FPSLimiter</name></member>
+    <member refid="classnta_1_1FPSLimiter_1ac72ab398095957d9cffa07859e1f97a4" kind="function"><name>setMaxFPS</name></member>
+    <member refid="classnta_1_1FPSLimiter_1a682d191b70ddecf8f7ed776dc586fe27" kind="function"><name>getFPS</name></member>
+    <member refid="classnta_1_1FPSLimiter_1a17003ecbc30d60c58112615fcaee4d1e" kind="function"><name>end</name></member>
+  </compound>
+  <compound refid="classnta_1_1GLSLProgram" kind="class"><name>nta::GLSLProgram</name>
+    <member refid="classnta_1_1GLSLProgram_1ad1019aa2ac0a1cbdef1668870d26c3f2" kind="variable"><name>m_programID</name><

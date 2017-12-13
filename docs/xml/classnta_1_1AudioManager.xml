@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnta_1_1AudioManager" kind="class" language="C++" prot="public">
+    <compoundname>nta::AudioManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classnta_1_1AudioManager_1a745f3ef1216f7e6bf848a9eb4054c5b4" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classnta_1_1SoundEffect" kindref="compound">SoundEffect</ref> * &gt;</type>
+        <definition>std::map&lt; std::string, SoundEffect * &gt; nta::AudioManager::m_effectMap</definition>
+        <argsstring></argsstring>
+        <name>m_effectMap</name>
+        <briefdescription>
+<para>maps for associating sounds with their files </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="68" column="1" bodyfile="include/nta/AudioManager.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnta_1_1AudioManager_1ae301717a98c3a7bb0ca0b588c270b122" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classnta_1_1Music" kindref="compound">Music</ref> * &gt;</type>
+        <definition>std::map&lt; std::string, Music * &gt; nta::AudioManager::m_musicMap</definition>
+        <argsstring></argsstring>
+        <name>m_musicMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="69" column="1" bodyfile="include/nta/AudioManager.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnta_1_1AudioManager_1a4da570a6cee16bd6450031f7910057fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nta::AudioManager::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>initializes SDL_Mixer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="72" column="1" bodyfile="src/AudioManager.cpp" bodystart="7" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classnta_1_1AudioManager_1aa337e5cc1825c6e2b971e1fc173b17ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nta::AudioManager::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+<para>frees all music </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="74" column="1" bodyfile="src/AudioManager.cpp" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classnta_1_1AudioManager_1a131e8ec62c63fd9a07a77d833b02b598" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnta_1_1SoundEffect" kindref="compound">SoundEffect</ref> *</type>
+        <definition>SoundEffect * nta::AudioManager::getSoundEffect</definition>
+        <argsstring>(crstring effectPath)</argsstring>
+        <name>getSoundEffect</name>
+        <param>
+          <type>crstring</type>
+          <declname>effectPath</declname>
+        </param>
+        <briefdescription>
+<para>returns sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="76" column="1" bodyfile="src/AudioManager.cpp" bodystart="30" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classnta_1_1AudioManager_1adb0a0f0efb072f57430835c849caaa39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classnta_1_1Music" kindref="compound">Music</ref> *</type>
+        <definition>Music * nta::AudioManager::getMusic</definition>
+        <argsstring>(crstring musicPath)</argsstring>
+        <name>getMusic</name>
+        <param>
+          <type>crstring</type>
+          <declname>musicPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/AudioManager.h" line="77" column="1" bodyfile="src/AudioManager.cpp" bodystart="47" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/nta/AudioManager.h" line="65" column="1" bodyfile="include/nta/AudioManager.h" bodystart="65" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classnta_1_1AudioManager_1aa337e5cc1825c6e2b971e1fc173b17ce" prot="public" virt="non-virtual"><scope>nta::AudioManager</scope><name>destroy</name></member>
+      <member refid="classnta_1_1AudioManager_1adb0a0f0efb072f57430835c849caaa39" prot="public" virt="non-virtual"><scope>nta::AudioManager</scope><name>getMusic</name></member>
+      <member refid="classnta_1_1AudioManager_1a131e8ec62c63fd9a07a77d833b02b598" prot="public" virt="non-virtual"><scope>nta::AudioManager</scope><name>getSoundEffect</name></member>
+      <member refid="classnta_1_1AudioManager_1a4da570a6cee16bd6450031f7910057fd" prot="public" virt="non-virtual"><scope>nta::AudioManager</scope><name>init</name></member>
+      <member refid="classnta_1_1AudioManager_1a745f3ef1216f7e6bf848a9eb4054c5b4" prot="private" virt="non-virtual"><scope>nta::AudioManager</scope><name>m_effectMap</name></member>
+      <member refid="classnta_1_1AudioManager_1ae301717a98c3a7bb0ca0b588c270b122" prot="private" virt="non-virtual"><scope>nta::AudioManager</scope><name>m_musicMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

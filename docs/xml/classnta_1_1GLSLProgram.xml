@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnta_1_1GLSLProgram" kind="class" language="C++" prot="public">
+    <compoundname>nta::GLSLProgram</compoundname>
+    <includes refid="GLSLProgram_8h" local="no">GLSLProgram.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnta_1_1GLSLProgram_1ad1019aa2ac0a1cbdef1668870d26c3f2" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint nta::GLSLProgram::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the id for the program </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/GLSLProgram.h" line="20" column="1" bodyfile="include/nta/GLSLProgram.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnta_1_1GLSLProgram_1a77478858f3885fba34a384ace272565a" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint nta::GLSLProgram::m_vertShaderID</definition>
+        <argsstring></argsstring>
+        <name>m_vertShaderID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the ids for the vertex and fragment shaders </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/GLSLProgram.h" line="22" column="1" bodyfile="include/nta/GLSLProgram.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnta_1_1GLSLProgram_1a4762bd58f72875cdda7513684f530bed" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint nta::GLSLProgram::m_fragShaderID</definition>
+        <argsstring></argsstring>
+        <name>m_fragShaderID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/GLSLProgram.h" line="22" column="1" bodyfile="include/nta/GLSLProgram.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnta_1_1GLSLProgram_1aa90cbc60f99bdfc69ef68633e351a118" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nta::GLSLProgram::m_numAttributes</definition>
+        <argsstring></argsstring>
+        <name>m_numAttributes</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the number of attributes used by the vertex shader </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/GLSLProgram.h" line="24" column="1" bodyfile="include/nta/GLSLProgram.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnta_1_1GLSLProgram_1af133a0d5d2e15fdff99062f9ea742024" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool nta::GLSLProgram::m_isLinked</definition>
+        <argsstring></argsstring>
+        <name>m_isLinked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>keeps track of whether or not the shaders have been linked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/nta/GLSLProgram.h" line="26" column="1" bodyfile="include/nta/GLSLProgram.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+     

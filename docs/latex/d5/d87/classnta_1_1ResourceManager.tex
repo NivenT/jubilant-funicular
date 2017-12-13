@@ -1,0 +1,45 @@
+\hypertarget{classnta_1_1ResourceManager}{}\section{nta\+:\+:Resource\+Manager Class Reference}
+\label{classnta_1_1ResourceManager}\index{nta\+::\+Resource\+Manager@{nta\+::\+Resource\+Manager}}
+
+
+Handles storing and retrieving textures so an image isn\textquotesingle{}t loaded multiple times.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a9058dbd86949123968e61de1fb6234f2}\label{classnta_1_1ResourceManager_a9058dbd86949123968e61de1fb6234f2}} 
+static \hyperlink{structnta_1_1GLTexture}{G\+L\+Texture} \& \hyperlink{classnta_1_1ResourceManager_a9058dbd86949123968e61de1fb6234f2}{get\+Texture} (crstring image\+Path, G\+Lint min\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+M\+I\+P\+M\+A\+P\+\_\+\+L\+I\+N\+E\+AR, G\+Lint mag\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+AR, crvec2 dimensions=glm\+::vec2(0))
+\begin{DoxyCompactList}\small\item\em returns the resource with the given path, loading it if need be \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a0288c8895b2182c4ea38ecdac5bfa1e1}\label{classnta_1_1ResourceManager_a0288c8895b2182c4ea38ecdac5bfa1e1}} 
+static \hyperlink{structnta_1_1GLTexture}{G\+L\+Texture} \& {\bfseries get\+Texture} (crstring image\+Path, crvec2 dimensions, G\+Lint min\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+M\+I\+P\+M\+A\+P\+\_\+\+L\+I\+N\+E\+AR, G\+Lint mag\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+AR)
+\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a0411e5cf357d6d285820338d92d06a0e}\label{classnta_1_1ResourceManager_a0411e5cf357d6d285820338d92d06a0e}} 
+static \hyperlink{classnta_1_1SpriteFont}{Sprite\+Font} $\ast$ {\bfseries get\+Sprite\+Font} (crstring font\+Path, int font\+Size=32)
+\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a2f9971f86fc9e50d7a62aa5f6f91a489}\label{classnta_1_1ResourceManager_a2f9971f86fc9e50d7a62aa5f6f91a489}} 
+static void \hyperlink{classnta_1_1ResourceManager_a2f9971f86fc9e50d7a62aa5f6f91a489}{delete\+Texture} (crstring image\+Path)
+\begin{DoxyCompactList}\small\item\em removes the resource with the given path from the map and deletes it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a16c549cb1496d1f38b5900258b0624c7}\label{classnta_1_1ResourceManager_a16c549cb1496d1f38b5900258b0624c7}} 
+static void {\bfseries delete\+Sprite\+Font} (crstring font\+Path, int font\+Size=32)
+\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a26ff6f1cb4044d8f47fa5db9a3df2514}\label{classnta_1_1ResourceManager_a26ff6f1cb4044d8f47fa5db9a3df2514}} 
+static void {\bfseries destroy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles storing and retrieving textures so an image isn\textquotesingle{}t loaded multiple times. 
+
+Definition at line 9 of file Resource\+Manager.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Resource\+Manager.\+h\item 
+src/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

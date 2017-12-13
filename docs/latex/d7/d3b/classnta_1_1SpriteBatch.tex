@@ -1,0 +1,48 @@
+\hypertarget{classnta_1_1SpriteBatch}{}\section{nta\+:\+:Sprite\+Batch Class Reference}
+\label{classnta_1_1SpriteBatch}\index{nta\+::\+Sprite\+Batch@{nta\+::\+Sprite\+Batch}}
+
+
+represents a collection of sprites to be drawn  
+
+
+
+
+{\ttfamily \#include $<$Sprite\+Batch.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a554ec4ee678b6f97621d299e4a258f95}\label{classnta_1_1SpriteBatch_a554ec4ee678b6f97621d299e4a258f95}} 
+\hyperlink{classnta_1_1SpriteBatch_a554ec4ee678b6f97621d299e4a258f95}{Sprite\+Batch} ()
+\begin{DoxyCompactList}\small\item\em constructor and destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a91cb54c5e459f9cb0142f7d4b6e3272c}\label{classnta_1_1SpriteBatch_a91cb54c5e459f9cb0142f7d4b6e3272c}} 
+void \hyperlink{classnta_1_1SpriteBatch_a91cb54c5e459f9cb0142f7d4b6e3272c}{init} ()
+\begin{DoxyCompactList}\small\item\em initializes the batch \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a8ceff37f4b281bfb1f627876bb420978}\label{classnta_1_1SpriteBatch_a8ceff37f4b281bfb1f627876bb420978}} 
+void \hyperlink{classnta_1_1SpriteBatch_a8ceff37f4b281bfb1f627876bb420978}{begin} ()
+\begin{DoxyCompactList}\small\item\em begins collection of glyphs for the batch \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}\label{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}} 
+void \hyperlink{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}{end} ()
+\begin{DoxyCompactList}\small\item\em ends collection of glyphs and prepares to render \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a78627798a8c93b2a202e964d2620716c}\label{classnta_1_1SpriteBatch_a78627798a8c93b2a202e964d2620716c}} 
+void \hyperlink{classnta_1_1SpriteBatch_a78627798a8c93b2a202e964d2620716c}{add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, float depth=1, crvec4 color=glm\+::vec4(1))
+\begin{DoxyCompactList}\small\item\em adds a glyph to the batch \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ad6a57afab920d474f05a2944a6e555c5}\label{classnta_1_1SpriteBatch_ad6a57afab920d474f05a2944a6e555c5}} 
+void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, float depth=1, crvec4 color=glm\+::vec4(1))
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}\label{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}} 
+void \hyperlink{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}{render} () const
+\begin{DoxyCompactList}\small\item\em renders the batch \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a collection of sprites to be drawn 
+
+Definition at line 53 of file Sprite\+Batch.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Sprite\+Batch.\+h\item 
+src/Sprite\+Batch.\+cpp\end{DoxyCompactItemize}

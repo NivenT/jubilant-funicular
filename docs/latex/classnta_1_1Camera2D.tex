@@ -1,0 +1,100 @@
+\hypertarget{classnta_1_1Camera2D}{}\section{nta\+:\+:Camera2D Class Reference}
+\label{classnta_1_1Camera2D}\index{nta\+::\+Camera2D@{nta\+::\+Camera2D}}
+
+
+represents a camera in two dimensions from which the world is viewed  
+
+
+
+
+{\ttfamily \#include $<$Camera2\+D.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a11aada3f997c594ade11dd3c46d826f4}\label{classnta_1_1Camera2D_a11aada3f997c594ade11dd3c46d826f4}} 
+\hyperlink{classnta_1_1Camera2D_a11aada3f997c594ade11dd3c46d826f4}{Camera2D} ()
+\begin{DoxyCompactList}\small\item\em constructors \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a69171de8322165de5f134a83e33c419a}\label{classnta_1_1Camera2D_a69171de8322165de5f134a83e33c419a}} 
+{\bfseries Camera2D} (crvec2 center)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_af503a21cf73859010aefbacb1af7078c}\label{classnta_1_1Camera2D_af503a21cf73859010aefbacb1af7078c}} 
+{\bfseries Camera2D} (crvec2 center, crvec2 dimensions)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}\label{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}} 
+\hyperlink{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}{$\sim$\+Camera2D} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}\label{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}} 
+glm\+::mat3 \hyperlink{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}{get\+Camera\+Matrix} () const
+\begin{DoxyCompactList}\small\item\em returns the 3x3 matrix representing the camera\textquotesingle{}s view \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}\label{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}} 
+glm\+::vec4 \hyperlink{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}{get\+Bounds\+Center} () const
+\begin{DoxyCompactList}\small\item\em returns camera bounds in the given format \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_af3b971aa62c8e6ca7287d0d236bb3e3d}\label{classnta_1_1Camera2D_af3b971aa62c8e6ca7287d0d236bb3e3d}} 
+glm\+::vec4 {\bfseries get\+Bounds\+Top\+Left} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_add5061ade3ed4eb82d3e75f6aba97f70}\label{classnta_1_1Camera2D_add5061ade3ed4eb82d3e75f6aba97f70}} 
+glm\+::vec2 \hyperlink{classnta_1_1Camera2D_add5061ade3ed4eb82d3e75f6aba97f70}{get\+Center} () const
+\begin{DoxyCompactList}\small\item\em returns the center, top left coordinate, and dimensions of the camera\textquotesingle{}s view \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_adbfd52308be6b9c56736400ac67b65c5}\label{classnta_1_1Camera2D_adbfd52308be6b9c56736400ac67b65c5}} 
+glm\+::vec2 {\bfseries get\+Top\+Left} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}\label{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}} 
+glm\+::vec2 {\bfseries get\+Dimensions} () const
+\item 
+glm\+::vec2 \hyperlink{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}{mouse\+To\+Game} (crvec2 mouse, crvec2 window\+Dimensions) const
+\begin{DoxyCompactList}\small\item\em converts mouse coordinates to world coordinates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}\label{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}} 
+void \hyperlink{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}{set\+Center} (crvec2 center)
+\begin{DoxyCompactList}\small\item\em sets the values of the camera\textquotesingle{}s fields \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a5e887ee36c95789e3455ab2f3bb3f568}\label{classnta_1_1Camera2D_a5e887ee36c95789e3455ab2f3bb3f568}} 
+void {\bfseries set\+Center} (float x, float y)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a3b133bef64504b488b04ce18e206544b}\label{classnta_1_1Camera2D_a3b133bef64504b488b04ce18e206544b}} 
+void {\bfseries set\+Dimensions} (crvec2 dimensions)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a253821b9dc464678c80ff92c31a8689f}\label{classnta_1_1Camera2D_a253821b9dc464678c80ff92c31a8689f}} 
+void {\bfseries set\+Dimensions} (float w, float h)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}\label{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}} 
+void \hyperlink{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}{translate\+Center} (crvec2 translation)
+\begin{DoxyCompactList}\small\item\em moves the camera around the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a78cff35ecd4ea38504283ffb903f92be}\label{classnta_1_1Camera2D_a78cff35ecd4ea38504283ffb903f92be}} 
+void {\bfseries translate\+Center} (float dx, float dy)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}\label{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}} 
+void \hyperlink{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}{scale\+Dimensions} (crvec2 dilation)
+\begin{DoxyCompactList}\small\item\em scales the camera\textquotesingle{}s field of view \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_ae5e80a376fe4b6457e712c6bc94b8584}\label{classnta_1_1Camera2D_ae5e80a376fe4b6457e712c6bc94b8584}} 
+void {\bfseries scale\+Dimensions} (float dw, float dh)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a camera in two dimensions from which the world is viewed 
+
+Definition at line 8 of file Camera2\+D.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}\label{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}} 
+\index{nta\+::\+Camera2D@{nta\+::\+Camera2D}!mouse\+To\+Game@{mouse\+To\+Game}}
+\index{mouse\+To\+Game@{mouse\+To\+Game}!nta\+::\+Camera2D@{nta\+::\+Camera2D}}
+\subsubsection{\texorpdfstring{mouse\+To\+Game()}{mouseToGame()}}
+{\footnotesize\ttfamily glm\+::vec2 nta\+::\+Camera2\+D\+::mouse\+To\+Game (\begin{DoxyParamCaption}\item[{crvec2}]{mouse,  }\item[{crvec2}]{window\+Dimensions }\end{DoxyParamCaption}) const}
+
+
+
+converts mouse coordinates to world coordinates 
+
+\mbox{[}a,b\mbox{]}-\/$>$\mbox{[}0,b-\/a\mbox{]}-\/$>$\mbox{[}0,d-\/c\mbox{]}-\/$>$\mbox{[}c,d\mbox{]} 
+
+Definition at line 48 of file Camera2\+D.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Camera2\+D.\+h\item 
+src/Camera2\+D.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classnta_1_1Screen}{}\section{nta\+:\+:Screen Class Reference}
+\label{classnta_1_1Screen}\index{nta\+::\+Screen@{nta\+::\+Screen}}
+
+
+Represents a game screen.  
+
+
+
+
+{\ttfamily \#include $<$Screen.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}\label{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}} 
+\hyperlink{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}{Screen} ()
+\begin{DoxyCompactList}\small\item\em basic constructor and destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}\label{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}} 
+Screen\+State \hyperlink{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}{get\+State} () const
+\begin{DoxyCompactList}\small\item\em returns state of screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}\label{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}} 
+virtual int \hyperlink{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}{get\+Esc\+Index} () const
+\begin{DoxyCompactList}\small\item\em sets/gets various screen indices \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a01f4fdd4cadd6abe4fef2605a0fde52a}\label{classnta_1_1Screen_a01f4fdd4cadd6abe4fef2605a0fde52a}} 
+virtual int {\bfseries get\+X\+Index} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_aba9c09cd06dfc05557b86d866a7fb2b9}\label{classnta_1_1Screen_aba9c09cd06dfc05557b86d866a7fb2b9}} 
+virtual int {\bfseries get\+Next\+Index} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}\label{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}} 
+virtual int {\bfseries get\+Index} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a06a0cb178a3bedde883e7a9b5c825a3d}\label{classnta_1_1Screen_a06a0cb178a3bedde883e7a9b5c825a3d}} 
+virtual void {\bfseries set\+Indices} (int index, int esc\+Index, int x\+Index)
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}\label{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}} 
+virtual void \hyperlink{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}{set\+Window} (crstring title)
+\begin{DoxyCompactList}\small\item\em sets the window to associate with this screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}\label{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}} 
+virtual void \hyperlink{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}{render} ()=0
+\begin{DoxyCompactList}\small\item\em renders screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a6892f9b74b033d8bd5f4e9f190d49efa}\label{classnta_1_1Screen_a6892f9b74b033d8bd5f4e9f190d49efa}} 
+virtual void \hyperlink{classnta_1_1Screen_a6892f9b74b033d8bd5f4e9f190d49efa}{update} ()=0
+\begin{DoxyCompactList}\small\item\em updates screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}\label{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}} 
+virtual void \hyperlink{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}{handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em handles user input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}\label{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}} 
+virtual void \hyperlink{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}{on\+Focus} ()
+\begin{DoxyCompactList}\small\item\em called when the screen becomes active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}\label{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}} 
+virtual void \hyperlink{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}{off\+Focus} ()
+\begin{DoxyCompactList}\small\item\em called when the screen is no longer active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_ae749bdd554cea6beb81ed8bcd1cd4ed1}\label{classnta_1_1Screen_ae749bdd554cea6beb81ed8bcd1cd4ed1}} 
+virtual void \hyperlink{classnta_1_1Screen_ae749bdd554cea6beb81ed8bcd1cd4ed1}{init} ()=0
+\begin{DoxyCompactList}\small\item\em initializes the screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a68d2c095aadfb248263f43cb12cd34a1}\label{classnta_1_1Screen_a68d2c095aadfb248263f43cb12cd34a1}} 
+Screen\+State \hyperlink{classnta_1_1Screen_a68d2c095aadfb248263f43cb12cd34a1}{m\+\_\+state} = Screen\+State\+::\+N\+O\+NE
+\begin{DoxyCompactList}\small\item\em the state of this screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}\label{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}} 
+\hyperlink{classnta_1_1Window}{Window} $\ast$ \hyperlink{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}{m\+\_\+window} = nullptr
+\begin{DoxyCompactList}\small\item\em the window the screen is rendered in \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}\label{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}} 
+int \hyperlink{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}{m\+\_\+next\+Index} = -\/1
+\begin{DoxyCompactList}\small\item\em the index of the screen to go to in special circumstances \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a game screen. 
+
+Definition at line 9 of file Screen.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Screen.\+h\item 
+src/Screen.\+cpp\end{DoxyCompactItemize}
