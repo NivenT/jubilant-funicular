@@ -18,12 +18,13 @@ namespace nta {
 				}
         /// Constructs an untextured regular polygon
         Primitive(std::size_t numSides, crvec2 center, float sideLength,
-                  crvec4 color, float d) : depth(d), textureID(0) {
+                  crvec4 color, float orientation, float d) : depth(d), textureID(0) {
             std::vector<Vertex2D> verts;
             float theta = 2.*M_PI/numSides;
             float a = sideLength/glm::sqrt(2.-2.*glm::cos(theta));
             for (std::size_t i = 0; i < numSides; i++) {
-                glm::vec2 translate(glm::cos(i*theta), glm::sin(i*theta));
+                float angle = i*theta + orientation;
+                glm::vec2 translate(glm::cos(angle), glm::sin(angle));
                 verts.emplace_back(a * translate + center, color);
             }
             vertices.insert(vertices.begin(), std::begin(verts), std::end(verts));
@@ -80,7 +81,7 @@ namespace nta {
 				template<class Iterator>
 				void addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth = 1);
         void addPrimitive(std::size_t numSides, crvec2 center = glm::vec2(0), float sideLength = 1.0,
-                          crvec4 color = glm::vec4(1), float depth = 1);
+                          crvec4 color = glm::vec4(1), float orientation = 0., float depth = 1);
         /// renders the primitives
         void render() const;
     };

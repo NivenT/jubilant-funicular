@@ -136,8 +136,8 @@ namespace nta {
         m_primitives.push_back(new Primitive(vertices, textureID, depth));
     }
     void PrimitiveBatch::addPrimitive(std::size_t numSides, crvec2 center, float sideLength,
-                                      crvec4 color, float depth) {
-        m_primitives.push_back(new Primitive(numSides, center, sideLength, color, depth));
+                                      crvec4 color, float orientation, float depth) {
+        m_primitives.push_back(new Primitive(numSides, center, sideLength, color, orientation, depth));
     }
     void PrimitiveBatch::render() const {
         glBindVertexArray(m_vao);
