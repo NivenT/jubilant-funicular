@@ -101,8 +101,11 @@ namespace nta {
         }
         int offset = m_primitives[0]->vertices.size();
         for (int cp = 1; cp < m_primitives.size(); cp++) { // current primitive
+            // Each primitive using GL_POLYGON needs to be its own
+            // batch in order to be rendered currectly
             if (m_primitives[cp]->textureID != m_primitives[cp-1]->textureID ||
-                m_primitives[cp]->vertices.size() != m_primitives[cp-1]->vertices.size()) {
+                m_primitives[cp]->vertices.size() != m_primitives[cp-1]->vertices.size() ||
+                m_primitives[cp]->vertices.size() > 4) {
                 m_renderBatches.emplace_back(m_primitives[cp]->textureID, offset,
                                              m_primitives[cp]->vertices.size(),
                                              toPrimitiveType(m_primitives[cp]->vertices.size()));
