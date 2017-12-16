@@ -8,6 +8,6 @@ var searchData=
   ['pos',['pos',['../d5/d07/structnta_1_1Vertex2D.html#a27a44e1ca52b5a5a13d37495e9376636',1,'nta::Vertex2D']]],
   ['position',['position',['../d9/d4d/classnta_1_1FontMap.html#ada51488d206b4a609cc4a5401d90f43d',1,'nta::FontMap']]],
   ['presskey',['pressKey',['../d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0',1,'nta::InputManager']]],
-  ['primitive',['Primitive',['../d6/d4f/structnta_1_1Primitive.html',1,'nta::Primitive'],['../d6/d4f/structnta_1_1Primitive.html#a457e15628dd6a138d27e41650040f5bf',1,'nta::Primitive::Primitive()']]],
+  ['primitive',['Primitive',['../d6/d4f/structnta_1_1Primitive.html',1,'nta::Primitive'],['../d6/d4f/structnta_1_1Primitive.html#ad8eb45115ed7647d71360ce6366eb2bc',1,'nta::Primitive::Primitive(const std::initializer_list&lt; Vertex2D &gt; &amp;verts, GLuint texID, float d)'],['../d6/d4f/structnta_1_1Primitive.html#a6f5cc606b1b9e6537daa5f9413912416',1,'nta::Primitive::Primitive(std::size_t numSides, crvec2 center, float sideLength, crvec4 color, float d)']]],
   ['primitivebatch',['PrimitiveBatch',['../d4/df3/classnta_1_1PrimitiveBatch.html',1,'nta::PrimitiveBatch'],['../d4/df3/classnta_1_1PrimitiveBatch.html#a28628a90db31796dd0d1cf770dbe9ff5',1,'nta::PrimitiveBatch::PrimitiveBatch()']]]
 ];
