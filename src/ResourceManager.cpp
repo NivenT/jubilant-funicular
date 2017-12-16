@@ -46,6 +46,7 @@ namespace nta {
         }
     }
     void ResourceManager::destroy() {
+        Logger::writeToLog("Destroying ResourceManager...");
         for (auto pair : m_textureMap) {
             Logger::writeToLog("Deleting texture: " + pair.first + "...");
             glDeleteTextures(1, &pair.second.id);
@@ -59,5 +60,6 @@ namespace nta {
         }
         m_textureMap.clear();
         m_fontMap.clear();
+        Logger::writeToLog("Destroyed ResourceManager");
     }
 }

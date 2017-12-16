@@ -12,7 +12,6 @@ namespace nta {
         m_width = m_height = 0;
         m_title = "";
         SDL_DestroyWindow(m_window);
-        delete m_window;
         m_window = nullptr;
     }
     glm::vec2 Window::getDimensions() const {

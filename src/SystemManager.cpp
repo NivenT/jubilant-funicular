@@ -1,4 +1,5 @@
 #include "SystemManager.h"
+#include "Logger.h"
 
 namespace nta {
     std::map<std::string, GLSLProgram*> SystemManager::m_glslMap;
@@ -23,13 +24,19 @@ namespace nta {
         return m_windowMap[windowTitle];
     }
     void SystemManager::destroy() {
+        Logger::writeToLog("Destroying SystemManager...");
         for (auto pair : m_glslMap) {
+            Logger::writeToLog("Deleting GLSL program: " + pair.first + "...");
             delete pair.second;
+            Logger::writeToLog("Deleted program");
         }
         for (auto pair : m_windowMap) {
+            Logger::writeToLog("Deleting window: " + pair.first + "...");
             delete pair.second;
+            Logger::writeToLog("Deleted window");
         }
         m_glslMap.clear();
         m_windowMap.clear();
+        Logger::writeToLog("Destroyed SystemMangaer");
     }
 }

@@ -16,16 +16,22 @@ namespace nta {
         Logger::writeToLog("Initialized AudioManager");
     }
     void AudioManager::destroy() {
+        Logger::writeToLog("Destroying AudioManager...");
         for (auto& it : m_effectMap) {
+            Logger::writeToLog("Deleting sound effect: " + it.first + "...");
             delete it.second;
+            Logger::writeToLog("Deleted sound effect");
         }
         for (auto& it : m_musicMap) {
+            Logger::writeToLog("Deleting music: " + it.first + "...");
             delete it.second;
+            Logger::writeToLog("Deleted music");
         }
         m_effectMap.clear();
         m_musicMap.clear();
         Mix_CloseAudio();
         Mix_Quit();
+        Logger::writeToLog("Destroyed AudioManager");
     }
     SoundEffect* AudioManager::getSoundEffect(crstring effectPath) {
         std::string folder = "";

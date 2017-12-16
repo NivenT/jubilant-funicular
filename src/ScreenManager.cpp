@@ -32,7 +32,7 @@ namespace nta {
             getCurrScreen()->onFocus();
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
-            Logger::writeToLog("Exiting screen manager...");
+            Logger::writeToLog("Exiting ScreenManager...");
             m_currScreen = -1;
         }
     }
@@ -57,14 +57,14 @@ namespace nta {
                                                                     " is NONE"); break;
             }
         }
-        Logger::writeToLog("Exited screen manager");
+        Logger::writeToLog("Exited ScreenManager");
     }
     void ScreenManager::destroy() {
-        Logger::writeToLog("Destroying screen manager...");
+        Logger::writeToLog("Destroying ScreenManager...");
         for (auto screen : m_screens) {
             delete screen;
         }
         m_screens.clear();
-        Logger::writeToLog("Destroyed screen manager...");
+        Logger::writeToLog("Destroyed ScreenManager...");
     }
 }
