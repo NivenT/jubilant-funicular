@@ -33,10 +33,14 @@ namespace nta {
         for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
             glEnableVertexAttribArray(i);
         }
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, pos));
-        glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE , sizeof(Vertex2D), (void*)offsetof(Vertex2D, color));
-        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, uv));
-				glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
+        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
+                              (void*)offsetof(Vertex2D, pos));
+        glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE , sizeof(Vertex2D),
+                              (void*)offsetof(Vertex2D, color));
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
+                              (void*)offsetof(Vertex2D, uv));
+				glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
+                              (void*)offsetof(Vertex2D, hasTexture));
         glBindVertexArray(0);
     }
     void PrimitiveBatch::begin() {
@@ -51,9 +55,9 @@ namespace nta {
         createRenderBatches();
     }
     void PrimitiveBatch::sortPrimitives() {
-        //sort overall by depth
+        // sort overall by depth
         std::stable_sort(m_primitives.begin(), m_primitives.end(), compareDepth);
-        //sort same depth subsets by primitive
+        // sort same depth subsets by primitive
         int begin = 0;
         for (int i = 1; i < m_primitives.size(); i++) {
             if (m_primitives[i]->depth != m_primitives[i-1]->depth) {
@@ -61,7 +65,7 @@ namespace nta {
                 begin = i;
             }
         }
-        //sort same depth and primitive subsets by texture
+        // sort same depth and primitive subsets by texture
         begin = 0;
         for (int i = 1; i < m_primitives.size(); i++) {
             if (m_primitives[i]->depth != m_primitives[i-1]->depth ||
@@ -84,22 +88,23 @@ namespace nta {
         if (m_primitives.empty()) {
             return;
         }
-        int numVertices = 0; //total number of vertices
+        int numVertices = 0; // total number of vertices
         std::for_each(m_primitives.begin(), m_primitives.end(), [&numVertices](const Primitive* p) {
                 numVertices += p->vertices.size();
             });
         Vertex2D vertexData[numVertices];
         m_renderBatches.emplace_back(m_primitives[0]->textureID, 0, m_primitives[0]->vertices.size(),
                                      toPrimitiveType(m_primitives[0]->vertices.size()));
-        int cv = 0; ///current vertex
+        int cv = 0; // current vertex
         for (int i = 0; i < m_primitives[0]->vertices.size(); i++) {
             vertexData[cv++] = m_primitives[0]->vertices[i];
         }
         int offset = m_primitives[0]->vertices.size();
-        for (int cp = 1; cp < m_primitives.size(); cp++) { ///current primitive
+        for (int cp = 1; cp < m_primitives.size(); cp++) { // current primitive
             if (m_primitives[cp]->textureID != m_primitives[cp-1]->textureID ||
                 m_primitives[cp]->vertices.size() != m_primitives[cp-1]->vertices.size()) {
-                m_renderBatches.emplace_back(m_primitives[cp]->textureID, offset, m_primitives[cp]->vertices.size(),
+                m_renderBatches.emplace_back(m_primitives[cp]->textureID, offset,
+                                             m_primitives[cp]->vertices.size(),
                                              toPrimitiveType(m_primitives[cp]->vertices.size()));
             } else {
                 m_renderBatches.back().numVertices += m_primitives[cp]->vertices.size();
@@ -126,14 +131,20 @@ namespace nta {
     void PrimitiveBatch::addPrimitive(Primitive* primitive) {
         m_primitives.push_back(primitive);
     }
-    void PrimitiveBatch::addPrimitive(const std::initializer_list<Vertex2D>& vertices, GLuint textureID, float depth) {
+    void PrimitiveBatch::addPrimitive(const std::initializer_list<Vertex2D>& vertices,
+                                      GLuint textureID, float depth) {
         m_primitives.push_back(new Primitive(vertices, textureID, depth));
+    }
+    void PrimitiveBatch::addPrimitive(std::size_t numSides, crvec2 center, float sideLength,
+                                      crvec4 color, float depth) {
+        m_primitives.push_back(new Primitive(numSides, center, sideLength, color, depth));
     }
     void PrimitiveBatch::render() const {
         glBindVertexArray(m_vao);
         for (int i = 0; i < m_renderBatches.size(); i++) {
             glBindTexture(GL_TEXTURE_2D, m_renderBatches[i].textureID);
-            glDrawArrays(m_renderBatches[i].mode, m_renderBatches[i].offset, m_renderBatches[i].numVertices);
+            glDrawArrays(m_renderBatches[i].mode, m_renderBatches[i].offset,
+                         m_renderBatches[i].numVertices);
         }
         glBindVertexArray(0);
     }
