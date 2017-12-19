@@ -37,8 +37,10 @@ namespace nta {
         m_window = SystemManager::getWindow(title);
     }
     void Screen::handleInput() {
-        InputManager::updatePrev();
         static SDL_Event event;
+
+        InputManager::updatePrev();
+        InputManager::setMouseWheelMotion(MouseWheelMotion::STATIONARY);
         while (SDL_PollEvent(&event)) {
             InputManager::update(event);
             switch(event.type) {
