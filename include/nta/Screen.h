@@ -10,6 +10,8 @@ namespace nta {
     class SetManagerKey {
         friend class ScreenManager;
         SetManagerKey() {}
+        SetManagerKey(const SetManagerKey&);
+        SetManagerKey& operator=(const SetManagerKey&);
     };
     /// Represents a game screen
     class Screen {
