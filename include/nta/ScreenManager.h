@@ -8,31 +8,33 @@
 #include "Window.h"
 
 namespace nta {
-    ///Manages a collection of screens
+    /// Manages a collection of screens
     class ScreenManager {
     private:
-        ///the screens
+        /// the screens
         std::vector<Screen*> m_screens;
-        ///used to cap the FPS
+        /// used to cap the FPS
         FPSLimiter m_limiter;
-        ///the main window used by the manager
+        /// the main window used by the manager
         Window* m_window;
-        ///the index of the currently active screen
+        /// the index of the currently active screen
         int m_currScreen = -1;
     public:
-        ///sets the max fps and the window to use
+        /// sets the max fps and the window to use
         ScreenManager(crstring title, float maxFPS);
-        ///basic destructor
+        /// basic destructor
         ~ScreenManager();
-        ///returns the active screen
+        /// returns the active screen
         Screen* getCurrScreen() const;
-        ///adds a screen and sets some of its properties
+        /// returns the current fps
+        float getFPS() const;
+        /// adds a screen and sets some of its properties
         void addScreen(Screen* newScreen, int escIndex = -1, int xIndex = -1, crstring title = "");
-        ///switches the to a new screen
+        /// switches the to a new screen
         void switchScreen(int newIndex);
-        ///destroys screens
+        /// destroys screens
         void destroy();
-        ///runs screen logic (render, update, handleInput, etc.)
+        /// runs screen logic (render, update, handleInput, etc.)
         void run();
     };
 }
