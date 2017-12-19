@@ -66,11 +66,11 @@ namespace nta {
         glm::vec2 measure(crstring text) const;
         /// renders text with specified location, color, scale, etc.
         void drawText(SpriteBatch& batch, crstring text, crvec2 topLeft, crvec2 scale,
-                      crvec4 color = glm::vec4(1), float depth = 1) const;
+                      crvec4 color = glm::vec4(1), float depth = NTA_DEFAULT_DEPTH) const;
         void drawText(SpriteBatch& batch, crstring text, crvec4 posRect, crvec4 color = glm::vec4(1),
-                      float depth = 1) const;
+                      float depth = NTA_DEFAULT_DEPTH) const;
         void drawText(SpriteBatch& batch, crvec2 corner1, crvec2 corner2, crstring text,
-                      crvec4 color = glm::vec4(1), float depth = 1) const;
+                      crvec4 color = glm::vec4(1), float depth = NTA_DEFAULT_DEPTH) const;
         /// renders texture
         void drawTexture(SpriteBatch& batch) const;
         friend ResourceManager;

@@ -72,7 +72,7 @@ namespace nta {
         }
         Vertex2D vertexData[6*m_glyphPointers.size()];
         m_renderBatches.emplace_back(m_glyphPointers[0]->textureID, 0, 6);
-        int cv = 0; ///current vertex
+        int cv = 0; // current vertex
         vertexData[cv++] = m_glyphPointers[0]->topLeft;
         vertexData[cv++] = m_glyphPointers[0]->topRight;
         vertexData[cv++] = m_glyphPointers[0]->botLeft;
@@ -80,7 +80,7 @@ namespace nta {
         vertexData[cv++] = m_glyphPointers[0]->botLeft;
         vertexData[cv++] = m_glyphPointers[0]->botRight;
         int offset = 6;
-        for (int cg = 1; cg < m_glyphPointers.size(); cg++) { ///current glyph
+        for (int cg = 1; cg < m_glyphPointers.size(); cg++) { // current glyph
             if (m_glyphPointers[cg]->textureID != m_glyphPointers[cg-1]->textureID) {
                 m_renderBatches.emplace_back(m_glyphPointers[cg]->textureID, offset, 6);
             } else {

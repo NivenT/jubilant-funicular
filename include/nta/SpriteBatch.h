@@ -6,6 +6,8 @@
 
 #include "Vertex.h"
 
+#define NTA_DEFAULT_DEPTH 0.5
+
 namespace nta {
     /// represents what is essentially a sprite
     struct Glyph {
@@ -86,13 +88,14 @@ namespace nta {
         /// ends collection of glyphs and prepares to render
         void end();
         /// adds a glyph to the batch
-        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth = 1,
-                      crvec4 color = glm::vec4(1));
-        void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, float depth = 1,
-                      crvec4 color = glm::vec4(1));
-        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, float depth = 1);
+        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, 
+                      float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
+        void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
+                      float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
+        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, 
+                      float depth = NTA_DEFAULT_DEPTH);
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
-                      float depth = 1);
+                      float depth = NTA_DEFAULT_DEPTH);
         /// renders the batch
         void render() const;
     };
