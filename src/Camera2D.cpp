@@ -33,11 +33,17 @@ namespace nta {
             -m_center.x, -m_center.y, 1
         );
     }
-    glm::mat3 Camera2D::getRotationMatrix(float angle) const {
-        angle = std::isnan(angle) ? m_orientation : angle;
+    glm::mat3 Camera2D::getRotationMatrix() const {
         return glm::mat3(
-             glm::cos(angle), glm::sin(angle), 0,
-            -glm::sin(angle), glm::cos(angle), 0,
+             glm::cos(m_orientation), glm::sin(m_orientation), 0,
+            -glm::sin(m_orientation), glm::cos(m_orientation), 0,
+            0,                        0,                       1
+        );
+    }
+    glm::mat3 Camera2D::getInverseRotationMatrix() const {
+        return glm::mat3(
+            glm::cos(m_orientation), -glm::sin(m_orientation), 0,
+            glm::sin(m_orientation),  glm::cos(m_orientation), 0,
             0,                        0,                       1
         );
     }
@@ -49,7 +55,7 @@ namespace nta {
         );
     }
     glm::mat3 Camera2D::getCameraMatrix() const {
-        return getDilationMatrix() * getTranslationMatrix() * getRotationMatrix();
+        return getDilationMatrix() * getRotationMatrix() * getTranslationMatrix();
     }
     glm::vec4 Camera2D::getBoundsCenter() const {
         return glm::vec4(m_center, m_dimensions);
@@ -61,13 +67,23 @@ namespace nta {
         return m_center;
     }
     glm::vec2 Camera2D::getTopLeft() const {
-        return glm::vec2(m_center.x-m_dimensions.x,m_center.y+m_dimensions.y);
+        glm::vec2 axes = getRotatedDimensions();
+        return glm::vec2(m_center.x-axes.x,m_center.y+axes.y);
     }
     glm::vec2 Camera2D::getDimensions() const {
         return m_dimensions;
     }
+    glm::vec2 Camera2D::getRotatedDimensions() const {
+        glm::vec3 axes = getRotationMatrix() * glm::vec3(m_dimensions, 1.);
+        return glm::vec2(axes.x, axes.y);
+    }
     float Camera2D::getOrientation() const {
         return m_orientation;
+    }
+    std::tuple<glm::vec2, glm::vec2> Camera2D::getAxes() const {
+        auto mat = getRotationMatrix();
+        glm::vec3 e1 = mat * glm::vec3(1,0,1), e2 = mat * glm::vec3(0,1,1);
+        return std::make_tuple(glm::vec2(e1.x, e1.y), glm::vec2(e2.x, e2.y));
     }
     glm::vec2 Camera2D::mouseToGame(crvec2 mouse, crvec2 windowDimensions) const {
         /// [a,b]->[0,b-a]->[0,d-c]->[c,d]
@@ -75,7 +91,7 @@ namespace nta {
         ret *= 2.f*m_dimensions/windowDimensions;
         ret += m_center - m_dimensions;
 
-        glm::vec3 true_ret = getRotationMatrix(-m_orientation) * glm::vec3(ret, 1);
+        glm::vec3 true_ret = getInverseRotationMatrix() * glm::vec3(ret, 1);
         return glm::vec2(true_ret.x, true_ret.y);
     }
     void Camera2D::setCenter(crvec2 center) {
@@ -97,10 +113,10 @@ namespace nta {
     }
     void Camera2D::translateCenter(crvec2 translation, bool move_along_axis) {
         if (move_along_axis) {
-            glm::vec3 move = getRotationMatrix() * glm::vec3(translation, 1.);
-            m_center += glm::vec2(move.x, move.y); // Probably an easier way to do this
-        } else {
             m_center += translation;
+        } else {
+            glm::vec3 move = getInverseRotationMatrix() * glm::vec3(translation, 1.);
+            m_center += glm::vec2(move.x, move.y); // Probably an easier way to do this
         }
     }
     void Camera2D::translateCenter(float dx, float dy, bool move_along_axis) {

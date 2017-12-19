@@ -54,6 +54,7 @@ namespace nta {
         GLenum mode;
     };
     /// represents a collection of sprites to be drawn
+    /// If you want to draw something without a texture, use PrimitiveBatch instead
     class SpriteBatch {
     private:
         /// creates the vertex array object
@@ -89,6 +90,9 @@ namespace nta {
                       crvec4 color = glm::vec4(1));
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, float depth = 1,
                       crvec4 color = glm::vec4(1));
+        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, float depth = 1);
+        void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
+                      float depth = 1);
         /// renders the batch
         void render() const;
     };

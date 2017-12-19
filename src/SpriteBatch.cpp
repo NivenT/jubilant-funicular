@@ -109,6 +109,14 @@ namespace nta {
                           glm::abs(corner1-corner2));
         m_glyphs.emplace_back(posRect, uvRect, texture, depth, color);
     }
+    void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color,
+                               float depth) {
+        addGlyph(posRect, uvRect, texture, depth, color);
+    }
+    void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
+                               crvec4 color, float depth) {
+        addGlyph(corner1, corner2, uvRect, texture, depth, color);
+    }
     void SpriteBatch::render() const {
         glBindVertexArray(m_vao);
         for (int i = 0; i < m_renderBatches.size(); i++) {

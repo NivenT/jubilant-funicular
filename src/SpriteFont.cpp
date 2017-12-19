@@ -117,6 +117,12 @@ namespace nta {
         glm::vec2 scale = glm::vec2(posRect[2], posRect[3])/measure(text);
         drawText(batch, text, glm::vec2(posRect.x, posRect.y), scale, color, depth);
     }
+    void SpriteFont::drawText(SpriteBatch& batch, crvec2 corner1, crvec2 corner2, crstring text, 
+                              crvec4 color, float depth) const {
+        glm::vec4 posRect(glm::min(corner1.x, corner2.x), glm::max(corner1.y, corner2.y), 
+                          glm::abs(corner1-corner2));
+        drawText(batch, text, posRect, color, depth);
+    }
     void SpriteFont::drawTexture(SpriteBatch& batch) const {
         batch.addGlyph(glm::vec4(-100,100,200,200), glm::vec4(0,0,1,1), m_texId, 1);
     }

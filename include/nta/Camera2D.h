@@ -3,13 +3,12 @@
 
 #include "MyEngine.h"
 
-// TODO: Fix things so we rotate about m_center and so that all functions work
 namespace nta {
     /// represents a camera in two dimensions from which the world is viewed
     ///
     /// You can imagine the 2D world is flat against the wall, and this camera is 
     /// facing that wall. You can move the camera in space (i.e. setCenter/setDimensions),
-    /// and it can be rotated about an axis orthogonal to the world. 
+    /// and it can be rotated about an axis orthogonal to the world, through its center. 
     class Camera2D {
     private:
         /// center of the camera's view in world coordinates
@@ -29,8 +28,8 @@ namespace nta {
         ~Camera2D();
         /// returns the 3x3 matrix representing the camera's view
         glm::mat3 getTranslationMatrix() const;
-        // Not entirely sure how I feel about this angle parameter
-        glm::mat3 getRotationMatrix(float angle = NAN) const;
+        glm::mat3 getRotationMatrix() const;
+        glm::mat3 getInverseRotationMatrix() const;
         glm::mat3 getDilationMatrix() const;
         glm::mat3 getCameraMatrix() const;
         /// returns camera bounds in the given format
@@ -40,7 +39,10 @@ namespace nta {
         glm::vec2 getCenter() const;
         glm::vec2 getTopLeft() const;
         glm::vec2 getDimensions() const;
+        glm::vec2 getRotatedDimensions() const;
         float getOrientation() const;
+        /// returns (normalized) axes aligned with the camera
+        std::tuple<glm::vec2, glm::vec2> getAxes() const;
         /// converts mouse coordinates to world coordinates
         glm::vec2 mouseToGame(crvec2 mouse, crvec2 windowDimensions) const;
         /// sets the values of the camera's fields
