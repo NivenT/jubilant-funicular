@@ -2,11 +2,6 @@
 \label{classnta_1_1SpriteBatch}\index{nta\+::\+Sprite\+Batch@{nta\+::\+Sprite\+Batch}}
 
 
-represents a collection of sprites to be drawn  
-
-
-
-
 {\ttfamily \#include $<$Sprite\+Batch.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -30,15 +25,21 @@ void \hyperlink{classnta_1_1SpriteBatch_a78627798a8c93b2a202e964d2620716c}{add\+
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_ad6a57afab920d474f05a2944a6e555c5}\label{classnta_1_1SpriteBatch_ad6a57afab920d474f05a2944a6e555c5}} 
 void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, float depth=1, crvec4 color=glm\+::vec4(1))
 \item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a4db41e1c1fcb02e82a618e903e33ca33}\label{classnta_1_1SpriteBatch_a4db41e1c1fcb02e82a618e903e33ca33}} 
+void {\bfseries add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float depth=1)
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a6f1bc0f241e16a9e3d44be8b45c33acb}\label{classnta_1_1SpriteBatch_a6f1bc0f241e16a9e3d44be8b45c33acb}} 
+void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float depth=1)
+\item 
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}\label{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}} 
 void \hyperlink{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}{render} () const
 \begin{DoxyCompactList}\small\item\em renders the batch \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-represents a collection of sprites to be drawn 
+represents a collection of sprites to be drawn If you want to draw something without a texture, use \hyperlink{classnta_1_1PrimitiveBatch}{Primitive\+Batch} instead 
 
-Definition at line 53 of file Sprite\+Batch.\+h.
+Definition at line 58 of file Sprite\+Batch.\+h.
 
 
 

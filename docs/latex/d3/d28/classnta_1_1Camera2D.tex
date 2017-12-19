@@ -24,8 +24,11 @@
 \mbox{\Hypertarget{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}\label{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}} 
 glm\+::mat3 \hyperlink{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}{get\+Translation\+Matrix} () const
 \begin{DoxyCompactList}\small\item\em returns the 3x3 matrix representing the camera\textquotesingle{}s view \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1Camera2D_abda25d90425b77d5c77efd9ca44a515b}\label{classnta_1_1Camera2D_abda25d90425b77d5c77efd9ca44a515b}} 
-glm\+::mat3 {\bfseries get\+Rotation\+Matrix} (float angle=N\+AN) const
+\mbox{\Hypertarget{classnta_1_1Camera2D_ab3fb29b12f0b118dd2be95f701b81e2f}\label{classnta_1_1Camera2D_ab3fb29b12f0b118dd2be95f701b81e2f}} 
+glm\+::mat3 {\bfseries get\+Rotation\+Matrix} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a5b28e343c69aa1f7ded1b8416e556e21}\label{classnta_1_1Camera2D_a5b28e343c69aa1f7ded1b8416e556e21}} 
+glm\+::mat3 {\bfseries get\+Inverse\+Rotation\+Matrix} () const
 \item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a685dbe2ddad68666132fbf1edec932a6}\label{classnta_1_1Camera2D_a685dbe2ddad68666132fbf1edec932a6}} 
 glm\+::mat3 {\bfseries get\+Dilation\+Matrix} () const
@@ -48,9 +51,15 @@ glm\+::vec2 {\bfseries get\+Top\+Left} () const
 \mbox{\Hypertarget{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}\label{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}} 
 glm\+::vec2 {\bfseries get\+Dimensions} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a6b3b7c18d66f680c05087b94214bc98f}\label{classnta_1_1Camera2D_a6b3b7c18d66f680c05087b94214bc98f}} 
+glm\+::vec2 {\bfseries get\+Rotated\+Dimensions} () const
+\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a5cf5e5e022f29952af085a63980e737c}\label{classnta_1_1Camera2D_a5cf5e5e022f29952af085a63980e737c}} 
 float {\bfseries get\+Orientation} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a395b5bfa81b603a3d4e78d6c54aa8212}\label{classnta_1_1Camera2D_a395b5bfa81b603a3d4e78d6c54aa8212}} 
+std\+::tuple$<$ glm\+::vec2, glm\+::vec2 $>$ \hyperlink{classnta_1_1Camera2D_a395b5bfa81b603a3d4e78d6c54aa8212}{get\+Axes} () const
+\begin{DoxyCompactList}\small\item\em returns (normalized) axes aligned with the camera \end{DoxyCompactList}\item 
 glm\+::vec2 \hyperlink{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}{mouse\+To\+Game} (crvec2 mouse, crvec2 window\+Dimensions) const
 \begin{DoxyCompactList}\small\item\em converts mouse coordinates to world coordinates \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}\label{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}} 
@@ -87,7 +96,7 @@ void \hyperlink{classnta_1_1Camera2D_a4529f2111c2621764c42365df5a504e0}{rotate} 
 \subsection{Detailed Description}
 represents a camera in two dimensions from which the world is viewed
 
-You can imagine the 2D world is flat against the wall, and this camera is facing that wall. You can move the camera in space (i.\+e. set\+Center/set\+Dimensions), and it can be rotated about an axis orthogonal to the world. 
+You can imagine the 2D world is flat against the wall, and this camera is facing that wall. You can move the camera in space (i.\+e. set\+Center/set\+Dimensions), and it can be rotated about an axis orthogonal to the world, through its center. 
 
 Definition at line 12 of file Camera2\+D.\+h.
 
@@ -119,7 +128,7 @@ converts mouse coordinates to world coordinates
 
 \mbox{[}a,b\mbox{]}-\/$>$\mbox{[}0,b-\/a\mbox{]}-\/$>$\mbox{[}0,d-\/c\mbox{]}-\/$>$\mbox{[}c,d\mbox{]} 
 
-Definition at line 72 of file Camera2\+D.\+cpp.
+Definition at line 88 of file Camera2\+D.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}\label{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}} 
 \index{nta\+::\+Camera2D@{nta\+::\+Camera2D}!translate\+Center@{translate\+Center}}
@@ -129,7 +138,7 @@ Definition at line 72 of file Camera2\+D.\+cpp.
 
 moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes 
 
-Definition at line 98 of file Camera2\+D.\+cpp.
+Definition at line 114 of file Camera2\+D.\+cpp.
 
 
 

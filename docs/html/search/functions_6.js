@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getaxes',['getAxes',['../d3/d28/classnta_1_1Camera2D.html#a395b5bfa81b603a3d4e78d6c54aa8212',1,'nta::Camera2D']]],
   ['getboundingdimensions',['getBoundingDimensions',['../d9/d4d/classnta_1_1FontMap.html#a3e51706b5955f482f776b0d6980750b3',1,'nta::FontMap']]],
   ['getboundscenter',['getBoundsCenter',['../d3/d28/classnta_1_1Camera2D.html#ad02d4b9a995f3919c753fd2ea6d9f8f1',1,'nta::Camera2D']]],
   ['getcenter',['getCenter',['../d3/d28/classnta_1_1Camera2D.html#add5061ade3ed4eb82d3e75f6aba97f70',1,'nta::Camera2D']]],
@@ -8,7 +9,7 @@ var searchData=
   ['getdimensions',['getDimensions',['../d4/dfb/classnta_1_1Window.html#a461977bc0033732836ec56615ca0aa83',1,'nta::Window']]],
   ['getencodings',['getEncodings',['../da/dbb/classnta_1_1HuffmanNode.html#abbdee24e11a5a72a54f6187228f9b7f0',1,'nta::HuffmanNode']]],
   ['getescindex',['getEscIndex',['../d6/d23/classnta_1_1Screen.html#a506f2266b008ccd071f630a5c252567e',1,'nta::Screen']]],
-  ['getfps',['getFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#a682d191b70ddecf8f7ed776dc586fe27',1,'nta::FPSLimiter']]],
+  ['getfps',['getFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#a682d191b70ddecf8f7ed776dc586fe27',1,'nta::FPSLimiter::getFPS()'],['../d0/dc4/classnta_1_1ScreenManager.html#a24e61f523b383277b7284cab76ad9e5a',1,'nta::ScreenManager::getFPS()']]],
   ['getfrequency',['getFrequency',['../da/dbb/classnta_1_1HuffmanNode.html#aaae7f78797726f30ce584e6fd0a282c1',1,'nta::HuffmanNode']]],
   ['getheight',['getHeight',['../d4/dfb/classnta_1_1Window.html#a0daae9b6ad0a0ea834f90e86a9416f88',1,'nta::Window']]],
   ['getleft',['getLeft',['../da/dbb/classnta_1_1HuffmanNode.html#a2f67fd062ac5079cd40a0a82352d5a45',1,'nta::HuffmanNode']]],

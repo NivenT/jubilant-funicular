@@ -7,6 +7,7 @@ var searchData=
   ['setcenter',['setCenter',['../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895',1,'nta::Camera2D']]],
   ['setcolor',['setColor',['../d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c',1,'nta::Vertex2D']]],
   ['setdimensions',['setDimensions',['../d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597',1,'nta::Window']]],
+  ['setmanager',['setManager',['../d6/d23/classnta_1_1Screen.html#a9c9329a6700fbed8ab6513d471835bfa',1,'nta::Screen']]],
   ['setmaxfps',['setMaxFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#ac72ab398095957d9cffa07859e1f97a4',1,'nta::FPSLimiter']]],
   ['setmousecoords',['setMouseCoords',['../d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f',1,'nta::InputManager']]],
   ['setmousewheelmotion',['setMouseWheelMotion',['../d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e',1,'nta::InputManager']]],

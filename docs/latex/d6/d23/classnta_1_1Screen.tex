@@ -19,22 +19,25 @@ Represents a game screen.
 Screen\+State \hyperlink{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}{get\+State} () const
 \begin{DoxyCompactList}\small\item\em returns state of screen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}\label{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}} 
-virtual int \hyperlink{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}{get\+Esc\+Index} () const
+int \hyperlink{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}{get\+Esc\+Index} () const
 \begin{DoxyCompactList}\small\item\em sets/gets various screen indices \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a01f4fdd4cadd6abe4fef2605a0fde52a}\label{classnta_1_1Screen_a01f4fdd4cadd6abe4fef2605a0fde52a}} 
-virtual int {\bfseries get\+X\+Index} () const
+int {\bfseries get\+X\+Index} () const
 \item 
 \mbox{\Hypertarget{classnta_1_1Screen_aba9c09cd06dfc05557b86d866a7fb2b9}\label{classnta_1_1Screen_aba9c09cd06dfc05557b86d866a7fb2b9}} 
-virtual int {\bfseries get\+Next\+Index} () const
+int {\bfseries get\+Next\+Index} () const
 \item 
 \mbox{\Hypertarget{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}\label{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}} 
-virtual int {\bfseries get\+Index} () const
+int {\bfseries get\+Index} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}\label{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}} 
+void \hyperlink{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}{set\+Manager} (\hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} $\ast$manager, \hyperlink{classnta_1_1SetManagerKey}{Set\+Manager\+Key} key)
+\begin{DoxyCompactList}\small\item\em Sets the manager of this screen. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a06a0cb178a3bedde883e7a9b5c825a3d}\label{classnta_1_1Screen_a06a0cb178a3bedde883e7a9b5c825a3d}} 
-virtual void {\bfseries set\+Indices} (int index, int esc\+Index, int x\+Index)
+void {\bfseries set\+Indices} (int index, int esc\+Index, int x\+Index)
 \item 
 \mbox{\Hypertarget{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}\label{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}} 
-virtual void \hyperlink{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}{set\+Window} (crstring title)
+void \hyperlink{classnta_1_1Screen_a3c74cd84437e8897850ce4bae98bc8b2}{set\+Window} (crstring title)
 \begin{DoxyCompactList}\small\item\em sets the window to associate with this screen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}\label{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}} 
 virtual void \hyperlink{classnta_1_1Screen_a323ff61ac31f55bd39fa818ccd8200fb}{render} ()=0
@@ -63,6 +66,9 @@ Screen\+State \hyperlink{classnta_1_1Screen_a68d2c095aadfb248263f43cb12cd34a1}{m
 \mbox{\Hypertarget{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}\label{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}} 
 \hyperlink{classnta_1_1Window}{Window} $\ast$ \hyperlink{classnta_1_1Screen_a712bfbeb6f85d9c4229de9b974b05e58}{m\+\_\+window} = nullptr
 \begin{DoxyCompactList}\small\item\em the window the screen is rendered in \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}\label{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}} 
+\hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} $\ast$ \hyperlink{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}{m\+\_\+manager} = nullptr
+\begin{DoxyCompactList}\small\item\em the \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} that owns this screen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}\label{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}} 
 int \hyperlink{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}{m\+\_\+next\+Index} = -\/1
 \begin{DoxyCompactList}\small\item\em the index of the screen to go to in special circumstances \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -71,7 +77,7 @@ int \hyperlink{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}{m\+\_\+next
 \subsection{Detailed Description}
 Represents a game screen. 
 
-Definition at line 9 of file Screen.\+h.
+Definition at line 17 of file Screen.\+h.
 
 
 
