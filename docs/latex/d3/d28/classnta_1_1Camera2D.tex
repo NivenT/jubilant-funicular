@@ -1,14 +1,5 @@
 \hypertarget{classnta_1_1Camera2D}{}\section{nta\+:\+:Camera2D Class Reference}
 \label{classnta_1_1Camera2D}\index{nta\+::\+Camera2D@{nta\+::\+Camera2D}}
-
-
-represents a camera in two dimensions from which the world is viewed  
-
-
-
-
-{\ttfamily \#include $<$Camera2\+D.\+h$>$}
-
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,12 +11,24 @@ represents a camera in two dimensions from which the world is viewed
 \mbox{\Hypertarget{classnta_1_1Camera2D_af503a21cf73859010aefbacb1af7078c}\label{classnta_1_1Camera2D_af503a21cf73859010aefbacb1af7078c}} 
 {\bfseries Camera2D} (crvec2 center, crvec2 dimensions)
 \item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a455d4862168f1dc4fe81040d6fcc80d2}\label{classnta_1_1Camera2D_a455d4862168f1dc4fe81040d6fcc80d2}} 
+{\bfseries Camera2D} (crvec2 center, crvec2 dimensions, float orientation)
+\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}\label{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}} 
 \hyperlink{classnta_1_1Camera2D_a18046ff230e055a06c6ca750e6eea8de}{$\sim$\+Camera2D} ()
 \begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}\label{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}} 
-glm\+::mat3 \hyperlink{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}{get\+Camera\+Matrix} () const
+\mbox{\Hypertarget{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}\label{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}} 
+glm\+::mat3 \hyperlink{classnta_1_1Camera2D_a5bbd89d9119dcd820e60756b816ad0b3}{get\+Translation\+Matrix} () const
 \begin{DoxyCompactList}\small\item\em returns the 3x3 matrix representing the camera\textquotesingle{}s view \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_abda25d90425b77d5c77efd9ca44a515b}\label{classnta_1_1Camera2D_abda25d90425b77d5c77efd9ca44a515b}} 
+glm\+::mat3 {\bfseries get\+Rotation\+Matrix} (float angle=N\+AN) const
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a685dbe2ddad68666132fbf1edec932a6}\label{classnta_1_1Camera2D_a685dbe2ddad68666132fbf1edec932a6}} 
+glm\+::mat3 {\bfseries get\+Dilation\+Matrix} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}\label{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}} 
+glm\+::mat3 {\bfseries get\+Camera\+Matrix} () const
+\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}\label{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}} 
 glm\+::vec4 \hyperlink{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}{get\+Bounds\+Center} () const
 \begin{DoxyCompactList}\small\item\em returns camera bounds in the given format \end{DoxyCompactList}\item 
@@ -41,6 +44,9 @@ glm\+::vec2 {\bfseries get\+Top\+Left} () const
 \mbox{\Hypertarget{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}\label{classnta_1_1Camera2D_a2f688f531a999d2b427ef63a18859e6d}} 
 glm\+::vec2 {\bfseries get\+Dimensions} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a5cf5e5e022f29952af085a63980e737c}\label{classnta_1_1Camera2D_a5cf5e5e022f29952af085a63980e737c}} 
+float {\bfseries get\+Orientation} () const
+\item 
 glm\+::vec2 \hyperlink{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}{mouse\+To\+Game} (crvec2 mouse, crvec2 window\+Dimensions) const
 \begin{DoxyCompactList}\small\item\em converts mouse coordinates to world coordinates \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}\label{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}} 
@@ -55,24 +61,29 @@ void {\bfseries set\+Dimensions} (crvec2 dimensions)
 \mbox{\Hypertarget{classnta_1_1Camera2D_a253821b9dc464678c80ff92c31a8689f}\label{classnta_1_1Camera2D_a253821b9dc464678c80ff92c31a8689f}} 
 void {\bfseries set\+Dimensions} (float w, float h)
 \item 
-\mbox{\Hypertarget{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}\label{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}} 
-void \hyperlink{classnta_1_1Camera2D_a6898ed9fb83d97ede973732d62154967}{translate\+Center} (crvec2 translation)
-\begin{DoxyCompactList}\small\item\em moves the camera around the world \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1Camera2D_a78cff35ecd4ea38504283ffb903f92be}\label{classnta_1_1Camera2D_a78cff35ecd4ea38504283ffb903f92be}} 
-void {\bfseries translate\+Center} (float dx, float dy)
+\mbox{\Hypertarget{classnta_1_1Camera2D_ae1b3a5ef4259881936317fc0c18c4a13}\label{classnta_1_1Camera2D_ae1b3a5ef4259881936317fc0c18c4a13}} 
+void {\bfseries set\+Orientation} (float t)
+\item 
+void \hyperlink{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}{translate\+Center} (crvec2 translation, bool move\+\_\+along\+\_\+axes=false)
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a95ecd50d9ec6031b4d015f33d442d096}\label{classnta_1_1Camera2D_a95ecd50d9ec6031b4d015f33d442d096}} 
+void {\bfseries translate\+Center} (float dx, float dy, bool move\+\_\+along\+\_\+axes=false)
 \item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}\label{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}} 
 void \hyperlink{classnta_1_1Camera2D_aa89b58a2a5ca0c3df56d07e2722afcd6}{scale\+Dimensions} (crvec2 dilation)
 \begin{DoxyCompactList}\small\item\em scales the camera\textquotesingle{}s field of view \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_ae5e80a376fe4b6457e712c6bc94b8584}\label{classnta_1_1Camera2D_ae5e80a376fe4b6457e712c6bc94b8584}} 
 void {\bfseries scale\+Dimensions} (float dw, float dh)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a4529f2111c2621764c42365df5a504e0}\label{classnta_1_1Camera2D_a4529f2111c2621764c42365df5a504e0}} 
+void \hyperlink{classnta_1_1Camera2D_a4529f2111c2621764c42365df5a504e0}{rotate} (float dt)
+\begin{DoxyCompactList}\small\item\em rotates the camera \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-represents a camera in two dimensions from which the world is viewed 
 
-Definition at line 8 of file Camera2\+D.\+h.
+
+Definition at line 14 of file Camera2\+D.\+h.
 
 
 
@@ -83,7 +94,7 @@ Definition at line 8 of file Camera2\+D.\+h.
 \subsubsection{\texorpdfstring{Camera2\+D()}{Camera2D()}}
 {\footnotesize\ttfamily nta\+::\+Camera2\+D\+::\+Camera2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Constructs a new \hyperlink{classnta_1_1Camera2D}{Camera2D}. By default, the center is at (0,0) and the dimensions are (100, 100) 
+Constructs a new \hyperlink{classnta_1_1Camera2D}{Camera2D}. By default, the center is at (0,0), the dimensions are (100, 100), and orientation is 0 
 
 Definition at line 4 of file Camera2\+D.\+cpp.
 
@@ -102,7 +113,17 @@ converts mouse coordinates to world coordinates
 
 \mbox{[}a,b\mbox{]}-\/$>$\mbox{[}0,b-\/a\mbox{]}-\/$>$\mbox{[}0,d-\/c\mbox{]}-\/$>$\mbox{[}c,d\mbox{]} 
 
-Definition at line 48 of file Camera2\+D.\+cpp.
+Definition at line 72 of file Camera2\+D.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}\label{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}} 
+\index{nta\+::\+Camera2D@{nta\+::\+Camera2D}!translate\+Center@{translate\+Center}}
+\index{translate\+Center@{translate\+Center}!nta\+::\+Camera2D@{nta\+::\+Camera2D}}
+\subsubsection{\texorpdfstring{translate\+Center()}{translateCenter()}}
+{\footnotesize\ttfamily void nta\+::\+Camera2\+D\+::translate\+Center (\begin{DoxyParamCaption}\item[{crvec2}]{translation,  }\item[{bool}]{move\+\_\+along\+\_\+axes = {\ttfamily false} }\end{DoxyParamCaption})}
+
+moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes 
+
+Definition at line 98 of file Camera2\+D.\+cpp.
 
 
 

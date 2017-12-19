@@ -9,5 +9,6 @@ var searchData=
   ['render',['render',['../d4/df3/classnta_1_1PrimitiveBatch.html#a899411db2d7abc313d8bef4a19fd097e',1,'nta::PrimitiveBatch::render()'],['../d6/d23/classnta_1_1Screen.html#a323ff61ac31f55bd39fa818ccd8200fb',1,'nta::Screen::render()'],['../d4/d60/classnta_1_1Sprite.html#a01e831cda46d73acd8a4eff3cb56d5d3',1,'nta::Sprite::render()'],['../d7/d3b/classnta_1_1SpriteBatch.html#ae7566d38b0cdd33f2b3e16dfcf993714',1,'nta::SpriteBatch::render()']]],
   ['renderbatch',['RenderBatch',['../dd/d38/structnta_1_1RenderBatch.html#a02a531d942296d7194ca96f7ed614f14',1,'nta::RenderBatch']]],
   ['resume',['resume',['../d4/dab/classnta_1_1Music.html#a7eb8159db905f34ebf6ad48ec9a1afa1',1,'nta::Music']]],
+  ['rotate',['rotate',['../d3/d28/classnta_1_1Camera2D.html#a4529f2111c2621764c42365df5a504e0',1,'nta::Camera2D']]],
   ['run',['run',['../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9',1,'nta::ScreenManager']]]
 ];

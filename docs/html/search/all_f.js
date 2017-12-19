@@ -11,5 +11,6 @@ var searchData=
   ['renderbatch',['RenderBatch',['../dd/d38/structnta_1_1RenderBatch.html',1,'nta::RenderBatch'],['../dd/d38/structnta_1_1RenderBatch.html#a02a531d942296d7194ca96f7ed614f14',1,'nta::RenderBatch::RenderBatch()']]],
   ['resourcemanager',['ResourceManager',['../d5/d87/classnta_1_1ResourceManager.html',1,'nta']]],
   ['resume',['resume',['../d4/dab/classnta_1_1Music.html#a7eb8159db905f34ebf6ad48ec9a1afa1',1,'nta::Music']]],
+  ['rotate',['rotate',['../d3/d28/classnta_1_1Camera2D.html#a4529f2111c2621764c42365df5a504e0',1,'nta::Camera2D']]],
   ['run',['run',['../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9',1,'nta::ScreenManager']]]
 ];

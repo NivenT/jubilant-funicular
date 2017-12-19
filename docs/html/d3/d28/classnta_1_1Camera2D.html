@@ -69,11 +69,6 @@ $(function() {
 <div class="title">nta::Camera2D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>represents a camera in two dimensions from which the world is viewed  
- <a href="../../d3/d28/classnta_1_1Camera2D.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../d9/d28/Camera2D_8h_source.html">Camera2D.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,13 +80,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af503a21cf73859010aefbacb1af7078c"><td class="memItemLeft" align="right" valign="top"><a id="af503a21cf73859010aefbacb1af7078c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Camera2D</b> (crvec2 center, crvec2 dimensions)</td></tr>
 <tr class="separator:af503a21cf73859010aefbacb1af7078c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455d4862168f1dc4fe81040d6fcc80d2"><td class="memItemLeft" align="right" valign="top"><a id="a455d4862168f1dc4fe81040d6fcc80d2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Camera2D</b> (crvec2 center, crvec2 dimensions, float orientation)</td></tr>
+<tr class="separator:a455d4862168f1dc4fe81040d6fcc80d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18046ff230e055a06c6ca750e6eea8de"><td class="memItemLeft" align="right" valign="top"><a id="a18046ff230e055a06c6ca750e6eea8de"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a18046ff230e055a06c6ca750e6eea8de">~Camera2D</a> ()</td></tr>
 <tr class="memdesc:a18046ff230e055a06c6ca750e6eea8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor <br /></td></tr>
 <tr class="separator:a18046ff230e055a06c6ca750e6eea8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbd89d9119dcd820e60756b816ad0b3"><td class="memItemLeft" align="right" valign="top"><a id="a5bbd89d9119dcd820e60756b816ad0b3"></a>
+glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3">getTranslationMatrix</a> () const</td></tr>
+<tr class="memdesc:a5bbd89d9119dcd820e60756b816ad0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the 3x3 matrix representing the camera's view <br /></td></tr>
+<tr class="separator:a5bbd89d9119dcd820e60756b816ad0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda25d90425b77d5c77efd9ca44a515b"><td class="memItemLeft" align="right" valign="top"><a id="abda25d90425b77d5c77efd9ca44a515b"></a>
+glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getRotationMatrix</b> (float angle=NAN) const</td></tr>
+<tr class="separator:abda25d90425b77d5c77efd9ca44a515b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685dbe2ddad68666132fbf1edec932a6"><td class="memItemLeft" align="right" valign="top"><a id="a685dbe2ddad68666132fbf1edec932a6"></a>
+glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getDilationMatrix</b> () const</td></tr>
+<tr class="separator:a685dbe2ddad68666132fbf1edec932a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a203daa81f32279e969de57a549165297"><td class="memItemLeft" align="right" valign="top"><a id="a203daa81f32279e969de57a549165297"></a>
-glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a203daa81f32279e969de57a549165297">getCameraMatrix</a> () const</td></tr>
-<tr class="memdesc:a203daa81f32279e969de57a549165297"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the 3x3 matrix representing the camera's view <br /></td></tr>
+glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getCameraMatrix</b> () const</td></tr>
 <tr class="separator:a203daa81f32279e969de57a549165297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02d4b9a995f3919c753fd2ea6d9f8f1"><td class="memItemLeft" align="right" valign="top"><a id="ad02d4b9a995f3919c753fd2ea6d9f8f1"></a>
 glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#ad02d4b9a995f3919c753fd2ea6d9f8f1">getBoundsCenter</a> () const</td></tr>
@@ -110,6 +117,9 @@ glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>getTopLeft</b> (
 <tr class="memitem:a2f688f531a999d2b427ef63a18859e6d"><td class="memItemLeft" align="right" valign="top"><a id="a2f688f531a999d2b427ef63a18859e6d"></a>
 glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>getDimensions</b> () const</td></tr>
 <tr class="separator:a2f688f531a999d2b427ef63a18859e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf5e5e022f29952af085a63980e737c"><td class="memItemLeft" align="right" valign="top"><a id="a5cf5e5e022f29952af085a63980e737c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getOrientation</b> () const</td></tr>
+<tr class="separator:a5cf5e5e022f29952af085a63980e737c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb20fb9823724babdc8d18b17336169c"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#afb20fb9823724babdc8d18b17336169c">mouseToGame</a> (crvec2 mouse, crvec2 windowDimensions) const</td></tr>
 <tr class="memdesc:afb20fb9823724babdc8d18b17336169c"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts mouse coordinates to world coordinates  <a href="#afb20fb9823724babdc8d18b17336169c">More...</a><br /></td></tr>
 <tr class="separator:afb20fb9823724babdc8d18b17336169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,13 +136,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDimensions</b> (cr
 <tr class="memitem:a253821b9dc464678c80ff92c31a8689f"><td class="memItemLeft" align="right" valign="top"><a id="a253821b9dc464678c80ff92c31a8689f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDimensions</b> (float w, float h)</td></tr>
 <tr class="separator:a253821b9dc464678c80ff92c31a8689f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6898ed9fb83d97ede973732d62154967"><td class="memItemLeft" align="right" valign="top"><a id="a6898ed9fb83d97ede973732d62154967"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a6898ed9fb83d97ede973732d62154967">translateCenter</a> (crvec2 translation)</td></tr>
-<tr class="memdesc:a6898ed9fb83d97ede973732d62154967"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the camera around the world <br /></td></tr>
-<tr class="separator:a6898ed9fb83d97ede973732d62154967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78cff35ecd4ea38504283ffb903f92be"><td class="memItemLeft" align="right" valign="top"><a id="a78cff35ecd4ea38504283ffb903f92be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>translateCenter</b> (float dx, float dy)</td></tr>
-<tr class="separator:a78cff35ecd4ea38504283ffb903f92be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b3a5ef4259881936317fc0c18c4a13"><td class="memItemLeft" align="right" valign="top"><a id="ae1b3a5ef4259881936317fc0c18c4a13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOrientation</b> (float t)</td></tr>
+<tr class="separator:ae1b3a5ef4259881936317fc0c18c4a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711b1b64b4e0bbca5c598ac15609f498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498">translateCenter</a> (crvec2 translation, bool move_along_axes=false)</td></tr>
+<tr class="separator:a711b1b64b4e0bbca5c598ac15609f498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ecd50d9ec6031b4d015f33d442d096"><td class="memItemLeft" align="right" valign="top"><a id="a95ecd50d9ec6031b4d015f33d442d096"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>translateCenter</b> (float dx, float dy, bool move_along_axes=false)</td></tr>
+<tr class="separator:a95ecd50d9ec6031b4d015f33d442d096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89b58a2a5ca0c3df56d07e2722afcd6"><td class="memItemLeft" align="right" valign="top"><a id="aa89b58a2a5ca0c3df56d07e2722afcd6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#aa89b58a2a5ca0c3df56d07e2722afcd6">scaleDimensions</a> (crvec2 dilation)</td></tr>
 <tr class="memdesc:aa89b58a2a5ca0c3df56d07e2722afcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">scales the camera's field of view <br /></td></tr>
@@ -140,11 +151,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:ae5e80a376fe4b6457e712c6bc94b8584"><td class="memItemLeft" align="right" valign="top"><a id="ae5e80a376fe4b6457e712c6bc94b8584"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>scaleDimensions</b> (float dw, float dh)</td></tr>
 <tr class="separator:ae5e80a376fe4b6457e712c6bc94b8584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4529f2111c2621764c42365df5a504e0"><td class="memItemLeft" align="right" valign="top"><a id="a4529f2111c2621764c42365df5a504e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a4529f2111c2621764c42365df5a504e0">rotate</a> (float dt)</td></tr>
+<tr class="memdesc:a4529f2111c2621764c42365df5a504e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">rotates the camera <br /></td></tr>
+<tr class="separator:a4529f2111c2621764c42365df5a504e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>represents a camera in two dimensions from which the world is viewed </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d9/d28/Camera2D_8h_source.html#l00008">8</a> of file <a class="el" href="../../d9/d28/Camera2D_8h_source.html">Camera2D.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d28/Camera2D_8h_source.html#l00014">14</a> of file <a class="el" href="../../d9/d28/Camera2D_8h_source.html">Camera2D.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a11aada3f997c594ade11dd3c46d826f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11aada3f997c594ade11dd3c46d826f4">&#9670;&nbsp;</a></span>Camera2D()</h2>
@@ -160,7 +174,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scaleDimensions</b> (
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a new <a class="el" href="../../d3/d28/classnta_1_1Camera2D.html" title="represents a camera in two dimensions from which the world is viewed ">Camera2D</a>. By default, the center is at (0,0) and the dimensions are (100, 100) </p>
+<p>Constructs a new <a class="el" href="../../d3/d28/classnta_1_1Camera2D.html">Camera2D</a>. By default, the center is at (0,0), the dimensions are (100, 100), and orientation is 0 </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
@@ -196,7 +210,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scaleDimensions</b> (
 <p>converts mouse coordinates to world coordinates </p>
 <p>[a,b]-&gt;[0,b-a]-&gt;[0,d-c]-&gt;[c,d] </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a711b1b64b4e0bbca5c598ac15609f498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a711b1b64b4e0bbca5c598ac15609f498">&#9670;&nbsp;</a></span>translateCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nta::Camera2D::translateCenter </td>
+          <td>(</td>
+          <td class="paramtype">crvec2&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>move_along_axes</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00098">98</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
 </div>
 </div>
