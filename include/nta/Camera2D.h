@@ -4,13 +4,11 @@
 #include "MyEngine.h"
 
 namespace nta {
-    /*
-     * represents a camera in two dimensions from which the world is viewed
-     *
-     * You can imagine the 2D world is flat against the wall, and this camera is 
-     * facing that wall. You can move the camera in space (i.e. setCenter/setDimensions),
-     * and it can be rotated about an axis orthogonal to the world. 
-     */
+    /// represents a camera in two dimensions from which the world is viewed
+    ///
+    /// You can imagine the 2D world is flat against the wall, and this camera is 
+    /// facing that wall. You can move the camera in space (i.e. setCenter/setDimensions),
+    /// and it can be rotated about an axis orthogonal to the world. 
     class Camera2D {
     private:
         /// center of the camera's view in world coordinates
