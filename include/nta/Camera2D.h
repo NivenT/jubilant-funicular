@@ -1,5 +1,5 @@
-#ifndef CAMERA2D_H
-#define CAMERA2D_H
+#ifndef CAMERA2D_H_INCLUDED
+#define CAMERA2D_H_INCLUDED
 
 #include "MyEngine.h"
 
@@ -63,4 +63,4 @@ namespace nta {
     };
 }
 
-#endif // CAMERA2D_H
+#endif // CAMERA2D_H_INCLUDED

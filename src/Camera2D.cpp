@@ -86,7 +86,7 @@ namespace nta {
         return std::make_tuple(glm::vec2(e1.x, e1.y), glm::vec2(e2.x, e2.y));
     }
     glm::vec2 Camera2D::mouseToGame(crvec2 mouse, crvec2 windowDimensions) const {
-        /// [a,b]->[0,b-a]->[0,d-c]->[c,d]
+        // [a,b] -> [0,b-a] -> [0,d-c] -> [c,d]
         glm::vec2 ret(mouse.x, windowDimensions.y - mouse.y);
         ret *= 2.f*m_dimensions/windowDimensions;
         ret += m_center - m_dimensions;
