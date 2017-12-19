@@ -3,6 +3,7 @@
 
 #include "MyEngine.h"
 
+// TODO: Fix things so we rotate about m_center and so that all functions work
 namespace nta {
     /// represents a camera in two dimensions from which the world is viewed
     ///
