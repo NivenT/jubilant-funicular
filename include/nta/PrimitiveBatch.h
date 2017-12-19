@@ -77,9 +77,9 @@ namespace nta {
         /// adds a primitive to the batch
         void addPrimitive(Primitive* primitive);
         void addPrimitive(const std::initializer_list<Vertex2D>& vertices,
-                          GLuint textureID, float depth = 1);
+                          GLuint textureID = -1, float depth = 1);
         template<class Iterator>
-        void addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth = 1);
+        void addPrimitive(Iterator first, Iterator last, GLuint textureID = -1, float depth = 1);
         void addPrimitive(std::size_t numSides, crvec2 center = glm::vec2(0), float sideLength = 1.0,
                           crvec4 color = glm::vec4(1), float orientation = 0., float depth = 1);
         /// renders the primitives
