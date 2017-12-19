@@ -12,10 +12,10 @@ namespace nta {
                   GLuint texID, float d) : depth(d), textureID(texID) {
             vertices.insert(vertices.begin(), verts.begin(), verts.end());
         }
-			  template<class Iterator>
-				Primitive(Iterator first, Iterator last, GLuint texID, float d) : depth(d), textureID(texID) {
-					  vertices.insert(vertices.begin(), first, last);
-				}
+        template<class Iterator>
+        Primitive(Iterator first, Iterator last, GLuint texID, float d) : depth(d), textureID(texID) {
+            vertices.insert(vertices.begin(), first, last);
+        }
         /// Constructs an untextured regular polygon
         Primitive(std::size_t numSides, crvec2 center, float sideLength,
                   crvec4 color, float orientation, float d) : depth(d), textureID(0) {
@@ -78,8 +78,8 @@ namespace nta {
         void addPrimitive(Primitive* primitive);
         void addPrimitive(const std::initializer_list<Vertex2D>& vertices,
                           GLuint textureID, float depth = 1);
-				template<class Iterator>
-				void addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth = 1);
+        template<class Iterator>
+        void addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth = 1);
         void addPrimitive(std::size_t numSides, crvec2 center = glm::vec2(0), float sideLength = 1.0,
                           crvec4 color = glm::vec4(1), float orientation = 0., float depth = 1);
         /// renders the primitives
@@ -87,10 +87,10 @@ namespace nta {
     };
     typedef PrimitiveBatch PrimBatch;
 
-		template<class Iterator>
-		void PrimitiveBatch::addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth) {
+    template<class Iterator>
+    void PrimitiveBatch::addPrimitive(Iterator first, Iterator last, GLuint textureID, float depth) {
         addPrimitive(new Primitive(first, last, textureID, depth));
-		}
+    }
 }
 
 #endif // PRIMITIVEBATCH_H_INCLUDED

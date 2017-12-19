@@ -33,12 +33,13 @@ namespace nta {
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
             Logger::writeToLog("Exiting ScreenManager...");
+            getCurrScreen()->offFocus(); // necessary?
             m_currScreen = -1;
         }
     }
     void ScreenManager::run() {
         static Screen* currScreen = nullptr;
-				if (m_currScreen != -1) getCurrScreen()->onFocus();
+        if (m_currScreen != -1) getCurrScreen()->onFocus();
         while (m_currScreen != -1) {
             currScreen = getCurrScreen();
             while (currScreen->getState() == ScreenState::RUNNING) {

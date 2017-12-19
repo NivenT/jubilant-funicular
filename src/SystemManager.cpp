@@ -5,7 +5,7 @@ namespace nta {
     std::map<std::string, GLSLProgram*> SystemManager::m_glslMap;
     std::map<std::string, Window*>      SystemManager::m_windowMap;
     GLSLProgram* SystemManager::getGLSLProgram(crstring progPath) {
-			  //TODO: Support other file layouts
+        //TODO: Support other file layouts
         std::string folder = "";
         if (progPath.find("shaders/") != 0) {
             folder += "shaders/";

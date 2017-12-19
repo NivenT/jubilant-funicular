@@ -13,13 +13,13 @@ namespace nta {
         Vertex2D(){
         }
         /// Initializes a white, textureless vertex with given position
-		    Vertex2D(crvec2 p) : pos(p), color(glm::vec4(1)), uv(glm::vec2(0)), hasTexture(0.0) {
+        Vertex2D(crvec2 p) : pos(p), color(glm::vec4(1)), uv(glm::vec2(0)), hasTexture(0.0) {
         }
         /// Initializes textureless, colorful vertex
         Vertex2D(crvec2 p, crvec4 c) : pos(p), color(c), uv(glm::vec2(0)), hasTexture(0.0) {
         }
         /// Initializes a vertex with everything
-		    Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t = 1.0) : pos(p), color(c), uv(u), hasTexture(t) {
+        Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t = 1.0) : pos(p), color(c), uv(u), hasTexture(t) {
         }
         /// sets the position of the vertex
         void setPosition(float x, float y) {
@@ -48,7 +48,7 @@ namespace nta {
         glm::vec2 pos;
         glm::vec4 color;
         glm::vec2 uv;
-			  float hasTexture;
+        float hasTexture;
     };
 }
 

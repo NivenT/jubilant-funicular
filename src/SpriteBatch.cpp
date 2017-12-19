@@ -35,7 +35,7 @@ namespace nta {
         glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, pos));
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE , sizeof(Vertex2D), (void*)offsetof(Vertex2D, color));
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, uv));
-				glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
+        glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
         glBindVertexArray(0);
     }
     void SpriteBatch::begin() {
@@ -105,14 +105,16 @@ namespace nta {
     }
     void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture,
                                float depth, crvec4 color) {
-        glm::vec4 posRect(glm::min(corner1.x, corner2.x), glm::max(corner1.y, corner2.y), glm::abs(corner1-corner2));
+        glm::vec4 posRect(glm::min(corner1.x, corner2.x), glm::max(corner1.y, corner2.y), 
+                          glm::abs(corner1-corner2));
         m_glyphs.emplace_back(posRect, uvRect, texture, depth, color);
     }
     void SpriteBatch::render() const {
         glBindVertexArray(m_vao);
         for (int i = 0; i < m_renderBatches.size(); i++) {
             glBindTexture(GL_TEXTURE_2D, m_renderBatches[i].textureID);
-            glDrawArrays(m_renderBatches[i].mode, m_renderBatches[i].offset, m_renderBatches[i].numVertices);
+            glDrawArrays(m_renderBatches[i].mode, m_renderBatches[i].offset, 
+                         m_renderBatches[i].numVertices);
         }
         glBindVertexArray(0);
     }

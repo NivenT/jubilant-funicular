@@ -39,7 +39,7 @@ namespace nta {
                               (void*)offsetof(Vertex2D, color));
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
                               (void*)offsetof(Vertex2D, uv));
-				glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
+        glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D),
                               (void*)offsetof(Vertex2D, hasTexture));
         glBindVertexArray(0);
     }
