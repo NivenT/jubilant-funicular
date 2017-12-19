@@ -4,22 +4,22 @@
 #include "Timer.h"
 
 namespace nta {
-    ///used to cap the fps of the program at a specific value
+    /// used to cap the fps of the program at a specific value
     class FPSLimiter : public Timer {
     private:
-        ///most recently calculated fps
+        /// most recently calculated fps
         float m_fps;
-        ///maximum allowed fps
+        /// maximum allowed fps
         float m_maxFPS;
     public:
-        ///constructor and destructor
+        /// constructor and destructor
         FPSLimiter();
         ~FPSLimiter();
-        ///sets maximum allowed fps
+        /// sets maximum allowed fps
         void setMaxFPS(float maxFPS);
-        ///gets most recently calculated fps
+        /// gets most recently calculated fps
         float getFPS() const;
-        ///ends fps calculations, delaying if necessary to cap fps
+        /// ends fps calculations, delaying if necessary to cap fps
         long double end();
     };
 }

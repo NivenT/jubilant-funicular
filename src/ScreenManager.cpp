@@ -14,9 +14,13 @@ namespace nta {
     Screen* ScreenManager::getCurrScreen() const {
         return inRange<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
     }
+    float ScreenManager::getFPS() const {
+        return m_limiter.getFPS();
+    }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
         Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to screen manger...");
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
+        newScreen->setManager(this, SetManagerKey());
         newScreen->setIndices(m_screens.size(), escIndex, xIndex);
         newScreen->setWindow(((title == "") ? m_window->getTitle() : title));
         newScreen->init();

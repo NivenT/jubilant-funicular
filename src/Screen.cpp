@@ -25,6 +25,9 @@ namespace nta {
     int Screen::getNextIndex() const {
         return m_nextIndex;
     }
+    void Screen::setManager(ScreenManager* manager, SetManagerKey key) {
+        m_manager = manager;
+    }
     void Screen::setIndices(int index, int escIndex, int xIndex) {
         m_index = index;
         m_escIndex = escIndex;
