@@ -64,6 +64,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../da/d3f/classnta_1_1SpriteBatch-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::SpriteBatch Class Reference</div>  </div>
@@ -107,6 +110,53 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec2 
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ae7566d38b0cdd33f2b3e16dfcf993714">render</a> () const</td></tr>
 <tr class="memdesc:ae7566d38b0cdd33f2b3e16dfcf993714"><td class="mdescLeft">&#160;</td><td class="mdescRight">renders the batch <br /></td></tr>
 <tr class="separator:ae7566d38b0cdd33f2b3e16dfcf993714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3355b0c2840d3d78c092508925bf9565"><td class="memItemLeft" align="right" valign="top"><a id="a3355b0c2840d3d78c092508925bf9565"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#a3355b0c2840d3d78c092508925bf9565">createVertexArrayObject</a> ()</td></tr>
+<tr class="memdesc:a3355b0c2840d3d78c092508925bf9565"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the vertex array object <br /></td></tr>
+<tr class="separator:a3355b0c2840d3d78c092508925bf9565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22e3c4af01fef017e9522021545928f"><td class="memItemLeft" align="right" valign="top"><a id="af22e3c4af01fef017e9522021545928f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#af22e3c4af01fef017e9522021545928f">createRenderBatches</a> ()</td></tr>
+<tr class="memdesc:af22e3c4af01fef017e9522021545928f"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates the render batches <br /></td></tr>
+<tr class="separator:af22e3c4af01fef017e9522021545928f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cf94595c26211521df9e1580776289"><td class="memItemLeft" align="right" valign="top"><a id="ae8cf94595c26211521df9e1580776289"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ae8cf94595c26211521df9e1580776289">sortGlyphs</a> ()</td></tr>
+<tr class="memdesc:ae8cf94595c26211521df9e1580776289"><td class="mdescLeft">&#160;</td><td class="mdescRight">sorts the glyphs <br /></td></tr>
+<tr class="separator:ae8cf94595c26211521df9e1580776289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:acd5b622817c1bab5c60de488b089f0f9"><td class="memItemLeft" align="right" valign="top"><a id="acd5b622817c1bab5c60de488b089f0f9"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9">compareTexture</a> (<a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> *lhs, <a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> *rhs)</td></tr>
+<tr class="memdesc:acd5b622817c1bab5c60de488b089f0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparers used to sort <br /></td></tr>
+<tr class="separator:acd5b622817c1bab5c60de488b089f0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7aea3ca736e40b3a861048e883eabdc"><td class="memItemLeft" align="right" valign="top"><a id="ae7aea3ca736e40b3a861048e883eabdc"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>compareDepth</b> (<a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> *lhs, <a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> *rhs)</td></tr>
+<tr class="separator:ae7aea3ca736e40b3a861048e883eabdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae6c42878b427eef6fcd07aad0a60c6aa"><td class="memItemLeft" align="right" valign="top"><a id="ae6c42878b427eef6fcd07aad0a60c6aa"></a>
+std::vector&lt; <a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ae6c42878b427eef6fcd07aad0a60c6aa">m_glyphPointers</a></td></tr>
+<tr class="memdesc:ae6c42878b427eef6fcd07aad0a60c6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointers to the glyphs to be rendered (used for sorting) <br /></td></tr>
+<tr class="separator:ae6c42878b427eef6fcd07aad0a60c6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8291bea20d3a963bbe006587f35bf6f"><td class="memItemLeft" align="right" valign="top"><a id="ac8291bea20d3a963bbe006587f35bf6f"></a>
+std::vector&lt; <a class="el" href="../../d6/db3/structnta_1_1Glyph.html">Glyph</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ac8291bea20d3a963bbe006587f35bf6f">m_glyphs</a></td></tr>
+<tr class="memdesc:ac8291bea20d3a963bbe006587f35bf6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the glyphs to be rendered (used for fast vector operations) <br /></td></tr>
+<tr class="separator:ac8291bea20d3a963bbe006587f35bf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae194b160a5de1c3a45ccebc570acd4b5"><td class="memItemLeft" align="right" valign="top"><a id="ae194b160a5de1c3a45ccebc570acd4b5"></a>
+std::vector&lt; <a class="el" href="../../dd/d38/structnta_1_1RenderBatch.html">RenderBatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ae194b160a5de1c3a45ccebc570acd4b5">m_renderBatches</a></td></tr>
+<tr class="memdesc:ae194b160a5de1c3a45ccebc570acd4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">the render batches used for rendering the glyphs <br /></td></tr>
+<tr class="separator:ae194b160a5de1c3a45ccebc570acd4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0606266e8d335e3e10692f64ece5a77"><td class="memItemLeft" align="right" valign="top"><a id="ad0606266e8d335e3e10692f64ece5a77"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ad0606266e8d335e3e10692f64ece5a77">m_vao</a> = 0</td></tr>
+<tr class="memdesc:ad0606266e8d335e3e10692f64ece5a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">ids of the vertex buffer object and vertex array object used to render the glyphs <br /></td></tr>
+<tr class="separator:ad0606266e8d335e3e10692f64ece5a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80916f3903da74581339d9295d454367"><td class="memItemLeft" align="right" valign="top"><a id="a80916f3903da74581339d9295d454367"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td></tr>
+<tr class="separator:a80916f3903da74581339d9295d454367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a collection of sprites to be drawn If you want to draw something without a texture, use <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html" title="represents a collection of primitives to be drawn ">PrimitiveBatch</a> instead </p>

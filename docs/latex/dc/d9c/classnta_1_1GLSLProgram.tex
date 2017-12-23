@@ -33,6 +33,33 @@ void \hyperlink{classnta_1_1GLSLProgram_ac5c8fffb04aec82913b78e35db9ea31f}{use} 
 \mbox{\Hypertarget{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}\label{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}} 
 void \hyperlink{classnta_1_1GLSLProgram_a3153b4281ab2b6fcf0017c90bbd199af}{unuse} () const
 \begin{DoxyCompactList}\small\item\em unbinds this program \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a6de85b6da0514bb9461268ff4806bed5}\label{classnta_1_1GLSLProgram_a6de85b6da0514bb9461268ff4806bed5}} 
+void \hyperlink{classnta_1_1GLSLProgram_a6de85b6da0514bb9461268ff4806bed5}{compile\+Shaders} (crstring shader\+Prog\+Name)
+\begin{DoxyCompactList}\small\item\em compiles both the vertex and fragment shaders given their name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a6ec17ca27433ffd2afa0f214fda7eb83}\label{classnta_1_1GLSLProgram_a6ec17ca27433ffd2afa0f214fda7eb83}} 
+G\+Luint \hyperlink{classnta_1_1GLSLProgram_a6ec17ca27433ffd2afa0f214fda7eb83}{compile\+Shader} (crstring shader\+File\+Name, G\+Lenum shader\+Type) const
+\begin{DoxyCompactList}\small\item\em compiles a shader from a file and returns its id \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_ad1019aa2ac0a1cbdef1668870d26c3f2}\label{classnta_1_1GLSLProgram_ad1019aa2ac0a1cbdef1668870d26c3f2}} 
+G\+Luint \hyperlink{classnta_1_1GLSLProgram_ad1019aa2ac0a1cbdef1668870d26c3f2}{m\+\_\+program\+ID} = 0
+\begin{DoxyCompactList}\small\item\em the id for the program \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a77478858f3885fba34a384ace272565a}\label{classnta_1_1GLSLProgram_a77478858f3885fba34a384ace272565a}} 
+G\+Luint \hyperlink{classnta_1_1GLSLProgram_a77478858f3885fba34a384ace272565a}{m\+\_\+vert\+Shader\+ID} = 0
+\begin{DoxyCompactList}\small\item\em the ids for the vertex and fragment shaders \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_a4762bd58f72875cdda7513684f530bed}\label{classnta_1_1GLSLProgram_a4762bd58f72875cdda7513684f530bed}} 
+G\+Luint {\bfseries m\+\_\+frag\+Shader\+ID} = 0
+\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_aa90cbc60f99bdfc69ef68633e351a118}\label{classnta_1_1GLSLProgram_aa90cbc60f99bdfc69ef68633e351a118}} 
+int \hyperlink{classnta_1_1GLSLProgram_aa90cbc60f99bdfc69ef68633e351a118}{m\+\_\+num\+Attributes} = 0
+\begin{DoxyCompactList}\small\item\em the number of attributes used by the vertex shader \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1GLSLProgram_af133a0d5d2e15fdff99062f9ea742024}\label{classnta_1_1GLSLProgram_af133a0d5d2e15fdff99062f9ea742024}} 
+bool \hyperlink{classnta_1_1GLSLProgram_af133a0d5d2e15fdff99062f9ea742024}{m\+\_\+is\+Linked} = false
+\begin{DoxyCompactList}\small\item\em keeps track of whether or not the shaders have been linked \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 

@@ -64,6 +64,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d4/d97/classnta_1_1PrimitiveBatch-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::PrimitiveBatch Class Reference</div>  </div>
@@ -111,6 +114,56 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addPrimitive</b> (std
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a899411db2d7abc313d8bef4a19fd097e">render</a> () const</td></tr>
 <tr class="memdesc:a899411db2d7abc313d8bef4a19fd097e"><td class="mdescLeft">&#160;</td><td class="mdescRight">renders the primitives <br /></td></tr>
 <tr class="separator:a899411db2d7abc313d8bef4a19fd097e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1968cc783eb6ce57dec923a7d3ab3a7d"><td class="memItemLeft" align="right" valign="top"><a id="a1968cc783eb6ce57dec923a7d3ab3a7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a1968cc783eb6ce57dec923a7d3ab3a7d">createVertexArrayObject</a> ()</td></tr>
+<tr class="memdesc:a1968cc783eb6ce57dec923a7d3ab3a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates vertex array object <br /></td></tr>
+<tr class="separator:a1968cc783eb6ce57dec923a7d3ab3a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1bcf740a16d65a79566c0a9aebd117"><td class="memItemLeft" align="right" valign="top"><a id="a8b1bcf740a16d65a79566c0a9aebd117"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117">createRenderBatches</a> ()</td></tr>
+<tr class="memdesc:a8b1bcf740a16d65a79566c0a9aebd117"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates render batches <br /></td></tr>
+<tr class="separator:a8b1bcf740a16d65a79566c0a9aebd117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bcbcbff64333a994938d6b6862db10"><td class="memItemLeft" align="right" valign="top"><a id="ab3bcbcbff64333a994938d6b6862db10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10">sortPrimitives</a> ()</td></tr>
+<tr class="memdesc:ab3bcbcbff64333a994938d6b6862db10"><td class="mdescLeft">&#160;</td><td class="mdescRight">sorts primitives <br /></td></tr>
+<tr class="separator:ab3bcbcbff64333a994938d6b6862db10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6f5af45276d6562599e82ef430a8ce"><td class="memItemLeft" align="right" valign="top"><a id="aaa6f5af45276d6562599e82ef430a8ce"></a>
+GLenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce">toPrimitiveType</a> (unsigned int numVertices) const</td></tr>
+<tr class="memdesc:aaa6f5af45276d6562599e82ef430a8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">return primitive to be drawn <br /></td></tr>
+<tr class="separator:aaa6f5af45276d6562599e82ef430a8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a84712b51e21465f4943cce9f7b20a36b"><td class="memItemLeft" align="right" valign="top"><a id="a84712b51e21465f4943cce9f7b20a36b"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b">compareTexture</a> (<a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *lhs, <a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *rhs)</td></tr>
+<tr class="memdesc:a84712b51e21465f4943cce9f7b20a36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">comparers used for sorting <br /></td></tr>
+<tr class="separator:a84712b51e21465f4943cce9f7b20a36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2da44830d62dda2177542faf32404e2"><td class="memItemLeft" align="right" valign="top"><a id="ad2da44830d62dda2177542faf32404e2"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>comparePrimitive</b> (<a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *lhs, <a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *rhs)</td></tr>
+<tr class="separator:ad2da44830d62dda2177542faf32404e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e08dc9967ad1fc382360ea02344e1d7"><td class="memItemLeft" align="right" valign="top"><a id="a8e08dc9967ad1fc382360ea02344e1d7"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>compareDepth</b> (<a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *lhs, <a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> *rhs)</td></tr>
+<tr class="separator:a8e08dc9967ad1fc382360ea02344e1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a85b1ab0111c7d02d5899f47fe1946c4f"><td class="memItemLeft" align="right" valign="top"><a id="a85b1ab0111c7d02d5899f47fe1946c4f"></a>
+std::vector&lt; <a class="el" href="../../d6/d4f/structnta_1_1Primitive.html">Primitive</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a85b1ab0111c7d02d5899f47fe1946c4f">m_primitives</a></td></tr>
+<tr class="memdesc:a85b1ab0111c7d02d5899f47fe1946c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the primitives to be drawn <br /></td></tr>
+<tr class="separator:a85b1ab0111c7d02d5899f47fe1946c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abb09d0693913206ed7e580827d6fd7"><td class="memItemLeft" align="right" valign="top"><a id="a3abb09d0693913206ed7e580827d6fd7"></a>
+std::vector&lt; <a class="el" href="../../dd/d38/structnta_1_1RenderBatch.html">RenderBatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a3abb09d0693913206ed7e580827d6fd7">m_renderBatches</a></td></tr>
+<tr class="memdesc:a3abb09d0693913206ed7e580827d6fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the render batches used to draw the primitives <br /></td></tr>
+<tr class="separator:a3abb09d0693913206ed7e580827d6fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d837d036dd9f57145870546f7514e6"><td class="memItemLeft" align="right" valign="top"><a id="aa2d837d036dd9f57145870546f7514e6"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#aa2d837d036dd9f57145870546f7514e6">m_vao</a> = 0</td></tr>
+<tr class="memdesc:aa2d837d036dd9f57145870546f7514e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ids for the vertex buffer object and vertex array object used for rendering <br /></td></tr>
+<tr class="separator:aa2d837d036dd9f57145870546f7514e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba3a776569269877d67e8754ca68db2"><td class="memItemLeft" align="right" valign="top"><a id="a2ba3a776569269877d67e8754ca68db2"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td></tr>
+<tr class="separator:a2ba3a776569269877d67e8754ca68db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a collection of primitives to be drawn </p>

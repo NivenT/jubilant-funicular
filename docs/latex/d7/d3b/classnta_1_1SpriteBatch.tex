@@ -34,6 +34,45 @@ void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}\label{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}} 
 void \hyperlink{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}{render} () const
 \begin{DoxyCompactList}\small\item\em renders the batch \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a3355b0c2840d3d78c092508925bf9565}\label{classnta_1_1SpriteBatch_a3355b0c2840d3d78c092508925bf9565}} 
+void \hyperlink{classnta_1_1SpriteBatch_a3355b0c2840d3d78c092508925bf9565}{create\+Vertex\+Array\+Object} ()
+\begin{DoxyCompactList}\small\item\em creates the vertex array object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_af22e3c4af01fef017e9522021545928f}\label{classnta_1_1SpriteBatch_af22e3c4af01fef017e9522021545928f}} 
+void \hyperlink{classnta_1_1SpriteBatch_af22e3c4af01fef017e9522021545928f}{create\+Render\+Batches} ()
+\begin{DoxyCompactList}\small\item\em creates the render batches \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ae8cf94595c26211521df9e1580776289}\label{classnta_1_1SpriteBatch_ae8cf94595c26211521df9e1580776289}} 
+void \hyperlink{classnta_1_1SpriteBatch_ae8cf94595c26211521df9e1580776289}{sort\+Glyphs} ()
+\begin{DoxyCompactList}\small\item\em sorts the glyphs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_acd5b622817c1bab5c60de488b089f0f9}\label{classnta_1_1SpriteBatch_acd5b622817c1bab5c60de488b089f0f9}} 
+static bool \hyperlink{classnta_1_1SpriteBatch_acd5b622817c1bab5c60de488b089f0f9}{compare\+Texture} (\hyperlink{structnta_1_1Glyph}{Glyph} $\ast$lhs, \hyperlink{structnta_1_1Glyph}{Glyph} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em comparers used to sort \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ae7aea3ca736e40b3a861048e883eabdc}\label{classnta_1_1SpriteBatch_ae7aea3ca736e40b3a861048e883eabdc}} 
+static bool {\bfseries compare\+Depth} (\hyperlink{structnta_1_1Glyph}{Glyph} $\ast$lhs, \hyperlink{structnta_1_1Glyph}{Glyph} $\ast$rhs)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ae6c42878b427eef6fcd07aad0a60c6aa}\label{classnta_1_1SpriteBatch_ae6c42878b427eef6fcd07aad0a60c6aa}} 
+std\+::vector$<$ \hyperlink{structnta_1_1Glyph}{Glyph} $\ast$ $>$ \hyperlink{classnta_1_1SpriteBatch_ae6c42878b427eef6fcd07aad0a60c6aa}{m\+\_\+glyph\+Pointers}
+\begin{DoxyCompactList}\small\item\em pointers to the glyphs to be rendered (used for sorting) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ac8291bea20d3a963bbe006587f35bf6f}\label{classnta_1_1SpriteBatch_ac8291bea20d3a963bbe006587f35bf6f}} 
+std\+::vector$<$ \hyperlink{structnta_1_1Glyph}{Glyph} $>$ \hyperlink{classnta_1_1SpriteBatch_ac8291bea20d3a963bbe006587f35bf6f}{m\+\_\+glyphs}
+\begin{DoxyCompactList}\small\item\em the glyphs to be rendered (used for fast vector operations) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ae194b160a5de1c3a45ccebc570acd4b5}\label{classnta_1_1SpriteBatch_ae194b160a5de1c3a45ccebc570acd4b5}} 
+std\+::vector$<$ \hyperlink{structnta_1_1RenderBatch}{Render\+Batch} $>$ \hyperlink{classnta_1_1SpriteBatch_ae194b160a5de1c3a45ccebc570acd4b5}{m\+\_\+render\+Batches}
+\begin{DoxyCompactList}\small\item\em the render batches used for rendering the glyphs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_ad0606266e8d335e3e10692f64ece5a77}\label{classnta_1_1SpriteBatch_ad0606266e8d335e3e10692f64ece5a77}} 
+G\+Luint \hyperlink{classnta_1_1SpriteBatch_ad0606266e8d335e3e10692f64ece5a77}{m\+\_\+vao} = 0
+\begin{DoxyCompactList}\small\item\em ids of the vertex buffer object and vertex array object used to render the glyphs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_a80916f3903da74581339d9295d454367}\label{classnta_1_1SpriteBatch_a80916f3903da74581339d9295d454367}} 
+G\+Luint {\bfseries m\+\_\+vbo} = 0
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

@@ -64,6 +64,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../de/d5c/classnta_1_1ParticleBatch2D-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::ParticleBatch2D Class Reference</div>  </div>
@@ -105,6 +107,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a1046b22d239222435e74011b3683a5c6">clear</a> ()</td></tr>
 <tr class="memdesc:a1046b22d239222435e74011b3683a5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes all particles <br /></td></tr>
 <tr class="separator:a1046b22d239222435e74011b3683a5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a123aac9af29133bfe358b9895de2b2ce"><td class="memItemLeft" align="right" valign="top"><a id="a123aac9af29133bfe358b9895de2b2ce"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a123aac9af29133bfe358b9895de2b2ce">getFreeParticle</a> () const</td></tr>
+<tr class="memdesc:a123aac9af29133bfe358b9895de2b2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns index of particle with the minimum life <br /></td></tr>
+<tr class="separator:a123aac9af29133bfe358b9895de2b2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:abfe8d182f35c8eb0f882902d292129be"><td class="memItemLeft" align="right" valign="top"><a id="abfe8d182f35c8eb0f882902d292129be"></a>
+std::function&lt; void(<a class="el" href="../../d5/d1a/structnta_1_1Particle2D.html">Particle2D</a> &amp;, float)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#abfe8d182f35c8eb0f882902d292129be">m_updateFunction</a></td></tr>
+<tr class="memdesc:abfe8d182f35c8eb0f882902d292129be"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function used to update the particles <br /></td></tr>
+<tr class="separator:abfe8d182f35c8eb0f882902d292129be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad410f47c5312b018125795882db9aa6c"><td class="memItemLeft" align="right" valign="top"><a id="ad410f47c5312b018125795882db9aa6c"></a>
+<a class="el" href="../../d5/d1a/structnta_1_1Particle2D.html">Particle2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#ad410f47c5312b018125795882db9aa6c">m_particles</a> = nullptr</td></tr>
+<tr class="memdesc:ad410f47c5312b018125795882db9aa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the particles themselves <br /></td></tr>
+<tr class="separator:ad410f47c5312b018125795882db9aa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c789bf8a6449ed7db554cee6f3c918e"><td class="memItemLeft" align="right" valign="top"><a id="a9c789bf8a6449ed7db554cee6f3c918e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a9c789bf8a6449ed7db554cee6f3c918e">m_initialLife</a></td></tr>
+<tr class="memdesc:a9c789bf8a6449ed7db554cee6f3c918e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the life every particle starts out with <br /></td></tr>
+<tr class="separator:a9c789bf8a6449ed7db554cee6f3c918e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d0ca59a6f1c83d7a2c7c210e87bcc1"><td class="memItemLeft" align="right" valign="top"><a id="a59d0ca59a6f1c83d7a2c7c210e87bcc1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a59d0ca59a6f1c83d7a2c7c210e87bcc1">m_decayRate</a></td></tr>
+<tr class="memdesc:a59d0ca59a6f1c83d7a2c7c210e87bcc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">the rate with which particles lose life <br /></td></tr>
+<tr class="separator:a59d0ca59a6f1c83d7a2c7c210e87bcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac564b88da2f73d5692cbdec15478fe4d"><td class="memItemLeft" align="right" valign="top"><a id="ac564b88da2f73d5692cbdec15478fe4d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#ac564b88da2f73d5692cbdec15478fe4d">m_radius</a></td></tr>
+<tr class="memdesc:ac564b88da2f73d5692cbdec15478fe4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the radius of an individual particle <br /></td></tr>
+<tr class="separator:ac564b88da2f73d5692cbdec15478fe4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0dbc3bae31f962ed403daf06848948"><td class="memItemLeft" align="right" valign="top"><a id="acf0dbc3bae31f962ed403daf06848948"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#acf0dbc3bae31f962ed403daf06848948">m_maxParticles</a></td></tr>
+<tr class="memdesc:acf0dbc3bae31f962ed403daf06848948"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum number of particles allowed <br /></td></tr>
+<tr class="separator:acf0dbc3bae31f962ed403daf06848948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73232a0481db52884b42c50deb456add"><td class="memItemLeft" align="right" valign="top"><a id="a73232a0481db52884b42c50deb456add"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a73232a0481db52884b42c50deb456add">m_textureID</a></td></tr>
+<tr class="memdesc:a73232a0481db52884b42c50deb456add"><td class="mdescLeft">&#160;</td><td class="mdescRight">texture used by the particles <br /></td></tr>
+<tr class="separator:a73232a0481db52884b42c50deb456add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a batch of particles of the same "type". </p>

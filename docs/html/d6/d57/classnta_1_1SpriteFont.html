@@ -65,6 +65,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d4/d83/classnta_1_1SpriteFont-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::SpriteFont Class Reference</div>  </div>
@@ -102,6 +104,32 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1db301b9555c86340ea57bb2c5485dfc"><td class="memItemLeft" align="right" valign="top"><a id="a1db301b9555c86340ea57bb2c5485dfc"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>ResourceManager</b></td></tr>
 <tr class="separator:a1db301b9555c86340ea57bb2c5485dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9dc96f31efd0830dcb476ea87534e358"><td class="memItemLeft" align="right" valign="top"><a id="a9dc96f31efd0830dcb476ea87534e358"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358">SpriteFont</a> (crstring fontPath, unsigned int size)</td></tr>
+<tr class="memdesc:a9dc96f31efd0830dcb476ea87534e358"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor - creates a texture containing the font stored in fontPath with glyphs of the given size <br /></td></tr>
+<tr class="separator:a9dc96f31efd0830dcb476ea87534e358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5292a1131ab6e04e23f282d2b067146"><td class="memItemLeft" align="right" valign="top"><a id="aa5292a1131ab6e04e23f282d2b067146"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#aa5292a1131ab6e04e23f282d2b067146">~SpriteFont</a> ()</td></tr>
+<tr class="memdesc:aa5292a1131ab6e04e23f282d2b067146"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor <br /></td></tr>
+<tr class="separator:aa5292a1131ab6e04e23f282d2b067146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2fa17cff4bb7bd5125a01dcfa9b0fa88"><td class="memItemLeft" align="right" valign="top"><a id="a2fa17cff4bb7bd5125a01dcfa9b0fa88"></a>
+<a class="el" href="../../d4/d26/structnta_1_1CharGlyph.html">CharGlyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#a2fa17cff4bb7bd5125a01dcfa9b0fa88">m_charGlyphs</a> = nullptr</td></tr>
+<tr class="memdesc:a2fa17cff4bb7bd5125a01dcfa9b0fa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">a collection of glyphs for each char <br /></td></tr>
+<tr class="separator:a2fa17cff4bb7bd5125a01dcfa9b0fa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab74d460c526a4df82d206bba945fd711"><td class="memItemLeft" align="right" valign="top"><a id="ab74d460c526a4df82d206bba945fd711"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#ab74d460c526a4df82d206bba945fd711">m_texId</a> = 0</td></tr>
+<tr class="memdesc:ab74d460c526a4df82d206bba945fd711"><td class="mdescLeft">&#160;</td><td class="mdescRight">the idea of the generated texture <br /></td></tr>
+<tr class="separator:ab74d460c526a4df82d206bba945fd711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689c80716d73871ea0d9abe08af9e8dc"><td class="memItemLeft" align="right" valign="top"><a id="a689c80716d73871ea0d9abe08af9e8dc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#a689c80716d73871ea0d9abe08af9e8dc">m_fontHeight</a> = 0</td></tr>
+<tr class="memdesc:a689c80716d73871ea0d9abe08af9e8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">the height of the font <br /></td></tr>
+<tr class="separator:a689c80716d73871ea0d9abe08af9e8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Loads in a .ttf file, creates a font texture from it, and is then used to render text. </p>

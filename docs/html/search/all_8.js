@@ -6,5 +6,6 @@ var searchData=
   ['inputmanager',['InputManager',['../d6/de2/classnta_1_1InputManager.html',1,'nta']]],
   ['iomanager',['IOManager',['../d2/d54/classnta_1_1IOManager.html',1,'nta']]],
   ['islinked',['isLinked',['../dc/d9c/classnta_1_1GLSLProgram.html#a6067e49c12b542735eff255047cd8ae1',1,'nta::GLSLProgram']]],
+  ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
   ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#ae97dfcf9043a3590a02387af85669871',1,'nta::InputManager']]]
 ];

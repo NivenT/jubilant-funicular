@@ -14,8 +14,12 @@ var searchData=
   ['setposition',['setPosition',['../d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592',1,'nta::Vertex2D']]],
   ['setuv',['setUV',['../d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97',1,'nta::Vertex2D']]],
   ['setwindow',['setWindow',['../d6/d23/classnta_1_1Screen.html#a3c74cd84437e8897850ce4bae98bc8b2',1,'nta::Screen']]],
+  ['sortglyphs',['sortGlyphs',['../d7/d3b/classnta_1_1SpriteBatch.html#ae8cf94595c26211521df9e1580776289',1,'nta::SpriteBatch']]],
+  ['sortprimitives',['sortPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10',1,'nta::PrimitiveBatch']]],
+  ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#a90adfaad718cb8d4fcec601bb87c0227',1,'nta::SoundEffect']]],
   ['sprite',['Sprite',['../d4/d60/classnta_1_1Sprite.html#a5d208eb1b82f0a60155887b5f4103dbc',1,'nta::Sprite']]],
   ['spritebatch',['SpriteBatch',['../d7/d3b/classnta_1_1SpriteBatch.html#a554ec4ee678b6f97621d299e4a258f95',1,'nta::SpriteBatch']]],
+  ['spritefont',['SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358',1,'nta::SpriteFont']]],
   ['stop',['stop',['../d4/dab/classnta_1_1Music.html#ade2d11ebc9273494b344e089cd7b58b8',1,'nta::Music']]],
   ['swapbuffers',['swapBuffers',['../d4/dfb/classnta_1_1Window.html#a5fdc643079410c14855a260ace84478e',1,'nta::Window']]],
   ['switchscreen',['switchScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660',1,'nta::ScreenManager']]]

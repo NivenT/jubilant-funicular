@@ -9,6 +9,11 @@ represents the organization of a texture containing the characters
 
 {\ttfamily \#include $<$Sprite\+Font.\+h$>$}
 
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnta_1_1FontMap_1_1CharRect}{Char\+Rect}
+\begin{DoxyCompactList}\small\item\em a rectangle representing the location of a char in the \hyperlink{classnta_1_1FontMap}{Font\+Map} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,6 +35,18 @@ void \hyperlink{classnta_1_1FontMap_ada51488d206b4a609cc4a5401d90f43d}{position}
 \mbox{\Hypertarget{classnta_1_1FontMap_af6e4081f6048d41ce15758c9cdb6092f}\label{classnta_1_1FontMap_af6e4081f6048d41ce15758c9cdb6092f}} 
 friend {\bfseries Sprite\+Font}
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1FontMap_aae874cb1975e6be920bf785f34f14c3e}\label{classnta_1_1FontMap_aae874cb1975e6be920bf785f34f14c3e}} 
+bool \hyperlink{classnta_1_1FontMap_aae874cb1975e6be920bf785f34f14c3e}{is\+Overlapping} (const \hyperlink{structnta_1_1FontMap_1_1CharRect}{Char\+Rect} \&rect) const
+\begin{DoxyCompactList}\small\item\em returns whether or not rect is overlapping with any existing \hyperlink{structnta_1_1FontMap_1_1CharRect}{Char\+Rect} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1FontMap_a24e415fd025230fce6a304a3dfd320a8}\label{classnta_1_1FontMap_a24e415fd025230fce6a304a3dfd320a8}} 
+\hyperlink{structnta_1_1FontMap_1_1CharRect}{Char\+Rect} $\ast$ \hyperlink{classnta_1_1FontMap_a24e415fd025230fce6a304a3dfd320a8}{m\+\_\+rects} = nullptr
+\begin{DoxyCompactList}\small\item\em the rectangles making up the \hyperlink{classnta_1_1FontMap}{Font\+Map} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

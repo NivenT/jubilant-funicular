@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../df/de2/classnta_1_1ScreenManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::ScreenManager Class Reference</div>  </div>
@@ -109,6 +110,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9">run</a> ()</td></tr>
 <tr class="memdesc:a19a9c4c96209d37d928c05777a1135b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs screen logic (render, update, handleInput, etc.) <br /></td></tr>
 <tr class="separator:a19a9c4c96209d37d928c05777a1135b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aed16963ad12365acbaf0191e1a72243d"><td class="memItemLeft" align="right" valign="top"><a id="aed16963ad12365acbaf0191e1a72243d"></a>
+std::vector&lt; <a class="el" href="../../d6/d23/classnta_1_1Screen.html">Screen</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#aed16963ad12365acbaf0191e1a72243d">m_screens</a></td></tr>
+<tr class="memdesc:aed16963ad12365acbaf0191e1a72243d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the screens <br /></td></tr>
+<tr class="separator:aed16963ad12365acbaf0191e1a72243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de9c180b4f4575a75659e2fc172b744"><td class="memItemLeft" align="right" valign="top"><a id="a6de9c180b4f4575a75659e2fc172b744"></a>
+<a class="el" href="../../d7/d1f/classnta_1_1FPSLimiter.html">FPSLimiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a6de9c180b4f4575a75659e2fc172b744">m_limiter</a></td></tr>
+<tr class="memdesc:a6de9c180b4f4575a75659e2fc172b744"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to cap the FPS <br /></td></tr>
+<tr class="separator:a6de9c180b4f4575a75659e2fc172b744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df0128adeaa72737aab61513842de50"><td class="memItemLeft" align="right" valign="top"><a id="a9df0128adeaa72737aab61513842de50"></a>
+<a class="el" href="../../d4/dfb/classnta_1_1Window.html">Window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a9df0128adeaa72737aab61513842de50">m_window</a></td></tr>
+<tr class="memdesc:a9df0128adeaa72737aab61513842de50"><td class="mdescLeft">&#160;</td><td class="mdescRight">the main window used by the manager <br /></td></tr>
+<tr class="separator:a9df0128adeaa72737aab61513842de50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bc9c1f61548f548caf7e2e5da68693"><td class="memItemLeft" align="right" valign="top"><a id="a65bc9c1f61548f548caf7e2e5da68693"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a65bc9c1f61548f548caf7e2e5da68693">m_currScreen</a> = -1</td></tr>
+<tr class="memdesc:a65bc9c1f61548f548caf7e2e5da68693"><td class="mdescLeft">&#160;</td><td class="mdescRight">the index of the currently active screen <br /></td></tr>
+<tr class="separator:a65bc9c1f61548f548caf7e2e5da68693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages a collection of screens. </p>
