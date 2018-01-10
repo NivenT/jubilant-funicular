@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['randbool',['randBool',['../db/d48/classnta_1_1Random.html#a5cde49f2ac5cbd8d9d9844dbe7644759',1,'nta::Random']]],
-  ['randfloat',['randFloat',['../db/d48/classnta_1_1Random.html#a102ed2efec77f974731e5dcdb428174a',1,'nta::Random']]],
-  ['randgaussian',['randGaussian',['../db/d48/classnta_1_1Random.html#a6e12bc86e5851f01d70debf422746e0e',1,'nta::Random']]],
-  ['randint',['randInt',['../db/d48/classnta_1_1Random.html#aee5fa8d97f0cf1ccee84c6270b42a50d',1,'nta::Random']]],
-  ['readfiletobuffer',['readFileToBuffer',['../d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10',1,'nta::IOManager']]],
-  ['readimage',['readImage',['../d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10',1,'nta::ImageLoader']]],
-  ['releasekey',['releaseKey',['../d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0',1,'nta::InputManager']]],
-  ['render',['render',['../d4/df3/classnta_1_1PrimitiveBatch.html#a899411db2d7abc313d8bef4a19fd097e',1,'nta::PrimitiveBatch::render()'],['../d6/d23/classnta_1_1Screen.html#a323ff61ac31f55bd39fa818ccd8200fb',1,'nta::Screen::render()'],['../d4/d60/classnta_1_1Sprite.html#a01e831cda46d73acd8a4eff3cb56d5d3',1,'nta::Sprite::render()'],['../d7/d3b/classnta_1_1SpriteBatch.html#ae7566d38b0cdd33f2b3e16dfcf993714',1,'nta::SpriteBatch::render()']]],
-  ['renderbatch',['RenderBatch',['../dd/d38/structnta_1_1RenderBatch.html#a02a531d942296d7194ca96f7ed614f14',1,'nta::RenderBatch']]],
-  ['resume',['resume',['../d4/dab/classnta_1_1Music.html#a7eb8159db905f34ebf6ad48ec9a1afa1',1,'nta::Music']]],
-  ['rotate',['rotate',['../d3/d28/classnta_1_1Camera2D.html#a4529f2111c2621764c42365df5a504e0',1,'nta::Camera2D']]],
-  ['run',['run',['../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9',1,'nta::ScreenManager']]]
+  ['particlebatch2d',['ParticleBatch2D',['../df/d9f/classnta_1_1ParticleBatch2D.html#af81efd4598cd578c2eddbcab6b5d3f5d',1,'nta::ParticleBatch2D']]],
+  ['particleengine2d',['ParticleEngine2D',['../d1/de9/classnta_1_1ParticleEngine2D.html#a0fdd494f4e47d56ac2cee6306e682c0f',1,'nta::ParticleEngine2D']]],
+  ['pause',['pause',['../d4/dab/classnta_1_1Music.html#a8382cffd123f37f3f1426a0d461e9541',1,'nta::Music']]],
+  ['play',['play',['../dc/d23/classnta_1_1SoundEffect.html#a2955a9f115c4e3690a9ef82eb05d498c',1,'nta::SoundEffect::play()'],['../d4/dab/classnta_1_1Music.html#a2987f4f84b0c0a0094967821a7b14f64',1,'nta::Music::play()']]],
+  ['position',['position',['../d9/d4d/classnta_1_1FontMap.html#ada51488d206b4a609cc4a5401d90f43d',1,'nta::FontMap']]],
+  ['presskey',['pressKey',['../d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0',1,'nta::InputManager']]],
+  ['primitive',['Primitive',['../d6/d4f/structnta_1_1Primitive.html#ad8eb45115ed7647d71360ce6366eb2bc',1,'nta::Primitive::Primitive(const std::initializer_list&lt; Vertex2D &gt; &amp;verts, GLuint texID, float d)'],['../d6/d4f/structnta_1_1Primitive.html#aecce4a7f13b72766aed56ca66760b43d',1,'nta::Primitive::Primitive(std::size_t numSides, crvec2 center, float sideLength, crvec4 color, float orientation, float d)']]],
+  ['primitivebatch',['PrimitiveBatch',['../d4/df3/classnta_1_1PrimitiveBatch.html#a28628a90db31796dd0d1cf770dbe9ff5',1,'nta::PrimitiveBatch']]]
 ];
