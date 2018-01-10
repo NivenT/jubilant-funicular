@@ -16,19 +16,19 @@ namespace nta {
             topLeft.setPosition(posRect.x, posRect.y);
             topLeft.setUV(uvRect.x, uvRect.y);
             topLeft.color = color;
-            topLeft.hasTexture = 1;
+            topLeft.hasTexture = texture != 0;
             topRight.setPosition(posRect.x + posRect[2], posRect.y);
             topRight.setUV(uvRect.x + uvRect[2], uvRect.y);
             topRight.color = color;
-            topRight.hasTexture = 1;
+            topRight.hasTexture = texture != 0;
             botRight.setPosition(posRect.x + posRect[2], posRect.y - posRect[3]);
             botRight.setUV(uvRect.x + uvRect[2], uvRect.y + uvRect[3]);
             botRight.color = color;
-            botRight.hasTexture = 1;
+            botRight.hasTexture = texture != 0;
             botLeft.setPosition(posRect.x, posRect.y - posRect[3]);
             botLeft.setUV(uvRect.x, uvRect.y + uvRect[3]);
             botLeft.color = color;
-            botLeft.hasTexture = 1;
+            botLeft.hasTexture = texture != 0;
         }
         /// the texture used by the glyph
         GLuint textureID;

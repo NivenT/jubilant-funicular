@@ -69,6 +69,8 @@ namespace nta {
         /// constructor and destructor
         PrimitiveBatch();
         ~PrimitiveBatch();
+        /// returns number of primitives to be rendered
+        int numPrimitives() const;
         /// initializes the batch
         void init();
         /// begins collection of primitive

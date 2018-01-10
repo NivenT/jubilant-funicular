@@ -14,8 +14,9 @@ namespace nta {
         ilGenImages(1,&imgID);
         ilBindImage(imgID);
         if (ilLoadImage(filePath.c_str()) == IL_FALSE) {
-            Logger::writeErrorToLog("DevIL failed to load image with error: " +
-                                    to_string(ilGetError()));
+            ILenum error = ilGetError();
+            Logger::writeErrorToLog("DevIL failed to load image with error " +
+                                    to_string(error) + ": " + iluErrorString(error));
         }
         glGenTextures(1, &ret.id);
         glBindTexture(GL_TEXTURE_2D, ret.id);

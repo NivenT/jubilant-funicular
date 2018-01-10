@@ -18,6 +18,9 @@ namespace nta {
         m_primitives.clear();
         m_renderBatches.clear();
     }
+    int PrimitiveBatch::numPrimitives() const {
+        return m_primitives.size();
+    }
     void PrimitiveBatch::init() {
         createVertexArrayObject();
     }
@@ -105,7 +108,7 @@ namespace nta {
             // batch in order to be rendered currectly
             if (m_primitives[cp]->textureID != m_primitives[cp-1]->textureID ||
                 m_primitives[cp]->vertices.size() != m_primitives[cp-1]->vertices.size() ||
-                m_primitives[cp]->vertices.size() > 4) {
+                m_renderBatches.back().mode == GL_POLYGON) {
                 m_renderBatches.emplace_back(m_primitives[cp]->textureID, offset,
                                              m_primitives[cp]->vertices.size(),
                                              toPrimitiveType(m_primitives[cp]->vertices.size()));

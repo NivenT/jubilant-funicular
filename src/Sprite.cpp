@@ -31,16 +31,17 @@ namespace nta {
     }
     void Sprite::render() const {
         glBindBuffer(GL_ARRAY_BUFFER, m_vboID);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
             glEnableVertexAttribArray(i);
         }
         glBindTexture(GL_TEXTURE_2D, m_texture.id);
         glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, pos));
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, color));
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, uv));
+        glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
         glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindTexture(GL_TEXTURE_2D, 0);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
             glDisableVertexAttribArray(i);
         }
         glBindBuffer(GL_ARRAY_BUFFER, 0);

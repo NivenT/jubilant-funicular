@@ -6,20 +6,20 @@
 #include "GLTexture.h"
 
 namespace nta {
-    ///represents a textured quad
+    /// represents a textured quad (Best to use SpriteBatch instead)
     class Sprite {
     private:
-        ///id for the vertex buffer object used to render the sprite
+        /// id for the vertex buffer object used to render the sprite
         GLuint m_vboID;
-        ///texture used by the quad
+        /// texture used by the quad
         GLTexture m_texture;
     public:
-        ///constructor and destructor
+        /// constructor and destructor
         Sprite();
         ~Sprite();
-        ///creates the sprite
+        /// creates the sprite
         void init(float x, float y, float w, float h, crstring imagePath, float d = 0);
-        ///renders the sprite
+        /// renders the sprite
         void render() const;
     };
 }
