@@ -88,7 +88,7 @@ namespace nta {
     void DebugBatch::addRect(crvec4 posRect, float orientation, crvec4 color) {
         addRect(posRect, color, orientation);
     }
-    void DebugBatch::addCircle(crvec4 center, float radius, crvec4 color) {
+    void DebugBatch::addCircle(crvec2 center, float radius, crvec4 color) {
         static const std::size_t NUM_SIDES = 100;
         float side_length = radius * glm::sqrt(2.-2.*glm::cos(2.*M_PI/NUM_SIDES));
         addPolygon(NUM_SIDES, center, side_length, 0., color);

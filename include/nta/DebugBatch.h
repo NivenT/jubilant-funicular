@@ -32,7 +32,7 @@ namespace nta {
         void addLine(crvec2 start, crvec2 end, int num_pieces, crvec4 color = glm::vec4(1));
         void addRect(crvec4 posRect, crvec4 color = glm::vec4(1), float orientation = 0);
         void addRect(crvec4 posRect, float orientation, crvec4 color = glm::vec4(1));
-        void addCircle(crvec4 center, float radius, crvec4 color = glm::vec4(1));
+        void addCircle(crvec2 center, float radius, crvec4 color = glm::vec4(1));
         void addPolygon(std::size_t numSides, crvec2 center, float sideLength, float orientation, 
                         crvec4 color = glm::vec4(1));
         /// renders the batch
