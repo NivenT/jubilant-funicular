@@ -1,3 +1,4 @@
 <map id="nta::Glyph" name="nta::Glyph">
-<area shape="rect" id="node2" href="$d5/d07/structnta_1_1Vertex2D.html" title="represents a vertex in 2 dimensions " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$d5/d07/structnta_1_1Vertex2D.html" title="represents a vertex in 2 dimensions " alt="" coords="13,95,115,121"/>
+<area shape="rect" id="node3" href="$df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer) " alt="" coords="5,5,123,32"/>
 </map>

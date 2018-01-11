@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['deletetexture',['deleteTexture',['../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489',1,'nta::ResourceManager']]],
   ['depth',['depth',['../d6/d4f/structnta_1_1Primitive.html#a4443e427fb512898693bba61a8ac4654',1,'nta::Primitive::depth()'],['../d6/db3/structnta_1_1Glyph.html#a259a2061c71dfd9fa0857f52d4daff8a',1,'nta::Glyph::depth()']]],

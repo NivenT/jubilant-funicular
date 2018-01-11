@@ -65,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d2/dc2/structnta_1_1Vertex2D-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::Vertex2D Struct Reference</div>  </div>
@@ -75,6 +76,14 @@ $(function() {
  <a href="../../d5/d07/structnta_1_1Vertex2D.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/d2d/Vertex_8h_source.html">Vertex.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for nta::Vertex2D:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/deb/structnta_1_1Vertex2D__coll__graph.png" border="0" usemap="#nta_1_1Vertex2D_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1Vertex2D_coll__map" id="nta_1_1Vertex2D_coll__map">
+<area shape="rect" id="node2" href="../../df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer) " alt="" coords="5,5,123,32"/>
+</map>
+<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,13 +134,44 @@ glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>uv</b></td></tr>
 <tr class="memitem:ac1b1fb722a89abaee9cddfb59543af85"><td class="memItemLeft" align="right" valign="top"><a id="ac1b1fb722a89abaee9cddfb59543af85"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>hasTexture</b></td></tr>
 <tr class="separator:ac1b1fb722a89abaee9cddfb59543af85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a6be835338c31e6ce40e1a2f5a3039560"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../df/d9d/structnta_1_1VertexAttrib.html">VertexAttrib</a>&#160;</td><td class="memItemRight" valign="bottom"><b>attribs</b> [NUM_VERTEX_ATTRIBS]</td></tr>
+<tr class="separator:a6be835338c31e6ce40e1a2f5a3039560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a vertex in 2 dimensions </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/d2d/Vertex_8h_source.html#l00011">11</a> of file <a class="el" href="../../d9/d2d/Vertex_8h_source.html">Vertex.h</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="../../d9/d2d/Vertex_8h_source.html#l00020">20</a> of file <a class="el" href="../../d9/d2d/Vertex_8h_source.html">Vertex.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6be835338c31e6ce40e1a2f5a3039560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be835338c31e6ce40e1a2f5a3039560">&#9670;&nbsp;</a></span>attribs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../df/d9d/structnta_1_1VertexAttrib.html">VertexAttrib</a> nta::Vertex2D::attribs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        {2, GL_FLOAT, GL_FALSE, (<span class="keywordtype">void</span>*)offsetof(<a class="code" href="../../d5/d07/structnta_1_1Vertex2D.html#a696744d55f56ae170684266eab073c0f">Vertex2D</a>, <a class="code" href="../../d5/d07/structnta_1_1Vertex2D.html#a27a44e1ca52b5a5a13d37495e9376636">pos</a>)},</div><div class="line">        {4, GL_FLOAT, GL_TRUE,  (<span class="keywordtype">void</span>*)offsetof(<a class="code" href="../../d5/d07/structnta_1_1Vertex2D.html#a696744d55f56ae170684266eab073c0f">Vertex2D</a>, color)},</div><div class="line">        {2, GL_FLOAT, GL_FALSE, (<span class="keywordtype">void</span>*)offsetof(<a class="code" href="../../d5/d07/structnta_1_1Vertex2D.html#a696744d55f56ae170684266eab073c0f">Vertex2D</a>, uv)},</div><div class="line">        {1, GL_FLOAT, GL_FALSE, (<span class="keywordtype">void</span>*)offsetof(<a class="code" href="../../d5/d07/structnta_1_1Vertex2D.html#a696744d55f56ae170684266eab073c0f">Vertex2D</a>, hasTexture)}</div><div class="line">    }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d9/d2d/Vertex_8h_source.html#l00062">62</a> of file <a class="el" href="../../d9/d2d/Vertex_8h_source.html">Vertex.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../d9/d2d/Vertex_8h_source.html">Vertex.h</a></li>
+<li>src/<a class="el" href="../../de/d07/Vertex_8cpp_source.html">Vertex.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['deletetexture',['deleteTexture',['../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489',1,'nta::ResourceManager']]],
   ['destroy',['destroy',['../da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce',1,'nta::AudioManager::destroy()'],['../d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219',1,'nta::ScreenManager::destroy()']]],

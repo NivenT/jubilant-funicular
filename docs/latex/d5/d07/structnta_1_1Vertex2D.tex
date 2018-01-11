@@ -9,6 +9,16 @@ represents a vertex in 2 dimensions
 
 {\ttfamily \#include $<$Vertex.\+h$>$}
 
+
+
+Collaboration diagram for nta\+:\+:Vertex2D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{df/deb/structnta_1_1Vertex2D__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,15 +61,43 @@ glm\+::vec2 {\bfseries uv}
 \mbox{\Hypertarget{structnta_1_1Vertex2D_ac1b1fb722a89abaee9cddfb59543af85}\label{structnta_1_1Vertex2D_ac1b1fb722a89abaee9cddfb59543af85}} 
 float {\bfseries has\+Texture}
 \end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{structnta_1_1VertexAttrib}{Vertex\+Attrib} {\bfseries attribs} \mbox{[}N\+U\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+I\+BS\mbox{]}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 represents a vertex in 2 dimensions 
 
-Definition at line 11 of file Vertex.\+h.
+Definition at line 20 of file Vertex.\+h.
 
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structnta_1_1Vertex2D_a6be835338c31e6ce40e1a2f5a3039560}\label{structnta_1_1Vertex2D_a6be835338c31e6ce40e1a2f5a3039560}} 
+\index{nta\+::\+Vertex2D@{nta\+::\+Vertex2D}!attribs@{attribs}}
+\index{attribs@{attribs}!nta\+::\+Vertex2D@{nta\+::\+Vertex2D}}
+\subsubsection{\texorpdfstring{attribs}{attribs}}
+{\footnotesize\ttfamily const \hyperlink{structnta_1_1VertexAttrib}{Vertex\+Attrib} nta\+::\+Vertex2\+D\+::attribs\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+        \{2, GL\_FLOAT, GL\_FALSE, (\textcolor{keywordtype}{void}*)offsetof(\hyperlink{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}{Vertex2D}, \hyperlink{structnta_1_1Vertex2D_a27a44e1ca52b5a5a13d37495e9376636}{pos})\},
+        \{4, GL\_FLOAT, GL\_TRUE,  (\textcolor{keywordtype}{void}*)offsetof(\hyperlink{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}{Vertex2D}, color)\},
+        \{2, GL\_FLOAT, GL\_FALSE, (\textcolor{keywordtype}{void}*)offsetof(\hyperlink{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}{Vertex2D}, uv)\},
+        \{1, GL\_FLOAT, GL\_FALSE, (\textcolor{keywordtype}{void}*)offsetof(\hyperlink{structnta_1_1Vertex2D_a696744d55f56ae170684266eab073c0f}{Vertex2D}, hasTexture)\}
+    \}
+\end{DoxyCode}
+
+
+Definition at line 62 of file Vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/nta/Vertex.\+h\end{DoxyCompactItemize}
+include/nta/Vertex.\+h\item 
+src/Vertex.\+cpp\end{DoxyCompactItemize}
