@@ -13,6 +13,7 @@ namespace nta {
         iluInit();
     }
 }
+/*
 float changeRange(float val, float a, float b, float c, float d) {
     ///[a,b]->[0,b-a]->[0,d-c]->[c,d]
     return (val-a)*(d-c)/(b-a) + c;
@@ -25,3 +26,4 @@ void cond(std::initializer_list<bool> conditions, std::initializer_list<std::fun
         }
     }
 }
+*/
