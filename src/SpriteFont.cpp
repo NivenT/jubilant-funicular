@@ -1,10 +1,7 @@
 #include <SDL2/SDL_ttf.h>
 
-#include <iostream>
-#include "GLMConsoleOutput.h"
-
-#include "SpriteFont.h"
-#include "Logger.h"
+#include "nta/SpriteFont.h"
+#include "nta/Logger.h"
 
 namespace nta {
     SpriteFont::SpriteFont(crstring fontPath, unsigned int size) {

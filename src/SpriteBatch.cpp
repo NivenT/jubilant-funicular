@@ -1,7 +1,7 @@
 #include <algorithm>
 
-#include "SpriteBatch.h"
-#include "Vertex.h"
+#include "nta/SpriteBatch.h"
+#include "nta/Vertex.h"
 
 namespace nta {
     SpriteBatch::SpriteBatch() {
@@ -30,12 +30,12 @@ namespace nta {
         glBindVertexArray(m_vao);
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
         for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
+            auto& attrib = Vertex2D::attribs[i];
+
             glEnableVertexAttribArray(i);
+            glVertexAttribPointer(i, attrib.size, attrib.type, attrib.normalized, sizeof(Vertex2D), 
+                                  attrib.pointer);
         }
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, pos));
-        glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE , sizeof(Vertex2D), (void*)offsetof(Vertex2D, color));
-        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, uv));
-        glVertexAttribPointer(3, 1, GL_FLOAT, GL_FALSE, sizeof(Vertex2D), (void*)offsetof(Vertex2D, hasTexture));
         glBindVertexArray(0);
     }
     void SpriteBatch::begin() {

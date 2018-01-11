@@ -1,4 +1,4 @@
-#include "Compressor.h"
+#include "nta/Compressor.h"
 
 namespace nta {
     HuffmanLeaf::HuffmanLeaf() : m_data(0) {

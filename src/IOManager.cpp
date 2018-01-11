@@ -1,8 +1,7 @@
-#include "IOManager.h"
-#include "Logger.h"
+#include "nta/IOManager.h"
+#include "nta/Logger.h"
 
-namespace nta
-{
+namespace nta {
     void IOManager::readFileToBuffer(crstring filePath, FileBuffer& buffer) {
         Logger::writeToLog("Reading " + filePath + " to a buffer");
         std::ifstream file(filePath.c_str(), std::ios::binary);

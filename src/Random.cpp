@@ -1,7 +1,7 @@
 #include <ctime>
 #include <cstdlib>
 
-#include "Random.h"
+#include "nta/Random.h"
 
 namespace nta {
     std::default_random_engine  Random::generator;

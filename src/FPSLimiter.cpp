@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <cmath>
 
-#include "FPSLimiter.h"
+#include "nta/FPSLimiter.h"
 
 namespace nta {
     FPSLimiter::FPSLimiter() {

@@ -1,5 +1,5 @@
-#include "SystemManager.h"
-#include "Logger.h"
+#include "nta/SystemManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::map<std::string, GLSLProgram*> SystemManager::m_glslMap;

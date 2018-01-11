@@ -1,7 +1,7 @@
 #include <algorithm>
 
-#include "SpriteFont.h"
-#include "Random.h"
+#include "nta/SpriteFont.h"
+#include "nta/Random.h"
 
 namespace nta {
     FontMap::FontMap() {

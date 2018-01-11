@@ -1,9 +1,9 @@
 #include <GL/glew.h>
 
-#include "Screen.h"
-#include "InputManager.h"
-#include "SystemManager.h"
-#include "Logger.h"
+#include "nta/Screen.h"
+#include "nta/InputManager.h"
+#include "nta/SystemManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     Screen::Screen() {

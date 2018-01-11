@@ -1,8 +1,8 @@
 #include <GL/glew.h>
 #include <fstream>
 
-#include "GLSLProgram.h"
-#include "Logger.h"
+#include "nta/GLSLProgram.h"
+#include "nta/Logger.h"
 
 namespace nta {
     GLSLProgram::GLSLProgram() {

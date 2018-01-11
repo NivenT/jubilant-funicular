@@ -1,4 +1,4 @@
-#include "Compressor.h"
+#include "nta/Compressor.h"
 
 namespace nta {
     HuffmanNode::HuffmanNode() : m_lChild(nullptr), m_rChild(nullptr), m_freq(0) {

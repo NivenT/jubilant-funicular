@@ -1,7 +1,6 @@
 #include <SDL2/SDL.h>
 
-#include "Logger.h"
-#include "InputManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::ofstream   Logger::m_logFile;

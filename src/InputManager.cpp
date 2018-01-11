@@ -1,4 +1,4 @@
-#include "InputManager.h"
+#include "nta/InputManager.h"
 
 namespace nta {
     std::unordered_map<unsigned int, bool> InputManager::m_keyMap;

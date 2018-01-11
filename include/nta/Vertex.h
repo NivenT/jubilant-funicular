@@ -1,12 +1,21 @@
 #ifndef VERTEX_H_INCLUDED
 #define VERTEX_H_INCLUDED
 
+#include <GL/glew.h>
+
 #include "MyEngine.h"
 
-// TODO: Make VertexAttrib struct?
 #define NUM_VERTEX_ATTRIBS 4
 
 namespace nta {
+    /// represents an attribute of a vertex (e.g. a call to glVertexAttribPointer)
+    struct VertexAttrib {
+        GLint size;
+        GLenum type;
+        GLboolean normalized;
+        //GLsizei stride; // always sizeof(Vertex2D)
+        GLvoid* pointer;
+    };
     /// represents a vertex in 2 dimensions
     struct Vertex2D {
         /// Initializes an "empty" vertex
@@ -49,6 +58,8 @@ namespace nta {
         glm::vec4 color;
         glm::vec2 uv;
         float hasTexture;
+
+        static const VertexAttrib attribs[NUM_VERTEX_ATTRIBS];
     };
 }
 

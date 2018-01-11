@@ -1,4 +1,4 @@
-#include "ParticleEngine2D.h"
+#include "nta/ParticleEngine2D.h"
 
 namespace nta {
     ParticleEngine2D::ParticleEngine2D() {

@@ -1,5 +1,5 @@
-#include "ResourceManager.h"
-#include "Logger.h"
+#include "nta/ResourceManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::map<std::string,GLTexture>                     ResourceManager::m_textureMap;

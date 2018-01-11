@@ -1,10 +1,10 @@
-# At some point I should remove that second directory and just prepend all includes with "nta/"
-include_directories(${NTA_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../include/nta)
+include_directories(${NTA_INCLUDE_DIR})
 
 add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/DebugBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FontMap.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FPSLimiter.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLMConsoleOutput.cpp
@@ -23,10 +23,11 @@ add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/ResourceManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Screen.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ScreenManager.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/SpriteBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Sprite.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/SpriteBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteFont.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SystemManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Timer.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Vertex.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Window.cpp
 )

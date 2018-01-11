@@ -1,4 +1,4 @@
-#include "Camera2D.h"
+#include "nta/Camera2D.h"
 
 namespace nta {
     Camera2D::Camera2D() {

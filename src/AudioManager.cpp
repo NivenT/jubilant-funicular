@@ -1,5 +1,5 @@
-#include "AudioManager.h"
-#include "Logger.h"
+#include "nta/AudioManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::map<std::string, SoundEffect*>     AudioManager::m_effectMap;

@@ -1,6 +1,6 @@
-#include "Sprite.h"
-#include "Vertex.h"
-#include "ResourceManager.h"
+#include "nta/Sprite.h"
+#include "nta/Vertex.h"
+#include "nta/ResourceManager.h"
 
 namespace nta {
     Sprite::Sprite() : m_vboID(0) {

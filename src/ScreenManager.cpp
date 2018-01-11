@@ -1,8 +1,6 @@
-#include "ScreenManager.h"
-#include "SystemManager.h"
-#include "Logger.h"
-
-#include <iostream>
+#include "nta/ScreenManager.h"
+#include "nta/SystemManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     ScreenManager::ScreenManager(crstring title, float maxFPS) {

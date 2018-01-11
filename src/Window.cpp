@@ -1,9 +1,9 @@
 #include <GL/glew.h>
 #include <fstream>
 
-#include "Window.h"
-#include "Logger.h"
-#include "IOManager.h"
+#include "nta/Window.h"
+#include "nta/Logger.h"
+#include "nta/IOManager.h"
 
 namespace nta {
     Window::Window() {

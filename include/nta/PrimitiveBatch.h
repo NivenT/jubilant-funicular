@@ -1,7 +1,7 @@
 #ifndef PRIMITIVEBATCH_H_INCLUDED
 #define PRIMITIVEBATCH_H_INCLUDED
 
-#include "SpriteBatch.h"
+#include "nta/SpriteBatch.h"
 
 namespace nta {
     /// represents a primitive (point, line, triangle, etc.)

@@ -1,6 +1,6 @@
 #include <algorithm>
 
-#include "ParticleBatch2D.h"
+#include "nta/ParticleBatch2D.h"
 
 namespace nta {
     ParticleBatch2D::ParticleBatch2D() {

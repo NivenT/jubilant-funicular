@@ -2,8 +2,8 @@
 #include <IL/ilu.h>
 #include <GL/glew.h>
 
-#include "GLTexture.h"
-#include "Logger.h"
+#include "nta/GLTexture.h"
+#include "nta/Logger.h"
 
 namespace nta {
     GLTexture ImageLoader::readImage(crstring filePath, GLint minFilt,

@@ -1,10 +1,9 @@
-#ifndef SPRITEBATCH_H
-#define SPRITEBATCH_H
+#ifndef SPRITEBATCH_H_INCLUDED
+#define SPRITEBATCH_H_INCLUDED
 
-#include <GL/glew.h>
 #include <vector>
 
-#include "Vertex.h"
+#include "nta/Vertex.h"
 
 #define NTA_DEFAULT_DEPTH 0.5
 
@@ -101,4 +100,4 @@ namespace nta {
     };
 }
 
-#endif // SPRITEBATCH_H
+#endif // SPRITEBATCH_H_INCLUDED

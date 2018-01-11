@@ -1,7 +1,7 @@
 #include <algorithm>
 
-#include "Compressor.h"
-#include "Logger.h"
+#include "nta/Compressor.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::map<GLubyte,std::string>    Compressor::m_encodings;

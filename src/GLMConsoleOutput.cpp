@@ -1,4 +1,4 @@
-#include "GLMConsoleOutput.h"
+#include "nta/GLMConsoleOutput.h"
 
 std::ostream& operator<<(std::ostream& lhs, crvec2 rhs) {
     lhs<<"<"<<rhs.x<<", "<<rhs.y<<">";
