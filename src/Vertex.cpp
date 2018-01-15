@@ -1,6 +1,6 @@
 #include "nta/Vertex.h"
 
-// TODO: Figure out how to get rid of this file
+/// \todo Figure out how to get rid of this file
 namespace nta {
     const VertexAttrib Vertex2D::attribs[NUM_VERTEX_ATTRIBS] = {
         {2, GL_FLOAT, GL_FALSE, (void*)offsetof(Vertex2D, pos)},

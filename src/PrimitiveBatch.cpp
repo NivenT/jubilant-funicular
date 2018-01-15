@@ -100,7 +100,7 @@ namespace nta {
         }
         int offset = m_primitives[0]->vertices.size();
 
-        // TODO: Render all Primitives using trianges since
+        /// \todo Render all Primitives using trianges since
         //  some computers don't use GL_QUADS or GL_POLYGON
         for (int cp = 1; cp < m_primitives.size(); cp++) { // current primitive
             // Each primitive using GL_POLYGON needs to be its own

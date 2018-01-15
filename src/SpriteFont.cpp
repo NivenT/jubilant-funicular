@@ -23,7 +23,7 @@ namespace nta {
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Loaded font");
         Logger::writeToLog("Creating sprite font (" + to_string(size) + ")...");
-        FontMap* seed = new FontMap; // TODO: Rename now that we're no longer using simulated annealing
+        FontMap* seed = new FontMap; /// \todo Rename now that we're no longer using simulated annealing
         SDL_Surface* glyphSurface = nullptr;
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
             glyphSurface = TTF_RenderGlyph_Blended(font, c, {255, 255, 255, 255});
@@ -33,14 +33,14 @@ namespace nta {
         seed->position();
         glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x),
                                            toPower2(seed->getBoundingDimensions().y));
-        //create initial gray texture
+        // create initial gray texture
         glGenTextures(1, &m_texId);
         glBindTexture(GL_TEXTURE_2D, m_texId);
         GLubyte* graySquare = new GLubyte[dimensions.x*dimensions.y*4];
         memset(graySquare, 0x50, dimensions.x*dimensions.y*4);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dimensions.x, dimensions.y, 0, GL_RGBA,
                      GL_UNSIGNED_BYTE, graySquare);
-        //add glyphs to texture
+        // add glyphs to texture
         m_charGlyphs = new CharGlyph[NUM_PRINTABLE_CHARS];
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
             CharGlyph& cg = m_charGlyphs[c - FIRST_PRINTABLE_CHAR];

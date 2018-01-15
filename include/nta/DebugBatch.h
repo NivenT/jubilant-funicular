@@ -6,7 +6,7 @@
 
 #include "nta/Vertex.h"
 
-// TODO: Make abstract RenderBatch class for this, SpriteBatch, and PrimitiveBatch
+// \todo Make abstract RenderBatch class for this, SpriteBatch, and PrimitiveBatch
 namespace nta {
     /// A collection of debug primitives (outlines of shapes) to be drawn
     class DebugBatch {
@@ -26,7 +26,7 @@ namespace nta {
         void begin();
         /// ends collecting shapes
         void end();
-        // TODO: Learn how to have doxygen use one comment for multiple functions
+        // \todo Learn how to have doxygen use one comment for multiple functions
         /// Adds a shape to the batch
         void addLine(crvec2 start, crvec2 end, crvec4 color = glm::vec4(1), int num_pieces = 2);
         void addLine(crvec2 start, crvec2 end, int num_pieces, crvec4 color = glm::vec4(1));

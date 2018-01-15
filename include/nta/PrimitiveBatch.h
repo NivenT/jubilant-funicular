@@ -58,7 +58,7 @@ namespace nta {
         /// return primitive to be drawn
         GLenum toPrimitiveType(unsigned int numVertices) const;
         /// the primitives to be drawn
-        // TODO: store primitives on the stack
+        /// \todo store primitives on the stack
         std::vector<Primitive*> m_primitives;
         /// the render batches used to draw the primitives
         std::vector<RenderBatch> m_renderBatches;
