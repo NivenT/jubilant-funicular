@@ -13,6 +13,7 @@ namespace nta {
         static std::map<std::string, Window*> m_windowMap;
     public:
         static GLSLProgram* getGLSLProgram(crstring progPath);
+        static GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
         static Window* getWindow(crstring windowTitle, int flags = 0);
         static void destroy();
     };

@@ -63,6 +63,12 @@ namespace nta {
         m_fragShaderID = compileShader(shaderProgName + ".frag", GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
     }
+    void GLSLProgram::compileShaders(crstring vert, crstring frag) {
+        Logger::writeToLog("Compiling shaders: " + vert + "|" + frag + "...");
+        m_vertShaderID = compileShader(vert + ".vert", GL_VERTEX_SHADER);
+        m_fragShaderID = compileShader(frag + ".frag", GL_FRAGMENT_SHADER);
+        Logger::writeToLog("Compiled shaders");
+    }
     void GLSLProgram::addAttribute(crstring attributeName) {
         Logger::writeToLog("Adding attribute \"" + attributeName + "\" to program...");
         glBindAttribLocation(m_programID, m_numAttributes++, attributeName.c_str());
