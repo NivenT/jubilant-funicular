@@ -48,7 +48,6 @@ void \hyperlink{classnta_1_1PrimitiveBatch_a899411db2d7abc313d8bef4a19fd097e}{re
 \mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a1968cc783eb6ce57dec923a7d3ab3a7d}\label{classnta_1_1PrimitiveBatch_a1968cc783eb6ce57dec923a7d3ab3a7d}} 
 void \hyperlink{classnta_1_1PrimitiveBatch_a1968cc783eb6ce57dec923a7d3ab3a7d}{create\+Vertex\+Array\+Object} ()
 \begin{DoxyCompactList}\small\item\em creates vertex array object \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}\label{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}} 
 void \hyperlink{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}{create\+Render\+Batches} ()
 \begin{DoxyCompactList}\small\item\em creates render batches \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1PrimitiveBatch_ab3bcbcbff64333a994938d6b6862db10}\label{classnta_1_1PrimitiveBatch_ab3bcbcbff64333a994938d6b6862db10}} 
@@ -72,9 +71,8 @@ static bool {\bfseries compare\+Depth} (\hyperlink{structnta_1_1Primitive}{Primi
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}\label{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}} 
 std\+::vector$<$ \hyperlink{structnta_1_1Primitive}{Primitive} $\ast$ $>$ \hyperlink{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}{m\+\_\+primitives}
-\begin{DoxyCompactList}\small\item\em the primitives to be drawn \end{DoxyCompactList}\item 
+\item 
 \mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a3abb09d0693913206ed7e580827d6fd7}\label{classnta_1_1PrimitiveBatch_a3abb09d0693913206ed7e580827d6fd7}} 
 std\+::vector$<$ \hyperlink{structnta_1_1RenderBatch}{Render\+Batch} $>$ \hyperlink{classnta_1_1PrimitiveBatch_a3abb09d0693913206ed7e580827d6fd7}{m\+\_\+render\+Batches}
 \begin{DoxyCompactList}\small\item\em the render batches used to draw the primitives \end{DoxyCompactList}\item 
@@ -100,6 +98,64 @@ Collaboration diagram for nta\+:\+:Primitive\+Batch\+:\nopagebreak
 \includegraphics[width=350pt]{de/d68/classnta_1_1PrimitiveBatch__coll__graph}
 \end{center}
 \end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}\label{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}} 
+\index{nta\+::\+Primitive\+Batch@{nta\+::\+Primitive\+Batch}!create\+Render\+Batches@{create\+Render\+Batches}}
+\index{create\+Render\+Batches@{create\+Render\+Batches}!nta\+::\+Primitive\+Batch@{nta\+::\+Primitive\+Batch}}
+\subsubsection{\texorpdfstring{create\+Render\+Batches()}{createRenderBatches()}}
+{\footnotesize\ttfamily void nta\+::\+Primitive\+Batch\+::create\+Render\+Batches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+creates render batches 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Render all Primitives using trianges since \end{DoxyRefDesc}
+
+
+Definition at line 86 of file Primitive\+Batch.\+cpp.
+
+
+
+Referenced by end().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{d4/df3/classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/df3/classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}\label{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}} 
+\index{nta\+::\+Primitive\+Batch@{nta\+::\+Primitive\+Batch}!m\+\_\+primitives@{m\+\_\+primitives}}
+\index{m\+\_\+primitives@{m\+\_\+primitives}!nta\+::\+Primitive\+Batch@{nta\+::\+Primitive\+Batch}}
+\subsubsection{\texorpdfstring{m\+\_\+primitives}{m\_primitives}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structnta_1_1Primitive}{Primitive}$\ast$$>$ nta\+::\+Primitive\+Batch\+::m\+\_\+primitives\hspace{0.3cm}{\ttfamily [private]}}
+
+the primitives to be drawn \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]store primitives on the stack \end{DoxyRefDesc}
+
+
+Definition at line 62 of file Primitive\+Batch.\+h.
+
+
+
+Referenced by add\+Primitive(), begin(), create\+Render\+Batches(), num\+Primitives(), Primitive\+Batch(), and sort\+Primitives().
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

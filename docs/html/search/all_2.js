@@ -1,7 +1,7 @@
 var searchData=
 [
   ['camera2d',['Camera2D',['../d3/d28/classnta_1_1Camera2D.html',1,'nta::Camera2D'],['../d3/d28/classnta_1_1Camera2D.html#a11aada3f997c594ade11dd3c46d826f4',1,'nta::Camera2D::Camera2D()']]],
-  ['charglyph',['CharGlyph',['../d4/d26/structnta_1_1CharGlyph.html',1,'nta']]],
+  ['charglyph',['CharGlyph',['../d4/d51/namespacenta.html#d4/d26/structnta_1_1CharGlyph',1,'nta']]],
   ['charrect',['CharRect',['../da/d7e/structnta_1_1FontMap_1_1CharRect.html',1,'nta::FontMap']]],
   ['clear',['clear',['../df/d9f/classnta_1_1ParticleBatch2D.html#a1046b22d239222435e74011b3683a5c6',1,'nta::ParticleBatch2D']]],
   ['comparetexture',['compareTexture',['../d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b',1,'nta::PrimitiveBatch::compareTexture()'],['../d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9',1,'nta::SpriteBatch::compareTexture()']]],

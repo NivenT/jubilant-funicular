@@ -15,7 +15,7 @@ var searchData=
   ['setposition',['setPosition',['../d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592',1,'nta::Vertex2D']]],
   ['setuv',['setUV',['../d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97',1,'nta::Vertex2D']]],
   ['setwindow',['setWindow',['../d6/d23/classnta_1_1Screen.html#a3c74cd84437e8897850ce4bae98bc8b2',1,'nta::Screen']]],
-  ['size',['size',['../d4/d26/structnta_1_1CharGlyph.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph']]],
+  ['size',['size',['../d4/d51/namespacenta.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph']]],
   ['sortglyphs',['sortGlyphs',['../d7/d3b/classnta_1_1SpriteBatch.html#ae8cf94595c26211521df9e1580776289',1,'nta::SpriteBatch']]],
   ['sortprimitives',['sortPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10',1,'nta::PrimitiveBatch']]],
   ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html',1,'nta::SoundEffect'],['../dc/d23/classnta_1_1SoundEffect.html#a90adfaad718cb8d4fcec601bb87c0227',1,'nta::SoundEffect::SoundEffect()']]],

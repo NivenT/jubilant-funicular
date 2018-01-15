@@ -1,9 +1,10 @@
 <map id="nta::Sprite::init" name="nta::Sprite::init">
-<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#a9058dbd86949123968e61de1fb6234f2" title="returns the resource with the given path, loading it if need be " alt="" coords="171,5,325,47"/>
-<area shape="rect" id="node6" href="$d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592" title="sets the position of the vertex " alt="" coords="160,71,336,98"/>
-<area shape="rect" id="node7" href="$d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97" title="sets the uv coordinates of the vertex " alt="" coords="174,122,322,149"/>
-<area shape="rect" id="node8" href="$d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c" title="sets the color of the vertex " alt="" coords="168,173,328,199"/>
-<area shape="rect" id="node3" href="$d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10" title="loads in any image file " alt="" coords="384,13,576,39"/>
-<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="859,13,1017,39"/>
-<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="624,38,811,65"/>
+<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#a9058dbd86949123968e61de1fb6234f2" title="returns the resource with the given path, loading it if need be " alt="" coords="171,23,325,65"/>
+<area shape="rect" id="node7" href="$d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592" title="sets the position of the vertex " alt="" coords="160,89,336,116"/>
+<area shape="rect" id="node8" href="$d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97" title="sets the uv coordinates of the vertex " alt="" coords="174,140,322,167"/>
+<area shape="rect" id="node9" href="$d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c" title="sets the color of the vertex " alt="" coords="168,191,328,217"/>
+<area shape="rect" id="node3" href="$d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10" title="loads in any image file " alt="" coords="384,31,576,57"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="859,5,1017,32"/>
+<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="624,31,811,57"/>
+<area shape="rect" id="node6" href="$d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to an std::string " alt="" coords="668,81,767,108"/>
 </map>

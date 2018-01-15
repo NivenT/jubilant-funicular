@@ -12,7 +12,6 @@ var searchData=
   ['getfps',['getFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#a682d191b70ddecf8f7ed776dc586fe27',1,'nta::FPSLimiter::getFPS()'],['../d0/dc4/classnta_1_1ScreenManager.html#a24e61f523b383277b7284cab76ad9e5a',1,'nta::ScreenManager::getFPS()']]],
   ['getfreeparticle',['getFreeParticle',['../df/d9f/classnta_1_1ParticleBatch2D.html#a123aac9af29133bfe358b9895de2b2ce',1,'nta::ParticleBatch2D']]],
   ['getfrequency',['getFrequency',['../da/dbb/classnta_1_1HuffmanNode.html#aaae7f78797726f30ce584e6fd0a282c1',1,'nta::HuffmanNode']]],
-  ['getglslprogram',['getGLSLProgram',['../db/d25/classnta_1_1SystemManager.html#af37be3ff4538da0a95b5ca257187077c',1,'nta::SystemManager']]],
   ['getheight',['getHeight',['../d4/dfb/classnta_1_1Window.html#a0daae9b6ad0a0ea834f90e86a9416f88',1,'nta::Window']]],
   ['getleft',['getLeft',['../da/dbb/classnta_1_1HuffmanNode.html#a2f67fd062ac5079cd40a0a82352d5a45',1,'nta::HuffmanNode']]],
   ['getmousecoords',['getMouseCoords',['../d6/de2/classnta_1_1InputManager.html#abaa04adc67f8025133fd1360b171b95f',1,'nta::InputManager']]],

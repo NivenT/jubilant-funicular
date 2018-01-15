@@ -1,0 +1,9 @@
+<map id="nta::SpriteFont::SpriteFont" name="nta::SpriteFont::SpriteFont">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="478,13,637,39"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="229,38,416,65"/>
+<area shape="rect" id="node4" href="$d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to an std::string " alt="" coords="273,89,372,115"/>
+<area shape="rect" id="node5" href="$d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9" title="adds a rectangle and associates it with c (replacing any preexisting rectangle) " alt="" coords="245,139,401,166"/>
+<area shape="rect" id="node7" href="$d9/d4d/classnta_1_1FontMap.html#ada51488d206b4a609cc4a5401d90f43d" title="positions map so that the topleft is at (0,0) " alt="" coords="247,190,399,217"/>
+<area shape="rect" id="node8" href="$d9/d4d/classnta_1_1FontMap.html#a3e51706b5955f482f776b0d6980750b3" title="returns the dimensions of the rectangle that contains the FontMap " alt="" coords="233,241,412,283"/>
+<area shape="rect" id="node6" href="$d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e" title="returns whether or not rect is overlapping with any existing CharRect " alt="" coords="464,139,651,166"/>
+</map>
