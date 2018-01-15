@@ -1,5 +1,5 @@
 <map id="nta::ScreenManager" name="nta::ScreenManager">
-<area shape="rect" id="node2" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="5,81,100,108"/>
-<area shape="rect" id="node3" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="124,81,237,108"/>
-<area shape="rect" id="node4" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="140,5,221,32"/>
+<area shape="rect" id="node3" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="113,228,208,255"/>
+<area shape="rect" id="node7" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="415,228,528,255"/>
+<area shape="rect" id="node8" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="348,124,429,151"/>
 </map>
