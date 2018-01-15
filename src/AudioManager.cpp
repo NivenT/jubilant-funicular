@@ -34,37 +34,29 @@ namespace nta {
         Logger::writeToLog("Destroyed AudioManager");
     }
     SoundEffect* AudioManager::getSoundEffect(crstring effectPath) {
-        std::string folder = "";
-        if (effectPath.find("resources/sound effects/") != 0) {
-            folder = "resources/sound effects/";
-        }
-        if (m_effectMap.find(folder+effectPath) == m_effectMap.end()) {
-            nta::Logger::writeToLog("Loading sound effect: " + folder + effectPath + "...");
-            Mix_Chunk* newChunk = Mix_LoadWAV((folder+effectPath).c_str());
+        if (m_effectMap.find(effectPath) == m_effectMap.end()) {
+            nta::Logger::writeToLog("Loading sound effect: " + effectPath + "...");
+            Mix_Chunk* newChunk = Mix_LoadWAV((effectPath).c_str());
             if (!newChunk) {
                 nta::Logger::writeErrorToLog("Unable to load sound effect: "
                                              + to_string(Mix_GetError()));
             }
-            m_effectMap[folder+effectPath] = new SoundEffect(newChunk);
+            m_effectMap[effectPath] = new SoundEffect(newChunk);
             nta::Logger::writeToLog("Loaded sound effect");
         }
-        return m_effectMap[folder+effectPath];
+        return m_effectMap[effectPath];
     }
     Music* AudioManager::getMusic(crstring musicPath) {
-        std::string folder = "";
-        if (musicPath.find("resources/music/") != 0) {
-            folder = "resources/music/";
-        }
-        if (m_musicMap.find(folder+musicPath) == m_musicMap.end()) {
-            nta::Logger::writeToLog("Loading music file: " + folder + musicPath + "...");
-            Mix_Music* newMusic = Mix_LoadMUS((folder+musicPath).c_str());
+        if (m_musicMap.find(musicPath) == m_musicMap.end()) {
+            nta::Logger::writeToLog("Loading music file: " + musicPath + "...");
+            Mix_Music* newMusic = Mix_LoadMUS((musicPath).c_str());
             if (!newMusic) {
                 nta::Logger::writeErrorToLog("Unable to load music file: "
                                              + to_string(Mix_GetError()));
             }
-            m_musicMap[folder+musicPath] = new Music(newMusic);
+            m_musicMap[musicPath] = new Music(newMusic);
             nta::Logger::writeToLog("Loaded music file");
         }
-        return m_musicMap[folder+musicPath];
+        return m_musicMap[musicPath];
     }
 };

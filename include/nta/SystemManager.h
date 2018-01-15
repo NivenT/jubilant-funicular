@@ -3,8 +3,8 @@
 
 #include <map>
 
-#include "GLSLProgram.h"
-#include "Window.h"
+#include "nta/GLSLProgram.h"
+#include "nta/Window.h"
 
 namespace nta {
     class SystemManager {
