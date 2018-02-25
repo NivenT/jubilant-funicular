@@ -2,6 +2,7 @@ include_directories(${NTA_INCLUDE_DIR})
 
 add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/CallbackManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/DebugBatch.cpp
