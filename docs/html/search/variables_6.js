@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['size',['size',['../d4/d51/namespacenta.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph']]]
+  ['pos',['pos',['../d5/d07/structnta_1_1Vertex2D.html#a27a44e1ca52b5a5a13d37495e9376636',1,'nta::Vertex2D']]]
 ];

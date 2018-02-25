@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pos',['pos',['../d5/d07/structnta_1_1Vertex2D.html#a27a44e1ca52b5a5a13d37495e9376636',1,'nta::Vertex2D']]]
+  ['offset',['offset',['../dd/d38/structnta_1_1RenderBatch.html#ab73ef79a5cbf8b60ad9991eb0a1ea9e6',1,'nta::RenderBatch']]]
 ];

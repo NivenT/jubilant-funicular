@@ -1,0 +1,4 @@
+<map id="nta::ThreadPool::dispatcher" name="nta::ThreadPool::dispatcher">
+<area shape="rect" id="node2" href="$df/d3a/classnta_1_1Semaphore.html#a725ef6b8274925ee6074dd4e90bfb4d5" title="Halts until value of Semaphore is &gt; 0. " alt="" coords="477,5,624,32"/>
+<area shape="rect" id="node3" href="$d3/d68/classnta_1_1ThreadPool.html#a20591ee4c43620103d30ab786336c55f" title="Returns id of an available worker. " alt="" coords="236,27,429,69"/>
+</map>

@@ -1,9 +1,11 @@
 var searchData=
 [
   ['scaledimensions',['scaleDimensions',['../d3/d28/classnta_1_1Camera2D.html#aa89b58a2a5ca0c3df56d07e2722afcd6',1,'nta::Camera2D']]],
+  ['schedule',['schedule',['../d3/d68/classnta_1_1ThreadPool.html#a81b54fdbf4be4be004f23c9583067c76',1,'nta::ThreadPool']]],
   ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html',1,'nta::Screen'],['../d6/d23/classnta_1_1Screen.html#a86944d19cec1189fee2945a4f8dae477',1,'nta::Screen::Screen()']]],
   ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html',1,'nta::ScreenManager'],['../d0/dc4/classnta_1_1ScreenManager.html#a46a7adb4a69fea8e074fa2251c815bad',1,'nta::ScreenManager::ScreenManager()']]],
   ['screenshot',['screenshot',['../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c',1,'nta::Window']]],
+  ['semaphore',['Semaphore',['../df/d3a/classnta_1_1Semaphore.html',1,'nta::Semaphore'],['../df/d3a/classnta_1_1Semaphore.html#a848064c02cd79a9ef556c62bec24f62c',1,'nta::Semaphore::Semaphore()']]],
   ['setcenter',['setCenter',['../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895',1,'nta::Camera2D']]],
   ['setcolor',['setColor',['../d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c',1,'nta::Vertex2D']]],
   ['setdimensions',['setDimensions',['../d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597',1,'nta::Window']]],
@@ -15,6 +17,7 @@ var searchData=
   ['setposition',['setPosition',['../d5/d07/structnta_1_1Vertex2D.html#a7079a91fd386eb3e4425c965f2ce2592',1,'nta::Vertex2D']]],
   ['setuv',['setUV',['../d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97',1,'nta::Vertex2D']]],
   ['setwindow',['setWindow',['../d6/d23/classnta_1_1Screen.html#a3c74cd84437e8897850ce4bae98bc8b2',1,'nta::Screen']]],
+  ['signal',['signal',['../df/d3a/classnta_1_1Semaphore.html#a2715d1fc51becdfe7d3edd4e256589c4',1,'nta::Semaphore']]],
   ['size',['size',['../d4/d51/namespacenta.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph']]],
   ['sortglyphs',['sortGlyphs',['../d7/d3b/classnta_1_1SpriteBatch.html#ae8cf94595c26211521df9e1580776289',1,'nta::SpriteBatch']]],
   ['sortprimitives',['sortPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10',1,'nta::PrimitiveBatch']]],

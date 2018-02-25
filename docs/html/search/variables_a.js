@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../d4/d51/namespacenta.html#a8f4d13ab2b19b700f76334c46458ac48',1,'nta::GLTexture']]]
+  ['vertices',['vertices',['../d6/d4f/structnta_1_1Primitive.html#a4fbc49e3dcd593551b6e65e59d842687',1,'nta::Primitive']]]
 ];
