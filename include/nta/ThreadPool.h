@@ -42,17 +42,19 @@ namespace nta {
             Thunk thunk;
             /// Whether or not the worker is free to take on a new function
             std::atomic<bool> free;
+            // Notifies worker when it has a new task
             Semaphore task;
 
             worker() : free(true) {}
         };
-
         /// Used to keep track of when the pool is empty
         struct {
             std::condition_variable_any cv;
             std::mutex m;
         } m_empty;
 
+        /// The workers
+        std::vector<worker> m_workers;
         /// Sign to kill the pool
         std::atomic<bool> m_kill;
         /// Record of scheduled workers
@@ -64,9 +66,13 @@ namespace nta {
         /// The thread for managing the pool
         std::thread m_dispatch_thread;
 
+        /// Function run by dispatch thread
         void dispatcher();
+        /// Function run by worker threads
         void worker(size_t wid);
+        /// Returns id of an available worker
         size_t getAvailableWorker();
+        /// Returns whether or not all work is finished
         bool allWorkFinished();
     public:
         /// Constructs a ThreadPool with specified number of threads
