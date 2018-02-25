@@ -2,6 +2,7 @@ include_directories(${NTA_INCLUDE_DIR})
 
 add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/CallbackManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/DebugBatch.cpp
@@ -23,10 +24,12 @@ add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/ResourceManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Screen.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ScreenManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Semaphore.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Sprite.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteFont.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SystemManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/ThreadPool.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Timer.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Vertex.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Window.cpp
