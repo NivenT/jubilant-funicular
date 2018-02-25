@@ -1,7 +1,7 @@
 #ifndef SCREEN_H_INCLUDED
 #define SCREEN_H_INCLUDED
 
-#include "Window.h"
+#include "nta/Window.h"
 
 namespace nta {
     class ScreenManager;

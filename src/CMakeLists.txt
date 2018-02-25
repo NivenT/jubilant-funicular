@@ -27,6 +27,7 @@ add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteFont.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SystemManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/ThreadPool.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Timer.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Vertex.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Window.cpp
