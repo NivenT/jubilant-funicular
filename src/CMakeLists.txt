@@ -23,6 +23,7 @@ add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/ResourceManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Screen.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ScreenManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Semaphore.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Sprite.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/SpriteFont.cpp

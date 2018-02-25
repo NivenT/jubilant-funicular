@@ -16,10 +16,10 @@ namespace nta {
     class Semaphore {
     private:
         /// Thread safety stuff
-        std::mutex m;
-        std::condition_variable_any cv;
+        std::mutex m_mutex;
+        std::condition_variable_any m_cv;
         /// The number of resources available
-        int value;
+        int m_value;
     public:
         /// Constructs Semaphore with given value
         Semaphore(int value = 0);
