@@ -84,44 +84,55 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1fd6132e79e49dbcb787bc8a8507a931"><td class="memItemLeft" align="right" valign="top"><a id="a1fd6132e79e49dbcb787bc8a8507a931"></a>
-static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>setInterval</b> (const Thunk &amp;thunk, uint64_t when, uint64_t period)</td></tr>
+<tr class="memitem:a1fd6132e79e49dbcb787bc8a8507a931"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a1fd6132e79e49dbcb787bc8a8507a931">setInterval</a> (const Thunk &amp;thunk, uint64_t when, uint64_t period)</td></tr>
 <tr class="separator:a1fd6132e79e49dbcb787bc8a8507a931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0625f0fcec26386e617936b8c8d1e42d"><td class="memItemLeft" align="right" valign="top"><a id="a0625f0fcec26386e617936b8c8d1e42d"></a>
-static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>setTimeout</b> (const Thunk &amp;thunk, uint64_t when)</td></tr>
-<tr class="separator:a0625f0fcec26386e617936b8c8d1e42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51c18a014641ffe9dbfe8ead0f6bae0"><td class="memItemLeft" align="right" valign="top"><a id="ac51c18a014641ffe9dbfe8ead0f6bae0"></a>
+static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#ac51c18a014641ffe9dbfe8ead0f6bae0">setTimeout</a> (const Thunk &amp;thunk, uint64_t when)</td></tr>
+<tr class="memdesc:ac51c18a014641ffe9dbfe8ead0f6bae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules a function to be called once after when frames and then repeatedly after. <br /></td></tr>
+<tr class="separator:ac51c18a014641ffe9dbfe8ead0f6bae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8114a6c1e8de9c59b6484f47dde1a3"><td class="memItemLeft" align="right" valign="top"><a id="a2c8114a6c1e8de9c59b6484f47dde1a3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a2c8114a6c1e8de9c59b6484f47dde1a3">init</a> ()</td></tr>
+<tr class="memdesc:a2c8114a6c1e8de9c59b6484f47dde1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html">CallbackManager</a>. <br /></td></tr>
+<tr class="separator:a2c8114a6c1e8de9c59b6484f47dde1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af0feb66d42bd32d5bde2e4a52519a9"><td class="memItemLeft" align="right" valign="top"><a id="a4af0feb66d42bd32d5bde2e4a52519a9"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> (uint64_t id)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9">clear</a> (uint64_t id)</td></tr>
+<tr class="memdesc:a4af0feb66d42bd32d5bde2e4a52519a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the event with the given id. <br /></td></tr>
 <tr class="separator:a4af0feb66d42bd32d5bde2e4a52519a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae055387e26996a024065a5b59c833e78"><td class="memItemLeft" align="right" valign="top"><a id="ae055387e26996a024065a5b59c833e78"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>increment_frame</b> ()</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#ae055387e26996a024065a5b59c833e78">increment_frame</a> ()</td></tr>
+<tr class="memdesc:ae055387e26996a024065a5b59c833e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html">CallbackManager</a> that a frame has passed. <br /></td></tr>
 <tr class="separator:ae055387e26996a024065a5b59c833e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a46948656c82b9c708bb80262d957b5"><td class="memItemLeft" align="right" valign="top"><a id="a0a46948656c82b9c708bb80262d957b5"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
-<tr class="separator:a0a46948656c82b9c708bb80262d957b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70be77ca2505257376250c660a3082d6"><td class="memItemLeft" align="right" valign="top"><a id="a70be77ca2505257376250c660a3082d6"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6">destroy</a> ()</td></tr>
+<tr class="memdesc:a70be77ca2505257376250c660a3082d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html">CallbackManager</a>. <br /></td></tr>
+<tr class="separator:a70be77ca2505257376250c660a3082d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a9e75b163bcac8f0ee508935393bf1a3a"><td class="memItemLeft" align="right" valign="top"><a id="a9e75b163bcac8f0ee508935393bf1a3a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>dispatch</b> ()</td></tr>
-<tr class="separator:a9e75b163bcac8f0ee508935393bf1a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7912dc908d7a7a44267ddd8fa6fb8686"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a7912dc908d7a7a44267ddd8fa6fb8686">dispatch</a> ()</td></tr>
+<tr class="separator:a7912dc908d7a7a44267ddd8fa6fb8686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a03df001cff1afcc19ed4bb35cd51b5d0"><td class="memItemLeft" align="right" valign="top"><a id="a03df001cff1afcc19ed4bb35cd51b5d0"></a>
-static std::map&lt; uint64_t, <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#d3/dc5/structnta_1_1CallbackManager_1_1event">event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_active</b></td></tr>
+static std::map&lt; uint64_t, <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#d3/dc5/structnta_1_1CallbackManager_1_1event">event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a03df001cff1afcc19ed4bb35cd51b5d0">m_active</a></td></tr>
+<tr class="memdesc:a03df001cff1afcc19ed4bb35cd51b5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The events waiting to happen (key is <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5" title="id of event ">event.id</a>) <br /></td></tr>
 <tr class="separator:a03df001cff1afcc19ed4bb35cd51b5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af348c39ad7b27a0f8c92e4b90bf944a7"><td class="memItemLeft" align="right" valign="top"><a id="af348c39ad7b27a0f8c92e4b90bf944a7"></a>
-static std::map&lt; uint64_t, std::vector&lt; <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#d3/dc5/structnta_1_1CallbackManager_1_1event">event</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_queue</b></td></tr>
+static std::map&lt; uint64_t, std::vector&lt; <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#d3/dc5/structnta_1_1CallbackManager_1_1event">event</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#af348c39ad7b27a0f8c92e4b90bf944a7">m_queue</a></td></tr>
+<tr class="memdesc:af348c39ad7b27a0f8c92e4b90bf944a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Priority queue" of events ordered by when they should occur <br /></td></tr>
 <tr class="separator:af348c39ad7b27a0f8c92e4b90bf944a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bdfb67cfd791112b1e83159862eefa0"><td class="memItemLeft" align="right" valign="top"><a id="a4bdfb67cfd791112b1e83159862eefa0"></a>
-static <a class="el" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html">utils::ThreadPool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_pool</b></td></tr>
+static <a class="el" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html">utils::ThreadPool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a4bdfb67cfd791112b1e83159862eefa0">m_pool</a></td></tr>
+<tr class="memdesc:a4bdfb67cfd791112b1e83159862eefa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ThreadPool used for scheduling events to happen. <br /></td></tr>
 <tr class="separator:a4bdfb67cfd791112b1e83159862eefa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc47b7e18fc1576edb799be131baf116"><td class="memItemLeft" align="right" valign="top"><a id="abc47b7e18fc1576edb799be131baf116"></a>
-static std::thread&#160;</td><td class="memItemRight" valign="bottom"><b>m_dispatcher</b></td></tr>
+static std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#abc47b7e18fc1576edb799be131baf116">m_dispatcher</a></td></tr>
+<tr class="memdesc:abc47b7e18fc1576edb799be131baf116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread used to dispatch events. <br /></td></tr>
 <tr class="separator:abc47b7e18fc1576edb799be131baf116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a714aa329a54538ec5bda528fa3a3ab7f"><td class="memItemLeft" align="right" valign="top"><a id="a714aa329a54538ec5bda528fa3a3ab7f"></a>
-static std::atomic&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_next</b></td></tr>
+static std::atomic&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a714aa329a54538ec5bda528fa3a3ab7f">m_next</a></td></tr>
+<tr class="memdesc:a714aa329a54538ec5bda528fa3a3ab7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">id given to the next created event <br /></td></tr>
 <tr class="separator:a714aa329a54538ec5bda528fa3a3ab7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56903bee3075ab191f598e36438d6b50"><td class="memItemLeft" align="right" valign="top"><a id="a56903bee3075ab191f598e36438d6b50"></a>
 static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
@@ -130,16 +141,20 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex<
 static std::condition_variable_any&#160;</td><td class="memItemRight" valign="bottom"><b>m_cv</b></td></tr>
 <tr class="separator:afa5d7642112c791dcfef35d78aff4d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20cd08f864fd62edbd68f5f309be5c30"><td class="memItemLeft" align="right" valign="top"><a id="a20cd08f864fd62edbd68f5f309be5c30"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_working</b></td></tr>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a20cd08f864fd62edbd68f5f309be5c30">m_working</a></td></tr>
+<tr class="memdesc:a20cd08f864fd62edbd68f5f309be5c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global flag saying whether or not the <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html">CallbackManager</a> has been destroyed. <br /></td></tr>
 <tr class="separator:a20cd08f864fd62edbd68f5f309be5c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69bbc2e4ac29aca06d09b2466b6769c2"><td class="memItemLeft" align="right" valign="top"><a id="a69bbc2e4ac29aca06d09b2466b6769c2"></a>
-static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_curr_frame</b></td></tr>
+static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html#a69bbc2e4ac29aca06d09b2466b6769c2">m_curr_frame</a></td></tr>
+<tr class="memdesc:a69bbc2e4ac29aca06d09b2466b6769c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current frame. <br /></td></tr>
 <tr class="separator:a69bbc2e4ac29aca06d09b2466b6769c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allows scheduling of functions to be called at a later point in time </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>Add ability to base timing off of actual time instead of frames </dd></dl>
+<div class="textblock"><p>Allows scheduling of functions to be called at a later point in time </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">Add ability to base timing off of actual time instead of frames </p>
+<p class="enddd">Debug all this code. I was not at my best when I originally wrote it </p>
+</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html#l00011">11</a> of file <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html">CallbackManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html#l00012">12</a> of file <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html">CallbackManager.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::CallbackManager:</div>
 <div class="dyncontent">
@@ -163,13 +178,11 @@ Collaboration diagram for nta::CallbackManager:</div>
 </div><div class="memdoc">
 <div class="textblock"><p>A function to run at a certain time with some regularity. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html#l00014">14</a> of file <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html">CallbackManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html#l00015">15</a> of file <a class="el" href="../../d5/d0c/CallbackManager_8h_source.html">CallbackManager.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::CallbackManager::event:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d01/structnta_1_1CallbackManager_1_1event__coll__graph.png" border="0" usemap="#nta_1_1CallbackManager_1_1event_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1CallbackManager_1_1event_coll__map" id="nta_1_1CallbackManager_1_1event_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
@@ -198,6 +211,110 @@ when</td>
 <td class="fielddoc">
 How many frames to run it in. </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7912dc908d7a7a44267ddd8fa6fb8686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7912dc908d7a7a44267ddd8fa6fb8686">&#9670;&nbsp;</a></span>dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nta::CallbackManager::dispatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function run by m_dispatcher Handles calling of the various events at the right times </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html">CallbackManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html#l00036">init()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_cgraph.png" border="0" usemap="#d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_cgraph" alt=""/></div>
+<map name="d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_cgraph" id="d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_cgraph">
+<area shape="rect" id="node2" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html#aa10c18b44db7449d04bb6577c70dc17b" title="Schedules a function to be executed. " alt="" coords="204,5,351,47"/>
+<area shape="rect" id="node4" href="../../d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9" title="Removes the event with the given id. " alt="" coords="203,71,352,112"/>
+<area shape="rect" id="node3" href="../../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="400,5,547,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_icgraph.png" border="0" usemap="#d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_icgraph" alt=""/></div>
+<map name="d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_icgraph" id="d1/de6/classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686_icgraph">
+<area shape="rect" id="node2" href="../../d1/de6/classnta_1_1CallbackManager.html#a2c8114a6c1e8de9c59b6484f47dde1a3" title="Initializes the CallbackManager. " alt="" coords="203,5,352,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1fd6132e79e49dbcb787bc8a8507a931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd6132e79e49dbcb787bc8a8507a931">&#9670;&nbsp;</a></span>setInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t nta::CallbackManager::setInterval </td>
+          <td>(</td>
+          <td class="paramtype">const Thunk &amp;&#160;</td>
+          <td class="paramname"><em>thunk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>when</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>period</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schedules a function to be called after when frames and then repeatedly after each subsequent period frames </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html">CallbackManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dbd/CallbackManager_8cpp_source.html#l00033">setTimeout()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/de6/classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931_icgraph.png" border="0" usemap="#d1/de6/classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931_icgraph" alt=""/></div>
+<map name="d1/de6/classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931_icgraph" id="d1/de6/classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931_icgraph">
+<area shape="rect" id="node2" href="../../d1/de6/classnta_1_1CallbackManager.html#ac51c18a014641ffe9dbfe8ead0f6bae0" title="Schedules a function to be called once after when frames and then repeatedly after. " alt="" coords="203,5,352,47"/>
+</map>
+</div>
 
 </div>
 </div>

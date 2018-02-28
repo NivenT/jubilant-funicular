@@ -1,0 +1,5 @@
+<map id="nta::CallbackManager::dispatch" name="nta::CallbackManager::dispatch">
+<area shape="rect" id="node2" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#aa10c18b44db7449d04bb6577c70dc17b" title="Schedules a function to be executed. " alt="" coords="204,5,351,47"/>
+<area shape="rect" id="node4" href="$d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9" title="Removes the event with the given id. " alt="" coords="203,71,352,112"/>
+<area shape="rect" id="node3" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="400,5,547,47"/>
+</map>
