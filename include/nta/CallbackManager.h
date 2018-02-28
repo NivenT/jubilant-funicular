@@ -8,6 +8,7 @@
 namespace nta {
     /// Allows scheduling of functions to be called at a later point in time
     /// \todo Add ability to base timing off of actual time instead of frames
+    /// \todo Debug all this code. I was not at my best when I originally wrote it
     class CallbackManager {
     private:
         /// A function to run at a certain time with some regularity
@@ -37,6 +38,7 @@ namespace nta {
     public:
         static uint64_t setInterval(const Thunk& thunk, uint64_t when, uint64_t period);
         static uint64_t setTimeout(const Thunk& thunk, uint64_t when);
+        static void init();
         static void clear(uint64_t id);
         static void increment_frame();
         static void destroy();

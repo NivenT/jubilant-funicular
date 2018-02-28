@@ -6,7 +6,7 @@ namespace nta {
             m_available(num_threads) {
             m_dispatch_thread = std::thread([this]{ dispatcher(); });
             for (size_t id = 0; id < num_threads; id++) {
-                m_workers[id].t = std::thread([this, id]{ worker(id); });
+                m_workers[id].t = std::thread([this, id]{ worker_func(id); });
             }
         }
         bool ThreadPool::allWorkFinished() {

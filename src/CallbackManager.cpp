@@ -27,6 +27,46 @@ namespace nta {
         }
         return e.id;
     }
+    uint64_t CallbackManager::setTimeout(const Thunk& thunk, uint64_t when) {
+        setInterval(thunk, when, 0);
+    }
+    void CallbackManager::init() {
+        m_dispatcher = std::thread([&]{dispatch();});
+    }
+    void CallbackManager::dispatch() {
+        while (true) {
+            m_mutex.lock();
+            m_cv.wait(m_mutex, [&](){return !m_working || !m_queue.empty();});
+            if (!m_working) break;
+            m_cv.wait(m_mutex, [&](){return m_curr_frame >= m_queue.begin()->first;});
+            m_mutex.unlock();
+
+            while (true) {
+                m_mutex.lock();
+                if (m_curr_frame < m_queue.begin()->first) {
+                    m_mutex.unlock();
+                    break;
+                }
+
+                auto& es = m_queue.begin()->second;
+                while (!es.empty()) {
+                    event* e = es[0];
+
+                    m_pool.schedule(e->thunk);
+                    if (e->period == 0) {
+                        m_mutex.unlock();
+                        clear(e->id);
+                        m_mutex.lock();
+                    } else {
+                        es.erase(es.begin());
+                        e->when += e->period;
+                        m_queue[e->when].push_back(e);
+                    }
+                }
+                m_mutex.unlock();
+            }
+        }
+    }
     void CallbackManager::clear(uint64_t id) {
         std::lock_guard<std::mutex> lg(m_mutex);
         if (m_active.find(id) == m_active.end()) return;
@@ -41,7 +81,17 @@ namespace nta {
         }
         m_active.erase(id);
     }
+    void CallbackManager::destroy() {
+        m_mutex.lock();
+        m_working = false;
+        m_cv.notify_one();
+        m_mutex.unlock();
+
+        m_dispatcher.join();
+        m_pool.wait();
+    }
     void CallbackManager::increment_frame() {
+        std::lock_guard<std::mutex> lg(m_mutex);
         m_curr_frame++;
     }
 }
