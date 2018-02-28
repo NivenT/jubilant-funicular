@@ -6,12 +6,26 @@
 namespace nta {
     class ScreenManager;
     enum class ScreenState{NONE, RUNNING, SWITCH, SWITCH_ESC, SWITCH_X};
-    /// Key unlocking the setManager() private function of class Screen
+    /// Key unlocking the setManager() "private" function of class Screen
     class SetManagerKey {
         friend class ScreenManager;
         SetManagerKey() {}
         SetManagerKey(const SetManagerKey&);
         SetManagerKey& operator=(const SetManagerKey&);
+    };
+    /// Key unlocking the setIndices() "private" function of class Screen
+    class SetIndicesKey {
+        friend class ScreenManager;
+        SetIndicesKey() {}
+        SetIndicesKey(const SetIndicesKey&);
+        SetIndicesKey& operator=(const SetIndicesKey&);
+    };
+    /// Key unlocking the setWindow() "private" function of class Screen
+    class SetWindowKey {
+        friend class ScreenManager;
+        SetWindowKey() {}
+        SetWindowKey(const SetWindowKey&);
+        SetWindowKey& operator=(const SetWindowKey&);
     };
     /// Represents a game screen
     class Screen {
@@ -37,16 +51,17 @@ namespace nta {
         virtual ~Screen();
         /// returns state of screen
         ScreenState getState() const;
-        /// sets/gets various screen indices
+        /// gets various screen indices
         int getEscIndex() const;
         int getXIndex() const;
         int getNextIndex() const;
         int getIndex() const;
         /// Sets the manager of this screen
         void setManager(ScreenManager* manager, SetManagerKey key);
-        void setIndices(int index, int escIndex, int xIndex);
+        /// sets various screen indices
+        void setIndices(int index, int escIndex, int xIndex, SetIndicesKey key);
         /// sets the window to associate with this screen
-        void setWindow(crstring title);
+        void setWindow(crstring title, SetWindowKey key);
         /// renders screen
         virtual void render() = 0;
         /// updates screen

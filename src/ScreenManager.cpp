@@ -20,8 +20,8 @@ namespace nta {
         Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to screen manger...");
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setManager(this, SetManagerKey());
-        newScreen->setIndices(m_screens.size(), escIndex, xIndex);
-        newScreen->setWindow(((title == "") ? m_window->getTitle() : title));
+        newScreen->setIndices(m_screens.size(), escIndex, xIndex, SetIndicesKey());
+        newScreen->setWindow((title == "") ? m_window->getTitle() : title, SetWindowKey());
         newScreen->init();
         m_screens.push_back(newScreen);
         Logger::writeToLog("Added screen");

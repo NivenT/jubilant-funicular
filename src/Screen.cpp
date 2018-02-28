@@ -28,12 +28,12 @@ namespace nta {
     void Screen::setManager(ScreenManager* manager, SetManagerKey key) {
         m_manager = manager;
     }
-    void Screen::setIndices(int index, int escIndex, int xIndex) {
+    void Screen::setIndices(int index, int escIndex, int xIndex, SetIndicesKey key) {
         m_index = index;
         m_escIndex = escIndex;
         m_xIndex = xIndex;
     }
-    void Screen::setWindow(crstring title) {
+    void Screen::setWindow(crstring title, SetWindowKey key) {
         m_window = SystemManager::getWindow(title);
     }
     void Screen::handleInput() {
