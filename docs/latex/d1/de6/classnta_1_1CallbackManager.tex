@@ -1,0 +1,136 @@
+\hypertarget{classnta_1_1CallbackManager}{}\section{nta\+:\+:Callback\+Manager Class Reference}
+\label{classnta_1_1CallbackManager}\index{nta\+::\+Callback\+Manager@{nta\+::\+Callback\+Manager}}
+
+
+{\ttfamily \#include $<$Callback\+Manager.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{classnta_1_1CallbackManager_d3/dc5/structnta_1_1CallbackManager_1_1event}{event}
+\begin{DoxyCompactList}\small\item\em A function to run at a certain time with some regularity.  \hyperlink{classnta_1_1CallbackManager_d3/dc5/structnta_1_1CallbackManager_1_1event}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931}\label{classnta_1_1CallbackManager_a1fd6132e79e49dbcb787bc8a8507a931}} 
+static uint64\+\_\+t {\bfseries set\+Interval} (const Thunk \&thunk, uint64\+\_\+t when, uint64\+\_\+t period)
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a0625f0fcec26386e617936b8c8d1e42d}\label{classnta_1_1CallbackManager_a0625f0fcec26386e617936b8c8d1e42d}} 
+static uint64\+\_\+t {\bfseries set\+Timeout} (const Thunk \&thunk, uint64\+\_\+t when)
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a4af0feb66d42bd32d5bde2e4a52519a9}\label{classnta_1_1CallbackManager_a4af0feb66d42bd32d5bde2e4a52519a9}} 
+static void {\bfseries clear} (uint64\+\_\+t id)
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_ae055387e26996a024065a5b59c833e78}\label{classnta_1_1CallbackManager_ae055387e26996a024065a5b59c833e78}} 
+static void {\bfseries increment\+\_\+frame} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a0a46948656c82b9c708bb80262d957b5}\label{classnta_1_1CallbackManager_a0a46948656c82b9c708bb80262d957b5}} 
+static void {\bfseries destroy} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a9e75b163bcac8f0ee508935393bf1a3a}\label{classnta_1_1CallbackManager_a9e75b163bcac8f0ee508935393bf1a3a}} 
+static void {\bfseries dispatch} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a03df001cff1afcc19ed4bb35cd51b5d0}\label{classnta_1_1CallbackManager_a03df001cff1afcc19ed4bb35cd51b5d0}} 
+static std\+::map$<$ uint64\+\_\+t, \hyperlink{classnta_1_1CallbackManager_d3/dc5/structnta_1_1CallbackManager_1_1event}{event} $>$ {\bfseries m\+\_\+active}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_af348c39ad7b27a0f8c92e4b90bf944a7}\label{classnta_1_1CallbackManager_af348c39ad7b27a0f8c92e4b90bf944a7}} 
+static std\+::map$<$ uint64\+\_\+t, std\+::vector$<$ \hyperlink{classnta_1_1CallbackManager_d3/dc5/structnta_1_1CallbackManager_1_1event}{event} $\ast$ $>$ $>$ {\bfseries m\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a4bdfb67cfd791112b1e83159862eefa0}\label{classnta_1_1CallbackManager_a4bdfb67cfd791112b1e83159862eefa0}} 
+static \hyperlink{classnta_1_1utils_1_1ThreadPool}{utils\+::\+Thread\+Pool} {\bfseries m\+\_\+pool}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_abc47b7e18fc1576edb799be131baf116}\label{classnta_1_1CallbackManager_abc47b7e18fc1576edb799be131baf116}} 
+static std\+::thread {\bfseries m\+\_\+dispatcher}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a714aa329a54538ec5bda528fa3a3ab7f}\label{classnta_1_1CallbackManager_a714aa329a54538ec5bda528fa3a3ab7f}} 
+static std\+::atomic$<$ uint64\+\_\+t $>$ {\bfseries m\+\_\+next}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a56903bee3075ab191f598e36438d6b50}\label{classnta_1_1CallbackManager_a56903bee3075ab191f598e36438d6b50}} 
+static std\+::mutex {\bfseries m\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_afa5d7642112c791dcfef35d78aff4d09}\label{classnta_1_1CallbackManager_afa5d7642112c791dcfef35d78aff4d09}} 
+static std\+::condition\+\_\+variable\+\_\+any {\bfseries m\+\_\+cv}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a20cd08f864fd62edbd68f5f309be5c30}\label{classnta_1_1CallbackManager_a20cd08f864fd62edbd68f5f309be5c30}} 
+static bool {\bfseries m\+\_\+working}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a69bbc2e4ac29aca06d09b2466b6769c2}\label{classnta_1_1CallbackManager_a69bbc2e4ac29aca06d09b2466b6769c2}} 
+static uint64\+\_\+t {\bfseries m\+\_\+curr\+\_\+frame}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allows scheduling of functions to be called at a later point in time \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Add ability to base timing off of actual time instead of frames \end{DoxyRefDesc}
+
+
+Definition at line 11 of file Callback\+Manager.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Callback\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/df2/classnta_1_1CallbackManager__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Class Documentation}
+\index{nta\+::\+Callback\+Manager\+::event@{nta\+::\+Callback\+Manager\+::event}}\label{structnta_1_1CallbackManager_1_1event}
+\Hypertarget{classnta_1_1CallbackManager_structnta_1_1CallbackManager_1_1event}
+\subsubsection{struct nta\+:\+:Callback\+Manager\+:\+:event}
+A function to run at a certain time with some regularity. 
+
+Definition at line 14 of file Callback\+Manager.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Callback\+Manager\+:\+:event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{da/d01/structnta_1_1CallbackManager_1_1event__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Class Members}
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a743978e02001b9ceff1145c41214d2e5}\label{classnta_1_1CallbackManager_a743978e02001b9ceff1145c41214d2e5}} 
+uint64\_t&
+id&
+id of event \\
+\hline
+
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a15dd99ac7d4588c5ac5518c063431ef5}\label{classnta_1_1CallbackManager_a15dd99ac7d4588c5ac5518c063431ef5}} 
+uint64\_t&
+period&
+How many frames between consecutive runs. \\
+\hline
+
+\mbox{\Hypertarget{classnta_1_1CallbackManager_ad92bce3b5cee6411a2b2c08b4c13b767}\label{classnta_1_1CallbackManager_ad92bce3b5cee6411a2b2c08b4c13b767}} 
+Thunk&
+thunk&
+Function to execute. \\
+\hline
+
+\mbox{\Hypertarget{classnta_1_1CallbackManager_ab20a0382304629ebdc2643a834c9dcff}\label{classnta_1_1CallbackManager_ab20a0382304629ebdc2643a834c9dcff}} 
+uint64\_t&
+when&
+How many frames to run it in. \\
+\hline
+
+\end{DoxyFields}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Callback\+Manager.\+h\item 
+src/Callback\+Manager.\+cpp\end{DoxyCompactItemize}

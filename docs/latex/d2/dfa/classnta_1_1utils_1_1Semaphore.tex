@@ -1,0 +1,55 @@
+\hypertarget{classnta_1_1utils_1_1Semaphore}{}\section{nta\+:\+:utils\+:\+:Semaphore Class Reference}
+\label{classnta_1_1utils_1_1Semaphore}\index{nta\+::utils\+::\+Semaphore@{nta\+::utils\+::\+Semaphore}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_ae01dc768910e74be62cbc81765693f44}\label{classnta_1_1utils_1_1Semaphore_ae01dc768910e74be62cbc81765693f44}} 
+\hyperlink{classnta_1_1utils_1_1Semaphore_ae01dc768910e74be62cbc81765693f44}{Semaphore} (int value=0)
+\begin{DoxyCompactList}\small\item\em Constructs \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore} with given value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_a252683ad84d75e12d30f29441f7178bc}\label{classnta_1_1utils_1_1Semaphore_a252683ad84d75e12d30f29441f7178bc}} 
+void \hyperlink{classnta_1_1utils_1_1Semaphore_a252683ad84d75e12d30f29441f7178bc}{wait} ()
+\begin{DoxyCompactList}\small\item\em Halts until value of \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore} is $>$ 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_ac80b0637a59c63cf9c553954c6cd0be9}\label{classnta_1_1utils_1_1Semaphore_ac80b0637a59c63cf9c553954c6cd0be9}} 
+void \hyperlink{classnta_1_1utils_1_1Semaphore_ac80b0637a59c63cf9c553954c6cd0be9}{signal} ()
+\begin{DoxyCompactList}\small\item\em Increments value of \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_ad21972675a3dcc4c1876384ddd225fde}\label{classnta_1_1utils_1_1Semaphore_ad21972675a3dcc4c1876384ddd225fde}} 
+{\bfseries Semaphore} (const \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore} \&)=delete
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_afa2313271f3a4572f5dc8e79dff7a41f}\label{classnta_1_1utils_1_1Semaphore_afa2313271f3a4572f5dc8e79dff7a41f}} 
+const \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore} \& {\bfseries operator=} (const \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_a5d349e7ced70eb07eea6b9cfa50a6637}\label{classnta_1_1utils_1_1Semaphore_a5d349e7ced70eb07eea6b9cfa50a6637}} 
+std\+::mutex \hyperlink{classnta_1_1utils_1_1Semaphore_a5d349e7ced70eb07eea6b9cfa50a6637}{m\+\_\+mutex}
+\begin{DoxyCompactList}\small\item\em Thread safety stuff. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_a30bfcf40c58c71847933806aeab36b30}\label{classnta_1_1utils_1_1Semaphore_a30bfcf40c58c71847933806aeab36b30}} 
+std\+::condition\+\_\+variable\+\_\+any {\bfseries m\+\_\+cv}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Semaphore_a7b21b47d4cfecfeeb97758916e23c9bc}\label{classnta_1_1utils_1_1Semaphore_a7b21b47d4cfecfeeb97758916e23c9bc}} 
+int \hyperlink{classnta_1_1utils_1_1Semaphore_a7b21b47d4cfecfeeb97758916e23c9bc}{m\+\_\+value}
+\begin{DoxyCompactList}\small\item\em The number of resources available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file Thread\+Pool.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Semaphore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{da/d79/classnta_1_1utils_1_1Semaphore__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Thread\+Pool.\+h\item 
+src/Semaphore.\+cpp\end{DoxyCompactItemize}
