@@ -80,6 +80,8 @@ namespace nta {
             for (auto& w : m_workers) {
                 w.t.join();
             }
+
+            m_workers.clear();
         }
     }
 }

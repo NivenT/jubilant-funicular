@@ -1,4 +1,5 @@
 #include "nta/CallbackManager.h"
+#include "nta/Logger.h"
 
 namespace nta {
     std::map<uint64_t, CallbackManager::event>                  CallbackManager::m_active;
@@ -22,16 +23,22 @@ namespace nta {
     
         bool empty = m_queue.empty();
         m_queue[e.when].push_back(&e);
+        // Second half of || is impossible, but the analagous check
+        //   won't be impossible if we basing time on an actual clock
         if (empty || e.when < m_curr_frame) {
             m_cv.notify_one();
         }
         return e.id;
     }
     uint64_t CallbackManager::setTimeout(const Thunk& thunk, uint64_t when) {
-        setInterval(thunk, when, 0);
+        return setInterval(thunk, when, 0);
     }
     void CallbackManager::init() {
+        Logger::writeToLog("Initializing CallbackManager...");
         m_dispatcher = std::thread([&]{dispatch();});
+        m_next = m_curr_frame = 0;
+        m_working = true;
+        Logger::writeToLog("Initialized CallbackManager");
     }
     void CallbackManager::dispatch() {
         while (true) {
@@ -43,7 +50,7 @@ namespace nta {
 
             while (true) {
                 m_mutex.lock();
-                if (m_curr_frame < m_queue.begin()->first) {
+                if (m_queue.empty() || m_curr_frame < m_queue.begin()->first) {
                     m_mutex.unlock();
                     break;
                 }
@@ -51,16 +58,16 @@ namespace nta {
                 auto& es = m_queue.begin()->second;
                 while (!es.empty()) {
                     event* e = es[0];
-
                     m_pool.schedule(e->thunk);
-                    if (e->period == 0) {
-                        m_mutex.unlock();
-                        clear(e->id);
-                        m_mutex.lock();
-                    } else {
-                        es.erase(es.begin());
+
+                    m_mutex.unlock();
+                    clear(e->id);
+                    m_mutex.lock();
+
+                    if (e->period > 0) {
                         e->when += e->period;
                         m_queue[e->when].push_back(e);
+                        m_active[e->id] = *e;
                     }
                 }
                 m_mutex.unlock();
@@ -79,9 +86,11 @@ namespace nta {
                 break;
             }
         }
+        if (es.empty()) m_queue.erase(e.when);
         m_active.erase(id);
     }
     void CallbackManager::destroy() {
+        Logger::writeToLog("Destroying CallbackManager...");
         m_mutex.lock();
         m_working = false;
         m_cv.notify_one();
@@ -89,9 +98,15 @@ namespace nta {
 
         m_dispatcher.join();
         m_pool.wait();
+
+        m_curr_frame = 0;
+        m_queue.clear();
+        m_active.clear();
+        Logger::writeToLog("Destroyed CallbackManager");
     }
     void CallbackManager::increment_frame() {
         std::lock_guard<std::mutex> lg(m_mutex);
         m_curr_frame++;
+        if (!m_queue.empty() && m_queue.begin()->first < m_curr_frame) m_cv.notify_one();
     }
 }

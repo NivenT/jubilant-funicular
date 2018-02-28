@@ -1,5 +1,6 @@
 #include "nta/ScreenManager.h"
 #include "nta/SystemManager.h"
+#include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 
 namespace nta {
@@ -46,6 +47,7 @@ namespace nta {
             currScreen = getCurrScreen();
             while (currScreen->getState() == ScreenState::RUNNING) {
                 m_limiter.begin();
+                CallbackManager::increment_frame();
                 currScreen->handleInput();
                 currScreen->update();
                 currScreen->render();
