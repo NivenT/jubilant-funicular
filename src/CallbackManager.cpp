@@ -33,6 +33,18 @@ namespace nta {
     uint64_t CallbackManager::setTimeout(const Thunk& thunk, uint64_t when) {
         return setInterval(thunk, when, 0);
     }
+    bool CallbackManager::delay(uint64_t id, uint64_t when, bool absolute) {
+        std::lock_guard<std::mutex> lg(m_mutex);
+        if (m_active.find(id) == m_active.end()) return false;
+
+        m_mutex.unlock();
+        dequeue(id);
+        m_mutex.lock();
+
+        auto& e = m_active[id];
+        e.when = absolute ? when + m_curr_frame : when + e.when;
+        m_queue[e.when].push_back(&e);
+    }
     void CallbackManager::init() {
         Logger::writeToLog("Initializing CallbackManager...");
         m_dispatcher = std::thread([&]{dispatch();});
@@ -61,22 +73,15 @@ namespace nta {
                     m_pool.schedule(e->thunk);
 
                     m_mutex.unlock();
-                    clear(e->id);
+                    e->period > 0 ? (void)delay(e->id, e->period, false) : clear(e->id);
                     m_mutex.lock();
-
-                    if (e->period > 0) {
-                        e->when += e->period;
-                        m_queue[e->when].push_back(e);
-                        m_active[e->id] = *e;
-                    }
                 }
                 m_mutex.unlock();
             }
         }
     }
-    void CallbackManager::clear(uint64_t id) {
+    void CallbackManager::dequeue(uint64_t id) {
         std::lock_guard<std::mutex> lg(m_mutex);
-        if (m_active.find(id) == m_active.end()) return;
 
         event& e = m_active[id];
         auto& es = m_queue[e.when];
@@ -87,6 +92,15 @@ namespace nta {
             }
         }
         if (es.empty()) m_queue.erase(e.when);
+    }
+    void CallbackManager::clear(uint64_t id) {
+        std::lock_guard<std::mutex> lg(m_mutex);
+        if (m_active.find(id) == m_active.end()) return;
+
+        m_mutex.unlock();
+        dequeue(id);
+        m_mutex.lock();
+
         m_active.erase(id);
     }
     void CallbackManager::destroy() {
