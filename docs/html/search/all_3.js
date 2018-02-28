@@ -2,8 +2,10 @@ var searchData=
 [
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
+  ['delay',['delay',['../d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448',1,'nta::CallbackManager']]],
   ['deletetexture',['deleteTexture',['../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489',1,'nta::ResourceManager']]],
   ['depth',['depth',['../d6/d4f/structnta_1_1Primitive.html#a4443e427fb512898693bba61a8ac4654',1,'nta::Primitive::depth()'],['../d6/db3/structnta_1_1Glyph.html#a259a2061c71dfd9fa0857f52d4daff8a',1,'nta::Glyph::depth()']]],
+  ['dequeue',['dequeue',['../d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14',1,'nta::CallbackManager']]],
   ['destroy',['destroy',['../da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce',1,'nta::AudioManager::destroy()'],['../d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6',1,'nta::CallbackManager::destroy()'],['../d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219',1,'nta::ScreenManager::destroy()']]],
   ['dispatch',['dispatch',['../d1/de6/classnta_1_1CallbackManager.html#a7912dc908d7a7a44267ddd8fa6fb8686',1,'nta::CallbackManager']]],
   ['dispatcher',['dispatcher',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a2ca98ba5ed4510e5aac90c0507859b8d',1,'nta::utils::ThreadPool']]],

@@ -17,6 +17,9 @@ static uint64\+\_\+t \hyperlink{classnta_1_1CallbackManager_a1fd6132e79e49dbcb78
 \mbox{\Hypertarget{classnta_1_1CallbackManager_ac51c18a014641ffe9dbfe8ead0f6bae0}\label{classnta_1_1CallbackManager_ac51c18a014641ffe9dbfe8ead0f6bae0}} 
 static uint64\+\_\+t \hyperlink{classnta_1_1CallbackManager_ac51c18a014641ffe9dbfe8ead0f6bae0}{set\+Timeout} (const Thunk \&thunk, uint64\+\_\+t when)
 \begin{DoxyCompactList}\small\item\em Schedules a function to be called once after when frames and then repeatedly after. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_af184e9fbc5353c8e019cf61c51c03448}\label{classnta_1_1CallbackManager_af184e9fbc5353c8e019cf61c51c03448}} 
+static bool \hyperlink{classnta_1_1CallbackManager_af184e9fbc5353c8e019cf61c51c03448}{delay} (uint64\+\_\+t id, uint64\+\_\+t when, bool absolute=true)
+\begin{DoxyCompactList}\small\item\em Changes when an event is next scheduled to run. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1CallbackManager_a2c8114a6c1e8de9c59b6484f47dde1a3}\label{classnta_1_1CallbackManager_a2c8114a6c1e8de9c59b6484f47dde1a3}} 
 static void \hyperlink{classnta_1_1CallbackManager_a2c8114a6c1e8de9c59b6484f47dde1a3}{init} ()
 \begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{classnta_1_1CallbackManager}{Callback\+Manager}. \end{DoxyCompactList}\item 
@@ -33,7 +36,10 @@ static void \hyperlink{classnta_1_1CallbackManager_a70be77ca2505257376250c660a30
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{classnta_1_1CallbackManager_a7912dc908d7a7a44267ddd8fa6fb8686}{dispatch} ()
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1CallbackManager_a897df241a317572ff96bb89e28aadc14}\label{classnta_1_1CallbackManager_a897df241a317572ff96bb89e28aadc14}} 
+static void \hyperlink{classnta_1_1CallbackManager_a897df241a317572ff96bb89e28aadc14}{dequeue} (uint64\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Removes event from m\+\_\+queue but not m\+\_\+active (assumes id is valid) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -140,7 +146,7 @@ How many frames to run it in. \\
 
 Function run by m\+\_\+dispatcher Handles calling of the various events at the right times 
 
-Definition at line 43 of file Callback\+Manager.\+cpp.
+Definition at line 55 of file Callback\+Manager.\+cpp.
 
 
 
