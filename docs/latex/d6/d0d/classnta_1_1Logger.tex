@@ -20,13 +20,25 @@ static void \hyperlink{classnta_1_1Logger_a71196417598ddd975959924c2ce53c13}{wri
 \begin{DoxyCompactList}\small\item\em writes an entry in the log \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}\label{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}} 
 static void \hyperlink{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}{write\+Error\+To\+Log} (crstring error)
-\begin{DoxyCompactList}\small\item\em writes entry in log and then exits program \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em writes entry in log and then exits program \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}\label{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}} 
+static void \hyperlink{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}{indent} (size\+\_\+t tab\+\_\+size=T\+A\+B\+\_\+\+S\+I\+ZE)
+\begin{DoxyCompactList}\small\item\em indents entries \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Logger_a34abdfe89740b8e37461a610f441c8fa}\label{classnta_1_1Logger_a34abdfe89740b8e37461a610f441c8fa}} 
+static void \hyperlink{classnta_1_1Logger_a34abdfe89740b8e37461a610f441c8fa}{unindent} (size\+\_\+t tab\+\_\+size=T\+A\+B\+\_\+\+S\+I\+ZE)
+\begin{DoxyCompactList}\small\item\em unindents entries \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classnta_1_1Logger_aba94cb82e0a5f5dd72719c80de5c3571}\label{classnta_1_1Logger_aba94cb82e0a5f5dd72719c80de5c3571}} 
 static std\+::ofstream \hyperlink{classnta_1_1Logger_aba94cb82e0a5f5dd72719c80de5c3571}{m\+\_\+log\+File}
-\begin{DoxyCompactList}\small\item\em the file that keeps the external log \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the file that keeps the external log \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Logger_a853462b3f8725ff55d36a14220335d72}\label{classnta_1_1Logger_a853462b3f8725ff55d36a14220335d72}} 
+static size\+\_\+t {\bfseries m\+\_\+tabs} = 0
+\item 
+\mbox{\Hypertarget{classnta_1_1Logger_a15106f36caca5fb9554163f3ae47663f}\label{classnta_1_1Logger_a15106f36caca5fb9554163f3ae47663f}} 
+static const size\+\_\+t {\bfseries T\+A\+B\+\_\+\+S\+I\+ZE} = 4
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -36,11 +48,12 @@ Definition at line 10 of file Logger.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Logger\+:\nopagebreak
+Collaboration diagram for nta\+:\+:Logger\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=159pt]{d4/d22/classnta_1_1Logger__coll__graph}
+\includegraphics[width=339pt]{d4/d22/classnta_1_1Logger__coll__graph}
 \end{center}
 \end{figure}
 

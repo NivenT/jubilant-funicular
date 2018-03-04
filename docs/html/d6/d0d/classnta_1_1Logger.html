@@ -91,6 +91,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e">writeErrorToLog</a> (crstring error)</td></tr>
 <tr class="memdesc:a08299f1414203eba74b306ce6712192e"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes entry in log and then exits program <br /></td></tr>
 <tr class="separator:a08299f1414203eba74b306ce6712192e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8be3709ec3023f987f9b70304cd641"><td class="memItemLeft" align="right" valign="top"><a id="aae8be3709ec3023f987f9b70304cd641"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641">indent</a> (size_t tab_size=TAB_SIZE)</td></tr>
+<tr class="memdesc:aae8be3709ec3023f987f9b70304cd641"><td class="mdescLeft">&#160;</td><td class="mdescRight">indents entries <br /></td></tr>
+<tr class="separator:aae8be3709ec3023f987f9b70304cd641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34abdfe89740b8e37461a610f441c8fa"><td class="memItemLeft" align="right" valign="top"><a id="a34abdfe89740b8e37461a610f441c8fa"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa">unindent</a> (size_t tab_size=TAB_SIZE)</td></tr>
+<tr class="memdesc:a34abdfe89740b8e37461a610f441c8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">unindents entries <br /></td></tr>
+<tr class="separator:a34abdfe89740b8e37461a610f441c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -98,6 +106,12 @@ Static Private Attributes</h2></td></tr>
 static std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#aba94cb82e0a5f5dd72719c80de5c3571">m_logFile</a></td></tr>
 <tr class="memdesc:aba94cb82e0a5f5dd72719c80de5c3571"><td class="mdescLeft">&#160;</td><td class="mdescRight">the file that keeps the external log <br /></td></tr>
 <tr class="separator:aba94cb82e0a5f5dd72719c80de5c3571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853462b3f8725ff55d36a14220335d72"><td class="memItemLeft" align="right" valign="top"><a id="a853462b3f8725ff55d36a14220335d72"></a>
+static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_tabs</b> = 0</td></tr>
+<tr class="separator:a853462b3f8725ff55d36a14220335d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15106f36caca5fb9554163f3ae47663f"><td class="memItemLeft" align="right" valign="top"><a id="a15106f36caca5fb9554163f3ae47663f"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>TAB_SIZE</b> = 4</td></tr>
+<tr class="separator:a15106f36caca5fb9554163f3ae47663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>stores program information in internal and external logs </p>
@@ -107,6 +121,8 @@ static std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class
 Collaboration diagram for nta::Logger:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d22/classnta_1_1Logger__coll__graph.png" border="0" usemap="#nta_1_1Logger_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1Logger_coll__map" id="nta_1_1Logger_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a></li>
