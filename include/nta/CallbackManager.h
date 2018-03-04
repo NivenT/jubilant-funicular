@@ -9,6 +9,7 @@ namespace nta {
     /// Allows scheduling of functions to be called at a later point in time
     /// \todo Add ability to base timing off of actual time instead of frames
     /// \todo Debug all this code. I was not at my best when I originally wrote it
+    /// \todo make non-static (ideally, one CallbackManager per ScreenManager)
     class CallbackManager {
     private:
         /// A function to run at a certain time with some regularity
