@@ -9,6 +9,7 @@ namespace nta {
         m_limiter.setMaxFPS(maxFPS);
     }
     ScreenManager::~ScreenManager() {
+        if (!m_screens.empty()) destroy();
     }
     Screen* ScreenManager::getCurrScreen() const {
         return in_range<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
@@ -18,12 +19,14 @@ namespace nta {
     }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
         Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to screen manger...");
+        Logger::indent();
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setManager(this, SetManagerKey());
         newScreen->setIndices(m_screens.size(), escIndex, xIndex, SetIndicesKey());
         newScreen->setWindow((title == "") ? m_window->getTitle() : title, SetWindowKey());
         newScreen->init();
         m_screens.push_back(newScreen);
+        Logger::unindent();
         Logger::writeToLog("Added screen");
     }
     void ScreenManager::switchScreen(int newIndex) {

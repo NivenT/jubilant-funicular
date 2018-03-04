@@ -27,6 +27,7 @@ namespace nta {
     }
     void SystemManager::destroy() {
         Logger::writeToLog("Destroying SystemManager...");
+        Logger::indent();
         for (auto pair : m_glslMap) {
             Logger::writeToLog("Deleting GLSL program: " + pair.first + "...");
             delete pair.second;
@@ -39,6 +40,7 @@ namespace nta {
         }
         m_glslMap.clear();
         m_windowMap.clear();
+        Logger::unindent();
         Logger::writeToLog("Destroyed SystemMangaer");
     }
 }

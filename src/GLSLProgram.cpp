@@ -64,7 +64,7 @@ namespace nta {
         Logger::writeToLog("Compiled shaders");
     }
     void GLSLProgram::compileShaders(crstring vert, crstring frag) {
-        Logger::writeToLog("Compiling shaders: " + vert + "|" + frag + "...");
+        Logger::writeToLog("Compiling shaders: " + vert + " | " + frag + "...");
         m_vertShaderID = compileShader(vert, GL_VERTEX_SHADER);
         m_fragShaderID = compileShader(frag, GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
