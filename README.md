@@ -15,4 +15,4 @@ Ideally, there would be no dependencies and all the necessary code would be writ
 * [SDL2](https://www.libsdl.org/download-2.0.php)
 * [DevIL](http://openil.sourceforge.net/)
 
-Most, if not all, of these can be obtained using `apt-get` on Ubuntu.
+Most, if not all, of these can be obtained using `apt-get` on Ubuntu. On Mac, you can get them using `brew`.
