@@ -12,7 +12,18 @@ Ideally, there would be no dependencies and all the necessary code would be writ
 
 * [OpenGL](https://www.opengl.org/)
 * [Glew](http://glew.sourceforge.net/)
+* [GLM](https://glm.g-truc.net/0.9.8/index.html)
 * [SDL2](https://www.libsdl.org/download-2.0.php)
+  * SDL2-mixer
+  * SDL2-ttf
 * [DevIL](http://openil.sourceforge.net/)
 
-Most, if not all, of these can be obtained using `apt-get` on Ubuntu. On Mac, you can get them using `brew`.
+All of these can be obtained using `apt-get` on Ubuntu. If you want to get them all at once, run
+
+```bash
+sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev libdevil-dev \
+    libglew-dev freeglut3-dev libxmu-dev libxi-dev libglm-dev
+```
+You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)
+
+On Mac, you can get them using `brew`.
