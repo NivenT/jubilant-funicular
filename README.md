@@ -11,7 +11,8 @@ Documentation can be found [here](https://nivent.github.io/jubilant-funicular/ht
 Ideally, there would be no dependencies and all the necessary code would be written by me, but that's not the case, so make sure you have
 
 * [OpenGL](https://www.opengl.org/)
-* [Glew](http://glew.sourceforge.net/)
+  * [Glew](http://glew.sourceforge.net/)
+  * [GLUT](http://freeglut.sourceforge.net/)
 * [GLM](https://glm.g-truc.net/0.9.8/index.html)
 * [SDL2](https://www.libsdl.org/download-2.0.php)
   * SDL2-mixer
