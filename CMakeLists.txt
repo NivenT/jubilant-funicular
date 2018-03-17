@@ -56,10 +56,13 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
-set(NTA_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "")
+set(NTA_INCLUDE_DIR
+	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR}/glm
+	CACHE INTERNAL "")
 
 add_subdirectory(src)
-
+	
 # Is it standard practice to bundle libraries I don't own like this?
 set(NTA_LIBRARIES nta
   ${SDL2_LIBRARY}
