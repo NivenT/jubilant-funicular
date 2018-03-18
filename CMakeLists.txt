@@ -42,6 +42,8 @@ else()
     endif()
 endif()
 
+option(NTA_USE_DEVIL "Turn on to use DevIL instead of CImg for image loading" OFF)	
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(SDL2 REQUIRED)
@@ -55,21 +57,38 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
+# TODO (?): Add include dirs from required packages
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/deps
+	${CMAKE_CURRENT_SOURCE_DIR}/deps/DevIL/include
 	CACHE INTERNAL "")
 
+if(${NTA_USE_DEVIL})
+	add_definitions(-DUSE_DEVIL) # #define USE_DEVIL
+endif()
+
 add_subdirectory(src)
-	
+
+if(${NTA_USE_DEVIL})
+	message(STATUS "Using DevIL for image loading")
+ 	add_subdirectory(deps/DevIL)
+	set(NTA_LIBRARIES ${NTA_LIBRARIES} IL ILU ILUT CACHE INTERNAL "")
+	add_dependencies(nta IL ILU ILUT)
+else()
+	message(STATUS "Using CImg for image loading")
+	# X11 is for CImg <--- TODO: This is OS dependent so make it OS agnostic instead
+	set(NTA_LIBRARIES ${NTA_LIBRARIES} X11 CACHE INTERNAL "")
+endif()
+
+
 # Is it standard practice to bundle libraries I don't own like this?
-set(NTA_LIBRARIES nta
+set(NTA_LIBRARIES ${NTA_LIBRARIES}
   ${SDL2_LIBRARY}
   ${SDL2_TTF_LIBRARIES}
   ${SDL2_MIXER_LIBRARIES}
   ${GLEW_LIBRARIES}
   ${GLUT_LIBRARIES}
   ${OPENGL_LIBRARIES}
-	X11 # For CImg <--- TODO: This is OS dependent so make it OS agnostic instead
-  CACHE INTERNAL ""
+	CACHE INTERNAL ""
 )

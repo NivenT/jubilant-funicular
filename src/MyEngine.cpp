@@ -1,3 +1,7 @@
+#ifdef USE_DEVIL
+    #include <IL/il.h>
+    #include <IL/ilu.h>
+#endif
 #include <SDL2/SDL.h>
 #include <functional>
 
@@ -7,6 +11,10 @@ namespace nta {
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
         SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_CROSSHAIR));
+        #ifdef USE_DEVIL
+            ilInit();
+            iluInit();
+        #endif
     }
 }
 /*
