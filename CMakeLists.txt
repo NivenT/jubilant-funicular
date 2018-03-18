@@ -50,7 +50,6 @@ find_package(SDL2_mixer REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(DevIL REQUIRED)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
@@ -58,7 +57,7 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
-	${CMAKE_CURRENT_SOURCE_DIR}/glm
+	${CMAKE_CURRENT_SOURCE_DIR}/deps
 	CACHE INTERNAL "")
 
 add_subdirectory(src)
@@ -71,7 +70,6 @@ set(NTA_LIBRARIES nta
   ${GLEW_LIBRARIES}
   ${GLUT_LIBRARIES}
   ${OPENGL_LIBRARIES}
-  ${IL_LIBRARIES}
-  ${ILU_LIBRARIES}
+	X11 # For CImg <--- TODO: This is OS dependent so make it OS agnostic instead
   CACHE INTERNAL ""
 )
