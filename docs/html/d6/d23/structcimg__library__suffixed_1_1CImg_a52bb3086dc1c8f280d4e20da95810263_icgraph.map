@@ -1,0 +1,5 @@
+<map id="cimg_library_suffixed::CImg::unroll" name="cimg_library_suffixed::CImg::unroll">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6eb7e28a570e35fa865ed789f0df52c3" title="Discard specified sequence of values in the image buffer, along a specific axis. " alt="" coords="199,5,368,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6bde59c7cc8391912052e838260613ba" title="Discard neighboring duplicates in the image buffer, along the specified axis . " alt="" coords="211,71,356,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a59a02e64a154a522f8291f50c977e2" title="Unroll pixel values along specified axis . " alt="" coords="211,151,356,207"/>
+</map>

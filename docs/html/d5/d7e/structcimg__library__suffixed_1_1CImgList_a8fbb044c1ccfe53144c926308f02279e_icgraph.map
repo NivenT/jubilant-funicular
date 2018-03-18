@@ -1,0 +1,35 @@
+<map id="cimg_library_suffixed::CImgList::assign" name="cimg_library_suffixed::CImgList::assign">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af97fedf01cd4a4d8b7e0d11d519981e8" title="Merge two 3d objects together. " alt="" coords="215,5,384,61"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab896c4f7d87bc33821231b37dd85f79e" title="Construct list as a copy of an existing list and force shared state of elements &#160;. " alt="" coords="225,85,373,141"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2d70ee859df458d9448ba2a127cedc82" title="Generate a 3d box object. " alt="" coords="218,166,381,207"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cdc2da46ee1679928f178b0b886fba3" title="Generate a 3d cone. " alt="" coords="215,231,384,273"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a009c1cb31d4c261774a310e10d0ee9d7" title="Generate a 3d cylinder. " alt="" coords="206,297,393,338"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="215,363,383,419"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a693cdc6b4802d0fc1930890e030c1a33" title="Compute 3d elevation of a function as a 3d object. " alt="" coords="203,443,396,485"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0b8b15895c6d7bf28afb1878ee6cb122" title="Generate a 3d ellipsoid. " alt="" coords="205,509,393,550"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#afa0892dccfa1637ad92f7f453ad747ae" title="Return a reference to an empty list. " alt="" coords="207,574,391,615"/>
+<area shape="rect" id="node11" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aeb4a6463a473fa5935f69534ca1a49c8" title="Return a CImg pre&#45;defined font with desired size. " alt="" coords="214,639,385,681"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4d0714efbea21ed5f469d21980acfac6" title="Convert CImg3d representation into a 3d object . " alt="" coords="227,705,372,761"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6df02334b3342622e7439c27ec149456" title="Generate a 3d elevation of the image instance. " alt="" coords="227,785,372,841"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0b91d1efa631f475b09ff573a0dd69a4" title="Return image gradient. " alt="" coords="227,865,372,921"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4eb2ceb90169f0658337de1f5156fda5" title="Return image hessian. " alt="" coords="227,945,372,1001"/>
+<area shape="rect" id="node16" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a0e6faec8870636554173cb235ce90202" title="Return a sublist . " alt="" coords="225,1025,373,1081"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#afb6c6dfe13e9a40b69b6456e2689d057" title="Generate a isoline of the image instance as a 3d object. " alt="" coords="227,1105,372,1161"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae0a2d185e964035d5a13dd85208556e" title="Generate an isosurface of the image instance as a 3d object. " alt="" coords="227,1185,372,1241"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0218c314200ba254ca0734849b67f110" title="Load 3d object from a .OFF file . " alt="" coords="227,1265,372,1321"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6daf74a21b7d7b540474f66f024cc4f9" title="Generate the 3d projection planes of the image instance. " alt="" coords="227,1345,372,1401"/>
+<area shape="rect" id="node21" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="227,1425,372,1481"/>
+<area shape="rect" id="node22" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a60bac5909029428b39ffc726b5f25079" title="Return a list with elements being shared copies of images in the list instance. " alt="" coords="225,1505,373,1561"/>
+<area shape="rect" id="node23" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1a54d7eef89663fdcc5ffb61ed9a48b5" title="Return a shared sublist. " alt="" coords="225,1585,373,1641"/>
+<area shape="rect" id="node24" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#acae5385f7b2692787b1c50fa1663e587" title="Split image into a list along specified axis. " alt="" coords="211,1666,387,1707"/>
+<area shape="rect" id="node25" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab2437a10d0bbe2f4d5e91a49dc5cd105" title="Unserialize a CImg&lt;unsigned char&gt; serialized buffer into a CImgList&lt;T&gt; list. " alt="" coords="225,1732,373,1788"/>
+<area shape="rect" id="node26" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae1d41b8104d3018b50f25d47ac219e0" title="Compute 0&#45;isolines of a function, as a 3d object. " alt="" coords="210,1813,389,1854"/>
+<area shape="rect" id="node27" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2871222dafbcaf1ddab4701be882410" title="Compute isosurface of a function, as a 3d object. " alt="" coords="199,1878,400,1919"/>
+<area shape="rect" id="node28" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a23a2c8ad55006cc12ef5316355e46ea0" title="Load an image from a video file, using OpenCV library. " alt="" coords="225,1944,373,2000"/>
+<area shape="rect" id="node29" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aa70386a8220b072cfebd654cb1ea636a" title="Transfer the content of the list instance to another list. " alt="" coords="225,2024,373,2080"/>
+<area shape="rect" id="node30" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a38bca8940aa19a72153372c6615a0c61" title="Generate a 3d XY&#45;plane. " alt="" coords="213,2105,385,2146"/>
+<area shape="rect" id="node31" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a4fcada66102d9f9245f11d2127dbe8fb" title="Save image sequence, using the OpenCV library. " alt="" coords="225,2171,373,2227"/>
+<area shape="rect" id="node32" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8025573f639ba766ca2270bf10c2d00f" title="Generate a 3d sphere. " alt="" coords="209,2251,389,2293"/>
+<area shape="rect" id="node33" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42395174c544ec66191539bf76fcb360" title="Texturize primitives of a 3d object. " alt="" coords="211,2317,388,2373"/>
+<area shape="rect" id="node34" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8e6e4d77fb5eba21751926bb972d89d5" title="Generate a 3d torus. " alt="" coords="214,2398,385,2439"/>
+</map>

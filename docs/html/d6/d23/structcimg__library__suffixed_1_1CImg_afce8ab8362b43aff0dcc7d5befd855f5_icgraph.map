@@ -1,0 +1,5 @@
+<map id="cimg_library_suffixed::CImg::max" name="cimg_library_suffixed::CImg::max">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3d57138627ba28a4ecf5fe4a54f23b41" title="Pointwise max operator between instance image and a value . " alt="" coords="199,5,376,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c05bc335362b8e6bae9a516f28f8c0" title="Compute the Moore&#45;Penrose pseudo&#45;inverse of the instance image, viewed as a matrix ..." alt="" coords="215,71,360,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae884ac4a2168d7411b004a4e8c6869e5" title="Sharpen image. " alt="" coords="201,152,374,193"/>
+</map>

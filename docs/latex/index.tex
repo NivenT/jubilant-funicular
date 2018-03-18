@@ -13,9 +13,28 @@ Ideally, there would be no dependencies and all the necessary code would be writ
 
 \begin{DoxyItemize}
 \item \href{https://www.opengl.org/}{\tt Open\+GL}
+\begin{DoxyItemize}
 \item \href{http://glew.sourceforge.net/}{\tt Glew}
+\item \href{http://freeglut.sourceforge.net/}{\tt G\+L\+UT}
+\end{DoxyItemize}
 \item \href{https://www.libsdl.org/download-2.0.php}{\tt S\+D\+L2}
-\item \href{http://openil.sourceforge.net/}{\tt Dev\+IL}
+\begin{DoxyItemize}
+\item S\+D\+L2-\/mixer
+\item S\+D\+L2-\/ttf
+\end{DoxyItemize}
 \end{DoxyItemize}
 
-Most, if not all, of these can be obtained using {\ttfamily apt-\/get} on Ubuntu. 
+All of these can be obtained using {\ttfamily apt-\/get} on Ubuntu. If you want to get them all at once, run
+
+
+\begin{DoxyCode}
+sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \(\backslash\)
+    libglew-dev freeglut3-dev libxmu-dev libxi-dev
+\end{DoxyCode}
+ You\textquotesingle{}ll likely already have some of these (e.\+g. libxmu-\/dev and libxi-\/dev)
+
+On Mac, you can get them using {\ttfamily brew}.
+
+\subsection*{Note}
+
+There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo\textquotesingle{}s size, I\textquotesingle{}ve included (parts of) them directly instead of as submodules. 

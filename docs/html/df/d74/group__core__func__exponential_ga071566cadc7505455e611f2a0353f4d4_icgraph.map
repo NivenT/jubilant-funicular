@@ -1,0 +1,15 @@
+<map id="glm::exp" name="glm::exp">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1f9c44f6a4577ee414419394aa34d4ac" title="Apply recursive Deriche filter. " alt="" coords="125,5,295,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="126,71,294,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3b96b681b3c0e11c067b12789328229a" title="Draw a 1d gaussian function. " alt="" coords="133,151,287,207"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7772f5e71c3c6fa9b9226c8f0c2395db" title="Compute the exponential of each pixel value. " alt="" coords="136,232,284,273"/>
+<area shape="rect" id="node6" href="$d6/dab/group__gtx__functions.html#ga0b50b197ff74261a0fad90f4b8d24702" title="glm::gauss" alt="" coords="167,298,253,325"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a7a9e74dc09f2f79fcd3f605a2a9059" title="Blur image using patch&#45;based space . " alt="" coords="137,349,283,405"/>
+<area shape="rect" id="node8" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a4e6348dd82ed46fecc9f46981dc5bc0a" title="Return the number of permutations of k objects in a set of n objects. " alt="" coords="137,429,283,471"/>
+<area shape="rect" id="node13" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936" title="Return a random variable following a Poisson distribution of parameter z. " alt="" coords="137,535,283,576"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53284105886c5eb684b26e7dba5ede66" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a symmetric matrix..." alt="" coords="343,299,569,340"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#afb54ceda4e223372474b1d188e5a7ed9" title="Sort pixel values . " alt="" coords="369,364,543,405"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c8a817208b7aa571350457969e9dbe" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="379,429,533,471"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="379,495,533,551"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="377,576,535,617"/>
+</map>

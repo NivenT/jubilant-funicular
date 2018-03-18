@@ -1,0 +1,93 @@
+\hypertarget{qualifier_8hpp}{}\section{deps/glm/detail/qualifier.hpp File Reference}
+\label{qualifier_8hpp}\index{deps/glm/detail/qualifier.\+hpp@{deps/glm/detail/qualifier.\+hpp}}
+{\ttfamily \#include \char`\"{}setup.\+hpp\char`\"{}}\newline
+Include dependency graph for qualifier.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{dc/dd2/qualifier_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d77/qualifier_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structglm_1_1vec}{glm\+::vec$<$ L, T, Q $>$}
+\item 
+struct \hyperlink{structglm_1_1mat}{glm\+::mat$<$ C, R, T, Q $>$}
+\item 
+struct \hyperlink{structglm_1_1detail_1_1is__aligned}{glm\+::detail\+::is\+\_\+aligned$<$ P $>$}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25}{glm\+::qualifier} \{ \newline
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a8e8791ee77fe079b1291f710d88031bf}{glm\+::packed\+\_\+highp}, 
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9604654c3b137cd7898689fd34b25bc0}{glm\+::packed\+\_\+mediump}, 
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac36a4bd74559be2c0b65bc48e5953b8b}{glm\+::packed\+\_\+lowp}, 
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac6f7eab42eacbb10d59a58e95e362074}{glm\+::highp} = packed\+\_\+highp, 
+\newline
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a6416f3ea0c9025fb21ed50c4d6620482}{glm\+::mediump} = packed\+\_\+mediump, 
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ae161af3fc695e696ce3bf69f7332bc2d}{glm\+::lowp} = packed\+\_\+lowp, 
+\hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9a2c3bbb01d18bc598bcee54f9638989}{glm\+::packed} = packed\+\_\+highp, 
+{\bfseries defaultp} = highp
+ \}\begin{DoxyCompactList}\small\item\em Qualify G\+LM types in term of alignment (packed, aligned) and precision in term of U\+L\+Ps (lowp, mediump, highp) \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{group__core}{Core features} 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{qualifier_8hpp_file_a36ed105b07c7746804d7fdc7cc90ff25}\label{qualifier_8hpp_file_a36ed105b07c7746804d7fdc7cc90ff25}} 
+\index{qualifier.\+hpp@{qualifier.\+hpp}!qualifier@{qualifier}}
+\index{qualifier@{qualifier}!qualifier.\+hpp@{qualifier.\+hpp}}
+\subsubsection{\texorpdfstring{qualifier}{qualifier}}
+{\footnotesize\ttfamily enum \hyperlink{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25}{glm\+::qualifier}}
+
+
+
+Qualify G\+LM types in term of alignment (packed, aligned) and precision in term of U\+L\+Ps (lowp, mediump, highp) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{packed\+\_\+highp@{packed\+\_\+highp}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!packed\+\_\+highp@{packed\+\_\+highp}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a8e8791ee77fe079b1291f710d88031bf}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a8e8791ee77fe079b1291f710d88031bf}} 
+packed\+\_\+highp&Typed data is tightly packed in memory and operations are executed with high precision in term of U\+L\+Ps. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{packed\+\_\+mediump@{packed\+\_\+mediump}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!packed\+\_\+mediump@{packed\+\_\+mediump}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9604654c3b137cd7898689fd34b25bc0}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9604654c3b137cd7898689fd34b25bc0}} 
+packed\+\_\+mediump&Typed data is tightly packed in memory and operations are executed with medium precision in term of U\+L\+Ps for higher performance. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{packed\+\_\+lowp@{packed\+\_\+lowp}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!packed\+\_\+lowp@{packed\+\_\+lowp}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac36a4bd74559be2c0b65bc48e5953b8b}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac36a4bd74559be2c0b65bc48e5953b8b}} 
+packed\+\_\+lowp&Typed data is tightly packed in memory and operations are executed with low precision in term of U\+L\+Ps to maximize performance. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{highp@{highp}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!highp@{highp}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac6f7eab42eacbb10d59a58e95e362074}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ac6f7eab42eacbb10d59a58e95e362074}} 
+highp&By default highp qualifier is also packed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mediump@{mediump}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!mediump@{mediump}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a6416f3ea0c9025fb21ed50c4d6620482}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a6416f3ea0c9025fb21ed50c4d6620482}} 
+mediump&By default mediump qualifier is also packed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{lowp@{lowp}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!lowp@{lowp}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ae161af3fc695e696ce3bf69f7332bc2d}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25ae161af3fc695e696ce3bf69f7332bc2d}} 
+lowp&By default lowp qualifier is also packed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{packed@{packed}!qualifier.\+hpp@{qualifier.\+hpp}}\index{qualifier.\+hpp@{qualifier.\+hpp}!packed@{packed}}}\mbox{\Hypertarget{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9a2c3bbb01d18bc598bcee54f9638989}\label{qualifier_8hpp_a36ed105b07c7746804d7fdc7cc90ff25a9a2c3bbb01d18bc598bcee54f9638989}} 
+packed&By default packed qualifier is also high precision. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 11 of file qualifier.\+hpp.
+

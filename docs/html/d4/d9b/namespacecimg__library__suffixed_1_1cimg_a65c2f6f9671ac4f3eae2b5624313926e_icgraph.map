@@ -1,0 +1,6 @@
+<map id="cimg_library_suffixed::cimg::medcon_path" name="cimg_library_suffixed::cimg::medcon_path">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aac739bf544269324a04504ebe92b93e9" title="Get current local time (single&#45;attribute version). " alt="" coords="203,5,349,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79b7a247520612001a04d8ef1c2991dc" title="Print information about &#160;environement variables. " alt="" coords="203,71,349,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8306218d5edf273c822113b799fd89cc" title="Load image from a DICOM file, using XMedcon&#39;s external tool &#39;medcon&#39;. " alt="" coords="201,137,351,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a30d02c3d77fc43c8b5845e92268cdab5" title="Save image as a Dicom file. " alt="" coords="199,217,353,273"/>
+</map>

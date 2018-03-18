@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::CImgList::width" name="cimg_library_suffixed::CImgList::width">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="227,5,372,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="222,71,377,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7a65d2ce5d14b61eba14d4f0792f4add" title="Draw a text string . " alt="" coords="207,152,391,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a10b28cfe85047fcd3637bf2083586da6" title="Convert 3d object into a CImg3d representation . " alt="" coords="227,218,372,274"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="227,298,372,354"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae1d41b8104d3018b50f25d47ac219e0" title="Compute 0&#45;isolines of a function, as a 3d object. " alt="" coords="210,379,389,420"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2871222dafbcaf1ddab4701be882410" title="Compute isosurface of a function, as a 3d object. " alt="" coords="199,444,400,485"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af1cec45fc019552ac9b4fc43b7757fc7" title="Save 3d object as an Object File Format (.off) file . " alt="" coords="211,509,388,551"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8025573f639ba766ca2270bf10c2d00f" title="Generate a 3d sphere. " alt="" coords="209,575,389,616"/>
+</map>

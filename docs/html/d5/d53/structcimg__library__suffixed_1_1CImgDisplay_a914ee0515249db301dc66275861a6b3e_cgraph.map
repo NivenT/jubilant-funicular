@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::CImgDisplay::snapshot" name="cimg_library_suffixed::CImgDisplay::snapshot">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="440,15,585,56"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aa2bf8fb0d97c122cbc52e1f2e167e8a6" title="Sleep for a given numbers of milliseconds. " alt="" coords="233,44,379,85"/>
+<area shape="rect" id="node5" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#acfd3624d72ed7f79c82ec45646c685e7" title="Display a warning message on the default output stream. " alt="" coords="233,109,379,151"/>
+<area shape="rect" id="node6" href="$d0/de3/group__core__func__common.html#ga2c2bde1cec025b7ddff83c74a1113719" title="glm::min" alt="" coords="270,175,342,202"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1774ac5f65cb510394e8f04b2a8881e7" title="Generate a 2d representation of a 3d image, with XY,XZ and YZ views. " alt="" coords="220,227,392,268"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a9f2331904eb3826d2eb25efebe267211" title="Return a reference to the minimum pixel value as well as the maximum pixel value. ..." alt="" coords="233,292,379,333"/>
+<area shape="rect" id="node9" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a8431f8cf0989f40df3b6ac7d9dc90abd" title="Wait for a given number of milliseconds since the last call to wait(). " alt="" coords="233,357,379,399"/>
+<area shape="rect" id="node11" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#ad08f2f8b85cdd55d5e3ea71bdebf2b67" title="Display image on associated window. " alt="" coords="229,423,383,464"/>
+<area shape="rect" id="node4" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a71a3c7b37befc7a4313dfcdd80271bce" title="Return the value of a system timer, with a millisecond precision. " alt="" coords="440,171,585,212"/>
+<area shape="rect" id="node10" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ab7c09300be61c8a3361c379069100252" title="Return a random variable uniformely distributed between [val_min,val_max]. " alt="" coords="440,357,585,399"/>
+</map>

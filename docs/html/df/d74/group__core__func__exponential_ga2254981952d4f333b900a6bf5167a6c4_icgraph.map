@@ -1,0 +1,14 @@
+<map id="glm::pow" name="glm::pow">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ad72601dd5481dc3abd338d9ed1604622" title="Return x^(1/3). " alt="" coords="157,5,302,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a23c9260194d915f3826c3bd2ad8eb0da" title="Draw labeled horizontal and vertical axes . " alt="" coords="134,71,325,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af284a9329155592cfe0ca6bc237a4fd9" title="Draw an outlined 2d ellipse . " alt="" coords="152,137,307,193"/>
+<area shape="rect" id="node5" href="$d7/d1f/classnta_1_1FPSLimiter.html#a17003ecbc30d60c58112615fcaee4d1e" title="ends fps calculations, delaying if necessary to cap fps " alt="" coords="158,217,301,243"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="157,267,302,323"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4c8c93e2b41e9b3f973cb1130af80cc9" title="Compute L2&#45;norm of each multi&#45;valued pixel of the image instance . " alt="" coords="139,348,320,389"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5a7df9183063a103791b23b675b96d31" title="Raise each pixel value to a specified power . " alt="" coords="141,413,317,455"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="157,479,302,535"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a56a46a3c08972775c5c2451f178be1a6" title="Raise each pixel value to a specified power. " alt="" coords="154,560,305,601"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aaa5d2b66d173c4384b04a67b67efb6f8" title="Convert pixel values from RGB to sRGB color spaces. " alt="" coords="128,625,331,667"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae884ac4a2168d7411b004a4e8c6869e5" title="Sharpen image. " alt="" coords="143,691,316,732"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#adcf51fd713f2fe9d9e44f7d5fa05f696" title="Convert pixel values from sRGB to RGB color spaces. " alt="" coords="128,756,331,797"/>
+</map>

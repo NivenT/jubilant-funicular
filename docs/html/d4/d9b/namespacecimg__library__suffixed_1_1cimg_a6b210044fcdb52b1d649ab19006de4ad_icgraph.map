@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::cimg::fread" name="cimg_library_suffixed::cimg::fread">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a069a7c0b955c96b751b2a4e0c45c4302" title="Load image from an ANALYZE7.5/NIFTI file . " alt="" coords="200,5,345,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42e1710c4e804e7ad70aaaa56e4d5e31" title="Load image from a BMP file . " alt="" coords="200,85,345,141"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac0ed861af830eebc9932a02cade9267a" title="Load image from a PANDORE&#45;5 file . " alt="" coords="200,165,345,221"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a96c318d8b73a3a8b4eae37d05e3a48fa" title="Load image from a PFM file . " alt="" coords="200,245,345,301"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab218608a32068fc1210d1a225956e073" title="Load image from a PNG file . " alt="" coords="200,325,345,381"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab6fe8f64a5814db59d9f87f00f752325" title="Load image from a PNM file . " alt="" coords="200,405,345,461"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a799f92da297a8a0316683eb66ad6fa5a" title="Load image from a raw binary file . " alt="" coords="200,485,345,541"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98ef3e025749428b24ac7c3e8fe1060b" title="Load image from a RGB file . " alt="" coords="200,565,345,621"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0b5733cd85d4a878548c23e6aa822108" title="Load image from a RGBA file . " alt="" coords="200,645,345,701"/>
+<area shape="rect" id="node11" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#affbfd21835dfd5c00fe98cc71c7760c2" title="Load a list from a PAR/REC (Philips) file. " alt="" coords="199,725,347,781"/>
+</map>

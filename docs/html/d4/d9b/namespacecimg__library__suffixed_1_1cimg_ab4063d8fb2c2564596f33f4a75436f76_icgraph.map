@@ -1,0 +1,7 @@
+<map id="cimg_library_suffixed::cimg::graphicsmagick_path" name="cimg_library_suffixed::cimg::graphicsmagick_path">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aac739bf544269324a04504ebe92b93e9" title="Get current local time (single&#45;attribute version). " alt="" coords="257,5,402,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79b7a247520612001a04d8ef1c2991dc" title="Print information about &#160;environement variables. " alt="" coords="257,71,402,112"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a222371272a0ca7a6d6d30a380bc0a92d" title="Load gif file, using ImageMagick or GraphicsMagick&#39;s external tools. " alt="" coords="255,137,403,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a34578e61c66a0046835660bada43e3d6" title="Load image using GraphicsMagick&#39;s external tool &#39;gm&#39;. " alt="" coords="243,217,416,273"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a44f125968c20e8c7d833bf7d75c32db6" title="Save image using GraphicsMagick&#39;s external binary. " alt="" coords="243,297,416,353"/>
+</map>

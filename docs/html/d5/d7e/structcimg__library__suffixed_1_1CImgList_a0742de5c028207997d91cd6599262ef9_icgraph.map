@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::CImgList::get_append" name="cimg_library_suffixed::CImgList::get_append">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66b642b7548536f9dfe0328207e37ef4" title="Append two images along specified axis. " alt="" coords="221,5,390,47"/>
+<area shape="rect" id="node3" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a7f0ae1e5a6deb128d9a4f9501514675b" title="Display list of images on associated window. " alt="" coords="228,71,383,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#adfc652cf008c0263804f1bbf518ff21f" title="Append two images along specified axis . " alt="" coords="233,137,378,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5b75a8084949dc540378cc62dddf8161" title="Load image sequence using FFMPEG&#39;s external tool &#39;ffmpeg&#39; . " alt="" coords="229,217,382,273"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a9ddb90d7e2fadc1afdd4aa8167697a70" title="Load gif file, using ImageMagick or GraphicsMagick&#39;s external tool &#39;convert&#39; . " alt="" coords="233,297,378,353"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a29ee5b4cfcb8d35134a85b7cc60c29" title="Load image sequence from a video file, using OpenCV library . " alt="" coords="233,377,378,433"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac57bf12c7a027b12a6df6b88aa6b7a2b" title="Load image sequence from a YUV file . " alt="" coords="233,457,378,513"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#acd11fa7d0e9e7598c686eeadd86b792d" title="Load image from a .cimg[z] file. " alt="" coords="212,537,399,579"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2443496c0824ead4e1bf8a84c5eda7b0" title="Load image from a PAR&#45;REC (Philips) file. " alt="" coords="230,603,381,659"/>
+</map>

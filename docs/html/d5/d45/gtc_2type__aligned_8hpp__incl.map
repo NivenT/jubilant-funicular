@@ -1,0 +1,24 @@
+<map id="deps/glm/gtc/type_aligned.hpp" name="deps/glm/gtc/type_aligned.hpp">
+<area shape="rect" id="node2" href="$dd/d91/vec2_8hpp.html" title="../vec2.hpp" alt="" coords="143,155,229,181"/>
+<area shape="rect" id="node15" href="$d9/dcd/vec3_8hpp.html" title="../vec3.hpp" alt="" coords="692,155,779,181"/>
+<area shape="rect" id="node18" href="$dd/dc5/vec4_8hpp.html" title="../vec4.hpp" alt="" coords="548,155,635,181"/>
+<area shape="rect" id="node21" href="$dc/d91/gtc_2vec1_8hpp.html" title="../gtc/vec1.hpp" alt="" coords="435,80,545,107"/>
+<area shape="rect" id="node3" href="$d2/d6a/setup_8hpp.html" title="detail/setup.hpp" alt="" coords="805,453,919,480"/>
+<area shape="rect" id="node7" href="$d0/dce/type__vec2_8hpp.html" title="detail/type_vec2.hpp" alt="" coords="5,229,148,256"/>
+<area shape="rect" id="node6" href="$de/d03/platform_8h.html" title="../simd/platform.h" alt="" coords="859,528,983,555"/>
+<area shape="rect" id="node8" href="$df/d1a/type__vec_8hpp.html" title="type_vec.hpp" alt="" coords="549,304,649,331"/>
+<area shape="rect" id="node14" href="$d8/d3e/type__vec2_8inl_source.html" title="type_vec2.inl" alt="" coords="101,304,199,331"/>
+<area shape="rect" id="node9" href="$d6/db5/qualifier_8hpp.html" title="qualifier.hpp" alt="" coords="816,379,908,405"/>
+<area shape="rect" id="node10" href="$dc/dd7/type__int_8hpp.html" title="type_int.hpp" alt="" coords="698,379,791,405"/>
+<area shape="rect" id="node11" href="$d0/df6/compute__vector__relational_8hpp_source.html" title="compute_vector_relational.hpp" alt="" coords="425,379,624,405"/>
+<area shape="rect" id="node16" href="$d5/dfc/type__vec3_8hpp.html" title="detail/type_vec3.hpp" alt="" coords="664,229,807,256"/>
+<area shape="rect" id="node17" href="$dc/d97/type__vec3_8inl_source.html" title="type_vec3.inl" alt="" coords="674,304,773,331"/>
+<area shape="rect" id="node19" href="$d4/d79/type__vec4_8hpp.html" title="detail/type_vec4.hpp" alt="" coords="445,229,588,256"/>
+<area shape="rect" id="node20" href="$dd/d90/type__vec4_8inl_source.html" title="type_vec4.inl" alt="" coords="375,304,474,331"/>
+<area shape="rect" id="node22" href="$d7/d8d/ext_2vec1_8hpp.html" title="../ext/vec1.hpp" alt="" coords="323,155,433,181"/>
+<area shape="rect" id="node27" href="$df/dc0/gtc_2vec1_8inl.html" title="vec1.inl" alt="" coords="457,155,523,181"/>
+<area shape="rect" id="node23" href="$da/dfe/fwd_8hpp.html" title="../fwd.hpp" alt="" coords="854,229,934,256"/>
+<area shape="rect" id="node26" href="$da/db2/type__vec1_8inl.html" title="../detail/type_vec1.inl" alt="" coords="274,229,421,256"/>
+<area shape="rect" id="node24" href="$d9/d16/type__float_8hpp.html" title="detail/type_float.hpp" alt="" coords="933,379,1071,405"/>
+<area shape="rect" id="node25" href="$d1/d70/type__mat_8hpp.html" title="detail/type_mat.hpp" alt="" coords="847,304,983,331"/>
+</map>

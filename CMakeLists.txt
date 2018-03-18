@@ -42,7 +42,7 @@ else()
     endif()
 endif()
 
-option(NTA_USE_DEVIL "Turn on to use DevIL instead of CImg for image loading" OFF)	
+option(NTA_USE_DEVIL "Turn on to use DevIL instead of CImg for image loading" ON)	
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -66,6 +66,8 @@ set(NTA_INCLUDE_DIR
 
 if(${NTA_USE_DEVIL})
 	add_definitions(-DUSE_DEVIL) # #define USE_DEVIL
+elseif()
+	# TODO: Use cimg_plugin to get decent png support
 endif()
 
 add_subdirectory(src)

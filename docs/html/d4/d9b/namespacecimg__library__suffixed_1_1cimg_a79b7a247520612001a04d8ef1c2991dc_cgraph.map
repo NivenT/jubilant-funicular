@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::cimg::info" name="cimg_library_suffixed::cimg::info">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ada686776cc71803df391eea79cd1b3e5" title="Get/set default output stream for the &#160;library messages. " alt="" coords="221,5,366,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#afd898f29e094a625d15928ed19a6b69d" title="Return the endianness of the current architecture. " alt="" coords="221,71,366,112"/>
+<area shape="rect" id="node4" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a96cabeea0a54a10aeee97ead7b672f0f" title="Get/set path to the Program Files/ directory (Windows only). " alt="" coords="206,332,381,373"/>
+<area shape="rect" id="node8" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ab4063d8fb2c2564596f33f4a75436f76" title="Get/set path to the GraphicsMagick&#39;s gm binary. " alt="" coords="199,136,388,177"/>
+<area shape="rect" id="node9" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a65c2f6f9671ac4f3eae2b5624313926e" title="Get/set path to the XMedcon&#39;s medcon binary. " alt="" coords="221,201,366,243"/>
+<area shape="rect" id="node10" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ae9af8e17db04e875db3b45cbe58892d6" title="Get/set path to store temporary files. " alt="" coords="215,267,371,308"/>
+<area shape="rect" id="node11" href="$d7/d6f/group__gtc__constants.html#ga39c2fb227631ca25894326529bdd1ee5" title="glm::one" alt="" coords="257,398,329,425"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a82cf529dfcb37cbd01ad7f9bd76795d7" title="Construct empty image . " alt="" coords="436,201,581,243"/>
+<area shape="rect" id="node6" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ac436b94e6ffef5fd420bb3d7c05fd416" title="Close a file. " alt="" coords="436,267,581,308"/>
+<area shape="rect" id="node7" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#acfd3624d72ed7f79c82ec45646c685e7" title="Display a warning message on the default output stream. " alt="" coords="629,267,775,308"/>
+</map>

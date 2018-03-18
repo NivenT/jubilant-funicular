@@ -1,0 +1,110 @@
+\hypertarget{group__gtc__integer}{}\section{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}
+\label{group__gtc__integer}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}}
+
+
+Allow to perform bit operations on integer values.  
+
+
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{db/dd6/group__gtc__integer}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+I\+U\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+I\+U\+Type \hyperlink{group__gtc__integer_ga9bd682e74bfacb005c735305207ec417}{glm\+::log2} (gen\+I\+U\+Type x)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, int, Q $>$ \hyperlink{group__gtc__integer_ga57824268ebe13a922f1d69a5d37f637f}{glm\+::iround} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{uint}, Q $>$ \hyperlink{group__gtc__integer_ga6715b9d573972a0f7763d30d45bcaec4}{glm\+::uround} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allow to perform bit operations on integer values. 
+
+Include $<$\hyperlink{gtc_2integer_8hpp}{glm/gtc/integer.\+hpp}$>$ to use the features of this extension. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtc__integer_ga57824268ebe13a922f1d69a5d37f637f}\label{group__gtc__integer_ga57824268ebe13a922f1d69a5d37f637f}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}!iround@{iround}}
+\index{iround@{iround}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}}
+\subsubsection{\texorpdfstring{iround()}{iround()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, int, Q$>$ glm\+::iround (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{gtc_2integer_8hpp}{deps/glm/gtc/integer.\+hpp}$>$}
+
+Returns a value equal to the nearest integer to x. The fraction 0.\+5 will round in a direction chosen by the implementation, presumably the direction that is fastest.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The values of the argument must be greater or equal to zero. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & floating point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/round.xml}{\tt G\+L\+SL round man page} 
+
+\hyperlink{group__gtc__integer}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer} 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file integer.\+inl.
+
+\mbox{\Hypertarget{group__gtc__integer_ga9bd682e74bfacb005c735305207ec417}\label{group__gtc__integer_ga9bd682e74bfacb005c735305207ec417}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}!log2@{log2}}
+\index{log2@{log2}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}}
+\subsubsection{\texorpdfstring{log2()}{log2()}}
+{\footnotesize\ttfamily template$<$typename gen\+I\+U\+Type $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+I\+U\+Type glm\+::log2 (\begin{DoxyParamCaption}\item[{gen\+I\+U\+Type}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{gtc_2integer_8hpp}{deps/glm/gtc/integer.\+hpp}$>$}
+
+Returns the log2 of x for integer values. Can be reliably using to compute mipmap count from the texture size. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__integer}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__gtc__integer_ga6715b9d573972a0f7763d30d45bcaec4}\label{group__gtc__integer_ga6715b9d573972a0f7763d30d45bcaec4}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}!uround@{uround}}
+\index{uround@{uround}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer}}
+\subsubsection{\texorpdfstring{uround()}{uround()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, \hyperlink{group__core__precision_ga4fd29415871152bfb5abd588334147c8}{uint}, Q$>$ glm\+::uround (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{gtc_2integer_8hpp}{deps/glm/gtc/integer.\+hpp}$>$}
+
+Returns a value equal to the nearest integer to x. The fraction 0.\+5 will round in a direction chosen by the implementation, presumably the direction that is fastest.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The values of the argument must be greater or equal to zero. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & floating point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/round.xml}{\tt G\+L\+SL round man page} 
+
+\hyperlink{group__gtc__integer}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+integer} 
+\end{DoxySeeAlso}
+
+
+Definition at line 62 of file integer.\+inl.
+

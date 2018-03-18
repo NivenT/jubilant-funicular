@@ -1,0 +1,87 @@
+\hypertarget{group__gtx__transform}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}
+\label{group__gtx__transform}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/da3/group__gtx__transform}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ \hyperlink{group__gtx__transform_ga309a30e652e58c396e2c3d4db3ee7658}{glm\+::translate} (\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ \hyperlink{group__gtx__transform_gaf599be4c0e9d99be1f9cddba79b6018b}{glm\+::rotate} (T angle, \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&v)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ \hyperlink{group__gtx__transform_gafbeefee8fec884d566e4ada0049174d7}{glm\+::scale} (\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{transform_8hpp}{glm/gtx/transform.\+hpp}$>$ to use the features of this extension.
+
+Add transformation matrices 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__transform_gaf599be4c0e9d99be1f9cddba79b6018b}\label{group__gtx__transform_gaf599be4c0e9d99be1f9cddba79b6018b}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$4, 4, T, Q$>$ glm\+::rotate (\begin{DoxyParamCaption}\item[{T}]{angle,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{transform_8hpp}{deps/glm/gtx/transform.\+hpp}$>$}
+
+Builds a rotation 4 $\ast$ 4 matrix created from an axis of 3 scalars and an angle expressed in radians. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__matrix__transform}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+matrix\+\_\+transform} 
+
+\hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform} 
+\end{DoxySeeAlso}
+
+
+Definition at line 13 of file transform.\+inl.
+
+\mbox{\Hypertarget{group__gtx__transform_gafbeefee8fec884d566e4ada0049174d7}\label{group__gtx__transform_gafbeefee8fec884d566e4ada0049174d7}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!scale@{scale}}
+\index{scale@{scale}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$4, 4, T, Q$>$ glm\+::scale (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{transform_8hpp}{deps/glm/gtx/transform.\+hpp}$>$}
+
+Transforms a matrix with a scale 4 $\ast$ 4 matrix created from a vector of 3 components. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__matrix__transform}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+matrix\+\_\+transform} 
+
+\hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file transform.\+inl.
+
+\mbox{\Hypertarget{group__gtx__transform_ga309a30e652e58c396e2c3d4db3ee7658}\label{group__gtx__transform_ga309a30e652e58c396e2c3d4db3ee7658}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}!translate@{translate}}
+\index{translate@{translate}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$4, 4, T, Q$>$ glm\+::translate (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{transform_8hpp}{deps/glm/gtx/transform.\+hpp}$>$}
+
+Transforms a matrix with a translation 4 $\ast$ 4 matrix created from 3 scalars. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__matrix__transform}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+matrix\+\_\+transform} 
+
+\hyperlink{group__gtx__transform}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+transform} 
+\end{DoxySeeAlso}
+
+
+Definition at line 7 of file transform.\+inl.
+

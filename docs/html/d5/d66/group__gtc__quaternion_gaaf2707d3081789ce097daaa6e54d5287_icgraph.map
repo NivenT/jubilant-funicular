@@ -1,0 +1,10 @@
+<map id="glm::axis" name="glm::axis">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aaf8720432f526c0e8860461f970c0e50" title="Autocrop image region, regarding the specified background value. " alt="" coords="128,5,305,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6eb7e28a570e35fa865ed789f0df52c3" title="Discard specified sequence of values in the image buffer, along a specific axis. " alt="" coords="132,71,301,112"/>
+<area shape="rect" id="node4" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a7f0ae1e5a6deb128d9a4f9501514675b" title="Display list of images on associated window. " alt="" coords="139,136,294,177"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac5254785e157634eca67272c99323f7f" title="Autocrop image region, regarding the specified background color . " alt="" coords="144,202,289,258"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6bde59c7cc8391912052e838260613ba" title="Discard neighboring duplicates in the image buffer, along the specified axis . " alt="" coords="144,282,289,338"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#afb54ceda4e223372474b1d188e5a7ed9" title="Sort pixel values . " alt="" coords="129,363,304,404"/>
+<area shape="rect" id="node8" href="$d4/de8/group__gtx__rotate__normalized__axis.html#ga50efd7ebca0f7a603bb3cc11e34c708d" title="glm::rotateNormalizedAxis" alt="" coords="129,429,305,455"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5a7f39985713471c4289a68040242a6" title="Sort pixel values. " alt="" coords="142,480,291,521"/>
+</map>

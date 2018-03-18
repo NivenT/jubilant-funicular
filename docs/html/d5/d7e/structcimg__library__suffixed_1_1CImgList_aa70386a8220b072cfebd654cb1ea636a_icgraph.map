@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::CImgList::move_to" name="cimg_library_suffixed::CImgList::move_to">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a07fd2a69e02ca2fa66fc81b28468a9f1" title="Append two images along specified axis . " alt="" coords="211,5,380,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab896c4f7d87bc33821231b37dd85f79e" title="Construct list as a copy of an existing list and force shared state of elements &#160;. " alt="" coords="221,71,369,127"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#acae47031136aaf64c35f5e07f6272df8" title="Crop font along the X&#45;axis. " alt="" coords="221,151,369,207"/>
+<area shape="rect" id="node5" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1a45c7e6d307a716e71f0070ced8b195" title="Return a sublist. " alt="" coords="221,231,369,287"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#acd11fa7d0e9e7598c686eeadd86b792d" title="Load image from a .cimg[z] file. " alt="" coords="202,312,389,353"/>
+<area shape="rect" id="node7" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a01772b523fe250d7d1f11e2e7eda0456" title="Load a 3d object from a .OFF file. " alt="" coords="221,378,369,434"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2443496c0824ead4e1bf8a84c5eda7b0" title="Load image from a PAR&#45;REC (Philips) file. " alt="" coords="220,458,371,514"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a8132f303e3295e0219ea4518c6ef20" title="Save volumetric image as a video, using ffmpeg external binary. " alt="" coords="218,538,373,594"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1bdca455737facbfa2ca6fd959a39cd4" title="Save volumetric image as a video, using the OpenCV library. " alt="" coords="199,619,392,660"/>
+<area shape="rect" id="node11" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab9744c8b1e41678f91de1dc4049aa058" title="Return a list where each image has been split along the specified axis. " alt="" coords="209,684,381,725"/>
+</map>

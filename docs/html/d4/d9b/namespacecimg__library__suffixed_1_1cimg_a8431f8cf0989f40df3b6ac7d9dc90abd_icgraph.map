@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::cimg::wait" name="cimg_library_suffixed::cimg::wait">
+<area shape="rect" id="node2" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="199,104,365,145"/>
+<area shape="rect" id="node6" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a6ba54ea916f502d782ccb787ce02ccbd" title="Wait for any user event occuring on the current display. " alt="" coords="209,320,355,361"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="422,5,587,47"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="425,71,584,112"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="413,136,596,177"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="432,202,577,258"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="421,283,589,324"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="421,349,589,405"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="431,429,579,485"/>
+<area shape="rect" id="node11" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="432,509,577,551"/>
+</map>

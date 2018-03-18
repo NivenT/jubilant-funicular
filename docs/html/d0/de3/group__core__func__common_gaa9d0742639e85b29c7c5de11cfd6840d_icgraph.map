@@ -1,0 +1,20 @@
+<map id="glm::floor" name="glm::floor">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a906025514304165302ad303c79e6a978" title="Convert pixel values from HSV to RGB color spaces. " alt="" coords="323,136,517,177"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a03657cf098d3b588e76bcef4426233bd" title="Return base&#45;2 logarithm of a value. " alt="" coords="129,71,275,112"/>
+<area shape="rect" id="node6" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#afcc02428c9b7d9100e1674369d25cc40" title="Return the modulo of a value. " alt="" coords="129,495,275,536"/>
+<area shape="rect" id="node19" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a66a32585b286a3c7f76d745107ae5300" title="Return rounded value. " alt="" coords="129,560,275,601"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2fbd06361da285cd57797bba6df0b275" title="Compute the base&#45;2 logarithm of each pixel value. " alt="" coords="345,5,495,47"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6f3dafb21c7bac989a884e3f4ce1565f" title="Compute the base&#45;10 logarithm of each pixel value . " alt="" coords="332,71,508,112"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae6b21bdc82884c2973255134703d7790" title="In&#45;place modulo operator. " alt="" coords="323,429,517,471"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a82435e0972fa4663a8b026ba832cfa3a" title="Convert pixel values from HSI to RGB color spaces. " alt="" coords="325,495,515,536"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac0bd8f86babd67585b63f65320d17eaa" title="Convert pixel values from HSL to RGB color spaces. " alt="" coords="323,560,517,601"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1d9a664dfe01342505a5256db9078b31" title="Resize image to new dimensions . " alt="" coords="347,626,493,682"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a648665fe1fc021d297a548f27b9da643" title="Shift image content. " alt="" coords="344,707,496,748"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66055be7e7726ec6de46097560fa0336" title="Rotate image with arbitrary angle. " alt="" coords="340,772,500,813"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0c0d7575a84ce1ab046dc53699d555fd" title="Rotate image with arbitrary angle . " alt="" coords="347,838,493,894"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8ec8cca0b51ca156165ffd77acf39e09" title="Warp image content by a warping field . " alt="" coords="330,919,510,960"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a611297a981e43c03a771fbc5d948f85a" title="Crop image region . " alt="" coords="331,984,509,1025"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="346,202,494,258"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ad7f1cbea5a78f6cd7fb8f308310b30d6" title="Draw 2d grid . " alt="" coords="329,283,511,324"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a61fea969244cdf85058b91703182275e" title="Draw a random plasma texture. " alt="" coords="343,349,497,405"/>
+</map>

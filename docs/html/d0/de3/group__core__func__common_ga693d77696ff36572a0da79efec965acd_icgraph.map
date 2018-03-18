@@ -1,0 +1,47 @@
+<map id="glm::abs" name="glm::abs">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a0852e9ad458e82d2c003844cd92bdb8a" title="Return absolute value of a value. " alt="" coords="142,1151,287,1192"/>
+<area shape="rect" id="node43" href="$d7/d3b/classnta_1_1SpriteBatch.html#aa703fb92d0bd42865c21fdfb2625660d" title="adds a glyph to the batch " alt="" coords="125,2425,304,2451"/>
+<area shape="rect" id="node45" href="$d6/d57/classnta_1_1SpriteFont.html#afdd646f19b11d9c8128151afad994a77" title="renders text with specified location, color, scale, etc. " alt="" coords="380,2483,551,2510"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#af556f826a8b7acb2fbbaa5259e6d95e8" title="Return sqrt(x^2 + y^2). " alt="" coords="393,721,538,763"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5f82947b70ae0c01993cb74563fd4daa" title="Compute distance function to 0&#45;valued isophotes, using the Eikonal PDE. " alt="" coords="629,370,805,426"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="639,903,794,959"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="644,983,789,1039"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae99520ae9a4fb73ffc69546da7146af2" title="Compute the absolute value of each pixel value. " alt="" coords="391,889,539,931"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a65499ae28999fc38a7bc90e64dd032a2" title="Compute the absolute value of each pixel value . " alt="" coords="379,955,552,996"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae8fb87bbd9424e931c491a2f37676d4" title="Return the variance as well as the average of the pixel values. " alt="" coords="358,1020,573,1061"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab5aa5a3191d2e8e631edf629a8fde719" title="Compute norm of the image, viewed as a matrix. " alt="" coords="372,1085,559,1127"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53284105886c5eb684b26e7dba5ede66" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a symmetric matrix..." alt="" coords="352,1151,579,1192"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c8a817208b7aa571350457969e9dbe" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="388,1216,543,1257"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cc211b93a6e65c76b3516d76644e730" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="375,1281,555,1323"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab850013f0ed453ba91ac0004e76f5d78" title="Compute Lp&#45;norm of each multi&#45;valued pixel of the image instance. " alt="" coords="387,1347,543,1388"/>
+<area shape="rect" id="node21" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4c8c93e2b41e9b3f973cb1130af80cc9" title="Compute L2&#45;norm of each multi&#45;valued pixel of the image instance . " alt="" coords="375,1412,556,1453"/>
+<area shape="rect" id="node22" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2a4911627e79fc18f759be236edd454" title="Label connected components . " alt="" coords="376,1477,555,1519"/>
+<area shape="rect" id="node23" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a648665fe1fc021d297a548f27b9da643" title="Shift image content. " alt="" coords="389,1543,541,1584"/>
+<area shape="rect" id="node24" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0c0d7575a84ce1ab046dc53699d555fd" title="Rotate image with arbitrary angle . " alt="" coords="393,1609,538,1665"/>
+<area shape="rect" id="node25" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a7a9e74dc09f2f79fcd3f605a2a9059" title="Blur image using patch&#45;based space . " alt="" coords="393,1689,538,1745"/>
+<area shape="rect" id="node26" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0f2e5b8bd31f04a77eb2244444de98b5" title="Blur image with the median filter . " alt="" coords="393,1769,538,1825"/>
+<area shape="rect" id="node27" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae884ac4a2168d7411b004a4e8c6869e5" title="Sharpen image. " alt="" coords="379,1849,552,1891"/>
+<area shape="rect" id="node28" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a30b6b9961bc765a0341c07d30b24134b" title="Draw a 3d point. " alt="" coords="370,1915,561,1956"/>
+<area shape="rect" id="node29" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa53f7c9ad99ba2362308a55b68b6ecba" title="Draw a 2d line. " alt="" coords="374,1980,557,2021"/>
+<area shape="rect" id="node30" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3474969fdaf5e50bc5a1b8e5831a566f" title="Draw a filled 2d triangle, with z&#45;buffering. " alt="" coords="388,2046,543,2102"/>
+<area shape="rect" id="node31" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aaba73a464f3efc3a88565f000216e86c" title="Draw a filled 4d rectangle. " alt="" coords="388,2126,543,2182"/>
+<area shape="rect" id="node32" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aba5835eafcb8746755d164f3f9d20b81" title="Draw a filled 2d polygon. " alt="" coords="388,2206,543,2262"/>
+<area shape="rect" id="node33" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af284a9329155592cfe0ca6bc237a4fd9" title="Draw an outlined 2d ellipse . " alt="" coords="388,2286,543,2342"/>
+<area shape="rect" id="node34" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4dfe9a9fb78df031a5750e7898af3d9e" title="Draw an image. " alt="" coords="367,5,564,47"/>
+<area shape="rect" id="node35" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6df87e6392200f8a295c2539f7c6cef0" title="Draw a 2d vector field, using a field of colors. " alt="" coords="388,71,543,127"/>
+<area shape="rect" id="node36" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a23c9260194d915f3826c3bd2ad8eb0da" title="Draw labeled horizontal and vertical axes . " alt="" coords="370,152,561,193"/>
+<area shape="rect" id="node37" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1dfebf569b61d5345ab349ca1418a78a" title="Draw filled 3d region with the flood fill algorithm. " alt="" coords="378,217,553,259"/>
+<area shape="rect" id="node38" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4ee4442b26855c03fbfbab878da90c07" title="Draw a quadratic Mandelbrot or Julia 2d fractal. " alt="" coords="388,283,543,339"/>
+<area shape="rect" id="node39" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3b96b681b3c0e11c067b12789328229a" title="Draw a 1d gaussian function. " alt="" coords="388,363,543,419"/>
+<area shape="rect" id="node40" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="393,443,538,499"/>
+<area shape="rect" id="node41" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42e1710c4e804e7ad70aaaa56e4d5e31" title="Load image from a BMP file . " alt="" coords="393,523,538,579"/>
+<area shape="rect" id="node42" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="381,604,549,645"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a18ba2075fe783f6b185de03695bd625f" title="Return a 3x3 rotation matrix from an { axis + angle } or a quaternion. " alt="" coords="631,677,802,733"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="637,757,796,799"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="643,823,791,879"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8025573f639ba766ca2270bf10c2d00f" title="Generate a 3d sphere. " alt="" coords="627,451,807,492"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a87afc1c040d254ef0ed370e37b5f8a77" title="Draw a 2d spline. " alt="" coords="639,517,794,573"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="633,597,801,653"/>
+<area shape="rect" id="node44" href="$df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69" title="draws all the particles " alt="" coords="394,2417,537,2459"/>
+<area shape="rect" id="node46" href="$d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc" title="renders texture " alt="" coords="371,2366,559,2393"/>
+</map>

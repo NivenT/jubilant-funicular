@@ -1,0 +1,32 @@
+<map id="deps/glm/gtc/quaternion.hpp" name="deps/glm/gtc/quaternion.hpp">
+<area shape="rect" id="node2" href="$dc/dad/glm_8cpp_source.html" title="deps/glm/detail/glm.cpp" alt="" coords="1028,162,1188,189"/>
+<area shape="rect" id="node3" href="$de/d41/epsilon_8inl.html" title="deps/glm/gtc/epsilon.inl" alt="" coords="1385,80,1543,107"/>
+<area shape="rect" id="node5" href="$d5/da8/ext_8hpp.html" title="deps/glm/ext.hpp" alt="" coords="449,423,572,449"/>
+<area shape="rect" id="node12" href="$d9/de2/matrix__decompose_8hpp.html" title="deps/glm/gtx/matrix\l_decompose.hpp" alt="" coords="933,333,1070,375"/>
+<area shape="rect" id="node13" href="$d9/db7/rotate__normalized__axis_8hpp.html" title="deps/glm/gtx/rotate\l_normalized_axis.hpp" alt="" coords="1589,244,1737,285"/>
+<area shape="rect" id="node15" href="$db/d7b/type__precision_8hpp.html" title="deps/glm/gtc/type_precision.hpp" alt="" coords="513,80,724,107"/>
+<area shape="rect" id="node18" href="$d3/de9/string__cast_8hpp.html" title="deps/glm/gtx/string\l_cast.hpp" alt="" coords="820,155,953,196"/>
+<area shape="rect" id="node20" href="$d9/d94/type__ptr_8hpp.html" title="deps/glm/gtc/type_ptr.hpp" alt="" coords="87,80,260,107"/>
+<area shape="rect" id="node22" href="$dd/d80/compatibility_8hpp.html" title="deps/glm/gtx/compatibility.hpp" alt="" coords="2113,80,2311,107"/>
+<area shape="rect" id="node25" href="$d1/d8e/dual__quaternion_8hpp.html" title="deps/glm/gtx/dual_quaternion.hpp" alt="" coords="1079,80,1297,107"/>
+<area shape="rect" id="node26" href="$d9/d04/hash_8hpp.html" title="deps/glm/gtx/hash.hpp" alt="" coords="1212,162,1367,189"/>
+<area shape="rect" id="node27" href="$df/d09/type__trait_8hpp.html" title="deps/glm/gtx/type_trait.hpp" alt="" coords="1582,162,1762,189"/>
+<area shape="rect" id="node30" href="$d0/d0c/gtx_2quaternion_8hpp.html" title="deps/glm/gtx/quaternion.hpp" alt="" coords="1995,162,2181,189"/>
+<area shape="rect" id="node4" href="$d9/dc7/epsilon_8hpp.html" title="deps/glm/gtc/epsilon.hpp" alt="" coords="1391,162,1558,189"/>
+<area shape="rect" id="node6" href="$d5/d76/gtc_2quaternion_8inl.html" title="deps/glm/gtc/quaternion.inl" alt="" coords="820,251,999,278"/>
+<area shape="rect" id="node7" href="$d2/ddb/ulp_8inl.html" title="deps/glm/gtc/ulp.inl" alt="" coords="1237,251,1371,278"/>
+<area shape="rect" id="node9" href="$d7/dfc/common_8inl.html" title="deps/glm/gtx/common.inl" alt="" coords="1396,251,1564,278"/>
+<area shape="rect" id="node11" href="$de/d4e/matrix__decompose_8inl.html" title="deps/glm/gtx/matrix\l_decompose.inl" alt="" coords="1023,244,1161,285"/>
+<area shape="rect" id="node14" href="$d6/d98/vector__angle_8hpp.html" title="deps/glm/gtx/vector\l_angle.hpp" alt="" coords="1761,244,1898,285"/>
+<area shape="rect" id="node8" href="$d1/db0/ulp_8hpp.html" title="deps/glm/gtc/ulp.hpp" alt="" coords="1234,341,1377,367"/>
+<area shape="rect" id="node10" href="$dc/d72/gtx_2common_8hpp.html" title="deps/glm/gtx/common.hpp" alt="" coords="1401,341,1577,367"/>
+<area shape="rect" id="node16" href="$d0/d9d/gtc_2packing_8hpp.html" title="deps/glm/gtc/packing.hpp" alt="" coords="536,341,707,367"/>
+<area shape="rect" id="node17" href="$d6/d65/number__precision_8hpp.html" title="deps/glm/gtx/number\l_precision.hpp" alt="" coords="328,155,472,196"/>
+<area shape="rect" id="node19" href="$d2/d30/gtx_2type__aligned_8hpp.html" title="deps/glm/gtx/type_aligned.hpp" alt="" coords="497,162,695,189"/>
+<area shape="rect" id="node21" href="$d2/d53/range_8hpp.html" title="deps/glm/gtx/range.hpp" alt="" coords="94,162,253,189"/>
+<area shape="rect" id="node23" href="$da/d61/euler__angles_8inl.html" title="deps/glm/gtx/euler\l_angles.inl" alt="" coords="2255,155,2385,196"/>
+<area shape="rect" id="node24" href="$d0/dd4/euler__angles_8hpp.html" title="deps/glm/gtx/euler\l_angles.hpp" alt="" coords="2305,244,2434,285"/>
+<area shape="rect" id="node28" href="$d1/d06/io_8inl.html" title="deps/glm/gtx/io.inl" alt="" coords="1923,251,2051,278"/>
+<area shape="rect" id="node29" href="$d2/dc6/io_8hpp.html" title="deps/glm/gtx/io.hpp" alt="" coords="1969,341,2105,367"/>
+<area shape="rect" id="node31" href="$df/d4f/norm_8hpp.html" title="deps/glm/gtx/norm.hpp" alt="" coords="2125,251,2280,278"/>
+</map>

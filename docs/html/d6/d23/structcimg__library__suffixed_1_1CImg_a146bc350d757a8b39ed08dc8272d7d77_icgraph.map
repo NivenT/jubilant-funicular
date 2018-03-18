@@ -1,0 +1,8 @@
+<map id="cimg_library_suffixed::CImg::sort" name="cimg_library_suffixed::CImg::sort">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aba5835eafcb8746755d164f3f9d20b81" title="Draw a filled 2d polygon. " alt="" coords="235,5,389,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a38c173e824721b1541e93d4cec9a1692" title="Sort pixel values and get sorting permutations . " alt="" coords="225,86,399,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5a7f39985713471c4289a68040242a6" title="Sort pixel values. " alt="" coords="237,151,387,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c8a817208b7aa571350457969e9dbe" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="235,217,389,258"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53284105886c5eb684b26e7dba5ede66" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a symmetric matrix..." alt="" coords="199,282,425,323"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae8fb87bbd9424e931c491a2f37676d4" title="Return the variance as well as the average of the pixel values. " alt="" coords="205,347,419,389"/>
+</map>

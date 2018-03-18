@@ -42,8 +42,14 @@ namespace nta {
                      ilGetInteger(IL_IMAGE_HEIGHT), 0, GL_RGBA, GL_UNSIGNED_BYTE,
                      (GLubyte*)ilGetData());
         #else
-            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.width(), image.height(),
-                         0, GL_RGBA, GL_UNSIGNED_BYTE, image.data());
+            // I'd prefer it if I could convert any image to RGBA
+            GLint format = image.spectrum() == 3 ? GL_RGB : GL_RGBA;
+            ret.width = image.width();
+            ret.height = image.height();
+            // CImg stores images in a stupid way; this fixes that
+            image.permute_axes("cxyz");
+            glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ret.width, ret.height,
+                         0, format, GL_UNSIGNED_BYTE, (GLubyte*)image.data());
         #endif
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, magFilt);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, minFilt);
@@ -54,9 +60,6 @@ namespace nta {
         #ifdef USE_DEVIL
             ret.width = ilGetInteger(IL_IMAGE_WIDTH);
             ret.height = ilGetInteger(IL_IMAGE_HEIGHT);
-        #else
-            ret.width = image.width();
-            ret.height = image.height();
         #endif
         Logger::writeToLog("Loaded image (" + to_string(ret.width) + " x " +
                            to_string(ret.height) + ")");

@@ -1,0 +1,63 @@
+<map id="Experimental extensions" name="Experimental extensions">
+<area shape="rect" id="node1" href="$da/dc8/group__gtx__matrix__interpolation.html" title="GLM_GTX_matrix_interpolation" alt="" coords="229,5,433,32"/>
+<area shape="rect" id="node2" href="$dc/daf/group__gtx__matrix__major__storage.html" title="GLM_GTX_matrix_major\l_storage" alt="" coords="248,57,415,98"/>
+<area shape="rect" id="node3" href="$d3/dd0/group__gtx__color__space.html" title="GLM_GTX_color_space" alt="" coords="251,123,412,149"/>
+<area shape="rect" id="node4" href="$d4/d30/group__gtx__polar__coordinates.html" title="GLM_GTX_polar_coordinates" alt="" coords="235,173,428,200"/>
+<area shape="rect" id="node6" href="$d7/d1c/group__gtx__dual__quaternion.html" title="GLM_GTX_dual_quaternion" alt="" coords="240,224,423,251"/>
+<area shape="rect" id="node7" href="$d1/d47/group__gtx__normal.html" title="GLM_GTX_normal" alt="" coords="266,275,397,301"/>
+<area shape="rect" id="node8" href="$d9/dd5/group__gtx__type__trait.html" title="GLM_GTX_type_trait" alt="" coords="259,325,404,352"/>
+<area shape="rect" id="node9" href="$d6/dd9/group__gtx__common.html" title="Provide functions to increase the compatibility with Cg and HLSL languages. " alt="" coords="261,376,402,403"/>
+<area shape="rect" id="node10" href="$df/d2a/group__gtx__intersect.html" title="GLM_GTX_intersect" alt="" coords="261,427,402,453"/>
+<area shape="rect" id="node11" href="$d4/d36/group__gtx__closest__point.html" title="GLM_GTX_closest_point" alt="" coords="247,477,415,504"/>
+<area shape="rect" id="node12" href="$dd/d4e/group__gtx__io.html" title="GLM_GTX_io" alt="" coords="281,528,382,555"/>
+<area shape="rect" id="node13" href="$df/d32/group__gtx__vec__swizzle.html" title="GLM_GTX_vec_swizzle" alt="" coords="250,579,413,605"/>
+<area shape="rect" id="node14" href="$de/d17/group__gtx__mixed__product.html" title="GLM_GTX_mixed_producte" alt="" coords="240,629,423,656"/>
+<area shape="rect" id="node15" href="$d2/d8d/group__gtx__gradient__paint.html" title="GLM_GTX_gradient_paint" alt="" coords="245,680,417,707"/>
+<area shape="rect" id="node16" href="$d4/d07/group__gtx__integer.html" title="GLM_GTX_integer" alt="" coords="266,731,397,757"/>
+<area shape="rect" id="node17" href="$d5/ddd/group__gtx__bit.html" title="GLM_GTX_bit" alt="" coords="279,781,384,808"/>
+<area shape="rect" id="node18" href="$df/dbe/group__gtx__string__cast.html" title="GLM_GTX_string_cast" alt="" coords="254,832,409,859"/>
+<area shape="rect" id="node19" href="$db/db7/group__gtx__norm.html" title="GLM_GTX_norm" alt="" coords="271,883,391,909"/>
+<area shape="rect" id="node20" href="$df/dc7/group__gtx__std__based__type.html" title="GLM_GTX_std_based_type" alt="" coords="240,933,423,960"/>
+<area shape="rect" id="node21" href="$dc/db7/group__gtx__number__precision.html" title="GLM_GTX_number_precision" alt="" coords="235,984,428,1011"/>
+<area shape="rect" id="node22" href="$d5/da3/group__gtx__transform.html" title="GLM_GTX_transform" alt="" coords="258,1035,405,1061"/>
+<area shape="rect" id="node23" href="$d9/d75/group__gtx__matrix__cross__product.html" title="GLM_GTX_matrix_cross\l_product" alt="" coords="248,1086,415,1127"/>
+<area shape="rect" id="node24" href="$d4/d76/group__gtx__wrap.html" title="GLM_GTX_wrap" alt="" coords="272,1152,391,1179"/>
+<area shape="rect" id="node25" href="$d3/d49/group__gtx__scalar__relational.html" title="GLM_GTX_scalar_relational" alt="" coords="239,1203,424,1229"/>
+<area shape="rect" id="node26" href="$dc/da4/group__gtx__vector__query.html" title="GLM_GTX_vector_query" alt="" coords="248,1253,415,1280"/>
+<area shape="rect" id="node27" href="$d5/db0/group__gtx__texture.html" title="GLM_GTX_texture" alt="" coords="266,1304,397,1331"/>
+<area shape="rect" id="node28" href="$df/d2c/group__gtx__matrix__operation.html" title="GLM_GTX_matrix_operation" alt="" coords="238,1355,425,1381"/>
+<area shape="rect" id="node29" href="$df/d21/group__gtx__matrix__query.html" title="GLM_GTX_matrix_query" alt="" coords="248,1405,415,1432"/>
+<area shape="rect" id="node30" href="$dd/d66/group__gtx__component__wise.html" title="GLM_GTX_component_wise" alt="" coords="237,1456,426,1483"/>
+<area shape="rect" id="node31" href="$d2/da2/group__gtx__hash.html" title="Add std::hash support for glm types. " alt="" coords="272,1507,391,1533"/>
+<area shape="rect" id="node32" href="$d2/d6b/group__gtx__range.html" title="GLM_GTX_range" alt="" coords="270,1557,393,1584"/>
+<area shape="rect" id="node33" href="$da/d53/group__gtx__fast__square__root.html" title="GLM_GTX_fast_square_root" alt="" coords="237,1608,425,1635"/>
+<area shape="rect" id="node34" href="$d2/d7e/group__gtx__euler__angles.html" title="GLM_GTX_euler_angles" alt="" coords="249,1659,413,1685"/>
+<area shape="rect" id="node35" href="$d4/de8/group__gtx__rotate__normalized__axis.html" title="GLM_GTX_rotate_normalized_axis" alt="" coords="219,1709,444,1736"/>
+<area shape="rect" id="node36" href="$df/dfe/group__gtx__transform2.html" title="GLM_GTX_transform2" alt="" coords="255,1760,408,1787"/>
+<area shape="rect" id="node37" href="$df/d72/group__gtx__extended__min__max.html" title="GLM_GTX_extented_min_max" alt="" coords="231,1811,432,1837"/>
+<area shape="rect" id="node38" href="$da/dba/group__gtx__type__aligned.html" title="GLM_GTX_type_aligned" alt="" coords="249,1861,413,1888"/>
+<area shape="rect" id="node39" href="$d0/dc7/group__gtx__color__space__YCoCg.html" title="GLM_GTX_color_space\l_YCoCg" alt="" coords="251,1913,412,1954"/>
+<area shape="rect" id="node40" href="$d0/d45/group__gtx__extend.html" title="GLM_GTX_extend" alt="" coords="266,1979,397,2005"/>
+<area shape="rect" id="node41" href="$d7/d53/group__gtx__spline.html" title="GLM_GTX_spline" alt="" coords="269,2029,394,2056"/>
+<area shape="rect" id="node42" href="$da/dcd/group__gtx__raw__data.html" title="GLM_GTX_raw_data" alt="" coords="259,2080,403,2107"/>
+<area shape="rect" id="node43" href="$da/df6/group__gtx__fast__exponential.html" title="GLM_GTX_fast_exponential" alt="" coords="238,2131,425,2157"/>
+<area shape="rect" id="node44" href="$d2/d51/group__gtx__log__base.html" title="GLM_GTX_log_base" alt="" coords="260,2181,403,2208"/>
+<area shape="rect" id="node45" href="$d5/d8c/group__gtx__compatibility.html" title="GLM_GTX_compatibility" alt="" coords="249,2232,413,2259"/>
+<area shape="rect" id="node46" href="$d6/d10/group__gtx__associated__min__max.html" title="Min and max functions that return associated values not the compared onces. " alt="" coords="254,2283,409,2325"/>
+<area shape="rect" id="node47" href="$dc/dd0/group__gtx__optimum__pow.html" title="GLM_GTX_optimum_pow" alt="" coords="245,2349,417,2376"/>
+<area shape="rect" id="node48" href="$d4/dff/group__gtx__handed__coordinate__space.html" title="GLM_GTX_handed_coordinate\l_space" alt="" coords="231,2401,431,2442"/>
+<area shape="rect" id="node49" href="$dc/d5a/group__gtx__normalize__dot.html" title="GLM_GTX_normalize_dot" alt="" coords="245,2467,417,2493"/>
+<area shape="rect" id="node50" href="$d8/db2/group__gtx__quaternion.html" title="GLM_GTX_quaternion" alt="" coords="256,2517,407,2544"/>
+<area shape="rect" id="node51" href="$d6/dab/group__gtx__functions.html" title="GLM_GTX_functions" alt="" coords="259,2568,403,2595"/>
+<area shape="rect" id="node52" href="$de/de7/group__gtx__vector__angle.html" title="GLM_GTX_vector_angle" alt="" coords="249,2619,414,2645"/>
+<area shape="rect" id="node53" href="$d2/d37/group__gtx__exterior__product.html" title="Allow to perform bit operations on integer values. " alt="" coords="239,2669,423,2696"/>
+<area shape="rect" id="node54" href="$df/d02/group__gtx__matrix__factorisation.html" title="GLM_GTX_matrix_factorisation" alt="" coords="229,2720,434,2747"/>
+<area shape="rect" id="node55" href="$dd/d33/group__gtx__color__encoding.html" title="Allow to perform bit operations on integer values. " alt="" coords="242,2771,421,2797"/>
+<area shape="rect" id="node56" href="$d8/dd5/group__gtx__perpendicular.html" title="GLM_GTX_perpendicular" alt="" coords="247,2821,415,2848"/>
+<area shape="rect" id="node57" href="$de/d35/group__gtx__orthonormalize.html" title="GLM_GTX_orthonormalize" alt="" coords="243,2872,419,2899"/>
+<area shape="rect" id="node58" href="$d3/dfe/group__gtx__matrix__decompose.html" title="GLM_GTX_matrix_decompose" alt="" coords="231,2923,432,2949"/>
+<area shape="rect" id="node59" href="$de/dec/group__gtx__projection.html" title="GLM_GTX_projection" alt="" coords="258,2973,405,3000"/>
+<area shape="rect" id="node60" href="$de/d60/group__gtx__matrix__transform__2d.html" title="GLM_GTX_matrix_transform_2d" alt="" coords="226,3024,437,3051"/>
+<area shape="rect" id="node61" href="$d5/dad/group__gtx__fast__trigonometry.html" title="GLM_GTX_fast_trigonometry" alt="" coords="235,3075,427,3101"/>
+<area shape="rect" id="node62" href="$df/d02/group__gtx__rotate__vector.html" title="GLM_GTX_rotate_vector" alt="" coords="248,3125,415,3152"/>
+</map>

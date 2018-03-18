@@ -1,0 +1,7 @@
+<map id="cimg_library_suffixed::CImg::min_max" name="cimg_library_suffixed::CImg::min_max">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a08d04add0f5b2a69f62d08843aefdb98" title="Display 1d graph in an interactive window . " alt="" coords="199,5,405,47"/>
+<area shape="rect" id="node3" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="219,71,385,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="465,5,624,47"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="462,71,627,112"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="453,136,636,177"/>
+</map>

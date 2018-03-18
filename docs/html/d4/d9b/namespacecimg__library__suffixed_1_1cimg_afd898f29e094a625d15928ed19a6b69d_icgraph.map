@@ -1,0 +1,15 @@
+<map id="cimg_library_suffixed::cimg::endianness" name="cimg_library_suffixed::cimg::endianness">
+<area shape="rect" id="node2" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a9f035a4d721bfb452ddc1dd3dbd948a0" title="Load a list from a .cimg file . " alt="" coords="218,5,366,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a16af7989fefb8c8fcdd8df23afc5de8b" title="Load image from an INRIMAGE&#45;4 file . " alt="" coords="219,85,365,141"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a96c318d8b73a3a8b4eae37d05e3a48fa" title="Load image from a PFM file . " alt="" coords="219,165,365,221"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab218608a32068fc1210d1a225956e073" title="Load image from a PNG file . " alt="" coords="219,245,365,301"/>
+<area shape="rect" id="node6" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a6ef5394483360f2220873d2b8b856789" title="Serialize a CImgList&lt;T&gt; instance into a raw CImg&lt;unsigned char&gt; buffer. " alt="" coords="218,325,366,381"/>
+<area shape="rect" id="node7" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab2437a10d0bbe2f4d5e91a49dc5cd105" title="Unserialize a CImg&lt;unsigned char&gt; serialized buffer into a CImgList&lt;T&gt; list. " alt="" coords="218,405,366,461"/>
+<area shape="rect" id="node8" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79b7a247520612001a04d8ef1c2991dc" title="Print information about &#160;environement variables. " alt="" coords="219,486,365,527"/>
+<area shape="rect" id="node9" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#affbfd21835dfd5c00fe98cc71c7760c2" title="Load a list from a PAR/REC (Philips) file. " alt="" coords="218,552,366,608"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a3d34d49b4dd45bfea1192ee67dcb7e85" title="Save list into a .cimg file. " alt="" coords="218,632,366,688"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a275c729648a61fe823fc3febafdb27b9" title="Save image as an INRIMAGE&#45;4 file . " alt="" coords="204,713,380,754"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aedf67e5855e15c6f68a11799484a8664" title="Save image as a PFM file . " alt="" coords="200,778,384,819"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d0638773cbbd7878145efa9fa3dea2a" title="Save image as a PNG file . " alt="" coords="201,843,383,885"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a082172c693e383f01cc6cff4fec1353d" title="Save image as a PNM file . " alt="" coords="199,909,385,950"/>
+</map>

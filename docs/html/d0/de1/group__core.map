@@ -1,0 +1,13 @@
+<map id="Core features" name="Core features">
+<area shape="rect" id="node1" href="$da/d97/group__core__template.html" title="The generic template types used as the basis for the core types. " alt="" coords="190,5,302,32"/>
+<area shape="rect" id="node2" href="$d7/d12/group__core__func__matrix.html" title="Matrix functions" alt="" coords="189,56,303,83"/>
+<area shape="rect" id="node3" href="$d3/dab/group__core__precision.html" title="Non&#45;GLSL types that are used to define qualifier&#45;based types. " alt="" coords="190,107,302,133"/>
+<area shape="rect" id="node4" href="$df/d74/group__core__func__exponential.html" title="Exponential functions" alt="" coords="173,157,319,184"/>
+<area shape="rect" id="node5" href="$db/dac/group__core__types.html" title="The standard types defined by the specification. " alt="" coords="217,208,275,235"/>
+<area shape="rect" id="node6" href="$d3/d3c/group__core__func__integer.html" title="Integer functions" alt="" coords="187,259,305,285"/>
+<area shape="rect" id="node7" href="$d6/da9/group__core__func__geometric.html" title="Geometric functions" alt="" coords="177,309,315,336"/>
+<area shape="rect" id="node8" href="$d8/d06/group__core__func__vector__relational.html" title="Vector Relational Functions" alt="" coords="155,360,337,387"/>
+<area shape="rect" id="node9" href="$dc/d43/group__core__func__trigonometric.html" title="Angle and Trigonometry\l Functions" alt="" coords="166,411,326,453"/>
+<area shape="rect" id="node10" href="$d0/de3/group__core__func__common.html" title="Common functions" alt="" coords="180,477,312,504"/>
+<area shape="rect" id="node11" href="$d2/d2e/group__core__func__packing.html" title="Floating&#45;Point Pack\l and Unpack Functions" alt="" coords="167,529,325,570"/>
+</map>

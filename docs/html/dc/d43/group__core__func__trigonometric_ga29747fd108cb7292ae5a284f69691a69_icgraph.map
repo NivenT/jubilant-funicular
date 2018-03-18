@@ -1,0 +1,39 @@
+<map id="glm::sin" name="glm::sin">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="148,5,296,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cdc2da46ee1679928f178b0b886fba3" title="Generate a 3d cone. " alt="" coords="137,86,307,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a009c1cb31d4c261774a310e10d0ee9d7" title="Generate a 3d cylinder. " alt="" coords="129,151,315,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af284a9329155592cfe0ca6bc237a4fd9" title="Draw an outlined 2d ellipse . " alt="" coords="145,217,299,273"/>
+<area shape="rect" id="node6" href="$d4/d30/group__gtx__polar__coordinates.html#ga1821d5b3324201e60a9e2823d0b5d0c8" title="glm::euclidean" alt="" coords="169,297,275,324"/>
+<area shape="rect" id="node7" href="$d2/d7e/group__gtx__euler__angles.html#gafba6282e4ed3ff8b5c75331abfba3489" title="glm::eulerAngleX" alt="" coords="161,348,283,375"/>
+<area shape="rect" id="node10" href="$d2/d7e/group__gtx__euler__angles.html#ga64036577ee17a2d24be0dbc05881d4e2" title="glm::eulerAngleXY" alt="" coords="157,500,287,527"/>
+<area shape="rect" id="node11" href="$d2/d7e/group__gtx__euler__angles.html#ga1975e0f0e9bed7f716dc9946da2ab645" title="glm::eulerAngleXYZ" alt="" coords="153,551,291,577"/>
+<area shape="rect" id="node12" href="$d2/d7e/group__gtx__euler__angles.html#gab84bf4746805fd69b8ecbb230e3974c5" title="glm::eulerAngleY" alt="" coords="161,449,283,476"/>
+<area shape="rect" id="node15" href="$d2/d7e/group__gtx__euler__angles.html#ga4f57e6dd25c3cffbbd4daa6ef3f4486d" title="glm::eulerAngleYX" alt="" coords="157,601,287,628"/>
+<area shape="rect" id="node16" href="$d2/d7e/group__gtx__euler__angles.html#gab8ba99a9814f6d9edf417b6c6d5b0c10" title="glm::eulerAngleYXZ" alt="" coords="153,652,291,679"/>
+<area shape="rect" id="node17" href="$d2/d7e/group__gtx__euler__angles.html#ga5b3935248bb6c3ec6b0d9297d406e251" title="glm::eulerAngleZ" alt="" coords="162,399,282,425"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#abf1763dd0cf132f59147662022feb791" title="Compute 1d Fast Fourier Transform, along a specified axis. " alt="" coords="147,703,297,745"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a64daf19c4563cf892e2d3dae98843904" title="Convert pixel values from CMYK to RGB color spaces . " alt="" coords="149,769,295,825"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0c0d7575a84ce1ab046dc53699d555fd" title="Rotate image with arbitrary angle . " alt="" coords="149,849,295,905"/>
+<area shape="rect" id="node21" href="$d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3" title="returns the 3x3 matrix representing the camera&#39;s view " alt="" coords="121,930,323,971"/>
+<area shape="rect" id="node22" href="$d2/d7e/group__gtx__euler__angles.html#gae16738a9f1887cf4e4db6a124637608d" title="glm::orientate2" alt="" coords="168,996,276,1023"/>
+<area shape="rect" id="node23" href="$d2/d7e/group__gtx__euler__angles.html#ga7ca98668a5786f19c7b38299ebbc9b4c" title="glm::orientate3" alt="" coords="168,1047,276,1073"/>
+<area shape="rect" id="node24" href="$d6/d4f/structnta_1_1Primitive.html#aecce4a7f13b72766aed56ca66760b43d" title="Constructs an untextured regular polygon. " alt="" coords="143,1097,301,1124"/>
+<area shape="rect" id="node25" href="$df/d02/group__gtx__rotate__vector.html#gab64a67b52ff4f86c3ba16595a5a25af6" title="glm::rotate" alt="" coords="180,1148,264,1175"/>
+<area shape="rect" id="node26" href="$d4/de8/group__gtx__rotate__normalized__axis.html#ga50efd7ebca0f7a603bb3cc11e34c708d" title="glm::rotateNormalizedAxis" alt="" coords="134,1199,310,1225"/>
+<area shape="rect" id="node27" href="$df/d02/group__gtx__rotate__vector.html#ga059fdbdba4cca35cdff172a9d0d0afc9" title="glm::rotateX" alt="" coords="175,1249,269,1276"/>
+<area shape="rect" id="node28" href="$df/d02/group__gtx__rotate__vector.html#gaebdc8b054ace27d9f62e054531c6f44d" title="glm::rotateY" alt="" coords="175,1300,269,1327"/>
+<area shape="rect" id="node29" href="$df/d02/group__gtx__rotate__vector.html#ga5a048838a03f6249acbacb4dbacf79c4" title="glm::rotateZ" alt="" coords="176,1351,268,1377"/>
+<area shape="rect" id="node30" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a18ba2075fe783f6b185de03695bd625f" title="Return a 3x3 rotation matrix from an { axis + angle } or a quaternion. " alt="" coords="137,1401,307,1457"/>
+<area shape="rect" id="node31" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa7c480b97c30c6e48a0af6ca21bc9ab1" title="Compute the sine of each pixel value. " alt="" coords="149,1482,295,1523"/>
+<area shape="rect" id="node32" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ae3375412d53d28356063384da9fd9ad2" title="Return the sinc of a given value. " alt="" coords="149,1547,295,1589"/>
+<area shape="rect" id="node35" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8e6e4d77fb5eba21751926bb972d89d5" title="Generate a 3d torus. " alt="" coords="137,1613,307,1654"/>
+<area shape="rect" id="node36" href="$d2/d7e/group__gtx__euler__angles.html#gae6aa26ccb020d281b449619e419a609e" title="glm::yawPitchRoll" alt="" coords="158,1679,286,1705"/>
+<area shape="rect" id="node8" href="$d2/d7e/group__gtx__euler__angles.html#gaa39bd323c65c2fc0a1508be33a237ce9" title="glm::eulerAngleXZ" alt="" coords="394,323,523,349"/>
+<area shape="rect" id="node9" href="$d2/d7e/group__gtx__euler__angles.html#ga483903115cd4059228961046a28d69b5" title="glm::eulerAngleZX" alt="" coords="394,373,523,400"/>
+<area shape="rect" id="node13" href="$d2/d7e/group__gtx__euler__angles.html#ga220379e10ac8cca55e275f0c9018fed9" title="glm::eulerAngleYZ" alt="" coords="394,424,523,451"/>
+<area shape="rect" id="node14" href="$d2/d7e/group__gtx__euler__angles.html#ga400b2bd5984999efab663f3a68e1d020" title="glm::eulerAngleZY" alt="" coords="394,475,523,501"/>
+<area shape="rect" id="node33" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8e636ccdee823c4c9c28861baea5e28b" title="Compute the sinc of each pixel value. " alt="" coords="383,1502,534,1543"/>
+<area shape="rect" id="node34" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7e4b91912494fd5db7c82360809513a4" title="Compute the sinc of each pixel value . " alt="" coords="371,1567,547,1609"/>
+<area shape="rect" id="node37" href="$d2/d7e/group__gtx__euler__angles.html#ga7238c8e15c7720e3ca6a45ab151eeabb" title="glm::orientate3" alt="" coords="405,1653,513,1680"/>
+<area shape="rect" id="node38" href="$d2/d7e/group__gtx__euler__angles.html#ga4a044653f71a4ecec68e0b623382b48a" title="glm::orientate4" alt="" coords="405,1704,513,1731"/>
+</map>

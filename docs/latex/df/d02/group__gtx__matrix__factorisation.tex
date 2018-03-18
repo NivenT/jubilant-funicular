@@ -1,0 +1,97 @@
+\hypertarget{group__gtx__matrix__factorisation}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}
+\label{group__gtx__matrix__factorisation}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}}
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d02/group__gtx__matrix__factorisation}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ \hyperlink{group__gtx__matrix__factorisation_ga85003371f0ba97380dd25e8905de1870}{glm\+::flipud} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&in)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ \hyperlink{group__gtx__matrix__factorisation_gaf39f4e5f78eb29c1a90277d45b9b3feb}{glm\+::fliplr} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&in)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void \hyperlink{group__gtx__matrix__factorisation_ga77022dca1aa38add548f9f56a9f8071a}{glm\+::qr\+\_\+decompose} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&in, \hyperlink{structglm_1_1mat}{mat}$<$(C$<$ R ? C \+:R), R, T, Q $>$ \&q, \hyperlink{structglm_1_1mat}{mat}$<$ C,(C$<$ R ? C \+:R), T, Q $>$ \&r)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void \hyperlink{group__gtx__matrix__factorisation_ga4e022709c9e7eaad9d7cc315d2cdb05c}{glm\+::rq\+\_\+decompose} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&in, \hyperlink{structglm_1_1mat}{mat}$<$(C$<$ R ? C \+:R), R, T, Q $>$ \&r, \hyperlink{structglm_1_1mat}{mat}$<$ C,(C$<$ R ? C \+:R), T, Q $>$ \&q)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{matrix__factorisation_8hpp}{glm/gtx/matrix\+\_\+factorisation.\+hpp}$>$ to use the features of this extension.
+
+Functions to factor matrices in various forms 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__matrix__factorisation_gaf39f4e5f78eb29c1a90277d45b9b3feb}\label{group__gtx__matrix__factorisation_gaf39f4e5f78eb29c1a90277d45b9b3feb}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}!fliplr@{fliplr}}
+\index{fliplr@{fliplr}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}}
+\subsubsection{\texorpdfstring{fliplr()}{fliplr()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$C, R, T, Q$>$ glm\+::fliplr (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{in }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix__factorisation_8hpp}{deps/glm/gtx/matrix\+\_\+factorisation.\+hpp}$>$}
+
+Flips the matrix columns right and left.
+
+From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation extension. 
+
+Definition at line 17 of file matrix\+\_\+factorisation.\+inl.
+
+\mbox{\Hypertarget{group__gtx__matrix__factorisation_ga85003371f0ba97380dd25e8905de1870}\label{group__gtx__matrix__factorisation_ga85003371f0ba97380dd25e8905de1870}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}!flipud@{flipud}}
+\index{flipud@{flipud}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}}
+\subsubsection{\texorpdfstring{flipud()}{flipud()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$C, R, T, Q$>$ glm\+::flipud (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{in }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix__factorisation_8hpp}{deps/glm/gtx/matrix\+\_\+factorisation.\+hpp}$>$}
+
+Flips the matrix rows up and down.
+
+From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation extension. 
+
+Definition at line 7 of file matrix\+\_\+factorisation.\+inl.
+
+\mbox{\Hypertarget{group__gtx__matrix__factorisation_ga77022dca1aa38add548f9f56a9f8071a}\label{group__gtx__matrix__factorisation_ga77022dca1aa38add548f9f56a9f8071a}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}!qr\+\_\+decompose@{qr\+\_\+decompose}}
+\index{qr\+\_\+decompose@{qr\+\_\+decompose}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}}
+\subsubsection{\texorpdfstring{qr\+\_\+decompose()}{qr\_decompose()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void glm\+::qr\+\_\+decompose (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{in }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix__factorisation_8hpp}{deps/glm/gtx/matrix\+\_\+factorisation.\+hpp}$>$}
+
+Performs QR factorisation of a matrix. Returns 2 matrices, q and r, such that the columns of q are orthonormal and span the same subspace than those of the input matrix, r is an upper triangular matrix, and q$\ast$r=in. Given an n-\/by-\/m input matrix, q has dimensions min(n,m)-\/by-\/m, and r has dimensions n-\/by-\/min(n,m).
+
+From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation extension. 
+
+Definition at line 29 of file matrix\+\_\+factorisation.\+inl.
+
+\mbox{\Hypertarget{group__gtx__matrix__factorisation_ga4e022709c9e7eaad9d7cc315d2cdb05c}\label{group__gtx__matrix__factorisation_ga4e022709c9e7eaad9d7cc315d2cdb05c}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}!rq\+\_\+decompose@{rq\+\_\+decompose}}
+\index{rq\+\_\+decompose@{rq\+\_\+decompose}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation}}
+\subsubsection{\texorpdfstring{rq\+\_\+decompose()}{rq\_decompose()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL void glm\+::rq\+\_\+decompose (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{in }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix__factorisation_8hpp}{deps/glm/gtx/matrix\+\_\+factorisation.\+hpp}$>$}
+
+Performs RQ factorisation of a matrix. Returns 2 matrices, r and q, such that r is an upper triangular matrix, the rows of q are orthonormal and span the same subspace than those of the input matrix, and r$\ast$q=in. Note that in the context of RQ factorisation, the diagonal is seen as starting in the lower-\/right corner of the matrix, instead of the usual upper-\/left. Given an n-\/by-\/m input matrix, r has dimensions min(n,m)-\/by-\/m, and q has dimensions n-\/by-\/min(n,m).
+
+From G\+L\+M\+\_\+\+G\+T\+X\+\_\+matrix\+\_\+factorisation extension. 
+
+Definition at line 64 of file matrix\+\_\+factorisation.\+inl.
+

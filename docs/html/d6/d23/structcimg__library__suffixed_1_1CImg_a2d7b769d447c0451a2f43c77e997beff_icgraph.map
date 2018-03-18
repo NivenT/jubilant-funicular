@@ -1,0 +1,19 @@
+<map id="cimg_library_suffixed::CImg::width" name="cimg_library_suffixed::CImg::width">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aed98b23130078df5ad69b199d88bb261" title="Correlate image by a kernel . " alt="" coords="205,5,389,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ad2488203cbf2fddba82666454ea7c90b" title="Test if list contains one particular pixel location. " alt="" coords="223,71,371,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="213,152,381,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="213,218,381,274"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5e83113325c35b381602201045cff902" title="Draw a labeled horizontal axis. " alt="" coords="204,299,391,340"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4dfe9a9fb78df031a5750e7898af3d9e" title="Draw an image. " alt="" coords="199,364,396,405"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="220,430,375,486"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ad92c0b62d21067c53e031c147d71a3f1" title="Draw a textured 2d spline. " alt="" coords="220,510,375,566"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a3783a9b4937b941920639a5c9c82011d" title="Crop font along the X&#45;axis . " alt="" coords="223,590,371,646"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66a723bf61125378577a3e99247ff8da" title="Dilate image by a structuring element . " alt="" coords="225,670,370,726"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aad353fc91b0c6ef3c0251f4f46a96150" title="Erode image by a structuring element . " alt="" coords="205,751,389,792"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#abaf896349a1ec4915f7064f5fa1e6076" title="Compute correspondence map between two images, using the patch&#45;match algorithm . " alt="" coords="225,817,370,873"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="225,897,370,953"/>
+<area shape="rect" id="node15" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="223,977,371,1033"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="225,1057,370,1113"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a09711118d3b31870942e99adbefffed1" title="Save image as an ANALYZE7.5 or NIFTI file. " alt="" coords="220,1137,375,1193"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42395174c544ec66191539bf76fcb360" title="Texturize primitives of a 3d object. " alt="" coords="209,1217,386,1273"/>
+</map>
