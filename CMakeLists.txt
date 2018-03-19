@@ -61,7 +61,6 @@ set(NTA_LIBRARIES nta CACHE INTERNAL "")
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/deps
-	${CMAKE_CURRENT_SOURCE_DIR}/deps/DevIL/include
 	CACHE INTERNAL "")
 
 if(${NTA_USE_DEVIL})
@@ -74,9 +73,8 @@ add_subdirectory(src)
 
 if(${NTA_USE_DEVIL})
 	message(STATUS "Using DevIL for image loading")
- 	add_subdirectory(deps/DevIL)
-	set(NTA_LIBRARIES ${NTA_LIBRARIES} IL ILU ILUT CACHE INTERNAL "")
-	add_dependencies(nta IL ILU ILUT)
+ 	find_package(DevIL REQUIRED)
+	set(NTA_LIBRARIES ${NTA_LIBRARIES} ${IL_LIBRARIES} ${ILU_LIBRARIES} CACHE INTERNAL "")
 else()
 	message(STATUS "Using CImg for image loading")
 	# X11 is for CImg <--- TODO: This is OS dependent so make it OS agnostic instead

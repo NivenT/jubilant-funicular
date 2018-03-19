@@ -16,12 +16,13 @@ Ideally, there would be no dependencies and all the necessary code would be writ
 * [SDL2](https://www.libsdl.org/download-2.0.php)
   * SDL2-mixer
   * SDL2-ttf
+* [DevIL](http://openil.sourceforge.net/)
 
 All of these can be obtained using `apt-get` on Ubuntu. If you want to get them all at once, run
 
 ```bash
 sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \
-    libglew-dev freeglut3-dev libxmu-dev libxi-dev
+    libglew-dev freeglut3-dev libxmu-dev libxi-dev libdevil-dev
 ```
 You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)
 
