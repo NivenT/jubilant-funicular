@@ -50,9 +50,12 @@ namespace nta {
         }
         m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, sdlFlags);
         SDL_GL_CreateContext(m_window);
-        glewExperimental = GL_TRUE;
-        if (glewInit() != GLEW_OK) {
-            Logger::writeErrorToLog("Failed to initialize glew");
+        glewExperimental = GL_TRUE; // I don't remember what this does or why it is needed
+        
+        const GLenum err = glewInit();
+        if (err != GLEW_OK) {
+            Logger::writeErrorToLog("Failed to initialize glew: " 
+                                    + nta::to_string(glewGetErrorString(err)));
         }
         SDL_GL_SetSwapInterval(1);
         Logger::writeToLog("Created window");
