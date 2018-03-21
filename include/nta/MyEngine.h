@@ -10,6 +10,10 @@ typedef const std::string& crstring; // constant reference string
 typedef const glm::vec2& crvec2;
 typedef const glm::vec3& crvec3;
 typedef const glm::vec4& crvec4;
+
+// TODO: Remove
+#include <GLMConsoleOutput.h>
+
 namespace nta {
     /// initializes some basic stuff for the engine
     extern void init();
@@ -30,21 +34,5 @@ namespace nta {
         return (min <= val && val <= max);
     } 
 };
-/*
-/// transforms a value in the range [a,b] to a value in the range [c,d]
-extern float changeRange(float val, float a, float b, float c, float d);
-/// calls the first function corresponding to a true statement
-extern void cond(std::initializer_list<bool> conditions, std::initializer_list<std::function<void()>> exprs);
 
-/// returns the first value corresponding to a true statement
-template<class T>
-T cond(std::initializer_list<bool> conditions, std::initializer_list<T> vals) {
-    for (int i = 0; i < conditions.size(); i++) {
-        if (*(conditions.begin()+i)) {
-            return *(vals.begin()+i);
-        }
-    }
-    return T();
-}  
-*/
 #endif // MYENGINE_H_INCLUDED
