@@ -49,7 +49,10 @@ namespace nta {
             sdlFlags &= ~SDL_WINDOW_RESIZABLE;
         }
         m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, sdlFlags);
-        SDL_GL_CreateContext(m_window);
+        if (!SDL_GL_CreateContext(m_window)) {
+            Logger::writeErrorToLog("Failed to create a GL context: "
+                                    + nta::to_string(SDL_GetError()));
+        }
         glewExperimental = GL_TRUE; // I don't remember what this does or why it is needed
         
         const GLenum err = glewInit();
