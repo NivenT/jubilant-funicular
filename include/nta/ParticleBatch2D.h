@@ -1,6 +1,8 @@
 #ifndef PARTICLEBATCH2D_H_INCLUDED
 #define PARTICLEBATCH2D_H_INCLUDED
 
+#include <functional>
+
 #include "SpriteBatch.h"
 
 namespace nta {

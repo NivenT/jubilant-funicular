@@ -24,7 +24,7 @@ namespace nta {
         bool empty = m_queue.empty();
         m_queue[e.when].push_back(&e);
         // Second half of || is impossible, but the analagous check
-        //   won't be impossible if we basing time on an actual clock
+        //   won't be impossible if we base time on an actual clock
         if (empty || e.when < m_curr_frame) {
             m_cv.notify_one();
         }
@@ -110,8 +110,8 @@ namespace nta {
         m_cv.notify_one();
         m_mutex.unlock();
 
-        m_dispatcher.join();
         m_pool.wait();
+        m_dispatcher.join();
 
         m_curr_frame = 0;
         m_queue.clear();

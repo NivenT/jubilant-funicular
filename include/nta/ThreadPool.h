@@ -7,6 +7,7 @@
 #include <atomic>
 #include <queue>
 #include <mutex>
+#include <functional>
 #include <condition_variable>
 
 typedef std::function<void(void)> Thunk;

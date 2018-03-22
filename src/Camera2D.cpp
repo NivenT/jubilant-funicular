@@ -1,3 +1,5 @@
+#include <tuple>
+
 #include "nta/Camera2D.h"
 
 namespace nta {
