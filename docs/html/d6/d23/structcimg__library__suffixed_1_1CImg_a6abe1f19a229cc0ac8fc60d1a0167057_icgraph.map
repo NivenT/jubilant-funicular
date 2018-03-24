@@ -1,0 +1,16 @@
+<map id="cimg_library_suffixed::CImg::vector" name="cimg_library_suffixed::CImg::vector">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cdc2da46ee1679928f178b0b886fba3" title="Generate a 3d cone. " alt="" coords="215,5,384,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a009c1cb31d4c261774a310e10d0ee9d7" title="Generate a 3d cylinder. " alt="" coords="206,71,393,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac5254785e157634eca67272c99323f7f" title="Autocrop image region, regarding the specified background color . " alt="" coords="227,137,372,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6df02334b3342622e7439c27ec149456" title="Generate a 3d elevation of the image instance. " alt="" coords="227,217,372,273"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0218c314200ba254ca0734849b67f110" title="Load 3d object from a .OFF file . " alt="" coords="227,297,372,353"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6daf74a21b7d7b540474f66f024cc4f9" title="Generate the 3d projection planes of the image instance. " alt="" coords="227,377,372,433"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="227,457,372,513"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae1d41b8104d3018b50f25d47ac219e0" title="Compute 0&#45;isolines of a function, as a 3d object. " alt="" coords="210,537,389,579"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2871222dafbcaf1ddab4701be882410" title="Compute isosurface of a function, as a 3d object. " alt="" coords="199,603,400,644"/>
+<area shape="rect" id="node11" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#affbfd21835dfd5c00fe98cc71c7760c2" title="Load a list from a PAR/REC (Philips) file. " alt="" coords="225,669,373,725"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a38bca8940aa19a72153372c6615a0c61" title="Generate a 3d XY&#45;plane. " alt="" coords="213,749,385,791"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8025573f639ba766ca2270bf10c2d00f" title="Generate a 3d sphere. " alt="" coords="209,815,389,856"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42395174c544ec66191539bf76fcb360" title="Texturize primitives of a 3d object. " alt="" coords="211,881,388,937"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8e6e4d77fb5eba21751926bb972d89d5" title="Generate a 3d torus. " alt="" coords="214,961,385,1003"/>
+</map>

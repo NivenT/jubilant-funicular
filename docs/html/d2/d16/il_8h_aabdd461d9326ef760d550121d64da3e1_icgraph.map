@@ -1,0 +1,5 @@
+<map id="ilLoadImage" name="ilLoadImage">
+<area shape="rect" id="node2" href="$d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10" title="loads in any image file " alt="" coords="145,13,337,39"/>
+<area shape="rect" id="node3" href="$d5/d87/classnta_1_1ResourceManager.html#a9058dbd86949123968e61de1fb6234f2" title="returns the resource with the given path, loading it if need be " alt="" coords="385,5,540,47"/>
+<area shape="rect" id="node4" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="588,13,695,39"/>
+</map>

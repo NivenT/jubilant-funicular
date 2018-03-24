@@ -1,0 +1,13 @@
+<map id="cimg_library_suffixed::CImg::get_shared_channel" name="cimg_library_suffixed::CImg::get_shared_channel">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aed98b23130078df5ad69b199d88bb261" title="Correlate image by a kernel . " alt="" coords="251,5,435,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab19d123867d5a2ed56fe1b016267bfe7" title="Blur image, with the joint bilateral filter. " alt="" coords="269,71,417,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a08d04add0f5b2a69f62d08843aefdb98" title="Display 1d graph in an interactive window . " alt="" coords="240,152,447,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7a65d2ce5d14b61eba14d4f0792f4add" title="Draw a text string . " alt="" coords="251,217,435,259"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66a723bf61125378577a3e99247ff8da" title="Dilate image by a structuring element . " alt="" coords="271,283,416,339"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab461b8b649f269f33f4eedba90d1a84e" title="Compute distance map to a specified value, according to a custom metric (use dijkstra algorithm) ..." alt="" coords="271,363,416,419"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2b1addf2e74607a44640f82f88916d37" title="Compute distance map to one source point, according to a custom metric (use fast marching algorithm)..." alt="" coords="271,443,416,499"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aad353fc91b0c6ef3c0251f4f46a96150" title="Erode image by a structuring element . " alt="" coords="251,524,435,565"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2a4911627e79fc18f759be236edd454" title="Label connected components . " alt="" coords="254,589,433,631"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a51f90120a4070c5d47806c9fffc210ff" title="Return colormap &quot;HSV&quot;, containing 256 colors entries in RGB. " alt="" coords="266,655,421,711"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6c93c9f308c168756831884f1aa829af" title="Compute watershed transform. " alt="" coords="250,736,437,777"/>
+</map>

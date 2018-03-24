@@ -1,0 +1,10 @@
+<map id="cimg_library_suffixed::CImg::depth" name="cimg_library_suffixed::CImg::depth">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aed98b23130078df5ad69b199d88bb261" title="Correlate image by a kernel . " alt="" coords="205,5,389,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ad2488203cbf2fddba82666454ea7c90b" title="Test if list contains one particular pixel location. " alt="" coords="223,71,371,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="213,152,381,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4dfe9a9fb78df031a5750e7898af3d9e" title="Draw an image. " alt="" coords="199,217,396,259"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66a723bf61125378577a3e99247ff8da" title="Dilate image by a structuring element . " alt="" coords="225,283,370,339"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="225,363,370,419"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aad353fc91b0c6ef3c0251f4f46a96150" title="Erode image by a structuring element . " alt="" coords="205,444,389,485"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#abaf896349a1ec4915f7064f5fa1e6076" title="Compute correspondence map between two images, using the patch&#45;match algorithm . " alt="" coords="225,510,370,566"/>
+</map>

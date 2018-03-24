@@ -42,6 +42,8 @@ else()
     endif()
 endif()
 
+option(NTA_USE_DEVIL "Turn on to use DevIL instead of CImg for image loading" ON)	
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(SDL2 REQUIRED)
@@ -50,25 +52,43 @@ find_package(SDL2_mixer REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(DevIL REQUIRED)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
-set(NTA_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "")
+# TODO (?): Add include dirs from required packages
+set(NTA_INCLUDE_DIR
+	${CMAKE_CURRENT_SOURCE_DIR}/include
+	${CMAKE_CURRENT_SOURCE_DIR}/deps
+	CACHE INTERNAL "")
+
+if(${NTA_USE_DEVIL})
+	add_definitions(-DUSE_DEVIL) # #define USE_DEVIL
+elseif()
+	# TODO: Use cimg_plugin to get decent png support
+endif()
 
 add_subdirectory(src)
 
+if(${NTA_USE_DEVIL})
+	message(STATUS "Using DevIL for image loading")
+ 	find_package(DevIL REQUIRED)
+	set(NTA_LIBRARIES ${NTA_LIBRARIES} ${IL_LIBRARIES} ${ILU_LIBRARIES} CACHE INTERNAL "")
+else()
+	message(STATUS "Using CImg for image loading")
+	# X11 is for CImg <--- TODO: This is OS dependent so make it OS agnostic instead
+	set(NTA_LIBRARIES ${NTA_LIBRARIES} X11 CACHE INTERNAL "")
+endif()
+
+
 # Is it standard practice to bundle libraries I don't own like this?
-set(NTA_LIBRARIES nta
+set(NTA_LIBRARIES ${NTA_LIBRARIES}
   ${SDL2_LIBRARY}
   ${SDL2_TTF_LIBRARIES}
   ${SDL2_MIXER_LIBRARIES}
   ${GLEW_LIBRARIES}
   ${GLUT_LIBRARIES}
   ${OPENGL_LIBRARIES}
-  ${IL_LIBRARIES}
-  ${ILU_LIBRARIES}
-  CACHE INTERNAL ""
+	CACHE INTERNAL ""
 )

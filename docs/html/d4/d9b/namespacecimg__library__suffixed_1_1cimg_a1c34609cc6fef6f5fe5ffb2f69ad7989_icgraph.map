@@ -1,0 +1,18 @@
+<map id="cimg_library_suffixed::cimg::strcasecmp" name="cimg_library_suffixed::cimg::strcasecmp">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4eb2ceb90169f0658337de1f5156fda5" title="Return image hessian. " alt="" coords="214,5,359,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a069a7c0b955c96b751b2a4e0c45c4302" title="Load image from an ANALYZE7.5/NIFTI file . " alt="" coords="214,85,359,141"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ae6a86adfeb4cdeb99f58565a6a49784b" title="Tell if an image list can be saved as one single file. " alt="" coords="213,165,361,221"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae8353b28bfbc5c4421c7adfbb98fe32f" title="Load image from a file. " alt="" coords="211,246,362,287"/>
+<area shape="rect" id="node6" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a63bd67d8dd2301933df7decb4612916e" title="Load a list from a file. " alt="" coords="201,311,373,353"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1f1ef95d7faa4c2c7a72d3d347f30dad" title="Load gzipped image file, using external tool &#39;gunzip&#39;. " alt="" coords="211,377,362,433"/>
+<area shape="rect" id="node8" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aae55e9a79bf2f7e08108dd200f63bf2c" title="Load a gzipped list, using external tool &#39;gunzip&#39;. " alt="" coords="213,457,361,513"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8278afa0b313d0f3465ef91dabdac549" title="Load image using ImageMagick&#39;s external tool &#39;convert&#39;. " alt="" coords="207,537,366,593"/>
+<area shape="rect" id="node10" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a9b0d24fe7141f14b5322aad84c6ea51b" title="Return options specified on the command line. " alt="" coords="214,618,359,659"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#adb165b37ac226a1c73a96cb1b5827d2e" title="Save image as a file. " alt="" coords="209,683,364,725"/>
+<area shape="rect" id="node12" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a7186fe44f8d6ce58583e3177ff802445" title="Save list into a file. " alt="" coords="199,749,375,790"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a09711118d3b31870942e99adbefffed1" title="Save image as an ANALYZE7.5 or NIFTI file. " alt="" coords="209,815,364,871"/>
+<area shape="rect" id="node14" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#af09a45345581747984f4df0607418f2c" title="Save image sequence, using the external tool &#39;ffmpeg&#39;. " alt="" coords="211,895,362,951"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53983bb4f1ebe2a817b68029b8c04cb1" title="Save image using gzip external binary. " alt="" coords="209,975,364,1031"/>
+<area shape="rect" id="node16" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aad5afe8b913e276dd281255dd787b4ba" title="Save list as a gzipped file, using external tool &#39;gzip&#39;. " alt="" coords="213,1055,361,1111"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a275c729648a61fe823fc3febafdb27b9" title="Save image as an INRIMAGE&#45;4 file . " alt="" coords="199,1135,375,1177"/>
+</map>

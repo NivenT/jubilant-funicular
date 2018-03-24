@@ -1,0 +1,14 @@
+<map id="glm::log" name="glm::log">
+<area shape="rect" id="node2" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83" title="compiles a shader from a file and returns its id " alt="" coords="133,5,316,47"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4ee4442b26855c03fbfbab878da90c07" title="Draw a quadratic Mandelbrot or Julia 2d fractal. " alt="" coords="147,71,302,127"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="152,151,297,207"/>
+<area shape="rect" id="node6" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aa12c572ad67f655e27f7b8e3e76dafa5" title="Return a random variable following a gaussian distribution and a standard deviation of 1..." alt="" coords="152,232,297,273"/>
+<area shape="rect" id="node9" href="$dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0" title="links the compiled shaders to this program " alt="" coords="121,298,328,325"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#acc2665db5892449362ae3098f65b0377" title="Compute the logarithm of each pixel value. " alt="" coords="152,349,297,391"/>
+<area shape="rect" id="node11" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a03657cf098d3b588e76bcef4426233bd" title="Return base&#45;2 logarithm of a value. " alt="" coords="152,415,297,456"/>
+<area shape="rect" id="node3" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5" title="compiles both the vertex and fragment shaders given their name " alt="" coords="376,5,559,47"/>
+<area shape="rect" id="node7" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936" title="Return a random variable following a Poisson distribution of parameter z. " alt="" coords="395,203,540,244"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="607,232,765,273"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2fbd06361da285cd57797bba6df0b275" title="Compute the base&#45;2 logarithm of each pixel value. " alt="" coords="392,381,543,423"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6f3dafb21c7bac989a884e3f4ce1565f" title="Compute the base&#45;10 logarithm of each pixel value . " alt="" coords="379,447,555,488"/>
+</map>

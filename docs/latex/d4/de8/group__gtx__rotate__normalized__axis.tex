@@ -1,0 +1,110 @@
+\hypertarget{group__gtx__rotate__normalized__axis}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}
+\label{group__gtx__rotate__normalized__axis}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}}
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/de8/group__gtx__rotate__normalized__axis}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ \hyperlink{group__gtx__rotate__normalized__axis_ga50efd7ebca0f7a603bb3cc11e34c708d}{glm\+::rotate\+Normalized\+Axis} (\hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ const \&m, T const \&angle, \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&axis)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1tquat}{tquat}$<$ T, Q $>$ \hyperlink{group__gtx__rotate__normalized__axis_gad5bb8a155ee52fd349b88cec3a843600}{glm\+::rotate\+Normalized\+Axis} (\hyperlink{structglm_1_1tquat}{tquat}$<$ T, Q $>$ const \&q, T const \&angle, \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&axis)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{rotate__normalized__axis_8hpp}{glm/gtx/rotate\+\_\+normalized\+\_\+axis.\+hpp}$>$ to use the features of this extension.
+
+Quaternions and matrices rotations around normalized axis. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__rotate__normalized__axis_ga50efd7ebca0f7a603bb3cc11e34c708d}\label{group__gtx__rotate__normalized__axis_ga50efd7ebca0f7a603bb3cc11e34c708d}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}!rotate\+Normalized\+Axis@{rotate\+Normalized\+Axis}}
+\index{rotate\+Normalized\+Axis@{rotate\+Normalized\+Axis}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}}
+\subsubsection{\texorpdfstring{rotate\+Normalized\+Axis()}{rotateNormalizedAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$4, 4, T, Q$>$ glm\+::rotate\+Normalized\+Axis (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ 4, 4, T, Q $>$ const \&}]{m,  }\item[{T const \&}]{angle,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{axis }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{rotate__normalized__axis_8hpp}{deps/glm/gtx/rotate\+\_\+normalized\+\_\+axis.\+hpp}$>$}
+
+Builds a rotation 4 $\ast$ 4 matrix created from a normalized axis and an angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Input matrix multiplied by this rotation matrix. \\
+\hline
+{\em angle} & Rotation angle expressed in radians. \\
+\hline
+{\em axis} & Rotation axis, must be normalized. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Value type used to build the matrix. Currently supported\+: half (not recommanded), float or double.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__rotate__normalized__axis}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis} 
+
+-\/ rotate(\+T angle, T x, T y, T z) 
+
+-\/ rotate(mat$<$4, 4, T, Q$>$ const\& m, T angle, T x, T y, T z) 
+
+-\/ rotate(\+T angle, vec$<$3, T, Q$>$ const\& v) 
+\end{DoxySeeAlso}
+
+
+Definition at line 8 of file rotate\+\_\+normalized\+\_\+axis.\+inl.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{d4/de8/group__gtx__rotate__normalized__axis_ga50efd7ebca0f7a603bb3cc11e34c708d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__gtx__rotate__normalized__axis_gad5bb8a155ee52fd349b88cec3a843600}\label{group__gtx__rotate__normalized__axis_gad5bb8a155ee52fd349b88cec3a843600}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}!rotate\+Normalized\+Axis@{rotate\+Normalized\+Axis}}
+\index{rotate\+Normalized\+Axis@{rotate\+Normalized\+Axis}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis}}
+\subsubsection{\texorpdfstring{rotate\+Normalized\+Axis()}{rotateNormalizedAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1tquat}{tquat}$<$T, Q$>$ glm\+::rotate\+Normalized\+Axis (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1tquat}{tquat}$<$ T, Q $>$ const \&}]{q,  }\item[{T const \&}]{angle,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{axis }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{rotate__normalized__axis_8hpp}{deps/glm/gtx/rotate\+\_\+normalized\+\_\+axis.\+hpp}$>$}
+
+Rotates a quaternion from a vector of 3 components normalized axis and an angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Source orientation \\
+\hline
+{\em angle} & Angle expressed in radians. \\
+\hline
+{\em axis} & Normalized axis of the rotation, must be normalized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__rotate__normalized__axis}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+rotate\+\_\+normalized\+\_\+axis} 
+\end{DoxySeeAlso}
+
+
+Definition at line 45 of file rotate\+\_\+normalized\+\_\+axis.\+inl.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{d4/de8/group__gtx__rotate__normalized__axis_gad5bb8a155ee52fd349b88cec3a843600_cgraph}
+\end{center}
+\end{figure}

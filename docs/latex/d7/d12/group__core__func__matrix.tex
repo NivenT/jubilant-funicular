@@ -1,0 +1,192 @@
+\hypertarget{group__core__func__matrix}{}\section{Matrix functions}
+\label{group__core__func__matrix}\index{Matrix functions@{Matrix functions}}
+Collaboration diagram for Matrix functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d7/d12/group__core__func__matrix}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ \hyperlink{group__core__func__matrix_gaf14569404c779fedca98d0b9b8e58c1f}{glm\+::matrix\+Comp\+Mult} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&x, \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&y)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1detail_1_1outerProduct__trait}{detail\+::outer\+Product\+\_\+trait}$<$ C, R, T, Q $>$\+::\hyperlink{structglm_1_1type}{type} \hyperlink{group__core__func__matrix_gac29fb7bae75a8e4c1b74cbbf85520e50}{glm\+::outer\+Product} (\hyperlink{structglm_1_1vec}{vec}$<$ C, T, Q $>$ const \&c, \hyperlink{structglm_1_1vec}{vec}$<$ R, T, Q $>$ const \&r)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$\+::transpose\+\_\+type \hyperlink{group__core__func__matrix_gae679d841da8ce9dbcc6c2d454f15bc35}{glm\+::transpose} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&x)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__core__func__matrix_gad7928795124768e058f99dce270f5c8d}{glm\+::determinant} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&m)
+\item 
+{\footnotesize template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ \hyperlink{group__core__func__matrix_gace61e11fc177491beeca0c6971e2f3fc}{glm\+::inverse} (\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{matrix_8hpp}{glm/matrix.\+hpp}$>$ to use these core features.
+
+For each of the following built-\/in matrix functions, there is both a single-\/qualifier floating point version, where all arguments and return values are single qualifier, and a double-\/qualifier floating version, where all arguments and return values are double qualifier. Only the single-\/qualifier floating point version is shown. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__core__func__matrix_gad7928795124768e058f99dce270f5c8d}\label{group__core__func__matrix_gad7928795124768e058f99dce270f5c8d}} 
+\index{Matrix functions@{Matrix functions}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrix functions@{Matrix functions}}
+\subsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::determinant (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{m }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix_8hpp}{deps/glm/matrix.\+hpp}$>$}
+
+Return the determinant of a squared matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C} & Integer between 1 and 4 included that qualify the number a column \\
+\hline
+{\em R} & Integer between 1 and 4 included that qualify the number a row \\
+\hline
+{\em T} & Floating-\/point or signed integer scalar types \\
+\hline
+{\em Q} & Value from qualifier enum\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/determinant.xml}{\tt G\+L\+SL determinant man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 384 of file func\+\_\+matrix.\+inl.
+
+\mbox{\Hypertarget{group__core__func__matrix_gace61e11fc177491beeca0c6971e2f3fc}\label{group__core__func__matrix_gace61e11fc177491beeca0c6971e2f3fc}} 
+\index{Matrix functions@{Matrix functions}!inverse@{inverse}}
+\index{inverse@{inverse}!Matrix functions@{Matrix functions}}
+\subsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ glm\+::inverse (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{m }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{type__mat_8hpp}{deps/glm/detail/type\+\_\+mat.\+hpp}$>$}
+
+Return the inverse of a squared matrix.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C} & Integer between 1 and 4 included that qualify the number a column \\
+\hline
+{\em R} & Integer between 1 and 4 included that qualify the number a row \\
+\hline
+{\em T} & Floating-\/point or signed integer scalar types \\
+\hline
+{\em Q} & Value from qualifier enum\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/inverse.xml}{\tt G\+L\+SL inverse man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 391 of file func\+\_\+matrix.\+inl.
+
+\mbox{\Hypertarget{group__core__func__matrix_gaf14569404c779fedca98d0b9b8e58c1f}\label{group__core__func__matrix_gaf14569404c779fedca98d0b9b8e58c1f}} 
+\index{Matrix functions@{Matrix functions}!matrix\+Comp\+Mult@{matrix\+Comp\+Mult}}
+\index{matrix\+Comp\+Mult@{matrix\+Comp\+Mult}!Matrix functions@{Matrix functions}}
+\subsubsection{\texorpdfstring{matrix\+Comp\+Mult()}{matrixCompMult()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$C, R, T, Q$>$ glm\+::matrix\+Comp\+Mult (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix_8hpp}{deps/glm/matrix.\+hpp}$>$}
+
+Multiply matrix x by matrix y component-\/wise, i.\+e., result\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} is the scalar product of x\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} and y\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C} & Integer between 1 and 4 included that qualify the number a column \\
+\hline
+{\em R} & Integer between 1 and 4 included that qualify the number a row \\
+\hline
+{\em T} & Floating-\/point or signed integer scalar types \\
+\hline
+{\em Q} & Value from qualifier enum\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/matrixCompMult.xml}{\tt G\+L\+SL matrix\+Comp\+Mult man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 359 of file func\+\_\+matrix.\+inl.
+
+\mbox{\Hypertarget{group__core__func__matrix_gac29fb7bae75a8e4c1b74cbbf85520e50}\label{group__core__func__matrix_gac29fb7bae75a8e4c1b74cbbf85520e50}} 
+\index{Matrix functions@{Matrix functions}!outer\+Product@{outer\+Product}}
+\index{outer\+Product@{outer\+Product}!Matrix functions@{Matrix functions}}
+\subsubsection{\texorpdfstring{outer\+Product()}{outerProduct()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1detail_1_1outerProduct__trait}{detail\+::outer\+Product\+\_\+trait}$<$C, R, T, Q$>$\+::\hyperlink{structglm_1_1type}{type} glm\+::outer\+Product (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ C, T, Q $>$ const \&}]{c,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ R, T, Q $>$ const \&}]{r }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix_8hpp}{deps/glm/matrix.\+hpp}$>$}
+
+Treats the first parameter c as a column vector and the second parameter r as a row vector and does a linear algebraic matrix multiply c $\ast$ r.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C} & Integer between 1 and 4 included that qualify the number a column \\
+\hline
+{\em R} & Integer between 1 and 4 included that qualify the number a row \\
+\hline
+{\em T} & Floating-\/point or signed integer scalar types \\
+\hline
+{\em Q} & Value from qualifier enum\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/outerProduct.xml}{\tt G\+L\+SL outer\+Product man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__core__func__matrix_gae679d841da8ce9dbcc6c2d454f15bc35}\label{group__core__func__matrix_gae679d841da8ce9dbcc6c2d454f15bc35}} 
+\index{Matrix functions@{Matrix functions}!transpose@{transpose}}
+\index{transpose@{transpose}!Matrix functions@{Matrix functions}}
+\subsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t C, length\+\_\+t R, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1mat}{mat}$<$C, R, T, Q$>$\+::transpose\+\_\+type glm\+::transpose (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1mat}{mat}$<$ C, R, T, Q $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{matrix_8hpp}{deps/glm/matrix.\+hpp}$>$}
+
+Returns the transposed matrix of x
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em C} & Integer between 1 and 4 included that qualify the number a column \\
+\hline
+{\em R} & Integer between 1 and 4 included that qualify the number a row \\
+\hline
+{\em T} & Floating-\/point or signed integer scalar types \\
+\hline
+{\em Q} & Value from qualifier enum\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/transpose.xml}{\tt G\+L\+SL transpose man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+6 Matrix Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 377 of file func\+\_\+matrix.\+inl.
+

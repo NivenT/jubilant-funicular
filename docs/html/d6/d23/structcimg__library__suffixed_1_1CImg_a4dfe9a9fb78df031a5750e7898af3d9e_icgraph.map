@@ -1,0 +1,14 @@
+<map id="cimg_library_suffixed::CImg::draw_image" name="cimg_library_suffixed::CImg::draw_image">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="215,5,360,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6eb7e28a570e35fa865ed789f0df52c3" title="Discard specified sequence of values in the image buffer, along a specific axis. " alt="" coords="203,71,372,112"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a0742de5c028207997d91cd6599262ef9" title="Return a single image which is the appending of all images of the current CImgList instance..." alt="" coords="213,137,361,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a611297a981e43c03a771fbc5d948f85a" title="Crop image region . " alt="" coords="199,217,376,259"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6bde59c7cc8391912052e838260613ba" title="Discard neighboring duplicates in the image buffer, along the specified axis . " alt="" coords="215,283,360,339"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5d26684b6441ce4b316f9173aa3e838" title="Compute Haar multiscale wavelet transform . " alt="" coords="199,364,376,405"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1774ac5f65cb510394e8f04b2a8881e7" title="Generate a 2d representation of a 3d image, with XY,XZ and YZ views. " alt="" coords="215,430,360,486"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1d9a664dfe01342505a5256db9078b31" title="Resize image to new dimensions . " alt="" coords="215,510,360,566"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="215,590,360,646"/>
+<area shape="rect" id="node11" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="213,670,361,726"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="215,750,360,806"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3c868d05056064840adec3b2e75f2c22" title="Solve a system of linear equations. " alt="" coords="208,831,367,872"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="cimg_library_suffixed::cimg::fempty" name="cimg_library_suffixed::cimg::fempty">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a9aafdb8732ff87625052ce2723f8a516" title="Open a file. " alt="" coords="414,5,559,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ac436b94e6ffef5fd420bb3d7c05fd416" title="Close a file. " alt="" coords="629,404,775,445"/>
+<area shape="rect" id="node5" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a56c2dbfe99d9f6e6bc1be9d03b0ddaaa" title="Try to guess format from an image file. " alt="" coords="199,156,344,197"/>
+<area shape="rect" id="node9" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a90c05fe6fc049cba75f3a12807e97158" title="Load file from network as a local temporary file. " alt="" coords="199,664,344,705"/>
+<area shape="rect" id="node4" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#acfd3624d72ed7f79c82ec45646c685e7" title="Display a warning message on the default output stream. " alt="" coords="823,404,968,445"/>
+<area shape="rect" id="node6" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aeafab144366eddd11360f32f468fa4af" title="Set current &#160;exception mode. " alt="" coords="406,253,567,295"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5a062592b78f33dd2813cc59985e61a2" title="Return a pointer to the first pixel value. " alt="" coords="414,123,559,164"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#acae5385f7b2692787b1c50fa1663e587" title="Split image into a list along specified axis. " alt="" coords="414,188,559,229"/>
+<area shape="rect" id="node10" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a61e1cd854cf93fdf3f6d06525e1590c5" title="Split filename into two C&#45;strings body and extension. " alt="" coords="413,632,560,673"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1a6afc9cde7f9cdfa0d2711dd39f83b8" title="Return an image containing the ascii codes of the specified string. " alt="" coords="414,697,559,739"/>
+<area shape="rect" id="node12" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a1304046a29511fe0a015173e46607229" title="Compare the first l characters of two C&#45;strings, ignoring the case. " alt="" coords="414,763,559,804"/>
+<area shape="rect" id="node14" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a3dff5896c142fb4f9dbd2d49facd33c0" title="Replace reserved characters (for Windows filename) by another character. " alt="" coords="392,828,581,869"/>
+<area shape="rect" id="node15" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ae9af8e17db04e875db3b45cbe58892d6" title="Get/set path to store temporary files. " alt="" coords="409,371,565,412"/>
+<area shape="rect" id="node17" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a03dbe74029b194eca4b86c10e9fbd1fc" title="Version of &#39;fseek()&#39; that supports &gt;=64bits offsets everywhere (for Windows). " alt="" coords="414,893,559,935"/>
+<area shape="rect" id="node18" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a6fe7b32c5cfeef7ec973b4cbb538683a" title="Version of &#39;ftell()&#39; that supports &gt;=64bits offsets everywhere (for Windows). " alt="" coords="414,959,559,1000"/>
+<area shape="rect" id="node19" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="629,1017,775,1059"/>
+<area shape="rect" id="node20" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aebd4f990c3e148573c96c04dbfdcc5c6" title="Get/set path to the curl binary. " alt="" coords="414,436,559,477"/>
+<area shape="rect" id="node21" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a5ddfa532b09b12973f543977f1f688da" title="cimg_library_suffixed\l::cimg::system" alt="" coords="414,1076,559,1117"/>
+<area shape="rect" id="node23" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a36ccf2e6a6542f4e93eac819cf5d91ba" title="Get/set path to the wget binary. " alt="" coords="414,501,559,543"/>
+<area shape="rect" id="node24" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a7b4390d7bec2ffbf27d108f1c3a699e0" title="Get/set path to the gunzip binary. " alt="" coords="414,567,559,608"/>
+<area shape="rect" id="node25" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a71a3c7b37befc7a4313dfcdd80271bce" title="Return the value of a system timer, with a millisecond precision. " alt="" coords="414,1141,559,1183"/>
+<area shape="rect" id="node26" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ada686776cc71803df391eea79cd1b3e5" title="Get/set default output stream for the &#160;library messages. " alt="" coords="414,1207,559,1248"/>
+<area shape="rect" id="node13" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ac9cf8d2a803d13d85e7fcc48fee55587" title="Convert ascii character to lower case. " alt="" coords="629,763,775,804"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a82cf529dfcb37cbd01ad7f9bd76795d7" title="Construct empty image . " alt="" coords="629,485,775,527"/>
+<area shape="rect" id="node22" href="$d7/d6f/group__gtc__constants.html#ga94bafeb2a0f23ab6450fed1f98ee4e45" title="glm::pi" alt="" coords="671,1083,733,1110"/>
+</map>

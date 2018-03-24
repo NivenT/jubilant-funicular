@@ -6,8 +6,8 @@
 
 #include "nta/Vertex.h"
 
-// \todo Make abstract RenderBatch class for this, SpriteBatch, and PrimitiveBatch
 namespace nta {
+    // \todo Make abstract RenderBatch class for this, SpriteBatch, and PrimitiveBatch
     /// A collection of debug primitives (outlines of shapes) to be drawn
     class DebugBatch {
     private:

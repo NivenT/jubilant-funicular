@@ -1,0 +1,91 @@
+$<$D\+ZA\mbox{[}afk\mbox{]}$>$ Dev\+IL song\+: "la la la, a cross-\/platform image library utilizing a simple syntax to load, save, convert, manipulate, filter and display a variety of images with ease, la la la"
+
+\subsection*{What is it? }
+
+Dev\+IL is an Open Source image library whose distribution is done under the terms of the G\+NU L\+G\+PL license. See the C\+O\+P\+Y\+I\+NG file for more details. Dev\+IL offers you a simple way to implement loading, manipulating, filtering, converting, displaying, saving from/to several different image formats in your own project.
+
+\subsection*{Where can I find it? }
+
+Dev\+IL can be found at \href{http://openil.sourceforge.net}{\tt http\+://openil.\+sourceforge.\+net}
+
+\subsection*{How do I build and install the 3 libraries ? }
+
+C\+Make is used to handle building Dev\+IL across multiple platforms.
+
+See R\+E\+A\+D\+M\+E.\+cmake for details.
+
+\subsection*{More Extensive Documentation }
+
+This file is only a quick guide to point you to more detailed information on how to use Dev\+IL. More extensive documentation can currently be found on the Dev\+IL site at \href{http://openil.sf.net}{\tt http\+://openil.\+sf.\+net} and in the /\+Docs directory in a normal install.
+
+\subsection*{Why the hell another image library? }
+
+I have never seen an image library that can do everything Dev\+IL does. Sure, various different libraries can do part of what Dev\+IL can do as well or even better, but I wanted a simple to use library that encompassed all of these features. I also wanted an extremely portable image library that could be used from a variety of languages and utilized the Open\+GL syntax.
+
+\subsection*{Basic Readme }
+
+Most anything stated in this document applies to Dev\+IL as well as Dev\+I\+LU and Dev\+I\+L\+UT, unless otherwise stated. (This file is best viewed with word wrap on.)
+
+\subsection*{Errors\+: }
+
+All errors generated inside Dev\+IL, along with illegal parameters passed to Dev\+IL functions are caught and passed to il\+Set\+Error(), an internal library function. The calling program can call \hyperlink{il_8h_add4600e363a1e68cf5f5e34e5bce5bac}{il\+Get\+Error()} to get the value of the error generated. Error types are defined in \hyperlink{il_8h}{il.\+h}, using the 0x501 -\/ 0x5\+FF range. \hyperlink{il_8h_add4600e363a1e68cf5f5e34e5bce5bac}{il\+Get\+Error()} will return 0 (I\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR) if no error has occurred.
+
+\subsection*{Basic Usage\+: }
+
+This demonstrates loading an image through Dev\+IL for Open\+GL. Don\textquotesingle{}t forget to call il\+Init before you before you do anything\+:
+
+\#include $<$\hyperlink{il_8h}{I\+L/il.\+h}$>$ \#include $<$\hyperlink{ilu_8h}{I\+L/ilu.\+h}$>$ \#include $<$\hyperlink{ilut_8h}{I\+L/ilut.\+h}$>$
+
+...
+
+I\+Luint devil\+Error;
+
+il\+Init();
+
+devil\+Error = \hyperlink{il_8h_add4600e363a1e68cf5f5e34e5bce5bac}{il\+Get\+Error()};
+
+if (devil\+Error != I\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR) \{ printf (\char`\"{}\+Devil Error (il\+Init\+: \%s\textbackslash{}n\char`\"{}, ilu\+Get\+Error\+String (devil\+Error)); exit (2); \}
+
+....
+
+I\+Luint devil\+ID;
+
+il\+Gen\+Images(1, \&devil\+I\+D); il\+Bind\+Image(devil\+I\+D); il\+Load\+Image(\char`\"{}default1.\+tga\char`\"{}); // Loads into the current bound image devil\+Error = \hyperlink{il_8h_add4600e363a1e68cf5f5e34e5bce5bac}{il\+Get\+Error()};
+
+if (devil\+Error != I\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR) \{ printf (\char`\"{}\+Devil Error (il\+Load\+Image\+: \%s\textbackslash{}n\char`\"{}, ilu\+Get\+Error\+String (devil\+Error)); exit (2); \}
+
+....
+
+ilut\+Renderer(\+I\+L\+\_\+\+O\+P\+E\+N\+G\+L); // Switch the renderer
+
+....
+
+G\+Luint opengl\+ID, opengl\+Error;
+
+opengl\+ID = ilut\+G\+L\+Bind\+Tex\+Image(); // This generates the texture for you devil\+Error = \hyperlink{il_8h_add4600e363a1e68cf5f5e34e5bce5bac}{il\+Get\+Error()};
+
+if (devil\+Error != I\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR) \{ printf (\char`\"{}\+Error\+: \%s\textbackslash{}n\char`\"{}, ilu\+Get\+Error\+String (devil\+Error)); exit (2); \}
+
+if (opengl\+Error != G\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR) \{ printf (\char`\"{}\+Opengl Error (ilut\+G\+L\+Bind\+Tex\+Image)\+: \%s\textbackslash{}n\char`\"{}, glu\+Get\+Error\+String (opengl\+Error)); exit (2); \}
+
+// Make sure to close the image when you are done with it (though Dev\+IL // automatically deletes them when the program exits)\+:
+
+gl\+Delete\+Textures(1, \&opengl\+I\+D); il\+Delete\+Images (1, \&devil\+ID);
+
+\subsection*{More Examples\+: }
+
+The Test\+IL project is included to test features of Dev\+IL.
+
+Dev\+IL includes a project called G\+L\+Test. This is a simple test of Dev\+IL\textquotesingle{}s capabilities. All it does it load any image and displays it in a window created by Free\+Glut, which is available on \href{http://freeglut.sourceforge.net}{\tt http\+://freeglut.\+sourceforge.\+net}. It is also included to let the user have an idea of what the library can really be used for.
+
+Several other test projects are included to test support with various display A\+P\+Is. The Windows\+Test project is a basic image program that only runs in Windows right now but showcases several of Dev\+IL\textquotesingle{}s features through various menus.
+
+If you want more in-\/depth tutorials, you can find them on \href{http://openil.sf.net,}{\tt http\+://openil.\+sf.\+net,} or they may be in your installation under the /examples directory. Documents are also available in the /docs directory.
+
+\subsection*{Additional Reading }
+
+All image formats used in Dev\+IL have corresponding documents on \href{http://www.wotsit.org,}{\tt http\+://www.\+wotsit.\+org,} under the Graphics Files section. These documents proved invaluable for the creation of this library when there was no library already available for that image format.
+
+\subsection*{Legalese }
+
+All contents of this file are intellectual property of Denton Woods, copyright 2001-\/2008. 

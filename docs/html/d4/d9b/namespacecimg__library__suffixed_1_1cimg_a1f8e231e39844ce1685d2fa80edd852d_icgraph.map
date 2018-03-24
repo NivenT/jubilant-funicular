@@ -1,0 +1,16 @@
+<map id="cimg_library_suffixed::cimg::invert_endianness" name="cimg_library_suffixed::cimg::invert_endianness">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a069a7c0b955c96b751b2a4e0c45c4302" title="Load image from an ANALYZE7.5/NIFTI file . " alt="" coords="245,5,390,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac0ed861af830eebc9932a02cade9267a" title="Load image from a PANDORE&#45;5 file . " alt="" coords="245,85,390,141"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a96c318d8b73a3a8b4eae37d05e3a48fa" title="Load image from a PFM file . " alt="" coords="245,165,390,221"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab218608a32068fc1210d1a225956e073" title="Load image from a PNG file . " alt="" coords="245,245,390,301"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a03c7c625ebac464ac598586501eaf342" title="Load image from a raw binary file . " alt="" coords="245,325,390,381"/>
+<area shape="rect" id="node7" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a6ef5394483360f2220873d2b8b856789" title="Serialize a CImgList&lt;T&gt; instance into a raw CImg&lt;unsigned char&gt; buffer. " alt="" coords="243,405,391,461"/>
+<area shape="rect" id="node8" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aaa2e6e8ccab85cc7fc7b9f02060965a2" title="Reverse endianness of a single variable. " alt="" coords="232,486,403,527"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a22c014ba48da63fedb942dca9df883c2" title="Invert endianness of all pixel values. " alt="" coords="238,552,397,608"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#affbfd21835dfd5c00fe98cc71c7760c2" title="Load a list from a PAR/REC (Philips) file. " alt="" coords="243,632,391,688"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af50b9077784dad68a318c403866367d7" title="Load image from a raw binary file. " alt="" coords="228,713,407,754"/>
+<area shape="rect" id="node12" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a3d34d49b4dd45bfea1192ee67dcb7e85" title="Save list into a .cimg file. " alt="" coords="243,779,391,835"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aedf67e5855e15c6f68a11799484a8664" title="Save image as a PFM file . " alt="" coords="225,859,409,901"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d0638773cbbd7878145efa9fa3dea2a" title="Save image as a PNG file . " alt="" coords="226,925,409,966"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a082172c693e383f01cc6cff4fec1353d" title="Save image as a PNM file . " alt="" coords="224,990,411,1031"/>
+</map>

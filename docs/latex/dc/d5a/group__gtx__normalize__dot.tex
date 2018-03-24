@@ -1,0 +1,65 @@
+\hypertarget{group__gtx__normalize__dot}{}\section{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}
+\label{group__gtx__normalize__dot}\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}}
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5a/group__gtx__normalize__dot}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__normalize__dot_gacb140a2b903115d318c8b0a2fb5a5daa}{glm\+::normalize\+Dot} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&y)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__gtx__normalize__dot_ga2746fb9b5bd22b06b2f7c8babba5de9e}{glm\+::fast\+Normalize\+Dot} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$glm/gtx/normalized\+\_\+dot.\+hpp$>$ to use the features of this extension.
+
+Dot product of vectors that need to be normalize with a single square root. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtx__normalize__dot_ga2746fb9b5bd22b06b2f7c8babba5de9e}\label{group__gtx__normalize__dot_ga2746fb9b5bd22b06b2f7c8babba5de9e}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}!fast\+Normalize\+Dot@{fast\+Normalize\+Dot}}
+\index{fast\+Normalize\+Dot@{fast\+Normalize\+Dot}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}}
+\subsubsection{\texorpdfstring{fast\+Normalize\+Dot()}{fastNormalizeDot()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::fast\+Normalize\+Dot (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{normalize__dot_8hpp}{deps/glm/gtx/normalize\+\_\+dot.\+hpp}$>$}
+
+Normalize parameters and returns the dot product of x and y. Faster that dot(fast\+Normalize(x), fast\+Normalize(y)).
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__normalize__dot}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot} extension. 
+\end{DoxySeeAlso}
+
+
+Definition at line 13 of file normalize\+\_\+dot.\+inl.
+
+\mbox{\Hypertarget{group__gtx__normalize__dot_gacb140a2b903115d318c8b0a2fb5a5daa}\label{group__gtx__normalize__dot_gacb140a2b903115d318c8b0a2fb5a5daa}} 
+\index{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}!normalize\+Dot@{normalize\+Dot}}
+\index{normalize\+Dot@{normalize\+Dot}!G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot@{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot}}
+\subsubsection{\texorpdfstring{normalize\+Dot()}{normalizeDot()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::normalize\+Dot (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{normalize__dot_8hpp}{deps/glm/gtx/normalize\+\_\+dot.\+hpp}$>$}
+
+Normalize parameters and returns the dot product of x and y. It\textquotesingle{}s faster that dot(normalize(x), normalize(y)).
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtx__normalize__dot}{G\+L\+M\+\_\+\+G\+T\+X\+\_\+normalize\+\_\+dot} extension. 
+\end{DoxySeeAlso}
+
+
+Definition at line 7 of file normalize\+\_\+dot.\+inl.
+

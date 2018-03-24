@@ -1,0 +1,8 @@
+<map id="cimg_library_suffixed::cimg::imagemagick_path" name="cimg_library_suffixed::cimg::imagemagick_path">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aac739bf544269324a04504ebe92b93e9" title="Get current local time (single&#45;attribute version). " alt="" coords="235,5,380,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79b7a247520612001a04d8ef1c2991dc" title="Print information about &#160;environement variables. " alt="" coords="235,71,380,112"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a222371272a0ca7a6d6d30a380bc0a92d" title="Load gif file, using ImageMagick or GraphicsMagick&#39;s external tools. " alt="" coords="233,137,381,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8278afa0b313d0f3465ef91dabdac549" title="Load image using ImageMagick&#39;s external tool &#39;convert&#39;. " alt="" coords="228,217,387,273"/>
+<area shape="rect" id="node6" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a759ef20b53f1e507973dc53fcc2c7bb2" title="Save image sequence as a GIF animated file. " alt="" coords="233,297,381,353"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#afbf8db949f62c8bd3f2f73ba3d9c1420" title="Save image using ImageMagick&#39;s external binary. " alt="" coords="228,377,387,433"/>
+</map>

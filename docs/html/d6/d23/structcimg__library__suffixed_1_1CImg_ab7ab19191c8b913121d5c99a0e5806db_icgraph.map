@@ -1,0 +1,21 @@
+<map id="cimg_library_suffixed::CImg::fill" name="cimg_library_suffixed::CImg::fill">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aed98b23130078df5ad69b199d88bb261" title="Correlate image by a kernel . " alt="" coords="220,5,404,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33e9ee57f3c8b1e7920896121fb70561" title="Construct image with specified size and initialize pixel values . " alt="" coords="229,71,395,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="238,137,386,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab19d123867d5a2ed56fe1b016267bfe7" title="Blur image, with the joint bilateral filter. " alt="" coords="238,217,386,273"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="228,297,396,353"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a93544f78f8133eb368dca23b34979737" title="Evaluate math formula on a set of variables . " alt="" coords="237,377,387,419"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a611297a981e43c03a771fbc5d948f85a" title="Crop image region . " alt="" coords="223,443,401,484"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab461b8b649f269f33f4eedba90d1a84e" title="Compute distance map to a specified value, according to a custom metric (use dijkstra algorithm) ..." alt="" coords="239,509,385,565"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a2b1addf2e74607a44640f82f88916d37" title="Compute distance map to one source point, according to a custom metric (use fast marching algorithm)..." alt="" coords="239,589,385,645"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a427c9840c24f67ffadc9d5288f75e943" title="Fill sequentially pixel values according to a given expression . " alt="" coords="229,669,395,711"/>
+<area shape="rect" id="node12" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aa9f098546a392521aee857e2a9732e8d" title="Load a list from an image sequence YUV file . " alt="" coords="238,735,386,791"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1d9a664dfe01342505a5256db9078b31" title="Resize image to new dimensions . " alt="" coords="239,815,385,871"/>
+<area shape="rect" id="node14" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="238,895,386,951"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cc211b93a6e65c76b3516d76644e730" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="222,976,402,1017"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8ec8cca0b51ca156165ffd77acf39e09" title="Warp image content by a warping field . " alt="" coords="222,1041,402,1083"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a916472d313a2058a1852864b1235ec02" title="Invert the instance image, viewed as a matrix. " alt="" coords="233,1107,391,1148"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aae1d41b8104d3018b50f25d47ac219e0" title="Compute 0&#45;isolines of a function, as a 3d object. " alt="" coords="223,1172,401,1213"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af2871222dafbcaf1ddab4701be882410" title="Compute isosurface of a function, as a 3d object. " alt="" coords="211,1237,413,1279"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53284105886c5eb684b26e7dba5ede66" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a symmetric matrix..." alt="" coords="199,1303,425,1344"/>
+</map>

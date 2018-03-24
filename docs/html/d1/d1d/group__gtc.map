@@ -1,0 +1,22 @@
+<map id="Stable extensions" name="Stable extensions">
+<area shape="rect" id="node1" href="$d4/d38/group__gtc__noise.html" title="GLM_GTC_noise" alt="" coords="214,5,337,32"/>
+<area shape="rect" id="node3" href="$d1/dbf/group__gtc__reciprocal.html" title="GLM_GTC_reciprocal" alt="" coords="201,56,349,83"/>
+<area shape="rect" id="node4" href="$dc/dfb/group__gtc__epsilon.html" title="GLM_GTC_epsilon" alt="" coords="209,107,342,133"/>
+<area shape="rect" id="node5" href="$de/d0b/group__gtc__random.html" title="GLM_GTC_random" alt="" coords="208,157,343,184"/>
+<area shape="rect" id="node6" href="$d9/d5d/group__gtc__matrix__inverse.html" title="GLM_GTC_matrix_inverse" alt="" coords="187,208,364,235"/>
+<area shape="rect" id="node7" href="$d2/d02/group__gtc__ulp.html" title="GLM_GTC_ulp" alt="" coords="221,259,330,285"/>
+<area shape="rect" id="node8" href="$dd/dd3/group__gtc__matrix__integer.html" title="GLM_GTC_matrix_integer" alt="" coords="188,309,363,336"/>
+<area shape="rect" id="node9" href="$d7/d6f/group__gtc__constants.html" title="GLM_GTC_constants" alt="" coords="201,360,350,387"/>
+<area shape="rect" id="node10" href="$da/d5e/group__gtc__bitfield.html" title="GLM_GTC_bitfield" alt="" coords="210,411,341,437"/>
+<area shape="rect" id="node11" href="$d1/d6c/group__gtc__type__ptr.html" title="GLM_GTC_type_ptr" alt="" coords="206,461,345,488"/>
+<area shape="rect" id="node12" href="$d4/d69/group__gtc__vec1.html" title="GLM_GTC_vec1" alt="" coords="215,512,335,539"/>
+<area shape="rect" id="node13" href="$d7/d9e/group__gtc__type__aligned.html" title="GLM_GTC_type_aligned" alt="" coords="193,563,358,589"/>
+<area shape="rect" id="node14" href="$db/dd6/group__gtc__integer.html" title="Allow to perform bit operations on integer values. " alt="" coords="210,613,341,640"/>
+<area shape="rect" id="node15" href="$d5/daf/group__gtc__packing.html" title="GLM_GTC_packing" alt="" coords="207,664,344,691"/>
+<area shape="rect" id="node16" href="$dc/d1c/group__gtc__matrix__transform.html" title="GLM_GTC_matrix_transform" alt="" coords="180,715,371,741"/>
+<area shape="rect" id="node17" href="$dd/d3b/group__gtc__round.html" title="GLM_GTC_round" alt="" coords="213,765,337,792"/>
+<area shape="rect" id="node18" href="$da/da6/group__gtc__matrix__access.html" title="GLM_GTC_matrix_access" alt="" coords="187,816,364,843"/>
+<area shape="rect" id="node19" href="$d5/d66/group__gtc__quaternion.html" title="GLM_GTC_quaternion" alt="" coords="199,867,351,893"/>
+<area shape="rect" id="node20" href="$d4/d6d/group__gtc__color__space.html" title="GLM_GTC_color_space" alt="" coords="194,917,357,944"/>
+<area shape="rect" id="node21" href="$d3/d2d/group__gtc__type__precision.html" title="GLM_GTC_type_precision" alt="" coords="187,968,363,995"/>
+</map>

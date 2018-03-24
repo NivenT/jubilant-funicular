@@ -1,0 +1,5 @@
+<map id="cimg_library_suffixed::CImg::is_empty" name="cimg_library_suffixed::CImg::is_empty">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="199,5,353,61"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ab2437a10d0bbe2f4d5e91a49dc5cd105" title="Unserialize a CImg&lt;unsigned char&gt; serialized buffer into a CImgList&lt;T&gt; list. " alt="" coords="202,85,350,141"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a4fcada66102d9f9245f11d2127dbe8fb" title="Save image sequence, using the OpenCV library. " alt="" coords="202,165,350,221"/>
+</map>

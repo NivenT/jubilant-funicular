@@ -1,0 +1,9 @@
+<map id="cimg_library_suffixed::CImgDisplay::show" name="cimg_library_suffixed::CImgDisplay::show">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="218,5,386,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ae94dcb99890c42df381d9ced1fefe901" title="Display the current CImgList instance in a new display window. " alt="" coords="228,71,376,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a08d04add0f5b2a69f62d08843aefdb98" title="Display 1d graph in an interactive window . " alt="" coords="199,152,405,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="218,218,386,274"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="229,298,375,354"/>
+<area shape="rect" id="node7" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="228,378,376,434"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="229,458,375,514"/>
+</map>

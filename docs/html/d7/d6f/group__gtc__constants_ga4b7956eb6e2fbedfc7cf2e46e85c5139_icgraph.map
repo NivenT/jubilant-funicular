@@ -1,0 +1,28 @@
+<map id="glm::e" name="glm::e">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="128,5,276,61"/>
+<area shape="rect" id="node3" href="$d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448" title="Changes when an event is next scheduled to run. " alt="" coords="345,137,494,178"/>
+<area shape="rect" id="node4" href="$d1/de6/classnta_1_1CallbackManager.html#a7912dc908d7a7a44267ddd8fa6fb8686" title="nta::CallbackManager\l::dispatch" alt="" coords="547,137,696,178"/>
+<area shape="rect" id="node6" href="$d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14" title="Removes event from m_queue but not m_active (assumes id is valid) " alt="" coords="127,187,277,229"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a89c4a7eddf8e3d1cc5823576a2399c45" title="Compute the determinant of the image, viewed as a matrix. " alt="" coords="129,253,275,294"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3e930c4e4076b0fe306ff9354411cebe" title="Compute field of diffusion tensors for edge&#45;preserving smoothing. " alt="" coords="114,319,290,375"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="118,399,286,455"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5f82947b70ae0c01993cb74563fd4daa" title="Compute distance function to 0&#45;valued isophotes, using the Eikonal PDE. " alt="" coords="114,479,290,535"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af284a9329155592cfe0ca6bc237a4fd9" title="Draw an outlined 2d ellipse . " alt="" coords="125,559,279,615"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5fc3826afd4df7bc972cdac0d30f13d0" title="Draw a 3d gaussian function . " alt="" coords="125,639,279,695"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aebb05c74f0983f96000ae648bd6b8b8e" title="Draw a 3d object . " alt="" coords="125,719,279,775"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8978261f2443ebda52e21f07ed829907" title="Draw a set of consecutive splines . " alt="" coords="125,799,279,855"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#adbf6146771336af8f5477c89d9124941" title="Compute eigenvalues and eigenvectors of the instance image, viewed as a matrix. " alt="" coords="123,879,281,921"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="129,945,275,1001"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#abaf896349a1ec4915f7064f5fa1e6076" title="Compute correspondence map between two images, using the patch&#45;match algorithm . " alt="" coords="129,1025,275,1081"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c05bc335362b8e6bae9a516f28f8c0" title="Compute the Moore&#45;Penrose pseudo&#45;inverse of the instance image, viewed as a matrix ..." alt="" coords="129,1105,275,1161"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7cc211b93a6e65c76b3516d76644e730" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="112,1186,292,1227"/>
+<area shape="rect" id="node21" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a916472d313a2058a1852864b1235ec02" title="Invert the instance image, viewed as a matrix. " alt="" coords="123,1251,281,1293"/>
+<area shape="rect" id="node22" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a2a18bbfb6a496d8d5a02943be8eaa936" title="Return a random variable following a Poisson distribution of parameter z. " alt="" coords="129,1317,275,1358"/>
+<area shape="rect" id="node24" href="$d1/de6/classnta_1_1CallbackManager.html#a1fd6132e79e49dbcb787bc8a8507a931" title="nta::CallbackManager\l::setInterval" alt="" coords="127,1382,277,1423"/>
+<area shape="rect" id="node26" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a4eecbb5bc71cbde0df309ed674a83fcc" title="Solve a tridiagonal system of linear equations. " alt="" coords="123,1448,281,1504"/>
+<area shape="rect" id="node27" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33c8a817208b7aa571350457969e9dbe" title="Compute the SVD of the instance image, viewed as a general matrix. " alt="" coords="125,1529,279,1570"/>
+<area shape="rect" id="node5" href="$d1/de6/classnta_1_1CallbackManager.html#a2c8114a6c1e8de9c59b6484f47dde1a3" title="Initializes the CallbackManager. " alt="" coords="744,137,893,178"/>
+<area shape="rect" id="node7" href="$d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9" title="Removes the event with the given id. " alt="" coords="345,202,494,243"/>
+<area shape="rect" id="node23" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6049c651eefc3a13b8f7d1fc3ff225d7" title="Add random noise to pixel values. " alt="" coords="340,1317,499,1358"/>
+<area shape="rect" id="node25" href="$d1/de6/classnta_1_1CallbackManager.html#ac51c18a014641ffe9dbfe8ead0f6bae0" title="Schedules a function to be called once after when frames and then repeatedly after. " alt="" coords="345,1382,494,1423"/>
+</map>

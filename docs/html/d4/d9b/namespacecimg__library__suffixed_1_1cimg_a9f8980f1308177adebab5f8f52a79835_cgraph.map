@@ -1,0 +1,11 @@
+<map id="cimg_library_suffixed::cimg::files" name="cimg_library_suffixed::cimg::files">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aca0e45a04eb1607f2e25101aae4b8572" title="Check if a path is a directory. " alt="" coords="209,5,355,47"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a79aef0cbcf66ceb71c2b74cb66b4deb2" title="Avoid warning messages due to unused parameters. Do nothing actually. " alt="" coords="209,71,355,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1a6afc9cde7f9cdfa0d2711dd39f83b8" title="Return an image containing the ascii codes of the specified string. " alt="" coords="209,136,355,177"/>
+<area shape="rect" id="node5" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a40fb5fe2a0d260120909c617dfd3b07b" title="Return the basename of a filename. " alt="" coords="209,201,355,243"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a5a062592b78f33dd2813cc59985e61a2" title="Return a pointer to the first pixel value. " alt="" coords="209,267,355,308"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a82cf529dfcb37cbd01ad7f9bd76795d7" title="Construct empty image . " alt="" coords="209,332,355,373"/>
+<area shape="rect" id="node9" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#ae37157824423ea01f970917ce45311a8" title="Return a reference to an empty list . " alt="" coords="199,397,365,439"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a679b1e1a7717fbb6be2352355e69f077" title="Transfer content of an image instance into another one. " alt="" coords="209,463,355,504"/>
+<area shape="rect" id="node6" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#ab7c09300be61c8a3361c379069100252" title="Return a random variable uniformely distributed between [val_min,val_max]. " alt="" coords="413,201,559,243"/>
+</map>

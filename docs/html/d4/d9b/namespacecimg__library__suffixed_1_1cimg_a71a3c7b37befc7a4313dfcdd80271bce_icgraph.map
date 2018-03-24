@@ -1,0 +1,45 @@
+<map id="cimg_library_suffixed::cimg::time" name="cimg_library_suffixed::cimg::time">
+<area shape="rect" id="node2" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#ac98fc29fc303ea835a630ab2253cb7b4" title="Return the current refresh rate, in frames per second. " alt="" coords="199,1759,353,1815"/>
+<area shape="rect" id="node3" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a90c05fe6fc049cba75f3a12807e97158" title="Load file from network as a local temporary file. " alt="" coords="203,1839,349,1881"/>
+<area shape="rect" id="node33" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aa2bf8fb0d97c122cbc52e1f2e167e8a6" title="Sleep for a given numbers of milliseconds. " alt="" coords="203,1905,349,1946"/>
+<area shape="rect" id="node38" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a8431f8cf0989f40df3b6ac7d9dc90abd" title="Wait for a given number of milliseconds since the last call to wait(). " alt="" coords="203,1970,349,2011"/>
+<area shape="rect" id="node4" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a0f3577978081461118330fc3ecd4b9db" title="Create an empty file. " alt="" coords="415,975,560,1017"/>
+<area shape="rect" id="node31" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae8353b28bfbc5c4421c7adfbb98fe32f" title="Load image from a file. " alt="" coords="412,1774,563,1815"/>
+<area shape="rect" id="node32" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a63bd67d8dd2301933df7decb4612916e" title="Load a list from a file. " alt="" coords="401,1839,573,1881"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a09711118d3b31870942e99adbefffed1" title="Save image as an ANALYZE7.5 or NIFTI file. " alt="" coords="643,5,797,61"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab700c6a858bf6af66ed9e4fa8147af97" title="Save image as a BMP file . " alt="" coords="627,86,813,127"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a41145ba64259ea5dd23d3ee55734d853" title="Save image as a DLM file . " alt="" coords="629,151,811,193"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ad5fb082bca9bcc268e8f77019788ae51" title="Save image as an OpenEXR file. " alt="" coords="630,217,810,258"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a3a8132f303e3295e0219ea4518c6ef20" title="Save volumetric image as a video, using ffmpeg external binary. " alt="" coords="643,283,797,339"/>
+<area shape="rect" id="node10" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#af09a45345581747984f4df0607418f2c" title="Save image sequence, using the external tool &#39;ffmpeg&#39;. " alt="" coords="645,363,795,419"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a44f125968c20e8c7d833bf7d75c32db6" title="Save image using GraphicsMagick&#39;s external binary. " alt="" coords="633,443,807,499"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a53983bb4f1ebe2a817b68029b8c04cb1" title="Save image using gzip external binary. " alt="" coords="643,523,797,579"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#afbf8db949f62c8bd3f2f73ba3d9c1420" title="Save image using ImageMagick&#39;s external binary. " alt="" coords="641,603,799,659"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a275c729648a61fe823fc3febafdb27b9" title="Save image as an INRIMAGE&#45;4 file . " alt="" coords="632,683,808,725"/>
+<area shape="rect" id="node15" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab78e769c7cd4d43d6e4789984bf9ce8c" title="Save image as a JPEG file . " alt="" coords="627,749,813,790"/>
+<area shape="rect" id="node16" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6beb63196c9a26f6894e4654f771c1e5" title="Save image, using built&#45;in ImageMagick++ library. " alt="" coords="643,815,797,871"/>
+<area shape="rect" id="node17" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a30d02c3d77fc43c8b5845e92268cdab5" title="Save image as a Dicom file. " alt="" coords="643,895,797,951"/>
+<area shape="rect" id="node18" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab3b2aa455cd56ce20a03cb0b68ca68fc" title="Save image as a MINC2 file. " alt="" coords="621,975,819,1017"/>
+<area shape="rect" id="node19" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a6b77dc615829820ba0675409feaef3d8" title="cimg_library_suffixed\l::CImg\&lt; charT \&gt;::save_other" alt="" coords="625,1041,815,1082"/>
+<area shape="rect" id="node20" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae97d6dc1528ca94f23c519795f6c1068" title="Save image as a Pandore&#45;5 file . " alt="" coords="643,1107,797,1163"/>
+<area shape="rect" id="node21" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aedf67e5855e15c6f68a11799484a8664" title="Save image as a PFM file . " alt="" coords="628,1187,812,1229"/>
+<area shape="rect" id="node22" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d0638773cbbd7878145efa9fa3dea2a" title="Save image as a PNG file . " alt="" coords="629,1253,811,1294"/>
+<area shape="rect" id="node23" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af90a82a948c6d33fb7db963c896fcb0f" title="Save image as a PNK file . " alt="" coords="629,1318,811,1359"/>
+<area shape="rect" id="node24" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a082172c693e383f01cc6cff4fec1353d" title="Save image as a PNM file . " alt="" coords="627,1383,813,1425"/>
+<area shape="rect" id="node25" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa2e09521d6e4133f4aa91b173f006750" title="Save image as a raw data file . " alt="" coords="629,1449,811,1490"/>
+<area shape="rect" id="node26" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae9413850194cbf3747198e2fa49deff2" title="Save image as a RGB file . " alt="" coords="630,1514,810,1555"/>
+<area shape="rect" id="node27" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8b40f655907d08186fd3b273be146f5a" title="Save image as a RGBA file . " alt="" coords="627,1579,813,1621"/>
+<area shape="rect" id="node28" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a87e93148404e8d79b7b5218e58eabf3c" title="Save image as a TIFF file. " alt="" coords="631,1645,809,1686"/>
+<area shape="rect" id="node29" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a62700a17bb0af63522c732b9d1a15325" title="Save list as a TIFF file. " alt="" coords="646,1711,794,1767"/>
+<area shape="rect" id="node30" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a728fccefa4127889e167607de5767ff4" title="Save image sequence into a YUV file. " alt="" coords="646,1791,794,1847"/>
+<area shape="rect" id="node34" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="404,1937,571,1978"/>
+<area shape="rect" id="node35" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="637,1871,803,1913"/>
+<area shape="rect" id="node36" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="641,1937,799,1978"/>
+<area shape="rect" id="node37" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="629,2002,811,2043"/>
+<area shape="rect" id="node39" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a6ba54ea916f502d782ccb787ce02ccbd" title="Wait for any user event occuring on the current display. " alt="" coords="415,2186,560,2227"/>
+<area shape="rect" id="node40" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="647,2068,793,2124"/>
+<area shape="rect" id="node41" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="636,2149,804,2190"/>
+<area shape="rect" id="node42" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="636,2215,804,2271"/>
+<area shape="rect" id="node43" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="646,2295,794,2351"/>
+<area shape="rect" id="node44" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="647,2375,793,2417"/>
+</map>

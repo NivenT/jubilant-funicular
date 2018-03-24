@@ -1,8 +1,6 @@
 #ifndef MYENGINE_H_INCLUDED
 #define MYENGINE_H_INCLUDED
 
-#include <functional>
-#include <string>
 #include <sstream>
 #include <glm/glm.hpp>
 
@@ -18,8 +16,9 @@ namespace nta {
     template<class T>
     std::string to_string(T input, std::size_t precision = 0) {
         std::ostringstream os;
-        if (precision != 0)
+        if (precision != 0) {
             os.precision(precision);
+        }
         os<<input;
         return os.str();
     }
@@ -27,24 +26,8 @@ namespace nta {
     /// returns whether or not min <= val <= max
     template<class T>
     bool in_range(T val, T min, T max) {
-        return (min <= val && val <= max);
+        return min <= val && val <= max;
     } 
 };
-/*
-/// transforms a value in the range [a,b] to a value in the range [c,d]
-extern float changeRange(float val, float a, float b, float c, float d);
-/// calls the first function corresponding to a true statement
-extern void cond(std::initializer_list<bool> conditions, std::initializer_list<std::function<void()>> exprs);
 
-/// returns the first value corresponding to a true statement
-template<class T>
-T cond(std::initializer_list<bool> conditions, std::initializer_list<T> vals) {
-    for (int i = 0; i < conditions.size(); i++) {
-        if (*(conditions.begin()+i)) {
-            return *(vals.begin()+i);
-        }
-    }
-    return T();
-}  
-*/
 #endif // MYENGINE_H_INCLUDED

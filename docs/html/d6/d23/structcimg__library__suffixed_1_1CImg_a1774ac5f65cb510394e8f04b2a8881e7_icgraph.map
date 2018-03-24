@@ -1,0 +1,6 @@
+<map id="cimg_library_suffixed::CImg::get_projections2d" name="cimg_library_suffixed::CImg::get_projections2d">
+<area shape="rect" id="node2" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="225,71,392,112"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="452,5,611,47"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="449,71,614,112"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="440,136,623,177"/>
+</map>

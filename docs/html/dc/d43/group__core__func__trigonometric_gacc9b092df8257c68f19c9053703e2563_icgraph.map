@@ -1,0 +1,9 @@
+<map id="glm::acos" name="glm::acos">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8df548141b188417ae8d4e01d164018c" title="Compute the arccosine of each pixel value. " alt="" coords="150,15,305,57"/>
+<area shape="rect" id="node3" href="$df/d02/group__gtx__rotate__vector.html#ga1a32fceb71962e6160e8af295c91930a" title="glm::orientation" alt="" coords="172,81,283,108"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae0859700c8aaa58104b7985338246441" title="Convert pixel values from RGB to HSI color spaces. " alt="" coords="132,133,323,174"/>
+<area shape="rect" id="node4" href="$d6/d4f/structnta_1_1Primitive.html#aecce4a7f13b72766aed56ca66760b43d" title="Constructs an untextured regular polygon. " alt="" coords="383,5,541,32"/>
+<area shape="rect" id="node5" href="$d3/d28/classnta_1_1Camera2D.html#a11aada3f997c594ade11dd3c46d826f4" title="nta::Camera2D::Camera2D" alt="" coords="371,56,553,83"/>
+<area shape="rect" id="node6" href="$dc/dbe/classnta_1_1DebugBatch.html#abc7c94706f334db36992b486885868a2" title="Adds a shape to the batch. " alt="" coords="375,107,549,133"/>
+<area shape="rect" id="node7" href="$d4/df3/classnta_1_1PrimitiveBatch.html#a61a1fd06003233eac050ea7317fafc43" title="adds a primitive to the batch " alt="" coords="395,158,529,199"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="cimg_library_suffixed::CImgDisplay::display" name="cimg_library_suffixed::CImgDisplay::display">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a33594316b522954b5388986c9b15a52a" title="Display image into a CImgDisplay window. " alt="" coords="208,5,376,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a6d3f568606b4048412d8e61c947be6aa" title="Display the current CImgList instance in an existing CImgDisplay window (by reference). " alt="" coords="218,71,366,127"/>
+<area shape="rect" id="node4" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a914ee0515249db301dc66275861a6b3e" title="Take a snapshot of the associated window content. " alt="" coords="209,152,375,193"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a015159d8cee61c2f2316c3e128470a71" title="Construct image from a display window. " alt="" coords="436,87,595,128"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a668fe887682e7cbb469409842bb98cd2" title="Construct image from a display window . " alt="" coords="433,152,598,193"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a75e18966d8e02a9cee85642038e30a08" title="Copy the content of a display window to the current image instance. " alt="" coords="424,217,607,259"/>
+</map>

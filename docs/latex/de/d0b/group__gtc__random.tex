@@ -1,0 +1,199 @@
+\hypertarget{group__gtc__random}{}\section{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}
+\label{group__gtc__random}\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+Collaboration diagram for G\+L\+M\+\_\+\+G\+T\+C\+\_\+random\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{de/d0b/group__gtc__random}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+Type \hyperlink{group__gtc__random_ga04e241ab88374a477a2c2ceadd2fa03d}{glm\+::linear\+Rand} (gen\+Type Min, gen\+Type Max)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ \hyperlink{group__gtc__random_ga94731130c298a9ff5e5025fdee6d97a0}{glm\+::linear\+Rand} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&Min, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&Max)
+\item 
+{\footnotesize template$<$typename gen\+Type $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+Type \hyperlink{group__gtc__random_ga5193a83e49e4fdc5652c084711083574}{glm\+::gauss\+Rand} (gen\+Type Mean, gen\+Type Deviation)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ 2, T, defaultp $>$ \hyperlink{group__gtc__random_ga9dd05c36025088fae25b97c869e88517}{glm\+::circular\+Rand} (T Radius)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, defaultp $>$ \hyperlink{group__gtc__random_ga22f90fcaccdf001c516ca90f6428e138}{glm\+::spherical\+Rand} (T Radius)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ 2, T, defaultp $>$ \hyperlink{group__gtc__random_gaa0b18071f3f97dbf8bcf6f53c6fe5f73}{glm\+::disk\+Rand} (T Radius)
+\item 
+{\footnotesize template$<$typename T $>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, defaultp $>$ \hyperlink{group__gtc__random_ga7c53b7797f3147af68a11c767679fa3f}{glm\+::ball\+Rand} (T Radius)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{random_8hpp}{glm/gtc/random.\+hpp}$>$ to use the features of this extension.
+
+Generate random number from various distribution methods. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__gtc__random_ga7c53b7797f3147af68a11c767679fa3f}\label{group__gtc__random_ga7c53b7797f3147af68a11c767679fa3f}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!ball\+Rand@{ball\+Rand}}
+\index{ball\+Rand@{ball\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{ball\+Rand()}{ballRand()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$3, T, defaultp$>$ glm\+::ball\+Rand (\begin{DoxyParamCaption}\item[{T}]{Radius }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate a random 3D vector which coordinates are regulary distributed within the volume of a ball of a given radius
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 316 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_ga9dd05c36025088fae25b97c869e88517}\label{group__gtc__random_ga9dd05c36025088fae25b97c869e88517}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!circular\+Rand@{circular\+Rand}}
+\index{circular\+Rand@{circular\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{circular\+Rand()}{circularRand()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$2, T, defaultp$>$ glm\+::circular\+Rand (\begin{DoxyParamCaption}\item[{T}]{Radius }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate a random 2D vector which coordinates are regulary distributed on a circle of a given radius
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 334 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_gaa0b18071f3f97dbf8bcf6f53c6fe5f73}\label{group__gtc__random_gaa0b18071f3f97dbf8bcf6f53c6fe5f73}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!disk\+Rand@{disk\+Rand}}
+\index{disk\+Rand@{disk\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{disk\+Rand()}{diskRand()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$2, T, defaultp$>$ glm\+::disk\+Rand (\begin{DoxyParamCaption}\item[{T}]{Radius }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate a random 2D vector which coordinates are regulary distributed within the area of a disk of a given radius
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 298 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_ga5193a83e49e4fdc5652c084711083574}\label{group__gtc__random_ga5193a83e49e4fdc5652c084711083574}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!gauss\+Rand@{gauss\+Rand}}
+\index{gauss\+Rand@{gauss\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{gauss\+Rand()}{gaussRand()}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+Type glm\+::gauss\+Rand (\begin{DoxyParamCaption}\item[{gen\+Type}]{Mean,  }\item[{gen\+Type}]{Deviation }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate random numbers in the interval \mbox{[}Min, Max\mbox{]}, according a gaussian distribution
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 276 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_ga04e241ab88374a477a2c2ceadd2fa03d}\label{group__gtc__random_ga04e241ab88374a477a2c2ceadd2fa03d}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!linear\+Rand@{linear\+Rand}}
+\index{linear\+Rand@{linear\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{linear\+Rand()}{linearRand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename gen\+Type $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL gen\+Type glm\+::linear\+Rand (\begin{DoxyParamCaption}\item[{gen\+Type}]{Min,  }\item[{gen\+Type}]{Max }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate random numbers in the interval \mbox{[}Min, Max\mbox{]}, according a linear distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em Min} & Minimum value included in the sampling \\
+\hline
+{\em Max} & Maximum value included in the sampling \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em gen\+Type} & Value type. Currently supported\+: float or double scalars. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 262 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_ga94731130c298a9ff5e5025fdee6d97a0}\label{group__gtc__random_ga94731130c298a9ff5e5025fdee6d97a0}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!linear\+Rand@{linear\+Rand}}
+\index{linear\+Rand@{linear\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{linear\+Rand()}{linearRand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, T, Q$>$ glm\+::linear\+Rand (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{Min,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{Max }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate random numbers in the interval \mbox{[}Min, Max\mbox{]}, according a linear distribution
+
+
+\begin{DoxyParams}{Parameters}
+{\em Min} & Minimum value included in the sampling \\
+\hline
+{\em Max} & Maximum value included in the sampling \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Value type. Currently supported\+: float or double.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 270 of file random.\+inl.
+
+\mbox{\Hypertarget{group__gtc__random_ga22f90fcaccdf001c516ca90f6428e138}\label{group__gtc__random_ga22f90fcaccdf001c516ca90f6428e138}} 
+\index{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}!spherical\+Rand@{spherical\+Rand}}
+\index{spherical\+Rand@{spherical\+Rand}!G\+L\+M\+\_\+\+G\+T\+C\+\_\+random@{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random}}
+\subsubsection{\texorpdfstring{spherical\+Rand()}{sphericalRand()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$3, T, defaultp$>$ glm\+::spherical\+Rand (\begin{DoxyParamCaption}\item[{T}]{Radius }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{random_8hpp}{deps/glm/gtc/random.\+hpp}$>$}
+
+Generate a random 3D vector which coordinates are regulary distributed on a sphere of a given radius
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__gtc__random}{G\+L\+M\+\_\+\+G\+T\+C\+\_\+random} 
+\end{DoxySeeAlso}
+
+
+Definition at line 341 of file random.\+inl.
+

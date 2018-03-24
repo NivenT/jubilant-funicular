@@ -1,0 +1,12 @@
+<map id="cimg_library_suffixed::CImgDisplay::width" name="cimg_library_suffixed::CImgDisplay::width">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#a11aed0e6b30d75bf50946ee78d1aed94" title="Display a simple dialog box, and wait for the user&#39;s response. " alt="" coords="229,5,375,47"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#aa5e00518b20b2d02f1a45cefd3487892" title="Display image into an interactive window. " alt="" coords="218,71,386,112"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a08d04add0f5b2a69f62d08843aefdb98" title="Display 1d graph in an interactive window . " alt="" coords="199,136,405,177"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a98c3f7bdb16ca68cf21f918307e195a5" title="Display object 3d in an interactive window . " alt="" coords="218,202,386,258"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a19d3e26a995193301c7b1d11b7c7080f" title="Resize image to dimensions of a display window . " alt="" coords="229,282,375,338"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0d5189f8fb806e3a3a1d6bcf19dfd487" title="Simple interface to select a shape from an image . " alt="" coords="229,362,375,418"/>
+<area shape="rect" id="node8" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#a1159f1e73775d566e9dd7aa2a6f4bcac" title="Display a simple interactive interface to select images or sublists. " alt="" coords="228,442,376,498"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a689f47424dc7c548ebfe53e431409199" title="Select sub&#45;graph in a graph. " alt="" coords="229,522,375,578"/>
+<area shape="rect" id="node10" href="$d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#a1da38da8b6517995ebd493d6bcca52ca" title="Resize display to the size of another CImgDisplay instance. " alt="" coords="227,603,377,644"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1c315c22e2c514fdc3c56ff16a87e1c2" title="Resize image to dimensions of a display window. " alt="" coords="221,668,383,709"/>
+</map>

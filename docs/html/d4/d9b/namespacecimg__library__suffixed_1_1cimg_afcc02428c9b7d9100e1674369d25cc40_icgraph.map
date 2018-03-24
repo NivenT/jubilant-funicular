@@ -1,0 +1,15 @@
+<map id="cimg_library_suffixed::cimg::mod" name="cimg_library_suffixed::cimg::mod">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#af3c29f70168c4443e3f6f887834819b0" title="Blur image anisotropically, directed by a field of diffusion tensors. " alt="" coords="222,5,370,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ad7f1cbea5a78f6cd7fb8f308310b30d6" title="Draw 2d grid . " alt="" coords="205,86,387,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a61fea969244cdf85058b91703182275e" title="Draw a random plasma texture. " alt="" coords="219,152,373,208"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a611297a981e43c03a771fbc5d948f85a" title="Crop image region . " alt="" coords="207,233,385,274"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a1d9a664dfe01342505a5256db9078b31" title="Resize image to new dimensions . " alt="" coords="223,299,369,355"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a0c0d7575a84ce1ab046dc53699d555fd" title="Rotate image with arbitrary angle . " alt="" coords="223,379,369,435"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a8ec8cca0b51ca156165ffd77acf39e09" title="Warp image content by a warping field . " alt="" coords="206,459,386,501"/>
+<area shape="rect" id="node9" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a82435e0972fa4663a8b026ba832cfa3a" title="Convert pixel values from HSI to RGB color spaces. " alt="" coords="201,525,391,566"/>
+<area shape="rect" id="node10" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac0bd8f86babd67585b63f65320d17eaa" title="Convert pixel values from HSL to RGB color spaces. " alt="" coords="199,590,393,631"/>
+<area shape="rect" id="node11" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a906025514304165302ad303c79e6a978" title="Convert pixel values from HSV to RGB color spaces. " alt="" coords="199,655,393,697"/>
+<area shape="rect" id="node12" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ae6b21bdc82884c2973255134703d7790" title="In&#45;place modulo operator. " alt="" coords="199,721,393,762"/>
+<area shape="rect" id="node13" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a66055be7e7726ec6de46097560fa0336" title="Rotate image with arbitrary angle. " alt="" coords="216,786,376,827"/>
+<area shape="rect" id="node14" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a648665fe1fc021d297a548f27b9da643" title="Shift image content. " alt="" coords="220,851,372,893"/>
+</map>

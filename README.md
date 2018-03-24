@@ -11,8 +11,22 @@ Documentation can be found [here](https://nivent.github.io/jubilant-funicular/ht
 Ideally, there would be no dependencies and all the necessary code would be written by me, but that's not the case, so make sure you have
 
 * [OpenGL](https://www.opengl.org/)
-* [Glew](http://glew.sourceforge.net/)
+  * [Glew](http://glew.sourceforge.net/)
+  * [GLUT](http://freeglut.sourceforge.net/)
 * [SDL2](https://www.libsdl.org/download-2.0.php)
+  * SDL2-mixer
+  * SDL2-ttf
 * [DevIL](http://openil.sourceforge.net/)
 
-Most, if not all, of these can be obtained using `apt-get` on Ubuntu. On Mac, you can get them using `brew`.
+All of these can be obtained using `apt-get` on Ubuntu. If you want to get them all at once, run
+
+```bash
+sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \
+    libglew-dev freeglut3-dev libxmu-dev libxi-dev libdevil-dev
+```
+You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)
+
+On Mac, you can get them using `brew`.
+
+## Note
+There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules.

@@ -1,0 +1,6 @@
+<map id="glm::detail::_swizzle&lt; N, T, Q, E0, E1, E2, E3 &gt;" name="glm::detail::_swizzle&lt; N, T, Q, E0, E1, E2, E3 &gt;">
+<area shape="rect" id="node2" href="$dd/d3d/structglm_1_1detail_1_1__swizzle__base2.html" title="glm::detail::_swizzle\l_base2\&lt; N, T, Q, E0,\l E1, E2, E3,(E0==E1\|\|E0\l==E2\|\|E0==E3\|\|E1==E2\|\|E1\l==E3\|\|E2==E3)\&gt;" alt="" coords="540,5,724,91"/>
+<area shape="rect" id="node3" href="$d7/d42/structglm_1_1detail_1_1__swizzle__base1.html" title="glm::detail::_swizzle\l_base1\&lt; N, T, Q, E0,\l E1, E2, E3, detail::is\l_aligned\&lt; Q \&gt;::value \&gt;" alt="" coords="336,13,491,83"/>
+<area shape="rect" id="node4" href="$df/de0/structglm_1_1detail_1_1__swizzle__base0.html" title="glm::detail::_swizzle\l_base0\&lt; T, N \&gt;" alt="" coords="145,27,287,69"/>
+<area shape="rect" id="node5" href="$da/d7d/classchar.html" title="char" alt="" coords="5,35,52,61"/>
+</map>

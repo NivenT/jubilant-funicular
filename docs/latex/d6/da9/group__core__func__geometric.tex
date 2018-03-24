@@ -1,0 +1,279 @@
+\hypertarget{group__core__func__geometric}{}\section{Geometric functions}
+\label{group__core__func__geometric}\index{Geometric functions@{Geometric functions}}
+Collaboration diagram for Geometric functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d6/da9/group__core__func__geometric}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__core__func__geometric_ga0cdabbb000834d994a1d6dc56f8f5263}{glm\+::length} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__core__func__geometric_gaa68de6c53e20dfb2dac2d20197562e3f}{glm\+::distance} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&p0, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&p1)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T \hyperlink{group__core__func__geometric_gaad6c5d9d39bdc0bf43baf1b22e147a0a}{glm\+::dot} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&y)
+\item 
+{\footnotesize template$<$typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ \hyperlink{group__core__func__geometric_gaeeec0794212fe84fc9d261de067c9587}{glm\+::cross} (\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&x, \hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&y)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ \hyperlink{group__core__func__geometric_ga3b8d3dcae77870781392ed2902cce597}{glm\+::normalize} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&x)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ \hyperlink{group__core__func__geometric_ga7aed0a36c738169402404a3a5d54e43b}{glm\+::faceforward} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&N, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&I, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&Nref)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ \hyperlink{group__core__func__geometric_ga5631dd1d5618de5450b1ea3cf3e94905}{glm\+::reflect} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&I, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&N)
+\item 
+{\footnotesize template$<$length\+\_\+t L, typename T , qualifier Q$>$ }\\G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ \hyperlink{group__core__func__geometric_ga01da3dff9e2ef6b9d4915c3047e22b74}{glm\+::refract} (\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&I, \hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&N, T eta)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include $<$\hyperlink{geometric_8hpp}{glm/geometric.\+hpp}$>$ to use these core features.
+
+These operate on vectors as vectors, not component-\/wise. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__core__func__geometric_gaeeec0794212fe84fc9d261de067c9587}\label{group__core__func__geometric_gaeeec0794212fe84fc9d261de067c9587}} 
+\index{Geometric functions@{Geometric functions}!cross@{cross}}
+\index{cross@{cross}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily template$<$typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$3, T, Q$>$ glm\+::cross (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ 3, T, Q $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+Returns the cross product of x and y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/cross.xml}{\tt G\+L\+SL cross man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 179 of file func\+\_\+geometric.\+inl.
+
+
+
+Referenced by glm\+::intersect\+Line\+Triangle(), and glm\+::orientation().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/da9/group__core__func__geometric_gaeeec0794212fe84fc9d261de067c9587_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__core__func__geometric_gaa68de6c53e20dfb2dac2d20197562e3f}\label{group__core__func__geometric_gaa68de6c53e20dfb2dac2d20197562e3f}} 
+\index{Geometric functions@{Geometric functions}!distance@{distance}}
+\index{distance@{distance}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::distance (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{p0,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{p1 }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+Returns the distance betwwen p0 and p1, i.\+e., length(p0 -\/ p1).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/distance.xml}{\tt G\+L\+SL distance man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 157 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_gaad6c5d9d39bdc0bf43baf1b22e147a0a}\label{group__core__func__geometric_gaad6c5d9d39bdc0bf43baf1b22e147a0a}} 
+\index{Geometric functions@{Geometric functions}!dot@{dot}}
+\index{dot@{dot}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::dot (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+Returns the dot product of x and y, i.\+e., result = x $\ast$ y.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml}{\tt G\+L\+SL dot man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 171 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_ga7aed0a36c738169402404a3a5d54e43b}\label{group__core__func__geometric_ga7aed0a36c738169402404a3a5d54e43b}} 
+\index{Geometric functions@{Geometric functions}!faceforward@{faceforward}}
+\index{faceforward@{faceforward}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{faceforward()}{faceforward()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, T, Q$>$ glm\+::faceforward (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{N,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{I,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{Nref }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+If dot(\+Nref, I) $<$ 0.\+0, return N, otherwise, return -\/N.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/faceforward.xml}{\tt G\+L\+SL faceforward man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 209 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_ga0cdabbb000834d994a1d6dc56f8f5263}\label{group__core__func__geometric_ga0cdabbb000834d994a1d6dc56f8f5263}} 
+\index{Geometric functions@{Geometric functions}!length@{length}}
+\index{length@{length}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL T glm\+::length (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+Returns the length of x, i.\+e., sqrt(x $\ast$ x).
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/length.xml}{\tt G\+L\+SL length man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 140 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_ga3b8d3dcae77870781392ed2902cce597}\label{group__core__func__geometric_ga3b8d3dcae77870781392ed2902cce597}} 
+\index{Geometric functions@{Geometric functions}!normalize@{normalize}}
+\index{normalize@{normalize}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, T, Q$>$ glm\+::normalize (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+Returns a vector in the same direction as x but with length of 1. According to issue 10 G\+L\+SL 1.\+10 specification, if length(x) == 0 then result is undefined and generate an error.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/normalize.xml}{\tt G\+L\+SL normalize man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 194 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_ga5631dd1d5618de5450b1ea3cf3e94905}\label{group__core__func__geometric_ga5631dd1d5618de5450b1ea3cf3e94905}} 
+\index{Geometric functions@{Geometric functions}!reflect@{reflect}}
+\index{reflect@{reflect}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{reflect()}{reflect()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, T, Q$>$ glm\+::reflect (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{I,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{N }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+For the incident vector I and surface orientation N, returns the reflection direction \+: result = I -\/ 2.\+0 $\ast$ dot(\+N, I) $\ast$ N.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/reflect.xml}{\tt G\+L\+SL reflect man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 222 of file func\+\_\+geometric.\+inl.
+
+\mbox{\Hypertarget{group__core__func__geometric_ga01da3dff9e2ef6b9d4915c3047e22b74}\label{group__core__func__geometric_ga01da3dff9e2ef6b9d4915c3047e22b74}} 
+\index{Geometric functions@{Geometric functions}!refract@{refract}}
+\index{refract@{refract}!Geometric functions@{Geometric functions}}
+\subsubsection{\texorpdfstring{refract()}{refract()}}
+{\footnotesize\ttfamily template$<$length\+\_\+t L, typename T , qualifier Q$>$ \\
+G\+L\+M\+\_\+\+F\+U\+N\+C\+\_\+\+D\+E\+CL \hyperlink{structglm_1_1vec}{vec}$<$L, T, Q$>$ glm\+::refract (\begin{DoxyParamCaption}\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{I,  }\item[{\hyperlink{structglm_1_1vec}{vec}$<$ L, T, Q $>$ const \&}]{N,  }\item[{T}]{eta }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily \#include $<$\hyperlink{geometric_8hpp}{deps/glm/geometric.\+hpp}$>$}
+
+For the incident vector I and surface normal N, and the ratio of indices of refraction eta, return the refraction vector.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em L} & An integer between 1 and 4 included that qualify the dimension of the vector. \\
+\hline
+{\em T} & Floating-\/point scalar types.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.opengl.org/sdk/docs/manglsl/xhtml/refract.xml}{\tt G\+L\+SL refract man page} 
+
+\href{http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf}{\tt G\+L\+SL 4.\+20.\+8 specification, section 8.\+5 Geometric Functions} 
+\end{DoxySeeAlso}
+
+
+Definition at line 238 of file func\+\_\+geometric.\+inl.
+

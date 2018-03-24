@@ -1,0 +1,9 @@
+<map id="cimg_library_suffixed::CImg::max_min" name="cimg_library_suffixed::CImg::max_min">
+<area shape="rect" id="node2" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ab19d123867d5a2ed56fe1b016267bfe7" title="Blur image, with the joint bilateral filter. " alt="" coords="222,5,370,61"/>
+<area shape="rect" id="node3" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ac1f792d60d2ced2cfa529ba0f7efb0e7" title="Draw 1d graph. " alt="" coords="199,86,393,127"/>
+<area shape="rect" id="node4" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a7d164f8fc5dd02c93927b74d14809401" title="Blur image, with the image guided filter . " alt="" coords="223,152,369,208"/>
+<area shape="rect" id="node5" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a91ec1cd09114c4018a78e4ea0b2df386" title="Estimate displacement field between two images . " alt="" coords="223,232,369,288"/>
+<area shape="rect" id="node6" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a595e9d40b1279ade2cf00bbf67d46639" title="Resize 3d object. " alt="" coords="215,312,377,368"/>
+<area shape="rect" id="node7" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#ad3a36ae0c4e16ade94e09dd3c55d400c" title="Shift 3d object&#39;s vertices, so that it becomes centered. " alt="" coords="220,392,372,448"/>
+<area shape="rect" id="node8" href="$d6/d23/structcimg__library__suffixed_1_1CImg.html#a42395174c544ec66191539bf76fcb360" title="Texturize primitives of a 3d object. " alt="" coords="207,472,385,528"/>
+</map>

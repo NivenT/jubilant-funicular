@@ -70,12 +70,22 @@ $(function() {
 <h1>Requirements</h1>
 <p>Ideally, there would be no dependencies and all the necessary code would be written by me, but that's not the case, so make sure you have</p>
 <ul>
-<li><a href="https://www.opengl.org/">OpenGL</a></li>
+<li><a href="https://www.opengl.org/">OpenGL</a><ul>
 <li><a href="http://glew.sourceforge.net/">Glew</a></li>
-<li><a href="https://www.libsdl.org/download-2.0.php">SDL2</a></li>
-<li><a href="http://openil.sourceforge.net/">DevIL</a></li>
+<li><a href="http://freeglut.sourceforge.net/">GLUT</a></li>
 </ul>
-<p>Most, if not all, of these can be obtained using <code>apt-get</code> on Ubuntu. </p>
+</li>
+<li><a href="https://www.libsdl.org/download-2.0.php">SDL2</a><ul>
+<li>SDL2-mixer</li>
+<li>SDL2-ttf</li>
+</ul>
+</li>
+</ul>
+<p>All of these can be obtained using <code>apt-get</code> on Ubuntu. If you want to get them all at once, run</p>
+<div class="fragment"><div class="line">sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \</div><div class="line">    libglew-dev freeglut3-dev libxmu-dev libxi-dev</div></div><!-- fragment --><p> You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)</p>
+<p>On Mac, you can get them using <code>brew</code>.</p>
+<h2>Note</h2>
+<p>There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

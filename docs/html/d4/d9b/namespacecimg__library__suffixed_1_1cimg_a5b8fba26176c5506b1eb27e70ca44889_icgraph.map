@@ -1,0 +1,5 @@
+<map id="cimg_library_suffixed::cimg::ffmpeg_path" name="cimg_library_suffixed::cimg::ffmpeg_path">
+<area shape="rect" id="node2" href="$d4/d9b/namespacecimg__library__suffixed_1_1cimg.html#aac739bf544269324a04504ebe92b93e9" title="Get current local time (single&#45;attribute version). " alt="" coords="201,5,347,47"/>
+<area shape="rect" id="node3" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#aa1c97a6c05ba746d02440eec0ad2e602" title="Load an image from a video file using the external tool &#39;ffmpeg&#39;. " alt="" coords="200,71,348,127"/>
+<area shape="rect" id="node4" href="$d5/d7e/structcimg__library__suffixed_1_1CImgList.html#af09a45345581747984f4df0607418f2c" title="Save image sequence, using the external tool &#39;ffmpeg&#39;. " alt="" coords="199,151,349,207"/>
+</map>

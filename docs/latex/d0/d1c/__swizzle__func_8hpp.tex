@@ -1,0 +1,671 @@
+\hypertarget{__swizzle__func_8hpp}{}\section{deps/glm/detail/\+\_\+swizzle\+\_\+func.hpp File Reference}
+\label{__swizzle__func_8hpp}\index{deps/glm/detail/\+\_\+swizzle\+\_\+func.\+hpp@{deps/glm/detail/\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY}(T,  P,  C\+O\+N\+ST,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY}(T,  P,  C\+O\+N\+ST,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY}(T,  P,  C\+O\+N\+ST,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}(T,  P,  L,  C\+O\+N\+ST,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}(T,  P,  L,  C\+O\+N\+ST,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}(T,  P,  L,  C\+O\+N\+ST,  A,  B,  C,  D)
+\item 
+\mbox{\Hypertarget{__swizzle__func_8hpp_a4feeb5a0a65101478fbc9939fbfcc81c}\label{__swizzle__func_8hpp_a4feeb5a0a65101478fbc9939fbfcc81c}} 
+\#define {\bfseries G\+L\+M\+\_\+\+M\+U\+T\+A\+B\+LE}
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}(T,  P)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}(T,  P)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}(T,  P)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP}(T,  P,  A,  B)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}(T,  P)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C)
+\item 
+\mbox{\Hypertarget{__swizzle__func_8hpp_a18bdd12a80387e16c5e027e7dc3847d5}\label{__swizzle__func_8hpp_a18bdd12a80387e16c5e027e7dc3847d5}} 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}(T,  P,  A,  B,  C)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}(T,  P)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\mbox{\Hypertarget{__swizzle__func_8hpp_aa360360e50bf39b1572922af167cba6b}\label{__swizzle__func_8hpp_aa360360e50bf39b1572922af167cba6b}} 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\mbox{\Hypertarget{__swizzle__func_8hpp_a36e53eb98f1ac59f440f7affbc8d874d}\label{__swizzle__func_8hpp_a36e53eb98f1ac59f440f7affbc8d874d}} 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}(T,  P,  A,  B,  C,  D)
+\item 
+\#define {\bfseries G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}(T,  P)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{group__core}{Core features} 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{__swizzle__func_8hpp_a103640f842ba8cda1d79c2f7ae27273a}\label{__swizzle__func_8hpp_a103640f842ba8cda1d79c2f7ae27273a}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, 2, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, 2, GLM\_MUTABLE, B, A)
+\end{DoxyCode}
+
+
+Definition at line 47 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_aef8cdbd0b5ef764909937d1089d8a9fc}\label{__swizzle__func_8hpp_aef8cdbd0b5ef764909937d1089d8a9fc}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC3\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, B)
+\end{DoxyCode}
+
+
+Definition at line 56 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a62fd0b6bc23328a64d0c895173a42949}\label{__swizzle__func_8hpp_a62fd0b6bc23328a64d0c895173a42949}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC4\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, GLM\_MUTABLE, D, C)
+\end{DoxyCode}
+
+
+Definition at line 81 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a5475357ed8f82d5863db91e44ba7a94b}\label{__swizzle__func_8hpp_a5475357ed8f82d5863db91e44ba7a94b}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC3\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, GLM\_MUTABLE, C, B, A)
+\end{DoxyCode}
+
+
+Definition at line 64 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_afb0bb247c45f190d71ce11de399f4bae}\label{__swizzle__func_8hpp_afb0bb247c45f190d71ce11de399f4bae}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC4\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , A, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , B, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , C, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, , D, C, B)
+\end{DoxyCode}
+
+
+Definition at line 95 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a6b3142d281b8fd5ef91ae37c13ec937f}\label{__swizzle__func_8hpp_a6b3142d281b8fd5ef91ae37c13ec937f}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_REF4\_FROM\_VEC4\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, C, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, C, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, D, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, D, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, B, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, C, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, C, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, D, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, D, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, A, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , B, A, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, B, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, B, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, D, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, D, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, A, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , C, A, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, , D, B, C, A)
+\end{DoxyCode}
+
+
+Definition at line 121 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a5b76e09248f75b42e35237709d208a45}\label{__swizzle__func_8hpp_a5b76e09248f75b42e35237709d208a45}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}{GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC2}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, x, y) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, r, g) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC2\_SWIZZLE(T, P, s, t)
+\end{DoxyCode}
+
+
+Definition at line 51 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a689e09db6ab8f1b4bb33ed0a15185d71}\label{__swizzle__func_8hpp_a689e09db6ab8f1b4bb33ed0a15185d71}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}{GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, x, y, z) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, r, g, b) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP(T, P, s, t, p)
+\end{DoxyCode}
+
+
+Definition at line 76 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a6237edead5a4339e6cf75c427f34f1a4}\label{__swizzle__func_8hpp_a6237edead5a4339e6cf75c427f34f1a4}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}{GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC3\_COMP}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C)
+\end{DoxyCode}
+
+
+Definition at line 72 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a4ccd30ba436112c863d7eb8a647ae2ad}\label{__swizzle__func_8hpp_a4ccd30ba436112c863d7eb8a647ae2ad}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}{GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, x, y, z, w) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, r, g, b, a) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP(T, P, s, t, p, q)
+\end{DoxyCode}
+
+
+Definition at line 152 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a82447ddb4e47121268784f4c56a2bb11}\label{__swizzle__func_8hpp_a82447ddb4e47121268784f4c56a2bb11}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}{GLM\_SWIZZLE\_GEN\_REF\_FROM\_VEC4\_COMP}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+R\+E\+F\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_REF2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_REF4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D)
+\end{DoxyCode}
+
+
+Definition at line 147 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a90716a40844075cb659ac2df96df47b9}\label{__swizzle__func_8hpp_a90716a40844075cb659ac2df96df47b9}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY}{GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+vec<2, T, Q> A ## B() CONST                         \(\backslash\)
+    \{                                                   \(\backslash\)
+        return vec<2, T, Q>(this->A, this->B);          \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 6 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_aaf5847f48835e17fef8600da62ea2b4c}\label{__swizzle__func_8hpp_aaf5847f48835e17fef8600da62ea2b4c}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}{GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY\_DEF}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{L,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<\textcolor{keyword}{typename} T>                                        \(\backslash\)
+    vec<L, T, Q> vec<L, T, Q>::A ## B() CONST                   \(\backslash\)
+    \{                                                           \(\backslash\)
+        return vec<2, T, Q>(this->A, this->B);                  \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 24 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a6d6d1d74109800c97583ba833c734cb5}\label{__swizzle__func_8hpp_a6d6d1d74109800c97583ba833c734cb5}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC2\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, B)
+\end{DoxyCode}
+
+
+Definition at line 157 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_acc0e5d12b8cbad8b39511fa29b70458e}\label{__swizzle__func_8hpp_acc0e5d12b8cbad8b39511fa29b70458e}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC3\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, C)
+\end{DoxyCode}
+
+
+Definition at line 201 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a78976a20b87ddc4a6aef1ee6ceaff07b}\label{__swizzle__func_8hpp_a78976a20b87ddc4a6aef1ee6ceaff07b}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC4\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C2\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, A, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, B, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, D, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, D, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, D, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC2\_ENTRY(T, P, \textcolor{keyword}{const}, D, D)
+\end{DoxyCode}
+
+
+Definition at line 334 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_ac2ddc49b43e15405965cb527341681d4}\label{__swizzle__func_8hpp_ac2ddc49b43e15405965cb527341681d4}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY}{GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+vec<3, T, Q> A ## B ## C() CONST                            \(\backslash\)
+    \{                                                           \(\backslash\)
+        return vec<3, T, Q>(this->A, this->B, this->C);         \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 12 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_ab3a53563b96317e54ff45b9b17bdc13d}\label{__swizzle__func_8hpp_ab3a53563b96317e54ff45b9b17bdc13d}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}{GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY\_DEF}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{L,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<\textcolor{keyword}{typename} T>                                            \(\backslash\)
+    vec<3, T, Q> vec<L, T, Q>::A ## B ## C() CONST                  \(\backslash\)
+    \{                                                               \(\backslash\)
+        return vec<3, T, Q>(this->A, this->B, this->C);             \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 31 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_afd0e5bf84427b82e6416d25626d6a9b8}\label{__swizzle__func_8hpp_afd0e5bf84427b82e6416d25626d6a9b8}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC2\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, B)
+\end{DoxyCode}
+
+
+Definition at line 163 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_aa3602433a418e7ee8dbf97332eb94812}\label{__swizzle__func_8hpp_aa3602433a418e7ee8dbf97332eb94812}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC3\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C3\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, A, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, B, C, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, A, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, C, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, C, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_ENTRY(T, P, \textcolor{keyword}{const}, C, C, C)
+\end{DoxyCode}
+
+
+Definition at line 212 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a53d227bc05ad386a43110b5db4352965}\label{__swizzle__func_8hpp_a53d227bc05ad386a43110b5db4352965}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY}{GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+vec<4, T, Q> A ## B ## C ## D() CONST                                   \(\backslash\)
+    \{                                                                       \(\backslash\)
+        return vec<4, T, Q>(this->A, this->B, this->C, this->D);            \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 18 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a130d7b4e772f2f6b8a713beecf413390}\label{__swizzle__func_8hpp_a130d7b4e772f2f6b8a713beecf413390}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF}{GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY\_DEF}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+EF(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{L,  }\item[{}]{C\+O\+N\+ST,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<\textcolor{keyword}{typename} T>                                                \(\backslash\)
+    vec<4, T, Q> vec<L, T, Q>::A ## B ## C ## D() CONST                 \(\backslash\)
+    \{                                                                   \(\backslash\)
+        return vec<4, T, Q>(this->A, this->B, this->C, this->D);        \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Definition at line 38 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a81b434975228ac8e5d001555c1dd493b}\label{__swizzle__func_8hpp_a81b434975228ac8e5d001555c1dd493b}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE}{GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC2\_SWIZZLE}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C4\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+S\+W\+I\+Z\+Z\+LE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, A, B, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, A, B, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, A, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, B, A) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_ENTRY(T, P, \textcolor{keyword}{const}, B, B, B, B)
+\end{DoxyCode}
+
+
+Definition at line 173 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_aeb327b34df01b2ae42883615a0674afd}\label{__swizzle__func_8hpp_aeb327b34df01b2ae42883615a0674afd}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, x, y)  \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, r, g)  \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP(T, P, s, t)
+\end{DoxyCode}
+
+
+Definition at line 196 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_add277da756ef5afefec3ab6bff039755}\label{__swizzle__func_8hpp_add277da756ef5afefec3ab6bff039755}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC2\_COMP}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C2\+\_\+\+C\+O\+MP(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC2\_SWIZZLE(T, P, A, B) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC2\_SWIZZLE(T, P, A, B)
+\end{DoxyCode}
+
+
+Definition at line 191 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a1504fbd23db8599edffb2e24c4e7eb9b}\label{__swizzle__func_8hpp_a1504fbd23db8599edffb2e24c4e7eb9b}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, x, y, z) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, r, g, b) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP(T, P, s, t, p)
+\end{DoxyCode}
+
+
+Definition at line 329 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a1c46c670c8c5996dfed3e20526fd4985}\label{__swizzle__func_8hpp_a1c46c670c8c5996dfed3e20526fd4985}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC3\_COMP}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C3\+\_\+\+C\+O\+MP(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC3\_SWIZZLE(T, P, A, B, C)
+\end{DoxyCode}
+
+
+Definition at line 324 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a5b83369170c691722331d9bbfa7545f6}\label{__swizzle__func_8hpp_a5b83369170c691722331d9bbfa7545f6}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, x, y, z, w) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, r, g, b, a) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP(T, P, s, t, p, q)
+\end{DoxyCode}
+
+
+Definition at line 681 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
+\mbox{\Hypertarget{__swizzle__func_8hpp_a78f285ac9dcf037b9a0f426f98bf58c5}\label{__swizzle__func_8hpp_a78f285ac9dcf037b9a0f426f98bf58c5}} 
+\index{\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}!G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}}
+\index{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP@{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}!\+\_\+swizzle\+\_\+func.\+hpp@{\+\_\+swizzle\+\_\+func.\+hpp}}
+\subsubsection{\texorpdfstring{G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP}{GLM\_SWIZZLE\_GEN\_VEC\_FROM\_VEC4\_COMP}}
+{\footnotesize\ttfamily \#define G\+L\+M\+\_\+\+S\+W\+I\+Z\+Z\+L\+E\+\_\+\+G\+E\+N\+\_\+\+V\+E\+C\+\_\+\+F\+R\+O\+M\+\_\+\+V\+E\+C4\+\_\+\+C\+O\+MP(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{P,  }\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+GLM\_SWIZZLE\_GEN\_VEC2\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC3\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D) \(\backslash\)
+    GLM\_SWIZZLE\_GEN\_VEC4\_FROM\_VEC4\_SWIZZLE(T, P, A, B, C, D)
+\end{DoxyCode}
+
+
+Definition at line 676 of file \+\_\+swizzle\+\_\+func.\+hpp.
+
