@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 
 #include "nta/Logger.h"
+#include "nta/CallbackManager.h"
 
 namespace nta {
     std::ofstream   Logger::m_logFile;
@@ -22,6 +23,8 @@ namespace nta {
         writeToLog("********** ERROR **********");
         writeToLog(error);
         writeToLog("********** ERROR **********");
+        /// \todo Make this a clean exit?
+        CallbackManager::destroy();
         exit(0xbad);
     }
     void Logger::indent(size_t tab_size) {
