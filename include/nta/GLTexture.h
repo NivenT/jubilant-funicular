@@ -8,17 +8,17 @@ typedef int GLint;
 
 namespace nta {
     class ResourceManager;
-    ///represents a texture
+    /// represents a texture
     struct GLTexture {
-        ///the id of the texture
+        /// the id of the texture
         GLuint id;
-        ///the width and height, respectively, of the texture
+        /// the width and height, respectively, of the texture
         GLint width, height;
     };
-    ///loads images as GLTextures
+    /// loads images as GLTextures
     class ImageLoader {
     private:
-        ///loads in any image file
+        /// loads in any image file
         static GLTexture readImage(crstring filePath, GLint minFilt, GLint magFilt, crvec2 dimensions);
     public:
         friend class ResourceManager;
