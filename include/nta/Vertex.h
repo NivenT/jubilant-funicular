@@ -3,7 +3,7 @@
 
 #include <GL/glew.h>
 
-#include "MyEngine.h"
+#include "nta/MyEngine.h"
 
 #define NUM_VERTEX_ATTRIBS 4
 
@@ -29,6 +29,9 @@ namespace nta {
         }
         /// Initializes a vertex with everything
         Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t = 1.0) : pos(p), color(c), uv(u), hasTexture(t) {
+        }
+        /// Initializes vertex with everything except position
+        Vertex2D(crvec4 c, crvec2 u, float t = 1.0) : pos(0), color(c), uv(u), hasTexture(t) {
         }
         /// sets the position of the vertex
         void setPosition(float x, float y) {

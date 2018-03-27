@@ -29,6 +29,30 @@ namespace nta {
             botLeft.color = color;
             botLeft.hasTexture = texture != 0;
         }
+        /// \todo Use model matrix?
+        Glyph(crvec4 posRect, crvec4 uvRect, GLuint tex, float d, crvec4 col, float angle) :
+            textureID(tex), depth(d) {
+            glm::vec2 extents(posRect[2]/2.f, posRect[3]/2.f), pos(posRect.x, posRect.y);
+            glm::vec2 tl(-extents.x, extents.y),  tr(extents.x, extents.y),
+                      bl(-extents.x, -extents.y), br(extents.x, -extents.y);
+
+            topLeft.pos = rotate(tl, angle) - tl + pos;
+            topLeft.setUV(uvRect.x, uvRect.y);
+            topLeft.color = col;
+            topLeft.hasTexture = tex != 0;
+            topRight.pos = rotate(tr, angle) - tl + pos;
+            topRight.setUV(uvRect.x + uvRect[2], uvRect.y);
+            topRight.color = col;
+            topRight.hasTexture = tex != 0;
+            botRight.pos = rotate(br, angle) - tl + pos;
+            botRight.setUV(uvRect.x + uvRect[2], uvRect.y + uvRect[3]);
+            botRight.color = col;
+            botRight.hasTexture = tex != 0;
+            botLeft.pos = rotate(bl, angle) - tl + pos;
+            botLeft.setUV(uvRect.x, uvRect.y + uvRect[3]);
+            botLeft.color = col;
+            botLeft.hasTexture = tex != 0;
+        }
         /// the texture used by the glyph
         GLuint textureID;
         /// the depth of the glyph
@@ -87,14 +111,21 @@ namespace nta {
         /// ends collection of glyphs and prepares to render
         void end();
         /// adds a glyph to the batch
+        /// \todo Give some of these different names?
         void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, 
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
+        /*
         void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, 
                       float depth = NTA_DEFAULT_DEPTH);
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
                       float depth = NTA_DEFAULT_DEPTH);
+        */
+        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, 
+                      float angle = 0.0f, float depth = NTA_DEFAULT_DEPTH);
+        void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
+                      float angle = 0.0f, float depth = NTA_DEFAULT_DEPTH);
         /// renders the batch
         void render() const;
     };

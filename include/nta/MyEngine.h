@@ -11,6 +11,8 @@ typedef const glm::vec4& crvec4;
 namespace nta {
     /// initializes some basic stuff for the engine
     extern void init();
+    /// Rotates a point (about the origin) by the given angle
+    extern glm::vec2 rotate(crvec2 pt, float angle);
 
     /// converts input to an std::string
     template<class T>

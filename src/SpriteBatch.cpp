@@ -101,14 +101,13 @@ namespace nta {
     }
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth,
                                crvec4 color) {
-        m_glyphs.emplace_back(posRect, uvRect, texture, depth, color);
+        addGlyph(posRect, uvRect, texture, color, 0, depth);
     }
     void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture,
                                float depth, crvec4 color) {
-        glm::vec4 posRect(glm::min(corner1.x, corner2.x), glm::max(corner1.y, corner2.y), 
-                          glm::abs(corner1-corner2));
-        m_glyphs.emplace_back(posRect, uvRect, texture, depth, color);
+        addGlyph(corner1, corner2, uvRect, texture, color, 0, depth);
     }
+    /*
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color,
                                float depth) {
         addGlyph(posRect, uvRect, texture, depth, color);
@@ -116,6 +115,17 @@ namespace nta {
     void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
                                crvec4 color, float depth) {
         addGlyph(corner1, corner2, uvRect, texture, depth, color);
+    }
+    */
+    void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color,
+                               float angle, float depth) {
+        m_glyphs.emplace_back(posRect, uvRect, texture, depth, color, angle);
+    }
+    void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
+                               crvec4 color, float angle, float depth) {
+        glm::vec4 posRect(glm::min(corner1.x, corner2.x), glm::max(corner1.y, corner2.y), 
+                          glm::abs(corner1-corner2));
+        addGlyph(posRect, uvRect, texture, color, angle, depth);
     }
     void SpriteBatch::render() const {
         glBindVertexArray(m_vao);

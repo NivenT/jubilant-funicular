@@ -4,6 +4,8 @@
 #endif
 #include <SDL2/SDL.h>
 
+#include "nta/MyEngine.h"
+
 namespace nta {
     // \todo Take parameters for gl version
     void init() {
@@ -16,5 +18,9 @@ namespace nta {
             ilInit();
             iluInit();
         #endif
+    }
+    glm::vec2 rotate(crvec2 pt, float angle) {
+        return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,
+                         glm::sin(angle)*pt.x + glm::cos(angle)*pt.y);
     }
 }

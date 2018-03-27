@@ -2,11 +2,12 @@
 #include "nta/PrimitiveBatch.h"
 
 namespace nta {
+    /*
     glm::vec2 rotate(glm::vec2 pt, float angle) {
         return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,
                          glm::sin(angle)*pt.x + glm::cos(angle)*pt.y);
     }
-
+    */
     DebugBatch::DebugBatch() {
     }
     DebugBatch::~DebugBatch() {
