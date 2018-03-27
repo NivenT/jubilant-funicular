@@ -26,5 +26,6 @@ var searchData=
   ['gettranslationmatrix',['getTranslationMatrix',['../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3',1,'nta::Camera2D']]],
   ['getuniformlocation',['getUniformLocation',['../dc/d9c/classnta_1_1GLSLProgram.html#a8140edf8b3d89de4ebf8c4b1db404f59',1,'nta::GLSLProgram']]],
   ['getwidth',['getWidth',['../d4/dfb/classnta_1_1Window.html#ac6cb1a31bb8c219e189ca5f88e25dd45',1,'nta::Window']]],
-  ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram']]]
+  ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram']]],
+  ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105',1,'nta::Glyph']]]
 ];

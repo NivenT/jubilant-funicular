@@ -1,0 +1,6 @@
+<map id="nta::Logger::writeErrorToLog" name="nta::Logger::writeErrorToLog">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="437,5,596,32"/>
+<area shape="rect" id="node3" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="240,57,389,98"/>
+<area shape="rect" id="node4" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="443,57,590,98"/>
+<area shape="rect" id="node5" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="644,57,791,98"/>
+</map>

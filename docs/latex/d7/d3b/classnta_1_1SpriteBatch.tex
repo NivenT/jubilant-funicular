@@ -19,17 +19,16 @@ void \hyperlink{classnta_1_1SpriteBatch_a8ceff37f4b281bfb1f627876bb420978}{begin
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}\label{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}} 
 void \hyperlink{classnta_1_1SpriteBatch_abadacd5bfcfc6ed0cf5a4470a22010ed}{end} ()
 \begin{DoxyCompactList}\small\item\em ends collection of glyphs and prepares to render \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}\label{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}} 
 void \hyperlink{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}{add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH, crvec4 color=glm\+::vec4(1))
-\begin{DoxyCompactList}\small\item\em adds a glyph to the batch \end{DoxyCompactList}\item 
+\item 
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_a4a6041951ba065a9ad0e7265bef531ef}\label{classnta_1_1SpriteBatch_a4a6041951ba065a9ad0e7265bef531ef}} 
 void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH, crvec4 color=glm\+::vec4(1))
 \item 
-\mbox{\Hypertarget{classnta_1_1SpriteBatch_a5bfd87da8549218f739977bb3fa3361c}\label{classnta_1_1SpriteBatch_a5bfd87da8549218f739977bb3fa3361c}} 
-void {\bfseries add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH)
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_aa1140b7406415ac23916c621850752da}\label{classnta_1_1SpriteBatch_aa1140b7406415ac23916c621850752da}} 
+void {\bfseries add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float angle=0.\+0f, float depth=\+N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+T\+H)
 \item 
-\mbox{\Hypertarget{classnta_1_1SpriteBatch_a1acc97aec74cdd4709ea0e2bc064a3ce}\label{classnta_1_1SpriteBatch_a1acc97aec74cdd4709ea0e2bc064a3ce}} 
-void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH)
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_abc646a12cc113c84f7ca005e810d1d67}\label{classnta_1_1SpriteBatch_abc646a12cc113c84f7ca005e810d1d67}} 
+void {\bfseries add\+Glyph} (crvec2 corner1, crvec2 corner2, crvec4 uv\+Rect, G\+Luint texture, crvec4 color, float angle=0.\+0f, float depth=\+N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+T\+H)
 \item 
 \mbox{\Hypertarget{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}\label{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}} 
 void \hyperlink{classnta_1_1SpriteBatch_ae7566d38b0cdd33f2b3e16dfcf993714}{render} () const
@@ -78,7 +77,7 @@ G\+Luint {\bfseries m\+\_\+vbo} = 0
 \subsection{Detailed Description}
 represents a collection of sprites to be drawn If you want to draw something without a texture, use \hyperlink{classnta_1_1PrimitiveBatch}{Primitive\+Batch} instead 
 
-Definition at line 59 of file Sprite\+Batch.\+h.
+Definition at line 83 of file Sprite\+Batch.\+h.
 
 
 
@@ -87,6 +86,33 @@ Collaboration diagram for nta\+:\+:Sprite\+Batch\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dc5/classnta_1_1SpriteBatch__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}\label{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}} 
+\index{nta\+::\+Sprite\+Batch@{nta\+::\+Sprite\+Batch}!add\+Glyph@{add\+Glyph}}
+\index{add\+Glyph@{add\+Glyph}!nta\+::\+Sprite\+Batch@{nta\+::\+Sprite\+Batch}}
+\subsubsection{\texorpdfstring{add\+Glyph()}{addGlyph()}}
+{\footnotesize\ttfamily void nta\+::\+Sprite\+Batch\+::add\+Glyph (\begin{DoxyParamCaption}\item[{crvec4}]{pos\+Rect,  }\item[{crvec4}]{uv\+Rect,  }\item[{G\+Luint}]{texture,  }\item[{float}]{depth = {\ttfamily NTA\+\_\+DEFAULT\+\_\+DEPTH},  }\item[{crvec4}]{color = {\ttfamily glm\+:\+:vec4(1)} }\end{DoxyParamCaption})}
+
+adds a glyph to the batch \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]Give some of these different names? \end{DoxyRefDesc}
+
+
+Definition at line 102 of file Sprite\+Batch.\+cpp.
+
+
+
+Referenced by nta\+::\+Particle\+Batch2\+D\+::draw(), nta\+::\+Sprite\+Font\+::draw\+Text(), and nta\+::\+Sprite\+Font\+::draw\+Texture().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d3b/classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d_icgraph}
 \end{center}
 \end{figure}
 

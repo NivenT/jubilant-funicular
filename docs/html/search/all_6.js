@@ -28,5 +28,5 @@ var searchData=
   ['getwidth',['getWidth',['../d4/dfb/classnta_1_1Window.html#ac6cb1a31bb8c219e189ca5f88e25dd45',1,'nta::Window']]],
   ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html',1,'nta::GLSLProgram'],['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram::GLSLProgram()']]],
   ['gltexture',['GLTexture',['../d4/d51/namespacenta.html#d3/dff/structnta_1_1GLTexture',1,'nta']]],
-  ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html',1,'nta']]]
+  ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html',1,'nta::Glyph'],['../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105',1,'nta::Glyph::Glyph()']]]
 ];

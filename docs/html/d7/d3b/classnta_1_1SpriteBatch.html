@@ -94,19 +94,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#abadacd5bfcfc6ed0cf5a4470a22010ed">end</a> ()</td></tr>
 <tr class="memdesc:abadacd5bfcfc6ed0cf5a4470a22010ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends collection of glyphs and prepares to render <br /></td></tr>
 <tr class="separator:abadacd5bfcfc6ed0cf5a4470a22010ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa703fb92d0bd42865c21fdfb2625660d"><td class="memItemLeft" align="right" valign="top"><a id="aa703fb92d0bd42865c21fdfb2625660d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#aa703fb92d0bd42865c21fdfb2625660d">addGlyph</a> (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=NTA_DEFAULT_DEPTH, crvec4 color=glm::vec4(1))</td></tr>
-<tr class="memdesc:aa703fb92d0bd42865c21fdfb2625660d"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a glyph to the batch <br /></td></tr>
+<tr class="memitem:aa703fb92d0bd42865c21fdfb2625660d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#aa703fb92d0bd42865c21fdfb2625660d">addGlyph</a> (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=NTA_DEFAULT_DEPTH, crvec4 color=glm::vec4(1))</td></tr>
 <tr class="separator:aa703fb92d0bd42865c21fdfb2625660d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6041951ba065a9ad0e7265bef531ef"><td class="memItemLeft" align="right" valign="top"><a id="a4a6041951ba065a9ad0e7265bef531ef"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, float depth=NTA_DEFAULT_DEPTH, crvec4 color=glm::vec4(1))</td></tr>
 <tr class="separator:a4a6041951ba065a9ad0e7265bef531ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfd87da8549218f739977bb3fa3361c"><td class="memItemLeft" align="right" valign="top"><a id="a5bfd87da8549218f739977bb3fa3361c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, float depth=NTA_DEFAULT_DEPTH)</td></tr>
-<tr class="separator:a5bfd87da8549218f739977bb3fa3361c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1acc97aec74cdd4709ea0e2bc064a3ce"><td class="memItemLeft" align="right" valign="top"><a id="a1acc97aec74cdd4709ea0e2bc064a3ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color, float depth=NTA_DEFAULT_DEPTH)</td></tr>
-<tr class="separator:a1acc97aec74cdd4709ea0e2bc064a3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1140b7406415ac23916c621850752da"><td class="memItemLeft" align="right" valign="top"><a id="aa1140b7406415ac23916c621850752da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, float angle=0.0f, float depth=NTA_DEFAULT_DEPTH)</td></tr>
+<tr class="separator:aa1140b7406415ac23916c621850752da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc646a12cc113c84f7ca005e810d1d67"><td class="memItemLeft" align="right" valign="top"><a id="abc646a12cc113c84f7ca005e810d1d67"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color, float angle=0.0f, float depth=NTA_DEFAULT_DEPTH)</td></tr>
+<tr class="separator:abc646a12cc113c84f7ca005e810d1d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7566d38b0cdd33f2b3e16dfcf993714"><td class="memItemLeft" align="right" valign="top"><a id="ae7566d38b0cdd33f2b3e16dfcf993714"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ae7566d38b0cdd33f2b3e16dfcf993714">render</a> () const</td></tr>
 <tr class="memdesc:ae7566d38b0cdd33f2b3e16dfcf993714"><td class="mdescLeft">&#160;</td><td class="mdescRight">renders the batch <br /></td></tr>
@@ -162,12 +160,74 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td><
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a collection of sprites to be drawn If you want to draw something without a texture, use <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html" title="represents a collection of primitives to be drawn ">PrimitiveBatch</a> instead </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d29/SpriteBatch_8h_source.html#l00059">59</a> of file <a class="el" href="../../db/d29/SpriteBatch_8h_source.html">SpriteBatch.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d29/SpriteBatch_8h_source.html#l00083">83</a> of file <a class="el" href="../../db/d29/SpriteBatch_8h_source.html">SpriteBatch.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::SpriteBatch:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/dc5/classnta_1_1SpriteBatch__coll__graph.png" border="0" usemap="#nta_1_1SpriteBatch_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa703fb92d0bd42865c21fdfb2625660d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa703fb92d0bd42865c21fdfb2625660d">&#9670;&nbsp;</a></span>addGlyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nta::SpriteBatch::addGlyph </td>
+          <td>(</td>
+          <td class="paramtype">crvec4&#160;</td>
+          <td class="paramname"><em>posRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">crvec4&#160;</td>
+          <td class="paramname"><em>uvRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>NTA_DEFAULT_DEPTH</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">crvec4&#160;</td>
+          <td class="paramname"><em>color</em> = <code>glm::vec4(1)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adds a glyph to the batch </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Give some of these different names? </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html">SpriteBatch.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d73/ParticleBatch2D_8cpp_source.html#l00041">nta::ParticleBatch2D::draw()</a>, <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00097">nta::SpriteFont::drawText()</a>, and <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00123">nta::SpriteFont::drawTexture()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d3b/classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d_icgraph.png" border="0" usemap="#d7/d3b/classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d_icgraph" alt=""/></div>
+<map name="d7/d3b/classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d_icgraph" id="d7/d3b/classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d_icgraph">
+<area shape="rect" id="node2" href="../../df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69" title="draws all the particles " alt="" coords="255,5,397,47"/>
+<area shape="rect" id="node3" href="../../d6/d57/classnta_1_1SpriteFont.html#afdd646f19b11d9c8128151afad994a77" title="renders text with specified location, color, scale, etc. " alt="" coords="241,71,411,98"/>
+<area shape="rect" id="node4" href="../../d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc" title="renders texture " alt="" coords="232,122,420,149"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../db/d29/SpriteBatch_8h_source.html">SpriteBatch.h</a></li>
 <li>src/<a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html">SpriteBatch.cpp</a></li>
