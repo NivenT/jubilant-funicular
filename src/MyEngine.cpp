@@ -3,8 +3,13 @@
     #include <IL/ilu.h>
 #endif
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 #include "nta/MyEngine.h"
+#include "nta/ResourceManager.h"
+#include "nta/SystemManager.h"
+#include "nta/AudioManager.h"
+#include "nta/CallbackManager.h"
 
 namespace nta {
     // \todo Take parameters for gl version
@@ -18,6 +23,14 @@ namespace nta {
             ilInit();
             iluInit();
         #endif
+    }
+    void cleanup() {
+         nta::ResourceManager::destroy();
+         nta::SystemManager::destroy();
+         nta::AudioManager::destroy();
+         nta::CallbackManager::destroy();
+         TTF_Quit();
+         SDL_Quit();
     }
     glm::vec2 rotate(crvec2 pt, float angle) {
         return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,

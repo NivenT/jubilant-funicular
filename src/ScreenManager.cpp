@@ -63,6 +63,7 @@ namespace nta {
             case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " +
                                                                     to_string(m_currScreen) +
                                                                     " is NONE"); break;
+            default: break; // should never happen
             }
         }
         Logger::writeToLog("Exited ScreenManager");

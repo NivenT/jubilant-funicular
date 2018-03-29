@@ -24,7 +24,7 @@ namespace nta {
         writeToLog(error);
         writeToLog("********** ERROR **********");
         /// \todo Make this a clean exit?
-        CallbackManager::destroy();
+        cleanup();
         exit(0xbad);
     }
     void Logger::indent(size_t tab_size) {

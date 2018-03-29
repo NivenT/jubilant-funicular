@@ -6,11 +6,13 @@
 namespace nta {
     SpriteFont::SpriteFont(crstring fontPath, unsigned int size) {
         static auto toPower2 = [](int i) {
-            for (int n = 16; n >= 0; n--) {
-                if (i > (1<<n)) {
-                    return (1<<(n+1));
-                }
-            }
+            i--;
+            i |= i >> 1;
+            i |= i >> 2;
+            i |= i >> 4;
+            i |= i >> 8;
+            i |= i >> 16;
+            return ++i;
         };
         if (!TTF_WasInit()) {
             TTF_Init();

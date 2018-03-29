@@ -44,6 +44,7 @@ namespace nta {
         auto& e = m_active[id];
         e.when = absolute ? when + m_curr_frame : when + e.when;
         m_queue[e.when].push_back(&e);
+        return true;
     }
     void CallbackManager::init() {
         Logger::writeToLog("Initializing CallbackManager...");
