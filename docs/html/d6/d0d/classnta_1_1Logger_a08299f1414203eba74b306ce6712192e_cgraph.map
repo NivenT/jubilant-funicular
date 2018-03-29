@@ -1,6 +1,8 @@
 <map id="nta::Logger::writeErrorToLog" name="nta::Logger::writeErrorToLog">
-<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="437,5,596,32"/>
-<area shape="rect" id="node3" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="240,57,389,98"/>
-<area shape="rect" id="node4" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="443,57,590,98"/>
-<area shape="rect" id="node5" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="644,57,791,98"/>
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="579,35,737,62"/>
+<area shape="rect" id="node3" href="$d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="240,35,333,62"/>
+<area shape="rect" id="node4" href="$da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="387,28,525,69"/>
+<area shape="rect" id="node5" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="381,93,531,135"/>
+<area shape="rect" id="node6" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="585,93,731,135"/>
+<area shape="rect" id="node7" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="785,93,932,135"/>
 </map>

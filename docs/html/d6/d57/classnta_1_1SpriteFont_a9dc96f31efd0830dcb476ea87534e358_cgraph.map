@@ -1,12 +1,14 @@
 <map id="nta::SpriteFont::SpriteFont" name="nta::SpriteFont::SpriteFont">
-<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="699,40,857,67"/>
-<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="229,48,416,75"/>
-<area shape="rect" id="node7" href="$d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to an std::string " alt="" coords="273,99,372,125"/>
-<area shape="rect" id="node8" href="$d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9" title="adds a rectangle and associates it with c (replacing any preexisting rectangle) " alt="" coords="245,149,401,176"/>
-<area shape="rect" id="node10" href="$d9/d4d/classnta_1_1FontMap.html#ada51488d206b4a609cc4a5401d90f43d" title="positions map so that the topleft is at (0,0) " alt="" coords="247,200,399,227"/>
-<area shape="rect" id="node11" href="$d9/d4d/classnta_1_1FontMap.html#a3e51706b5955f482f776b0d6980750b3" title="returns the dimensions of the rectangle that contains the FontMap " alt="" coords="233,251,412,293"/>
-<area shape="rect" id="node4" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="483,91,632,133"/>
-<area shape="rect" id="node5" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="705,91,851,133"/>
-<area shape="rect" id="node6" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="905,91,1052,133"/>
-<area shape="rect" id="node9" href="$d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e" title="returns whether or not rect is overlapping with any existing CharRect " alt="" coords="464,157,651,184"/>
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="896,82,1055,108"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="229,54,416,80"/>
+<area shape="rect" id="node9" href="$d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to a std::string " alt="" coords="273,104,372,131"/>
+<area shape="rect" id="node10" href="$d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9" title="adds a rectangle and associates it with c (replacing any preexisting rectangle) " alt="" coords="245,155,401,182"/>
+<area shape="rect" id="node12" href="$d9/d4d/classnta_1_1FontMap.html#ada51488d206b4a609cc4a5401d90f43d" title="positions map so that the topleft is at (0,0) " alt="" coords="247,206,399,232"/>
+<area shape="rect" id="node13" href="$d9/d4d/classnta_1_1FontMap.html#a3e51706b5955f482f776b0d6980750b3" title="returns the dimensions of the rectangle that contains the FontMap " alt="" coords="233,257,412,298"/>
+<area shape="rect" id="node4" href="$d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="511,107,604,134"/>
+<area shape="rect" id="node5" href="$da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="704,104,843,145"/>
+<area shape="rect" id="node6" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="699,169,848,210"/>
+<area shape="rect" id="node7" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="902,169,1049,210"/>
+<area shape="rect" id="node8" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="1103,169,1249,210"/>
+<area shape="rect" id="node11" href="$d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e" title="returns whether or not rect is overlapping with any existing CharRect " alt="" coords="464,158,651,184"/>
 </map>
