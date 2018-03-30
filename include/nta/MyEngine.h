@@ -16,12 +16,12 @@ namespace nta {
     extern void cleanup();
     /// Rotates a point (about the origin) by the given angle
     extern glm::vec2 rotate(crvec2 pt, float angle);
-
+    /* If you're compiling with clang, uncomment this and then have fun trying to get things to work
     // Not sure how I feel about this but brought about by clang being stupid
     extern std::ostream& operator<<(std::ostream&, crvec2);
     extern std::ostream& operator<<(std::ostream&, crvec4);
     extern std::ostream& operator<<(std::ostream&, const glm::mat3&);
-
+    */
     /// converts input to a std::string
     template<class T>
     std::string to_string(T input, std::size_t precision = 0) {
