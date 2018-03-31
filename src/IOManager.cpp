@@ -17,7 +17,29 @@ namespace nta {
         file.close();
         Logger::writeToLog("Read file");
     }
+    /// \todo Not copy code?
+    void IOManager::readFileToBuffer(crstring filePath, std::string& buffer) {
+        Logger::writeToLog("Reading " + filePath + " to a buffer");
+        std::ifstream file(filePath.c_str(), std::ios::binary);
+        if (file.fail()) {
+            Logger::writeErrorToLog("Failed to open file " + filePath);
+        }
+        file.seekg(0, std::ios::end);
+        unsigned int fileSize = file.tellg();
+        file.seekg(0, std::ios::beg);
+        fileSize -= file.tellg();
+        buffer.resize(fileSize);
+        file.read((char*)&buffer[0], fileSize);
+        file.close();
+        Logger::writeToLog("Read file");
+    }
     void IOManager::writeFileFromBuffer(crstring filePath, const FileBuffer& buffer) {
+        Logger::writeToLog("Writing buffer to " + filePath);
+        std::ofstream file(filePath.c_str(), std::ios::binary);
+        file.write((char*)&buffer[0], buffer.size());
+        Logger::writeToLog("Wrote buffer");
+    }
+    void IOManager::writeFileFromBuffer(crstring filePath, crstring buffer) {
         Logger::writeToLog("Writing buffer to " + filePath);
         std::ofstream file(filePath.c_str(), std::ios::binary);
         file.write((char*)&buffer[0], buffer.size());

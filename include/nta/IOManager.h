@@ -9,14 +9,16 @@
 typedef std::vector<unsigned char> FileBuffer;
 
 namespace nta {
-    ///Handles binary file operations
+    /// Handles binary file operations
     class IOManager {
     public:
-        ///stores the entire contents of a file in a buffer
+        /// stores the entire contents of a file in a buffer
         static void readFileToBuffer(crstring filePath, FileBuffer& buffer);
-        ///stores the entire contents of a buffer in a file
+        static void readFileToBuffer(crstring filePath, std::string& buffer);
+        /// stores the entire contents of a buffer in a file
         static void writeFileFromBuffer(crstring filePath, const FileBuffer& buffer);
-        ///writes/reads a float to/from a file
+        static void writeFileFromBuffer(crstring filePath, crstring buffer);
+        /// writes/reads a float to/from a file
         static void writeFloatLE(float val, std::ofstream& file); //LE - little endian
         static void writeFloatLE(float val, FileBuffer& buffer);
         static float readFloatLE(std::ifstream& file);
@@ -25,7 +27,7 @@ namespace nta {
         static void writeFloatBE(float val, FileBuffer& buffer);
         static float readFloatBE(std::ifstream& file);
         static float readFloatBE(const FileBuffer& buffer, int pos);
-        ///writes/reads an int to/from a file
+        /// writes/reads an int to/from a file
         static void writeIntLE(int val, std::ofstream& file);
         static void writeIntLE(int val, FileBuffer& buffer);
         static int readIntLE(std::ifstream& file);
@@ -34,7 +36,7 @@ namespace nta {
         static void writeIntBE(int val, FileBuffer& buffer);
         static int readIntBE(std::ifstream& file);
         static int readIntBE(const FileBuffer& buffer, int pos);
-        ///writes/reads a short to/from a file
+        /// writes/reads a short to/from a file
         static void writeShortLE(short val, std::ofstream& file);
         static void writeShortLE(short val, FileBuffer& buffer);
         static short readShortLE(std::ifstream& file);
