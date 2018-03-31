@@ -18,7 +18,7 @@ namespace nta {
         return m_limiter.getFPS();
     }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
-        Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to screen manger...");
+        Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to ScreenManager...");
         Logger::indent();
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setManager(this, SetManagerKey());
@@ -31,11 +31,13 @@ namespace nta {
     }
     void ScreenManager::switchScreen(int newIndex) {
         if (in_range<int>(newIndex, 0, m_screens.size()-1)) {
-            Logger::writeToLog("Switching to screen " + to_string(newIndex) +
-                               " from screen " + to_string(m_currScreen) + "...");
+            Logger::writeToLog("Switching from screen " + to_string(m_currScreen) +
+                               " to screen " + to_string(newIndex) + "...");
+            Logger::indent();
             getCurrScreen()->offFocus();
             m_currScreen = newIndex;
             getCurrScreen()->onFocus();
+            Logger::unindent();
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
             Logger::writeToLog("Exiting ScreenManager...");

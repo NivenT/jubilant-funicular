@@ -10,6 +10,8 @@
 #include "nta/SystemManager.h"
 #include "nta/AudioManager.h"
 #include "nta/CallbackManager.h"
+#include "nta/Logger.h"
+#include "nta/Random.h"
 
 namespace nta {
     // \todo Take parameters for gl version
@@ -23,6 +25,10 @@ namespace nta {
             ilInit();
             iluInit();
         #endif
+        nta::Logger::createLog();
+        nta::Random::init();
+        nta::AudioManager::init();
+        nta::CallbackManager::init();
     }
     void cleanup() {
          nta::ResourceManager::destroy();

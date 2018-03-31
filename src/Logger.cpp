@@ -23,7 +23,7 @@ namespace nta {
         writeToLog("********** ERROR **********");
         writeToLog(error);
         writeToLog("********** ERROR **********");
-        /// \todo Make this a clean exit?
+        m_tabs = 0;
         cleanup();
         exit(0xbad);
     }
