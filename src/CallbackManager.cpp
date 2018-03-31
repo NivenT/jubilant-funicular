@@ -56,9 +56,9 @@ namespace nta {
     void CallbackManager::dispatch() {
         while (true) {
             m_mutex.lock();
-            m_cv.wait(m_mutex, [&](){return !m_working || !m_queue.empty();});
+            m_cv.wait(m_mutex, [&](){return !m_working || 
+                                        (!m_queue.empty() && m_curr_frame >= m_queue.begin()->first);});
             if (!m_working) break;
-            m_cv.wait(m_mutex, [&](){return m_curr_frame >= m_queue.begin()->first;});
             m_mutex.unlock();
 
             while (true) {
@@ -80,6 +80,7 @@ namespace nta {
                 m_mutex.unlock();
             }
         }
+        m_mutex.unlock();
     }
     void CallbackManager::dequeue(uint64_t id) {
         std::lock_guard<std::mutex> lg(m_mutex);
