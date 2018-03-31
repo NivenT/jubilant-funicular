@@ -20,15 +20,20 @@ namespace nta {
     }
     void ResourceManager::deleteTexture(crstring imagePath) {
         if (m_textureMap.find(imagePath) != m_textureMap.end()) {
+            Logger::writeToLog("Deleting texture: " + imagePath + "...");
             glDeleteTextures(1, &m_textureMap[imagePath].id);
+            Logger::writeToLog("Deleted texture");
             m_textureMap.erase(imagePath);
         }
     }
     void ResourceManager::deleteSpriteFont(crstring fontPath, int fontSize) {
         std::pair<std::string, int> key = std::make_pair(fontPath, fontSize);
         if (m_fontMap.find(key) != m_fontMap.end()) {
+            Logger::writeToLog("Deleting sprite font: " + fontPath +
+                               " (" + to_string(fontSize) + ")...");
             delete m_fontMap[key];
             m_fontMap.erase(key);
+            Logger::writeToLog("Deleted sprite font");
         }
     }
     void ResourceManager::destroy() {
@@ -41,7 +46,7 @@ namespace nta {
         }
         for (auto pair : m_fontMap) {
             Logger::writeToLog("Deleting sprite font: " + pair.first.first +
-                               " (" +to_string(pair.first.second) + ")...");
+                               " (" + to_string(pair.first.second) + ")...");
             delete pair.second;
             Logger::writeToLog("Deleted sprite font");
         }
