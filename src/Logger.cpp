@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include <SDL2/SDL.h>
 
 #include "nta/Logger.h"
@@ -25,6 +27,7 @@ namespace nta {
         writeToLog("********** ERROR **********");
         m_tabs = 0;
         cleanup();
+        std::cout<<"An error occured. Check Log.log for details"<<std::endl;
         exit(0xbad);
     }
     void Logger::indent(size_t tab_size) {
