@@ -16,7 +16,10 @@
 namespace nta {
     // \todo Take parameters for gl version
     void init() {
-        SDL_Init(SDL_INIT_EVERYTHING);
+        Logger::createLog();
+        if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+            Logger::writeErrorToLog("Failed to initialize SDL: " + nta::to_string(SDL_GetError()));
+        }
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
@@ -25,16 +28,15 @@ namespace nta {
             ilInit();
             iluInit();
         #endif
-        nta::Logger::createLog();
-        nta::Random::init();
-        nta::AudioManager::init();
-        nta::CallbackManager::init();
+        Random::init();
+        AudioManager::init();
+        CallbackManager::init();
     }
     void cleanup() {
-         nta::ResourceManager::destroy();
-         nta::SystemManager::destroy();
-         nta::AudioManager::destroy();
-         nta::CallbackManager::destroy();
+         ResourceManager::destroy();
+         SystemManager::destroy();
+         AudioManager::destroy();
+         CallbackManager::destroy();
          TTF_Quit();
          SDL_Quit();
     }
