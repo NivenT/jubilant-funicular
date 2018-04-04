@@ -4,7 +4,7 @@ var searchData=
   ['randfloat',['randFloat',['../db/d48/classnta_1_1Random.html#a102ed2efec77f974731e5dcdb428174a',1,'nta::Random']]],
   ['randgaussian',['randGaussian',['../db/d48/classnta_1_1Random.html#a6e12bc86e5851f01d70debf422746e0e',1,'nta::Random']]],
   ['randint',['randInt',['../db/d48/classnta_1_1Random.html#aee5fa8d97f0cf1ccee84c6270b42a50d',1,'nta::Random']]],
-  ['readfiletobuffer',['readFileToBuffer',['../d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10',1,'nta::IOManager']]],
+  ['readfiletobuffer',['readFileToBuffer',['../d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10',1,'nta::IOManager::readFileToBuffer(crstring filePath, FileBuffer &amp;buffer)'],['../d2/d54/classnta_1_1IOManager.html#abbfd9da05b22aa488043a19344d38e0a',1,'nta::IOManager::readFileToBuffer(crstring filePath, std::string &amp;buffer)']]],
   ['readimage',['readImage',['../d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10',1,'nta::ImageLoader']]],
   ['releasekey',['releaseKey',['../d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0',1,'nta::InputManager']]],
   ['render',['render',['../dc/dbe/classnta_1_1DebugBatch.html#a3188990f4fd9aeede13573fe00bd0cf4',1,'nta::DebugBatch::render()'],['../d4/df3/classnta_1_1PrimitiveBatch.html#a899411db2d7abc313d8bef4a19fd097e',1,'nta::PrimitiveBatch::render()'],['../d6/d23/classnta_1_1Screen.html#a323ff61ac31f55bd39fa818ccd8200fb',1,'nta::Screen::render()'],['../d4/d60/classnta_1_1Sprite.html#a01e831cda46d73acd8a4eff3cb56d5d3',1,'nta::Sprite::render()'],['../d7/d3b/classnta_1_1SpriteBatch.html#ae7566d38b0cdd33f2b3e16dfcf993714',1,'nta::SpriteBatch::render()']]],

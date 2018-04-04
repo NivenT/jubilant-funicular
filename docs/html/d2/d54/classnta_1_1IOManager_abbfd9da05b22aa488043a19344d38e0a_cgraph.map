@@ -1,0 +1,9 @@
+<map id="nta::IOManager::readFileToBuffer" name="nta::IOManager::readFileToBuffer">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="793,67,952,94"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e" title="writes entry in log and then exits program " alt="" coords="220,38,407,65"/>
+<area shape="rect" id="node4" href="$d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="455,97,548,123"/>
+<area shape="rect" id="node5" href="$da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="601,89,740,131"/>
+<area shape="rect" id="node6" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="596,155,745,196"/>
+<area shape="rect" id="node7" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="799,155,946,196"/>
+<area shape="rect" id="node8" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="1000,155,1147,196"/>
+</map>
