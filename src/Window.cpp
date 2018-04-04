@@ -61,6 +61,7 @@ namespace nta {
                                     + nta::to_string(glewGetErrorString(err)));
         }
         SDL_GL_SetSwapInterval(1);
+        glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
         Logger::writeToLog("Created window using OpenGL version "
                            + nta::to_string(glGetString(GL_VERSION)));
     }
