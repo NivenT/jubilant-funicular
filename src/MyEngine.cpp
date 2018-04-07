@@ -44,4 +44,22 @@ namespace nta {
         return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,
                          glm::sin(angle)*pt.x + glm::cos(angle)*pt.y);
     }
+    bool check_error() {
+        std::string gl_err;
+        int err;
+        while ((err = glGetError()) != GL_NO_ERROR) {
+            gl_err += gl_err == "" ? "" : "\n";
+            gl_err += to_string(gluErrorString(err)) + " (" + to_string(err) + ")";
+        }
+        if (gl_err != "") {
+            Logger::writeToLog("GL Error(s): " + gl_err);
+        }
+        
+        std::string sdl_err = SDL_GetError();
+        if (sdl_err != "") {
+            Logger::writeToLog("SDL Error: "+sdl_err);
+            SDL_ClearError();
+        }
+        return err != GL_NO_ERROR || sdl_err != "";
+    }
 }

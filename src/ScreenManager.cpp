@@ -27,6 +27,7 @@ namespace nta {
         newScreen->setWindow((title == "") ? m_window->getTitle() : title, SetWindowKey());
         newScreen->init();
         m_screens.push_back(newScreen);
+        check_error();
         Logger::unindent();
         Logger::writeToLog("Added screen");
     }
@@ -38,8 +39,10 @@ namespace nta {
                                "\")...");
             Logger::indent();
             getCurrScreen()->offFocus();
+            check_error();
             m_currScreen = newIndex;
             getCurrScreen()->onFocus();
+            check_error();
             Logger::unindent();
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
