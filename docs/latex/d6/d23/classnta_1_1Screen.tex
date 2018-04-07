@@ -12,12 +12,15 @@ Represents a game screen.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}\label{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}} 
-\hyperlink{classnta_1_1Screen_a86944d19cec1189fee2945a4f8dae477}{Screen} ()
+\mbox{\Hypertarget{classnta_1_1Screen_a268c9de735197debab91eb54f787fdea}\label{classnta_1_1Screen_a268c9de735197debab91eb54f787fdea}} 
+\hyperlink{classnta_1_1Screen_a268c9de735197debab91eb54f787fdea}{Screen} (crstring name=\char`\"{}nameless\char`\"{})
 \begin{DoxyCompactList}\small\item\em basic constructor and destructor \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}\label{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}} 
 Screen\+State \hyperlink{classnta_1_1Screen_a2d53fc8f7ac43307896863fd6b3cad1c}{get\+State} () const
 \begin{DoxyCompactList}\small\item\em returns state of screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a9b4fd8642c1cc76ed53d281391b4b542}\label{classnta_1_1Screen_a9b4fd8642c1cc76ed53d281391b4b542}} 
+std\+::string \hyperlink{classnta_1_1Screen_a9b4fd8642c1cc76ed53d281391b4b542}{get\+Name} () const
+\begin{DoxyCompactList}\small\item\em gets name of screen \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}\label{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}} 
 int \hyperlink{classnta_1_1Screen_a506f2266b008ccd071f630a5c252567e}{get\+Esc\+Index} () const
 \begin{DoxyCompactList}\small\item\em gets various screen indices \end{DoxyCompactList}\item 
@@ -69,6 +72,9 @@ Screen\+State \hyperlink{classnta_1_1Screen_a68d2c095aadfb248263f43cb12cd34a1}{m
 \mbox{\Hypertarget{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}\label{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}} 
 \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} $\ast$ \hyperlink{classnta_1_1Screen_a3496a69b02f4b120d907042d3201deff}{m\+\_\+manager} = nullptr
 \begin{DoxyCompactList}\small\item\em the \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} that owns this screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_a309f2a837c5c8c42dc55206a5c63ab6a}\label{classnta_1_1Screen_a309f2a837c5c8c42dc55206a5c63ab6a}} 
+std\+::string \hyperlink{classnta_1_1Screen_a309f2a837c5c8c42dc55206a5c63ab6a}{m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em the name of the \hyperlink{classnta_1_1Screen}{Screen} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}\label{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}} 
 int \hyperlink{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}{m\+\_\+next\+Index} = -\/1
 \begin{DoxyCompactList}\small\item\em the index of the screen to go to in special circumstances \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -93,7 +99,8 @@ Definition at line 31 of file Screen.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Screen\+:\nopagebreak
+Collaboration diagram for nta\+:\+:Screen\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

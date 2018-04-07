@@ -38,6 +38,7 @@ var searchData=
   ['m_5fmousewheelmotion',['m_mouseWheelMotion',['../d6/de2/classnta_1_1InputManager.html#ae66e8c723d33a51ece6700e266191f01',1,'nta::InputManager']]],
   ['m_5fmusic',['m_music',['../d4/dab/classnta_1_1Music.html#a8a39359bb2dc8d8d350119ee47a7c3a0',1,'nta::Music']]],
   ['m_5fmutex',['m_mutex',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#a5d349e7ced70eb07eea6b9cfa50a6637',1,'nta::utils::Semaphore']]],
+  ['m_5fname',['m_name',['../d6/d23/classnta_1_1Screen.html#a309f2a837c5c8c42dc55206a5c63ab6a',1,'nta::Screen']]],
   ['m_5fnext',['m_next',['../d1/de6/classnta_1_1CallbackManager.html#a714aa329a54538ec5bda528fa3a3ab7f',1,'nta::CallbackManager']]],
   ['m_5fnextindex',['m_nextIndex',['../d6/d23/classnta_1_1Screen.html#a6be3b899f3bc9e531d64676cbbd6815e',1,'nta::Screen']]],
   ['m_5fnumattributes',['m_numAttributes',['../dc/d9c/classnta_1_1GLSLProgram.html#aa90cbc60f99bdfc69ef68633e351a118',1,'nta::GLSLProgram']]],

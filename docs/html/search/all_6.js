@@ -18,6 +18,7 @@ var searchData=
   ['getmousecoords',['getMouseCoords',['../d6/de2/classnta_1_1InputManager.html#abaa04adc67f8025133fd1360b171b95f',1,'nta::InputManager']]],
   ['getmousecoordsstandard',['getMouseCoordsStandard',['../d6/de2/classnta_1_1InputManager.html#a899371ac784e0a1aeb6f9dc1e7f0f58c',1,'nta::InputManager']]],
   ['getmousewheelmotion',['getMouseWheelMotion',['../d6/de2/classnta_1_1InputManager.html#a9f308e79f224806eb923ce2ef0f8023a',1,'nta::InputManager']]],
+  ['getname',['getName',['../d6/d23/classnta_1_1Screen.html#a9b4fd8642c1cc76ed53d281391b4b542',1,'nta::Screen']]],
   ['getrng',['getRNG',['../db/d48/classnta_1_1Random.html#a70719bc927413d2df83593c243499c88',1,'nta::Random']]],
   ['getsoundeffect',['getSoundEffect',['../da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598',1,'nta::AudioManager']]],
   ['getstate',['getState',['../d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c',1,'nta::Screen']]],

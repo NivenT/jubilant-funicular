@@ -1,6 +1,6 @@
 <map id="nta::Screen" name="nta::Screen">
-<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="198,361,337,388"/>
-<area shape="rect" id="node4" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="344,228,439,255"/>
-<area shape="rect" id="node8" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="499,228,612,255"/>
-<area shape="rect" id="node9" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="515,124,596,151"/>
+<area shape="rect" id="node4" href="$d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="395,361,534,388"/>
+<area shape="rect" id="node5" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="164,228,259,255"/>
+<area shape="rect" id="node8" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="619,228,732,255"/>
+<area shape="rect" id="node9" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="568,124,649,151"/>
 </map>
