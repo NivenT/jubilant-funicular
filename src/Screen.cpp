@@ -6,12 +6,15 @@
 #include "nta/Logger.h"
 
 namespace nta {
-    Screen::Screen() {
+    Screen::Screen(crstring name) : m_name(name) {
     }
     Screen::~Screen() {
     }
     ScreenState Screen::getState() const {
         return m_state;
+    }
+    std::string Screen::getName() const {
+        return m_name;
     }
     int Screen::getEscIndex() const {
         return m_escIndex;

@@ -12,6 +12,7 @@ namespace nta {
         if (!m_screens.empty()) destroy();
     }
     Screen* ScreenManager::getCurrScreen() const {
+        /// \todo write log error if m_currScreen is out of range
         return in_range<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
     }
     float ScreenManager::getFPS() const {
@@ -32,7 +33,9 @@ namespace nta {
     void ScreenManager::switchScreen(int newIndex) {
         if (in_range<int>(newIndex, 0, m_screens.size()-1)) {
             Logger::writeToLog("Switching from screen " + to_string(m_currScreen) +
-                               " to screen " + to_string(newIndex) + "...");
+                               " (\"" + getCurrScreen()->getName() + "\") to screen " + 
+                               to_string(newIndex) + " (\"" + m_screens[newIndex]->getName() +
+                               "\")...");
             Logger::indent();
             getCurrScreen()->offFocus();
             m_currScreen = newIndex;

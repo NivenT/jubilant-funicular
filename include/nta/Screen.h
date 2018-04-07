@@ -43,14 +43,18 @@ namespace nta {
         Window* m_window = nullptr;
         /// the ScreenManager that owns this screen
         ScreenManager* m_manager = nullptr;
+        /// the name of the Screen
+        std::string m_name;
         /// the index of the screen to go to in special circumstances
         int m_nextIndex = -1;
     public:
         /// basic constructor and destructor
-        Screen();
+        Screen(crstring name = "nameless");
         virtual ~Screen();
         /// returns state of screen
         ScreenState getState() const;
+        /// gets name of screen
+        std::string getName() const;
         /// gets various screen indices
         int getEscIndex() const;
         int getXIndex() const;
