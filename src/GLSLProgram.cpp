@@ -59,12 +59,14 @@ namespace nta {
     }
     void GLSLProgram::compileShaders(crstring shaderProgName) {
         Logger::writeToLog("Compiling shaders: " + shaderProgName + "...");
+        m_programID = glCreateProgram();
         m_vertShaderID = compileShader(shaderProgName + ".vert", GL_VERTEX_SHADER);
         m_fragShaderID = compileShader(shaderProgName + ".frag", GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
     }
     void GLSLProgram::compileShaders(crstring vert, crstring frag) {
         Logger::writeToLog("Compiling shaders: " + vert + " | " + frag + "...");
+        m_programID = glCreateProgram();
         m_vertShaderID = compileShader(vert, GL_VERTEX_SHADER);
         m_fragShaderID = compileShader(frag, GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
@@ -75,7 +77,6 @@ namespace nta {
     }
     void GLSLProgram::linkShaders() {
         Logger::writeToLog("Linking shaders to program...");
-        m_programID = glCreateProgram();
         glAttachShader(m_programID, m_vertShaderID);
         glAttachShader(m_programID, m_fragShaderID);
         glLinkProgram(m_programID);
