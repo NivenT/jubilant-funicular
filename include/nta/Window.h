@@ -8,12 +8,13 @@
 namespace nta {
     class SystemManager;
     ///Flags used for creating a window
-    enum WindowFlags {INVISIBLE = 0x1, FULLSCREEN = 0x2, BORDERLESS = 0x4, NOTRESIZEABLE = 0x8};
+    enum WindowFlags {INVISIBLE = 0x1, FULLSCREEN = 0x2, BORDERLESS = 0x4, NOTRESIZEABLE = 0x8,
+                      HIGHDPI = 0x10};
     ///Represent a window
     class Window {
     private:
         ///creates a window
-        void createWindow(crstring title, int width, int height, int flags = 0);
+        void createWindow(crstring title, int width, int height, int flags = HIGHDPI);
         ///the window
         SDL_Window* m_window;
         ///the title of the window

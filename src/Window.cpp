@@ -48,6 +48,9 @@ namespace nta {
         if (flags & NOTRESIZEABLE) {
             sdlFlags &= ~SDL_WINDOW_RESIZABLE;
         }
+        if (flags & HIGHDPI) {
+            sdlFlags |= SDL_WINDOW_ALLOW_HIGHDPI;
+        }
         m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, sdlFlags);
         if (!SDL_GL_CreateContext(m_window)) {
             Logger::writeErrorToLog("Failed to create a GL context: "
