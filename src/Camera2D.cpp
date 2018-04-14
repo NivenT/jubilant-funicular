@@ -59,6 +59,9 @@ namespace nta {
     glm::mat3 Camera2D::getCameraMatrix() const {
         return getDilationMatrix() * getRotationMatrix() * getTranslationMatrix();
     }
+    glm::mat3 Camera2D::getInverseCameraMatrix() const {
+        return glm::inverse(getCameraMatrix());
+    }
     glm::vec4 Camera2D::getBoundsCenter() const {
         return glm::vec4(m_center, m_dimensions);
     }
@@ -89,12 +92,13 @@ namespace nta {
     }
     glm::vec2 Camera2D::mouseToGame(crvec2 mouse, crvec2 windowDimensions) const {
         // [a,b] -> [0,b-a] -> [0,d-c] -> [c,d]
-        glm::vec2 ret(mouse.x, windowDimensions.y - mouse.y);
-        ret *= 2.f*m_dimensions/windowDimensions;
-        ret += m_center - m_dimensions;
-
-        glm::vec3 true_ret = getInverseRotationMatrix() * glm::vec3(ret, 1);
-        return glm::vec2(true_ret.x, true_ret.y);
+        glm::vec2 screen(mouse.x, windowDimensions.y - mouse.y);
+        screen = 2.f*screen/windowDimensions - 1.f;
+        return screenToGame(screen);
+    }
+    glm::vec2 Camera2D::screenToGame(crvec2 screen) const {
+        glm::vec3 orig = getInverseCameraMatrix() * glm::vec3(screen, 1);
+        return glm::vec2(orig.x, orig.y);
     }
     void Camera2D::setCenter(crvec2 center) {
         m_center = center;

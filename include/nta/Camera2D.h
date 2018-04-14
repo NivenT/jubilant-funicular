@@ -32,6 +32,7 @@ namespace nta {
         glm::mat3 getInverseRotationMatrix() const;
         glm::mat3 getDilationMatrix() const;
         glm::mat3 getCameraMatrix() const;
+        glm::mat3 getInverseCameraMatrix() const;
         /// returns camera bounds in the given format
         glm::vec4 getBoundsCenter() const;
         glm::vec4 getBoundsTopLeft() const;
@@ -45,6 +46,11 @@ namespace nta {
         std::tuple<glm::vec2, glm::vec2> getAxes() const;
         /// converts mouse coordinates to world coordinates
         glm::vec2 mouseToGame(crvec2 mouse, crvec2 windowDimensions) const;
+        /// converts screen coordinates to world coordinates
+        ///
+        /// screen here just means the coordinates after multiplying by the camera matrix
+        /// this is usually what's passed into gl_Position
+        glm::vec2 screenToGame(crvec2 screen) const;
         /// sets the values of the camera's fields
         void setCenter(crvec2 center);
         void setCenter(float x, float y);
