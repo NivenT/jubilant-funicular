@@ -70,7 +70,8 @@ namespace nta {
         if (m_glyphPointers.empty()) {
             return;
         }
-        Vertex2D vertexData[6*m_glyphPointers.size()];
+
+        std::vector<Vertex2D> vertexData(6*m_glyphPointers.size());
         m_renderBatches.emplace_back(m_glyphPointers[0]->textureID, 0, 6);
         int cv = 0; // current vertex
         vertexData[cv++] = m_glyphPointers[0]->topLeft;
@@ -95,8 +96,8 @@ namespace nta {
             offset += 6;
         }
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), nullptr, GL_DYNAMIC_DRAW);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertexData), vertexData);
+        glBufferData(GL_ARRAY_BUFFER, vertexData.size(), nullptr, GL_DYNAMIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size(), vertexData.data());
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth,
