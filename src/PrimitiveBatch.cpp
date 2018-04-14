@@ -89,9 +89,10 @@ namespace nta {
         }
         int numVertices = 0; // total number of vertices
         std::for_each(m_primitives.begin(), m_primitives.end(), [&numVertices](const Primitive* p) {
-                numVertices += p->vertices.size();
-            });
-        Vertex2D vertexData[numVertices];
+            numVertices += p->vertices.size();
+        });
+
+        std::vector<Vertex2D> vertexData(numVertices);
         m_renderBatches.emplace_back(m_primitives[0]->textureID, 0, m_primitives[0]->vertices.size(),
                                      toPrimitiveType(m_primitives[0]->vertices.size()));
         int cv = 0; // current vertex
@@ -120,8 +121,8 @@ namespace nta {
             offset += m_primitives[cp]->vertices.size();
         }
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), nullptr, GL_DYNAMIC_DRAW);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(vertexData), vertexData);
+        glBufferData(GL_ARRAY_BUFFER, vertexData.size(), nullptr, GL_DYNAMIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size(), vertexData.data());
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     GLenum PrimitiveBatch::toPrimitiveType(unsigned int numVertices) const {
