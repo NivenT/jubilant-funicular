@@ -72,6 +72,7 @@ namespace nta {
     void Window::swapBuffers() const {
         SDL_GL_SwapWindow(m_window);
     }
+    /// \todo Get rid of this?
     void Window::screenshot() const {
         const int pixelArraySize = m_height*4*(m_width*3+3)/4;
         GLubyte* pixels = new GLubyte[pixelArraySize];
