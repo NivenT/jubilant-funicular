@@ -36,6 +36,9 @@ glm\+::mat3 {\bfseries get\+Dilation\+Matrix} () const
 \mbox{\Hypertarget{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}\label{classnta_1_1Camera2D_a203daa81f32279e969de57a549165297}} 
 glm\+::mat3 {\bfseries get\+Camera\+Matrix} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Camera2D_a28bb108270be9a73ff39c2573956ab9c}\label{classnta_1_1Camera2D_a28bb108270be9a73ff39c2573956ab9c}} 
+glm\+::mat3 {\bfseries get\+Inverse\+Camera\+Matrix} () const
+\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}\label{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}} 
 glm\+::vec4 \hyperlink{classnta_1_1Camera2D_ad02d4b9a995f3919c753fd2ea6d9f8f1}{get\+Bounds\+Center} () const
 \begin{DoxyCompactList}\small\item\em returns camera bounds in the given format \end{DoxyCompactList}\item 
@@ -63,6 +66,8 @@ std\+::tuple$<$ glm\+::vec2, glm\+::vec2 $>$ \hyperlink{classnta_1_1Camera2D_a39
 \mbox{\Hypertarget{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}\label{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}} 
 glm\+::vec2 \hyperlink{classnta_1_1Camera2D_afb20fb9823724babdc8d18b17336169c}{mouse\+To\+Game} (crvec2 mouse, crvec2 window\+Dimensions) const
 \begin{DoxyCompactList}\small\item\em converts mouse coordinates to world coordinates \end{DoxyCompactList}\item 
+glm\+::vec2 \hyperlink{classnta_1_1Camera2D_a8b2be32484dee689c6014cf88a6ce80a}{screen\+To\+Game} (crvec2 screen) const
+\item 
 \mbox{\Hypertarget{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}\label{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}} 
 void \hyperlink{classnta_1_1Camera2D_a11a7edceed0964b375fbfe154b9a9895}{set\+Center} (crvec2 center)
 \begin{DoxyCompactList}\small\item\em sets the values of the camera\textquotesingle{}s fields \end{DoxyCompactList}\item 
@@ -138,6 +143,30 @@ Definition at line 6 of file Camera2\+D.\+cpp.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1Camera2D_a8b2be32484dee689c6014cf88a6ce80a}\label{classnta_1_1Camera2D_a8b2be32484dee689c6014cf88a6ce80a}} 
+\index{nta\+::\+Camera2D@{nta\+::\+Camera2D}!screen\+To\+Game@{screen\+To\+Game}}
+\index{screen\+To\+Game@{screen\+To\+Game}!nta\+::\+Camera2D@{nta\+::\+Camera2D}}
+\subsubsection{\texorpdfstring{screen\+To\+Game()}{screenToGame()}}
+{\footnotesize\ttfamily glm\+::vec2 nta\+::\+Camera2\+D\+::screen\+To\+Game (\begin{DoxyParamCaption}\item[{crvec2}]{screen }\end{DoxyParamCaption}) const}
+
+converts screen coordinates to world coordinates
+
+screen here just means the coordinates after multiplying by the camera matrix this is usually what\textquotesingle{}s passed into gl\+\_\+\+Position 
+
+Definition at line 99 of file Camera2\+D.\+cpp.
+
+
+
+Referenced by mouse\+To\+Game().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d28/classnta_1_1Camera2D_a8b2be32484dee689c6014cf88a6ce80a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}\label{classnta_1_1Camera2D_a711b1b64b4e0bbca5c598ac15609f498}} 
 \index{nta\+::\+Camera2D@{nta\+::\+Camera2D}!translate\+Center@{translate\+Center}}
 \index{translate\+Center@{translate\+Center}!nta\+::\+Camera2D@{nta\+::\+Camera2D}}
@@ -146,7 +175,7 @@ Definition at line 6 of file Camera2\+D.\+cpp.
 
 moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes 
 
-Definition at line 116 of file Camera2\+D.\+cpp.
+Definition at line 120 of file Camera2\+D.\+cpp.
 
 
 

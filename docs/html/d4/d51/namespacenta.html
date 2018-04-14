@@ -218,10 +218,14 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a784064b76630398da451dbeffdfc5ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49cf148a7560d323486d7947b79a43b8"><td class="memItemLeft" align="right" valign="top"><a id="a49cf148a7560d323486d7947b79a43b8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a49cf148a7560d323486d7947b79a43b8">WindowFlags</a> { <b>INVISIBLE</b> = 0x1, 
+<tr class="memitem:a49cf148a7560d323486d7947b79a43b8"><td class="memItemLeft" align="right" valign="top"><a id="a49cf148a7560d323486d7947b79a43b8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a49cf148a7560d323486d7947b79a43b8">WindowFlags</a> { <br />
+&#160;&#160;<b>INVISIBLE</b> = 0x1, 
 <b>FULLSCREEN</b> = 0x2, 
 <b>BORDERLESS</b> = 0x4, 
-<b>NOTRESIZEABLE</b> = 0x8
+<b>NOTRESIZEABLE</b> = 0x8, 
+<br />
+&#160;&#160;<b>HIGHDPI</b> = 0x10
+<br />
  }<tr class="memdesc:a49cf148a7560d323486d7947b79a43b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags used for creating a window. <br /></td></tr>
 </td></tr>
 <tr class="separator:a49cf148a7560d323486d7947b79a43b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +244,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#ada7b30da347b63962acfdc8f16c1ffb8">rotate</a> (crvec2 pt, float angle)</td></tr>
 <tr class="memdesc:ada7b30da347b63962acfdc8f16c1ffb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates a point (about the origin) by the given angle. <br /></td></tr>
 <tr class="separator:ada7b30da347b63962acfdc8f16c1ffb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c4ac3e24918c1a26025984c474b7c8"><td class="memItemLeft" align="right" valign="top"><a id="a65c4ac3e24918c1a26025984c474b7c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8">check_error</a> ()</td></tr>
+<tr class="memdesc:a65c4ac3e24918c1a26025984c474b7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for and logs errors. <br /></td></tr>
+<tr class="separator:a65c4ac3e24918c1a26025984c474b7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7521a21e7957d0b80c6c54eb2a80d63d"><td class="memTemplParams" colspan="2"><a id="a7521a21e7957d0b80c6c54eb2a80d63d"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a7521a21e7957d0b80c6c54eb2a80d63d"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d">to_string</a> (T input, std::size_t precision=0)</td></tr>
