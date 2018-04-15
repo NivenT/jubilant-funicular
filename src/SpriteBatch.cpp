@@ -96,8 +96,8 @@ namespace nta {
             offset += 6;
         }
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-        glBufferData(GL_ARRAY_BUFFER, vertexData.size(), nullptr, GL_DYNAMIC_DRAW);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size(), vertexData.data());
+        glBufferData(GL_ARRAY_BUFFER, vertexData.size()*sizeof(Vertex2D), nullptr, GL_DYNAMIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size()*sizeof(Vertex2D), vertexData.data());
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth,

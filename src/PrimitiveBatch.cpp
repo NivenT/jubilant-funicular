@@ -121,8 +121,8 @@ namespace nta {
             offset += m_primitives[cp]->vertices.size();
         }
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-        glBufferData(GL_ARRAY_BUFFER, vertexData.size(), nullptr, GL_DYNAMIC_DRAW);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size(), vertexData.data());
+        glBufferData(GL_ARRAY_BUFFER, vertexData.size()*sizeof(Vertex2D), nullptr, GL_DYNAMIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size()*sizeof(Vertex2D), vertexData.data());
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     GLenum PrimitiveBatch::toPrimitiveType(unsigned int numVertices) const {
