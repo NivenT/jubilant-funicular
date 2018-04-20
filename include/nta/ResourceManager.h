@@ -1,5 +1,5 @@
-#ifndef RESOURCEMANAGER_H_INCLUDED
-#define RESOURCEMANAGER_H_INCLUDED
+#ifndef NTA_RESOURCEMANAGER_H_INCLUDED
+#define NTA_RESOURCEMANAGER_H_INCLUDED
 
 #include "nta/GLTexture.h"
 #include "nta/SpriteFont.h"
@@ -28,4 +28,4 @@ namespace nta {
     };
 }
 
-#endif // RESOURCEMANAGER_H_INCLUDED
+#endif // NTA_RESOURCEMANAGER_H_INCLUDED

@@ -1,5 +1,5 @@
-#ifndef GLTEXTURE_H_INCLUDED
-#define GLTEXTURE_H_INCLUDED
+#ifndef NTA_GLTEXTURE_H_INCLUDED
+#define NTA_GLTEXTURE_H_INCLUDED
 
 #include "MyEngine.h"
 
@@ -7,7 +7,6 @@ typedef unsigned int GLuint;
 typedef int GLint;
 
 namespace nta {
-    class ResourceManager;
     /// represents a texture
     struct GLTexture {
         /// the id of the texture
@@ -25,4 +24,4 @@ namespace nta {
     };
 }
 
-#endif // GLTEXTURE_H_INCLUDED
+#endif // NTA_GLTEXTURE_H_INCLUDED

@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 
 typedef const std::string& crstring; // constant reference string
+typedef const glm::ivec2& crivec2;
 typedef const glm::vec2& crvec2;
 typedef const glm::vec3& crvec3;
 typedef const glm::vec4& crvec4;

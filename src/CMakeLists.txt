@@ -1,6 +1,7 @@
 include_directories(${NTA_INCLUDE_DIR})
 
 set(NTA_LIBRARY_SRC
+  ${CMAKE_CURRENT_SOURCE_DIR}/Animation2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/CallbackManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp

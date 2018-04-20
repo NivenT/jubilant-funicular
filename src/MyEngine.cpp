@@ -17,7 +17,7 @@
 #endif
 
 namespace nta {
-    // \todo Take parameters for gl version
+    /// \todo Take parameters for gl version
     void init() {
         Logger::createLog();
         if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
