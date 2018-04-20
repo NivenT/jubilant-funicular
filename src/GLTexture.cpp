@@ -1,4 +1,4 @@
-#ifdef USE_DEVIL
+#ifdef NTA_USE_DEVIL
     #include <IL/il.h>
     #include <IL/ilu.h>
 #else
@@ -13,7 +13,7 @@ namespace nta {
     GLTexture ImageLoader::readImage(crstring filePath, GLint minFilt,
                                      GLint magFilt, crvec2 dimensions) {
         Logger::writeToLog("Loading image: " + filePath + "...");
-        #ifdef USE_DEVIL
+        #ifdef NTA_USE_DEVIL
             ILuint imgID = 0;
             ilGenImages(1, &imgID);
             ilBindImage(imgID);
@@ -31,13 +31,13 @@ namespace nta {
         glGenTextures(1, &ret.id);
         glBindTexture(GL_TEXTURE_2D, ret.id);
         if (dimensions != glm::vec2(0)) {
-            #ifdef USE_DEVIL
+            #ifdef NTA_USE_DEVIL
                 iluScale(dimensions.x, dimensions.y, 1);
             #else
                 image = image.resize(dimensions.x, dimensions.y);
             #endif
         }
-        #ifdef USE_DEVIL
+        #ifdef NTA_USE_DEVIL
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ilGetInteger(IL_IMAGE_WIDTH),
                      ilGetInteger(IL_IMAGE_HEIGHT), 0, GL_RGBA, GL_UNSIGNED_BYTE,
                      (GLubyte*)ilGetData());
@@ -57,7 +57,7 @@ namespace nta {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
         glGenerateMipmap(GL_TEXTURE_2D);
         glBindTexture(GL_TEXTURE_2D, 0);
-        #ifdef USE_DEVIL
+        #ifdef NTA_USE_DEVIL
             ret.width = ilGetInteger(IL_IMAGE_WIDTH);
             ret.height = ilGetInteger(IL_IMAGE_HEIGHT);
         #endif

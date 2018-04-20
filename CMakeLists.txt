@@ -42,13 +42,13 @@ else()
     endif()
 endif()
 
-option(NTA_USE_DEVIL "Turn on to use DevIL instead of CImg for image loading" ON)	
+option(NTA_USE_DEVIL "Turn off to use CImg instead of DevIL for image loading" ON)
+option(NTA_USE_AUDIO "Turn off if you don't need AudioManager or SDL2_mixer" ON)	
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
-find_package(SDL2_mixer REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
@@ -64,9 +64,13 @@ set(NTA_INCLUDE_DIR
 	CACHE INTERNAL "")
 
 if(${NTA_USE_DEVIL})
-	add_definitions(-DUSE_DEVIL) # #define USE_DEVIL
+	add_definitions(-DNTA_USE_DEVIL) # #define NTA_USE_DEVIL
 elseif()
 	# TODO: Use cimg_plugin to get decent png support
+endif()
+
+if(${NTA_USE_AUDIO})
+    add_definitions(-DNTA_USE_AUDIO) # #define NTA_USE_AUDIO
 endif()
 
 add_subdirectory(src)
@@ -80,13 +84,19 @@ else()
 	# X11 is for CImg <--- TODO: This is OS dependent so make it OS agnostic instead
 	set(NTA_LIBRARIES ${NTA_LIBRARIES} X11 CACHE INTERNAL "")
 endif()
+if(${NTA_USE_AUDIO})
+    message(STATUS "Using SDL2_mixer for audio")
+    find_package(SDL2_mixer REQUIRED)
+    set(NTA_LIBRARIES ${NTA_LIBRARIES} ${SDL2_MIXER_LIBRARIES} CACHE INTERNAL "")
+else()
+    message(STATUS "Audio disabled")
+endif()
 
 
 # Is it standard practice to bundle libraries I don't own like this?
 set(NTA_LIBRARIES ${NTA_LIBRARIES}
   ${SDL2_LIBRARY}
   ${SDL2_TTF_LIBRARIES}
-  ${SDL2_MIXER_LIBRARIES}
   ${GLEW_LIBRARIES}
   ${GLUT_LIBRARIES}
   ${OPENGL_LIBRARIES}

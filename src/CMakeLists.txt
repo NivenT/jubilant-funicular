@@ -1,18 +1,17 @@
 include_directories(${NTA_INCLUDE_DIR})
 
-add_library(${NTA_LIBRARIES}
-  ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp
+set(NTA_LIBRARY_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/CallbackManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Camera2D.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Compressor.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/DebugBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FontMap.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/FPSLimiter.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLMConsoleOutput.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLSLProgram.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/GLTexture.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/HuffmanLeaf.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/HuffmanNode.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/HuffmanLeaf.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/HuffmanNode.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/InputManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/IOManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Logger.cpp
@@ -34,3 +33,9 @@ add_library(${NTA_LIBRARIES}
   ${CMAKE_CURRENT_SOURCE_DIR}/Vertex.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Window.cpp
 )
+
+if(${NTA_USE_AUDIO})
+  set(NTA_LIBRARY_SRC ${NTA_LIBRARY_SRC} ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp)
+endif()
+
+add_library(${NTA_LIBRARIES} ${NTA_LIBRARY_SRC})
