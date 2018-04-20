@@ -9,5 +9,6 @@ var searchData=
   ['addrect',['addRect',['../d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9',1,'nta::FontMap']]],
   ['addscreen',['addScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df',1,'nta::ScreenManager']]],
   ['allworkfinished',['allWorkFinished',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545314bb70fd5cd2ecbd8759d3251cc6',1,'nta::utils::ThreadPool']]],
+  ['animation2d',['Animation2D',['../d2/d7a/classnta_1_1Animation2D.html',1,'nta']]],
   ['audiomanager',['AudioManager',['../da/d29/classnta_1_1AudioManager.html',1,'nta']]]
 ];

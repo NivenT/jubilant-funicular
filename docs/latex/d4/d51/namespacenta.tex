@@ -8,6 +8,8 @@
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{classnta_1_1Animation2D}{Animation2D}
+\begin{DoxyCompactList}\small\item\em A 2D Animation made from a single \hyperlink{structnta_1_1SpriteSheet}{Sprite\+Sheet}. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1AudioManager}{Audio\+Manager}
 \item 
 class \hyperlink{classnta_1_1CallbackManager}{Callback\+Manager}
@@ -78,6 +80,12 @@ class \hyperlink{classnta_1_1SpriteBatch}{Sprite\+Batch}
 \item 
 class \hyperlink{classnta_1_1SpriteFont}{Sprite\+Font}
 \begin{DoxyCompactList}\small\item\em Loads in a .ttf file, creates a font texture from it, and is then used to render text. \end{DoxyCompactList}\item 
+struct \hyperlink{structnta_1_1SpriteSheet}{Sprite\+Sheet}
+\begin{DoxyCompactList}\small\item\em Multiple sprites (each the same size) in one texture. \end{DoxyCompactList}\item 
+union \hyperlink{namespacenta_d1/d70/unionnta_1_1SpriteSheet_8____unnamed____}{Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em The dimensions of the sheat (rows x cols)  \hyperlink{namespacenta_d1/d70/unionnta_1_1SpriteSheet_8____unnamed____}{More...}\end{DoxyCompactList}\item 
+struct \hyperlink{namespacenta_df/d10/structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____}{Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}
+\item 
 class \hyperlink{classnta_1_1SystemManager}{System\+Manager}
 \item 
 class \hyperlink{classnta_1_1Timer}{Timer}
@@ -126,7 +134,6 @@ enum \hyperlink{namespacenta_a49cf148a7560d323486d7947b79a43b8}{Window\+Flags} \
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{namespacenta_a416e1430bb187e7a122f2729f96b1e58}\label{namespacenta_a416e1430bb187e7a122f2729f96b1e58}} 
 void \hyperlink{namespacenta_a416e1430bb187e7a122f2729f96b1e58}{init} ()
 \begin{DoxyCompactList}\small\item\em initializes some basic stuff for the engine \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{namespacenta_a17dc16b021d0dec3749e422b95d39350}\label{namespacenta_a17dc16b021d0dec3749e422b95d39350}} 
@@ -152,7 +159,7 @@ bool \hyperlink{namespacenta_a65c4ac3e24918c1a26025984c474b7c8}{check\+\_\+error
 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000012}{Todo}]Figure out how to get rid of this file \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000013}{Todo}]Figure out how to get rid of this file \end{DoxyRefDesc}
 
 
 \subsection{Class Documentation}
@@ -191,7 +198,7 @@ the rectangle containing this glyph in the texture \\
 \subsubsection{struct nta\+:\+:G\+L\+Texture}
 represents a texture 
 
-Definition at line 12 of file G\+L\+Texture.\+h.
+Definition at line 11 of file G\+L\+Texture.\+h.
 
 
 
@@ -222,6 +229,48 @@ the width and height, respectively, of the texture \\
 \hline
 
 \end{DoxyFields}
+\index{nta\+::\+Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+@{nta\+::\+Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}}\label{unionnta_1_1SpriteSheet_8____unnamed____}
+\Hypertarget{namespacenta_unionnta_1_1SpriteSheet_8____unnamed____}
+\subsubsection{union nta\+:\+:Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}
+The dimensions of the sheat (rows x cols) 
+
+Definition at line 34 of file Animation2\+D.\+h.
+
+\begin{DoxyFields}{Class Members}
+\mbox{\Hypertarget{namespacenta_a1378d7d8767899287b0407055215aa4e}\label{namespacenta_a1378d7d8767899287b0407055215aa4e}} 
+\hyperlink{namespacenta_df/d10/structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____}{\_\_unnamed\_\_}&
+\_\_unnamed\_\_&
+\\
+\hline
+
+\mbox{\Hypertarget{namespacenta_a5927205243f12cdc70612cba6dc874fa}\label{namespacenta_a5927205243f12cdc70612cba6dc874fa}} 
+ivec2&
+dims&
+\\
+\hline
+
+\end{DoxyFields}
+\index{nta\+::\+Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+.\+\_\+\+\_\+unnamed\+\_\+\+\_\+@{nta\+::\+Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}}\label{structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____}
+\Hypertarget{namespacenta_structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____}
+\subsubsection{struct nta\+:\+:Sprite\+Sheet.\+\_\+\+\_\+unnamed\+\_\+\+\_\+.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}
+
+
+Definition at line 36 of file Animation2\+D.\+h.
+
+\begin{DoxyFields}{Class Members}
+\mbox{\Hypertarget{namespacenta_a2ec7686cdf35752083c4cb22b93e362e}\label{namespacenta_a2ec7686cdf35752083c4cb22b93e362e}} 
+int&
+num\_cols&
+\\
+\hline
+
+\mbox{\Hypertarget{namespacenta_ab428d91d44d86e0b79d1a3193951b762}\label{namespacenta_ab428d91d44d86e0b79d1a3193951b762}} 
+int&
+num\_rows&
+\\
+\hline
+
+\end{DoxyFields}
 \index{nta\+::\+Vertex\+Attrib@{nta\+::\+Vertex\+Attrib}}\label{structnta_1_1VertexAttrib}
 \Hypertarget{namespacenta_structnta_1_1VertexAttrib}
 \subsubsection{struct nta\+:\+:Vertex\+Attrib}
@@ -231,7 +280,8 @@ Definition at line 12 of file Vertex.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Vertex\+Attrib\+:\nopagebreak
+Collaboration diagram for nta\+:\+:Vertex\+Attrib\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -264,3 +314,30 @@ type&
 \hline
 
 \end{DoxyFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacenta_a416e1430bb187e7a122f2729f96b1e58}\label{namespacenta_a416e1430bb187e7a122f2729f96b1e58}} 
+\index{nta@{nta}!init@{init}}
+\index{init@{init}!nta@{nta}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void nta\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes some basic stuff for the engine 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Take parameters for gl version \end{DoxyRefDesc}
+
+
+Definition at line 21 of file My\+Engine.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d51/namespacenta_a416e1430bb187e7a122f2729f96b1e58_cgraph}
+\end{center}
+\end{figure}

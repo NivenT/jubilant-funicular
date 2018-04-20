@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['get_5fflipped_5fuv',['get_flipped_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a98643a92390617ac5575b7a951e9805a',1,'nta::SpriteSheet']]],
+  ['get_5fuv',['get_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a618bc48e6978a19ad9eb56dda3307f5a',1,'nta::SpriteSheet']]],
   ['getavailableworker',['getAvailableWorker',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a0cf734e83b83378a70a67864e9eeb732',1,'nta::utils::ThreadPool']]],
   ['getaxes',['getAxes',['../d3/d28/classnta_1_1Camera2D.html#a395b5bfa81b603a3d4e78d6c54aa8212',1,'nta::Camera2D']]],
   ['getboundingdimensions',['getBoundingDimensions',['../d9/d4d/classnta_1_1FontMap.html#a3e51706b5955f482f776b0d6980750b3',1,'nta::FontMap']]],
