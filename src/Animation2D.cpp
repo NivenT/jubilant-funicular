@@ -33,6 +33,15 @@ namespace nta {
     std::size_t Animation2D::get_index() const {
         return m_start_index + ((std::size_t)m_time)%m_length;
     }
+    std::size_t Animation2D::get_start() const {
+        return m_start_index;
+    }
+    std::size_t Animation2D::get_length() const {
+        return m_length;
+    }
+    float Animation2D::get_time() const {
+        return m_time;
+    }
     void Animation2D::switch_animation(std::size_t start, std::size_t length) {
         m_start_index = start;
         m_length = length;
