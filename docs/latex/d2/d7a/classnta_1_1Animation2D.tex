@@ -27,8 +27,20 @@ glm\+::vec4 {\bfseries get\+\_\+uv} () const
 \mbox{\Hypertarget{classnta_1_1Animation2D_aa46a6c17839ad28c1f6b4c04537b237a}\label{classnta_1_1Animation2D_aa46a6c17839ad28c1f6b4c04537b237a}} 
 glm\+::vec4 {\bfseries get\+\_\+flipped\+\_\+uv} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Animation2D_ac446522438b03f14a532907ba5c3d5af}\label{classnta_1_1Animation2D_ac446522438b03f14a532907ba5c3d5af}} 
+std\+::size\+\_\+t {\bfseries get\+\_\+index} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Animation2D_a27647ebb0767d114b3330d784be76659}\label{classnta_1_1Animation2D_a27647ebb0767d114b3330d784be76659}} 
+std\+::size\+\_\+t {\bfseries get\+\_\+start} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Animation2D_a879e528e64c38508ecab2dfff935d5d9}\label{classnta_1_1Animation2D_a879e528e64c38508ecab2dfff935d5d9}} 
+std\+::size\+\_\+t {\bfseries get\+\_\+length} () const
+\item 
 \mbox{\Hypertarget{classnta_1_1Animation2D_a0ad6c0188e2b36f42caf1817537ec483}\label{classnta_1_1Animation2D_a0ad6c0188e2b36f42caf1817537ec483}} 
 G\+Luint {\bfseries get\+\_\+tex\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1Animation2D_aa0aae6f2c69f9edb1e5f0dc35a440e48}\label{classnta_1_1Animation2D_aa0aae6f2c69f9edb1e5f0dc35a440e48}} 
+float {\bfseries get\+\_\+time} () const
 \item 
 \mbox{\Hypertarget{classnta_1_1Animation2D_a06f041ee6aa98d79af06696095a5e95e}\label{classnta_1_1Animation2D_a06f041ee6aa98d79af06696095a5e95e}} 
 void {\bfseries switch\+\_\+animation} (std\+::size\+\_\+t start, std\+::size\+\_\+t length)
@@ -36,17 +48,11 @@ void {\bfseries switch\+\_\+animation} (std\+::size\+\_\+t start, std\+::size\+\
 \mbox{\Hypertarget{classnta_1_1Animation2D_a3bc6f94232a04f3302ab5670ab46be44}\label{classnta_1_1Animation2D_a3bc6f94232a04f3302ab5670ab46be44}} 
 void {\bfseries step} (float dt)
 \end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classnta_1_1Animation2D_ac446522438b03f14a532907ba5c3d5af}\label{classnta_1_1Animation2D_ac446522438b03f14a532907ba5c3d5af}} 
-std\+::size\+\_\+t {\bfseries get\+\_\+index} () const
-\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classnta_1_1Animation2D_a71e58384ae4483c1ca43e0583887a21d}\label{classnta_1_1Animation2D_a71e58384ae4483c1ca43e0583887a21d}} 
-const \hyperlink{structnta_1_1SpriteSheet}{Sprite\+Sheet} \hyperlink{classnta_1_1Animation2D_a71e58384ae4483c1ca43e0583887a21d}{m\+\_\+sheet}
+\mbox{\Hypertarget{classnta_1_1Animation2D_a7299c55bbae2e3a8eed7bbfde8362523}\label{classnta_1_1Animation2D_a7299c55bbae2e3a8eed7bbfde8362523}} 
+\hyperlink{structnta_1_1SpriteSheet}{Sprite\+Sheet} \hyperlink{classnta_1_1Animation2D_a7299c55bbae2e3a8eed7bbfde8362523}{m\+\_\+sheet}
 \begin{DoxyCompactList}\small\item\em The sheet holding the sprites used by the animation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Animation2D_a24497412429334fe270a1b0ba6526203}\label{classnta_1_1Animation2D_a24497412429334fe270a1b0ba6526203}} 
 float \hyperlink{classnta_1_1Animation2D_a24497412429334fe270a1b0ba6526203}{m\+\_\+time}
@@ -62,12 +68,11 @@ std\+::size\+\_\+t {\bfseries m\+\_\+length}
 \subsection{Detailed Description}
 A 2D Animation made from a single \hyperlink{structnta_1_1SpriteSheet}{Sprite\+Sheet}. 
 
-Definition at line 43 of file Animation2\+D.\+h.
+Definition at line 47 of file Animation2\+D.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Animation2D\+:
-\nopagebreak
+Collaboration diagram for nta\+:\+:Animation2D\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

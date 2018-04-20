@@ -65,7 +65,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../dc/d6e/classnta_1_1Animation2D-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -95,9 +94,21 @@ glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><b>get_uv</b> () co
 <tr class="memitem:aa46a6c17839ad28c1f6b4c04537b237a"><td class="memItemLeft" align="right" valign="top"><a id="aa46a6c17839ad28c1f6b4c04537b237a"></a>
 glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><b>get_flipped_uv</b> () const</td></tr>
 <tr class="separator:aa46a6c17839ad28c1f6b4c04537b237a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac446522438b03f14a532907ba5c3d5af"><td class="memItemLeft" align="right" valign="top"><a id="ac446522438b03f14a532907ba5c3d5af"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_index</b> () const</td></tr>
+<tr class="separator:ac446522438b03f14a532907ba5c3d5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27647ebb0767d114b3330d784be76659"><td class="memItemLeft" align="right" valign="top"><a id="a27647ebb0767d114b3330d784be76659"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_start</b> () const</td></tr>
+<tr class="separator:a27647ebb0767d114b3330d784be76659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879e528e64c38508ecab2dfff935d5d9"><td class="memItemLeft" align="right" valign="top"><a id="a879e528e64c38508ecab2dfff935d5d9"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_length</b> () const</td></tr>
+<tr class="separator:a879e528e64c38508ecab2dfff935d5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad6c0188e2b36f42caf1817537ec483"><td class="memItemLeft" align="right" valign="top"><a id="a0ad6c0188e2b36f42caf1817537ec483"></a>
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>get_tex_id</b> () const</td></tr>
 <tr class="separator:a0ad6c0188e2b36f42caf1817537ec483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0aae6f2c69f9edb1e5f0dc35a440e48"><td class="memItemLeft" align="right" valign="top"><a id="aa0aae6f2c69f9edb1e5f0dc35a440e48"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>get_time</b> () const</td></tr>
+<tr class="separator:aa0aae6f2c69f9edb1e5f0dc35a440e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f041ee6aa98d79af06696095a5e95e"><td class="memItemLeft" align="right" valign="top"><a id="a06f041ee6aa98d79af06696095a5e95e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>switch_animation</b> (std::size_t start, std::size_t length)</td></tr>
 <tr class="separator:a06f041ee6aa98d79af06696095a5e95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,18 +116,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>switch_animation</b> 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>step</b> (float dt)</td></tr>
 <tr class="separator:a3bc6f94232a04f3302ab5670ab46be44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ac446522438b03f14a532907ba5c3d5af"><td class="memItemLeft" align="right" valign="top"><a id="ac446522438b03f14a532907ba5c3d5af"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_index</b> () const</td></tr>
-<tr class="separator:ac446522438b03f14a532907ba5c3d5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a71e58384ae4483c1ca43e0583887a21d"><td class="memItemLeft" align="right" valign="top"><a id="a71e58384ae4483c1ca43e0583887a21d"></a>
-const <a class="el" href="../../d9/d85/structnta_1_1SpriteSheet.html">SpriteSheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#a71e58384ae4483c1ca43e0583887a21d">m_sheet</a></td></tr>
-<tr class="memdesc:a71e58384ae4483c1ca43e0583887a21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sheet holding the sprites used by the animation. <br /></td></tr>
-<tr class="separator:a71e58384ae4483c1ca43e0583887a21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7299c55bbae2e3a8eed7bbfde8362523"><td class="memItemLeft" align="right" valign="top"><a id="a7299c55bbae2e3a8eed7bbfde8362523"></a>
+<a class="el" href="../../d9/d85/structnta_1_1SpriteSheet.html">SpriteSheet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#a7299c55bbae2e3a8eed7bbfde8362523">m_sheet</a></td></tr>
+<tr class="memdesc:a7299c55bbae2e3a8eed7bbfde8362523"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sheet holding the sprites used by the animation. <br /></td></tr>
+<tr class="separator:a7299c55bbae2e3a8eed7bbfde8362523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24497412429334fe270a1b0ba6526203"><td class="memItemLeft" align="right" valign="top"><a id="a24497412429334fe270a1b0ba6526203"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#a24497412429334fe270a1b0ba6526203">m_time</a></td></tr>
 <tr class="memdesc:a24497412429334fe270a1b0ba6526203"><td class="mdescLeft">&#160;</td><td class="mdescRight">how far along in the animation we are <br /></td></tr>
@@ -132,7 +137,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_length</b></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A 2D Animation made from a single <a class="el" href="../../d9/d85/structnta_1_1SpriteSheet.html" title="Multiple sprites (each the same size) in one texture. ">SpriteSheet</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d2/d48/Animation2D_8h_source.html#l00043">43</a> of file <a class="el" href="../../d2/d48/Animation2D_8h_source.html">Animation2D.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/d48/Animation2D_8h_source.html#l00047">47</a> of file <a class="el" href="../../d2/d48/Animation2D_8h_source.html">Animation2D.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::Animation2D:</div>
 <div class="dyncontent">
