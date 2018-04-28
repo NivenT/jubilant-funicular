@@ -36,7 +36,7 @@ namespace nta {
         /// returns camera bounds in the given format
         glm::vec4 getBoundsCenter() const;
         glm::vec4 getBoundsTopLeft() const;
-        /// returns the center, top left coordinate, and dimensions of the camera's view
+        /// returns the center, top left coordinate, and (half) dimensions of the camera's view
         glm::vec2 getCenter() const;
         glm::vec2 getTopLeft() const;
         glm::vec2 getDimensions() const;
