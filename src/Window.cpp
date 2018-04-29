@@ -34,6 +34,10 @@ namespace nta {
     int Window::getHeight() const {
         return m_height;
     }
+    void Window::resize(int width, int height) {
+        SDL_SetWindowSize(m_window, width, height);
+        setDimensions(width, height);
+    }
     void Window::setDimensions(int width, int height) {
         m_width = width;
         m_height = height;

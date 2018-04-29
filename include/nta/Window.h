@@ -42,6 +42,8 @@ namespace nta {
         int getWidth() const;
         /// returns the height of the window
         int getHeight() const;
+        /// resizes the window
+        void resize(int width, int height);
         /// updates the window's stored dimensions
         void setDimensions(int width, int height);
         /// updates the screen
