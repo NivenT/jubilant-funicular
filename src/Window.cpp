@@ -14,6 +14,9 @@ namespace nta {
         SDL_DestroyWindow(m_window);
         m_window = nullptr;
     }
+    SDL_Window* Window::getSDLWindow() const {
+        return m_window;
+    }
     glm::vec2 Window::getDimensions() const {
         return glm::vec2(m_width, m_height);
     }

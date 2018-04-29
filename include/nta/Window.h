@@ -25,6 +25,9 @@ namespace nta {
         /// constructor and destructor
         Window();
         ~Window();
+        /// returns the underlying window
+        // Not sure how I feel about this
+        SDL_Window* getSDLWindow() const;
         /// returns the window's dimensions
         glm::vec2 getDimensions() const;
         /// returns the window's title
