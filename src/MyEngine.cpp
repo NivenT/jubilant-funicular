@@ -2,8 +2,14 @@
     #include <IL/il.h>
     #include <IL/ilu.h>
 #endif
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
+
+#ifdef NTA_USE_IMGUI
+    #include <imgui/imgui.h>
+    #include <imgui/imgui_impl_sdl_gl3.h>
+#endif
 
 #include "nta/MyEngine.h"
 #include "nta/ResourceManager.h"
@@ -27,6 +33,11 @@ namespace nta {
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
         SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
         SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_CROSSHAIR));
+        #ifdef NTA_USE_IMGUI
+            IMGUI_CHECKVERSION();
+            ImGui::CreateContext();
+            ImGui::StyleColorsDark();
+        #endif
         #ifdef NTA_USE_DEVIL
             ilInit();
             iluInit();
@@ -38,14 +49,18 @@ namespace nta {
         CallbackManager::init();
     }
     void cleanup() {
-         ResourceManager::destroy();
-         SystemManager::destroy();
-         #ifdef NTA_USE_AUDIO
+        #ifdef NTA_USE_IMGUI
+            ImGui_ImplSdlGL3_Shutdown();
+            ImGui::DestroyContext();
+        #endif
+        ResourceManager::destroy();
+        SystemManager::destroy();
+        #ifdef NTA_USE_AUDIO
             AudioManager::destroy();
         #endif
-         CallbackManager::destroy();
-         TTF_Quit();
-         SDL_Quit();
+        CallbackManager::destroy();
+        TTF_Quit();
+        SDL_Quit();
     }
     glm::vec2 rotate(crvec2 pt, float angle) {
         return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,

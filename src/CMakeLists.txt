@@ -1,5 +1,3 @@
-include_directories(${NTA_INCLUDE_DIR})
-
 set(NTA_LIBRARY_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/Animation2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/CallbackManager.cpp
@@ -40,3 +38,4 @@ if(${NTA_USE_AUDIO})
 endif()
 
 add_library(${NTA_LIBRARIES} ${NTA_LIBRARY_SRC})
+target_include_directories(${NTA_LIBRARIES} PUBLIC ${NTA_INCLUDE_DIR})

@@ -10,6 +10,13 @@ namespace nta {
     /// Flags used for creating a window
     enum WindowFlags {INVISIBLE = 0x1, FULLSCREEN = 0x2, BORDERLESS = 0x4, NOTRESIZEABLE = 0x8,
                       HIGHDPI = 0x10};
+    /// Key for unlocking the GetSDLWindow() "private" function of class Window
+    class GetSDLWindowKey {
+        friend class ScreenManager;
+        GetSDLWindowKey() {}
+        GetSDLWindowKey(const GetSDLWindowKey&);
+        GetSDLWindowKey& operator=(const GetSDLWindowKey&);
+    };
     /// Represent a window
     class Window {
     private:
@@ -26,8 +33,7 @@ namespace nta {
         Window();
         ~Window();
         /// returns the underlying window
-        // Not sure how I feel about this
-        SDL_Window* getSDLWindow() const;
+        SDL_Window* getSDLWindow(GetSDLWindowKey key) const;
         /// returns the window's dimensions
         glm::vec2 getDimensions() const;
         /// returns the window's title

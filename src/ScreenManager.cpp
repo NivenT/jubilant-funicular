@@ -1,3 +1,8 @@
+#ifdef NTA_USE_IMGUI
+    #include <imgui/imgui.h>
+    #include <imgui/imgui_impl_sdl_gl3.h>
+#endif
+
 #include "nta/ScreenManager.h"
 #include "nta/SystemManager.h"
 #include "nta/CallbackManager.h"
@@ -61,6 +66,9 @@ namespace nta {
                 CallbackManager::increment_frame();
                 currScreen->handleInput();
                 currScreen->update();
+                #ifdef NTA_USE_IMGUI
+                    ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
+                #endif
                 currScreen->render();
                 m_limiter.end();
             }

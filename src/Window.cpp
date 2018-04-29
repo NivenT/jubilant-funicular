@@ -1,6 +1,11 @@
 #include <GL/glew.h>
 #include <fstream>
 
+#ifdef NTA_USE_IMGUI
+    #include <imgui/imgui.h>
+    #include <imgui/imgui_impl_sdl_gl3.h>
+#endif
+
 #include "nta/Window.h"
 #include "nta/Logger.h"
 #include "nta/IOManager.h"
@@ -14,7 +19,7 @@ namespace nta {
         SDL_DestroyWindow(m_window);
         m_window = nullptr;
     }
-    SDL_Window* Window::getSDLWindow() const {
+    SDL_Window* Window::getSDLWindow(GetSDLWindowKey key) const {
         return m_window;
     }
     glm::vec2 Window::getDimensions() const {
@@ -69,10 +74,17 @@ namespace nta {
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         //SDL_GL_SetSwapInterval(1);
         check_error();
+        #ifdef NTA_USE_IMGUI
+            ImGui_ImplSdlGL3_Init(m_window);
+        #endif
         Logger::writeToLog("Created window using OpenGL version "
                            + nta::to_string(glGetString(GL_VERSION)));
     }
     void Window::swapBuffers() const {
+        #ifdef NTA_USE_IMGUI
+            ImGui::Render();
+            ImGui_ImplSdlGL3_RenderDrawData(ImGui::GetDrawData());
+        #endif
         SDL_GL_SwapWindow(m_window);
     }
     /// \todo Get rid of this?

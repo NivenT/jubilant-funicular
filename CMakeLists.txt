@@ -43,7 +43,8 @@ else()
 endif()
 
 option(NTA_USE_DEVIL "Turn off to use CImg instead of DevIL for image loading" ON)
-option(NTA_USE_AUDIO "Turn off if you don't need AudioManager or SDL2_mixer" ON)	
+option(NTA_USE_AUDIO "Turn off if you don't need AudioManager or SDL2_mixer" ON)
+option(NTA_USE_IMGUI "Turn on if you want to use Imgui" OFF)	
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -58,6 +59,7 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
 # TODO (?): Add include dirs from required packages
+# TODO (?): Include deps one at a time instead of all at once (e.g. optionally include imgui)
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/deps
@@ -71,6 +73,10 @@ endif()
 
 if(${NTA_USE_AUDIO})
     add_definitions(-DNTA_USE_AUDIO) # #define NTA_USE_AUDIO
+endif()
+
+if(${NTA_USE_IMGUI})
+    add_definitions(-DNTA_USE_IMGUI)
 endif()
 
 add_subdirectory(src)
@@ -91,7 +97,15 @@ if(${NTA_USE_AUDIO})
 else()
     message(STATUS "Audio disabled")
 endif()
-
+if(${NTA_USE_IMGUI})
+    message(STATUS "Using Imgui")
+    add_library(imgui deps/imgui/imgui.cpp
+                      deps/imgui/imgui_draw.cpp
+                      deps/imgui/imgui_impl_sdl_gl3.cpp)
+    set(NTA_LIBRARIES ${NTA_LIBRARIES} imgui CACHE INTERNAL "")
+else()
+    message(STATUS "Not using Imgui")
+endif()
 
 # Is it standard practice to bundle libraries I don't own like this?
 set(NTA_LIBRARIES ${NTA_LIBRARIES}

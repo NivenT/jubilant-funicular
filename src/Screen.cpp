@@ -1,5 +1,10 @@
 #include <GL/glew.h>
 
+#ifdef NTA_USE_IMGUI
+    #include <imgui/imgui.h>
+    #include <imgui/imgui_impl_sdl_gl3.h>
+#endif
+
 #include "nta/Screen.h"
 #include "nta/InputManager.h"
 #include "nta/SystemManager.h"
@@ -46,6 +51,9 @@ namespace nta {
         InputManager::setMouseWheelMotion(MouseWheelMotion::STATIONARY);
         while (SDL_PollEvent(&event)) {
             InputManager::update(event);
+            #ifdef NTA_USE_IMGUI
+                ImGui_ImplSdlGL3_ProcessEvent(&event);
+            #endif
             switch(event.type) {
             case SDL_QUIT:
                 m_state = ScreenState::SWITCH_X;
