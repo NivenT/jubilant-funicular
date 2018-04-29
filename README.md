@@ -32,5 +32,6 @@ On Mac, you can get them using `brew`.
 There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules. These can be found in the [deps](https://github.com/NivenT/jubilant-funicular/tree/master/deps) folder and include
 
 * [glm](https://glm.g-truc.net/0.9.8/index.html)
-* [imgui](https://github.com/ocornut/imgui) (Optional)
+* [Dear Imgui](https://github.com/ocornut/imgui) (Optional)
+    * [Imgui_tabs](https://github.com/ebachard/imgui_tabs)
 * [CImg](https://github.com/dtschump/CImg) (Optional)
