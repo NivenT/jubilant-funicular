@@ -29,4 +29,8 @@ You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)
 On Mac, you can get them using `brew`.
 
 ## Note
-There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules.
+There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules. These can be found in the [deps](https://github.com/NivenT/jubilant-funicular/tree/master/deps) folder and include
+
+* [glm](https://glm.g-truc.net/0.9.8/index.html)
+* [imgui](https://github.com/ocornut/imgui) (Optional)
+* [CImg](https://github.com/dtschump/CImg) (Optional)
