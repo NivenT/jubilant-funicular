@@ -12,7 +12,7 @@ typedef const glm::vec3& crvec3;
 typedef const glm::vec4& crvec4;
 namespace nta {
     /// initializes some basic stuff for the engine
-    extern void init();
+    extern void init(int gl_major_version = 3, int gl_minor_version = 2);
     /// deinitializes some stuff and destroyes all managers
     extern void cleanup();
     /// Rotates a point (about the origin) by the given angle

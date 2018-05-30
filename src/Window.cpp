@@ -43,7 +43,8 @@ namespace nta {
         m_height = height;
     }
     void Window::createWindow(crstring title, int width, int height, int flags) {
-        Logger::writeToLog("Creating window: " + title + "...");
+        Logger::writeToLog("Creating window with dimensions " + nta::to_string(width) +
+                           " x " + nta::to_string(height) + ": " + title + "...");
         m_width = width;
         m_height = height;
         m_title = title;
@@ -63,7 +64,9 @@ namespace nta {
         if (flags & HIGHDPI) {
             sdlFlags |= SDL_WINDOW_ALLOW_HIGHDPI;
         }
-        m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, sdlFlags);
+        m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
+                                    m_width, m_height, sdlFlags);
+        check_error();
         if (!SDL_GL_CreateContext(m_window)) {
             Logger::writeErrorToLog("Failed to create a GL context: "
                                     + nta::to_string(SDL_GetError()));

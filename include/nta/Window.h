@@ -21,7 +21,7 @@ namespace nta {
     class Window {
     private:
         /// creates a window
-        void createWindow(crstring title, int width, int height, int flags = HIGHDPI);
+        void createWindow(crstring title, int width, int height, int flags = 0);
         /// the window
         SDL_Window* m_window;
         /// the title of the window
