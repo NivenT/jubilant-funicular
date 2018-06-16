@@ -23,14 +23,14 @@
 #endif
 
 namespace nta {
-    void init(int gl_major_version, int gl_minor_version) {
+    void init(int gl_major_version, int gl_minor_version, bool use_gl_core) {
         Logger::createLog();
         if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
             Logger::writeErrorToLog("Failed to initialize SDL: " + nta::to_string(SDL_GetError()));
         }
-        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, gl_major_version);
-        SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, gl_minor_version);
-        SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+        if (gl_major_version > 0) SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, gl_major_version);
+        if (gl_minor_version >= 0) SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, gl_minor_version);
+        if (use_gl_core) SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
         SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_CROSSHAIR));
         #ifdef NTA_USE_IMGUI
             IMGUI_CHECKVERSION();
