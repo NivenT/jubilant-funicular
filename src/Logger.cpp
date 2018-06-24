@@ -21,6 +21,8 @@ namespace nta {
         logEntry<<SDL_GetTicks()/1000.<<" seconds: "<<tabs<<entry;
         m_logFile<<logEntry.str()<<std::endl<<std::endl;
     }
+    /// \todo Redo libraries error-handling model so it doesn't just always crash
+    ///       Idea: ErrorManager with linked list of errors?
     void Logger::writeErrorToLog(crstring error) {
         writeToLog("********** ERROR **********");
         writeToLog(error);

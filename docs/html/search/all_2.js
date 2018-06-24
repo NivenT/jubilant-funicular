@@ -16,5 +16,5 @@ var searchData=
   ['createrenderbatches',['createRenderBatches',['../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117',1,'nta::PrimitiveBatch::createRenderBatches()'],['../d7/d3b/classnta_1_1SpriteBatch.html#af22e3c4af01fef017e9522021545928f',1,'nta::SpriteBatch::createRenderBatches()']]],
   ['createtree',['createTree',['../d3/d18/classnta_1_1Compressor.html#ade1d9da3d6a4ccc45fb17a83f9d7c4ed',1,'nta::Compressor']]],
   ['createvertexarrayobject',['createVertexArrayObject',['../d4/df3/classnta_1_1PrimitiveBatch.html#a1968cc783eb6ce57dec923a7d3ab3a7d',1,'nta::PrimitiveBatch::createVertexArrayObject()'],['../d7/d3b/classnta_1_1SpriteBatch.html#a3355b0c2840d3d78c092508925bf9565',1,'nta::SpriteBatch::createVertexArrayObject()']]],
-  ['createwindow',['createWindow',['../d4/dfb/classnta_1_1Window.html#a060538d57e5099e4cc89f7c892bbf0db',1,'nta::Window']]]
+  ['createwindow',['createWindow',['../d4/dfb/classnta_1_1Window.html#a564ca2324e54c94f9e0f19d66017c07a',1,'nta::Window']]]
 ];
