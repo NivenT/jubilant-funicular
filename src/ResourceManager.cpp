@@ -6,8 +6,12 @@ namespace nta {
     std::map<std::pair<std::string,int>,SpriteFont*>    ResourceManager::m_fontMap;
     GLTexture& ResourceManager::getTexture(crstring imagePath, GLint minFilt, GLint magFilt, crvec2 dimensions) {
         if (m_textureMap.find(imagePath) == m_textureMap.end()) {
-            m_textureMap[imagePath] = ImageLoader::readImage(imagePath, minFilt,
-                                                             magFilt, dimensions);
+            GLTexture temp = ImageLoader::readImage(imagePath, minFilt,
+                                                    magFilt, dimensions);
+            if (temp.is_valid()) m_textureMap[imagePath] = temp;
+            // This is an extraordinarly bad fix right now.
+            /// \todo Introduce Result type to be able to return errors
+            else return m_textureMap["RandomeDefaultNonsensePath"];
         }
         return m_textureMap[imagePath];
     }

@@ -9,6 +9,15 @@ typedef int GLint;
 namespace nta {
     /// represents a texture
     struct GLTexture {
+        static GLTexture no_texture() {
+            GLTexture ret;
+            ret.id = ret.width = ret.height = 0;
+            return ret;
+        }
+        bool is_valid() const {
+            return id != 0;
+        }
+
         /// the id of the texture
         GLuint id;
         /// the width and height, respectively, of the texture

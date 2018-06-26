@@ -22,6 +22,7 @@ namespace nta {
                 Logger::writeErrorToLog("DevIL failed to load image with error " +
                                         to_string(error) + ": " + iluErrorString(error),
                                         DEVIL_FAILURE);
+                return GLTexture::no_texture();
             }
             ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
         #else
