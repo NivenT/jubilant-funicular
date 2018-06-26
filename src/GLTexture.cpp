@@ -10,8 +10,8 @@
 #include "nta/Logger.h"
 
 namespace nta {
-    GLTexture ImageLoader::readImage(crstring filePath, GLint minFilt,
-                                     GLint magFilt, crvec2 dimensions) {
+    Result<GLTexture> ImageLoader::readImage(crstring filePath, GLint minFilt,
+                                             GLint magFilt, crvec2 dimensions) {
         Logger::writeToLog("Loading image: " + filePath + "...");
         #ifdef NTA_USE_DEVIL
             ILuint imgID = 0;
@@ -19,10 +19,12 @@ namespace nta {
             ilBindImage(imgID);
             if (ilLoadImage(filePath.c_str()) == IL_FALSE) {
                 ILenum error = ilGetError();
-                Logger::writeErrorToLog("DevIL failed to load image with error " +
-                                        to_string(error) + ": " + iluErrorString(error),
-                                        DEVIL_FAILURE);
-                return GLTexture::no_texture();
+                // This is some jank identings
+                auto err = Logger::writeErrorToLog(
+                            "DevIL failed to load image with error " +
+                                to_string(error) + ": " + iluErrorString(error),
+                            DEVIL_FAILURE);
+                return Result<GLTexture>::new_err(err);
             }
             ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
         #else
@@ -65,6 +67,6 @@ namespace nta {
         #endif
         Logger::writeToLog("Loaded image (" + to_string(ret.width) + " x " +
                            to_string(ret.height) + ")");
-        return ret;
+        return Result<GLTexture>::new_ok(ret);
     }
 }

@@ -9,7 +9,8 @@ namespace nta {
         glDeleteBuffers(1, &m_vboID);
     }
     void Sprite::init(float x, float y, float w, float h, crstring imagePath, float d) {
-        m_texture = ResourceManager::getTexture(imagePath);
+        // unsafe but meh
+        m_texture = ResourceManager::getTexture(imagePath).get_data();
         if (m_vboID == 0) {
             glGenBuffers(1, &m_vboID);
         }

@@ -4,16 +4,15 @@
 namespace nta {
     std::map<std::string,GLTexture>                     ResourceManager::m_textureMap;
     std::map<std::pair<std::string,int>,SpriteFont*>    ResourceManager::m_fontMap;
-    GLTexture& ResourceManager::getTexture(crstring imagePath, GLint minFilt, GLint magFilt, crvec2 dimensions) {
+    Result<GLTexture> ResourceManager::getTexture(crstring imagePath, GLint minFilt, 
+                                                   GLint magFilt, crvec2 dimensions) {
         if (m_textureMap.find(imagePath) == m_textureMap.end()) {
-            GLTexture temp = ImageLoader::readImage(imagePath, minFilt,
-                                                    magFilt, dimensions);
-            if (temp.is_valid()) m_textureMap[imagePath] = temp;
-            // This is an extraordinarly bad fix right now.
-            /// \todo Introduce Result type to be able to return errors
-            else return m_textureMap["RandomeDefaultNonsensePath"];
+            Result<GLTexture> res = ImageLoader::readImage(imagePath, minFilt,
+                                                           magFilt, dimensions);
+            if (res.is_ok()) m_textureMap[imagePath] = res.get_data();
+            return res;
         }
-        return m_textureMap[imagePath];
+        return Result<GLTexture>::new_ok(m_textureMap[imagePath]);
     }
     SpriteFont* ResourceManager::getSpriteFont(crstring fontPath, int fontSize) {
         std::pair<std::string, int> key = std::make_pair(fontPath, fontSize);

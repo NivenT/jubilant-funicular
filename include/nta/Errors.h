@@ -16,6 +16,7 @@ namespace nta {
 		SDL_FAILURE,
 		DEVIL_FAILURE,
 		IMPOSSIBLE_BEHAVIOR,
+		UNWRAP_WRONG_RESULT_VARIANT,
 		OTHER
 	};
 	/// Something went wrong
@@ -58,6 +59,68 @@ namespace nta {
     	static const Error* peek_error();
     	/// Deletes all errors (without handling any of them)
     	static void clear_errors();
+    };
+
+    // I wonder how much of my C++ code is influenced by Rust
+    /// Used for returning data when an error could potentially occur
+    /// \todo Use Result type everywhere it needs to be used
+    template<typename T>
+    class Result {
+    private:
+    	/// Private constructor (use new_ok or new_err)
+    	Result() {}
+
+    	/// The data or error held by this Result
+    	union {
+    		T data;
+    		Error err;
+    	};
+    	/// Whether or not an error occured
+    	bool is_err_variant;
+    public:
+    	/// Public copy constructor
+    	Result(const Result& other) {
+    		data = other.data;
+    		is_err_variant = other.is_err_variant;
+    	}
+    	/// Public destructor
+    	~Result() {}
+    	/// Create new Result holding normal data
+    	static Result new_ok(const T& data) {
+    		Result ret;
+    		ret.data = data;
+    		ret.is_err_variant = false;
+    		return ret;
+    	}
+    	/// Create new Result holding an Error
+    	static Result new_err(const Error& err) {
+    		Result ret;
+    		ret.err = err;
+    		ret.is_err_variant = true;
+    		return ret;
+    	}
+    	/// Is this an Error
+    	bool is_err() const { return is_err_variant; }
+    	/// Is this normal data
+    	bool is_ok() const { return !is_err_variant; }
+    	/// Get the data (only use if is_ok() returns true)
+    	T get_data() const {
+    		if (is_err()) {
+    			ErrorManager::push_error(Error("Called get_data on err Result",
+    										   UNWRAP_WRONG_RESULT_VARIANT));
+    		}
+    		return data; 
+    	}
+    	/// Get the Error (only use if is_err() returns true)
+    	Error get_err() const { 
+    		if (is_ok()) {
+    			ErrorManager::push_error(Error("Called get_err on ok Result",
+    										   UNWRAP_WRONG_RESULT_VARIANT));
+    		}
+    		return err; 
+    	}
+    	/// Tries getting data, returning a default value if this is an error
+    	T get_data_or(T optb) const { return is_err_variant ? optb : data; }
     };
 
     /// converts ErrorType enum to string

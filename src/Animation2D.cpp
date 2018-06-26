@@ -7,7 +7,8 @@
 
 namespace nta {
     SpriteSheet::SpriteSheet(crstring file_path, crivec2 dims) : dims(dims) {
-        tex = ResourceManager::getTexture(file_path);
+        // unsafe but meh
+        tex = ResourceManager::getTexture(file_path).get_data();
     }
 
     Animation2D::Animation2D(const SpriteSheet& sheet, std::size_t start, std::size_t length) :

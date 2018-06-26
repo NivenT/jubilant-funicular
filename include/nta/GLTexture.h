@@ -1,7 +1,7 @@
 #ifndef NTA_GLTEXTURE_H_INCLUDED
 #define NTA_GLTEXTURE_H_INCLUDED
 
-#include "MyEngine.h"
+#include "Errors.h"
 
 typedef unsigned int GLuint;
 typedef int GLint;
@@ -27,7 +27,8 @@ namespace nta {
     class ImageLoader {
     private:
         /// loads in any image file
-        static GLTexture readImage(crstring filePath, GLint minFilt, GLint magFilt, crvec2 dimensions);
+        static Result<GLTexture> readImage(crstring filePath, GLint minFilt, 
+                                           GLint magFilt, crvec2 dimensions);
     public:
         friend class ResourceManager;
     };

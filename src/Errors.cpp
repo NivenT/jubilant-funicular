@@ -59,6 +59,8 @@ namespace nta {
             return "DevIL Failure";
         case IMPOSSIBLE_BEHAVIOR:
         	return "Impossible Behavior";
+        case UNWRAP_WRONG_RESULT_VARIANT:
+        	return "Unwrapped wrong result variant";
         case OTHER:
             return "Other";
         }

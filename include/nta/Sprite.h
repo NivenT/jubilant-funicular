@@ -7,6 +7,7 @@
 
 namespace nta {
     /// represents a textured quad (Best to use SpriteBatch instead)
+    /// \todo Delete this class (It's useless)
     class Sprite {
     private:
         /// id for the vertex buffer object used to render the sprite

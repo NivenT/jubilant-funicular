@@ -20,11 +20,17 @@ namespace nta {
     }
     /// \todo Make sure all the code that previously assumed this function always
     ///       exits still behaves sensibly
-    void Logger::writeErrorToLog(crstring error, ErrorType type) {
-        writeToLog("********** ERROR **********");
+    Error Logger::writeErrorToLog(crstring error, ErrorType type) {
+        const std::string err_indicator = 
+            "********** ERROR (" + get_errortype_string(type) + ") **********";
+
+        writeToLog(err_indicator);
         writeToLog(error);
-        writeToLog("********** ERROR **********");
-        ErrorManager::push_error(Error(error, type));
+        writeToLog(err_indicator);
+
+        Error err = Error(error, type);
+        ErrorManager::push_error(err);
+        return err;
     }
     void Logger::indent(size_t tab_size) {
         m_tabs += tab_size;
