@@ -20,7 +20,7 @@ namespace nta {
         Logger::writeToLog("Loading ttf font: " + fontPath + "...");
         TTF_Font* font = TTF_OpenFont(fontPath.c_str(), size);
         if (!font) {
-            Logger::writeErrorToLog("Could not load font");
+            Logger::writeErrorToLog("Could not load font", MISSING_RESOURCE);
         }
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Loaded font");

@@ -17,11 +17,12 @@ namespace nta {
         GLuint retID = 0;
         retID = glCreateShader(shaderType);
         if (retID == 0) {
-            Logger::writeErrorToLog("Failed to create shader");
+            Logger::writeErrorToLog("Failed to create shader", GL_FAILURE);
         }
         std::ifstream shaderFile(shaderFileName);
         if (shaderFile.fail()) {
-            Logger::writeErrorToLog("Failed to open shader file: " + shaderFileName);
+            Logger::writeErrorToLog("Failed to open shader file: " + shaderFileName,
+                                    MISSING_RESOURCE);
         }
         std::string fileContents = "";
         std::string line;
@@ -42,7 +43,7 @@ namespace nta {
             if (maxLength > 0) {
                 glDeleteShader(retID);
                 Logger::writeToLog(shaderFileName + " log:");
-                Logger::writeErrorToLog(log);
+                Logger::writeErrorToLog(log, GL_FAILURE);
             }
         }
         return retID;
@@ -50,7 +51,8 @@ namespace nta {
     GLint GLSLProgram::getUniformLocation(crstring uniformName) const {
         GLint ret = glGetUniformLocation(m_programID, uniformName.c_str());
         if (ret == GL_INVALID_INDEX) {
-            Logger::writeErrorToLog("Could not find uniform in shader: " + uniformName);
+            Logger::writeErrorToLog("Could not find uniform in shader: " + uniformName,
+                                    GL_FAILURE);
         }
         return ret;
     }
@@ -92,7 +94,7 @@ namespace nta {
                 glDeleteShader(m_fragShaderID);
                 glDeleteProgram(m_programID);
                 Logger::writeToLog("GLSLProgram log:");
-                Logger::writeErrorToLog(log);
+                Logger::writeErrorToLog(log, GL_FAILURE);
             }
         }
         glDetachShader(m_programID, m_vertShaderID);

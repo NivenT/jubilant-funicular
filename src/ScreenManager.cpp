@@ -61,6 +61,7 @@ namespace nta {
         if (m_currScreen != -1) getCurrScreen()->onFocus();
         while (m_currScreen != -1) {
             currScreen = getCurrScreen();
+            // This while loop used to be neat
             while (currScreen->getState() == ScreenState::RUNNING) {
                 m_limiter.begin();
                 CallbackManager::increment_frame();
@@ -70,6 +71,7 @@ namespace nta {
                     ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
                 #endif
                 currScreen->render();
+                ErrorManager::handle_errors();
                 m_limiter.end();
             }
             switch(currScreen->getState()) {
@@ -78,7 +80,8 @@ namespace nta {
             case ScreenState::SWITCH_X:     switchScreen(currScreen->getXIndex()); break;
             case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " +
                                                                     to_string(m_currScreen) +
-                                                                    " is NONE"); break;
+                                                                    " is NONE",
+                                                                    IMPOSSIBLE_BEHAVIOR); break;
             default: break; // should never happen
             }
         }

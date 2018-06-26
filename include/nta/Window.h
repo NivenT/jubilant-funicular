@@ -8,8 +8,13 @@
 namespace nta {
     class SystemManager;
     /// Flags used for creating a window
-    enum WindowFlags {INVISIBLE = 0x1, FULLSCREEN = 0x2, BORDERLESS = 0x4, NOTRESIZEABLE = 0x8,
-                      HIGHDPI = 0x10};
+    enum WindowFlags {
+        INVISIBLE = 0x1, 
+        FULLSCREEN = 0x2, 
+        BORDERLESS = 0x4, 
+        NOTRESIZEABLE = 0x8,
+        HIGHDPI = 0x10
+    };
     /// Key for unlocking the GetSDLWindow() "private" function of class Window
     class GetSDLWindowKey {
         friend class ScreenManager;

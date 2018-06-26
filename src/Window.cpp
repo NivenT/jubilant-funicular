@@ -69,14 +69,16 @@ namespace nta {
         check_error();
         if (!SDL_GL_CreateContext(m_window)) {
             Logger::writeErrorToLog("Failed to create an OpenGL context:\n\t"
-                                    + nta::to_string(SDL_GetError()));
+                                    + nta::to_string(SDL_GetError()),
+                                    GL_FAILURE);
         }
         glewExperimental = GL_TRUE; // I don't remember what this does or why it is needed
         
         const GLenum err = glewInit();
         if (err != GLEW_OK) {
             Logger::writeErrorToLog("Failed to initialize glew:\n\t" 
-                                    + nta::to_string(glewGetErrorString(err)));
+                                    + nta::to_string(glewGetErrorString(err)),
+                                    GL_FAILURE);
         }
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         //SDL_GL_SetSwapInterval(1);

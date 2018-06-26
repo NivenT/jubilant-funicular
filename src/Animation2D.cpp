@@ -12,8 +12,12 @@ namespace nta {
 
     Animation2D::Animation2D(const SpriteSheet& sheet, std::size_t start, std::size_t length) :
         m_sheet(sheet), m_time(0), m_start_index(start), m_length(length) {
-        if (m_length == 0) Logger::writeErrorToLog(INVALID_LEN_MSG);
-        if (m_start_index >= m_sheet.num_rows*m_sheet.num_cols) Logger::writeErrorToLog(INVALID_IDX_MSG);
+        if (m_length == 0) {
+            Logger::writeErrorToLog(INVALID_LEN_MSG, INVALID_VALUE);
+        }
+        if (m_start_index >= m_sheet.num_rows*m_sheet.num_cols) {
+            Logger::writeErrorToLog(INVALID_IDX_MSG, INVALID_VALUE);
+        }
     }
     Animation2D::Animation2D(crstring file_path, crivec2 dims, std::size_t start, std::size_t length) :
         Animation2D(SpriteSheet(file_path, dims), start, length) {
@@ -47,8 +51,12 @@ namespace nta {
         m_length = length;
         m_time = 0;
 
-        if (m_length == 0) Logger::writeErrorToLog(INVALID_LEN_MSG);
-        if (m_start_index >= m_sheet.num_rows*m_sheet.num_cols) Logger::writeErrorToLog(INVALID_IDX_MSG);
+        if (m_length == 0) {
+            Logger::writeErrorToLog(INVALID_LEN_MSG, INVALID_VALUE);
+        }
+        if (m_start_index >= m_sheet.num_rows*m_sheet.num_cols) {
+            Logger::writeErrorToLog(INVALID_IDX_MSG, INVALID_VALUE);
+        }
     }
     void Animation2D::step(float dt) {
         m_time += dt;

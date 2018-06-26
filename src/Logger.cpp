@@ -3,7 +3,6 @@
 #include <SDL2/SDL.h>
 
 #include "nta/Logger.h"
-#include "nta/CallbackManager.h"
 
 namespace nta {
     std::ofstream   Logger::m_logFile;
@@ -23,15 +22,18 @@ namespace nta {
     }
     /// \todo Redo libraries error-handling model so it doesn't just always crash
     ///       Idea: ErrorManager with linked list of errors?
-    void Logger::writeErrorToLog(crstring error) {
+    void Logger::writeErrorToLog(crstring error, ErrorType type) {
         writeToLog("********** ERROR **********");
         writeToLog(error);
         writeToLog("********** ERROR **********");
+        /*
         m_tabs = 0;
         cleanup();
         std::cout<<"An error occured. Check Log.log for details"<<std::endl;
         std::cout<<error<<std::endl;
         exit(0xbad);
+        */
+        ErrorManager::push_error(new Error(error, type));
     }
     void Logger::indent(size_t tab_size) {
         m_tabs += tab_size;

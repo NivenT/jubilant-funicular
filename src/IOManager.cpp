@@ -6,7 +6,8 @@ namespace nta {
         Logger::writeToLog("Reading " + filePath + " to a buffer");
         std::ifstream file(filePath.c_str(), std::ios::binary);
         if (file.fail()) {
-            Logger::writeErrorToLog("Failed to open file " + filePath);
+            Logger::writeErrorToLog("Failed to open file " + filePath,
+                                    MISSING_RESOURCE);
         }
         file.seekg(0, std::ios::end);
         unsigned int fileSize = file.tellg();
@@ -22,7 +23,8 @@ namespace nta {
         Logger::writeToLog("Reading " + filePath + " to a buffer");
         std::ifstream file(filePath.c_str(), std::ios::binary);
         if (file.fail()) {
-            Logger::writeErrorToLog("Failed to open file " + filePath);
+            Logger::writeErrorToLog("Failed to open file " + filePath,
+                                    MISSING_RESOURCE);
         }
         file.seekg(0, std::ios::end);
         unsigned int fileSize = file.tellg();

@@ -20,7 +20,8 @@ namespace nta {
             if (ilLoadImage(filePath.c_str()) == IL_FALSE) {
                 ILenum error = ilGetError();
                 Logger::writeErrorToLog("DevIL failed to load image with error " +
-                                        to_string(error) + ": " + iluErrorString(error));
+                                        to_string(error) + ": " + iluErrorString(error),
+                                        DEVIL_FAILURE);
             }
             ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
         #else

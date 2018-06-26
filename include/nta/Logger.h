@@ -3,7 +3,7 @@
 
 #include <fstream>
 
-#include "MyEngine.h"
+#include "Errors.h"
 
 namespace nta {
     /// stores program information in internal and external logs
@@ -19,7 +19,7 @@ namespace nta {
         /// writes an entry in the log
         static void writeToLog(crstring entry);
         /// writes entry in log and then exits program
-        static void writeErrorToLog(crstring error);
+        static void writeErrorToLog(crstring error, ErrorType type = OTHER);
         /// indents entries
         static void indent(size_t tab_size = TAB_SIZE);
         /// unindents entries
