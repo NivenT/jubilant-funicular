@@ -7,6 +7,7 @@ var searchData=
   ['check_5ferror',['check_error',['../d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8',1,'nta']]],
   ['cleanup',['cleanup',['../d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350',1,'nta']]],
   ['clear',['clear',['../d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9',1,'nta::CallbackManager::clear()'],['../df/d9f/classnta_1_1ParticleBatch2D.html#a1046b22d239222435e74011b3683a5c6',1,'nta::ParticleBatch2D::clear()']]],
+  ['clear_5ferrors',['clear_errors',['../de/db1/classnta_1_1ErrorManager.html#a45dcc13a0acec8c4d2cc69d9b52be305',1,'nta::ErrorManager']]],
   ['comparetexture',['compareTexture',['../d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b',1,'nta::PrimitiveBatch::compareTexture()'],['../d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9',1,'nta::SpriteBatch::compareTexture()']]],
   ['compileshader',['compileShader',['../dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83',1,'nta::GLSLProgram']]],
   ['compileshaders',['compileShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5',1,'nta::GLSLProgram']]],

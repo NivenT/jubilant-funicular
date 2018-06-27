@@ -18,7 +18,7 @@ static void \hyperlink{classnta_1_1Logger_a308a3ec22f996556b3d54737ace33543}{cre
 \mbox{\Hypertarget{classnta_1_1Logger_a71196417598ddd975959924c2ce53c13}\label{classnta_1_1Logger_a71196417598ddd975959924c2ce53c13}} 
 static void \hyperlink{classnta_1_1Logger_a71196417598ddd975959924c2ce53c13}{write\+To\+Log} (crstring entry)
 \begin{DoxyCompactList}\small\item\em writes an entry in the log \end{DoxyCompactList}\item 
-static void \hyperlink{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}{write\+Error\+To\+Log} (crstring error)
+static \hyperlink{structnta_1_1Error}{Error} \hyperlink{classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee}{write\+Error\+To\+Log} (crstring error, \hyperlink{namespacenta_a1ddeff35318678e360dfa44ca9577b16}{Error\+Type} type=O\+T\+H\+ER)
 \begin{DoxyCompactList}\small\item\em writes entry in log and then exits program \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}\label{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}} 
 static void \hyperlink{classnta_1_1Logger_aae8be3709ec3023f987f9b70304cd641}{indent} (size\+\_\+t tab\+\_\+size=T\+A\+B\+\_\+\+S\+I\+ZE)
@@ -57,21 +57,21 @@ Collaboration diagram for nta\+:\+:Logger\+:\nopagebreak
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}\label{classnta_1_1Logger_a08299f1414203eba74b306ce6712192e}} 
+\mbox{\Hypertarget{classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee}\label{classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee}} 
 \index{nta\+::\+Logger@{nta\+::\+Logger}!write\+Error\+To\+Log@{write\+Error\+To\+Log}}
 \index{write\+Error\+To\+Log@{write\+Error\+To\+Log}!nta\+::\+Logger@{nta\+::\+Logger}}
 \subsubsection{\texorpdfstring{write\+Error\+To\+Log()}{writeErrorToLog()}}
-{\footnotesize\ttfamily void nta\+::\+Logger\+::write\+Error\+To\+Log (\begin{DoxyParamCaption}\item[{crstring}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \hyperlink{structnta_1_1Error}{Error} nta\+::\+Logger\+::write\+Error\+To\+Log (\begin{DoxyParamCaption}\item[{crstring}]{error,  }\item[{\hyperlink{namespacenta_a1ddeff35318678e360dfa44ca9577b16}{Error\+Type}}]{type = {\ttfamily OTHER} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 writes entry in log and then exits program 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000008}{Todo}]Redo libraries error-\/handling model so it doesn\textquotesingle{}t just always crash Idea\+: Error\+Manager with linked list of errors? \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000011}{Todo}]Make sure all the code that previously assumed this function always exits still behaves sensibly \end{DoxyRefDesc}
 
 
-Definition at line 26 of file Logger.\+cpp.
+Definition at line 23 of file Logger.\+cpp.
 
 
 
@@ -82,7 +82,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_cgraph}
+\includegraphics[width=350pt]{d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -90,7 +90,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_icgraph}
+\includegraphics[width=350pt]{d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_icgraph}
 \end{center}
 \end{figure}
 

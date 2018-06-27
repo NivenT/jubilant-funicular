@@ -87,9 +87,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13">writeToLog</a> (crstring entry)</td></tr>
 <tr class="memdesc:a71196417598ddd975959924c2ce53c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes an entry in the log <br /></td></tr>
 <tr class="separator:a71196417598ddd975959924c2ce53c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08299f1414203eba74b306ce6712192e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e">writeErrorToLog</a> (crstring error)</td></tr>
-<tr class="memdesc:a08299f1414203eba74b306ce6712192e"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes entry in log and then exits program  <a href="#a08299f1414203eba74b306ce6712192e">More...</a><br /></td></tr>
-<tr class="separator:a08299f1414203eba74b306ce6712192e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee">writeErrorToLog</a> (crstring error, <a class="el" href="../../d4/d51/namespacenta.html#a1ddeff35318678e360dfa44ca9577b16">ErrorType</a> type=OTHER)</td></tr>
+<tr class="memdesc:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes entry in log and then exits program  <a href="#a22e0cfbb0e04de2c377cdd5297c39eee">More...</a><br /></td></tr>
+<tr class="separator:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae8be3709ec3023f987f9b70304cd641"><td class="memItemLeft" align="right" valign="top"><a id="aae8be3709ec3023f987f9b70304cd641"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641">indent</a> (size_t tab_size=TAB_SIZE)</td></tr>
 <tr class="memdesc:aae8be3709ec3023f987f9b70304cd641"><td class="mdescLeft">&#160;</td><td class="mdescRight">indents entries <br /></td></tr>
@@ -122,8 +122,8 @@ Collaboration diagram for nta::Logger:</div>
 <div class="center"><img src="../../d4/d22/classnta_1_1Logger__coll__graph.png" border="0" usemap="#nta_1_1Logger_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08299f1414203eba74b306ce6712192e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08299f1414203eba74b306ce6712192e">&#9670;&nbsp;</a></span>writeErrorToLog()</h2>
+<a id="a22e0cfbb0e04de2c377cdd5297c39eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e0cfbb0e04de2c377cdd5297c39eee">&#9670;&nbsp;</a></span>writeErrorToLog()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,11 +132,21 @@ Collaboration diagram for nta::Logger:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void nta::Logger::writeErrorToLog </td>
+          <td class="memname"><a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> nta::Logger::writeErrorToLog </td>
           <td>(</td>
           <td class="paramtype">crstring&#160;</td>
-          <td class="paramname"><em>error</em></td><td>)</td>
+          <td class="paramname"><em>error</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a1ddeff35318678e360dfa44ca9577b16">ErrorType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code>OTHER</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -147,29 +157,26 @@ Collaboration diagram for nta::Logger:</div>
 </div><div class="memdoc">
 
 <p>writes entry in log and then exits program </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>Redo libraries error-handling model so it doesn't just always crash Idea: ErrorManager with linked list of errors? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>Make sure all the code that previously assumed this function always exits still behaves sensibly </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d9/df5/Logger_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d9/df5/Logger_8cpp_source.html">Logger.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df5/Logger_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d9/df5/Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00016">nta::GLSLProgram::compileShader()</a>, <a class="el" href="../../d2/d84/Window_8cpp_source.html#l00045">nta::Window::createWindow()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00036">nta::AudioManager::getSoundEffect()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00050">nta::GLSLProgram::getUniformLocation()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00026">nta::init()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00007">nta::AudioManager::init()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00078">nta::GLSLProgram::linkShaders()</a>, <a class="el" href="../../d5/d6f/IOManager_8cpp_source.html#l00005">nta::IOManager::readFileToBuffer()</a>, <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00013">nta::ImageLoader::readImage()</a>, and <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00007">nta::SpriteFont::SpriteFont()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00016">nta::GLSLProgram::compileShader()</a>, <a class="el" href="../../d2/d84/Window_8cpp_source.html#l00045">nta::Window::createWindow()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00036">nta::AudioManager::getSoundEffect()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00051">nta::GLSLProgram::getUniformLocation()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00026">nta::init()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00007">nta::AudioManager::init()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00080">nta::GLSLProgram::linkShaders()</a>, <a class="el" href="../../d5/d6f/IOManager_8cpp_source.html#l00005">nta::IOManager::readFileToBuffer()</a>, <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00013">nta::ImageLoader::readImage()</a>, and <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00007">nta::SpriteFont::SpriteFont()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_cgraph.png" border="0" usemap="#d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_cgraph" alt=""/></div>
-<map name="d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_cgraph" id="d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_cgraph">
-<area shape="rect" id="node2" href="../../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="579,35,737,62"/>
-<area shape="rect" id="node3" href="../../d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="240,35,333,62"/>
-<area shape="rect" id="node4" href="../../da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="387,28,525,69"/>
-<area shape="rect" id="node5" href="../../d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="381,93,531,135"/>
-<area shape="rect" id="node6" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="585,93,731,135"/>
-<area shape="rect" id="node7" href="../../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="785,93,932,135"/>
+<div class="center"><img src="../../d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_cgraph.png" border="0" usemap="#d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_cgraph" alt=""/></div>
+<map name="d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_cgraph" id="d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_cgraph">
+<area shape="rect" id="node2" href="../../d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="257,5,381,47"/>
+<area shape="rect" id="node3" href="../../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="240,71,399,98"/>
+<area shape="rect" id="node4" href="../../de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="252,123,387,164"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_icgraph.png" border="0" usemap="#d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_icgraph" alt=""/></div>
-<map name="d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_icgraph" id="d6/d0d/classnta_1_1Logger_a08299f1414203eba74b306ce6712192e_icgraph">
+<div class="center"><img src="../../d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_icgraph.png" border="0" usemap="#d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_icgraph" alt=""/></div>
+<map name="d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_icgraph" id="d6/d0d/classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee_icgraph">
 <area shape="rect" id="node2" href="../../dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83" title="compiles a shader from a file and returns its id " alt="" coords="252,5,435,47"/>
 <area shape="rect" id="node4" href="../../d4/dfb/classnta_1_1Window.html#a564ca2324e54c94f9e0f19d66017c07a" title="creates a window " alt="" coords="250,71,437,98"/>
 <area shape="rect" id="node5" href="../../da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598" title="returns sound " alt="" coords="274,123,413,164"/>
@@ -178,10 +185,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node8" href="../../da/d29/classnta_1_1AudioManager.html#a4da570a6cee16bd6450031f7910057fd" title="initializes SDL_Mixer " alt="" coords="265,305,421,331"/>
 <area shape="rect" id="node9" href="../../dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0" title="links the compiled shaders to this program " alt="" coords="240,355,447,382"/>
 <area shape="rect" id="node10" href="../../d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10" title="stores the entire contents of a file in a buffer " alt="" coords="260,407,427,448"/>
-<area shape="rect" id="node11" href="../../d5/dc9/classnta_1_1ImageLoader.html#a9144fea6007e8dc1af75ee4da5a02f10" title="loads in any image file " alt="" coords="247,473,439,499"/>
+<area shape="rect" id="node11" href="../../d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="247,473,439,499"/>
 <area shape="rect" id="node14" href="../../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358" title="constructor &#45; creates a texture containing the font stored in fontPath with glyphs of the given size ..." alt="" coords="255,523,431,550"/>
 <area shape="rect" id="node3" href="../../dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5" title="compiles both the vertex and fragment shaders given their name " alt="" coords="495,5,677,47"/>
-<area shape="rect" id="node12" href="../../d5/d87/classnta_1_1ResourceManager.html#a9058dbd86949123968e61de1fb6234f2" title="returns the resource with the given path, loading it if need be " alt="" coords="509,465,663,507"/>
+<area shape="rect" id="node12" href="../../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="returns the resource with the given path, loading it if need be " alt="" coords="509,465,663,507"/>
 <area shape="rect" id="node13" href="../../d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="725,473,832,499"/>
 </map>
 </div>

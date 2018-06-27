@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['get_5fdata',['get_data',['../d8/d2e/classnta_1_1Result.html#a96baacea35085048d694279d5de8c82e',1,'nta::Result']]],
+  ['get_5fdata_5for',['get_data_or',['../d8/d2e/classnta_1_1Result.html#ae5fb7648fc0ecfbab99404a97fb27c83',1,'nta::Result']]],
+  ['get_5ferr',['get_err',['../d8/d2e/classnta_1_1Result.html#a9ea9717e77d5e9a2371eb3cf9c896bc7',1,'nta::Result']]],
+  ['get_5ferrortype_5fstring',['get_errortype_string',['../d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d',1,'nta']]],
   ['get_5fflipped_5fuv',['get_flipped_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a98643a92390617ac5575b7a951e9805a',1,'nta::SpriteSheet']]],
   ['get_5fuv',['get_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a618bc48e6978a19ad9eb56dda3307f5a',1,'nta::SpriteSheet']]],
   ['getavailableworker',['getAvailableWorker',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a0cf734e83b83378a70a67864e9eeb732',1,'nta::utils::ThreadPool']]],
@@ -26,12 +30,12 @@ var searchData=
   ['getsdlwindowkey',['GetSDLWindowKey',['../d1/d22/classnta_1_1GetSDLWindowKey.html',1,'nta']]],
   ['getsoundeffect',['getSoundEffect',['../da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598',1,'nta::AudioManager']]],
   ['getstate',['getState',['../d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c',1,'nta::Screen']]],
-  ['gettexture',['getTexture',['../d5/d87/classnta_1_1ResourceManager.html#a9058dbd86949123968e61de1fb6234f2',1,'nta::ResourceManager']]],
+  ['gettexture',['getTexture',['../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1',1,'nta::ResourceManager']]],
   ['gettitle',['getTitle',['../d4/dfb/classnta_1_1Window.html#a91f2eeac996c2f863b92601f8bb459aa',1,'nta::Window']]],
   ['gettranslationmatrix',['getTranslationMatrix',['../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3',1,'nta::Camera2D']]],
   ['getuniformlocation',['getUniformLocation',['../dc/d9c/classnta_1_1GLSLProgram.html#a8140edf8b3d89de4ebf8c4b1db404f59',1,'nta::GLSLProgram']]],
   ['getwidth',['getWidth',['../d4/dfb/classnta_1_1Window.html#ac6cb1a31bb8c219e189ca5f88e25dd45',1,'nta::Window']]],
   ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html',1,'nta::GLSLProgram'],['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram::GLSLProgram()']]],
-  ['gltexture',['GLTexture',['../d4/d51/namespacenta.html#d3/dff/structnta_1_1GLTexture',1,'nta']]],
+  ['gltexture',['GLTexture',['../d3/dff/structnta_1_1GLTexture.html',1,'nta']]],
   ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html',1,'nta::Glyph'],['../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105',1,'nta::Glyph::Glyph()']]]
 ];

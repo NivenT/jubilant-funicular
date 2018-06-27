@@ -7,6 +7,7 @@ var searchData=
   ['_7eparticlebatch2d',['~ParticleBatch2D',['../df/d9f/classnta_1_1ParticleBatch2D.html#ac21b6437fdd8e746c6fce095b4dbc03a',1,'nta::ParticleBatch2D']]],
   ['_7eparticleengine2d',['~ParticleEngine2D',['../d1/de9/classnta_1_1ParticleEngine2D.html#a9819d90a1852b474bb3014a8c8d506a1',1,'nta::ParticleEngine2D']]],
   ['_7eprimitive',['~Primitive',['../d6/d4f/structnta_1_1Primitive.html#a39fbab541466b58744a8c7a0aa4eb49c',1,'nta::Primitive']]],
+  ['_7eresult',['~Result',['../d8/d2e/classnta_1_1Result.html#a5fd9525155666ef2eaf605d82d13bd77',1,'nta::Result']]],
   ['_7escreenmanager',['~ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#aea609a639ffdc377e798eda054e6a4ba',1,'nta::ScreenManager']]],
   ['_7esoundeffect',['~SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#ab9cfa134a49f54f77c2dbc05d7674630',1,'nta::SoundEffect']]],
   ['_7espritefont',['~SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html#aa5292a1131ab6e04e23f282d2b067146',1,'nta::SpriteFont']]]

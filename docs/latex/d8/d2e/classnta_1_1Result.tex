@@ -1,0 +1,89 @@
+\hypertarget{classnta_1_1Result}{}\section{nta\+:\+:Result$<$ T $>$ Class Template Reference}
+\label{classnta_1_1Result}\index{nta\+::\+Result$<$ T $>$@{nta\+::\+Result$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Errors.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Result_a2410d4b139bc036b9ff6d30ab5e15f8d}\label{classnta_1_1Result_a2410d4b139bc036b9ff6d30ab5e15f8d}} 
+\hyperlink{classnta_1_1Result_a2410d4b139bc036b9ff6d30ab5e15f8d}{Result} (const \hyperlink{classnta_1_1Result}{Result} \&other)
+\begin{DoxyCompactList}\small\item\em Public copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_a5fd9525155666ef2eaf605d82d13bd77}\label{classnta_1_1Result_a5fd9525155666ef2eaf605d82d13bd77}} 
+\hyperlink{classnta_1_1Result_a5fd9525155666ef2eaf605d82d13bd77}{$\sim$\+Result} ()
+\begin{DoxyCompactList}\small\item\em Public destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_ab742b047f1e670bc6a374f32c3fd48ea}\label{classnta_1_1Result_ab742b047f1e670bc6a374f32c3fd48ea}} 
+bool \hyperlink{classnta_1_1Result_ab742b047f1e670bc6a374f32c3fd48ea}{is\+\_\+err} () const
+\begin{DoxyCompactList}\small\item\em Is this an \hyperlink{structnta_1_1Error}{Error}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_a61deaa087694eae4fdaece2996fedda0}\label{classnta_1_1Result_a61deaa087694eae4fdaece2996fedda0}} 
+bool \hyperlink{classnta_1_1Result_a61deaa087694eae4fdaece2996fedda0}{is\+\_\+ok} () const
+\begin{DoxyCompactList}\small\item\em Is this normal data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_a96baacea35085048d694279d5de8c82e}\label{classnta_1_1Result_a96baacea35085048d694279d5de8c82e}} 
+T \hyperlink{classnta_1_1Result_a96baacea35085048d694279d5de8c82e}{get\+\_\+data} () const
+\begin{DoxyCompactList}\small\item\em Get the data (only use if \hyperlink{classnta_1_1Result_a61deaa087694eae4fdaece2996fedda0}{is\+\_\+ok()} returns true) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_a9ea9717e77d5e9a2371eb3cf9c896bc7}\label{classnta_1_1Result_a9ea9717e77d5e9a2371eb3cf9c896bc7}} 
+\hyperlink{structnta_1_1Error}{Error} \hyperlink{classnta_1_1Result_a9ea9717e77d5e9a2371eb3cf9c896bc7}{get\+\_\+err} () const
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{structnta_1_1Error}{Error} (only use if \hyperlink{classnta_1_1Result_ab742b047f1e670bc6a374f32c3fd48ea}{is\+\_\+err()} returns true) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_ae5fb7648fc0ecfbab99404a97fb27c83}\label{classnta_1_1Result_ae5fb7648fc0ecfbab99404a97fb27c83}} 
+T \hyperlink{classnta_1_1Result_ae5fb7648fc0ecfbab99404a97fb27c83}{get\+\_\+data\+\_\+or} (T optb) const
+\begin{DoxyCompactList}\small\item\em Tries getting data, returning a default value if this is an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}\label{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}} 
+static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}{new\+\_\+ok} (const T \&data)
+\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classnta_1_1Result}{Result} holding normal data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}\label{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}} 
+static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}{new\+\_\+err} (const \hyperlink{structnta_1_1Error}{Error} \&err)
+\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classnta_1_1Result}{Result} holding an \hyperlink{structnta_1_1Error}{Error}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Result_a6bb10dacafbf334b7209adc5615de44e}\label{classnta_1_1Result_a6bb10dacafbf334b7209adc5615de44e}} 
+\hyperlink{classnta_1_1Result_a6bb10dacafbf334b7209adc5615de44e}{Result} ()
+\begin{DoxyCompactList}\small\item\em Private constructor (use new\+\_\+ok or new\+\_\+err) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Result_a225adf68d093d584826f4aab98cacf97}\label{classnta_1_1Result_a225adf68d093d584826f4aab98cacf97}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{classnta_1_1Result_ab084104dfedebe7715d97987595ad147}\label{classnta_1_1Result_ab084104dfedebe7715d97987595ad147}} 
+T {\bfseries data}\\
+\mbox{\Hypertarget{classnta_1_1Result_acd60a522df7b4adf81729de1dc626955}\label{classnta_1_1Result_acd60a522df7b4adf81729de1dc626955}} 
+\hyperlink{structnta_1_1Error}{Error} {\bfseries err}\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em The data or error held by this \hyperlink{classnta_1_1Result}{Result}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Result_a27f85dc35976426c1f5c01431ac2e1cc}\label{classnta_1_1Result_a27f85dc35976426c1f5c01431ac2e1cc}} 
+bool \hyperlink{classnta_1_1Result_a27f85dc35976426c1f5c01431ac2e1cc}{is\+\_\+err\+\_\+variant}
+\begin{DoxyCompactList}\small\item\em Whether or not an error occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class nta\+::\+Result$<$ T $>$}
+
+Used for returning data when an error could potentially occur \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Use \hyperlink{classnta_1_1Result}{Result} type everywhere it needs to be used \end{DoxyRefDesc}
+
+
+Definition at line 73 of file Errors.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Result$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d6/da5/classnta_1_1Result__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Errors.\+h\end{DoxyCompactItemize}

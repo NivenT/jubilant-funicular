@@ -1,0 +1,97 @@
+\hypertarget{classnta_1_1ErrorManager}{}\section{nta\+:\+:Error\+Manager Class Reference}
+\label{classnta_1_1ErrorManager}\index{nta\+::\+Error\+Manager@{nta\+::\+Error\+Manager}}
+
+
+{\ttfamily \#include $<$Errors.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_adca13bc3b6b36366c0a803ce43daf90d}\label{classnta_1_1ErrorManager_adca13bc3b6b36366c0a803ce43daf90d}} 
+static void \hyperlink{classnta_1_1ErrorManager_adca13bc3b6b36366c0a803ce43daf90d}{handle\+\_\+errors} ()
+\begin{DoxyCompactList}\small\item\em Handles all outstanding errors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a7a8c3c22602b437d160e860da877fffe}\label{classnta_1_1ErrorManager_a7a8c3c22602b437d160e860da877fffe}} 
+static void \hyperlink{classnta_1_1ErrorManager_a7a8c3c22602b437d160e860da877fffe}{set\+\_\+periodic\+\_\+callback} (const Error\+Callback \&callback)
+\begin{DoxyCompactList}\small\item\em Sets the periodic callback function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_acd7eb6eafdace10701e4e59bd727a823}\label{classnta_1_1ErrorManager_acd7eb6eafdace10701e4e59bd727a823}} 
+static void \hyperlink{classnta_1_1ErrorManager_acd7eb6eafdace10701e4e59bd727a823}{set\+\_\+push\+\_\+callback} (const Error\+Callback \&callback)
+\begin{DoxyCompactList}\small\item\em Sets the push callback function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a5e12c42f103bfa290699c08c98d681a2}\label{classnta_1_1ErrorManager_a5e12c42f103bfa290699c08c98d681a2}} 
+static void \hyperlink{classnta_1_1ErrorManager_a5e12c42f103bfa290699c08c98d681a2}{push\+\_\+error} (const \hyperlink{structnta_1_1Error}{Error} \&err)
+\begin{DoxyCompactList}\small\item\em Adds and error to the front of the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a42c52e9cb6537922b10b4f2546af1b7d}\label{classnta_1_1ErrorManager_a42c52e9cb6537922b10b4f2546af1b7d}} 
+static const \hyperlink{structnta_1_1Error}{Error} $\ast$ \hyperlink{classnta_1_1ErrorManager_a42c52e9cb6537922b10b4f2546af1b7d}{pop\+\_\+error} ()
+\begin{DoxyCompactList}\small\item\em Removes (and returns) the error from the front of the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_ad156e8dea6b2a7d98d17043ec08cb812}\label{classnta_1_1ErrorManager_ad156e8dea6b2a7d98d17043ec08cb812}} 
+static const \hyperlink{structnta_1_1Error}{Error} $\ast$ \hyperlink{classnta_1_1ErrorManager_ad156e8dea6b2a7d98d17043ec08cb812}{peek\+\_\+error} ()
+\begin{DoxyCompactList}\small\item\em Returns the error at the front of the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a45dcc13a0acec8c4d2cc69d9b52be305}\label{classnta_1_1ErrorManager_a45dcc13a0acec8c4d2cc69d9b52be305}} 
+static void \hyperlink{classnta_1_1ErrorManager_a45dcc13a0acec8c4d2cc69d9b52be305}{clear\+\_\+errors} ()
+\begin{DoxyCompactList}\small\item\em Deletes all errors (without handling any of them) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_af652b22446b5ce84c85164a5ff7f30f2}\label{classnta_1_1ErrorManager_af652b22446b5ce84c85164a5ff7f30f2}} 
+static const \hyperlink{structnta_1_1Error}{Error} $\ast$ \hyperlink{classnta_1_1ErrorManager_af652b22446b5ce84c85164a5ff7f30f2}{m\+\_\+errors} = nullptr
+\begin{DoxyCompactList}\small\item\em A linked list of unhandled errors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a26a60a2c77e97e5cf4af59bb06f20d7a}\label{classnta_1_1ErrorManager_a26a60a2c77e97e5cf4af59bb06f20d7a}} 
+static Error\+Callback \hyperlink{classnta_1_1ErrorManager_a26a60a2c77e97e5cf4af59bb06f20d7a}{m\+\_\+periodic\+\_\+callback} = \mbox{[}$\,$\mbox{]}(const \hyperlink{structnta_1_1Error}{Error}$\ast$ \+\_\+) \{\}
+\begin{DoxyCompactList}\small\item\em The function used to handle errors at the end of each frame. \end{DoxyCompactList}\item 
+static Error\+Callback \hyperlink{classnta_1_1ErrorManager_a96ac1ed4fb4ee3dd2ca4c055ccfc630c}{m\+\_\+push\+\_\+callback}
+\begin{DoxyCompactList}\small\item\em The function used to handle errors as they occur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores and handles Errors \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]There should be one of each \char`\"{}\+Manager\char`\"{} class type per \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} or one per \hyperlink{classnta_1_1Window}{Window} (i.\+e. they should not be static) \end{DoxyRefDesc}
+
+
+Definition at line 44 of file Errors.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Error\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d79/classnta_1_1ErrorManager__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classnta_1_1ErrorManager_a96ac1ed4fb4ee3dd2ca4c055ccfc630c}\label{classnta_1_1ErrorManager_a96ac1ed4fb4ee3dd2ca4c055ccfc630c}} 
+\index{nta\+::\+Error\+Manager@{nta\+::\+Error\+Manager}!m\+\_\+push\+\_\+callback@{m\+\_\+push\+\_\+callback}}
+\index{m\+\_\+push\+\_\+callback@{m\+\_\+push\+\_\+callback}!nta\+::\+Error\+Manager@{nta\+::\+Error\+Manager}}
+\subsubsection{\texorpdfstring{m\+\_\+push\+\_\+callback}{m\_push\_callback}}
+{\footnotesize\ttfamily Error\+Callback nta\+::\+Error\+Manager\+::m\+\_\+push\+\_\+callback\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= [](\textcolor{keyword}{const} Error* err) \{
+        \textcolor{keywordflow}{if} (err) \{
+            \hyperlink{namespacenta_a17dc16b021d0dec3749e422b95d39350}{cleanup}();
+            std::cout<<\textcolor{stringliteral}{"An error occured. Check Log.log for details"}<<std::endl;
+            exit(0xbad);
+        \}
+    \}
+\end{DoxyCode}
+
+
+The function used to handle errors as they occur. 
+
+
+
+Definition at line 51 of file Errors.\+h.
+
+
+
+Referenced by push\+\_\+error(), and set\+\_\+push\+\_\+callback().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Errors.\+h\item 
+src/Errors.\+cpp\end{DoxyCompactItemize}

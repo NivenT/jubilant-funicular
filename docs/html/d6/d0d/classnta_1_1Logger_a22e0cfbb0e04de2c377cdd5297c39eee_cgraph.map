@@ -1,0 +1,5 @@
+<map id="nta::Logger::writeErrorToLog" name="nta::Logger::writeErrorToLog">
+<area shape="rect" id="node2" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="257,5,381,47"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="240,71,399,98"/>
+<area shape="rect" id="node4" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="252,123,387,164"/>
+</map>

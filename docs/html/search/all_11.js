@@ -11,5 +11,6 @@ var searchData=
   ['todo_20list',['Todo List',['../dd/da0/todo.html',1,'']]],
   ['topleft',['topLeft',['../d6/db3/structnta_1_1Glyph.html#a71969ecd8d228e48f9dff95787187282',1,'nta::Glyph']]],
   ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
-  ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]]
+  ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]],
+  ['type',['type',['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error']]]
 ];

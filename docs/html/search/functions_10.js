@@ -7,6 +7,8 @@ var searchData=
   ['screenshot',['screenshot',['../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c',1,'nta::Window']]],
   ['screentogame',['screenToGame',['../d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a',1,'nta::Camera2D']]],
   ['semaphore',['Semaphore',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ae01dc768910e74be62cbc81765693f44',1,'nta::utils::Semaphore']]],
+  ['set_5fperiodic_5fcallback',['set_periodic_callback',['../de/db1/classnta_1_1ErrorManager.html#a7a8c3c22602b437d160e860da877fffe',1,'nta::ErrorManager']]],
+  ['set_5fpush_5fcallback',['set_push_callback',['../de/db1/classnta_1_1ErrorManager.html#acd7eb6eafdace10701e4e59bd727a823',1,'nta::ErrorManager']]],
   ['setcenter',['setCenter',['../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895',1,'nta::Camera2D']]],
   ['setcolor',['setColor',['../d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c',1,'nta::Vertex2D']]],
   ['setdimensions',['setDimensions',['../d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597',1,'nta::Window']]],
