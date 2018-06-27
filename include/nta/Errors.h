@@ -23,6 +23,11 @@ namespace nta {
     struct Error {
     	Error(crstring desc = "", ErrorType t = OTHER) : description(desc), type(t) {
     	}
+    	Error(const Error& other) {
+    		description = other.description;
+    		type = other.type;
+    		prev = other.prev;
+    	}
     	~Error() {
     		if (prev) delete prev;
     	}
@@ -88,14 +93,16 @@ namespace nta {
     	/// Create new Result holding normal data
     	static Result new_ok(const T& data) {
     		Result ret;
-    		ret.data = data;
+    		memcpy(&ret.data, &data, sizeof(data));
+    		//ret.data = data;
     		ret.is_err_variant = false;
     		return ret;
     	}
     	/// Create new Result holding an Error
     	static Result new_err(const Error& err) {
     		Result ret;
-    		ret.err = err;
+    		memcpy(&ret.err, &err, sizeof(err));
+    		//ret.err = err;
     		ret.is_err_variant = true;
     		return ret;
     	}
