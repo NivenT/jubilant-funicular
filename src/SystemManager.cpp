@@ -18,10 +18,11 @@ namespace nta {
         }
         return m_glslMap[name];
     }
-    Window* SystemManager::getWindow(crstring windowTitle, int flags) {
+    Window* SystemManager::getWindow(crstring windowTitle, int width, int height, 
+                                     int flags) {
         if (m_windowMap.find(windowTitle) == m_windowMap.end()) {
             m_windowMap[windowTitle] = new Window;
-            m_windowMap[windowTitle]->createWindow(windowTitle, 640, 480, flags);
+            m_windowMap[windowTitle]->createWindow(windowTitle, width, height, flags);
         }
         return m_windowMap[windowTitle];
     }

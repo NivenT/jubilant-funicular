@@ -9,8 +9,8 @@
 #include "nta/Logger.h"
 
 namespace nta {
-    ScreenManager::ScreenManager(crstring title, float maxFPS) {
-        m_window = SystemManager::getWindow(title);
+    ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) {
+        m_window = SystemManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
     }
     ScreenManager::~ScreenManager() {

@@ -91,6 +91,7 @@ namespace nta {
     	/// Public destructor
     	~Result() {}
     	/// Create new Result holding normal data
+    	/// This takes ownership of the data passed in
     	static Result new_ok(const T& data) {
     		Result ret;
     		memcpy(&ret.data, &data, sizeof(data));
@@ -99,6 +100,7 @@ namespace nta {
     		return ret;
     	}
     	/// Create new Result holding an Error
+    	/// This takes ownership of the err passed in
     	static Result new_err(const Error& err) {
     		Result ret;
     		memcpy(&ret.err, &err, sizeof(err));

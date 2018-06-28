@@ -11,10 +11,11 @@ namespace nta {
     private:
         /// a map for associating a texture with the name of its file
         static std::map<std::string, GLTexture> m_textureMap;
+        /// \question Why does this return pointers?
         static std::map<std::pair<std::string, int>, SpriteFont*> m_fontMap;
     public:
         /// returns the resource with the given path, loading it if need be
-        // \question Why was I returning references before?
+        /// \question Why was I returning references before?
         static Result<GLTexture> getTexture(crstring imagePath, 
                                              GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
                                              GLint magFilt = GL_LINEAR, 

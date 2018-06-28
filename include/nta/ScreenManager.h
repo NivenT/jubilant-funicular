@@ -1,5 +1,5 @@
-#ifndef SCREENMANAGER_H_INCLUDED
-#define SCREENMANAGER_H_INCLUDED
+#ifndef NTA_SCREENMANAGER_H_INCLUDED
+#define NTA_SCREENMANAGER_H_INCLUDED
 
 #include <vector>
 
@@ -21,7 +21,7 @@ namespace nta {
         int m_currScreen = -1;
     public:
         /// sets the max fps and the window to use
-        ScreenManager(crstring title, float maxFPS);
+        ScreenManager(crstring title, float maxFPS, int width = 640, int height = 480);
         /// basic destructor
         ~ScreenManager();
         /// returns the active screen
@@ -39,4 +39,4 @@ namespace nta {
     };
 }
 
-#endif // SCREENMANAGER_H_INCLUDED
+#endif // NTA_SCREENMANAGER_H_INCLUDED
