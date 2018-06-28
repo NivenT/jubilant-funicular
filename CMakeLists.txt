@@ -45,6 +45,7 @@ endif()
 option(NTA_USE_DEVIL "Turn off to use CImg instead of DevIL for image loading" ON)
 option(NTA_USE_AUDIO "Turn off if you don't need AudioManager or SDL2_mixer" ON)
 option(NTA_USE_IMGUI "Turn on if you want to use Imgui" OFF)	
+option(NTA_BUILD_EXAMPLES "Turn off if you don't want to build the examples" ON)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -117,3 +118,14 @@ set(NTA_LIBRARIES ${NTA_LIBRARIES}
   ${OPENGL_LIBRARIES}
 	CACHE INTERNAL ""
 )
+
+if(${NTA_BUILD_EXAMPLES})
+    message(STATUS "Building basic_square example (run from bin directory)")
+    add_executable(basic_square examples/basic_square/main.cpp)
+    target_link_libraries(basic_square ${NTA_LIBRARIES})
+    target_include_directories(basic_square PUBLIC ${NTA_INCLUDE_DIR})
+    if (NOT EXISTS "{CMAKE_BINARY_DIR}/bin/simple2D.vert")
+        execute_process(COMMAND bash -c 
+                        "ln -s ${CMAKE_CURRENT_SOURCE_DIR}/examples/basic_square/simple2D* bin/")
+    endif()
+endif()
