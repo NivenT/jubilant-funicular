@@ -1,35 +1,45 @@
 \hypertarget{classnta_1_1SystemManager}{}\section{nta\+:\+:System\+Manager Class Reference}
 \label{classnta_1_1SystemManager}\index{nta\+::\+System\+Manager@{nta\+::\+System\+Manager}}
+
+
+Manages \char`\"{}\+System\char`\"{} stuff, whatever that means.  
+
+
+
+
+{\ttfamily \#include $<$System\+Manager.\+h$>$}
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classnta_1_1SystemManager_af37be3ff4538da0a95b5ca257187077c}\label{classnta_1_1SystemManager_af37be3ff4538da0a95b5ca257187077c}} 
-static \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ {\bfseries get\+G\+L\+S\+L\+Program} (crstring prog\+Path)
+static \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ \hyperlink{classnta_1_1SystemManager_af37be3ff4538da0a95b5ca257187077c}{get\+G\+L\+S\+L\+Program} (crstring prog\+Path)
 \item 
-\mbox{\Hypertarget{classnta_1_1SystemManager_a656e005054ec89f1370616aa499b8a1a}\label{classnta_1_1SystemManager_a656e005054ec89f1370616aa499b8a1a}} 
-static \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ {\bfseries get\+G\+L\+S\+L\+Program} (crstring name, crstring vert, crstring frag)
+static \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ \hyperlink{classnta_1_1SystemManager_a656e005054ec89f1370616aa499b8a1a}{get\+G\+L\+S\+L\+Program} (crstring name, crstring vert, crstring frag)
 \item 
-\mbox{\Hypertarget{classnta_1_1SystemManager_af3577fda5a1a1019f51fbc352047dc1f}\label{classnta_1_1SystemManager_af3577fda5a1a1019f51fbc352047dc1f}} 
-static \hyperlink{classnta_1_1Window}{Window} $\ast$ {\bfseries get\+Window} (crstring window\+Title, int flags=0)
+\mbox{\Hypertarget{classnta_1_1SystemManager_add3089790707aaf982e43b69317fe30a}\label{classnta_1_1SystemManager_add3089790707aaf982e43b69317fe30a}} 
+static \hyperlink{classnta_1_1Window}{Window} $\ast$ \hyperlink{classnta_1_1SystemManager_add3089790707aaf982e43b69317fe30a}{get\+Window} (crstring window\+Title, int width=640, int height=480, int flags=0)
+\begin{DoxyCompactList}\small\item\em Gets a \hyperlink{classnta_1_1Window}{Window} with specified title, width, height, and flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1SystemManager_a76ef4114ece83e7492600960190211b1}\label{classnta_1_1SystemManager_a76ef4114ece83e7492600960190211b1}} 
+static \hyperlink{classnta_1_1Window}{Window} $\ast$ {\bfseries get\+Window} (crstring window\+Title, int flags)
 \item 
 \mbox{\Hypertarget{classnta_1_1SystemManager_a69721eaa78fda16f0f028d2991672282}\label{classnta_1_1SystemManager_a69721eaa78fda16f0f028d2991672282}} 
-static void {\bfseries destroy} ()
-\end{DoxyCompactItemize}
+static void \hyperlink{classnta_1_1SystemManager_a69721eaa78fda16f0f028d2991672282}{destroy} ()
+\begin{DoxyCompactList}\small\item\em Destorys the manager, freeing all necessary data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classnta_1_1SystemManager_a22703ea675725af427acc8a19853fb4d}\label{classnta_1_1SystemManager_a22703ea675725af427acc8a19853fb4d}} 
-static std\+::map$<$ std\+::string, \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ $>$ {\bfseries m\+\_\+glsl\+Map}
-\item 
+static std\+::map$<$ std\+::string, \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ $>$ \hyperlink{classnta_1_1SystemManager_a22703ea675725af427acc8a19853fb4d}{m\+\_\+glsl\+Map}
+\begin{DoxyCompactList}\small\item\em Collection of \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1SystemManager_ad19f3250449b0ddad40bf42601d36b1a}\label{classnta_1_1SystemManager_ad19f3250449b0ddad40bf42601d36b1a}} 
-static std\+::map$<$ std\+::string, \hyperlink{classnta_1_1Window}{Window} $\ast$ $>$ {\bfseries m\+\_\+window\+Map}
-\end{DoxyCompactItemize}
+static std\+::map$<$ std\+::string, \hyperlink{classnta_1_1Window}{Window} $\ast$ $>$ \hyperlink{classnta_1_1SystemManager_ad19f3250449b0ddad40bf42601d36b1a}{m\+\_\+window\+Map}
+\begin{DoxyCompactList}\small\item\em Collection of \hyperlink{classnta_1_1Window}{Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Manages \char`\"{}\+System\char`\"{} stuff, whatever that means. 
 
-
-Definition at line 10 of file System\+Manager.\+h.
+Definition at line 11 of file System\+Manager.\+h.
 
 
 
@@ -40,6 +50,29 @@ Collaboration diagram for nta\+:\+:System\+Manager\+:\nopagebreak
 \includegraphics[width=312pt]{d5/d24/classnta_1_1SystemManager__coll__graph}
 \end{center}
 \end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1SystemManager_af37be3ff4538da0a95b5ca257187077c}\label{classnta_1_1SystemManager_af37be3ff4538da0a95b5ca257187077c}} 
+\index{nta\+::\+System\+Manager@{nta\+::\+System\+Manager}!get\+G\+L\+S\+L\+Program@{get\+G\+L\+S\+L\+Program}}
+\index{get\+G\+L\+S\+L\+Program@{get\+G\+L\+S\+L\+Program}!nta\+::\+System\+Manager@{nta\+::\+System\+Manager}}
+\subsubsection{\texorpdfstring{get\+G\+L\+S\+L\+Program()}{getGLSLProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ nta\+::\+System\+Manager\+::get\+G\+L\+S\+L\+Program (\begin{DoxyParamCaption}\item[{crstring}]{prog\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} at specified path Assumes vertex shader is (prog\+Path + \char`\"{}.\+vert\char`\"{}) and fragment shader is (prog\+Path + \char`\"{}.\+frag\char`\"{}) 
+
+Definition at line 7 of file System\+Manager.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1SystemManager_a656e005054ec89f1370616aa499b8a1a}\label{classnta_1_1SystemManager_a656e005054ec89f1370616aa499b8a1a}} 
+\index{nta\+::\+System\+Manager@{nta\+::\+System\+Manager}!get\+G\+L\+S\+L\+Program@{get\+G\+L\+S\+L\+Program}}
+\index{get\+G\+L\+S\+L\+Program@{get\+G\+L\+S\+L\+Program}!nta\+::\+System\+Manager@{nta\+::\+System\+Manager}}
+\subsubsection{\texorpdfstring{get\+G\+L\+S\+L\+Program()}{getGLSLProgram()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program} $\ast$ nta\+::\+System\+Manager\+::get\+G\+L\+S\+L\+Program (\begin{DoxyParamCaption}\item[{crstring}]{name,  }\item[{crstring}]{vert,  }\item[{crstring}]{frag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets \hyperlink{classnta_1_1GLSLProgram}{G\+L\+S\+L\+Program}, specifying explicitly where the vertex and fragment shaders are. Uses name as the key in the map 
+
+Definition at line 14 of file System\+Manager.\+cpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

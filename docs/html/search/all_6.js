@@ -19,6 +19,7 @@ var searchData=
   ['getfps',['getFPS',['../d7/d1f/classnta_1_1FPSLimiter.html#a682d191b70ddecf8f7ed776dc586fe27',1,'nta::FPSLimiter::getFPS()'],['../d0/dc4/classnta_1_1ScreenManager.html#a24e61f523b383277b7284cab76ad9e5a',1,'nta::ScreenManager::getFPS()']]],
   ['getfreeparticle',['getFreeParticle',['../df/d9f/classnta_1_1ParticleBatch2D.html#a123aac9af29133bfe358b9895de2b2ce',1,'nta::ParticleBatch2D']]],
   ['getfrequency',['getFrequency',['../da/dbb/classnta_1_1HuffmanNode.html#aaae7f78797726f30ce584e6fd0a282c1',1,'nta::HuffmanNode']]],
+  ['getglslprogram',['getGLSLProgram',['../db/d25/classnta_1_1SystemManager.html#af37be3ff4538da0a95b5ca257187077c',1,'nta::SystemManager::getGLSLProgram(crstring progPath)'],['../db/d25/classnta_1_1SystemManager.html#a656e005054ec89f1370616aa499b8a1a',1,'nta::SystemManager::getGLSLProgram(crstring name, crstring vert, crstring frag)']]],
   ['getheight',['getHeight',['../d4/dfb/classnta_1_1Window.html#a0daae9b6ad0a0ea834f90e86a9416f88',1,'nta::Window']]],
   ['getleft',['getLeft',['../da/dbb/classnta_1_1HuffmanNode.html#a2f67fd062ac5079cd40a0a82352d5a45',1,'nta::HuffmanNode']]],
   ['getmousecoords',['getMouseCoords',['../d6/de2/classnta_1_1InputManager.html#abaa04adc67f8025133fd1360b171b95f',1,'nta::InputManager']]],
@@ -35,6 +36,7 @@ var searchData=
   ['gettranslationmatrix',['getTranslationMatrix',['../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3',1,'nta::Camera2D']]],
   ['getuniformlocation',['getUniformLocation',['../dc/d9c/classnta_1_1GLSLProgram.html#a8140edf8b3d89de4ebf8c4b1db404f59',1,'nta::GLSLProgram']]],
   ['getwidth',['getWidth',['../d4/dfb/classnta_1_1Window.html#ac6cb1a31bb8c219e189ca5f88e25dd45',1,'nta::Window']]],
+  ['getwindow',['getWindow',['../db/d25/classnta_1_1SystemManager.html#add3089790707aaf982e43b69317fe30a',1,'nta::SystemManager']]],
   ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html',1,'nta::GLSLProgram'],['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram::GLSLProgram()']]],
   ['gltexture',['GLTexture',['../d3/dff/structnta_1_1GLTexture.html',1,'nta']]],
   ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html',1,'nta::Glyph'],['../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105',1,'nta::Glyph::Glyph()']]]

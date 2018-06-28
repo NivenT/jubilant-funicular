@@ -3,7 +3,7 @@ var searchData=
   ['scaledimensions',['scaleDimensions',['../d3/d28/classnta_1_1Camera2D.html#aa89b58a2a5ca0c3df56d07e2722afcd6',1,'nta::Camera2D']]],
   ['schedule',['schedule',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#aa10c18b44db7449d04bb6577c70dc17b',1,'nta::utils::ThreadPool']]],
   ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html#a268c9de735197debab91eb54f787fdea',1,'nta::Screen']]],
-  ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#a46a7adb4a69fea8e074fa2251c815bad',1,'nta::ScreenManager']]],
+  ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#a08ff6088b399f4253b838db207d64d96',1,'nta::ScreenManager']]],
   ['screenshot',['screenshot',['../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c',1,'nta::Window']]],
   ['screentogame',['screenToGame',['../d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a',1,'nta::Camera2D']]],
   ['semaphore',['Semaphore',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ae01dc768910e74be62cbc81765693f44',1,'nta::utils::Semaphore']]],

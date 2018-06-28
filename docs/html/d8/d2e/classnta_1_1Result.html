@@ -109,13 +109,9 @@ T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af193a336ab789de94a975c6f0a039e40"><td class="memItemLeft" align="right" valign="top"><a id="af193a336ab789de94a975c6f0a039e40"></a>
-static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/classnta_1_1Result.html#af193a336ab789de94a975c6f0a039e40">new_ok</a> (const T &amp;data)</td></tr>
-<tr class="memdesc:af193a336ab789de94a975c6f0a039e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> holding normal data. <br /></td></tr>
+<tr class="memitem:af193a336ab789de94a975c6f0a039e40"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/classnta_1_1Result.html#af193a336ab789de94a975c6f0a039e40">new_ok</a> (const T &amp;data)</td></tr>
 <tr class="separator:af193a336ab789de94a975c6f0a039e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65a9140ae2a03cfb13bd30f848b1aa5"><td class="memItemLeft" align="right" valign="top"><a id="ad65a9140ae2a03cfb13bd30f848b1aa5"></a>
-static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/classnta_1_1Result.html#ad65a9140ae2a03cfb13bd30f848b1aa5">new_err</a> (const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> &amp;err)</td></tr>
-<tr class="memdesc:ad65a9140ae2a03cfb13bd30f848b1aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> holding an <a class="el" href="../../d8/d66/structnta_1_1Error.html" title="Something went wrong. ">Error</a>. <br /></td></tr>
+<tr class="memitem:ad65a9140ae2a03cfb13bd30f848b1aa5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2e/classnta_1_1Result.html#ad65a9140ae2a03cfb13bd30f848b1aa5">new_err</a> (const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> &amp;err)</td></tr>
 <tr class="separator:ad65a9140ae2a03cfb13bd30f848b1aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -154,9 +150,94 @@ class nta::Result&lt; T &gt;</h3>
 Collaboration diagram for nta::Result&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/da5/classnta_1_1Result__coll__graph.png" border="0" usemap="#nta_1_1Result_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1Result_3_01T_01_4_coll__map" id="nta_1_1Result_3_01T_01_4_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad65a9140ae2a03cfb13bd30f848b1aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65a9140ae2a03cfb13bd30f848b1aa5">&#9670;&nbsp;</a></span>new_err()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> <a class="el" href="../../d8/d2e/classnta_1_1Result.html">nta::Result</a>&lt; T &gt;::new_err </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> &amp;&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create new <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> holding an <a class="el" href="../../d8/d66/structnta_1_1Error.html" title="Something went wrong. ">Error</a> This takes ownership of the err passed in </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d0e/Errors_8h_source.html#l00104">104</a> of file <a class="el" href="../../d2/d0e/Errors_8h_source.html">Errors.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00013">nta::ImageLoader::readImage()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2e/classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5_icgraph.png" border="0" usemap="#d8/d2e/classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5_icgraph" alt=""/></div>
+<map name="d8/d2e/classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5_icgraph" id="d8/d2e/classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5_icgraph">
+<area shape="rect" id="node2" href="../../d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="193,13,385,39"/>
+<area shape="rect" id="node3" href="../../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="433,5,588,47"/>
+<area shape="rect" id="node4" href="../../d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="636,13,743,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af193a336ab789de94a975c6f0a039e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af193a336ab789de94a975c6f0a039e40">&#9670;&nbsp;</a></span>new_ok()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> <a class="el" href="../../d8/d2e/classnta_1_1Result.html">nta::Result</a>&lt; T &gt;::new_ok </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create new <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> holding normal data This takes ownership of the data passed in </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d0e/Errors_8h_source.html#l00095">95</a> of file <a class="el" href="../../d2/d0e/Errors_8h_source.html">Errors.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00007">nta::ResourceManager::getTexture()</a>, and <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00013">nta::ImageLoader::readImage()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2e/classnta_1_1Result_af193a336ab789de94a975c6f0a039e40_icgraph.png" border="0" usemap="#d8/d2e/classnta_1_1Result_af193a336ab789de94a975c6f0a039e40_icgraph" alt=""/></div>
+<map name="d8/d2e/classnta_1_1Result_af193a336ab789de94a975c6f0a039e40_icgraph" id="d8/d2e/classnta_1_1Result_af193a336ab789de94a975c6f0a039e40_icgraph">
+<area shape="rect" id="node2" href="../../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="432,5,587,47"/>
+<area shape="rect" id="node4" href="../../d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="192,38,384,65"/>
+<area shape="rect" id="node3" href="../../d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="635,13,741,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/nta/<a class="el" href="../../d2/d0e/Errors_8h_source.html">Errors.h</a></li>
 </ul>

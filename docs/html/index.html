@@ -76,15 +76,16 @@ $(function() {
 </ul>
 </li>
 <li><a href="https://www.libsdl.org/download-2.0.php">SDL2</a><ul>
-<li>SDL2-mixer</li>
+<li>SDL2-mixer (Optional)</li>
 <li>SDL2-ttf</li>
 </ul>
 </li>
-<li><a href="http://openil.sourceforge.net/">DevIL</a></li>
+<li><a href="http://openil.sourceforge.net/">DevIL</a> (Optional)</li>
 </ul>
 <p>All of these can be obtained using <code>apt-get</code> on Ubuntu. If you want to get them all at once, run</p>
 <div class="fragment"><div class="line">sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \</div><div class="line">    libglew-dev freeglut3-dev libxmu-dev libxi-dev libdevil-dev</div></div><!-- fragment --><p> You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)</p>
 <p>On Mac, you can get them using <code>brew</code>.</p>
+<p>If you don't want to use the ones labelled Optional, check out the <code>option</code>s in <a href="https://github.com/NivenT/jubilant-funicular/blob/master/CMakeLists.txt#L45">CMakeLists.txt</a>.</p>
 <h2>Note</h2>
 <p>There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules. These can be found in the <a href="https://github.com/NivenT/jubilant-funicular/tree/master/deps">deps</a> folder and include</p>
 <ul>

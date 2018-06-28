@@ -31,12 +31,10 @@ T \hyperlink{classnta_1_1Result_ae5fb7648fc0ecfbab99404a97fb27c83}{get\+\_\+data
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}\label{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}} 
 static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}{new\+\_\+ok} (const T \&data)
-\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classnta_1_1Result}{Result} holding normal data. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}\label{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}} 
+\item 
 static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}{new\+\_\+err} (const \hyperlink{structnta_1_1Error}{Error} \&err)
-\begin{DoxyCompactList}\small\item\em Create new \hyperlink{classnta_1_1Result}{Result} holding an \hyperlink{structnta_1_1Error}{Error}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,12 +72,60 @@ Definition at line 73 of file Errors.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Result$<$ T $>$\+:
-\nopagebreak
+Collaboration diagram for nta\+:\+:Result$<$ T $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=246pt]{d6/da5/classnta_1_1Result__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}\label{classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5}} 
+\index{nta\+::\+Result@{nta\+::\+Result}!new\+\_\+err@{new\+\_\+err}}
+\index{new\+\_\+err@{new\+\_\+err}!nta\+::\+Result@{nta\+::\+Result}}
+\subsubsection{\texorpdfstring{new\+\_\+err()}{new\_err()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result}{nta\+::\+Result}$<$ T $>$\+::new\+\_\+err (\begin{DoxyParamCaption}\item[{const \hyperlink{structnta_1_1Error}{Error} \&}]{err }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Create new \hyperlink{classnta_1_1Result}{Result} holding an \hyperlink{structnta_1_1Error}{Error} This takes ownership of the err passed in 
+
+Definition at line 104 of file Errors.\+h.
+
+
+
+Referenced by nta\+::\+Image\+Loader\+::read\+Image().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d2e/classnta_1_1Result_ad65a9140ae2a03cfb13bd30f848b1aa5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}\label{classnta_1_1Result_af193a336ab789de94a975c6f0a039e40}} 
+\index{nta\+::\+Result@{nta\+::\+Result}!new\+\_\+ok@{new\+\_\+ok}}
+\index{new\+\_\+ok@{new\+\_\+ok}!nta\+::\+Result@{nta\+::\+Result}}
+\subsubsection{\texorpdfstring{new\+\_\+ok()}{new\_ok()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static \hyperlink{classnta_1_1Result}{Result} \hyperlink{classnta_1_1Result}{nta\+::\+Result}$<$ T $>$\+::new\+\_\+ok (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Create new \hyperlink{classnta_1_1Result}{Result} holding normal data This takes ownership of the data passed in 
+
+Definition at line 95 of file Errors.\+h.
+
+
+
+Referenced by nta\+::\+Resource\+Manager\+::get\+Texture(), and nta\+::\+Image\+Loader\+::read\+Image().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d2e/classnta_1_1Result_af193a336ab789de94a975c6f0a039e40_icgraph}
 \end{center}
 \end{figure}
 

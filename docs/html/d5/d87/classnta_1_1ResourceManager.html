@@ -79,9 +79,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a60911bfeef0df3802c6ef03cc10fb5c1"><td class="memItemLeft" align="right" valign="top"><a id="a60911bfeef0df3802c6ef03cc10fb5c1"></a>
-static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1">getTexture</a> (crstring imagePath, GLint minFilt=GL_LINEAR_MIPMAP_LINEAR, GLint magFilt=GL_LINEAR, crvec2 dimensions=glm::vec2(0))</td></tr>
-<tr class="memdesc:a60911bfeef0df3802c6ef03cc10fb5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the resource with the given path, loading it if need be <br /></td></tr>
+<tr class="memitem:a60911bfeef0df3802c6ef03cc10fb5c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1">getTexture</a> (crstring imagePath, GLint minFilt=GL_LINEAR_MIPMAP_LINEAR, GLint magFilt=GL_LINEAR, crvec2 dimensions=glm::vec2(0))</td></tr>
 <tr class="separator:a60911bfeef0df3802c6ef03cc10fb5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae14b4380aae490abd97d0bb1073d3a0b"><td class="memItemLeft" align="right" valign="top"><a id="ae14b4380aae490abd97d0bb1073d3a0b"></a>
 static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTexture</b> (crstring imagePath, crvec2 dimensions, GLint minFilt=GL_LINEAR_MIPMAP_LINEAR, GLint magFilt=GL_LINEAR)</td></tr>
@@ -107,7 +105,8 @@ static std::map&lt; std::string, <a class="el" href="../../d3/dff/structnta_1_1G
 <tr class="memdesc:abf9bb10402834f05b2673e0c1d8cb9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">a map for associating a texture with the name of its file <br /></td></tr>
 <tr class="separator:abf9bb10402834f05b2673e0c1d8cb9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6a87b69211ba52452b4c02847ea934e"><td class="memItemLeft" align="right" valign="top"><a id="ac6a87b69211ba52452b4c02847ea934e"></a>
-static std::map&lt; std::pair&lt; std::string, int &gt;, <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_fontMap</b></td></tr>
+static std::map&lt; std::pair&lt; std::string, int &gt;, <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#ac6a87b69211ba52452b4c02847ea934e">m_fontMap</a></td></tr>
+<tr class="memdesc:ac6a87b69211ba52452b4c02847ea934e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Why does this return pointers? <br /></td></tr>
 <tr class="separator:ac6a87b69211ba52452b4c02847ea934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -119,6 +118,85 @@ Collaboration diagram for nta::ResourceManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d39/classnta_1_1ResourceManager__coll__graph.png" border="0" usemap="#nta_1_1ResourceManager_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a60911bfeef0df3802c6ef03cc10fb5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60911bfeef0df3802c6ef03cc10fb5c1">&#9670;&nbsp;</a></span>getTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt; nta::ResourceManager::getTexture </td>
+          <td>(</td>
+          <td class="paramtype">crstring&#160;</td>
+          <td class="paramname"><em>imagePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&#160;</td>
+          <td class="paramname"><em>minFilt</em> = <code>GL_LINEAR_MIPMAP_LINEAR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&#160;</td>
+          <td class="paramname"><em>magFilt</em> = <code>GL_LINEAR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">crvec2&#160;</td>
+          <td class="paramname"><em>dimensions</em> = <code>glm::vec2(0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>returns the resource with the given path, loading it if need be  Why was I returning references before? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html">ResourceManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dff/Sprite_8cpp_source.html#l00011">nta::Sprite::init()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_cgraph.png" border="0" usemap="#d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_cgraph" alt=""/></div>
+<map name="d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_cgraph" id="d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_cgraph">
+<area shape="rect" id="node2" href="../../d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="208,107,400,133"/>
+<area shape="rect" id="node9" href="../../d8/d2e/classnta_1_1Result.html#af193a336ab789de94a975c6f0a039e40" title="nta::Result::new_ok" alt="" coords="472,208,611,235"/>
+<area shape="rect" id="node10" href="../../d8/d2e/classnta_1_1Result.html#a61deaa087694eae4fdaece2996fedda0" title="Is this normal data. " alt="" coords="241,208,367,235"/>
+<area shape="rect" id="node11" href="../../d8/d2e/classnta_1_1Result.html#a96baacea35085048d694279d5de8c82e" title="Get the data (only use if is_ok() returns true) " alt="" coords="232,259,376,285"/>
+<area shape="rect" id="node3" href="../../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="683,5,841,32"/>
+<area shape="rect" id="node4" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="448,56,635,83"/>
+<area shape="rect" id="node7" href="../../d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to a std::string " alt="" coords="492,107,591,133"/>
+<area shape="rect" id="node8" href="../../d8/d2e/classnta_1_1Result.html#ad65a9140ae2a03cfb13bd30f848b1aa5" title="nta::Result::new_err" alt="" coords="471,157,611,184"/>
+<area shape="rect" id="node5" href="../../d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="700,57,824,98"/>
+<area shape="rect" id="node6" href="../../de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="695,186,829,227"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_icgraph.png" border="0" usemap="#d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_icgraph" alt=""/></div>
+<map name="d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_icgraph" id="d5/d87/classnta_1_1ResourceManager_a60911bfeef0df3802c6ef03cc10fb5c1_icgraph">
+<area shape="rect" id="node2" href="../../d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="208,13,315,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../de/d51/ResourceManager_8h_source.html">ResourceManager.h</a></li>
 <li>src/<a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html">ResourceManager.cpp</a></li>
