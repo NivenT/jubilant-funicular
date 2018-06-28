@@ -16,7 +16,7 @@ var searchData=
   ['window_5fy',['window_y',['../d5/d53/structcimg__library__suffixed_1_1CImgDisplay.html#ada7f40024566383be680697e9731fde8',1,'cimg_library_suffixed::CImgDisplay']]],
   ['worker_5ffunc',['worker_func',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#ade9cec65b2ef535cb03fcc0ea941fe24',1,'nta::utils::ThreadPool']]],
   ['wrapangle',['wrapAngle',['../d5/dad/group__gtx__fast__trigonometry.html#ga069527c6dbd64f53435b8ebc4878b473',1,'glm::wrapAngle(T angle)'],['../d5/dad/group__gtx__fast__trigonometry.html#ga069527c6dbd64f53435b8ebc4878b473',1,'glm::wrapAngle(T angle)']]],
-  ['writeerrortolog',['writeErrorToLog',['../d6/d0d/classnta_1_1Logger.html#a08299f1414203eba74b306ce6712192e',1,'nta::Logger']]],
+  ['writeerrortolog',['writeErrorToLog',['../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee',1,'nta::Logger']]],
   ['writefilefrombuffer',['writeFileFromBuffer',['../d2/d54/classnta_1_1IOManager.html#a8e22ef5a2e46a48abdefa21847cf9eff',1,'nta::IOManager']]],
   ['writefloatle',['writeFloatLE',['../d2/d54/classnta_1_1IOManager.html#aa9855baef3ed91e4e95e3a5e899ba473',1,'nta::IOManager']]],
   ['writeintle',['writeIntLE',['../d2/d54/classnta_1_1IOManager.html#ad6ed0ff2efedb9388641d9456fd215b5',1,'nta::IOManager']]],
