@@ -14,9 +14,9 @@ Ideally, there would be no dependencies and all the necessary code would be writ
   * [Glew](http://glew.sourceforge.net/)
   * [GLUT](http://freeglut.sourceforge.net/)
 * [SDL2](https://www.libsdl.org/download-2.0.php)
-  * SDL2-mixer
+  * SDL2-mixer (Optional)
   * SDL2-ttf
-* [DevIL](http://openil.sourceforge.net/)
+* [DevIL](http://openil.sourceforge.net/) (Optional)
 
 All of these can be obtained using `apt-get` on Ubuntu. If you want to get them all at once, run
 
@@ -27,6 +27,8 @@ sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev \
 You'll likely already have some of these (e.g. libxmu-dev and libxi-dev)
 
 On Mac, you can get them using `brew`.
+
+If you don't want to use the ones labelled Optional, check out the `option`s in [CMakeLists.txt](https://github.com/NivenT/jubilant-funicular/blob/master/CMakeLists.txt#L45). 
 
 ## Note
 There are a few dependencies (none of the ones listed above) that come with the project. In an attempt to limit the repo's size, I've included (parts of) them directly instead of as submodules. These can be found in the [deps](https://github.com/NivenT/jubilant-funicular/tree/master/deps) folder and include
