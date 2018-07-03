@@ -1,5 +1,5 @@
-#ifndef SPRITEBATCH_H_INCLUDED
-#define SPRITEBATCH_H_INCLUDED
+#ifndef NTA_SPRITEBATCH_H_INCLUDED
+#define NTA_SPRITEBATCH_H_INCLUDED
 
 #include <vector>
 
@@ -79,7 +79,8 @@ namespace nta {
         GLenum mode;
     };
     /// represents a collection of sprites to be drawn
-    /// If you want to draw something without a texture, use PrimitiveBatch instead
+    /// If you want to draw a shape other than a square, use PrimitiveBatch instead
+    /// \todo Allow for custom vertex types
     class SpriteBatch {
     private:
         /// creates the vertex array object
@@ -116,12 +117,6 @@ namespace nta {
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
-        /*
-        void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, 
-                      float depth = NTA_DEFAULT_DEPTH);
-        void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
-                      float depth = NTA_DEFAULT_DEPTH);
-        */
         void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color, 
                       float angle = 0.0f, float depth = NTA_DEFAULT_DEPTH);
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, crvec4 color,
@@ -131,4 +126,4 @@ namespace nta {
     };
 }
 
-#endif // SPRITEBATCH_H_INCLUDED
+#endif // NTA_SPRITEBATCH_H_INCLUDED

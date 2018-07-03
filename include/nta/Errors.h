@@ -85,8 +85,12 @@ namespace nta {
     public:
     	/// Public copy constructor
     	Result(const Result& other) {
-    		data = other.data;
     		is_err_variant = other.is_err_variant;
+            if (is_err_variant) {
+                memcpy(&err, &other.err, sizeof(err));
+            } else {
+                memcpy(&data, &other.data, sizeof(data));
+            }
     	}
     	/// Public destructor
     	~Result() {}
