@@ -45,8 +45,10 @@ namespace nta {
         ScreenManager* m_manager = nullptr;
         /// the name of the Screen
         std::string m_name;
-        /// the index of the screen to go to in special circumstances
+        /// the index of the screen to go to when m_state == SWITCH
         int m_nextIndex = -1;
+        /// data to pass to the new screen (via onFocus) when m_state == SWITCH
+        void* m_switchData = nullptr;
     public:
         /// basic constructor and destructor
         Screen(crstring name = "nameless");
@@ -60,6 +62,8 @@ namespace nta {
         int getXIndex() const;
         int getNextIndex() const;
         int getIndex() const;
+        /// gets the switch data (shoudl this require a key?)
+        void* getSwitchData() const;
         /// Sets the manager of this screen
         void setManager(ScreenManager* manager, SetManagerKey key);
         /// sets various screen indices
@@ -73,7 +77,7 @@ namespace nta {
         /// handles user input
         virtual void handleInput();
         /// called when the screen becomes active
-        virtual void onFocus();
+        virtual void onFocus(void* switchData);
         /// called when the screen is no longer active
         virtual void offFocus();
         /// initializes the screen

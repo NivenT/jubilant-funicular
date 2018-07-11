@@ -33,6 +33,9 @@ namespace nta {
     int Screen::getNextIndex() const {
         return m_nextIndex;
     }
+    void* Screen::getSwitchData() const {
+        return m_switchData;
+    }
     void Screen::setManager(ScreenManager* manager, SetManagerKey key) {
         m_manager = manager;
     }
@@ -72,7 +75,7 @@ namespace nta {
             m_window->screenshot();
         }
     }
-    void Screen::onFocus() {
+    void Screen::onFocus(void* switchData) {
         m_state = ScreenState::RUNNING;
     }
     void Screen::offFocus() {

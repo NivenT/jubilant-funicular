@@ -35,7 +35,8 @@ namespace nta {
         /// destroys screens
         void destroy();
         /// runs screen logic (render, update, handleInput, etc.)
-        void run();
+        /// initFocusData is the input to onFocus for the first screen
+        void run(void* initFocusData = nullptr);
     };
 }
 
