@@ -33,6 +33,9 @@ int {\bfseries get\+Next\+Index} () const
 \mbox{\Hypertarget{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}\label{classnta_1_1Screen_ae149bdd787f8f41b45c667faef971326}} 
 int {\bfseries get\+Index} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1Screen_af1b73d1b96163a764f78714d5b61a44c}\label{classnta_1_1Screen_af1b73d1b96163a764f78714d5b61a44c}} 
+void $\ast$ \hyperlink{classnta_1_1Screen_af1b73d1b96163a764f78714d5b61a44c}{get\+Switch\+Data} () const
+\begin{DoxyCompactList}\small\item\em gets the switch data (shoudl this require a key?) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}\label{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}} 
 void \hyperlink{classnta_1_1Screen_a9c9329a6700fbed8ab6513d471835bfa}{set\+Manager} (\hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} $\ast$manager, \hyperlink{classnta_1_1SetManagerKey}{Set\+Manager\+Key} key)
 \begin{DoxyCompactList}\small\item\em Sets the manager of this screen. \end{DoxyCompactList}\item 
@@ -51,8 +54,8 @@ virtual void \hyperlink{classnta_1_1Screen_a6892f9b74b033d8bd5f4e9f190d49efa}{up
 \mbox{\Hypertarget{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}\label{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}} 
 virtual void \hyperlink{classnta_1_1Screen_a645ccabe314f6c9084b493617c3eeafe}{handle\+Input} ()
 \begin{DoxyCompactList}\small\item\em handles user input \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}\label{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}} 
-virtual void \hyperlink{classnta_1_1Screen_af29956d6f8ac437ef2f26c9d0973e509}{on\+Focus} ()
+\mbox{\Hypertarget{classnta_1_1Screen_a5f4ca5ab2638c7401292ecb44c0d5021}\label{classnta_1_1Screen_a5f4ca5ab2638c7401292ecb44c0d5021}} 
+virtual void \hyperlink{classnta_1_1Screen_a5f4ca5ab2638c7401292ecb44c0d5021}{on\+Focus} (void $\ast$switch\+Data)
 \begin{DoxyCompactList}\small\item\em called when the screen becomes active \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}\label{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}} 
 virtual void \hyperlink{classnta_1_1Screen_a172d24c2224aef718d151b621379def1}{off\+Focus} ()
@@ -77,7 +80,10 @@ std\+::string \hyperlink{classnta_1_1Screen_a309f2a837c5c8c42dc55206a5c63ab6a}{m
 \begin{DoxyCompactList}\small\item\em the name of the \hyperlink{classnta_1_1Screen}{Screen} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}\label{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}} 
 int \hyperlink{classnta_1_1Screen_a6be3b899f3bc9e531d64676cbbd6815e}{m\+\_\+next\+Index} = -\/1
-\begin{DoxyCompactList}\small\item\em the index of the screen to go to in special circumstances \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the index of the screen to go to when m\+\_\+state == S\+W\+I\+T\+CH \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Screen_aa72901053a8b965ac8c439ebd23efb56}\label{classnta_1_1Screen_aa72901053a8b965ac8c439ebd23efb56}} 
+void $\ast$ \hyperlink{classnta_1_1Screen_aa72901053a8b965ac8c439ebd23efb56}{m\+\_\+switch\+Data} = nullptr
+\begin{DoxyCompactList}\small\item\em data to pass to the new screen (via on\+Focus) when m\+\_\+state == S\+W\+I\+T\+CH \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 

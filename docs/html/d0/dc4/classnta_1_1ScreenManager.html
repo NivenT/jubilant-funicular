@@ -106,10 +106,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219">destroy</a> ()</td></tr>
 <tr class="memdesc:ad4e28094d9293b55f38ea463ac802219"><td class="mdescLeft">&#160;</td><td class="mdescRight">destroys screens <br /></td></tr>
 <tr class="separator:ad4e28094d9293b55f38ea463ac802219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a9c4c96209d37d928c05777a1135b9"><td class="memItemLeft" align="right" valign="top"><a id="a19a9c4c96209d37d928c05777a1135b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9">run</a> ()</td></tr>
-<tr class="memdesc:a19a9c4c96209d37d928c05777a1135b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs screen logic (render, update, handleInput, etc.) <br /></td></tr>
-<tr class="separator:a19a9c4c96209d37d928c05777a1135b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20be92778255ff1527e84bb8e54abe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3">run</a> (void *initFocusData=nullptr)</td></tr>
+<tr class="separator:ad20be92778255ff1527e84bb8e54abe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -161,18 +159,49 @@ Collaboration diagram for nta::ScreenManager:</div>
 </div><div class="memdoc">
 
 <p>returns the active screen </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00059">run()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00039">switchScreen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00060">run()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00039">switchScreen()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/dc4/classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a_icgraph.png" border="0" usemap="#d0/dc4/classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a_icgraph" alt=""/></div>
 <map name="d0/dc4/classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a_icgraph" id="d0/dc4/classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a_icgraph">
-<area shape="rect" id="node2" href="../../d0/dc4/classnta_1_1ScreenManager.html#a19a9c4c96209d37d928c05777a1135b9" title="runs screen logic (render, update, handleInput, etc.) " alt="" coords="192,5,357,32"/>
+<area shape="rect" id="node2" href="../../d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="192,5,357,32"/>
 <area shape="rect" id="node3" href="../../d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="205,57,344,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad20be92778255ff1527e84bb8e54abe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20be92778255ff1527e84bb8e54abe3">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nta::ScreenManager::run </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>initFocusData</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>runs screen logic (render, update, handleInput, etc.) initFocusData is the input to onFocus for the first screen </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dc4/classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3_cgraph.png" border="0" usemap="#d0/dc4/classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3_cgraph" alt=""/></div>
+<map name="d0/dc4/classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3_cgraph" id="d0/dc4/classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3_cgraph">
+<area shape="rect" id="node2" href="../../d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a" title="returns the active screen " alt="" coords="223,5,361,47"/>
+<area shape="rect" id="node3" href="../../d6/d23/classnta_1_1Screen.html#a5f4ca5ab2638c7401292ecb44c0d5021" title="called when the screen becomes active " alt="" coords="219,71,365,98"/>
+<area shape="rect" id="node4" href="../../d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c" title="returns state of screen " alt="" coords="219,122,365,149"/>
 </map>
 </div>
 

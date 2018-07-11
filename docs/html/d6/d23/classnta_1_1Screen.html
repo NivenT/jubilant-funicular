@@ -105,6 +105,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getNextIndex</b> () co
 <tr class="memitem:ae149bdd787f8f41b45c667faef971326"><td class="memItemLeft" align="right" valign="top"><a id="ae149bdd787f8f41b45c667faef971326"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> () const</td></tr>
 <tr class="separator:ae149bdd787f8f41b45c667faef971326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b73d1b96163a764f78714d5b61a44c"><td class="memItemLeft" align="right" valign="top"><a id="af1b73d1b96163a764f78714d5b61a44c"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#af1b73d1b96163a764f78714d5b61a44c">getSwitchData</a> () const</td></tr>
+<tr class="memdesc:af1b73d1b96163a764f78714d5b61a44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the switch data (shoudl this require a key?) <br /></td></tr>
+<tr class="separator:af1b73d1b96163a764f78714d5b61a44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c9329a6700fbed8ab6513d471835bfa"><td class="memItemLeft" align="right" valign="top"><a id="a9c9329a6700fbed8ab6513d471835bfa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#a9c9329a6700fbed8ab6513d471835bfa">setManager</a> (<a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html">ScreenManager</a> *manager, <a class="el" href="../../d5/d4e/classnta_1_1SetManagerKey.html">SetManagerKey</a> key)</td></tr>
 <tr class="memdesc:a9c9329a6700fbed8ab6513d471835bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the manager of this screen. <br /></td></tr>
@@ -129,10 +133,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#a645ccabe314f6c9084b493617c3eeafe">handleInput</a> ()</td></tr>
 <tr class="memdesc:a645ccabe314f6c9084b493617c3eeafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles user input <br /></td></tr>
 <tr class="separator:a645ccabe314f6c9084b493617c3eeafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af29956d6f8ac437ef2f26c9d0973e509"><td class="memItemLeft" align="right" valign="top"><a id="af29956d6f8ac437ef2f26c9d0973e509"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#af29956d6f8ac437ef2f26c9d0973e509">onFocus</a> ()</td></tr>
-<tr class="memdesc:af29956d6f8ac437ef2f26c9d0973e509"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when the screen becomes active <br /></td></tr>
-<tr class="separator:af29956d6f8ac437ef2f26c9d0973e509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4ca5ab2638c7401292ecb44c0d5021"><td class="memItemLeft" align="right" valign="top"><a id="a5f4ca5ab2638c7401292ecb44c0d5021"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#a5f4ca5ab2638c7401292ecb44c0d5021">onFocus</a> (void *switchData)</td></tr>
+<tr class="memdesc:a5f4ca5ab2638c7401292ecb44c0d5021"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when the screen becomes active <br /></td></tr>
+<tr class="separator:a5f4ca5ab2638c7401292ecb44c0d5021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a172d24c2224aef718d151b621379def1"><td class="memItemLeft" align="right" valign="top"><a id="a172d24c2224aef718d151b621379def1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#a172d24c2224aef718d151b621379def1">offFocus</a> ()</td></tr>
 <tr class="memdesc:a172d24c2224aef718d151b621379def1"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when the screen is no longer active <br /></td></tr>
@@ -162,8 +166,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:a309f2a837c5c8c42dc55206a5c63ab6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be3b899f3bc9e531d64676cbbd6815e"><td class="memItemLeft" align="right" valign="top"><a id="a6be3b899f3bc9e531d64676cbbd6815e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#a6be3b899f3bc9e531d64676cbbd6815e">m_nextIndex</a> = -1</td></tr>
-<tr class="memdesc:a6be3b899f3bc9e531d64676cbbd6815e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the index of the screen to go to in special circumstances <br /></td></tr>
+<tr class="memdesc:a6be3b899f3bc9e531d64676cbbd6815e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the index of the screen to go to when m_state == SWITCH <br /></td></tr>
 <tr class="separator:a6be3b899f3bc9e531d64676cbbd6815e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72901053a8b965ac8c439ebd23efb56"><td class="memItemLeft" align="right" valign="top"><a id="aa72901053a8b965ac8c439ebd23efb56"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/classnta_1_1Screen.html#aa72901053a8b965ac8c439ebd23efb56">m_switchData</a> = nullptr</td></tr>
+<tr class="memdesc:aa72901053a8b965ac8c439ebd23efb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">data to pass to the new screen (via onFocus) when m_state == SWITCH <br /></td></tr>
+<tr class="separator:aa72901053a8b965ac8c439ebd23efb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -189,7 +197,7 @@ Collaboration diagram for nta::Screen:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/df6/classnta_1_1Screen__coll__graph.png" border="0" usemap="#nta_1_1Screen_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1Screen_coll__map" id="nta_1_1Screen_coll__map">
-<area shape="rect" id="node4" href="../../d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="395,361,534,388"/>
+<area shape="rect" id="node4" href="../../d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="353,361,491,388"/>
 <area shape="rect" id="node5" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="164,228,259,255"/>
 <area shape="rect" id="node8" href="../../d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="619,228,732,255"/>
 <area shape="rect" id="node9" href="../../d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="579,124,660,151"/>

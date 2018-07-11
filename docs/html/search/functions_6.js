@@ -30,6 +30,7 @@ var searchData=
   ['getsdlwindow',['getSDLWindow',['../d4/dfb/classnta_1_1Window.html#a916d03b7cf059118106a4098eab11175',1,'nta::Window']]],
   ['getsoundeffect',['getSoundEffect',['../da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598',1,'nta::AudioManager']]],
   ['getstate',['getState',['../d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c',1,'nta::Screen']]],
+  ['getswitchdata',['getSwitchData',['../d6/d23/classnta_1_1Screen.html#af1b73d1b96163a764f78714d5b61a44c',1,'nta::Screen']]],
   ['gettexture',['getTexture',['../d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1',1,'nta::ResourceManager']]],
   ['gettitle',['getTitle',['../d4/dfb/classnta_1_1Window.html#a91f2eeac996c2f863b92601f8bb459aa',1,'nta::Window']]],
   ['gettranslationmatrix',['getTranslationMatrix',['../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3',1,'nta::Camera2D']]],

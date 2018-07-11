@@ -63,6 +63,7 @@ var searchData=
   ['m_5fsheet',['m_sheet',['../d2/d7a/classnta_1_1Animation2D.html#a7299c55bbae2e3a8eed7bbfde8362523',1,'nta::Animation2D']]],
   ['m_5fstart_5findex',['m_start_index',['../d2/d7a/classnta_1_1Animation2D.html#a61cdaf3599067dc1e2fe3b926b29b838',1,'nta::Animation2D']]],
   ['m_5fstate',['m_state',['../d6/d23/classnta_1_1Screen.html#a68d2c095aadfb248263f43cb12cd34a1',1,'nta::Screen']]],
+  ['m_5fswitchdata',['m_switchData',['../d6/d23/classnta_1_1Screen.html#aa72901053a8b965ac8c439ebd23efb56',1,'nta::Screen']]],
   ['m_5ftexid',['m_texId',['../d6/d57/classnta_1_1SpriteFont.html#ab74d460c526a4df82d206bba945fd711',1,'nta::SpriteFont']]],
   ['m_5ftexture',['m_texture',['../d4/d60/classnta_1_1Sprite.html#ac4fe2c6e0e34d133f5966a3ddc7a583e',1,'nta::Sprite']]],
   ['m_5ftextureid',['m_textureID',['../df/d9f/classnta_1_1ParticleBatch2D.html#a73232a0481db52884b42c50deb456add',1,'nta::ParticleBatch2D']]],

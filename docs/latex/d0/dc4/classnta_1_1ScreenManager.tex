@@ -32,9 +32,8 @@ void \hyperlink{classnta_1_1ScreenManager_a97edbb147671d2b94e1f5a13cb6f7660}{swi
 \mbox{\Hypertarget{classnta_1_1ScreenManager_ad4e28094d9293b55f38ea463ac802219}\label{classnta_1_1ScreenManager_ad4e28094d9293b55f38ea463ac802219}} 
 void \hyperlink{classnta_1_1ScreenManager_ad4e28094d9293b55f38ea463ac802219}{destroy} ()
 \begin{DoxyCompactList}\small\item\em destroys screens \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classnta_1_1ScreenManager_a19a9c4c96209d37d928c05777a1135b9}\label{classnta_1_1ScreenManager_a19a9c4c96209d37d928c05777a1135b9}} 
-void \hyperlink{classnta_1_1ScreenManager_a19a9c4c96209d37d928c05777a1135b9}{run} ()
-\begin{DoxyCompactList}\small\item\em runs screen logic (render, update, handle\+Input, etc.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3}{run} (void $\ast$init\+Focus\+Data=nullptr)
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -80,7 +79,7 @@ Collaboration diagram for nta\+:\+:Screen\+Manager\+:\nopagebreak
 returns the active screen 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000013}{Todo}]write log error if m\+\_\+curr\+Screen is out of range \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000014}{Todo}]write log error if m\+\_\+curr\+Screen is out of range \end{DoxyRefDesc}
 
 
 Definition at line 19 of file Screen\+Manager.\+cpp.
@@ -95,6 +94,24 @@ Here is the caller graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=344pt]{d0/dc4/classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3}\label{classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3}} 
+\index{nta\+::\+Screen\+Manager@{nta\+::\+Screen\+Manager}!run@{run}}
+\index{run@{run}!nta\+::\+Screen\+Manager@{nta\+::\+Screen\+Manager}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void nta\+::\+Screen\+Manager\+::run (\begin{DoxyParamCaption}\item[{void $\ast$}]{init\+Focus\+Data = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+runs screen logic (render, update, handle\+Input, etc.) init\+Focus\+Data is the input to on\+Focus for the first screen 
+
+Definition at line 60 of file Screen\+Manager.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc4/classnta_1_1ScreenManager_ad20be92778255ff1527e84bb8e54abe3_cgraph}
 \end{center}
 \end{figure}
 
