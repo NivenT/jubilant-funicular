@@ -2,6 +2,7 @@ var searchData=
 [
   ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html',1,'nta']]],
   ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html',1,'nta']]],
+  ['screenswitchinfo',['ScreenSwitchInfo',['../d9/dc1/structnta_1_1ScreenSwitchInfo.html',1,'nta']]],
   ['semaphore',['Semaphore',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html',1,'nta::utils']]],
   ['setindiceskey',['SetIndicesKey',['../db/dbc/classnta_1_1SetIndicesKey.html',1,'nta']]],
   ['setmanagerkey',['SetManagerKey',['../d5/d4e/classnta_1_1SetManagerKey.html',1,'nta']]],

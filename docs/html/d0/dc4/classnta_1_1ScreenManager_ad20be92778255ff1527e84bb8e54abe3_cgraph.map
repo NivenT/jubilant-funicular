@@ -1,5 +1,5 @@
 <map id="nta::ScreenManager::run" name="nta::ScreenManager::run">
 <area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a" title="returns the active screen " alt="" coords="223,5,361,47"/>
-<area shape="rect" id="node3" href="$d6/d23/classnta_1_1Screen.html#a5f4ca5ab2638c7401292ecb44c0d5021" title="called when the screen becomes active " alt="" coords="219,71,365,98"/>
+<area shape="rect" id="node3" href="$d6/d23/classnta_1_1Screen.html#a895548cdf2a5170d671983fc9189579a" title="called when the screen becomes active " alt="" coords="219,71,365,98"/>
 <area shape="rect" id="node4" href="$d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c" title="returns state of screen " alt="" coords="219,122,365,149"/>
 </map>
