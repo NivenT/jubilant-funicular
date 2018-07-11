@@ -27,6 +27,20 @@ namespace nta {
         SetWindowKey(const SetWindowKey&);
         SetWindowKey& operator=(const SetWindowKey&);
     };
+    /// Info passed to Screen::onFocus
+    struct ScreenSwitchInfo {
+        ScreenSwitchInfo() : data(nullptr), fromIndex(-1) {
+        }
+        ScreenSwitchInfo(void* data) : data(data), fromIndex(-1) {
+        }
+        ScreenSwitchInfo(void* data, int index) : data(data), fromIndex(index) {
+        }
+
+        /// arbitrary data to pass along
+        void* data;
+        /// the index of the screen switched from
+        int fromIndex;
+    };
     /// Represents a game screen
     class Screen {
     private:
@@ -77,7 +91,7 @@ namespace nta {
         /// handles user input
         virtual void handleInput();
         /// called when the screen becomes active
-        virtual void onFocus(void* switchData);
+        virtual void onFocus(const ScreenSwitchInfo& info);
         /// called when the screen is no longer active
         virtual void offFocus();
         /// initializes the screen

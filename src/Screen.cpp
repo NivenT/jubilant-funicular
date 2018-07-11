@@ -75,7 +75,7 @@ namespace nta {
             m_window->screenshot();
         }
     }
-    void Screen::onFocus(void* switchData) {
+    void Screen::onFocus(const ScreenSwitchInfo& _) {
         m_state = ScreenState::RUNNING;
     }
     void Screen::offFocus() {

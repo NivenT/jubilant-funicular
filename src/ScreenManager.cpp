@@ -44,10 +44,12 @@ namespace nta {
                                "\")...");
             Logger::indent();
             getCurrScreen()->offFocus();
+            Logger::writeToLog("called offFocus");
             check_error();
-            void* data = getCurrScreen()->getSwitchData();
+            ScreenSwitchInfo info(getCurrScreen()->getSwitchData(), m_currScreen);
             m_currScreen = newIndex;
-            getCurrScreen()->onFocus(data);
+            getCurrScreen()->onFocus(info);
+            Logger::writeToLog("called onFocus");
             check_error();
             Logger::unindent();
             Logger::writeToLog("Switched screen");
@@ -59,7 +61,9 @@ namespace nta {
     }
     void ScreenManager::run(void* initFocusData) {
         Screen* currScreen = nullptr;
-        if (m_currScreen != -1) getCurrScreen()->onFocus(initFocusData);
+        if (m_currScreen != -1) {
+            getCurrScreen()->onFocus(ScreenSwitchInfo(initFocusData));
+        }
         while (m_currScreen != -1) {
             currScreen = getCurrScreen();
             // This while loop used to be neat
