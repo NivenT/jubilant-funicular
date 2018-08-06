@@ -57,11 +57,44 @@ namespace nta {
 			if (m_type == ARRAY) m_arr->push_back(val);
 			return m_type == ARRAY;
 		}
-		Json::operator bool() const {
+		bool Json::as_bool() const {
 			switch(m_type) {
 			case NONE: return false;
 			case BOOLEAN: return m_bool;
 			default: return true;
+			}
+		}
+		/// \todo Clean up code
+		std::string Json::dump(std::size_t indent, std::size_t offset) const {
+			switch(m_type) {
+				case STRING: return "\"" + as_string() + "\"";
+				case NUMBER: return m_num.dump();
+				case OBJECT: {
+					if (is_empty()) return indent > 0 ? "{\n}" : "{}";
+					std::string ret = "{";
+					std::string offset_str(offset, ' ');
+					std::string indent_str(offset + indent, ' ');
+
+					for (auto it = m_obj->cbegin(); it != m_obj->cend(); ++it) {
+						ret += indent == 0 ? "" : "\n" + indent_str;
+						ret += "\"" + it->first + "\": " + 
+								it->second.dump(indent, offset+indent) + ", ";
+					}
+					ret.replace(ret.size()-2, 2, indent == 0 ? "}" : 
+												 "\n" + offset_str + "}");
+					return ret;
+				}
+				case ARRAY: {
+					if (is_empty()) return "[]";
+					std::string ret = "[";
+					for (auto it = cbegin(); it != cend(); ++it) {
+						ret += it->dump() + ", ";
+					}
+					ret.replace(ret.size()-2, 2, "]");
+					return ret;
+				}
+				case BOOLEAN: return m_bool ? "true" : "false";
+				case NONE: return "null";
 			}
 		}
 	}

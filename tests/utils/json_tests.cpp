@@ -18,6 +18,7 @@ int main(int argc, char* argv[]) {
     Json c = "Hello ";
     Json d;
     Json e;
+    Json f = 2.5;
 
     assert(a.is_number());
     assert(b.is_number());
@@ -30,10 +31,33 @@ int main(int argc, char* argv[]) {
 
     assert(d.is_object() && e.is_array());
 
-    assert(a.as_number().as_uint() + b.as_uint() == 19);
+    double f2 = f;
+
+    assert(a.as_number().as_uint() + b.as_uint() + f2 == 21.5);
     assert(c.as_string() + d["key"].as_string() == "Hello World");
     assert(d.as_object()["key"].as_string() + e.as_array()[1].as_string() == "World!");
     assert(!e[0].as_bool() && !e[0]);
+
+    assert(e.size() == 2);
+    assert(d.size() == 1);
+
+    for (auto it = a.begin(); it != a.end(); ++it) {
+        assert((int64_t)*it == 8);
+    }
+
+    assert(c.dump() == "\"Hello \"");
+    assert(e.dump() == "[false, \"!\"]");
+
+    Json g;
+    g["key"] = 5;
+    g["key2"] = d;
+    g["huh"] = e;
+    g["foo"] = "bar";
+
+    assert((string)g["key2"]["key"] == "World");
+    assert(g.dump() == "{\"foo\": \"bar\", \"huh\": [false, \"!\"], \"key\": 5, \"key2\": {\"key\": \"World\"}}");
+    assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
+    assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();
