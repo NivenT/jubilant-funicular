@@ -23,6 +23,9 @@ namespace nta {
 		Json::Json(const Json& other) {
 			operator=(other);
 		}
+		Json::Json(Json&& other) {
+			operator=(other);
+		}
 		Json& Json::operator=(const Json& other) {
 			m_type = other.m_type;
 			switch(other.m_type) {
@@ -43,6 +46,31 @@ namespace nta {
 				m_bool = other.m_bool;
 				break;
 			}
+		}
+		Json& Json::operator=(Json&& other) {
+			m_type = other.m_type;
+			switch(other.m_type) {
+			case STRING:
+				m_str = other.m_str;
+				m_len = other.m_len;
+				other.m_str = nullptr;
+				break;
+			case NUMBER:
+				m_num = other.m_num;
+				break;
+			case OBJECT:
+				m_obj = other.m_obj;
+				other.m_obj = nullptr;
+				break;
+			case ARRAY:
+				m_arr = other.m_arr;
+				other.m_arr = nullptr;
+				break;
+			case BOOLEAN:
+				m_bool = other.m_bool;
+				break;
+			}
+			other.m_type = NONE;
 		}
 		Json::~Json() {
 			switch(m_type) {
@@ -95,11 +123,27 @@ namespace nta {
 			if (m_type == ARRAY) m_arr->push_back(val);
 			return m_type == ARRAY;
 		}
+		std::string Json::as_string() const {
+			switch(m_type) {
+				case STRING: return m_str;
+				case NUMBER: return m_num.to_string();
+				case BOOLEAN: return m_bool ? "true" : "false";
+				case NONE: return "null";
+			}
+			return "";
+		}
+		JsonNum Json::as_number() const {
+			switch(m_type) {
+				case NUMBER: return m_num;
+				case BOOLEAN: return m_bool;
+			}
+			return 0;
+		}
 		bool Json::as_bool() const {
 			switch(m_type) {
-			case NONE: return false;
-			case BOOLEAN: return m_bool;
-			default: return true;
+				case NONE: return false;
+				case BOOLEAN: return m_bool;
+				default: return true;
 			}
 		}
 		/// \todo Clean up code

@@ -211,6 +211,7 @@ namespace nta {
 			Json(bool b) : m_type(BOOLEAN), m_bool(b) {}
 			Json(const std::initializer_list<Json>& data);
 			Json(const Json& other);
+			Json(Json&& other);
 			~Json();
 
 			static Json string(crstring str) { 
@@ -255,11 +256,11 @@ namespace nta {
 			bool is_bool() const { return m_type == BOOLEAN; }
 			bool is_null() const { return m_type == NONE; }
 
-			std::string as_string() const { return m_str; }
-			JsonNum as_number() const { return m_num; }
-			uint64_t as_uint() const { return m_num.as_uint(); }
-			int64_t as_int() const { return m_num.as_int(); }
-			double as_float() const { return m_num.as_float(); }
+			std::string as_string() const;
+			JsonNum as_number() const;
+			uint64_t as_uint() const { return as_number().as_uint(); }
+			int64_t as_int() const { return as_number().as_int(); }
+			double as_float() const { return as_number().as_float(); }
 			double as_double() const { return m_num.as_double(); }
 			JsonObject as_object() const { return *m_obj; }
 			JsonArray as_array() const { return *m_arr; }
@@ -282,6 +283,7 @@ namespace nta {
 			operator bool() const { return as_bool(); }
 
 			Json& operator=(const Json& other);
+			Json& operator=(Json&& other);
 
 			Json& operator[](crstring key);
 			Json& operator[](crstring key) const;
