@@ -1,0 +1,314 @@
+\hypertarget{classnta_1_1utils_1_1Json}{}\section{nta\+:\+:utils\+:\+:Json Class Reference}
+\label{classnta_1_1utils_1_1Json}\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+
+
+{\ttfamily \#include $<$json.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator}
+\begin{DoxyCompactList}\small\item\em c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator \end{DoxyCompactList}\item 
+class \hyperlink{classnta_1_1utils_1_1Json_1_1SetBeginEndKey}{Set\+Begin\+End\+Key}
+\begin{DoxyCompactList}\small\item\em Key unlocking the set\+\_\+\{begin,end\}() \char`\"{}private\char`\"{} functions of class \hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{Json\+::iterator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac5545c76dd66497cb21edc184f54ffc6}\label{classnta_1_1utils_1_1Json_ac5545c76dd66497cb21edc184f54ffc6}} 
+{\bfseries Json} (crstring str)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_abf8ba44154d7599b3ca25258c01aa942}\label{classnta_1_1utils_1_1Json_abf8ba44154d7599b3ca25258c01aa942}} 
+{\bfseries Json} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a0460390bd414652905615907ceb3ada7}\label{classnta_1_1utils_1_1Json_a0460390bd414652905615907ceb3ada7}} 
+{\bfseries Json} (\hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} num)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_acc9de30296d8e0d02b63d57f874ea7bf}\label{classnta_1_1utils_1_1Json_acc9de30296d8e0d02b63d57f874ea7bf}} 
+{\bfseries Json} (double num)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aba92a41e2aac44739cf2e77a915c04d6}\label{classnta_1_1utils_1_1Json_aba92a41e2aac44739cf2e77a915c04d6}} 
+{\bfseries Json} (int num)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aec39487dbef21bd53b7d4d0bdb2642c2}\label{classnta_1_1utils_1_1Json_aec39487dbef21bd53b7d4d0bdb2642c2}} 
+{\bfseries Json} (Json\+Object obj)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aadd85ffafca337080613b36c1e4777f3}\label{classnta_1_1utils_1_1Json_aadd85ffafca337080613b36c1e4777f3}} 
+{\bfseries Json} (Json\+Array arr)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a7798a8f8a99468552f505ed3fc2dd86d}\label{classnta_1_1utils_1_1Json_a7798a8f8a99468552f505ed3fc2dd86d}} 
+{\bfseries Json} (bool b)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac2987fdc6d1fc751b9072cc95c09ecd7}\label{classnta_1_1utils_1_1Json_ac2987fdc6d1fc751b9072cc95c09ecd7}} 
+{\bfseries Json} (const std\+::initializer\+\_\+list$<$ \hyperlink{classnta_1_1utils_1_1Json}{Json} $>$ \&data)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a77c547bae6a9f97f14e41f235226044c}\label{classnta_1_1utils_1_1Json_a77c547bae6a9f97f14e41f235226044c}} 
+{\bfseries Json} (const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&other)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2ff34559e1b1189cf528d0f379d2de10}\label{classnta_1_1utils_1_1Json_a2ff34559e1b1189cf528d0f379d2de10}} 
+Json\+Value\+Type {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab6e22f7c4f594c466f1cbc800050a230}\label{classnta_1_1utils_1_1Json_ab6e22f7c4f594c466f1cbc800050a230}} 
+bool {\bfseries is\+\_\+string} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a1daee4fe2157c815fcc56a709dd696de}\label{classnta_1_1utils_1_1Json_a1daee4fe2157c815fcc56a709dd696de}} 
+bool {\bfseries is\+\_\+number} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a706bcf555ab4d474ed18871c6d70e2eb}\label{classnta_1_1utils_1_1Json_a706bcf555ab4d474ed18871c6d70e2eb}} 
+bool {\bfseries is\+\_\+object} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a199bd3270733f1c6d5e69f0bbcad09a5}\label{classnta_1_1utils_1_1Json_a199bd3270733f1c6d5e69f0bbcad09a5}} 
+bool {\bfseries is\+\_\+array} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a8ad7cc5cd4c4ac8dd18c44792a87794d}\label{classnta_1_1utils_1_1Json_a8ad7cc5cd4c4ac8dd18c44792a87794d}} 
+bool {\bfseries is\+\_\+bool} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aa065ba60501dde7721468dcfcbd418a5}\label{classnta_1_1utils_1_1Json_aa065ba60501dde7721468dcfcbd418a5}} 
+bool {\bfseries is\+\_\+null} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a770c5bfc20eab5c6df65e927d526696f}\label{classnta_1_1utils_1_1Json_a770c5bfc20eab5c6df65e927d526696f}} 
+std\+::string {\bfseries as\+\_\+string} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a500ca051d80c21f9f3339db8c3225ae5}\label{classnta_1_1utils_1_1Json_a500ca051d80c21f9f3339db8c3225ae5}} 
+\hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} {\bfseries as\+\_\+number} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ae8e43e1645fa2ba2e26c56f3a9f5938d}\label{classnta_1_1utils_1_1Json_ae8e43e1645fa2ba2e26c56f3a9f5938d}} 
+uint64\+\_\+t {\bfseries as\+\_\+uint} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a81ab98ec58659a3c722c165b2f2cad26}\label{classnta_1_1utils_1_1Json_a81ab98ec58659a3c722c165b2f2cad26}} 
+int64\+\_\+t {\bfseries as\+\_\+int} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ad0654a2845c1957e9e26e0d349190aae}\label{classnta_1_1utils_1_1Json_ad0654a2845c1957e9e26e0d349190aae}} 
+double {\bfseries as\+\_\+float} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_af99b16247ed73aceacea08b1b5a9c08d}\label{classnta_1_1utils_1_1Json_af99b16247ed73aceacea08b1b5a9c08d}} 
+double {\bfseries as\+\_\+double} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a9ff2984098105b164e0110684cd6d4f1}\label{classnta_1_1utils_1_1Json_a9ff2984098105b164e0110684cd6d4f1}} 
+Json\+Object {\bfseries as\+\_\+object} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab42df34419fb892f2210527f01a82154}\label{classnta_1_1utils_1_1Json_ab42df34419fb892f2210527f01a82154}} 
+Json\+Array {\bfseries as\+\_\+array} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ad6d8da49cb8355c956ab75faa79cad2c}\label{classnta_1_1utils_1_1Json_ad6d8da49cb8355c956ab75faa79cad2c}} 
+bool {\bfseries as\+\_\+bool} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2f3d19984b11f942d0725f76e8e9a165}\label{classnta_1_1utils_1_1Json_a2f3d19984b11f942d0725f76e8e9a165}} 
+std\+::size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_af306c2488e1a4ea456b37dc2dc1205f1}\label{classnta_1_1utils_1_1Json_af306c2488e1a4ea456b37dc2dc1205f1}} 
+bool {\bfseries is\+\_\+empty} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd}\label{classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd}} 
+bool \hyperlink{classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd}{push\+\_\+back} (const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&val)
+\begin{DoxyCompactList}\small\item\em Returns false if m\+\_\+type != A\+R\+R\+AY (or N\+O\+NE) \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classnta_1_1utils_1_1Json_ab0e60f7a55d12aab005d420c8f924035}{dump} (std\+::size\+\_\+t indent=0, std\+::size\+\_\+t offset=0) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a8b160dd0764464cafc047b185fdbc2f1}\label{classnta_1_1utils_1_1Json_a8b160dd0764464cafc047b185fdbc2f1}} 
+{\bfseries operator std\+::string} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aa1d29487b097a1485c83c1f153e6b1ef}\label{classnta_1_1utils_1_1Json_aa1d29487b097a1485c83c1f153e6b1ef}} 
+{\bfseries operator Json\+Num} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a40268cb84b0556e07dd9184a98632f5b}\label{classnta_1_1utils_1_1Json_a40268cb84b0556e07dd9184a98632f5b}} 
+{\bfseries operator uint64\+\_\+t} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a06d392cd9356cacdfd356fcb16161220}\label{classnta_1_1utils_1_1Json_a06d392cd9356cacdfd356fcb16161220}} 
+{\bfseries operator int64\+\_\+t} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aa008316811bc941ea29073ae46a358b4}\label{classnta_1_1utils_1_1Json_aa008316811bc941ea29073ae46a358b4}} 
+{\bfseries operator double} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a5511be349de94fa21d72582d86429d53}\label{classnta_1_1utils_1_1Json_a5511be349de94fa21d72582d86429d53}} 
+{\bfseries operator Json\+Object} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aed69f0d4f5090100d9e1e8d5df0f01ac}\label{classnta_1_1utils_1_1Json_aed69f0d4f5090100d9e1e8d5df0f01ac}} 
+{\bfseries operator Json\+Array} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab1284552f59903991ed0ad31fc2ad91f}\label{classnta_1_1utils_1_1Json_ab1284552f59903991ed0ad31fc2ad91f}} 
+{\bfseries operator bool} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a3f673cffc8988a0d3d68e081dd3360ed}\label{classnta_1_1utils_1_1Json_a3f673cffc8988a0d3d68e081dd3360ed}} 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator=} (const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&other)
+\item 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}{operator\mbox{[}$\,$\mbox{]}} (crstring key)
+\item 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}{operator\mbox{[}$\,$\mbox{]}} (crstring key) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a4dcba3e4e113c3204212fea031725c9c}\label{classnta_1_1utils_1_1Json_a4dcba3e4e113c3204212fea031725c9c}} 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const char $\ast$key)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_adf46f886ad73e0cacb7d0e5cc40841b3}\label{classnta_1_1utils_1_1Json_adf46f886ad73e0cacb7d0e5cc40841b3}} 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const char $\ast$key) const
+\item 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}{operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx)
+\item 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}{operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a7d094a2061036a579a63923ae30171a4}\label{classnta_1_1utils_1_1Json_a7d094a2061036a579a63923ae30171a4}} 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int idx)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aba70b2f342f889783480ef72c606b240}\label{classnta_1_1utils_1_1Json_aba70b2f342f889783480ef72c606b240}} 
+\hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int idx) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a9f001e2bb1883915bee5fa9a0df8258b}\label{classnta_1_1utils_1_1Json_a9f001e2bb1883915bee5fa9a0df8258b}} 
+\hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator}$<$ 0 $>$ {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a712d6d5350c2390677e3aab6b9ce2b80}\label{classnta_1_1utils_1_1Json_a712d6d5350c2390677e3aab6b9ce2b80}} 
+\hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator}$<$ 1 $>$ {\bfseries cbegin} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a37ac10b5f6baad85be2625c1efbccf74}\label{classnta_1_1utils_1_1Json_a37ac10b5f6baad85be2625c1efbccf74}} 
+\hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator}$<$ 0 $>$ {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a58fc30fc1f2e1498093070c848f63847}\label{classnta_1_1utils_1_1Json_a58fc30fc1f2e1498093070c848f63847}} 
+\hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator}$<$ 1 $>$ {\bfseries cend} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_add20ea70d84582b2446dc53be92ac50c}\label{classnta_1_1utils_1_1Json_add20ea70d84582b2446dc53be92ac50c}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries string} (crstring str)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a84415d3c83a91fed0689276c538e886e}\label{classnta_1_1utils_1_1Json_a84415d3c83a91fed0689276c538e886e}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries string} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a5e985dfb6c9148df9401b89265a0852c}\label{classnta_1_1utils_1_1Json_a5e985dfb6c9148df9401b89265a0852c}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries number} (\hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} num)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac5e29dac15a59829e1f6e927fe8cde5d}\label{classnta_1_1utils_1_1Json_ac5e29dac15a59829e1f6e927fe8cde5d}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries object} (Json\+Object obj)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2a99930e97628a41cf647cbdb52d8a76}\label{classnta_1_1utils_1_1Json_a2a99930e97628a41cf647cbdb52d8a76}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries array} (Json\+Array arr)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a023ca360caf8dbb385a805b0c21c98c3}\label{classnta_1_1utils_1_1Json_a023ca360caf8dbb385a805b0c21c98c3}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries boolean} (bool boolean)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a89aa8497a420120774eec8335a6bf42e}\label{classnta_1_1utils_1_1Json_a89aa8497a420120774eec8335a6bf42e}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries null} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac86f6995528403eb265d2cd8a46ed4eb}\label{classnta_1_1utils_1_1Json_ac86f6995528403eb265d2cd8a46ed4eb}} 
+{\bfseries Json} (Json\+Value\+Type type)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab4a7cc232d1c4ba37f9dcb35f0ac5417}\label{classnta_1_1utils_1_1Json_ab4a7cc232d1c4ba37f9dcb35f0ac5417}} 
+Json\+Value\+Type {\bfseries m\+\_\+type}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a6a4d3082c4d8f9987cb8ce281b87744d}\label{classnta_1_1utils_1_1Json_a6a4d3082c4d8f9987cb8ce281b87744d}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aefa63b11e24f1b7618f61df44c2304c1}\label{classnta_1_1utils_1_1Json_aefa63b11e24f1b7618f61df44c2304c1}} 
+\>struct \{\\
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D12_a680888a75aa0bcd84b39ab84cef64d1f}\label{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D12_a680888a75aa0bcd84b39ab84cef64d1f}} 
+char $\ast$ {\bfseries m\_str}\\
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D12_aa3d9ce4d747bba5e768606d7eccb5864}\label{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D12_aa3d9ce4d747bba5e768606d7eccb5864}} 
+std::size\_t {\bfseries m\_len}\\
+\>\} \\
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_aad4acf20f0eef3112e633df34b799b5a}\label{classnta_1_1utils_1_1Json_aad4acf20f0eef3112e633df34b799b5a}} 
+\hyperlink{classnta_1_1utils_1_1JsonNum}{JsonNum} {\bfseries m\_num}\\
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a15a631f10ecc26ba5fba053140bc7500}\label{classnta_1_1utils_1_1Json_a15a631f10ecc26ba5fba053140bc7500}} 
+JsonObject $\ast$ {\bfseries m\_obj}\\
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a1ddb791c97e2d345cad4ad63bcb38b6b}\label{classnta_1_1utils_1_1Json_a1ddb791c97e2d345cad4ad63bcb38b6b}} 
+JsonArray $\ast$ {\bfseries m\_arr}\\
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a4ca79ced26d31b35a7d2f9e0fc8ec347}\label{classnta_1_1utils_1_1Json_a4ca79ced26d31b35a7d2f9e0fc8ec347}} 
+bool {\bfseries m\_bool}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]Make as\+\_\+$\ast$ functions safer and more versatile \end{DoxyRefDesc}
+
+
+Definition at line 73 of file json.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Json\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d2/de6/classnta_1_1utils_1_1Json__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab0e60f7a55d12aab005d420c8f924035}\label{classnta_1_1utils_1_1Json_ab0e60f7a55d12aab005d420c8f924035}} 
+\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!dump@{dump}}
+\index{dump@{dump}!nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily std\+::string nta\+::utils\+::\+Json\+::dump (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{indent = {\ttfamily 0},  }\item[{std\+::size\+\_\+t}]{offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000022}{Todo}]Clean up code \end{DoxyRefDesc}
+
+
+Definition at line 106 of file json.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}\label{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}} 
+\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{crstring}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000016}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
+
+
+Definition at line 54 of file json.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}\label{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}} 
+\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{crstring}]{key }\end{DoxyParamCaption}) const}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000017}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
+
+
+Definition at line 62 of file json.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}\label{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}} 
+\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000018}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000019}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
+
+
+Definition at line 66 of file json.\+cpp.
+
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}\label{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}} 
+\index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{idx }\end{DoxyParamCaption}) const}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000020}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000021}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
+
+
+Definition at line 75 of file json.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/json.\+h\item 
+src/json.\+cpp\end{DoxyCompactItemize}

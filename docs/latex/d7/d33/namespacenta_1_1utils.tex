@@ -8,10 +8,43 @@ Namespace for classes/functionality not necessarily specific to game/opengl deve
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{classnta_1_1utils_1_1Json}{Json}
+\item 
+class \hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num}
+\item 
 class \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore}
 \item 
 class \hyperlink{classnta_1_1utils_1_1ThreadPool}{Thread\+Pool}
 \begin{DoxyCompactList}\small\item\em Collection of threads for running scheduled functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenta_1_1utils_aacec41f909698427351bd2d4e6bfb0ff}\label{namespacenta_1_1utils_aacec41f909698427351bd2d4e6bfb0ff}} 
+typedef std\+::map$<$ std\+::string, \hyperlink{classnta_1_1utils_1_1Json}{Json} $>$ {\bfseries Json\+Object}
+\item 
+\mbox{\Hypertarget{namespacenta_1_1utils_a016ff68f749b52514dae354976f110ea}\label{namespacenta_1_1utils_a016ff68f749b52514dae354976f110ea}} 
+typedef std\+::vector$<$ \hyperlink{classnta_1_1utils_1_1Json}{Json} $>$ {\bfseries Json\+Array}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenta_1_1utils_a83ee7c4cfccd9fa43564f5fe1c0c77d3}\label{namespacenta_1_1utils_a83ee7c4cfccd9fa43564f5fe1c0c77d3}} 
+enum {\bfseries Json\+Num\+Type} \{ {\bfseries P\+O\+S\+\_\+\+I\+NT}, 
+{\bfseries N\+E\+G\+\_\+\+I\+NT}, 
+{\bfseries F\+L\+O\+AT}
+ \}
+\item 
+\mbox{\Hypertarget{namespacenta_1_1utils_ac9921c0a3baf86d9facdc4927c66def3}\label{namespacenta_1_1utils_ac9921c0a3baf86d9facdc4927c66def3}} 
+enum {\bfseries Json\+Value\+Type} \{ \newline
+{\bfseries S\+T\+R\+I\+NG} = 0, 
+{\bfseries N\+U\+M\+B\+ER} = 1, 
+{\bfseries O\+B\+J\+E\+CT} = 2, 
+{\bfseries A\+R\+R\+AY} = 3, 
+\newline
+{\bfseries B\+O\+O\+L\+E\+AN} = 4, 
+{\bfseries N\+O\+NE} = 5
+ \}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

@@ -10,5 +10,6 @@ var searchData=
   ['addscreen',['addScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df',1,'nta::ScreenManager']]],
   ['allworkfinished',['allWorkFinished',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545314bb70fd5cd2ecbd8759d3251cc6',1,'nta::utils::ThreadPool']]],
   ['animation2d',['Animation2D',['../d2/d7a/classnta_1_1Animation2D.html',1,'nta']]],
+  ['as_5fuint',['as_uint',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a89e8033a247c3342d99a762f6110d877',1,'nta::utils::JsonNum']]],
   ['audiomanager',['AudioManager',['../da/d29/classnta_1_1AudioManager.html',1,'nta']]]
 ];

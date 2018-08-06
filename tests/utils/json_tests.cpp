@@ -1,4 +1,3 @@
-#include <cassert>
 #include <iostream>
 
 #include <nta/json.h>
@@ -8,7 +7,7 @@ using namespace std;
 using namespace nta::utils;
 
 int main(int argc, char* argv[]) {
-    nta::init();
+    nta::init(); // This is useless here but it can't hurt
     cout<<"Running Json tests..."<<endl;
 
     assert(Json::null().is_null());
