@@ -24,7 +24,7 @@ namespace nta {
         }
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Loaded font");
-        Logger::writeToLog("Creating sprite font (" + to_string(size) + ")...");
+        Logger::writeToLog("Creating sprite font (" + utils::to_string(size) + ")...");
         FontMap* seed = new FontMap; /// \todo Rename now that we're no longer using simulated annealing
         SDL_Surface* glyphSurface = nullptr;
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
@@ -64,8 +64,8 @@ namespace nta {
         glBindTexture(GL_TEXTURE_2D, 0);
         TTF_CloseFont(font);
         Logger::writeToLog("Created sprite font");
-        Logger::writeToLog("Generated font has dimensions: " + to_string(dimensions.x) + " x " +
-                           to_string(dimensions.y));
+        Logger::writeToLog("Generated font has dimensions: " + utils::to_string(dimensions.x) + " x " +
+                           utils::to_string(dimensions.y));
     }
     SpriteFont::~SpriteFont() {
         if (m_texId != 0) {

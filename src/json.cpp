@@ -179,5 +179,10 @@ namespace nta {
 				case NONE: return "null";
 			}
 		}
+		Json Json::parse(crstring json) {
+			if (json.empty()) return Json::null();
+			Json ret;
+			return ret;
+		}
 	}
 }

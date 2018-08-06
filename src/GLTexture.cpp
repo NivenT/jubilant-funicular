@@ -8,6 +8,7 @@
 
 #include "nta/GLTexture.h"
 #include "nta/Logger.h"
+#include "nta/utils.h"
 
 namespace nta {
     Result<GLTexture> ImageLoader::readImage(crstring filePath, GLint minFilt,
@@ -22,7 +23,7 @@ namespace nta {
                 // This is some jank identings
                 auto err = Logger::writeErrorToLog(
                             "DevIL failed to load image with error " +
-                                to_string(error) + ": " + iluErrorString(error),
+                                utils::to_string(error) + ": " + iluErrorString(error),
                             DEVIL_FAILURE);
                 return Result<GLTexture>::new_err(err);
             }
@@ -65,8 +66,8 @@ namespace nta {
             ret.width = ilGetInteger(IL_IMAGE_WIDTH);
             ret.height = ilGetInteger(IL_IMAGE_HEIGHT);
         #endif
-        Logger::writeToLog("Loaded image (" + to_string(ret.width) + " x " +
-                           to_string(ret.height) + ")");
+        Logger::writeToLog("Loaded image (" + utils::to_string(ret.width) + " x " +
+                           utils::to_string(ret.height) + ")");
         return Result<GLTexture>::new_ok(ret);
     }
 }

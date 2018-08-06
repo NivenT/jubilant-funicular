@@ -33,7 +33,7 @@ namespace nta {
         std::pair<std::string, int> key = std::make_pair(fontPath, fontSize);
         if (m_fontMap.find(key) != m_fontMap.end()) {
             Logger::writeToLog("Deleting sprite font: " + fontPath +
-                               " (" + to_string(fontSize) + ")...");
+                               " (" + utils::to_string(fontSize) + ")...");
             delete m_fontMap[key];
             m_fontMap.erase(key);
             Logger::writeToLog("Deleted sprite font");
@@ -49,7 +49,7 @@ namespace nta {
         }
         for (auto pair : m_fontMap) {
             Logger::writeToLog("Deleting sprite font: " + pair.first.first +
-                               " (" + to_string(pair.first.second) + ")...");
+                               " (" + utils::to_string(pair.first.second) + ")...");
             delete pair.second;
             Logger::writeToLog("Deleted sprite font");
         }

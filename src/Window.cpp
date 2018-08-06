@@ -9,6 +9,7 @@
 #include "nta/Window.h"
 #include "nta/Logger.h"
 #include "nta/IOManager.h"
+#include "nta/utils.h"
 
 namespace nta {
     Window::Window() {
@@ -43,8 +44,8 @@ namespace nta {
         m_height = height;
     }
     void Window::createWindow(crstring title, int width, int height, int flags) {
-        Logger::writeToLog("Creating window with dimensions " + nta::to_string(width) +
-                           " x " + nta::to_string(height) + ": " + title + "...");
+        Logger::writeToLog("Creating window with dimensions " + utils::to_string(width) +
+                           " x " + utils::to_string(height) + ": " + title + "...");
         m_width = width;
         m_height = height;
         m_title = title;
@@ -69,7 +70,7 @@ namespace nta {
         check_error();
         if (!SDL_GL_CreateContext(m_window)) {
             Logger::writeErrorToLog("Failed to create an OpenGL context:\n\t"
-                                    + nta::to_string(SDL_GetError()),
+                                    + utils::to_string(SDL_GetError()),
                                     GL_FAILURE);
         }
         glewExperimental = GL_TRUE; // I don't remember what this does or why it is needed
@@ -77,7 +78,7 @@ namespace nta {
         const GLenum err = glewInit();
         if (err != GLEW_OK) {
             Logger::writeErrorToLog("Failed to initialize glew:\n\t" 
-                                    + nta::to_string(glewGetErrorString(err)),
+                                    + utils::to_string(glewGetErrorString(err)),
                                     GL_FAILURE);
         }
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -87,7 +88,7 @@ namespace nta {
             ImGui_ImplSdlGL3_Init(m_window);
         #endif
         Logger::writeToLog("Created window using OpenGL version "
-                           + nta::to_string(glGetString(GL_VERSION)));
+                           + utils::to_string(glGetString(GL_VERSION)));
     }
     void Window::swapBuffers() const {
         #ifdef NTA_USE_IMGUI

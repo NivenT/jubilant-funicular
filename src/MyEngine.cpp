@@ -17,6 +17,7 @@
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 #include "nta/Random.h"
+#include "nta/utils.h"
 
 #ifdef NTA_USE_AUDIO
     #include "nta/AudioManager.h"
@@ -28,7 +29,7 @@ namespace nta {
         Logger::writeToLog("Initializing Engine...");
         Logger::indent();
         if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-            Logger::writeErrorToLog("Failed to initialize SDL: " + nta::to_string(SDL_GetError()),
+            Logger::writeErrorToLog("Failed to initialize SDL: " + utils::to_string(SDL_GetError()),
                                     SDL_FAILURE);
         }
         if (gl_major_version > 0) SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, gl_major_version);
@@ -66,16 +67,12 @@ namespace nta {
         TTF_Quit();
         SDL_Quit();
     }
-    glm::vec2 rotate(crvec2 pt, float angle) {
-        return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,
-                         glm::sin(angle)*pt.x + glm::cos(angle)*pt.y);
-    }
     bool check_error() {
         std::string gl_err;
         int err;
         while ((err = glGetError()) != GL_NO_ERROR) {
             gl_err += gl_err == "" ? "" : "\n";
-            gl_err += to_string(gluErrorString(err)) + " (" + to_string(err) + ")";
+            gl_err += utils::to_string(gluErrorString(err)) + " (" + utils::to_string(err) + ")";
         }
         if (gl_err != "") {
             Logger::writeToLog("GL Error(s): " + gl_err);

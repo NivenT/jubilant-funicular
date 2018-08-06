@@ -1,5 +1,6 @@
 #include "nta/AudioManager.h"
 #include "nta/Logger.h"
+#include "nta/utils.h"
 
 namespace nta {
     std::map<std::string, SoundEffect*>     AudioManager::m_effectMap;
@@ -8,10 +9,10 @@ namespace nta {
         Logger::writeToLog("Initializing AudioManager...");
         if (Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG) == -1) {
             Logger::writeErrorToLog("Failed to initialize SDL_mixer: "
-                                    + to_string(Mix_GetError()));
+                                    + utils::to_string(Mix_GetError()));
         }
         if (Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1) {
-            Logger::writeErrorToLog("Failed to open audio: " + to_string(Mix_GetError()));
+            Logger::writeErrorToLog("Failed to open audio: " + utils::to_string(Mix_GetError()));
         }
         Logger::writeToLog("Initialized AudioManager");
     }
@@ -39,7 +40,7 @@ namespace nta {
             Mix_Chunk* newChunk = Mix_LoadWAV((effectPath).c_str());
             if (!newChunk) {
                 nta::Logger::writeErrorToLog("Unable to load sound effect: "
-                                             + to_string(Mix_GetError()));
+                                             + utils::to_string(Mix_GetError()));
             }
             m_effectMap[effectPath] = new SoundEffect(newChunk);
             nta::Logger::writeToLog("Loaded sound effect");
@@ -52,7 +53,7 @@ namespace nta {
             Mix_Music* newMusic = Mix_LoadMUS((musicPath).c_str());
             if (!newMusic) {
                 nta::Logger::writeErrorToLog("Unable to load music file: "
-                                             + to_string(Mix_GetError()));
+                                             + utils::to_string(Mix_GetError()));
             }
             m_musicMap[musicPath] = new Music(newMusic);
             nta::Logger::writeToLog("Loaded music file");

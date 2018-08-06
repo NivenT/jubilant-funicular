@@ -2,6 +2,7 @@
 #define NTA_JSON_H_INCLUDED
 
 #include "nta/MyEngine.h"
+#include "nta/utils.h"
 
 #include <map>
 #include <vector>
@@ -54,9 +55,9 @@ namespace nta {
 			std::string to_string() const { return dump(); }
 			std::string dump() const {
 				switch(m_type) {
-					case POS_INT: return nta::to_string(m_pos);
-					case NEG_INT: return nta::to_string(m_neg);
-					case FLOAT: return nta::to_string(m_flt);
+					case POS_INT: return nta::utils::to_string(m_pos);
+					case NEG_INT: return nta::utils::to_string(m_neg);
+					case FLOAT: return nta::utils::to_string(m_flt);
 				}
 			}
 		};
@@ -247,6 +248,8 @@ namespace nta {
 				return b; 
 			}
 			static Json null() { return Json(NONE); }
+
+			static Json parse(crstring json);
 
 			JsonValueType get_type() const { return m_type; }
 			bool is_string() const { return m_type == STRING; }

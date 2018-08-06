@@ -2,6 +2,7 @@
 
 #include "nta/Compressor.h"
 #include "nta/Logger.h"
+#include "nta/utils.h"
 
 namespace nta {
     std::map<GLubyte,std::string>    Compressor::m_encodings;
@@ -83,7 +84,7 @@ namespace nta {
             compressedData.push_back(fromBinary(compressedBits.substr(i*8,8)));
         }
         compressedData.push_back(fromBinary(compressedBits.substr(8*numBytes)));
-        Logger::writeToLog("Compressed data (" + to_string(100.*compressedData.size()/data.size(),4) + "%)");
+        Logger::writeToLog("Compressed data (" + utils::to_string(100.*compressedData.size()/data.size(),4) + "%)");
         return compressedData;
     }
     std::vector<GLubyte> Compressor::decompress(const std::vector<GLubyte>& data) {

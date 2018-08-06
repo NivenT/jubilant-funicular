@@ -7,6 +7,7 @@
 #include "nta/SystemManager.h"
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
+#include "nta/utils.h"
 
 namespace nta {
     ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) {
@@ -18,13 +19,13 @@ namespace nta {
     }
     Screen* ScreenManager::getCurrScreen() const {
         /// \todo write log error if m_currScreen is out of range
-        return in_range<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
+        return utils::in_range<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
     }
     float ScreenManager::getFPS() const {
         return m_limiter.getFPS();
     }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
-        Logger::writeToLog("Adding screen " + to_string(m_screens.size()) + " to ScreenManager...");
+        Logger::writeToLog("Adding screen " + utils::to_string(m_screens.size()) + " to ScreenManager...");
         Logger::indent();
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setManager(this, SetManagerKey());
@@ -37,10 +38,10 @@ namespace nta {
         Logger::writeToLog("Added screen");
     }
     void ScreenManager::switchScreen(int newIndex) {
-        if (in_range<int>(newIndex, 0, m_screens.size()-1)) {
-            Logger::writeToLog("Switching from screen " + to_string(m_currScreen) +
+        if (utils::in_range<int>(newIndex, 0, m_screens.size()-1)) {
+            Logger::writeToLog("Switching from screen " + utils::to_string(m_currScreen) +
                                " (\"" + getCurrScreen()->getName() + "\") to screen " + 
-                               to_string(newIndex) + " (\"" + m_screens[newIndex]->getName() +
+                               utils::to_string(newIndex) + " (\"" + m_screens[newIndex]->getName() +
                                "\")...");
             Logger::indent();
             getCurrScreen()->offFocus();
@@ -84,7 +85,7 @@ namespace nta {
             case ScreenState::SWITCH_ESC:   switchScreen(currScreen->getEscIndex()); break;
             case ScreenState::SWITCH_X:     switchScreen(currScreen->getXIndex()); break;
             case ScreenState::NONE:         Logger::writeErrorToLog("state of screen " +
-                                                                    to_string(m_currScreen) +
+                                                                    utils::to_string(m_currScreen) +
                                                                     " is NONE",
                                                                     IMPOSSIBLE_BEHAVIOR); break;
             default: break; // should never happen

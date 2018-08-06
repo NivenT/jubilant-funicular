@@ -1,5 +1,6 @@
 #include "nta/DebugBatch.h"
 #include "nta/PrimitiveBatch.h"
+#include "nta/utils.h"
 
 namespace nta {
     DebugBatch::DebugBatch() {
@@ -70,10 +71,10 @@ namespace nta {
                   br = center - glm::vec2(-half_dims.x, half_dims.y),
                   bl = center - half_dims;
 
-        m_vertices.emplace_back(center + rotate(tl, orientation), color);
-        m_vertices.emplace_back(center + rotate(tr, orientation), color);
-        m_vertices.emplace_back(center + rotate(br, orientation), color);
-        m_vertices.emplace_back(center + rotate(bl, orientation), color);
+        m_vertices.emplace_back(center + utils::rotate(tl, orientation), color);
+        m_vertices.emplace_back(center + utils::rotate(tr, orientation), color);
+        m_vertices.emplace_back(center + utils::rotate(br, orientation), color);
+        m_vertices.emplace_back(center + utils::rotate(bl, orientation), color);
 
         for (int offset = 0; offset < 4; offset++) {
             m_indices.push_back(start + offset);

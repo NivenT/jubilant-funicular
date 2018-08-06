@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "nta/Vertex.h"
+#include "nta/utils.h"
 
 #define NTA_DEFAULT_DEPTH 0.5
 
@@ -36,19 +37,19 @@ namespace nta {
             glm::vec2 tl(-extents.x, extents.y),  tr(extents.x, extents.y),
                       bl(-extents.x, -extents.y), br(extents.x, -extents.y);
 
-            topLeft.pos = rotate(tl, angle) - tl + pos;
+            topLeft.pos = utils::rotate(tl, angle) - tl + pos;
             topLeft.setUV(uvRect.x, uvRect.y);
             topLeft.color = col;
             topLeft.hasTexture = tex != 0;
-            topRight.pos = rotate(tr, angle) - tl + pos;
+            topRight.pos = utils::rotate(tr, angle) - tl + pos;
             topRight.setUV(uvRect.x + uvRect[2], uvRect.y);
             topRight.color = col;
             topRight.hasTexture = tex != 0;
-            botRight.pos = rotate(br, angle) - tl + pos;
+            botRight.pos = utils::rotate(br, angle) - tl + pos;
             botRight.setUV(uvRect.x + uvRect[2], uvRect.y + uvRect[3]);
             botRight.color = col;
             botRight.hasTexture = tex != 0;
-            botLeft.pos = rotate(bl, angle) - tl + pos;
+            botLeft.pos = utils::rotate(bl, angle) - tl + pos;
             botLeft.setUV(uvRect.x, uvRect.y + uvRect[3]);
             botLeft.color = col;
             botLeft.hasTexture = tex != 0;

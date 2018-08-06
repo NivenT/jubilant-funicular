@@ -83,6 +83,25 @@ int main(int argc, char* argv[]) {
     Json n = {};
     assert(n.is_null());
 
+    Json o = Json::parse(R"({
+        "five": 5,
+        "pi": 3.14159,
+        "arr": [8, false, null],
+        "arr2": [
+            2, true,
+            8
+        ],
+        "obj": {
+            "obj": {
+                "huh": null
+            },
+            "hello": "world"
+        },
+        "my": "name",
+        "true": false
+    })");
+    cout<<o.dump(2)<<endl;
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;
