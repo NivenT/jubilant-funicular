@@ -25,6 +25,8 @@
 namespace nta {
     void init(int gl_major_version, int gl_minor_version, bool use_gl_core) {
         Logger::createLog();
+        Logger::writeToLog("Initializing Engine...");
+        Logger::indent();
         if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
             Logger::writeErrorToLog("Failed to initialize SDL: " + nta::to_string(SDL_GetError()),
                                     SDL_FAILURE);
@@ -47,6 +49,8 @@ namespace nta {
             AudioManager::init();
         #endif
         CallbackManager::init();
+        Logger::unindent();
+        Logger::writeToLog("Initialized Engine");
     }
     void cleanup() {
         #ifdef NTA_USE_IMGUI
