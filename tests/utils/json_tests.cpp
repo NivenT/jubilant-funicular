@@ -50,6 +50,8 @@ int main(int argc, char* argv[]) {
     }
     for (auto it = d.begin(); it != d.end(); ++it) {
         assert((string)*it == "World");
+        assert(it.key() == "key");
+        assert((string)it.value() == "World");
     }
 
     assert(c.dump() == "\"Hello \"");

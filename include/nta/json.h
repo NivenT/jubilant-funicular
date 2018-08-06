@@ -156,6 +156,20 @@ namespace nta {
 					return !operator==(rhs);
 				}
 
+				std::string key() {
+					switch(m_json->get_type()) {
+						case OBJECT: return m_obj_iter->first;
+						default: return "";
+					}
+				}
+				std::string value() {
+					switch(m_json->get_type()) {
+						case OBJECT: return m_obj_iter->second;
+						case ARRAY: return *m_arr_iter;
+						default: return *m_json;
+					}
+				}
+
 				void set_begin(SetBeginEndKey _) {
 					switch(m_json->get_type()) {
 						case OBJECT: m_obj_iter = m_json->m_obj->begin(); break;
