@@ -1,7 +1,5 @@
-#ifndef THREADPOOL_H_INCLUDED
-#define THREADPOOL_H_INCLUDED
-
-#include "nta/MyEngine.h"
+#ifndef NTA_THREADPOOL_H_INCLUDED
+#define NTA_THREADPOOL_H_INCLUDED
 
 #include <thread>
 #include <atomic>
@@ -92,4 +90,4 @@ namespace nta {
     }
 }
 
-#endif // THREADPOOL_H_INCLUDED
+#endif // NTA_THREADPOOL_H_INCLUDED
