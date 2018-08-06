@@ -1,8 +1,30 @@
+#include <algorithm>
+
 #include "nta/json.h"
 
 namespace nta {
 	namespace utils {
-		Json::Json(const Json& other) : m_type(other.m_type) {
+		Json::Json(const std::initializer_list<Json>& data) : m_type(NONE) {
+			if (data.begin() == data.end()) return;
+			bool is_object = std::all_of(data.begin(), data.end(), [](auto& elem) {
+				return elem.is_array() && elem.size() == 2 && elem[0].is_string();
+			});
+			if (is_object) {
+				m_type = OBJECT;
+				m_obj = new JsonObject;
+				for (auto& pair : data) {
+					(*m_obj)[pair[0].as_string()] = pair[1];
+				}
+			} else {
+				m_type = ARRAY;
+				m_arr = new JsonArray(data.begin(), data.end());
+			}
+		}
+		Json::Json(const Json& other) {
+			operator=(other);
+		}
+		Json& Json::operator=(const Json& other) {
+			m_type = other.m_type;
 			switch(other.m_type) {
 			case STRING:
 				m_str = strdup(other.m_str);
@@ -12,14 +34,21 @@ namespace nta {
 				m_num = other.m_num;
 				break;
 			case OBJECT:
-				m_obj = other.m_obj;
+				m_obj = new JsonObject(other.m_obj->begin(), other.m_obj->end());
 				break;
 			case ARRAY:
-				m_arr = other.m_arr;
+				m_arr = new JsonArray(other.m_arr->begin(), other.m_arr->end());
 				break;
 			case BOOLEAN:
 				m_bool = other.m_bool;
 				break;
+			}
+		}
+		Json::~Json() {
+			switch(m_type) {
+				case STRING: free(m_str); break;
+				case OBJECT: if (m_obj) delete m_obj; break;
+				case ARRAY: if (m_arr) delete m_arr; break;
 			}
 		}
 		Json& Json::operator[](crstring key) {
@@ -30,11 +59,20 @@ namespace nta {
 			/// \todo Signal error if m_type != OBJECT
 			return (*m_obj)[key];
 		}
+		Json& Json::operator[](crstring key) const {
+			/// \todo Signal error if m_type != OBJECT
+			return (*m_obj)[key];
+		}
 		Json& Json::operator[](std::size_t idx) {
 			if (m_type == NONE) {
 				m_type = ARRAY;
 				m_arr = new JsonArray;
 			}
+			/// \todo Signal error if m_type != ARRAY
+			/// \todo Signal error if idx is out of bounds
+			return (*m_arr)[idx];
+		}
+		Json& Json::operator[](std::size_t idx) const {
 			/// \todo Signal error if m_type != ARRAY
 			/// \todo Signal error if idx is out of bounds
 			return (*m_arr)[idx];

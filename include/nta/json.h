@@ -195,8 +195,9 @@ namespace nta {
 			Json(JsonObject obj) : m_type(OBJECT), m_obj(new JsonObject(obj)) {}
 			Json(JsonArray arr) : m_type(ARRAY), m_arr(new JsonArray(arr)) {}
 			Json(bool b) : m_type(BOOLEAN), m_bool(b) {}
+			Json(const std::initializer_list<Json>& data);
 			Json(const Json& other);
-			~Json() {}
+			~Json();
 
 			static Json string(crstring str) { 
 				Json s(STRING); 
@@ -252,7 +253,7 @@ namespace nta {
 
 			std::size_t size() const;
 			bool is_empty() const { return size() == 0; }
-			/// Returns false is m_type != ARRAY (or NONE)
+			/// Returns false if m_type != ARRAY (or NONE)
 			bool push_back(const Json& val);
 
 			std::string dump(std::size_t indent = 0, std::size_t offset = 0) const;
@@ -266,10 +267,16 @@ namespace nta {
 			operator JsonArray() const { return as_array(); }
 			operator bool() const { return as_bool(); }
 
+			Json& operator=(const Json& other);
+
 			Json& operator[](crstring key);
+			Json& operator[](crstring key) const;
 			Json& operator[](const char* key) { return operator[](std::string(key)); }
+			Json& operator[](const char* key) const { return operator[](std::string(key)); }
 			Json& operator[](std::size_t idx);
+			Json& operator[](std::size_t idx) const;
 			Json& operator[](int idx) { return operator[]((std::size_t)idx); }
+			Json& operator[](int idx) const { return operator[]((std::size_t)idx); }
 
 			iterator<0> begin() {
 				iterator<0> ret(this);

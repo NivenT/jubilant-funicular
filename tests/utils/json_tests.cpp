@@ -44,6 +44,14 @@ int main(int argc, char* argv[]) {
     for (auto it = a.begin(); it != a.end(); ++it) {
         assert((int64_t)*it == 8);
     }
+    // I love the stuff you can do in C++
+    for (struct {Json::iterator<0> it; int i;} s = {e.begin(), 0}; s.it != e.end(); ++s.it, ++s.i) {
+        if (s.i == 0) assert(!*s.it);
+        if (s.i == 1) assert((string)*s.it == "!");
+    }
+    for (auto it = d.begin(); it != d.end(); ++it) {
+        assert((string)*it == "World");
+    }
 
     assert(c.dump() == "\"Hello \"");
     assert(e.dump() == "[false, \"!\"]");
@@ -58,6 +66,21 @@ int main(int argc, char* argv[]) {
     assert(g.dump() == "{\"foo\": \"bar\", \"huh\": [false, \"!\"], \"key\": 5, \"key2\": {\"key\": \"World\"}}");
     assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
     assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
+
+    Json h = {"This", "is", "an", "array", 42, true, Json::null()};
+    assert(h.is_array());
+    assert(h.dump() == "[\"This\", \"is\", \"an\", \"array\", 42, true, null]");
+
+    Json m = {
+        {"key", {"array", "in", "object"}},
+        {"k", false},
+        {"num", 21.5}
+    };
+    assert(m.is_object());
+    assert(m.dump() == "{\"k\": false, \"key\": [\"array\", \"in\", \"object\"], \"num\": 21.5}");
+
+    Json n = {};
+    assert(n.is_null());
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();
