@@ -15,7 +15,6 @@ var searchData=
   ['spritesheet',['SpriteSheet',['../d9/d85/structnta_1_1SpriteSheet.html',1,'nta']]],
   ['spritesheet_2e_5f_5funnamed_5f_5f',['SpriteSheet.__unnamed__',['../d4/d51/namespacenta.html#d1/d70/unionnta_1_1SpriteSheet_8____unnamed____',1,'nta']]],
   ['spritesheet_2e_5f_5funnamed_5f_5f_2e_5f_5funnamed_5f_5f',['SpriteSheet.__unnamed__.__unnamed__',['../d4/d51/namespacenta.html#df/d10/structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____',1,'nta']]],
-  ['squarescreen',['SquareScreen',['../db/d24/classSquareScreen.html',1,'']]],
   ['subject',['Subject',['../d9/d4e/classnta_1_1Subject.html',1,'nta']]],
   ['systemmanager',['SystemManager',['../db/d25/classnta_1_1SystemManager.html',1,'nta']]]
 ];
