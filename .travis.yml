@@ -52,7 +52,7 @@ before_script:
   - mkdir build
   - cd build
   - cmake -LAH ..
-  - ls
 
 script:
   - make VERBOSE=1
+  - bin/json_tests
