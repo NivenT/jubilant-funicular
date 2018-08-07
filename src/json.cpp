@@ -7,7 +7,7 @@ namespace nta {
 	namespace utils {
 		Json::Json(const std::initializer_list<Json>& data) : m_type(NONE) {
 			if (data.begin() == data.end()) return;
-			bool is_object = std::all_of(data.begin(), data.end(), [](auto& elem) {
+			bool is_object = std::all_of(data.begin(), data.end(), [](const Json& elem) {
 				return elem.is_array() && elem.size() == 2 && elem[0].is_string();
 			});
 			if (is_object) {
