@@ -360,6 +360,9 @@ namespace nta {
 			/// Returns false if m_type != ARRAY (or NONE)
 			/// If m_type == NONE, converts this into an ARRAY
 			bool push_back(const Json& val);
+			/// Adds everything stored in other into this
+			/// Returns this
+			Json& merge(const Json& other);
 
 			/// Returns a string representation of the value
 			/// Note: never set second parameter

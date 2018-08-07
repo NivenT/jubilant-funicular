@@ -110,6 +110,8 @@ int main(int argc, char* argv[]) {
     assert(o.dump() == R"({"arr": [8, false, null], "arr2": [2, true, 8, "far"], "five": 5, "my": "name", "obj": {"heLLo": "woRld", "obj": {"huh": null}}, "pi": 3.14159, "tr:ck": "t,e"t", "true": false})");
     assert(Json::parse(m.dump()) == m);
 
+    assert(e.merge({"more", "stuff", 5}) == Json::array({false, "!", "more", "stuff", 5}));
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

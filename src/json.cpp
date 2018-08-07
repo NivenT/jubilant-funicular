@@ -108,12 +108,9 @@ namespace nta {
 		}
 		std::size_t Json::size() const {
 			switch(m_type) {
-			case OBJECT:
-				return m_obj->size();
-			case ARRAY:
-				return m_arr->size();
-			default:
-				return 0;
+			case OBJECT: return m_obj->size();
+			case ARRAY: return m_arr->size();
+			default: return 0;
 			}
 		}
 		bool Json::push_back(const Json& val) {
@@ -123,6 +120,18 @@ namespace nta {
 			}
 			if (m_type == ARRAY) m_arr->push_back(val);
 			return m_type == ARRAY;
+		}
+		Json& Json::merge(const Json& other) {
+			if (m_type != other.m_type) return *this;
+			switch(m_type) {
+				case OBJECT: 
+					m_obj->insert(other.m_obj->begin(), other.m_obj->end()); 
+					break;
+				case ARRAY:
+					m_arr->insert(m_arr->end(), other.m_arr->begin(), other.m_arr->end());
+					break;
+			}
+			return *this;
 		}
 		std::string Json::as_string() const {
 			switch(m_type) {
