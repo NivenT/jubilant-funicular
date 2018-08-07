@@ -1,5 +1,6 @@
 # jubilant-funicular
 [![Build Status](https://travis-ci.org/NivenT/Planet.svg?branch=master)](https://travis-ci.org/NivenT/jubilant-funicular)
+
 I think technically this is a game engine. Whatever it is, it's certainly incomplete and in-development...
 
 # Description
