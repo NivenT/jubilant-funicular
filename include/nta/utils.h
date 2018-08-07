@@ -8,11 +8,12 @@
 
 namespace nta {
 	namespace utils {
-		extern bool starts_with(const std::string& str, const std::string& prefix);
-		extern bool ends_with(const std::string& str, const std::string& suffix);
-		extern std::string replace_all(const std::string& str, const std::string o, const std::string n);
-		extern std::string replace_all(const std::string& str, const std::vector<std::vector<std::string>> os, const std::vector<std::string> ns);
-		extern std::string trim(const std::string& str);
+		extern bool starts_with(crstring& str, crstring& prefix);
+		extern bool ends_with(crstring& str, crstring& suffix);
+		extern std::string replace_all(crstring& str, crstring o, crstring n);
+		extern std::string replace_all(crstring& str, const std::vector<std::vector<std::string>> os, const std::vector<std::string> ns);
+		extern std::string trim(crstring& str);
+		extern std::vector<std::string> split(crstring str, char delim);
 		/// Rotates a point (about the origin) by the given angle
     	extern glm::vec2 rotate(crvec2 pt, float angle);
 

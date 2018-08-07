@@ -89,18 +89,20 @@ int main(int argc, char* argv[]) {
         "arr": [8, false, null],
         "arr2": [
             2, true,
-            8
+            8,
+                    "far"
         ],
         "obj": {
             "obj": {
                 "huh": null
             },
-            "hello": "world"
+            "heLLo": "woRld"
         },
         "my": "name",
-        "true": false
+        "true": false,
+        "tr:ck": "t,e\"t"
     })");
-    cout<<o.dump(2)<<endl;
+    assert(o.dump() == R"({"arr": [8, false, null], "arr2": [2, true, 8, "far"], "five": 5, "my": "name", "obj": {"heLLo": "woRld", "obj": {"huh": null}}, "pi": 3.14159, "tr:ck": "t,e\"t", "true": false})");
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();

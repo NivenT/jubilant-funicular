@@ -5,6 +5,7 @@
 
 #include "MyEngine.h"
 
+/// \todo Add Option type
 namespace nta {
 	struct Error;
 	typedef std::function<void(const Error*)> ErrorCallback;

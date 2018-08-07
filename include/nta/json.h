@@ -6,6 +6,7 @@
 
 #include <map>
 #include <vector>
+#include <queue>
 #include <iterator>
 
 namespace nta {
@@ -51,6 +52,15 @@ namespace nta {
 			operator uint64_t() const { return as_uint(); }
 			operator int64_t() const { return as_int(); }
 			operator double() const { return as_double(); }
+
+			bool operator==(const JsonNum& rhs) const {
+				if (m_type != rhs.m_type) return false;
+				switch(m_type) {
+					case POS_INT: return m_pos == rhs.m_pos;
+					case NEG_INT: return m_neg == rhs.m_neg;
+					case FLOAT: return m_flt == rhs.m_flt;
+				}
+			}
 
 			std::string to_string() const { return dump(); }
 			std::string dump() const {
@@ -187,12 +197,64 @@ namespace nta {
 				}
 			};
 		private:
+			enum JsonTokenType {
+				SYMBOL, NUMTKN
+			};
+			struct JsonToken {
+				JsonToken() : type(SYMBOL), str(nullptr) {}
+				JsonToken(char c) : type(SYMBOL) {
+					str = (char*)malloc(2);
+					str[0] = c;
+					str[1] = '\0';
+				}
+				JsonToken(crstring str) : type(SYMBOL) {
+					this->str = strdup(str.c_str());
+				}
+				JsonToken(const JsonToken& other) {
+					operator=(other);
+				}
+				~JsonToken() {
+					if (type == SYMBOL && str) free(str);
+				}
+
+				JsonToken& operator=(const JsonToken& other) {
+					type = other.type;
+					if (type == SYMBOL) {
+						str = other.str ? strdup(other.str) : nullptr;
+					} else {
+						num = other.num;
+					}
+				}
+				bool operator==(const JsonToken& rhs) const {
+					return type == rhs.type && ( type == SYMBOL ?
+						strcmp(str, rhs.str) == 0 : num == rhs.num);
+				}
+				bool operator!=(const JsonToken& rhs) const {
+					return !(*this == rhs);
+				}
+
+				JsonTokenType type;
+				union {
+					char* str;
+					JsonNum num;
+				};
+			};
+
 			Json(JsonValueType type) : m_type(type) {}
+
+			static bool lex_string(std::string& str, JsonToken& ret);
+			static bool lex_number(std::string& str, JsonToken& ret);
+			static bool lex_bool(std::string& str, JsonToken& ret);
+			static bool lex_null(std::string& str, JsonToken& ret);
+
+			static std::queue<JsonToken> tokenize(std::string curr);
+			static Json parse_tokens(std::queue<JsonToken>& tokens);
 
 			JsonValueType m_type;
 			union {
 				struct {
 					char* m_str;
+					// Is this ever used anywhere?
 					std::size_t m_len;
 				};
 				JsonNum m_num;

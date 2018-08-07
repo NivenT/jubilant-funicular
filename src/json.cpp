@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <unordered_set>
 
 #include "nta/json.h"
 
@@ -179,10 +180,142 @@ namespace nta {
 				case NONE: return "null";
 			}
 		}
+		bool Json::lex_string(std::string& str, JsonToken& ret) {
+			if (str[0] != '\"' || str.size() < 2) return false;
+			int pos = 0;
+			while (pos == 0 || str[pos-1] == '\\') {
+				pos = str.find('\"', pos+1);
+				if (pos == std::string::npos) return false;
+			}
+			ret.type = SYMBOL;
+			ret.str = strdup(str.substr(0, pos+1).c_str());
+			str = str.substr(pos+1);
+			return true;
+		}
+		bool Json::lex_number(std::string& str, JsonToken& ret) {
+			static const std::unordered_set<char> FLOAT_CHARS{
+				'.', 'e', 'E'
+			};
+
+			char* end;
+
+			long vall = strtol(str.c_str(), &end, 10);
+			if (end != str.c_str() && FLOAT_CHARS.find(*end) == FLOAT_CHARS.end()) {
+				ret.type = NUMTKN;
+				ret.num = vall >= 0 ? JsonNum((uint64_t)vall) : JsonNum((int64_t)vall);
+				str = str.substr(end - str.c_str());
+				return true;
+			}
+
+			double vald = strtod(str.c_str(), &end);
+			if (end != str.c_str()) {
+				ret.type = NUMTKN;
+				ret.num = JsonNum(vald);
+				str = str.substr(end - str.c_str());
+				return true;
+			}
+
+			return false;
+		}
+		bool Json::lex_bool(std::string& str, JsonToken& ret) {
+			if (str.size() >= 4 && str.substr(0, 4) == "true") {
+				ret.type = SYMBOL;
+				ret.str = strdup("true");
+				str = str.substr(4);
+				return true;
+			} if (str.size() >= 5 && str.substr(0, 5) == "false") {
+				ret.type = SYMBOL;
+				ret.str = strdup("false");
+				str = str.substr(5);
+				return true;
+			}
+			return false;
+		}
+		bool Json::lex_null(std::string& str, JsonToken& ret) {
+			if (str.size() >= 4 && str.substr(0, 4) == "null") {
+				ret.type = SYMBOL;
+				ret.str = strdup("null");
+				str = str.substr(4);
+				return true;
+			}
+			return false;
+		}
+		std::queue<Json::JsonToken> Json::tokenize(std::string curr) {
+			static const std::unordered_set<char> JSON_SYNTAX{
+				'{', '}', '[', ']', ':', ','
+			};
+
+			std::queue<JsonToken> tokens;
+			while (!curr.empty()) {
+				JsonToken tkn;
+				if (lex_string(curr, tkn)) {
+					tokens.push(tkn);
+				} else if (lex_number(curr, tkn)) {
+					tokens.push(tkn);
+				} else if (lex_bool(curr, tkn)) {
+					tokens.push(tkn);
+				} else if (lex_null(curr, tkn)) {
+					tokens.push(tkn);
+				} else if (isspace(curr[0])) {
+					curr = curr.substr(1);
+				} else if (JSON_SYNTAX.find(curr[0]) != JSON_SYNTAX.end()) {
+					tokens.emplace(curr[0]);
+					//std::string(1, curr[0]));
+					curr = curr.substr(1);
+				} else {
+					/// \todo Error cleanly
+					assert(false && "Invalid JSON token");
+				}
+			}
+			return tokens;
+		}
+		Json Json::parse_tokens(std::queue<JsonToken>& tokens) {
+			if (tokens.empty()) return Json::null();
+			JsonToken tkn = tokens.front();
+			tokens.pop();
+			if (tkn.type == NUMTKN) {
+				return Json::number(tkn.num);
+			} else if (strcmp(tkn.str, "{") == 0) {
+				Json obj;
+				while (tokens.front() != JsonToken('}')) {
+					Json key = parse_tokens(tokens);
+					if (!key.is_string()) return Json::null();
+					if (tokens.front() != JsonToken(':')) return Json::null();
+					tokens.pop();
+
+					obj[key.as_string()] = parse_tokens(tokens);
+					if (tokens.front() == JsonToken(',')) tokens.pop();
+				}
+				tokens.pop();
+				return obj;
+			} else if (strcmp(tkn.str, "[") == 0) {
+				Json arr;
+				while (tokens.front() != JsonToken(']')) {
+					arr.push_back(parse_tokens(tokens));
+					if (tokens.front() == JsonToken(',')) tokens.pop();
+				}
+				tokens.pop();
+				return arr;
+			} else if (starts_with(tkn.str, "\"")) {
+				int len = strlen(tkn.str);
+				tkn.str[len-1] = '\0';
+				return Json::string(tkn.str+1);
+			} else if (strcmp(tkn.str, "true") == 0) {
+				return Json::boolean(true);
+			} else if (strcmp(tkn.str, "false") == 0) {
+				return Json::boolean(false);
+			} else if (strcmp(tkn.str, "null") == 0) {
+				return Json::null();
+			} else {
+				assert(false && "Invalid JSON syntax");
+			}
+		}
 		Json Json::parse(crstring json) {
 			if (json.empty()) return Json::null();
-			Json ret;
-			return ret;
+			if (isspace(json[0])) return parse(trim(json));
+
+			auto tokens = tokenize(json);
+			return parse_tokens(tokens);
 		}
 	}
 }
