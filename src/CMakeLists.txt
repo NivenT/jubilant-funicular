@@ -16,6 +16,7 @@ set(NTA_LIBRARY_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/json.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Logger.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/MyEngine.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Observer.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ParticleBatch2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ParticleEngine2D.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/PrimitiveBatch.cpp

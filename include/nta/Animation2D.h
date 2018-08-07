@@ -1,7 +1,7 @@
 #ifndef NTA_ANIMATION2D_H_INCLUDED
 #define NTA_ANIMATION2D_H_INCLUDED
 
-#include "GLTexture.h"
+#include "nta/GLTexture.h"
 
 namespace nta {
     /// Multiple sprites (each the same size) in one texture
