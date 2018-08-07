@@ -51,10 +51,10 @@ namespace nta {
 			}
 			JsonNumType get_type() { return m_type; }
 			/// \todo Signal ErrorManager if wrong type
-			uint64_t as_uint() const { return m_pos; }
-			int64_t as_int() const { return m_neg; }
-			double as_float() const { return m_flt; }
-			double as_double() const { return m_flt; }
+			uint64_t as_uint() const { return m_type == FLOAT ? m_flt : m_pos; }
+			int64_t as_int() const { return m_type == FLOAT ? m_flt : m_neg; }
+			double as_float() const { return m_type == FLOAT ? m_flt : m_neg; }
+			double as_double() const { return m_type == FLOAT ? m_flt : m_neg; }
 
 			operator uint64_t() const { return as_uint(); }
 			operator int64_t() const { return as_int(); }
