@@ -17,6 +17,9 @@ static \hyperlink{classnta_1_1Result}{Result}$<$ \hyperlink{structnta_1_1GLTextu
 \mbox{\Hypertarget{classnta_1_1ResourceManager_ae14b4380aae490abd97d0bb1073d3a0b}\label{classnta_1_1ResourceManager_ae14b4380aae490abd97d0bb1073d3a0b}} 
 static \hyperlink{classnta_1_1Result}{Result}$<$ \hyperlink{structnta_1_1GLTexture}{G\+L\+Texture} $>$ {\bfseries get\+Texture} (crstring image\+Path, crvec2 dimensions, G\+Lint min\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+M\+I\+P\+M\+A\+P\+\_\+\+L\+I\+N\+E\+AR, G\+Lint mag\+Filt=G\+L\+\_\+\+L\+I\+N\+E\+AR)
 \item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a5a9625aa03f75fad3d34c0ce222014e9}\label{classnta_1_1ResourceManager_a5a9625aa03f75fad3d34c0ce222014e9}} 
+static \hyperlink{classnta_1_1Result}{Result}$<$ std\+::string $>$ {\bfseries get\+File} (\hyperlink{structnta_1_1GLTexture}{G\+L\+Texture} tex)
+\item 
 \mbox{\Hypertarget{classnta_1_1ResourceManager_a0411e5cf357d6d285820338d92d06a0e}\label{classnta_1_1ResourceManager_a0411e5cf357d6d285820338d92d06a0e}} 
 static \hyperlink{classnta_1_1SpriteFont}{Sprite\+Font} $\ast$ {\bfseries get\+Sprite\+Font} (crstring font\+Path, int font\+Size=32)
 \item 
@@ -35,19 +38,23 @@ static void {\bfseries destroy} ()
 \mbox{\Hypertarget{classnta_1_1ResourceManager_abf9bb10402834f05b2673e0c1d8cb9aa}\label{classnta_1_1ResourceManager_abf9bb10402834f05b2673e0c1d8cb9aa}} 
 static std\+::map$<$ std\+::string, \hyperlink{structnta_1_1GLTexture}{G\+L\+Texture} $>$ \hyperlink{classnta_1_1ResourceManager_abf9bb10402834f05b2673e0c1d8cb9aa}{m\+\_\+texture\+Map}
 \begin{DoxyCompactList}\small\item\em a map for associating a texture with the name of its file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ResourceManager_a4255640b4c0ba44f1ad8289d3d912897}\label{classnta_1_1ResourceManager_a4255640b4c0ba44f1ad8289d3d912897}} 
+static std\+::unordered\+\_\+map$<$ \hyperlink{structnta_1_1GLTexture}{G\+L\+Texture}, std\+::string $>$ \hyperlink{classnta_1_1ResourceManager_a4255640b4c0ba44f1ad8289d3d912897}{m\+\_\+texture\+Files}
+\begin{DoxyCompactList}\small\item\em Inverse map to m\+\_\+texture\+Map. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1ResourceManager_ac6a87b69211ba52452b4c02847ea934e}\label{classnta_1_1ResourceManager_ac6a87b69211ba52452b4c02847ea934e}} 
 static std\+::map$<$ std\+::pair$<$ std\+::string, int $>$, \hyperlink{classnta_1_1SpriteFont}{Sprite\+Font} $\ast$ $>$ \hyperlink{classnta_1_1ResourceManager_ac6a87b69211ba52452b4c02847ea934e}{m\+\_\+font\+Map}
-\begin{DoxyCompactList}\small\item\em Why does this return pointers? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Why does this hold pointers? \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Handles storing and retrieving textures so an image isn\textquotesingle{}t loaded multiple times. 
 
-Definition at line 10 of file Resource\+Manager.\+h.
+Definition at line 12 of file Resource\+Manager.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Resource\+Manager\+:\nopagebreak
+Collaboration diagram for nta\+:\+:Resource\+Manager\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,13 +72,14 @@ Collaboration diagram for nta\+:\+:Resource\+Manager\+:\nopagebreak
 
 returns the resource with the given path, loading it if need be  Why was I returning references before? 
 
-Definition at line 7 of file Resource\+Manager.\+cpp.
+Definition at line 8 of file Resource\+Manager.\+cpp.
 
 
 
 Referenced by nta\+::\+Sprite\+::init().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

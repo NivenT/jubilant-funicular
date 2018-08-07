@@ -42,6 +42,8 @@ var searchData=
   ['squarescreen',['SquareScreen',['../db/d24/classSquareScreen.html',1,'']]],
   ['starts_5fwith',['starts_with',['../d7/d33/namespacenta_1_1utils.html#a65417325ced7ca31805371e5e8889b86',1,'nta::utils']]],
   ['stop',['stop',['../d4/dab/classnta_1_1Music.html#ade2d11ebc9273494b344e089cd7b58b8',1,'nta::Music']]],
+  ['subject',['Subject',['../d9/d4e/classnta_1_1Subject.html',1,'nta']]],
+  ['subscribe',['subscribe',['../d9/d4e/classnta_1_1Subject.html#a37d15cb0563d1c9ea93be398aaf28df7',1,'nta::Subject']]],
   ['swapbuffers',['swapBuffers',['../d4/dfb/classnta_1_1Window.html#a5fdc643079410c14855a260ace84478e',1,'nta::Window']]],
   ['switchscreen',['switchScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660',1,'nta::ScreenManager']]],
   ['systemmanager',['SystemManager',['../db/d25/classnta_1_1SystemManager.html',1,'nta']]]

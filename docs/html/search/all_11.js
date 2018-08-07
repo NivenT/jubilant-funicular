@@ -14,5 +14,5 @@ var searchData=
   ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
   ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]],
   ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#a9b119483690a21ce86d99d61106ee412',1,'nta::utils']]],
-  ['type',['type',['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error']]]
+  ['type',['type',['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error::type()'],['../d8/d00/structnta_1_1Event.html#a0d5af902fd256daec7ad0df501efbd4d',1,'nta::Event::type()']]]
 ];

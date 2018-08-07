@@ -1,0 +1,60 @@
+\hypertarget{classnta_1_1Subject}{}\section{nta\+:\+:Subject Class Reference}
+\label{classnta_1_1Subject}\index{nta\+::\+Subject@{nta\+::\+Subject}}
+
+
+Sends notifications.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnta_1_1Subject_1_1ObserverNode}{Observer\+Node}
+\begin{DoxyCompactList}\small\item\em Linked list of Observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Subject_a37d15cb0563d1c9ea93be398aaf28df7}\label{classnta_1_1Subject_a37d15cb0563d1c9ea93be398aaf28df7}} 
+virtual void \hyperlink{classnta_1_1Subject_a37d15cb0563d1c9ea93be398aaf28df7}{subscribe} (\hyperlink{classnta_1_1Observer}{Observer} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adds \hyperlink{classnta_1_1Observer}{Observer} to notification list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1Subject_ab74c154ace2f59dafe154fe5c7416e8c}\label{classnta_1_1Subject_ab74c154ace2f59dafe154fe5c7416e8c}} 
+virtual void \hyperlink{classnta_1_1Subject_ab74c154ace2f59dafe154fe5c7416e8c}{unsubscribe} (\hyperlink{classnta_1_1Observer}{Observer} $\ast$)
+\begin{DoxyCompactList}\small\item\em Removes \hyperlink{classnta_1_1Observer}{Observer} from notification list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Subject_aefbbc64af07ff9f4a35870cf5b51ce03}\label{classnta_1_1Subject_aefbbc64af07ff9f4a35870cf5b51ce03}} 
+virtual void {\bfseries notify} (const \hyperlink{structnta_1_1Event}{Event} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}\label{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}} 
+\hyperlink{structnta_1_1Subject_1_1ObserverNode}{Observer\+Node} $\ast$ \hyperlink{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}{m\+\_\+head} = nullptr
+\begin{DoxyCompactList}\small\item\em A linked list of Observers to notify. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sends notifications. 
+
+Definition at line 29 of file Observer.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d5/d37/classnta_1_1Subject__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Observer.\+h\item 
+src/Observer.\+cpp\end{DoxyCompactItemize}
