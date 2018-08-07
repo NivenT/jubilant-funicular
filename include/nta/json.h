@@ -378,6 +378,20 @@ namespace nta {
 			Json& operator=(Json&& other);
 			bool operator==(const Json& other) const;
 			bool operator!=(const Json& other) const { return !(*this == other); }
+			bool operator==(const std::string& other) const { return *this == Json::string(other); }
+			bool operator!=(const std::string& other) const { return !(*this == other); }
+			bool operator==(const char* other) const { return *this == Json::string(other); }
+			bool operator!=(const char* other) const { return !(*this == other); }
+			bool operator==(const JsonNum& other) const { return *this == Json::number(other); }
+			bool operator!=(const JsonNum& other) const { return !(*this == other); }
+			bool operator==(const int& other) const { return *this == Json::number(other); }
+			bool operator!=(const int& other) const { return !(*this == other); }
+			bool operator==(const JsonObject& other) const { return *this == Json::object(other); }
+			bool operator!=(const JsonObject& other) const { return !(*this == other); }
+			bool operator==(const JsonArray& other) const { return *this == Json::array(other); }
+			bool operator!=(const JsonArray& other) const { return !(*this == other); }
+			bool operator==(const bool& other) const { return *this == Json::boolean(other); }
+			bool operator!=(const bool& other) const { return !(*this == other); }
 
 			/// When m_type == NONE, first converts this into an Object
 			Json& operator[](crstring key);

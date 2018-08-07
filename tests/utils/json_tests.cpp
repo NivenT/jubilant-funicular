@@ -46,12 +46,17 @@ int main(int argc, char* argv[]) {
     // I love the stuff you can do in C++
     for (struct {Json::iterator<0> it; int i;} s = {e.begin(), 0}; s.it != e.end(); ++s.it, ++s.i) {
         if (s.i == 0) assert(!*s.it);
-        if (s.i == 1) assert((string)*s.it == "!");
+        if (s.i == 1) assert(*s.it == "!");
     }
     for (auto it = d.begin(); it != d.end(); ++it) {
-        assert((string)*it == "World");
+        assert(*it == "World");
         assert(it.key() == "key");
-        assert((string)it.value() == "World");
+        assert(it.value() == "World");
+    }
+
+    Json null = Json::null();
+    for (auto it = null.begin(); it != null.end(); ++it) {
+        assert(false && "This will never be executed");
     }
 
     assert(c.dump() == "\"Hello \"");
