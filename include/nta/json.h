@@ -15,6 +15,7 @@ namespace nta {
 		typedef std::map<std::string, Json> JsonObject;
 		typedef std::vector<Json> JsonArray;
 
+		// The various types a Json number can take
 		enum JsonNumType {
 			POS_INT,
 			NEG_INT,
@@ -22,15 +23,21 @@ namespace nta {
 		};
 		/// \todo Make as_* functions safer and more versatile
 		/// \todo add math operators
+		/// A Json Number
 		class JsonNum {
 		private:
+			/// The type of number
 			JsonNumType m_type;
 			union {
+				/// Positive integer
 				uint64_t m_pos;
+				/// Negative integer
 				int64_t m_neg;
+				/// (Double precision) floating point number
 				double m_flt;
 			};
 		public:
+			/// By default, this is 0
 			JsonNum() : m_type(POS_INT), m_pos(0) {}
 			JsonNum(uint64_t n) : m_type(POS_INT), m_pos(n) {}
 			JsonNum(int64_t n) : m_type(NEG_INT), m_neg(n) {}
@@ -62,7 +69,9 @@ namespace nta {
 				}
 			}
 
+			/// Return string equivalent of stored value
 			std::string to_string() const { return dump(); }
+			/// Same as to_string()
 			std::string dump() const {
 				switch(m_type) {
 					case POS_INT: return nta::utils::to_string(m_pos);
@@ -72,6 +81,7 @@ namespace nta {
 			}
 		};
 
+		/// The various Json types
 		enum JsonValueType {
 			STRING  = 0,
 			NUMBER  = 1,
@@ -81,6 +91,7 @@ namespace nta {
 			NONE    = 5 // Should be called null
 		};
 		/// \todo Make as_* functions safer and more versatile
+		/// An arbitrary Json value
 		class Json {
 		public:
 			// I really like Keys
@@ -91,6 +102,11 @@ namespace nta {
 		        SetBeginEndKey(const SetBeginEndKey&);
 		        SetBeginEndKey& operator=(const SetBeginEndKey&);
 		    };
+		    /// Custom iterator for looping over Json values
+		    /// For Arrays: loops over the elements
+		    /// For Objects: loops over the values (keys accessible via Json::iterator::key())
+		    /// For anything else (except None): returns the value itself (see tets/json_tests.cpp)
+		    /// For None: empty iterator
 		    /// c=0 gives a regular iterator and c=1 gives a const_iterator
 		    template<bool c=0>
 			class iterator {
@@ -200,6 +216,7 @@ namespace nta {
 			enum JsonTokenType {
 				SYMBOL, NUMTKN
 			};
+			/// Used for tokenizing strings before parsing them into Json objects
 			struct JsonToken {
 				JsonToken() : type(SYMBOL), str(nullptr) {}
 				JsonToken(char c) : type(SYMBOL) {
@@ -242,12 +259,18 @@ namespace nta {
 
 			Json(JsonValueType type) : m_type(type) {}
 
+			/// Attempts to retreive a string token from the beginning of str
 			static bool lex_string(std::string& str, JsonToken& ret);
+			/// Attempts to retreive a number token from the beginning of str
 			static bool lex_number(std::string& str, JsonToken& ret);
+			/// Attempts to retreive a boolean token from the beginning of str
 			static bool lex_bool(std::string& str, JsonToken& ret);
+			/// Attempts to retreive a null token from the beginning of str
 			static bool lex_null(std::string& str, JsonToken& ret);
 
+			/// Converts curr into a stream of tokens
 			static std::queue<JsonToken> tokenize(std::string curr);
+			/// Converts stream of tokens into a Json value
 			static Json parse_tokens(std::queue<JsonToken>& tokens);
 
 			JsonValueType m_type;
@@ -311,6 +334,7 @@ namespace nta {
 			}
 			static Json null() { return Json(NONE); }
 
+			/// Parses Json value from a string
 			static Json parse(crstring json);
 
 			JsonValueType get_type() const { return m_type; }
@@ -334,8 +358,11 @@ namespace nta {
 			std::size_t size() const;
 			bool is_empty() const { return size() == 0; }
 			/// Returns false if m_type != ARRAY (or NONE)
+			/// If m_type == NONE, converts this into an ARRAY
 			bool push_back(const Json& val);
 
+			/// Returns a string representation of the value
+			/// Note: never set second parameter
 			std::string dump(std::size_t indent = 0, std::size_t offset = 0) const;
 
 			operator std::string() const { return as_string(); }
@@ -350,6 +377,7 @@ namespace nta {
 			Json& operator=(const Json& other);
 			Json& operator=(Json&& other);
 
+			/// When m_type == NONE, first converts this into an Object
 			Json& operator[](crstring key);
 			Json& operator[](crstring key) const;
 			Json& operator[](const char* key) { return operator[](std::string(key)); }

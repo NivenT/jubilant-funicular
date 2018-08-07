@@ -67,7 +67,9 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../da/db1/classnta_1_1utils_1_1Json-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -80,10 +82,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html">iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">c=0 gives a regular iterator and c=1 gives a const_iterator  <a href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for tokenizing strings before parsing them into <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> objects.  <a href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____">JsonToken.__unnamed__</a></td></tr>
+<tr class="separator:d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d5f/classnta_1_1utils_1_1Json_1_1SetBeginEndKey.html">SetBeginEndKey</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key unlocking the set_{begin,end}() "private" functions of class <a class="el" href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html" title="c=0 gives a regular iterator and c=1 gives a const_iterator ">Json::iterator</a>.  <a href="../../d3/d5f/classnta_1_1utils_1_1Json_1_1SetBeginEndKey.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key unlocking the set_{begin,end}() "private" functions of class <a class="el" href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html">Json::iterator</a>.  <a href="../../d3/d5f/classnta_1_1utils_1_1Json_1_1SetBeginEndKey.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -118,8 +124,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a77c547bae6a9f97f14e41f235226044c"><td class="memItemLeft" align="right" valign="top"><a id="a77c547bae6a9f97f14e41f235226044c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Json</b> (const <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;other)</td></tr>
 <tr class="separator:a77c547bae6a9f97f14e41f235226044c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5cf35d9ea355ad8d994857644d215b"><td class="memItemLeft" align="right" valign="top"><a id="a2c5cf35d9ea355ad8d994857644d215b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Json</b> (<a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a2c5cf35d9ea355ad8d994857644d215b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff34559e1b1189cf528d0f379d2de10"><td class="memItemLeft" align="right" valign="top"><a id="a2ff34559e1b1189cf528d0f379d2de10"></a>
-JsonValueType&#160;</td><td class="memItemRight" valign="bottom"><b>get_type</b> () const</td></tr>
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">JsonValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_type</b> () const</td></tr>
 <tr class="separator:a2ff34559e1b1189cf528d0f379d2de10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6e22f7c4f594c466f1cbc800050a230"><td class="memItemLeft" align="right" valign="top"><a id="ab6e22f7c4f594c466f1cbc800050a230"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_string</b> () const</td></tr>
@@ -172,9 +181,7 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () co
 <tr class="memitem:af306c2488e1a4ea456b37dc2dc1205f1"><td class="memItemLeft" align="right" valign="top"><a id="af306c2488e1a4ea456b37dc2dc1205f1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> () const</td></tr>
 <tr class="separator:af306c2488e1a4ea456b37dc2dc1205f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2015e471fd47c1a077ca752c9b1fabbd"><td class="memItemLeft" align="right" valign="top"><a id="a2015e471fd47c1a077ca752c9b1fabbd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a2015e471fd47c1a077ca752c9b1fabbd">push_back</a> (const <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;val)</td></tr>
-<tr class="memdesc:a2015e471fd47c1a077ca752c9b1fabbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false if m_type != ARRAY (or NONE) <br /></td></tr>
+<tr class="memitem:a2015e471fd47c1a077ca752c9b1fabbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a2015e471fd47c1a077ca752c9b1fabbd">push_back</a> (const <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;val)</td></tr>
 <tr class="separator:a2015e471fd47c1a077ca752c9b1fabbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0e60f7a55d12aab005d420c8f924035"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035">dump</a> (std::size_t indent=0, std::size_t offset=0) const</td></tr>
 <tr class="separator:ab0e60f7a55d12aab005d420c8f924035"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,7 +212,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a3f673cffc8988a0d3d68e081dd3360ed"><td class="memItemLeft" align="right" valign="top"><a id="a3f673cffc8988a0d3d68e081dd3360ed"></a>
 <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;other)</td></tr>
 <tr class="separator:a3f673cffc8988a0d3d68e081dd3360ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fbe1664fe12b582c5e2b18cc2cfdc8"><td class="memItemLeft" align="right" valign="top"><a id="a52fbe1664fe12b582c5e2b18cc2cfdc8"></a>
+<a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a52fbe1664fe12b582c5e2b18cc2cfdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf2d340a2bf7d59c537e398a1be66cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#adf2d340a2bf7d59c537e398a1be66cf7">operator[]</a> (crstring key)</td></tr>
+<tr class="memdesc:adf2d340a2bf7d59c537e398a1be66cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">When m_type == NONE, first converts this into an Object.  <a href="#adf2d340a2bf7d59c537e398a1be66cf7">More...</a><br /></td></tr>
 <tr class="separator:adf2d340a2bf7d59c537e398a1be66cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b51a07ebed90330c98fd8e20785781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab3b51a07ebed90330c98fd8e20785781">operator[]</a> (crstring key) const</td></tr>
 <tr class="separator:ab3b51a07ebed90330c98fd8e20785781"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,30 +272,67 @@ static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>
 <tr class="memitem:a89aa8497a420120774eec8335a6bf42e"><td class="memItemLeft" align="right" valign="top"><a id="a89aa8497a420120774eec8335a6bf42e"></a>
 static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><b>null</b> ()</td></tr>
 <tr class="separator:a89aa8497a420120774eec8335a6bf42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e9f86cd5c15c077f993d86a68eb044"><td class="memItemLeft" align="right" valign="top"><a id="ac4e9f86cd5c15c077f993d86a68eb044"></a>
+static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ac4e9f86cd5c15c077f993d86a68eb044">parse</a> (crstring json)</td></tr>
+<tr class="memdesc:ac4e9f86cd5c15c077f993d86a68eb044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> value from a string. <br /></td></tr>
+<tr class="separator:ac4e9f86cd5c15c077f993d86a68eb044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:aa2dc580b7a31ea9cef4226527b4599f3"><td class="memItemLeft" align="right" valign="top"><a id="aa2dc580b7a31ea9cef4226527b4599f3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>JsonTokenType</b> { <b>SYMBOL</b>, 
+<b>NUMTKN</b>
+ }</td></tr>
+<tr class="separator:aa2dc580b7a31ea9cef4226527b4599f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac86f6995528403eb265d2cd8a46ed4eb"><td class="memItemLeft" align="right" valign="top"><a id="ac86f6995528403eb265d2cd8a46ed4eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Json</b> (JsonValueType type)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Json</b> (<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">JsonValueType</a> type)</td></tr>
 <tr class="separator:ac86f6995528403eb265d2cd8a46ed4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a085ef4e12b6ac83ef239425037b5bf73"><td class="memItemLeft" align="right" valign="top"><a id="a085ef4e12b6ac83ef239425037b5bf73"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a085ef4e12b6ac83ef239425037b5bf73">lex_string</a> (std::string &amp;str, <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &amp;ret)</td></tr>
+<tr class="memdesc:a085ef4e12b6ac83ef239425037b5bf73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retreive a string token from the beginning of str. <br /></td></tr>
+<tr class="separator:a085ef4e12b6ac83ef239425037b5bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d932ecf9fc69f93af5da7349a8e265"><td class="memItemLeft" align="right" valign="top"><a id="a85d932ecf9fc69f93af5da7349a8e265"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a85d932ecf9fc69f93af5da7349a8e265">lex_number</a> (std::string &amp;str, <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &amp;ret)</td></tr>
+<tr class="memdesc:a85d932ecf9fc69f93af5da7349a8e265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retreive a number token from the beginning of str. <br /></td></tr>
+<tr class="separator:a85d932ecf9fc69f93af5da7349a8e265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563232c6a9334fe69f05ae33ee76573"><td class="memItemLeft" align="right" valign="top"><a id="af563232c6a9334fe69f05ae33ee76573"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#af563232c6a9334fe69f05ae33ee76573">lex_bool</a> (std::string &amp;str, <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &amp;ret)</td></tr>
+<tr class="memdesc:af563232c6a9334fe69f05ae33ee76573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retreive a boolean token from the beginning of str. <br /></td></tr>
+<tr class="separator:af563232c6a9334fe69f05ae33ee76573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0272293c585f0d30811afe6a43917b"><td class="memItemLeft" align="right" valign="top"><a id="aea0272293c585f0d30811afe6a43917b"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#aea0272293c585f0d30811afe6a43917b">lex_null</a> (std::string &amp;str, <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &amp;ret)</td></tr>
+<tr class="memdesc:aea0272293c585f0d30811afe6a43917b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retreive a null token from the beginning of str. <br /></td></tr>
+<tr class="separator:aea0272293c585f0d30811afe6a43917b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905d67b125a7aadd771bb74a1bb63f34"><td class="memItemLeft" align="right" valign="top">static std::queue&lt; <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a905d67b125a7aadd771bb74a1bb63f34">tokenize</a> (std::string curr)</td></tr>
+<tr class="memdesc:a905d67b125a7aadd771bb74a1bb63f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts curr into a stream of tokens.  <a href="#a905d67b125a7aadd771bb74a1bb63f34">More...</a><br /></td></tr>
+<tr class="separator:a905d67b125a7aadd771bb74a1bb63f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6952edc41983e76a7e548d9c426bc680"><td class="memItemLeft" align="right" valign="top"><a id="a6952edc41983e76a7e548d9c426bc680"></a>
+static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a6952edc41983e76a7e548d9c426bc680">parse_tokens</a> (std::queue&lt; <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">JsonToken</a> &gt; &amp;tokens)</td></tr>
+<tr class="memdesc:a6952edc41983e76a7e548d9c426bc680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts stream of tokens into a <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> value. <br /></td></tr>
+<tr class="separator:a6952edc41983e76a7e548d9c426bc680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab4a7cc232d1c4ba37f9dcb35f0ac5417"><td class="memItemLeft" align="right" valign="top"><a id="ab4a7cc232d1c4ba37f9dcb35f0ac5417"></a>
-JsonValueType&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">JsonValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
 <tr class="separator:ab4a7cc232d1c4ba37f9dcb35f0ac5417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a4d3082c4d8f9987cb8ce281b87744d"><td class="memItemLeft" ><a id="a6a4d3082c4d8f9987cb8ce281b87744d"></a>
 union {</td></tr>
-<tr class="memitem:aefa63b11e24f1b7618f61df44c2304c1"><td class="memItemLeft" ><a id="aefa63b11e24f1b7618f61df44c2304c1"></a>
+<tr class="memitem:adcf940ffbd808da39a27e5f5f463ca60"><td class="memItemLeft" ><a id="adcf940ffbd808da39a27e5f5f463ca60"></a>
 &#160;&#160;&#160;struct {</td></tr>
-<tr class="memitem:a680888a75aa0bcd84b39ab84cef64d1f"><td class="memItemLeft" align="right" valign="top"><a id="a680888a75aa0bcd84b39ab84cef64d1f"></a>
+<tr class="memitem:afec1b97eab13d5bd18df67fb2a2b5c5f"><td class="memItemLeft" align="right" valign="top"><a id="afec1b97eab13d5bd18df67fb2a2b5c5f"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>m_str</b></td></tr>
-<tr class="separator:a680888a75aa0bcd84b39ab84cef64d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d9ce4d747bba5e768606d7eccb5864"><td class="memItemLeft" align="right" valign="top"><a id="aa3d9ce4d747bba5e768606d7eccb5864"></a>
+<tr class="separator:afec1b97eab13d5bd18df67fb2a2b5c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdfe000687a8457caf98fff3a0f4f851"><td class="memItemLeft" align="right" valign="top"><a id="acdfe000687a8457caf98fff3a0f4f851"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_len</b></td></tr>
-<tr class="separator:aa3d9ce4d747bba5e768606d7eccb5864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa63b11e24f1b7618f61df44c2304c1"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aefa63b11e24f1b7618f61df44c2304c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:acdfe000687a8457caf98fff3a0f4f851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf940ffbd808da39a27e5f5f463ca60"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:adcf940ffbd808da39a27e5f5f463ca60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4acf20f0eef3112e633df34b799b5a"><td class="memItemLeft" align="right" valign="top"><a id="aad4acf20f0eef3112e633df34b799b5a"></a>
 <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">JsonNum</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_num</b></td></tr>
 <tr class="separator:aad4acf20f0eef3112e633df34b799b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,16 +349,46 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bool</b></td></tr>
 <tr class="separator:a6a4d3082c4d8f9987cb8ce281b87744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>Make as_* functions safer and more versatile </dd></dl>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>Make as_* functions safer and more versatile An arbitrary <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00073">73</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00095">95</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::utils::Json:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/de6/classnta_1_1utils_1_1Json__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1Json_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1Json_coll__map" id="nta_1_1utils_1_1Json_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____" id="d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d6/d05/unionnta_1_1utils_1_1Json_1_1JsonToken_8____unnamed____">&#9670;&nbsp;</a></span>nta::utils::Json::JsonToken.__unnamed__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union nta::utils::Json::JsonToken.__unnamed__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00254">254</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a0fc3cfbc27e91ea60a787de13dae3e3c"></a><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">JsonNum</a></td>
+<td class="fieldname">
+num</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a341be97d9aff90c9978347f66f945b77"></a>char *</td>
+<td class="fieldname">
+str</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab0e60f7a55d12aab005d420c8f924035"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0e60f7a55d12aab005d420c8f924035">&#9670;&nbsp;</a></span>dump()</h2>
@@ -337,9 +415,10 @@ Collaboration diagram for nta::utils::Json:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>Clean up code </dd></dl>
+<p>Returns a string representation of the value Note: never set second parameter</p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>Clean up code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -358,9 +437,11 @@ Collaboration diagram for nta::utils::Json:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p>When m_type == NONE, first converts this into an Object. </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -379,9 +460,9 @@ Collaboration diagram for nta::utils::Json:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00091">91</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -400,10 +481,10 @@ Collaboration diagram for nta::utils::Json:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00066">66</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00095">95</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -422,10 +503,72 @@ Collaboration diagram for nta::utils::Json:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00075">75</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00104">104</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2015e471fd47c1a077ca752c9b1fabbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2015e471fd47c1a077ca752c9b1fabbd">&#9670;&nbsp;</a></span>push_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nta::utils::Json::push_back </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns false if m_type != ARRAY (or NONE) If m_type == NONE, converts this into an ARRAY </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00119">119</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/d55/json_8cpp_source.html#l00272">parse_tokens()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d3d/classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd_icgraph.png" border="0" usemap="#d1/d3d/classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd_icgraph" alt=""/></div>
+<map name="d1/d3d/classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd_icgraph" id="d1/d3d/classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd_icgraph">
+<area shape="rect" id="node2" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a6952edc41983e76a7e548d9c426bc680" title="Converts stream of tokens into a Json value. " alt="" coords="232,5,380,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a905d67b125a7aadd771bb74a1bb63f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905d67b125a7aadd771bb74a1bb63f34">&#9670;&nbsp;</a></span>tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt; <a class="el" href="../../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html">Json::JsonToken</a> &gt; nta::utils::Json::tokenize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>curr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts curr into a stream of tokens. </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd><a class="el" href="../../d8/d66/structnta_1_1Error.html" title="Something went wrong. ">Error</a> cleanly </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00243">243</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>

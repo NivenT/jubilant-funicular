@@ -2,11 +2,6 @@
 \label{classnta_1_1utils_1_1Json_1_1iterator}\index{nta\+::utils\+::\+Json\+::iterator$<$ c $>$@{nta\+::utils\+::\+Json\+::iterator$<$ c $>$}}
 
 
-c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator  
-
-
-
-
 {\ttfamily \#include $<$json.\+h$>$}
 
 \subsection*{Public Types}
@@ -57,6 +52,12 @@ bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1Json_1_1itera
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_1_1iterator_a19704e34d1c4ce82c453ebcd08937bd9}\label{classnta_1_1utils_1_1Json_1_1iterator_a19704e34d1c4ce82c453ebcd08937bd9}} 
 bool {\bfseries operator!=} (const \hyperlink{classnta_1_1utils_1_1Json_1_1iterator}{iterator} \&rhs) const
 \item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_1_1iterator_a0abc8151c0931f7ff0912de6478d6b63}\label{classnta_1_1utils_1_1Json_1_1iterator_a0abc8151c0931f7ff0912de6478d6b63}} 
+std\+::string {\bfseries key} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_1_1iterator_a36fdece9e655f6ebf5cb10cabc577863}\label{classnta_1_1utils_1_1Json_1_1iterator_a36fdece9e655f6ebf5cb10cabc577863}} 
+std\+::string {\bfseries value} ()
+\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_1_1iterator_a28508255d518c92490808787f8484696}\label{classnta_1_1utils_1_1Json_1_1iterator_a28508255d518c92490808787f8484696}} 
 void {\bfseries set\+\_\+begin} (\hyperlink{classnta_1_1utils_1_1Json_1_1SetBeginEndKey}{Set\+Begin\+End\+Key} \+\_\+)
 \item 
@@ -86,14 +87,13 @@ JsonArray::iterator {\bfseries m\_arr\_iter}\\
 \subsubsection*{template$<$bool c = 0$>$\newline
 class nta\+::utils\+::\+Json\+::iterator$<$ c $>$}
 
-c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator 
+Custom iterator for looping over \hyperlink{classnta_1_1utils_1_1Json}{Json} values For Arrays\+: loops over the elements For Objects\+: loops over the values (keys accessible via Json\+::iterator\+::key()) For anything else (except None)\+: returns the value itself (see tets/json\+\_\+tests.\+cpp) For None\+: empty iterator c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator 
 
-Definition at line 85 of file json.\+h.
+Definition at line 112 of file json.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:utils\+:\+:Json\+:\+:iterator$<$ c $>$\+:
-\nopagebreak
+Collaboration diagram for nta\+:\+:utils\+:\+:Json\+:\+:iterator$<$ c $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

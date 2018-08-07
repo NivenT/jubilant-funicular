@@ -76,6 +76,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4c16668854577689d9ae6e6a9f7fd62d"><td class="memItemLeft" align="right" valign="top"><a id="a4c16668854577689d9ae6e6a9f7fd62d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a4c16668854577689d9ae6e6a9f7fd62d">JsonNum</a> ()</td></tr>
+<tr class="memdesc:a4c16668854577689d9ae6e6a9f7fd62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, this is 0. <br /></td></tr>
+<tr class="separator:a4c16668854577689d9ae6e6a9f7fd62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a17dbe70a84cd8d202b6ad5b865ec28"><td class="memItemLeft" align="right" valign="top"><a id="a2a17dbe70a84cd8d202b6ad5b865ec28"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>JsonNum</b> (uint64_t n)</td></tr>
 <tr class="separator:a2a17dbe70a84cd8d202b6ad5b865ec28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,44 +115,51 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>as_double</b> () co
 <tr class="memitem:ac71592324ce19e5c2da0d2b130243bab"><td class="memItemLeft" align="right" valign="top"><a id="ac71592324ce19e5c2da0d2b130243bab"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator double</b> () const</td></tr>
 <tr class="separator:ac71592324ce19e5c2da0d2b130243bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd53b30172e0414c7ca735d7d4118877"><td class="memItemLeft" align="right" valign="top"><a id="afd53b30172e0414c7ca735d7d4118877"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">JsonNum</a> &amp;rhs) const</td></tr>
+<tr class="separator:afd53b30172e0414c7ca735d7d4118877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7038acc17c49e0162d6462dc0591a82d"><td class="memItemLeft" align="right" valign="top"><a id="a7038acc17c49e0162d6462dc0591a82d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> () const</td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a7038acc17c49e0162d6462dc0591a82d">to_string</a> () const</td></tr>
+<tr class="memdesc:a7038acc17c49e0162d6462dc0591a82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return string equivalent of stored value. <br /></td></tr>
 <tr class="separator:a7038acc17c49e0162d6462dc0591a82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a304a9adefcdf875554ef0bd04225594a"><td class="memItemLeft" align="right" valign="top"><a id="a304a9adefcdf875554ef0bd04225594a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> () const</td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a304a9adefcdf875554ef0bd04225594a">dump</a> () const</td></tr>
+<tr class="memdesc:a304a9adefcdf875554ef0bd04225594a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a7038acc17c49e0162d6462dc0591a82d" title="Return string equivalent of stored value. ">to_string()</a> <br /></td></tr>
 <tr class="separator:a304a9adefcdf875554ef0bd04225594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:abd54e505bcd33dc45877c4b4bb92fa4e"><td class="memItemLeft" align="right" valign="top"><a id="abd54e505bcd33dc45877c4b4bb92fa4e"></a>
-JsonNumType&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
+JsonNumType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#abd54e505bcd33dc45877c4b4bb92fa4e">m_type</a></td></tr>
+<tr class="memdesc:abd54e505bcd33dc45877c4b4bb92fa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of number. <br /></td></tr>
 <tr class="separator:abd54e505bcd33dc45877c4b4bb92fa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f60aff135bd41d1680ecdaa738a4a02"><td class="memItemLeft" ><a id="a8f60aff135bd41d1680ecdaa738a4a02"></a>
 union {</td></tr>
 <tr class="memitem:a266052a158fca895978bb7d9ec43f6ff"><td class="memItemLeft" align="right" valign="top"><a id="a266052a158fca895978bb7d9ec43f6ff"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_pos</b></td></tr>
+<tr class="memdesc:a266052a158fca895978bb7d9ec43f6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positive integer. <br /></td></tr>
 <tr class="separator:a266052a158fca895978bb7d9ec43f6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af488d5d931bc8979df8671070365ac2b"><td class="memItemLeft" align="right" valign="top"><a id="af488d5d931bc8979df8671070365ac2b"></a>
 int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_neg</b></td></tr>
+<tr class="memdesc:af488d5d931bc8979df8671070365ac2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negative integer. <br /></td></tr>
 <tr class="separator:af488d5d931bc8979df8671070365ac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cf51bb14293115a5b3f140ade23d4d"><td class="memItemLeft" align="right" valign="top"><a id="a01cf51bb14293115a5b3f140ade23d4d"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>m_flt</b></td></tr>
+<tr class="memdesc:a01cf51bb14293115a5b3f140ade23d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Double precision) floating point number <br /></td></tr>
 <tr class="separator:a01cf51bb14293115a5b3f140ade23d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f60aff135bd41d1680ecdaa738a4a02"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a8f60aff135bd41d1680ecdaa738a4a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd><p class="startdd">Make as_* functions safer and more versatile </p>
-<p class="enddd">add math operators </p>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd><p class="startdd">Make as_* functions safer and more versatile </p>
+<p class="enddd">add math operators A <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> Number </p>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00023">23</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00027">27</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::utils::JsonNum:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d43/classnta_1_1utils_1_1JsonNum__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1JsonNum_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1JsonNum_coll__map" id="nta_1_1utils_1_1JsonNum_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a89e8033a247c3342d99a762f6110d877"></a>
@@ -173,17 +184,9 @@ Collaboration diagram for nta::utils::JsonNum:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>Signal <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> if wrong type </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>Signal <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> if wrong type </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00045">45</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d1/d23/classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877_cgraph.png" border="0" usemap="#d1/d23/classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877_cgraph" alt=""/></div>
-<map name="d1/d23/classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877_cgraph" id="d1/d23/classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877_cgraph">
-<area shape="rect" id="node2" href="../../d4/d51/namespacenta.html#a7521a21e7957d0b80c6c54eb2a80d63d" title="converts input to a std::string " alt="" coords="189,13,288,39"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00054">54</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 
 </div>
 </div>

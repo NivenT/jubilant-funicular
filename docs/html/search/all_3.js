@@ -14,5 +14,5 @@ var searchData=
   ['draw',['draw',['../df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69',1,'nta::ParticleBatch2D::draw()'],['../d1/de9/classnta_1_1ParticleEngine2D.html#a759937cf45e74162ce85269ddf59237b',1,'nta::ParticleEngine2D::draw()']]],
   ['drawtext',['drawText',['../d6/d57/classnta_1_1SpriteFont.html#afdd646f19b11d9c8128151afad994a77',1,'nta::SpriteFont']]],
   ['drawtexture',['drawTexture',['../d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc',1,'nta::SpriteFont']]],
-  ['dump',['dump',['../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035',1,'nta::utils::Json']]]
+  ['dump',['dump',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a304a9adefcdf875554ef0bd04225594a',1,'nta::utils::JsonNum::dump()'],['../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035',1,'nta::utils::Json::dump()']]]
 ];

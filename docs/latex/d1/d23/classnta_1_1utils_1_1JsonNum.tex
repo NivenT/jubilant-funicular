@@ -7,6 +7,9 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a4c16668854577689d9ae6e6a9f7fd62d}\label{classnta_1_1utils_1_1JsonNum_a4c16668854577689d9ae6e6a9f7fd62d}} 
+\hyperlink{classnta_1_1utils_1_1JsonNum_a4c16668854577689d9ae6e6a9f7fd62d}{Json\+Num} ()
+\begin{DoxyCompactList}\small\item\em By default, this is 0. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a2a17dbe70a84cd8d202b6ad5b865ec28}\label{classnta_1_1utils_1_1JsonNum_a2a17dbe70a84cd8d202b6ad5b865ec28}} 
 {\bfseries Json\+Num} (uint64\+\_\+t n)
 \item 
@@ -42,28 +45,34 @@ double {\bfseries as\+\_\+double} () const
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_ac71592324ce19e5c2da0d2b130243bab}\label{classnta_1_1utils_1_1JsonNum_ac71592324ce19e5c2da0d2b130243bab}} 
 {\bfseries operator double} () const
 \item 
-\mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}\label{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}} 
-std\+::string {\bfseries to\+\_\+string} () const
+\mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_afd53b30172e0414c7ca735d7d4118877}\label{classnta_1_1utils_1_1JsonNum_afd53b30172e0414c7ca735d7d4118877}} 
+bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} \&rhs) const
 \item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}\label{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}} 
+std\+::string \hyperlink{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}{to\+\_\+string} () const
+\begin{DoxyCompactList}\small\item\em Return string equivalent of stored value. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a304a9adefcdf875554ef0bd04225594a}\label{classnta_1_1utils_1_1JsonNum_a304a9adefcdf875554ef0bd04225594a}} 
-std\+::string {\bfseries dump} () const
-\end{DoxyCompactItemize}
+std\+::string \hyperlink{classnta_1_1utils_1_1JsonNum_a304a9adefcdf875554ef0bd04225594a}{dump} () const
+\begin{DoxyCompactList}\small\item\em Same as \hyperlink{classnta_1_1utils_1_1JsonNum_a7038acc17c49e0162d6462dc0591a82d}{to\+\_\+string()} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_abd54e505bcd33dc45877c4b4bb92fa4e}\label{classnta_1_1utils_1_1JsonNum_abd54e505bcd33dc45877c4b4bb92fa4e}} 
-Json\+Num\+Type {\bfseries m\+\_\+type}
-\item 
+Json\+Num\+Type \hyperlink{classnta_1_1utils_1_1JsonNum_abd54e505bcd33dc45877c4b4bb92fa4e}{m\+\_\+type}
+\begin{DoxyCompactList}\small\item\em The type of number. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a8f60aff135bd41d1680ecdaa738a4a02}\label{classnta_1_1utils_1_1JsonNum_a8f60aff135bd41d1680ecdaa738a4a02}} 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 union \{\\
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a266052a158fca895978bb7d9ec43f6ff}\label{classnta_1_1utils_1_1JsonNum_a266052a158fca895978bb7d9ec43f6ff}} 
 uint64\_t {\bfseries m\_pos}\\
+\>\>{\em Positive integer. }\\
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_af488d5d931bc8979df8671070365ac2b}\label{classnta_1_1utils_1_1JsonNum_af488d5d931bc8979df8671070365ac2b}} 
 int64\_t {\bfseries m\_neg}\\
+\>\>{\em Negative integer. }\\
 \mbox{\Hypertarget{classnta_1_1utils_1_1JsonNum_a01cf51bb14293115a5b3f140ade23d4d}\label{classnta_1_1utils_1_1JsonNum_a01cf51bb14293115a5b3f140ade23d4d}} 
 double {\bfseries m\_flt}\\
+\>\>{\em (Double precision) floating point number }\\
 \}; \\
 
 \end{tabbing}\end{DoxyCompactItemize}
@@ -71,17 +80,16 @@ double {\bfseries m\_flt}\\
 
 \subsection{Detailed Description}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000004}{Todo}]Make as\+\_\+$\ast$ functions safer and more versatile 
+\item[\hyperlink{todo__todo000005}{Todo}]Make as\+\_\+$\ast$ functions safer and more versatile 
 
-add math operators \end{DoxyRefDesc}
-
-
-Definition at line 23 of file json.\+h.
+add math operators A \hyperlink{classnta_1_1utils_1_1Json}{Json} Number \end{DoxyRefDesc}
 
 
+Definition at line 27 of file json.\+h.
 
-Collaboration diagram for nta\+:\+:utils\+:\+:Json\+Num\+:
-\nopagebreak
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Json\+Num\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,19 +106,11 @@ Collaboration diagram for nta\+:\+:utils\+:\+:Json\+Num\+:
 {\footnotesize\ttfamily uint64\+\_\+t nta\+::utils\+::\+Json\+Num\+::as\+\_\+uint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000006}{Todo}]Signal \hyperlink{classnta_1_1ErrorManager}{Error\+Manager} if wrong type \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000007}{Todo}]Signal \hyperlink{classnta_1_1ErrorManager}{Error\+Manager} if wrong type \end{DoxyRefDesc}
 
 
-Definition at line 45 of file json.\+h.
+Definition at line 54 of file json.\+h.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=292pt]{d1/d23/classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

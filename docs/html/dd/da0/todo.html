@@ -64,8 +64,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000008"></a>Namespace <a class="el" href="../../d4/d51/namespacenta.html">nta</a>  </dt>
-<dd><p class="startdd">Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </p>
+<dt><a class="anchor" id="_todo000002"></a>Namespace <a class="el" href="../../d4/d51/namespacenta.html">nta</a>  </dt>
+<dd><p class="startdd">Add Option type </p>
+<p>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </p>
 <p>Make sure this code is OS-agnostic </p>
 <p class="enddd">Figure out how to get rid of this file  </p>
 </dd>
@@ -73,55 +74,57 @@ $(function() {
 <dd><p class="startdd">Add ability to base timing off of actual time instead of frames </p>
 <p class="enddd">make non-static (ideally, one <a class="el" href="../../d1/de6/classnta_1_1CallbackManager.html">CallbackManager</a> per <a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. ">ScreenManager</a>)  </p>
 </dd>
-<dt><a class="anchor" id="_todo000002"></a>Class <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">nta::ErrorManager</a>  </dt>
+<dt><a class="anchor" id="_todo000003"></a>Class <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">nta::ErrorManager</a>  </dt>
 <dd>There should be one of each "Manager" class type per <a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. ">ScreenManager</a> or one per <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a> (i.e. they should not be static)  </dd>
-<dt><a class="anchor" id="_todo000012"></a>Member <a class="el" href="../../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105">nta::Glyph::Glyph</a>  (crvec4 posRect, crvec4 uvRect, GLuint tex, float d, crvec4 col, float angle)</dt>
+<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="../../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105">nta::Glyph::Glyph</a>  (crvec4 posRect, crvec4 uvRect, GLuint tex, float d, crvec4 col, float angle)</dt>
 <dd>Use model matrix?  </dd>
-<dt><a class="anchor" id="_todo000015"></a>Member <a class="el" href="../../d2/d54/classnta_1_1IOManager.html#abbfd9da05b22aa488043a19344d38e0a">nta::IOManager::readFileToBuffer</a>  (crstring filePath, std::string &amp;buffer)</dt>
+<dt><a class="anchor" id="_todo000016"></a>Member <a class="el" href="../../d2/d54/classnta_1_1IOManager.html#abbfd9da05b22aa488043a19344d38e0a">nta::IOManager::readFileToBuffer</a>  (crstring filePath, std::string &amp;buffer)</dt>
 <dd>Not copy code?  </dd>
-<dt><a class="anchor" id="_todo000023"></a>Member <a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee">nta::Logger::writeErrorToLog</a>  (crstring error, ErrorType type=OTHER)</dt>
+<dt><a class="anchor" id="_todo000025"></a>Member <a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee">nta::Logger::writeErrorToLog</a>  (crstring error, ErrorType type=OTHER)</dt>
 <dd>Make sure all the code that previously assumed this function always exits still behaves sensibly  </dd>
-<dt><a class="anchor" id="_todo000024"></a>Member <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117">nta::PrimitiveBatch::createRenderBatches</a>  ()</dt>
+<dt><a class="anchor" id="_todo000026"></a>Member <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117">nta::PrimitiveBatch::createRenderBatches</a>  ()</dt>
 <dd>Render all Primitives using trianges since  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a85b1ab0111c7d02d5899f47fe1946c4f">nta::PrimitiveBatch::m_primitives</a>  </dt>
+<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html#a85b1ab0111c7d02d5899f47fe1946c4f">nta::PrimitiveBatch::m_primitives</a>  </dt>
 <dd>store primitives on the stack  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Class <a class="el" href="../../d8/d2e/classnta_1_1Result.html">nta::Result&lt; T &gt;</a>  </dt>
+<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="../../d8/d2e/classnta_1_1Result.html">nta::Result&lt; T &gt;</a>  </dt>
 <dd>Use <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a> type everywhere it needs to be used  </dd>
-<dt><a class="anchor" id="_todo000025"></a>Member <a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a">nta::ScreenManager::getCurrScreen</a>  () const</dt>
+<dt><a class="anchor" id="_todo000027"></a>Member <a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a">nta::ScreenManager::getCurrScreen</a>  () const</dt>
 <dd>write log error if m_currScreen is out of range  </dd>
-<dt><a class="anchor" id="_todo000010"></a>Class <a class="el" href="../../d4/d60/classnta_1_1Sprite.html">nta::Sprite</a>  </dt>
+<dt><a class="anchor" id="_todo000011"></a>Class <a class="el" href="../../d4/d60/classnta_1_1Sprite.html">nta::Sprite</a>  </dt>
 <dd>Delete this class (It's useless)  </dd>
-<dt><a class="anchor" id="_todo000011"></a>Class <a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html">nta::SpriteBatch</a>  </dt>
+<dt><a class="anchor" id="_todo000012"></a>Class <a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html">nta::SpriteBatch</a>  </dt>
 <dd>Allow for custom vertex types  </dd>
-<dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#aa703fb92d0bd42865c21fdfb2625660d">nta::SpriteBatch::addGlyph</a>  (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=NTA_DEFAULT_DEPTH, crvec4 color=glm::vec4(1))</dt>
+<dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#aa703fb92d0bd42865c21fdfb2625660d">nta::SpriteBatch::addGlyph</a>  (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=NTA_DEFAULT_DEPTH, crvec4 color=glm::vec4(1))</dt>
 <dd>Give some of these different names?  </dd>
-<dt><a class="anchor" id="_todo000026"></a>Member <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358">nta::SpriteFont::SpriteFont</a>  (crstring fontPath, unsigned int size)</dt>
+<dt><a class="anchor" id="_todo000028"></a>Member <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358">nta::SpriteFont::SpriteFont</a>  (crstring fontPath, unsigned int size)</dt>
 <dd>Rename now that we're no longer using simulated annealing  </dd>
-<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">nta::utils::Json</a>  </dt>
-<dd>Make as_* functions safer and more versatile  </dd>
-<dt><a class="anchor" id="_todo000022"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035">nta::utils::Json::dump</a>  (std::size_t indent=0, std::size_t offset=0) const</dt>
+<dt><a class="anchor" id="_todo000006"></a>Class <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">nta::utils::Json</a>  </dt>
+<dd>Make as_* functions safer and more versatile An arbitrary <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> value  </dd>
+<dt><a class="anchor" id="_todo000023"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035">nta::utils::Json::dump</a>  (std::size_t indent=0, std::size_t offset=0) const</dt>
 <dd>Clean up code  </dd>
-<dt><a class="anchor" id="_todo000017"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab3b51a07ebed90330c98fd8e20785781">nta::utils::Json::operator[]</a>  (crstring key) const</dt>
-<dd>Signal error if m_type != OBJECT  </dd>
-<dt><a class="anchor" id="_todo000020"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a893f191111e604995488d147aaa711f8">nta::utils::Json::operator[]</a>  (std::size_t idx) const</dt>
+<dt><a class="anchor" id="_todo000021"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a893f191111e604995488d147aaa711f8">nta::utils::Json::operator[]</a>  (std::size_t idx) const</dt>
 <dd><p class="startdd">Signal error if m_type != ARRAY </p>
 <p class="enddd">Signal error if idx is out of bounds  </p>
 </dd>
-<dt><a class="anchor" id="_todo000018"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a236b5885612b74c21fbad169b21eaf55">nta::utils::Json::operator[]</a>  (std::size_t idx)</dt>
+<dt><a class="anchor" id="_todo000017"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#adf2d340a2bf7d59c537e398a1be66cf7">nta::utils::Json::operator[]</a>  (crstring key)</dt>
+<dd>Signal error if m_type != OBJECT  </dd>
+<dt><a class="anchor" id="_todo000018"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ab3b51a07ebed90330c98fd8e20785781">nta::utils::Json::operator[]</a>  (crstring key) const</dt>
+<dd>Signal error if m_type != OBJECT  </dd>
+<dt><a class="anchor" id="_todo000019"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a236b5885612b74c21fbad169b21eaf55">nta::utils::Json::operator[]</a>  (std::size_t idx)</dt>
 <dd><p class="startdd">Signal error if m_type != ARRAY </p>
 <p class="enddd">Signal error if idx is out of bounds  </p>
 </dd>
-<dt><a class="anchor" id="_todo000016"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#adf2d340a2bf7d59c537e398a1be66cf7">nta::utils::Json::operator[]</a>  (crstring key)</dt>
-<dd>Signal error if m_type != OBJECT  </dd>
-<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">nta::utils::JsonNum</a>  </dt>
+<dt><a class="anchor" id="_todo000024"></a>Member <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#a905d67b125a7aadd771bb74a1bb63f34">nta::utils::Json::tokenize</a>  (std::string curr)</dt>
+<dd><a class="el" href="../../d8/d66/structnta_1_1Error.html" title="Something went wrong. ">Error</a> cleanly  </dd>
+<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">nta::utils::JsonNum</a>  </dt>
 <dd><p class="startdd">Make as_* functions safer and more versatile </p>
-<p class="enddd">add math operators  </p>
+<p class="enddd">add math operators A <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> Number  </p>
 </dd>
-<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a89e8033a247c3342d99a762f6110d877">nta::utils::JsonNum::as_uint</a>  () const</dt>
+<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html#a89e8033a247c3342d99a762f6110d877">nta::utils::JsonNum::as_uint</a>  () const</dt>
 <dd>Signal <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> if wrong type  </dd>
-<dt><a class="anchor" id="_todo000027"></a>Member <a class="el" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a2ca98ba5ed4510e5aac90c0507859b8d">nta::utils::ThreadPool::dispatcher</a>  ()</dt>
+<dt><a class="anchor" id="_todo000029"></a>Member <a class="el" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a2ca98ba5ed4510e5aac90c0507859b8d">nta::utils::ThreadPool::dispatcher</a>  ()</dt>
 <dd>Can I reorganize to replace with a while(!kill)?  </dd>
-<dt><a class="anchor" id="_todo000029"></a>Member <a class="el" href="../../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c">nta::Window::screenshot</a>  () const</dt>
+<dt><a class="anchor" id="_todo000031"></a>Member <a class="el" href="../../d4/dfb/classnta_1_1Window.html#aa144f6bb014aaad3c91c3f3e6ad56f9c">nta::Window::screenshot</a>  () const</dt>
 <dd>Get rid of this? </dd>
 </dl>
 </div></div><!-- contents -->

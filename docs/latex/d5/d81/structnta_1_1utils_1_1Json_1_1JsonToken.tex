@@ -1,0 +1,67 @@
+\hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken}{}\section{nta\+:\+:utils\+:\+:Json\+:\+:Json\+Token Struct Reference}
+\label{structnta_1_1utils_1_1Json_1_1JsonToken}\index{nta\+::utils\+::\+Json\+::\+Json\+Token@{nta\+::utils\+::\+Json\+::\+Json\+Token}}
+
+
+Used for tokenizing strings before parsing them into \hyperlink{classnta_1_1utils_1_1Json}{Json} objects.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_a92c89581d01b1bcb9e020455b26d3357}\label{structnta_1_1utils_1_1Json_1_1JsonToken_a92c89581d01b1bcb9e020455b26d3357}} 
+{\bfseries Json\+Token} (char c)
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_af7f642d246c7ed4ef6c8b49505da3ed7}\label{structnta_1_1utils_1_1Json_1_1JsonToken_af7f642d246c7ed4ef6c8b49505da3ed7}} 
+{\bfseries Json\+Token} (crstring str)
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_a4c3b2c9fd0aef1f4b64a50c97044fb16}\label{structnta_1_1utils_1_1Json_1_1JsonToken_a4c3b2c9fd0aef1f4b64a50c97044fb16}} 
+{\bfseries Json\+Token} (const \hyperlink{structnta_1_1utils_1_1Json_1_1JsonToken}{Json\+Token} \&other)
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_abbe6a2f4ad86b45cc89e7f6c1930719f}\label{structnta_1_1utils_1_1Json_1_1JsonToken_abbe6a2f4ad86b45cc89e7f6c1930719f}} 
+\hyperlink{structnta_1_1utils_1_1Json_1_1JsonToken}{Json\+Token} \& {\bfseries operator=} (const \hyperlink{structnta_1_1utils_1_1Json_1_1JsonToken}{Json\+Token} \&other)
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_aaa56bd1310c36cb4a8180079ac9fe627}\label{structnta_1_1utils_1_1Json_1_1JsonToken_aaa56bd1310c36cb4a8180079ac9fe627}} 
+bool {\bfseries operator==} (const \hyperlink{structnta_1_1utils_1_1Json_1_1JsonToken}{Json\+Token} \&rhs) const
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_ae225afc2fbb368fe808b8ed527181a40}\label{structnta_1_1utils_1_1Json_1_1JsonToken_ae225afc2fbb368fe808b8ed527181a40}} 
+bool {\bfseries operator!=} (const \hyperlink{structnta_1_1utils_1_1Json_1_1JsonToken}{Json\+Token} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_ab0bf0cda189a3063f326abcbf57532bb}\label{structnta_1_1utils_1_1Json_1_1JsonToken_ab0bf0cda189a3063f326abcbf57532bb}} 
+Json\+Token\+Type {\bfseries type}
+\item 
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_a7123d444ecb1662248a2b54d4f27d087}\label{structnta_1_1utils_1_1Json_1_1JsonToken_a7123d444ecb1662248a2b54d4f27d087}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_a249048bb34d397d9f9034391f07e8666}\label{structnta_1_1utils_1_1Json_1_1JsonToken_a249048bb34d397d9f9034391f07e8666}} 
+char $\ast$ {\bfseries str}\\
+\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1JsonToken_a276868d3bfc600a8e9b00a9719d09122}\label{structnta_1_1utils_1_1Json_1_1JsonToken_a276868d3bfc600a8e9b00a9719d09122}} 
+\hyperlink{classnta_1_1utils_1_1JsonNum}{JsonNum} {\bfseries num}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for tokenizing strings before parsing them into \hyperlink{classnta_1_1utils_1_1Json}{Json} objects. 
+
+Definition at line 220 of file json.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Json\+:\+:Json\+Token\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d9/d6a/structnta_1_1utils_1_1Json_1_1JsonToken__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/json.\+h\end{DoxyCompactItemize}

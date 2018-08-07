@@ -73,9 +73,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>c=0 gives a regular iterator and c=1 gives a const_iterator  
- <a href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -125,6 +122,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <tr class="memitem:a19704e34d1c4ce82c453ebcd08937bd9"><td class="memItemLeft" align="right" valign="top"><a id="a19704e34d1c4ce82c453ebcd08937bd9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html">iterator</a> &amp;rhs) const</td></tr>
 <tr class="separator:a19704e34d1c4ce82c453ebcd08937bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0abc8151c0931f7ff0912de6478d6b63"><td class="memItemLeft" align="right" valign="top"><a id="a0abc8151c0931f7ff0912de6478d6b63"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>key</b> ()</td></tr>
+<tr class="separator:a0abc8151c0931f7ff0912de6478d6b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fdece9e655f6ebf5cb10cabc577863"><td class="memItemLeft" align="right" valign="top"><a id="a36fdece9e655f6ebf5cb10cabc577863"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> ()</td></tr>
+<tr class="separator:a36fdece9e655f6ebf5cb10cabc577863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28508255d518c92490808787f8484696"><td class="memItemLeft" align="right" valign="top"><a id="a28508255d518c92490808787f8484696"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_begin</b> (<a class="el" href="../../d3/d5f/classnta_1_1utils_1_1Json_1_1SetBeginEndKey.html">SetBeginEndKey</a> _)</td></tr>
 <tr class="separator:a28508255d518c92490808787f8484696"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,15 +155,13 @@ JsonArray::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>m_arr_
 <div class="textblock"><h3>template&lt;bool c = 0&gt;<br />
 class nta::utils::Json::iterator&lt; c &gt;</h3>
 
-<p>c=0 gives a regular iterator and c=1 gives a const_iterator </p>
+<p>Custom iterator for looping over <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> values For Arrays: loops over the elements For Objects: loops over the values (keys accessible via Json::iterator::key()) For anything else (except None): returns the value itself (see tets/json_tests.cpp) For None: empty iterator c=0 gives a regular iterator and c=1 gives a const_iterator </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00085">85</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d05/json_8h_source.html#l00112">112</a> of file <a class="el" href="../../d4/d05/json_8h_source.html">json.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::utils::Json::iterator&lt; c &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/dc2/classnta_1_1utils_1_1Json_1_1iterator__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1Json_1_1iterator_3_01c_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1Json_1_1iterator_3_01c_01_4_coll__map" id="nta_1_1utils_1_1Json_1_1iterator_3_01c_01_4_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/nta/<a class="el" href="../../d4/d05/json_8h_source.html">json.h</a></li>

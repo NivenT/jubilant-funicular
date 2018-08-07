@@ -1,8 +1,10 @@
 
 \begin{DoxyRefList}
-\item[\label{todo__todo000008}%
-\Hypertarget{todo__todo000008}%
-Namespace \hyperlink{namespacenta}{nta} ]Throughout codebase, indent {\ttfamily case} inside of {\ttfamily switch} blocks 
+\item[\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Namespace \hyperlink{namespacenta}{nta} ]Add Option type 
+
+Throughout codebase, indent {\ttfamily case} inside of {\ttfamily switch} blocks 
 
 Make sure this code is O\+S-\/agnostic 
 
@@ -12,76 +14,79 @@ Figure out how to get rid of this file
 Class \hyperlink{classnta_1_1CallbackManager}{nta\+:\+:Callback\+Manager} ]Add ability to base timing off of actual time instead of frames 
 
 make non-\/static (ideally, one \hyperlink{classnta_1_1CallbackManager}{Callback\+Manager} per \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager})  
-\item[\label{todo__todo000002}%
-\Hypertarget{todo__todo000002}%
-Class \hyperlink{classnta_1_1ErrorManager}{nta\+:\+:Error\+Manager} ]There should be one of each \char`\"{}\+Manager\char`\"{} class type per \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} or one per \hyperlink{classnta_1_1Window}{Window} (i.\+e. they should not be static)  
-\item[\label{todo__todo000012}%
-\Hypertarget{todo__todo000012}%
-Member \hyperlink{structnta_1_1Glyph_a3b2afa4370140736d9d1b28de20d2105}{nta\+:\+:Glyph\+:\+:Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint tex, float d, crvec4 col, float angle)]Use model matrix?  
-\item[\label{todo__todo000015}%
-\Hypertarget{todo__todo000015}%
-Member \hyperlink{classnta_1_1IOManager_abbfd9da05b22aa488043a19344d38e0a}{nta\+:\+:I\+O\+Manager\+:\+:read\+File\+To\+Buffer} (crstring file\+Path, std\+::string \&buffer)]Not copy code?  
-\item[\label{todo__todo000023}%
-\Hypertarget{todo__todo000023}%
-Member \hyperlink{classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee}{nta\+:\+:Logger\+:\+:write\+Error\+To\+Log} (crstring error, Error\+Type type=O\+T\+H\+ER)]Make sure all the code that previously assumed this function always exits still behaves sensibly  
-\item[\label{todo__todo000024}%
-\Hypertarget{todo__todo000024}%
-Member \hyperlink{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}{nta\+:\+:Primitive\+Batch\+:\+:create\+Render\+Batches} ()]Render all Primitives using trianges since  
-\item[\label{todo__todo000009}%
-\Hypertarget{todo__todo000009}%
-Member \hyperlink{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}{nta\+:\+:Primitive\+Batch\+:\+:m\+\_\+primitives} ]store primitives on the stack  
 \item[\label{todo__todo000003}%
 \Hypertarget{todo__todo000003}%
-Class \hyperlink{classnta_1_1Result}{nta\+:\+:Result$<$ T $>$} ]Use \hyperlink{classnta_1_1Result}{Result} type everywhere it needs to be used  
-\item[\label{todo__todo000025}%
-\Hypertarget{todo__todo000025}%
-Member \hyperlink{classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a}{nta\+:\+:Screen\+Manager\+:\+:get\+Curr\+Screen} () const]write log error if m\+\_\+curr\+Screen is out of range  
-\item[\label{todo__todo000010}%
-\Hypertarget{todo__todo000010}%
-Class \hyperlink{classnta_1_1Sprite}{nta\+:\+:Sprite} ]Delete this class (It\textquotesingle{}s useless)  
-\item[\label{todo__todo000011}%
-\Hypertarget{todo__todo000011}%
-Class \hyperlink{classnta_1_1SpriteBatch}{nta\+:\+:Sprite\+Batch} ]Allow for custom vertex types  
+Class \hyperlink{classnta_1_1ErrorManager}{nta\+:\+:Error\+Manager} ]There should be one of each \char`\"{}\+Manager\char`\"{} class type per \hyperlink{classnta_1_1ScreenManager}{Screen\+Manager} or one per \hyperlink{classnta_1_1Window}{Window} (i.\+e. they should not be static)  
 \item[\label{todo__todo000013}%
 \Hypertarget{todo__todo000013}%
-Member \hyperlink{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}{nta\+:\+:Sprite\+Batch\+:\+:add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH, crvec4 color=glm\+::vec4(1))]Give some of these different names?  
+Member \hyperlink{structnta_1_1Glyph_a3b2afa4370140736d9d1b28de20d2105}{nta\+:\+:Glyph\+:\+:Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint tex, float d, crvec4 col, float angle)]Use model matrix?  
+\item[\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Member \hyperlink{classnta_1_1IOManager_abbfd9da05b22aa488043a19344d38e0a}{nta\+:\+:I\+O\+Manager\+:\+:read\+File\+To\+Buffer} (crstring file\+Path, std\+::string \&buffer)]Not copy code?  
+\item[\label{todo__todo000025}%
+\Hypertarget{todo__todo000025}%
+Member \hyperlink{classnta_1_1Logger_a22e0cfbb0e04de2c377cdd5297c39eee}{nta\+:\+:Logger\+:\+:write\+Error\+To\+Log} (crstring error, Error\+Type type=O\+T\+H\+ER)]Make sure all the code that previously assumed this function always exits still behaves sensibly  
 \item[\label{todo__todo000026}%
 \Hypertarget{todo__todo000026}%
+Member \hyperlink{classnta_1_1PrimitiveBatch_a8b1bcf740a16d65a79566c0a9aebd117}{nta\+:\+:Primitive\+Batch\+:\+:create\+Render\+Batches} ()]Render all Primitives using trianges since  
+\item[\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Member \hyperlink{classnta_1_1PrimitiveBatch_a85b1ab0111c7d02d5899f47fe1946c4f}{nta\+:\+:Primitive\+Batch\+:\+:m\+\_\+primitives} ]store primitives on the stack  
+\item[\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+Class \hyperlink{classnta_1_1Result}{nta\+:\+:Result$<$ T $>$} ]Use \hyperlink{classnta_1_1Result}{Result} type everywhere it needs to be used  
+\item[\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
+Member \hyperlink{classnta_1_1ScreenManager_a4b26e8adc481bfb37a088e047e4ccc2a}{nta\+:\+:Screen\+Manager\+:\+:get\+Curr\+Screen} () const]write log error if m\+\_\+curr\+Screen is out of range  
+\item[\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Class \hyperlink{classnta_1_1Sprite}{nta\+:\+:Sprite} ]Delete this class (It\textquotesingle{}s useless)  
+\item[\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+Class \hyperlink{classnta_1_1SpriteBatch}{nta\+:\+:Sprite\+Batch} ]Allow for custom vertex types  
+\item[\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Member \hyperlink{classnta_1_1SpriteBatch_aa703fb92d0bd42865c21fdfb2625660d}{nta\+:\+:Sprite\+Batch\+:\+:add\+Glyph} (crvec4 pos\+Rect, crvec4 uv\+Rect, G\+Luint texture, float depth=N\+T\+A\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+E\+P\+TH, crvec4 color=glm\+::vec4(1))]Give some of these different names?  
+\item[\label{todo__todo000028}%
+\Hypertarget{todo__todo000028}%
 Member \hyperlink{classnta_1_1SpriteFont_a9dc96f31efd0830dcb476ea87534e358}{nta\+:\+:Sprite\+Font\+:\+:Sprite\+Font} (crstring font\+Path, unsigned int size)]Rename now that we\textquotesingle{}re no longer using simulated annealing  
-\item[\label{todo__todo000005}%
-\Hypertarget{todo__todo000005}%
-Class \hyperlink{classnta_1_1utils_1_1Json}{nta\+:\+:utils\+:\+:Json} ]Make as\+\_\+$\ast$ functions safer and more versatile  
-\item[\label{todo__todo000022}%
-\Hypertarget{todo__todo000022}%
+\item[\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+Class \hyperlink{classnta_1_1utils_1_1Json}{nta\+:\+:utils\+:\+:Json} ]Make as\+\_\+$\ast$ functions safer and more versatile An arbitrary \hyperlink{classnta_1_1utils_1_1Json}{Json} value  
+\item[\label{todo__todo000023}%
+\Hypertarget{todo__todo000023}%
 Member \hyperlink{classnta_1_1utils_1_1Json_ab0e60f7a55d12aab005d420c8f924035}{nta\+:\+:utils\+:\+:Json\+:\+:dump} (std\+::size\+\_\+t indent=0, std\+::size\+\_\+t offset=0) const]Clean up code  
-\item[\label{todo__todo000017}%
-\Hypertarget{todo__todo000017}%
-Member \hyperlink{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (crstring key) const]Signal error if m\+\_\+type != O\+B\+J\+E\+CT  
-\item[\label{todo__todo000020}%
-\Hypertarget{todo__todo000020}%
+\item[\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
 Member \hyperlink{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (std\+::size\+\_\+t idx) const]Signal error if m\+\_\+type != A\+R\+R\+AY 
 
 Signal error if idx is out of bounds  
+\item[\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Member \hyperlink{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (crstring key)]Signal error if m\+\_\+type != O\+B\+J\+E\+CT  
 \item[\label{todo__todo000018}%
 \Hypertarget{todo__todo000018}%
+Member \hyperlink{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (crstring key) const]Signal error if m\+\_\+type != O\+B\+J\+E\+CT  
+\item[\label{todo__todo000019}%
+\Hypertarget{todo__todo000019}%
 Member \hyperlink{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (std\+::size\+\_\+t idx)]Signal error if m\+\_\+type != A\+R\+R\+AY 
 
 Signal error if idx is out of bounds  
-\item[\label{todo__todo000016}%
-\Hypertarget{todo__todo000016}%
-Member \hyperlink{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}{nta\+:\+:utils\+:\+:Json\+:\+:operator\mbox{[}\mbox{]}} (crstring key)]Signal error if m\+\_\+type != O\+B\+J\+E\+CT  
-\item[\label{todo__todo000004}%
-\Hypertarget{todo__todo000004}%
+\item[\label{todo__todo000024}%
+\Hypertarget{todo__todo000024}%
+Member \hyperlink{classnta_1_1utils_1_1Json_a905d67b125a7aadd771bb74a1bb63f34}{nta\+:\+:utils\+:\+:Json\+:\+:tokenize} (std\+::string curr)]\hyperlink{structnta_1_1Error}{Error} cleanly  
+\item[\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
 Class \hyperlink{classnta_1_1utils_1_1JsonNum}{nta\+:\+:utils\+:\+:Json\+Num} ]Make as\+\_\+$\ast$ functions safer and more versatile 
 
-add math operators  
-\item[\label{todo__todo000006}%
-\Hypertarget{todo__todo000006}%
+add math operators A \hyperlink{classnta_1_1utils_1_1Json}{Json} Number  
+\item[\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
 Member \hyperlink{classnta_1_1utils_1_1JsonNum_a89e8033a247c3342d99a762f6110d877}{nta\+:\+:utils\+:\+:Json\+Num\+:\+:as\+\_\+uint} () const]Signal \hyperlink{classnta_1_1ErrorManager}{Error\+Manager} if wrong type  
-\item[\label{todo__todo000027}%
-\Hypertarget{todo__todo000027}%
-Member \hyperlink{classnta_1_1utils_1_1ThreadPool_a2ca98ba5ed4510e5aac90c0507859b8d}{nta\+:\+:utils\+:\+:Thread\+Pool\+:\+:dispatcher} ()]Can I reorganize to replace with a while(!kill)?  
 \item[\label{todo__todo000029}%
 \Hypertarget{todo__todo000029}%
+Member \hyperlink{classnta_1_1utils_1_1ThreadPool_a2ca98ba5ed4510e5aac90c0507859b8d}{nta\+:\+:utils\+:\+:Thread\+Pool\+:\+:dispatcher} ()]Can I reorganize to replace with a while(!kill)?  
+\item[\label{todo__todo000031}%
+\Hypertarget{todo__todo000031}%
 Member \hyperlink{classnta_1_1Window_aa144f6bb014aaad3c91c3f3e6ad56f9c}{nta\+:\+:Window\+:\+:screenshot} () const]Get rid of this? 
 \end{DoxyRefList}
