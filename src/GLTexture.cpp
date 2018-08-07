@@ -20,7 +20,7 @@ namespace nta {
             ilBindImage(imgID);
             if (ilLoadImage(filePath.c_str()) == IL_FALSE) {
                 ILenum error = ilGetError();
-                // This is some jank identings
+                // This is some jank identing
                 auto err = Logger::writeErrorToLog(
                             "DevIL failed to load image with error " +
                                 utils::to_string(error) + ": " + iluErrorString(error),

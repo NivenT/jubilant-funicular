@@ -112,6 +112,10 @@ int main(int argc, char* argv[]) {
 
     assert(e.merge({"more", "stuff", 5}) == Json::array({false, "!", "more", "stuff", 5}));
 
+    assert(e.front() == false && e.back() == 5);
+    assert(o.front()[2] == Json::null());
+    assert(a.front() == 8 && a.back() == 8);
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

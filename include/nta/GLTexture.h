@@ -17,6 +17,9 @@ namespace nta {
         bool is_valid() const {
             return id != 0;
         }
+        bool operator==(const GLTexture& rhs) const {
+            return id == rhs.id;
+        }
 
         /// the id of the texture
         GLuint id;
@@ -32,6 +35,15 @@ namespace nta {
     public:
         friend class ResourceManager;
     };
+}
+
+namespace std {
+  template <>
+  struct hash<nta::GLTexture> {
+    std::size_t operator()(const nta::GLTexture& tex) const { 
+        return std::hash<GLuint>()(tex.id); 
+    }
+  };
 }
 
 #endif // NTA_GLTEXTURE_H_INCLUDED

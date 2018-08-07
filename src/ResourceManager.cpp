@@ -3,6 +3,7 @@
 
 namespace nta {
     std::map<std::string,GLTexture>                     ResourceManager::m_textureMap;
+    std::unordered_map<GLTexture, std::string>          ResourceManager::m_textureFiles;
     std::map<std::pair<std::string,int>,SpriteFont*>    ResourceManager::m_fontMap;
     Result<GLTexture> ResourceManager::getTexture(crstring imagePath, GLint minFilt, 
                                                    GLint magFilt, crvec2 dimensions) {
@@ -10,9 +11,17 @@ namespace nta {
             Result<GLTexture> res = ImageLoader::readImage(imagePath, minFilt,
                                                            magFilt, dimensions);
             if (res.is_ok()) m_textureMap[imagePath] = res.get_data();
+            m_textureFiles[res.get_data()] = imagePath;
             return res;
         }
         return Result<GLTexture>::new_ok(m_textureMap[imagePath]);
+    }
+    Result<std::string> ResourceManager::getFile(GLTexture tex) {
+        if (m_textureFiles.find(tex) == m_textureFiles.end()) {
+            auto err = Logger::writeErrorToLog("tex not found in ResourceManager::m_textureFiles", MISSING_RESOURCE);
+            return Result<std::string>::new_err(err);
+        }
+        return Result<std::string>::new_ok(m_textureFiles[tex]);
     }
     SpriteFont* ResourceManager::getSpriteFont(crstring fontPath, int fontSize) {
         std::pair<std::string, int> key = std::make_pair(fontPath, fontSize);
@@ -54,6 +63,7 @@ namespace nta {
             Logger::writeToLog("Deleted sprite font");
         }
         m_textureMap.clear();
+        m_textureFiles.clear();
         m_fontMap.clear();
         Logger::unindent();
         Logger::writeToLog("Destroyed ResourceManager");

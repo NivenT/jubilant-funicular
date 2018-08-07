@@ -108,9 +108,9 @@ namespace nta {
 		}
 		std::size_t Json::size() const {
 			switch(m_type) {
-			case OBJECT: return m_obj->size();
-			case ARRAY: return m_arr->size();
-			default: return 0;
+				case OBJECT: return m_obj->size();
+				case ARRAY: return m_arr->size();
+				default: return 0;
 			}
 		}
 		bool Json::push_back(const Json& val) {
@@ -120,6 +120,20 @@ namespace nta {
 			}
 			if (m_type == ARRAY) m_arr->push_back(val);
 			return m_type == ARRAY;
+		}
+		Json& Json::front() {
+			switch(m_type) {
+				case OBJECT: return m_obj->begin()->second;
+				case ARRAY: return m_arr->front();
+				default: return *this;
+			}
+		}
+		Json& Json::back() {
+			switch(m_type) {
+				case OBJECT: return m_obj->rbegin()->second;
+				case ARRAY: return m_arr->back();
+				default: return *this;
+			}
 		}
 		Json& Json::merge(const Json& other) {
 			if (m_type != other.m_type) return *this;
@@ -180,7 +194,7 @@ namespace nta {
 					if (is_empty()) return "[]";
 					std::string ret = "[";
 					for (auto it = cbegin(); it != cend(); ++it) {
-						ret += it->dump() + ", ";
+						ret += it->dump(indent, offset) + ", ";
 					}
 					ret.replace(ret.size()-2, 2, "]");
 					return ret;
