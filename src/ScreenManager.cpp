@@ -25,7 +25,8 @@ namespace nta {
         return m_limiter.getFPS();
     }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
-        Logger::writeToLog("Adding screen " + utils::to_string(m_screens.size()) + " to ScreenManager...");
+        Logger::writeToLog("Adding screen " + utils::to_string(m_screens.size()) + 
+                           " (\"" + newScreen->getName() + "\") to ScreenManager...");
         Logger::indent();
         m_currScreen = m_screens.empty() ? 0 : m_currScreen;
         newScreen->setManager(this, SetManagerKey());
