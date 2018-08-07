@@ -184,6 +184,7 @@ namespace nta {
 			if (str[0] != '\"' || str.size() < 2) return false;
 			int pos = 0;
 			while (pos == 0 || str[pos-1] == '\\') {
+				if (pos != 0) str.replace(pos-1, 1, "");
 				pos = str.find('\"', pos+1);
 				if (pos == std::string::npos) return false;
 			}

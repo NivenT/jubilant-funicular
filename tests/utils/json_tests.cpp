@@ -102,7 +102,7 @@ int main(int argc, char* argv[]) {
         "true": false,
         "tr:ck": "t,e\"t"
     })");
-    assert(o.dump() == R"({"arr": [8, false, null], "arr2": [2, true, 8, "far"], "five": 5, "my": "name", "obj": {"heLLo": "woRld", "obj": {"huh": null}}, "pi": 3.14159, "tr:ck": "t,e\"t", "true": false})");
+    assert(o.dump() == R"({"arr": [8, false, null], "arr2": [2, true, 8, "far"], "five": 5, "my": "name", "obj": {"heLLo": "woRld", "obj": {"huh": null}}, "pi": 3.14159, "tr:ck": "t,e"t", "true": false})");
     assert(Json::parse(m.dump()) == m);
 
     cout<<"Tests passed"<<endl;
