@@ -6,7 +6,7 @@ namespace nta {
             return str.find(prefix) == 0;
         }
         bool ends_with(crstring& str, crstring& suffix) {
-            return str.rfind(suffix) == str.size() - suffix.size();
+            return str.size() >= suffix.size() && str.rfind(suffix) == str.size() - suffix.size();
         }
         std::string replace_all(crstring& str, crstring o, crstring n) {
             std::string ret = str;
