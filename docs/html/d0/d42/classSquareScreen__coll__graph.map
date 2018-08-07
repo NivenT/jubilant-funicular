@@ -1,10 +1,10 @@
 <map id="SquareScreen" name="SquareScreen">
-<area shape="rect" id="node2" href="$d6/d23/classnta_1_1Screen.html" title="Represents a game screen. " alt="" coords="1221,181,1311,208"/>
-<area shape="rect" id="node5" href="$d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="941,209,1080,236"/>
-<area shape="rect" id="node6" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="691,91,785,117"/>
-<area shape="rect" id="node14" href="$d7/d3b/classnta_1_1SpriteBatch.html" title="nta::SpriteBatch" alt="" coords="680,501,796,528"/>
-<area shape="rect" id="node18" href="$dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ..." alt="" coords="673,632,803,659"/>
-<area shape="rect" id="node9" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="681,164,795,191"/>
-<area shape="rect" id="node10" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="371,121,453,148"/>
-<area shape="rect" id="node21" href="$d3/d28/classnta_1_1Camera2D.html" title="nta::Camera2D" alt="" coords="683,397,793,424"/>
+<area shape="rect" id="node2" href="$d6/d23/classnta_1_1Screen.html" title="Represents a game screen. " alt="" coords="1221,143,1311,169"/>
+<area shape="rect" id="node5" href="$d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="941,285,1080,312"/>
+<area shape="rect" id="node6" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="691,116,785,143"/>
+<area shape="rect" id="node15" href="$d7/d3b/classnta_1_1SpriteBatch.html" title="nta::SpriteBatch" alt="" coords="680,617,796,644"/>
+<area shape="rect" id="node19" href="$dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ..." alt="" coords="673,725,803,752"/>
+<area shape="rect" id="node9" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="681,415,795,441"/>
+<area shape="rect" id="node10" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="371,415,453,441"/>
+<area shape="rect" id="node22" href="$d3/d28/classnta_1_1Camera2D.html" title="nta::Camera2D" alt="" coords="683,567,793,593"/>
 </map>

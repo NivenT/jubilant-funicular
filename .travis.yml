@@ -1,0 +1,56 @@
+language: cpp
+
+sudo: true
+
+matrix:
+  include:
+    - os: linux
+      env: COMPILER=g++-4.9 CCOMPILER=gcc-4.9
+    - os: linux
+      env: COMPILER=g++-5 CCOMPILER=gcc-5
+    - os: linux
+      env: COMPILER=clang++-3.6 CCOMPILER=clang-3.6
+    - os: linux
+      env: COMPILER=clang++-3.8 CCOMPILER=clang-3.8
+    - os: osx
+  allow_failures:
+    - env: COMPILER=clang++-3.6 CCOMPILER=clang-3.6
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise
+      - llvm-toolchain-precise-3.6
+      - llvm-toolchain-precise-3.7
+      - george-edison55-precise-backports
+    packages:
+      - g++-4.9
+      - g++-5
+      - clang-3.6
+      - clang-3.8
+      - cmake
+      - libsdl2-dev
+      - libsdl2-ttf-dev
+      - libglew-dev
+      - freeglut3-dev
+      - libxmu-dev
+      - libxi-dev
+      - libdevil-dev
+
+before_script:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install sdl2    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install sdl2_ttf; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install glew    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install freeglut; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install devil   ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=$COMPILER CC=$CCOMPILER; fi
+  - cmake --version
+  - mkdir build
+  - cd build
+  - cmake -LAH ..
+  - bin/json_tests
+
+script:
+  - make VERBOSE=1
