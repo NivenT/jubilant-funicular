@@ -317,5 +317,16 @@ namespace nta {
 			auto tokens = tokenize(json);
 			return parse_tokens(tokens);
 		}
+		bool Json::operator==(const Json& other) const {
+			if (m_type != other.m_type) return false;
+			switch(m_type) {
+				case STRING: return strcmp(m_str, other.m_str) == 0;
+				case NUMBER: return m_num == other.m_num;
+				case OBJECT: return m_obj ? (other.m_obj && *m_obj == *other.m_obj) : !other.m_obj;
+				case ARRAY: return m_arr ? (other.m_arr && *m_arr == *other.m_arr) : !other.m_arr;
+				case BOOLEAN: return m_bool == other.m_bool;
+				case NONE: return true;
+			}
+		}
 	}
 }

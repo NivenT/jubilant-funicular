@@ -376,6 +376,8 @@ namespace nta {
 
 			Json& operator=(const Json& other);
 			Json& operator=(Json&& other);
+			bool operator==(const Json& other) const;
+			bool operator!=(const Json& other) const { return !(*this == other); }
 
 			/// When m_type == NONE, first converts this into an Object
 			Json& operator[](crstring key);
