@@ -145,6 +145,48 @@ bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1Json}{Json} \
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a97b88c3b36c4ea7640074b676abe7a89}\label{classnta_1_1utils_1_1Json_a97b88c3b36c4ea7640074b676abe7a89}} 
 bool {\bfseries operator!=} (const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&other) const
 \item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a70675599c2188f99903ac40f30a10615}\label{classnta_1_1utils_1_1Json_a70675599c2188f99903ac40f30a10615}} 
+bool {\bfseries operator==} (const std\+::string \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a8f4bfd013e4e02783f2283506590b5f6}\label{classnta_1_1utils_1_1Json_a8f4bfd013e4e02783f2283506590b5f6}} 
+bool {\bfseries operator!=} (const std\+::string \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a5ed2511971393973e89721cdebefd839}\label{classnta_1_1utils_1_1Json_a5ed2511971393973e89721cdebefd839}} 
+bool {\bfseries operator==} (const char $\ast$other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a8ff4372a5deec91c76406aa9db38fb29}\label{classnta_1_1utils_1_1Json_a8ff4372a5deec91c76406aa9db38fb29}} 
+bool {\bfseries operator!=} (const char $\ast$other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_afd19449d8c0ef71a4a5e3544841f9e9b}\label{classnta_1_1utils_1_1Json_afd19449d8c0ef71a4a5e3544841f9e9b}} 
+bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a0fe90155a63c4de53af0d2568e526701}\label{classnta_1_1utils_1_1Json_a0fe90155a63c4de53af0d2568e526701}} 
+bool {\bfseries operator!=} (const \hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num} \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a7508ebbd9d94e223b75d942056b6f1d3}\label{classnta_1_1utils_1_1Json_a7508ebbd9d94e223b75d942056b6f1d3}} 
+bool {\bfseries operator==} (const int \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_abd71013faafbf7ed1d0c2eb13ef22102}\label{classnta_1_1utils_1_1Json_abd71013faafbf7ed1d0c2eb13ef22102}} 
+bool {\bfseries operator!=} (const int \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a07c84e02229b829d3ce687a47251c28e}\label{classnta_1_1utils_1_1Json_a07c84e02229b829d3ce687a47251c28e}} 
+bool {\bfseries operator==} (const Json\+Object \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2c47bda59351fc39af7d01af617c8e51}\label{classnta_1_1utils_1_1Json_a2c47bda59351fc39af7d01af617c8e51}} 
+bool {\bfseries operator!=} (const Json\+Object \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a4f8c29566c86919ab1693e4ab709a1b5}\label{classnta_1_1utils_1_1Json_a4f8c29566c86919ab1693e4ab709a1b5}} 
+bool {\bfseries operator==} (const Json\+Array \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a45778e95342f5b95a9f69273eb481f48}\label{classnta_1_1utils_1_1Json_a45778e95342f5b95a9f69273eb481f48}} 
+bool {\bfseries operator!=} (const Json\+Array \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a5a66e88580ae3c456d16d8ec4d2d4556}\label{classnta_1_1utils_1_1Json_a5a66e88580ae3c456d16d8ec4d2d4556}} 
+bool {\bfseries operator==} (const bool \&other) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a05bb2f19f7b4239c1bbe718e8350c8d0}\label{classnta_1_1utils_1_1Json_a05bb2f19f7b4239c1bbe718e8350c8d0}} 
+bool {\bfseries operator!=} (const bool \&other) const
+\item 
 \hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}{operator\mbox{[}$\,$\mbox{]}} (crstring key)
 \begin{DoxyCompactList}\small\item\em When m\+\_\+type == N\+O\+NE, first converts this into an Object. \end{DoxyCompactList}\item 
 \hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}{operator\mbox{[}$\,$\mbox{]}} (crstring key) const
@@ -416,7 +458,7 @@ Converts curr into a stream of tokens.
 \item[\hyperlink{todo__todo000024}{Todo}]\hyperlink{structnta_1_1Error}{Error} cleanly \end{DoxyRefDesc}
 
 
-Definition at line 243 of file json.\+cpp.
+Definition at line 244 of file json.\+cpp.
 
 
 
