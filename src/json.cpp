@@ -2,6 +2,7 @@
 #include <unordered_set>
 
 #include "nta/json.h"
+#include "nta/IOManager.h"
 
 namespace nta {
 	namespace utils {
@@ -340,6 +341,11 @@ namespace nta {
 
 			auto tokens = tokenize(json);
 			return parse_tokens(tokens);
+		}
+		Json Json::from_file(crstring path) {
+			std::string contents;
+			IOManager::readFileToBuffer(path, contents);
+			return Json::parse(contents);
 		}
 		bool Json::operator==(const Json& other) const {
 			if (m_type != other.m_type) return false;

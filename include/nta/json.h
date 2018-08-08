@@ -336,6 +336,7 @@ namespace nta {
 
 			/// Parses Json value from a string
 			static Json parse(crstring json);
+			static Json from_file(crstring path);
 
 			JsonValueType get_type() const { return m_type; }
 			bool is_string() const { return m_type == STRING; }
@@ -376,6 +377,8 @@ namespace nta {
 			operator JsonNum() const { return as_number(); }
 			operator uint64_t() const { return as_uint(); }
 			operator int64_t() const { return as_int(); }
+			operator int() const { return as_int(); }
+			operator float() const { return as_double(); }
 			operator double() const { return as_double(); }
 			operator JsonObject() const { return as_object(); }
 			operator JsonArray() const { return as_array(); }
