@@ -207,6 +207,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> () const
 <tr class="memitem:a06d392cd9356cacdfd356fcb16161220"><td class="memItemLeft" align="right" valign="top"><a id="a06d392cd9356cacdfd356fcb16161220"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator int64_t</b> () const</td></tr>
 <tr class="separator:a06d392cd9356cacdfd356fcb16161220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ad0d74dc88bb726bbe4245097ec209"><td class="memItemLeft" align="right" valign="top"><a id="a68ad0d74dc88bb726bbe4245097ec209"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator int</b> () const</td></tr>
+<tr class="separator:a68ad0d74dc88bb726bbe4245097ec209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3b26250aeaa82f9ab0c03a80082a0b"><td class="memItemLeft" align="right" valign="top"><a id="a7a3b26250aeaa82f9ab0c03a80082a0b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator float</b> () const</td></tr>
+<tr class="separator:a7a3b26250aeaa82f9ab0c03a80082a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa008316811bc941ea29073ae46a358b4"><td class="memItemLeft" align="right" valign="top"><a id="aa008316811bc941ea29073ae46a358b4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator double</b> () const</td></tr>
 <tr class="separator:aa008316811bc941ea29073ae46a358b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,6 +340,9 @@ static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>
 static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html#ac4e9f86cd5c15c077f993d86a68eb044">parse</a> (crstring json)</td></tr>
 <tr class="memdesc:ac4e9f86cd5c15c077f993d86a68eb044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> value from a string. <br /></td></tr>
 <tr class="separator:ac4e9f86cd5c15c077f993d86a68eb044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9c21e0ba80e348e2c6c19070cbc45e"><td class="memItemLeft" align="right" valign="top"><a id="a1f9c21e0ba80e348e2c6c19070cbc45e"></a>
+static <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><b>from_file</b> (crstring path)</td></tr>
+<tr class="separator:a1f9c21e0ba80e348e2c6c19070cbc45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -381,16 +390,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab4a7cc232d1c4ba37f9dcb35f0ac5417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a4d3082c4d8f9987cb8ce281b87744d"><td class="memItemLeft" ><a id="a6a4d3082c4d8f9987cb8ce281b87744d"></a>
 union {</td></tr>
-<tr class="memitem:adcf940ffbd808da39a27e5f5f463ca60"><td class="memItemLeft" ><a id="adcf940ffbd808da39a27e5f5f463ca60"></a>
-&#160;&#160;&#160;struct {</td></tr>
-<tr class="memitem:afec1b97eab13d5bd18df67fb2a2b5c5f"><td class="memItemLeft" align="right" valign="top"><a id="afec1b97eab13d5bd18df67fb2a2b5c5f"></a>
+<tr class="memitem:ad70123a682fef22afdcf75d20d028e3e"><td class="memItemLeft" align="right" valign="top"><a id="ad70123a682fef22afdcf75d20d028e3e"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>m_str</b></td></tr>
-<tr class="separator:afec1b97eab13d5bd18df67fb2a2b5c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdfe000687a8457caf98fff3a0f4f851"><td class="memItemLeft" align="right" valign="top"><a id="acdfe000687a8457caf98fff3a0f4f851"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_len</b></td></tr>
-<tr class="separator:acdfe000687a8457caf98fff3a0f4f851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcf940ffbd808da39a27e5f5f463ca60"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:adcf940ffbd808da39a27e5f5f463ca60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad70123a682fef22afdcf75d20d028e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4acf20f0eef3112e633df34b799b5a"><td class="memItemLeft" align="right" valign="top"><a id="aad4acf20f0eef3112e633df34b799b5a"></a>
 <a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">JsonNum</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_num</b></td></tr>
 <tr class="separator:aad4acf20f0eef3112e633df34b799b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -476,7 +478,7 @@ str</td>
 <p>Returns a string representation of the value Note: never set second parameter</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>Clean up code </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00174">174</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00173">173</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +499,7 @@ str</td>
 </div><div class="memdoc">
 <p>Adds everything stored in other into this Returns this </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -520,7 +522,7 @@ str</td>
 <p>When m_type == NONE, first converts this into an Object. </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00082">82</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +543,7 @@ str</td>
 </div><div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>Signal error if m_type != OBJECT </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00091">91</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00090">90</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -563,7 +565,7 @@ str</td>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00095">95</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00094">94</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +587,7 @@ str</td>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>Signal error if m_type != ARRAY </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>Signal error if idx is out of bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00104">104</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00103">103</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,9 +608,9 @@ str</td>
 </div><div class="memdoc">
 <p>Returns false if m_type != ARRAY (or NONE) If m_type == NONE, converts this into an ARRAY </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00116">116</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00115">115</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dd/d55/json_8cpp_source.html#l00296">parse_tokens()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dd/d55/json_8cpp_source.html#l00295">parse_tokens()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -647,7 +649,7 @@ Here is the caller graph for this function:</div>
 <p>Converts curr into a stream of tokens. </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd><a class="el" href="../../d8/d66/structnta_1_1Error.html" title="Something went wrong. ">Error</a> cleanly </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00267">267</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/json_8cpp_source.html#l00266">266</a> of file <a class="el" href="../../dd/d55/json_8cpp_source.html">json.cpp</a>.</p>
 
 </div>
 </div>

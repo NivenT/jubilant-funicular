@@ -129,6 +129,12 @@ std\+::string \hyperlink{classnta_1_1utils_1_1Json_ab0e60f7a55d12aab005d420c8f92
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a06d392cd9356cacdfd356fcb16161220}\label{classnta_1_1utils_1_1Json_a06d392cd9356cacdfd356fcb16161220}} 
 {\bfseries operator int64\+\_\+t} () const
 \item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a68ad0d74dc88bb726bbe4245097ec209}\label{classnta_1_1utils_1_1Json_a68ad0d74dc88bb726bbe4245097ec209}} 
+{\bfseries operator int} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a7a3b26250aeaa82f9ab0c03a80082a0b}\label{classnta_1_1utils_1_1Json_a7a3b26250aeaa82f9ab0c03a80082a0b}} 
+{\bfseries operator float} () const
+\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_aa008316811bc941ea29073ae46a358b4}\label{classnta_1_1utils_1_1Json_aa008316811bc941ea29073ae46a358b4}} 
 {\bfseries operator double} () const
 \item 
@@ -253,7 +259,10 @@ static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries null} ()
 \item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac4e9f86cd5c15c077f993d86a68eb044}\label{classnta_1_1utils_1_1Json_ac4e9f86cd5c15c077f993d86a68eb044}} 
 static \hyperlink{classnta_1_1utils_1_1Json}{Json} \hyperlink{classnta_1_1utils_1_1Json_ac4e9f86cd5c15c077f993d86a68eb044}{parse} (crstring json)
-\begin{DoxyCompactList}\small\item\em Parses \hyperlink{classnta_1_1utils_1_1Json}{Json} value from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parses \hyperlink{classnta_1_1utils_1_1Json}{Json} value from a string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_a1f9c21e0ba80e348e2c6c19070cbc45e}\label{classnta_1_1utils_1_1Json_a1f9c21e0ba80e348e2c6c19070cbc45e}} 
+static \hyperlink{classnta_1_1utils_1_1Json}{Json} {\bfseries from\+\_\+file} (crstring path)
+\end{DoxyCompactItemize}
 \subsection*{Private Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -298,13 +307,8 @@ static \hyperlink{classnta_1_1utils_1_1Json}{Json} \hyperlink{classnta_1_1utils_
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 union \{\\
-\mbox{\Hypertarget{classnta_1_1utils_1_1Json_adcf940ffbd808da39a27e5f5f463ca60}\label{classnta_1_1utils_1_1Json_adcf940ffbd808da39a27e5f5f463ca60}} 
-\>struct \{\\
-\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D14_afec1b97eab13d5bd18df67fb2a2b5c5f}\label{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D14_afec1b97eab13d5bd18df67fb2a2b5c5f}} 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Json_ad70123a682fef22afdcf75d20d028e3e}\label{classnta_1_1utils_1_1Json_ad70123a682fef22afdcf75d20d028e3e}} 
 char $\ast$ {\bfseries m\_str}\\
-\mbox{\Hypertarget{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D14_acdfe000687a8457caf98fff3a0f4f851}\label{structnta_1_1utils_1_1Json_1_1_0D8_1_1_0D14_acdfe000687a8457caf98fff3a0f4f851}} 
-std::size\_t {\bfseries m\_len}\\
-\>\} \\
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_aad4acf20f0eef3112e633df34b799b5a}\label{classnta_1_1utils_1_1Json_aad4acf20f0eef3112e633df34b799b5a}} 
 \hyperlink{classnta_1_1utils_1_1JsonNum}{JsonNum} {\bfseries m\_num}\\
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a15a631f10ecc26ba5fba053140bc7500}\label{classnta_1_1utils_1_1Json_a15a631f10ecc26ba5fba053140bc7500}} 
@@ -373,7 +377,7 @@ Returns a string representation of the value Note\+: never set second parameter
 \item[\hyperlink{todo__todo000024}{Todo}]Clean up code \end{DoxyRefDesc}
 
 
-Definition at line 174 of file json.\+cpp.
+Definition at line 173 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_ac33a8a65bdfaff7c365f99c9ca71eeab}\label{classnta_1_1utils_1_1Json_ac33a8a65bdfaff7c365f99c9ca71eeab}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!merge@{merge}}
@@ -383,7 +387,7 @@ Definition at line 174 of file json.\+cpp.
 
 Adds everything stored in other into this Returns this 
 
-Definition at line 138 of file json.\+cpp.
+Definition at line 137 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}\label{classnta_1_1utils_1_1Json_adf2d340a2bf7d59c537e398a1be66cf7}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -399,7 +403,7 @@ When m\+\_\+type == N\+O\+NE, first converts this into an Object.
 \item[\hyperlink{todo__todo000018}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
 
 
-Definition at line 83 of file json.\+cpp.
+Definition at line 82 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}\label{classnta_1_1utils_1_1Json_ab3b51a07ebed90330c98fd8e20785781}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -411,7 +415,7 @@ Definition at line 83 of file json.\+cpp.
 \item[\hyperlink{todo__todo000019}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
 
 
-Definition at line 91 of file json.\+cpp.
+Definition at line 90 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}\label{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -425,7 +429,7 @@ Definition at line 91 of file json.\+cpp.
 \item[\hyperlink{todo__todo000021}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
 
 
-Definition at line 95 of file json.\+cpp.
+Definition at line 94 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}\label{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -439,7 +443,7 @@ Definition at line 95 of file json.\+cpp.
 \item[\hyperlink{todo__todo000023}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
 
 
-Definition at line 104 of file json.\+cpp.
+Definition at line 103 of file json.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd}\label{classnta_1_1utils_1_1Json_a2015e471fd47c1a077ca752c9b1fabbd}} 
 \index{nta\+::utils\+::\+Json@{nta\+::utils\+::\+Json}!push\+\_\+back@{push\+\_\+back}}
@@ -449,7 +453,7 @@ Definition at line 104 of file json.\+cpp.
 
 Returns false if m\+\_\+type != A\+R\+R\+AY (or N\+O\+NE) If m\+\_\+type == N\+O\+NE, converts this into an A\+R\+R\+AY 
 
-Definition at line 116 of file json.\+cpp.
+Definition at line 115 of file json.\+cpp.
 
 
 
@@ -476,7 +480,7 @@ Converts curr into a stream of tokens.
 \item[\hyperlink{todo__todo000025}{Todo}]\hyperlink{structnta_1_1Error}{Error} cleanly \end{DoxyRefDesc}
 
 
-Definition at line 267 of file json.\+cpp.
+Definition at line 266 of file json.\+cpp.
 
 
 
