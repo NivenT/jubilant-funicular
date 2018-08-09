@@ -33,7 +33,6 @@ namespace nta {
 			switch(other.m_type) {
 			case STRING:
 				m_str = strdup(other.m_str);
-				m_len = other.m_len;
 				break;
 			case NUMBER:
 				m_num = other.m_num;
@@ -54,7 +53,6 @@ namespace nta {
 			switch(other.m_type) {
 			case STRING:
 				m_str = other.m_str;
-				m_len = other.m_len;
 				other.m_str = nullptr;
 				break;
 			case NUMBER:

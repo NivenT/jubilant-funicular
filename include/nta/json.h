@@ -15,7 +15,7 @@ namespace nta {
 		typedef std::map<std::string, Json> JsonObject;
 		typedef std::vector<Json> JsonArray;
 
-		// The various types a Json number can take
+		/// The various types a Json number can take
 		enum JsonNumType {
 			POS_INT,
 			NEG_INT,
@@ -275,11 +275,14 @@ namespace nta {
 
 			JsonValueType m_type;
 			union {
+				/*
 				struct {
 					char* m_str;
 					// Is this ever used anywhere?
 					std::size_t m_len;
 				};
+				*/
+				char* m_str;
 				JsonNum m_num;
 				JsonObject* m_obj;
 				JsonArray* m_arr;
@@ -287,8 +290,8 @@ namespace nta {
 			};
 		public:
 			Json() : m_type(NONE) {}
-			Json(crstring str) : m_type(STRING), m_str(strdup(str.c_str())), m_len(str.size()) {}
-			Json(const char* str) : m_type(STRING), m_str(strdup(str)), m_len(strlen(str)) {}
+			Json(crstring str) : m_type(STRING), m_str(strdup(str.c_str())) {}
+			Json(const char* str) : m_type(STRING), m_str(strdup(str)) {}
 			Json(JsonNum num) : m_type(NUMBER), m_num(num) {}
 			Json(double num) : m_type(NUMBER), m_num(num) {}
 			Json(int num) : m_type(NUMBER), m_num(num) {}
@@ -302,14 +305,12 @@ namespace nta {
 
 			static Json string(crstring str) { 
 				Json s(STRING); 
-				s.m_str = strdup(str.c_str());
-				s.m_len = str.size(); 
+				s.m_str = strdup(str.c_str()); 
 				return s; 
 			}
 			static Json string(const char* str) { 
 				Json s(STRING); 
 				s.m_str = strdup(str);
-				s.m_len = strlen(str);
 				return s; 
 			}
 			static Json number(JsonNum num) { 

@@ -23,6 +23,7 @@ int main(int argc, char* argv[]) {
     assert(b.is_number());
     assert(c.is_string());
     assert(d.is_null() && e.is_null());
+    assert(f.get_type() == JsonValueType::NUMBER);
 
     d["key"] = "World";
     e.push_back(false);
@@ -41,12 +42,13 @@ int main(int argc, char* argv[]) {
     assert(d.size() == 1);
 
     for (auto it = a.begin(); it != a.end(); ++it) {
-        assert((int64_t)*it == 8);
+        assert(*it == 8);
     }
     // I love the stuff you can do in C++
     for (struct {Json::iterator<0> it; int i;} s = {e.begin(), 0}; s.it != e.end(); ++s.it, ++s.i) {
         if (s.i == 0) assert(!*s.it);
-        if (s.i == 1) assert(*s.it == "!");
+        else if (s.i == 1) assert(*s.it == "!");
+        else assert(false);
     }
     for (auto it = d.begin(); it != d.end(); ++it) {
         assert(*it == "World");
@@ -71,8 +73,7 @@ int main(int argc, char* argv[]) {
     assert((string)g["key2"]["key"] == "World");
     assert(g.dump() == "{\"foo\": \"bar\", \"huh\": [false, \"!\"], \"key\": 5, \"key2\": {\"key\": \"World\"}}");
     assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
-    assert(g.dump(2) == "{\n  \"foo\": \"bar\", \n  \"huh\": [false, \"!\"], \n  \"key\": 5, \n  \"key2\": {\n    \"key\": \"World\"\n  }\n}");
-
+    
     Json h = {"This", "is", "an", "array", 42, true, Json::null()};
     assert(h.is_array());
     assert(h.dump() == "[\"This\", \"is\", \"an\", \"array\", 42, true, null]");
@@ -112,9 +113,13 @@ int main(int argc, char* argv[]) {
 
     assert(e.merge({"more", "stuff", 5}) == Json::array({false, "!", "more", "stuff", 5}));
 
-    assert(e.front() == false && e.back() == 5);
+    assert(!e.front() && e.back() == 5);
     assert(o.front()[2] == Json::null());
     assert(a.front() == 8 && a.back() == 8);
+
+    Json p = {1, 2, 3, 4, 5, 6, 7, 8};
+    int val = 1;
+    for (auto v : p) assert(v == val++);
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();
