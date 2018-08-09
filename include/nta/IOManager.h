@@ -12,6 +12,8 @@ namespace nta {
     /// Handles binary file operations
     class IOManager {
     public:
+        /// Checks to see if a file exists
+        static bool fileExists(crstring path);
         /// stores the entire contents of a file in a buffer
         static void readFileToBuffer(crstring filePath, FileBuffer& buffer);
         static void readFileToBuffer(crstring filePath, std::string& buffer);

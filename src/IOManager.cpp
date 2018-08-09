@@ -2,6 +2,9 @@
 #include "nta/Logger.h"
 
 namespace nta {
+    bool IOManager::fileExists(crstring path) {
+        return std::ifstream(path.c_str()).good();
+    }
     void IOManager::readFileToBuffer(crstring filePath, FileBuffer& buffer) {
         Logger::writeToLog("Reading " + filePath + " to a buffer");
         std::ifstream file(filePath.c_str(), std::ios::binary);
