@@ -189,7 +189,7 @@ namespace nta {
 						default: return "";
 					}
 				}
-				std::string value() {
+				reference value() {
 					switch(m_json->get_type()) {
 						case OBJECT: return m_obj_iter->second;
 						case ARRAY: return *m_arr_iter;

@@ -180,10 +180,10 @@ namespace nta {
 					std::string offset_str(offset, ' ');
 					std::string indent_str(offset + indent, ' ');
 
-					for (auto it = m_obj->cbegin(); it != m_obj->cend(); ++it) {
+					for (auto it = cbegin(); it != cend(); ++it) {
 						ret += indent == 0 ? "" : "\n" + indent_str;
-						ret += "\"" + it->first + "\": " + 
-								it->second.dump(indent, offset+indent) + ", ";
+						ret += "\"" + it.key() + "\": " + 
+								it.value().dump(indent, offset+indent) + ", ";
 					}
 					ret.replace(ret.size()-2, 2, indent == 0 ? "}" : 
 												 "\n" + offset_str + "}");
@@ -221,7 +221,6 @@ namespace nta {
 			};
 
 			char* end;
-
 			long vall = strtol(str.c_str(), &end, 10);
 			if (end != str.c_str() && FLOAT_CHARS.find(*end) == FLOAT_CHARS.end()) {
 				ret.type = NUMTKN;
@@ -283,7 +282,6 @@ namespace nta {
 					curr = curr.substr(1);
 				} else if (JSON_SYNTAX.find(curr[0]) != JSON_SYNTAX.end()) {
 					tokens.emplace(curr[0]);
-					//std::string(1, curr[0]));
 					curr = curr.substr(1);
 				} else {
 					/// \todo Error cleanly
