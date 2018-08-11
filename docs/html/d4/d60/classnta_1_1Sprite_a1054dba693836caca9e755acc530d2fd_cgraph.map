@@ -10,7 +10,7 @@
 <area shape="rect" id="node11" href="$d8/d2e/classnta_1_1Result.html#a61deaa087694eae4fdaece2996fedda0" title="Is this normal data. " alt="" coords="417,266,543,293"/>
 <area shape="rect" id="node12" href="$d8/d2e/classnta_1_1Result.html#a96baacea35085048d694279d5de8c82e" title="Get the data (only use if is_ok() returns true) " alt="" coords="408,317,552,343"/>
 <area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="859,93,1017,119"/>
-<area shape="rect" id="node8" href="$d7/d33/namespacenta_1_1utils.html#a5f35430518156d9cedd06866a50035c3" title="converts input to a std::string " alt="" coords="652,63,783,90"/>
+<area shape="rect" id="node8" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="652,63,783,90"/>
 <area shape="rect" id="node6" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="876,5,1000,47"/>
 <area shape="rect" id="node7" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="871,191,1005,232"/>
 </map>
