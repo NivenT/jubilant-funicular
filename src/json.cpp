@@ -26,7 +26,7 @@ namespace nta {
 			operator=(other);
 		}
 		Json::Json(Json&& other) {
-			operator=(other);
+			operator=(std::move(other));
 		}
 		Json& Json::operator=(const Json& other) {
 			m_type = other.m_type;
@@ -47,6 +47,7 @@ namespace nta {
 				m_bool = other.m_bool;
 				break;
 			}
+			return *this;
 		}
 		Json& Json::operator=(Json&& other) {
 			m_type = other.m_type;
@@ -71,6 +72,7 @@ namespace nta {
 				break;
 			}
 			other.m_type = NONE;
+			return *this;
 		}
 		Json::~Json() {
 			switch(m_type) {

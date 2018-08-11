@@ -121,6 +121,10 @@ int main(int argc, char* argv[]) {
     int val = 1;
     for (auto v : p) assert(v == val++);
 
+    Json q = std::move(p);
+    assert(q.dump() == "[1, 2, 3, 4, 5, 6, 7, 8]");
+    assert(p.is_null());
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

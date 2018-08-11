@@ -275,13 +275,6 @@ namespace nta {
 
 			JsonValueType m_type;
 			union {
-				/*
-				struct {
-					char* m_str;
-					// Is this ever used anywhere?
-					std::size_t m_len;
-				};
-				*/
 				char* m_str;
 				JsonNum m_num;
 				JsonObject* m_obj;
