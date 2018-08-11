@@ -125,6 +125,14 @@ int main(int argc, char* argv[]) {
     assert(q.dump() == "[1, 2, 3, 4, 5, 6, 7, 8]");
     assert(p.is_null());
 
+    q.resize(4);
+    assert(q.dump() == "[1, 2, 3, 4]");
+
+    q.resize(6);
+    assert(q.dump() == "[1, 2, 3, 4, null, null]");
+    n.resize(10);
+    assert(n.is_array());
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

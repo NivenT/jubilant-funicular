@@ -114,6 +114,16 @@ namespace nta {
 				default: return 0;
 			}
 		}
+		bool Json::resize(std::size_t size) {
+			if (m_type == NONE) {
+				m_type = ARRAY;
+				m_arr = new JsonArray;
+			}
+			switch(m_type) {
+				case ARRAY: m_arr->resize(size);
+			}
+			return m_type == ARRAY;
+		}
 		bool Json::push_back(const Json& val) {
 			if (m_type == NONE) {
 				m_type = ARRAY;

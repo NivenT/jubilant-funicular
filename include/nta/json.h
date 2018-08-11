@@ -352,6 +352,9 @@ namespace nta {
 
 			std::size_t size() const;
 			bool is_empty() const { return size() == 0; }
+			/// Returns false if m_type is not NONE or ARRAY
+			/// If m_type == NONE, converts this into an ARRAY
+			bool resize(std::size_t size);
 			/// Returns false if m_type != ARRAY (or NONE)
 			/// If m_type == NONE, converts this into an ARRAY
 			bool push_back(const Json& val);
