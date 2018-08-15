@@ -32,6 +32,9 @@ namespace nta {
     glm::vec4 Animation2D::get_flipped_uv() const {
         return m_sheet.get_flipped_uv(get_index());
     }
+    glm::vec2 Animation2D::get_frame_dims() const {
+        return m_sheet.get_frame_dims();
+    }
     GLuint Animation2D::get_tex_id() const {
         return m_sheet.tex.id;
     }

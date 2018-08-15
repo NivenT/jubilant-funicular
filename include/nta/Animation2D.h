@@ -32,6 +32,10 @@ namespace nta {
             coords[2] *= -1;
             return coords;
         }
+        /// Returns the dimensions of one sprite in this sheet
+        glm::vec2 get_frame_dims() const {
+            return glm::vec2(tex.width/num_cols, tex.height/num_rows);
+        }
         /// The texture holding all the sprites
         GLTexture tex;
         /// The dimensions of the sheat (rows x cols)
@@ -64,6 +68,7 @@ namespace nta {
                     std::size_t length = 1, float speed = 1);
         glm::vec4 get_uv() const;
         glm::vec4 get_flipped_uv() const;
+        glm::vec2 get_frame_dims() const;
         std::size_t get_index() const;
         std::size_t get_start() const;
         std::size_t get_length() const;
