@@ -1,4 +1,4 @@
 <map id="nta::Animation2D" name="nta::Animation2D">
-<area shape="rect" id="node4" href="$d9/d85/structnta_1_1SpriteSheet.html" title="Multiple sprites (each the same size) in one texture. " alt="" coords="163,213,279,240"/>
-<area shape="rect" id="node5" href="$d3/dff/structnta_1_1GLTexture.html" title="represents a texture " alt="" coords="77,124,186,151"/>
+<area shape="rect" id="node4" href="$d9/d85/structnta_1_1SpriteSheet.html" title="Multiple sprites (each the same size) in one texture. " alt="" coords="168,213,284,240"/>
+<area shape="rect" id="node5" href="$d3/dff/structnta_1_1GLTexture.html" title="represents a texture " alt="" coords="82,124,191,151"/>
 </map>

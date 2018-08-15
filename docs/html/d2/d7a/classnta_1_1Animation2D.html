@@ -79,15 +79,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a13c0e7e8f15507c6547500073efc5a10"><td class="memItemLeft" align="right" valign="top"><a id="a13c0e7e8f15507c6547500073efc5a10"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (const <a class="el" href="../../d9/d85/structnta_1_1SpriteSheet.html">SpriteSheet</a> &amp;sheet, std::size_t start=0, std::size_t length=1)</td></tr>
-<tr class="separator:a13c0e7e8f15507c6547500073efc5a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc8437b5b740228336b38461686fdd3"><td class="memItemLeft" align="right" valign="top"><a id="acfc8437b5b740228336b38461686fdd3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (crstring file_path, crivec2 dims, std::size_t start=0, std::size_t length=1)</td></tr>
-<tr class="separator:acfc8437b5b740228336b38461686fdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e3a9430ee7dc92e9f3acfe291c8311a"><td class="memItemLeft" align="right" valign="top"><a id="a6e3a9430ee7dc92e9f3acfe291c8311a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (crstring file_path, int num_cols, std::size_t start=0, std::size_t length=1)</td></tr>
-<tr class="separator:a6e3a9430ee7dc92e9f3acfe291c8311a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792bd9b44d471dc526e89dc9b2b4b7e0"><td class="memItemLeft" align="right" valign="top"><a id="a792bd9b44d471dc526e89dc9b2b4b7e0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (const <a class="el" href="../../d9/d85/structnta_1_1SpriteSheet.html">SpriteSheet</a> &amp;sheet, std::size_t start=0, std::size_t length=1, float speed=1)</td></tr>
+<tr class="separator:a792bd9b44d471dc526e89dc9b2b4b7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a914bde6d79c34f2da580c9de07460e51"><td class="memItemLeft" align="right" valign="top"><a id="a914bde6d79c34f2da580c9de07460e51"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (crstring file_path, crivec2 dims, std::size_t start=0, std::size_t length=1, float speed=1)</td></tr>
+<tr class="separator:a914bde6d79c34f2da580c9de07460e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e829c4535ff57a41cfecbb9313ef7b"><td class="memItemLeft" align="right" valign="top"><a id="af7e829c4535ff57a41cfecbb9313ef7b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Animation2D</b> (crstring file_path, int num_cols, std::size_t start=0, std::size_t length=1, float speed=1)</td></tr>
+<tr class="separator:af7e829c4535ff57a41cfecbb9313ef7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7373ff1020b685bd583ae63ba24de55"><td class="memItemLeft" align="right" valign="top"><a id="af7373ff1020b685bd583ae63ba24de55"></a>
 glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><b>get_uv</b> () const</td></tr>
 <tr class="separator:af7373ff1020b685bd583ae63ba24de55"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,15 +103,21 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_start</b> 
 <tr class="memitem:a879e528e64c38508ecab2dfff935d5d9"><td class="memItemLeft" align="right" valign="top"><a id="a879e528e64c38508ecab2dfff935d5d9"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_length</b> () const</td></tr>
 <tr class="separator:a879e528e64c38508ecab2dfff935d5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9848d72d81b4391bffc40473bb6556e"><td class="memItemLeft" align="right" valign="top"><a id="ac9848d72d81b4391bffc40473bb6556e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>get_speed</b> () const</td></tr>
+<tr class="separator:ac9848d72d81b4391bffc40473bb6556e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad6c0188e2b36f42caf1817537ec483"><td class="memItemLeft" align="right" valign="top"><a id="a0ad6c0188e2b36f42caf1817537ec483"></a>
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>get_tex_id</b> () const</td></tr>
 <tr class="separator:a0ad6c0188e2b36f42caf1817537ec483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0aae6f2c69f9edb1e5f0dc35a440e48"><td class="memItemLeft" align="right" valign="top"><a id="aa0aae6f2c69f9edb1e5f0dc35a440e48"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>get_time</b> () const</td></tr>
 <tr class="separator:aa0aae6f2c69f9edb1e5f0dc35a440e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f041ee6aa98d79af06696095a5e95e"><td class="memItemLeft" align="right" valign="top"><a id="a06f041ee6aa98d79af06696095a5e95e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>switch_animation</b> (std::size_t start, std::size_t length)</td></tr>
-<tr class="separator:a06f041ee6aa98d79af06696095a5e95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5de467f16ecc3851bcfbf1da68a6103"><td class="memItemLeft" align="right" valign="top"><a id="aa5de467f16ecc3851bcfbf1da68a6103"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>switch_animation</b> (std::size_t start, std::size_t length, float speed=1)</td></tr>
+<tr class="separator:aa5de467f16ecc3851bcfbf1da68a6103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22616e5abdf38980404a711503f1b99"><td class="memItemLeft" align="right" valign="top"><a id="ab22616e5abdf38980404a711503f1b99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_speed</b> (float speed)</td></tr>
+<tr class="separator:ab22616e5abdf38980404a711503f1b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc6f94232a04f3302ab5670ab46be44"><td class="memItemLeft" align="right" valign="top"><a id="a3bc6f94232a04f3302ab5670ab46be44"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>step</b> (float dt)</td></tr>
 <tr class="separator:a3bc6f94232a04f3302ab5670ab46be44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +132,10 @@ Private Attributes</h2></td></tr>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#a24497412429334fe270a1b0ba6526203">m_time</a></td></tr>
 <tr class="memdesc:a24497412429334fe270a1b0ba6526203"><td class="mdescLeft">&#160;</td><td class="mdescRight">how far along in the animation we are <br /></td></tr>
 <tr class="separator:a24497412429334fe270a1b0ba6526203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2df81906b0e98c7df18ed19950695e7"><td class="memItemLeft" align="right" valign="top"><a id="ae2df81906b0e98c7df18ed19950695e7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#ae2df81906b0e98c7df18ed19950695e7">m_speed</a></td></tr>
+<tr class="memdesc:ae2df81906b0e98c7df18ed19950695e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">how quickly the animation advances when step is called <br /></td></tr>
+<tr class="separator:ae2df81906b0e98c7df18ed19950695e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61cdaf3599067dc1e2fe3b926b29b838"><td class="memItemLeft" align="right" valign="top"><a id="a61cdaf3599067dc1e2fe3b926b29b838"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d7a/classnta_1_1Animation2D.html#a61cdaf3599067dc1e2fe3b926b29b838">m_start_index</a></td></tr>
 <tr class="memdesc:a61cdaf3599067dc1e2fe3b926b29b838"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single animation spans m_length continuous sprite indices begging with m_start_index. <br /></td></tr>
@@ -143,8 +153,8 @@ Collaboration diagram for nta::Animation2D:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d21/classnta_1_1Animation2D__coll__graph.png" border="0" usemap="#nta_1_1Animation2D_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1Animation2D_coll__map" id="nta_1_1Animation2D_coll__map">
-<area shape="rect" id="node4" href="../../d9/d85/structnta_1_1SpriteSheet.html" title="Multiple sprites (each the same size) in one texture. " alt="" coords="163,213,279,240"/>
-<area shape="rect" id="node5" href="../../d3/dff/structnta_1_1GLTexture.html" title="represents a texture " alt="" coords="77,124,186,151"/>
+<area shape="rect" id="node4" href="../../d9/d85/structnta_1_1SpriteSheet.html" title="Multiple sprites (each the same size) in one texture. " alt="" coords="168,213,284,240"/>
+<area shape="rect" id="node5" href="../../d3/dff/structnta_1_1GLTexture.html" title="represents a texture " alt="" coords="82,124,191,151"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this class was generated from the following files:<ul>
