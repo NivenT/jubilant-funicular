@@ -50,21 +50,29 @@ namespace nta {
         SpriteSheet m_sheet;
         /// how far along in the animation we are
         float m_time;
+        /// how quickly the animation advances when step is called
+        float m_speed;
         /// A single animation spans m_length continuous sprite indices begging with m_start_index
         std::size_t m_start_index, m_length;
     public:
         Animation2D() {}
-        Animation2D(const SpriteSheet& sheet, std::size_t start = 0, std::size_t length = 1);
-        Animation2D(crstring file_path, crivec2 dims, std::size_t start = 0, std::size_t length = 1);
-        Animation2D(crstring file_path, int num_cols, std::size_t start = 0, std::size_t length = 1);
+        Animation2D(const SpriteSheet& sheet, std::size_t start = 0, 
+                    std::size_t length = 1, float speed = 1);
+        Animation2D(crstring file_path, crivec2 dims, std::size_t start = 0, 
+                    std::size_t length = 1, float speed = 1);
+        Animation2D(crstring file_path, int num_cols, std::size_t start = 0, 
+                    std::size_t length = 1, float speed = 1);
         glm::vec4 get_uv() const;
         glm::vec4 get_flipped_uv() const;
         std::size_t get_index() const;
         std::size_t get_start() const;
         std::size_t get_length() const;
+        float get_speed() const;
         GLuint get_tex_id() const;
         float get_time() const;
-        void switch_animation(std::size_t start, std::size_t length);
+        void switch_animation(std::size_t start, std::size_t length, float speed = 1);
+        // ugh I have a setter and a getter (maybe I should just make m_speed public...)
+        void set_speed(float speed);
         void step(float dt);
     };
 }

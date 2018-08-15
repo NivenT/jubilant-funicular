@@ -11,8 +11,8 @@ namespace nta {
         tex = ResourceManager::getTexture(file_path).get_data();
     }
 
-    Animation2D::Animation2D(const SpriteSheet& sheet, std::size_t start, std::size_t length) :
-        m_sheet(sheet), m_time(0), m_start_index(start), m_length(length) {
+    Animation2D::Animation2D(const SpriteSheet& sheet, std::size_t start, std::size_t length, float speed) :
+        m_sheet(sheet), m_time(0), m_speed(speed), m_start_index(start), m_length(length) {
         if (m_length == 0) {
             Logger::writeErrorToLog(INVALID_LEN_MSG, INVALID_VALUE);
         }
@@ -20,11 +20,11 @@ namespace nta {
             Logger::writeErrorToLog(INVALID_IDX_MSG, INVALID_VALUE);
         }
     }
-    Animation2D::Animation2D(crstring file_path, crivec2 dims, std::size_t start, std::size_t length) :
-        Animation2D(SpriteSheet(file_path, dims), start, length) {
+    Animation2D::Animation2D(crstring file_path, crivec2 dims, std::size_t start, std::size_t length, float speed) :
+        Animation2D(SpriteSheet(file_path, dims), start, length, speed) {
     }
-    Animation2D::Animation2D(crstring file_path, int num_cols, std::size_t start, std::size_t length) :
-        Animation2D(SpriteSheet(file_path, num_cols), start, length) {
+    Animation2D::Animation2D(crstring file_path, int num_cols, std::size_t start, std::size_t length, float speed) :
+        Animation2D(SpriteSheet(file_path, num_cols), start, length, speed) {
     }
     glm::vec4 Animation2D::get_uv() const {
         return m_sheet.get_uv(get_index());
@@ -44,13 +44,17 @@ namespace nta {
     std::size_t Animation2D::get_length() const {
         return m_length;
     }
+    float Animation2D::get_speed() const {
+        return m_speed;
+    }
     float Animation2D::get_time() const {
         return m_time;
     }
-    void Animation2D::switch_animation(std::size_t start, std::size_t length) {
+    void Animation2D::switch_animation(std::size_t start, std::size_t length, float speed) {
         m_start_index = start;
         m_length = length;
         m_time = 0;
+        m_speed = speed;
 
         if (m_length == 0) {
             Logger::writeErrorToLog(INVALID_LEN_MSG, INVALID_VALUE);
@@ -59,7 +63,10 @@ namespace nta {
             Logger::writeErrorToLog(INVALID_IDX_MSG, INVALID_VALUE);
         }
     }
+    void Animation2D::set_speed(float speed) {
+        m_speed = speed;
+    }
     void Animation2D::step(float dt) {
-        m_time += dt;
+        m_time += m_speed * dt;
     }
 }
