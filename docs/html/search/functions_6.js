@@ -5,6 +5,7 @@ var searchData=
   ['get_5ferr',['get_err',['../d8/d2e/classnta_1_1Result.html#a9ea9717e77d5e9a2371eb3cf9c896bc7',1,'nta::Result']]],
   ['get_5ferrortype_5fstring',['get_errortype_string',['../d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d',1,'nta']]],
   ['get_5fflipped_5fuv',['get_flipped_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a98643a92390617ac5575b7a951e9805a',1,'nta::SpriteSheet']]],
+  ['get_5fframe_5fdims',['get_frame_dims',['../d9/d85/structnta_1_1SpriteSheet.html#aa29557bfccf62bef73a11e7f38439fb8',1,'nta::SpriteSheet']]],
   ['get_5fuv',['get_uv',['../d9/d85/structnta_1_1SpriteSheet.html#a618bc48e6978a19ad9eb56dda3307f5a',1,'nta::SpriteSheet']]],
   ['getavailableworker',['getAvailableWorker',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a0cf734e83b83378a70a67864e9eeb732',1,'nta::utils::ThreadPool']]],
   ['getaxes',['getAxes',['../d3/d28/classnta_1_1Camera2D.html#a395b5bfa81b603a3d4e78d6c54aa8212',1,'nta::Camera2D']]],
