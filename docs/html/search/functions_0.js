@@ -8,6 +8,5 @@ var searchData=
   ['addprimitive',['addPrimitive',['../d4/df3/classnta_1_1PrimitiveBatch.html#a61a1fd06003233eac050ea7317fafc43',1,'nta::PrimitiveBatch']]],
   ['addrect',['addRect',['../d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9',1,'nta::FontMap']]],
   ['addscreen',['addScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df',1,'nta::ScreenManager']]],
-  ['allworkfinished',['allWorkFinished',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545314bb70fd5cd2ecbd8759d3251cc6',1,'nta::utils::ThreadPool']]],
-  ['as_5fuint',['as_uint',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a89e8033a247c3342d99a762f6110d877',1,'nta::utils::JsonNum']]]
+  ['allworkfinished',['allWorkFinished',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545314bb70fd5cd2ecbd8759d3251cc6',1,'nta::utils::ThreadPool']]]
 ];

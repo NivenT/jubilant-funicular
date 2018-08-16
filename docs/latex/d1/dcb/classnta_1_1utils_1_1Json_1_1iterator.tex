@@ -87,9 +87,19 @@ JsonArray::iterator {\bfseries m\_arr\_iter}\\
 \subsubsection*{template$<$bool c = 0$>$\newline
 class nta\+::utils\+::\+Json\+::iterator$<$ c $>$}
 
-Custom iterator for looping over \hyperlink{classnta_1_1utils_1_1Json}{Json} values For Arrays\+: loops over the elements For Objects\+: loops over the values (keys accessible via Json\+::iterator\+::key()) For anything else (except None)\+: returns the value itself (see tets/json\+\_\+tests.\+cpp) For None\+: empty iterator c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator 
+Custom iterator for looping over \hyperlink{classnta_1_1utils_1_1Json}{Json} values
 
-Definition at line 112 of file json.\+h.
+For Arrays\+: loops over the elements
+
+For Objects\+: loops over the values (keys accessible via Json\+::iterator\+::key())
+
+For None\+: empty iterator
+
+For anything else (except None)\+: returns the value itself (see tets/json\+\_\+tests.\+cpp)
+
+c=0 gives a regular iterator and c=1 gives a const\+\_\+iterator 
+
+Definition at line 115 of file json.\+h.
 
 
 

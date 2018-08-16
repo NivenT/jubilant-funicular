@@ -214,7 +214,7 @@ bool {\bfseries operator!=} (const bool \&other) const
 \hyperlink{classnta_1_1utils_1_1Json}{Json} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const char $\ast$key) const
 \item 
 \hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_a236b5885612b74c21fbad169b21eaf55}{operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx)
-\item 
+\begin{DoxyCompactList}\small\item\em When m\+\_\+type == N\+O\+NE, first converts this into an Array. \end{DoxyCompactList}\item 
 \hyperlink{classnta_1_1utils_1_1Json}{Json} \& \hyperlink{classnta_1_1utils_1_1Json_a893f191111e604995488d147aaa711f8}{operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t idx) const
 \item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a7d094a2061036a579a63923ae30171a4}\label{classnta_1_1utils_1_1Json_a7d094a2061036a579a63923ae30171a4}} 
@@ -326,10 +326,10 @@ bool {\bfseries m\_bool}\\
 
 \subsection{Detailed Description}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000006}{Todo}]Make as\+\_\+$\ast$ functions safer and more versatile An arbitrary \hyperlink{classnta_1_1utils_1_1Json}{Json} value \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000006}{Todo}]Make as\+\_\+$\ast$ functions safer and more versatile An arbitrary \hyperlink{classnta_1_1utils_1_1Json}{Json} value (see tests/utils/json\+\_\+tests.\+cpp for example usage) \end{DoxyRefDesc}
 
 
-Definition at line 95 of file json.\+h.
+Definition at line 93 of file json.\+h.
 
 
 
@@ -348,7 +348,7 @@ Collaboration diagram for nta\+:\+:utils\+:\+:Json\+:\nopagebreak
 \subsubsection{union nta\+:\+:utils\+:\+:Json\+:\+:Json\+Token.\+\_\+\+\_\+unnamed\+\_\+\+\_\+}
 
 
-Definition at line 254 of file json.\+h.
+Definition at line 257 of file json.\+h.
 
 \begin{DoxyFields}{Class Members}
 \mbox{\Hypertarget{classnta_1_1utils_1_1Json_a0fc3cfbc27e91ea60a787de13dae3e3c}\label{classnta_1_1utils_1_1Json_a0fc3cfbc27e91ea60a787de13dae3e3c}} 
@@ -373,10 +373,12 @@ str&
 \subsubsection{\texorpdfstring{dump()}{dump()}}
 {\footnotesize\ttfamily std\+::string nta\+::utils\+::\+Json\+::dump (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{indent = {\ttfamily 0},  }\item[{std\+::size\+\_\+t}]{offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
 
-Returns a string representation of the value Note\+: never set second parameter
+Returns a string representation of the value
+
+Note\+: never set second parameter
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000024}{Todo}]Clean up code \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000023}{Todo}]Clean up code \end{DoxyRefDesc}
 
 
 Definition at line 185 of file json.\+cpp.
@@ -387,7 +389,9 @@ Definition at line 185 of file json.\+cpp.
 \subsubsection{\texorpdfstring{merge()}{merge()}}
 {\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::merge (\begin{DoxyParamCaption}\item[{const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&}]{other }\end{DoxyParamCaption})}
 
-Adds everything stored in other into this Returns this 
+Adds everything stored in other into this
+
+Returns this 
 
 Definition at line 149 of file json.\+cpp.
 
@@ -402,7 +406,7 @@ Definition at line 149 of file json.\+cpp.
 When m\+\_\+type == N\+O\+NE, first converts this into an Object. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000018}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000017}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
 
 
 Definition at line 84 of file json.\+cpp.
@@ -414,7 +418,7 @@ Definition at line 84 of file json.\+cpp.
 {\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{crstring}]{key }\end{DoxyParamCaption}) const}
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000019}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000018}{Todo}]Signal error if m\+\_\+type != O\+B\+J\+E\+CT \end{DoxyRefDesc}
 
 
 Definition at line 92 of file json.\+cpp.
@@ -425,10 +429,14 @@ Definition at line 92 of file json.\+cpp.
 \subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{idx }\end{DoxyParamCaption})}
 
+
+
+When m\+\_\+type == N\+O\+NE, first converts this into an Array. 
+
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000020}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000019}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000021}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000020}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
 
 
 Definition at line 96 of file json.\+cpp.
@@ -440,9 +448,9 @@ Definition at line 96 of file json.\+cpp.
 {\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Json}{Json} \& nta\+::utils\+::\+Json\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{idx }\end{DoxyParamCaption}) const}
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000022}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000021}{Todo}]Signal error if m\+\_\+type != A\+R\+R\+AY \end{DoxyRefDesc}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000023}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000022}{Todo}]Signal error if idx is out of bounds \end{DoxyRefDesc}
 
 
 Definition at line 105 of file json.\+cpp.
@@ -453,7 +461,9 @@ Definition at line 105 of file json.\+cpp.
 \subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
 {\footnotesize\ttfamily bool nta\+::utils\+::\+Json\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const \hyperlink{classnta_1_1utils_1_1Json}{Json} \&}]{val }\end{DoxyParamCaption})}
 
-Returns false if m\+\_\+type != A\+R\+R\+AY (or N\+O\+NE) If m\+\_\+type == N\+O\+NE, converts this into an A\+R\+R\+AY 
+Returns false if m\+\_\+type != A\+R\+R\+AY (or N\+O\+NE)
+
+If m\+\_\+type == N\+O\+NE, converts this into an A\+R\+R\+AY 
 
 Definition at line 127 of file json.\+cpp.
 
@@ -474,7 +484,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{resize()}{resize()}}
 {\footnotesize\ttfamily bool nta\+::utils\+::\+Json\+::resize (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
-Returns false if m\+\_\+type is not N\+O\+NE or A\+R\+R\+AY If m\+\_\+type == N\+O\+NE, converts this into an A\+R\+R\+AY 
+Returns false if m\+\_\+type is not N\+O\+NE or A\+R\+R\+AY
+
+If m\+\_\+type == N\+O\+NE, converts this into an A\+R\+R\+AY 
 
 Definition at line 117 of file json.\+cpp.
 
@@ -489,7 +501,7 @@ Definition at line 117 of file json.\+cpp.
 Converts curr into a stream of tokens. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000025}{Todo}]\hyperlink{structnta_1_1Error}{Error} cleanly \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000024}{Todo}]\hyperlink{structnta_1_1Error}{Error} cleanly \end{DoxyRefDesc}
 
 
 Definition at line 277 of file json.\+cpp.

@@ -21,7 +21,6 @@ namespace nta {
 			NEG_INT,
 			FLOAT
 		};
-		/// \todo Make as_* functions safer and more versatile
 		/// \todo add math operators
 		/// A Json Number
 		class JsonNum {
@@ -50,7 +49,6 @@ namespace nta {
 				}
 			}
 			JsonNumType get_type() { return m_type; }
-			/// \todo Signal ErrorManager if wrong type
 			uint64_t as_uint() const { return m_type == FLOAT ? m_flt : m_pos; }
 			int64_t as_int() const { return m_type == FLOAT ? m_flt : m_neg; }
 			double as_float() const { return m_type == FLOAT ? m_flt : m_neg; }
@@ -91,7 +89,7 @@ namespace nta {
 			NONE    = 5 // Should be called null
 		};
 		/// \todo Make as_* functions safer and more versatile
-		/// An arbitrary Json value
+		/// An arbitrary Json value (see tests/utils/json_tests.cpp for example usage)
 		class Json {
 		public:
 			// I really like Keys
@@ -103,10 +101,15 @@ namespace nta {
 		        SetBeginEndKey& operator=(const SetBeginEndKey&);
 		    };
 		    /// Custom iterator for looping over Json values
+		    ///
 		    /// For Arrays: loops over the elements
+		    ///
 		    /// For Objects: loops over the values (keys accessible via Json::iterator::key())
-		    /// For anything else (except None): returns the value itself (see tets/json_tests.cpp)
+		    ///
 		    /// For None: empty iterator
+		    ///
+		    /// For anything else (except None): returns the value itself (see tets/json_tests.cpp)
+		    ///
 		    /// c=0 gives a regular iterator and c=1 gives a const_iterator
 		    template<bool c=0>
 			class iterator {
@@ -353,9 +356,11 @@ namespace nta {
 			std::size_t size() const;
 			bool is_empty() const { return size() == 0; }
 			/// Returns false if m_type is not NONE or ARRAY
+			///
 			/// If m_type == NONE, converts this into an ARRAY
 			bool resize(std::size_t size);
 			/// Returns false if m_type != ARRAY (or NONE)
+			///
 			/// If m_type == NONE, converts this into an ARRAY
 			bool push_back(const Json& val);
 			/// Returns first element if this is an array
@@ -363,10 +368,12 @@ namespace nta {
 			/// Returns last element if this is an array
 			Json& back();
 			/// Adds everything stored in other into this
+			///
 			/// Returns this
 			Json& merge(const Json& other);
 
 			/// Returns a string representation of the value
+			///
 			/// Note: never set second parameter
 			std::string dump(std::size_t indent = 0, std::size_t offset = 0) const;
 
@@ -405,6 +412,7 @@ namespace nta {
 			Json& operator[](crstring key) const;
 			Json& operator[](const char* key) { return operator[](std::string(key)); }
 			Json& operator[](const char* key) const { return operator[](std::string(key)); }
+			/// When m_type == NONE, first converts this into an Array
 			Json& operator[](std::size_t idx);
 			Json& operator[](std::size_t idx) const;
 			Json& operator[](int idx) { return operator[]((std::size_t)idx); }
