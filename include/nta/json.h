@@ -22,6 +22,7 @@ namespace nta {
 			FLOAT
 		};
 		/// \todo add math operators
+		///
 		/// A Json Number
 		class JsonNum {
 		private:
@@ -89,6 +90,7 @@ namespace nta {
 			NONE    = 5 // Should be called null
 		};
 		/// \todo Make as_* functions safer and more versatile
+		///
 		/// An arbitrary Json value (see tests/utils/json_tests.cpp for example usage)
 		class Json {
 		public:
