@@ -139,4 +139,8 @@ if(${NTA_BUILD_TESTS})
     add_executable(json_tests tests/utils/json_tests.cpp)
     target_link_libraries(json_tests ${NTA_LIBRARIES})
     target_include_directories(json_tests PUBLIC ${NTA_INCLUDE_DIR})
+
+    add_executable(path_tests tests/utils/path_tests.cpp)
+    target_link_libraries(path_tests ${NTA_LIBRARIES})
+    target_include_directories(path_tests PUBLIC ${NTA_INCLUDE_DIR})
 endif()

@@ -1,7 +1,6 @@
 #include <iostream>
 
-#include <nta/json.h>
-#include <nta/Logger.h>
+#include <nta/Json.h>
 
 using namespace std;
 using namespace nta::utils;

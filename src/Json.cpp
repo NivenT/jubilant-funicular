@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <unordered_set>
 
-#include "nta/json.h"
+#include "nta/Json.h"
 #include "nta/IOManager.h"
 
 namespace nta {
