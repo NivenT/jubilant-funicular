@@ -15,6 +15,8 @@ int main(int argc, char* argv[]) {
     Path p2 = std::move(p);
     assert(p.to_string() == "");
 
+    cout<<p<<" and "<<p2<<endl;
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

@@ -6,7 +6,7 @@
 namespace nta {
 	namespace utils {
 		class Path;
-		extern std::ostream operator<<(std::ostream& out, const Path& path);
+		extern std::ostream& operator<<(std::ostream& out, const Path& path);
 		/// A Path in a file system
 		class Path {
 		private:
@@ -19,7 +19,7 @@ namespace nta {
 
 			const std::string& to_string() { return m_path; }
 
-			friend std::ostream operator<<(std::ostream& out, const Path& path);
+			friend std::ostream& operator<<(std::ostream& out, const Path& path);
 		};
 	}
 }

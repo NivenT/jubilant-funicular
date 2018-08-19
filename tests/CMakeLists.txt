@@ -1,5 +1,4 @@
 file(GLOB_RECURSE TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
-
 foreach(test ${TEST_SRCS})
     # Get file name without extension
     get_filename_component(name ${test} NAME_WE)
@@ -15,4 +14,10 @@ foreach(test ${TEST_SRCS})
     add_test(NAME ${name} 
                  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests_bin 
                  COMMAND ${CMAKE_CURRENT_BINARY_DIR}/tests_bin/${name})
+
+    complement_file_list(RSRCS ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp" "*.h" "CMakeLists.txt")
+    foreach(rsrc ${RSRCS})
+        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${rsrc}
+            ${CMAKE_CURRENT_BINARY_DIR}/tests_bin/${rsrc} COPYONLY)
+    endforeach(rsrc)
 endforeach(test)
