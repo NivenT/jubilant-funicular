@@ -8,6 +8,8 @@ This is a library to aid in the creation of (2D) games using OpenGL and SDL2. It
 
 If you are interesting in using this for your own project, then looking in the `examples` folder may be helpful.
 
+Ideally, this entire library would work equally well on Linux, OSX, and Windows. In practice, the code is only tested on Linux, so while I try to keep things OS-agnostic, I cannot promise this is the case. Open an issue if it fails to build on your computer.
+
 Documentation can be found [here](https://nivent.github.io/jubilant-funicular/html/index.html)
 
 # Requirements

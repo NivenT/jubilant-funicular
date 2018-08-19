@@ -30,11 +30,9 @@ namespace nta {
             }
             return ret;
         }
-        std::string trim(crstring str) {
-            static const std::string whitespace = " \t\n\v\f\r\0";
-
-            auto begin = str.find_first_not_of(whitespace);
-            auto end = str.find_last_not_of(whitespace);
+        std::string trim(crstring str, crstring back_trash, crstring front_trash) {
+            auto begin = str.find_first_not_of(front_trash);
+            auto end = str.find_last_not_of(back_trash);
 
             return str.substr(begin, end-begin+1);
         }

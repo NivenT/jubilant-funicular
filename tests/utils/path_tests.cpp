@@ -15,7 +15,21 @@ int main(int argc, char* argv[]) {
     Path p2 = std::move(p);
     assert(p.to_string() == "");
 
-    cout<<p<<" and "<<p2<<endl;
+    Path q("folder/file.txt");
+    assert(q.exists());
+    assert(q.is_file());
+    assert(!q.is_directory());
+    assert(q.parent() == "folder");
+    assert(q.parent() == "folder/");
+    assert(q.parent().is_directory());
+
+    assert(Path("folder") + "file.txt" == q);
+    assert(q.is_relative());
+
+    Path r = "/home";
+    assert(r.is_absolute());
+
+    assert(!Path("fake/file.who").exists());
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();

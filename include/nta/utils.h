@@ -17,7 +17,7 @@ namespace nta {
 		/// Replaces all occurences of any string in the ith element of os with the ith element of ns
 		extern std::string replace_all(crstring str, const std::vector<std::vector<std::string>>& os, const std::vector<std::string>& ns);
 		/// Removes leading and trailing whitespace
-		extern std::string trim(crstring str);
+		extern std::string trim(crstring str, crstring back_trash = " \t\n\v\f\r\0", crstring front_trash = " \t\n\v\f\r\0");
 		/// Splits a string into substrings separated by delim
 		extern std::vector<std::string> split(crstring str, char delim);
 		/// Rotates a point (about the origin) by the given angle
