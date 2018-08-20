@@ -55,6 +55,9 @@ int main(int argc, char* argv[]) {
     assert(*(it++) == "file.txt");
     assert(it == t.end());
 
+    assert(Path("folder/fake/").parent() == "folder");
+    assert(Path("folder").parent() == ".");
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

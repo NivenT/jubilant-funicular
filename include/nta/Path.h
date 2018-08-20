@@ -127,9 +127,11 @@ namespace nta {
 
 			/// Converts this to an absolute path and returns it.
 			Path& resolve();
+			/// Returns the folder containing this path
 			Path parent() const;
 
 			bool exists() const;
+			bool empty() const { return is_empty(); }
 			bool is_empty() const { return m_path.empty(); }
 			bool is_file() const;
 			bool is_directory() const;

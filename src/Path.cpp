@@ -45,10 +45,10 @@ namespace nta {
 		Path Path::parent() const {
 			Path ret(m_path);
 			do {
-				int pos = ret.m_path.rfind("/");
+				int pos = ret.m_path.rfind("/", ends_with(m_path, "/") ? m_path.size()-2 : std::string::npos);
 				ret.m_path = ret.m_path.substr(0, pos);
 			} while (ret.m_path.back() == '/');
-			return ret + "/";
+			return ret == *this ? "." : ret + "/";
 		}
 		bool Path::exists() const {
 			return std::ifstream(m_path).good();
