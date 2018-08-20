@@ -1,0 +1,166 @@
+\hypertarget{classnta_1_1utils_1_1Path}{}\section{nta\+:\+:utils\+:\+:Path Class Reference}
+\label{classnta_1_1utils_1_1Path}\index{nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}}
+
+
+A (case-\/sensitive) \hyperlink{classnta_1_1utils_1_1Path}{Path} in a file system.  
+
+
+
+
+{\ttfamily \#include $<$Path.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnta_1_1utils_1_1Path_1_1iterator}{iterator}
+\item 
+class \hyperlink{classnta_1_1utils_1_1Path_1_1SetBeginEndKey}{Set\+Begin\+End\+Key}
+\begin{DoxyCompactList}\small\item\em Key unlocking the set\+\_\+\{begin,end\}() \char`\"{}private\char`\"{} functions of class \hyperlink{classnta_1_1utils_1_1Path_1_1iterator}{Path\+::iterator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a1fe69ab28332246bb5c39fe31b322d0c}\label{classnta_1_1utils_1_1Path_a1fe69ab28332246bb5c39fe31b322d0c}} 
+{\bfseries Path} (crstring path)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a34f62db3f2752ebdb1b43021236e8ac2}\label{classnta_1_1utils_1_1Path_a34f62db3f2752ebdb1b43021236e8ac2}} 
+{\bfseries Path} (const char $\ast$p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a05c3d1cf0849617292cedabb549c8669}\label{classnta_1_1utils_1_1Path_a05c3d1cf0849617292cedabb549c8669}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& \hyperlink{classnta_1_1utils_1_1Path_a05c3d1cf0849617292cedabb549c8669}{resolve} ()
+\begin{DoxyCompactList}\small\item\em Converts this to an absolute path and returns it. \end{DoxyCompactList}\item 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \hyperlink{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}{parent} () const
+\begin{DoxyCompactList}\small\item\em Returns the folder containing this path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a211a5a235b5f7fba36caccf6e4688427}\label{classnta_1_1utils_1_1Path_a211a5a235b5f7fba36caccf6e4688427}} 
+bool {\bfseries exists} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a7455a919c629658fea5cb9bfe25197a3}\label{classnta_1_1utils_1_1Path_a7455a919c629658fea5cb9bfe25197a3}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ae21913de2f7edabf943e12197ebd678f}\label{classnta_1_1utils_1_1Path_ae21913de2f7edabf943e12197ebd678f}} 
+bool {\bfseries is\+\_\+empty} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ac72b706957b1cfe5b74f15cbd444a0db}\label{classnta_1_1utils_1_1Path_ac72b706957b1cfe5b74f15cbd444a0db}} 
+bool {\bfseries is\+\_\+file} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ab72254e3a00c0b295fc9a5c4a6d301f0}\label{classnta_1_1utils_1_1Path_ab72254e3a00c0b295fc9a5c4a6d301f0}} 
+bool {\bfseries is\+\_\+directory} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ab5322085f0c09f398577b0b07754616a}\label{classnta_1_1utils_1_1Path_ab5322085f0c09f398577b0b07754616a}} 
+bool {\bfseries is\+\_\+folder} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ae0c442ee41f2277fdca0c4d1e8de9624}\label{classnta_1_1utils_1_1Path_ae0c442ee41f2277fdca0c4d1e8de9624}} 
+bool {\bfseries is\+\_\+relative} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a4aa05991a603937878d04479c9cce090}\label{classnta_1_1utils_1_1Path_a4aa05991a603937878d04479c9cce090}} 
+bool {\bfseries is\+\_\+absolute} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a216ce0f62a967938c5435ad4ed3d7bc5}\label{classnta_1_1utils_1_1Path_a216ce0f62a967938c5435ad4ed3d7bc5}} 
+const std\+::string \& {\bfseries to\+\_\+string} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a0579e9d550d105a42057570a708ddd76}\label{classnta_1_1utils_1_1Path_a0579e9d550d105a42057570a708ddd76}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& {\bfseries operator=} (const char $\ast$p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a199baff1c61788fe9343353f6f3738d0}\label{classnta_1_1utils_1_1Path_a199baff1c61788fe9343353f6f3738d0}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& {\bfseries operator=} (crstring p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a02b0eb20f38f3dc81c5326aef3bead74}\label{classnta_1_1utils_1_1Path_a02b0eb20f38f3dc81c5326aef3bead74}} 
+bool {\bfseries operator==} (const char $\ast$p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a3ea2f0c6f5f127fd16f8de7cc55e7317}\label{classnta_1_1utils_1_1Path_a3ea2f0c6f5f127fd16f8de7cc55e7317}} 
+bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1Path}{Path} \&p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ac0d9a139e8e6b4dc709705ad68207a65}\label{classnta_1_1utils_1_1Path_ac0d9a139e8e6b4dc709705ad68207a65}} 
+bool {\bfseries operator==} (crstring p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_afd56316ce60b7a35ac2d36e3cbdd53bc}\label{classnta_1_1utils_1_1Path_afd56316ce60b7a35ac2d36e3cbdd53bc}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} {\bfseries operator+} (const char $\ast$p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a7bdad4efb2471423c9db3793f5d0aa28}\label{classnta_1_1utils_1_1Path_a7bdad4efb2471423c9db3793f5d0aa28}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& {\bfseries operator+=} (const char $\ast$p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a28d802076f2e994b05882cf3737e4058}\label{classnta_1_1utils_1_1Path_a28d802076f2e994b05882cf3737e4058}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} {\bfseries operator+} (crstring p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a5fe72e350fb984ae95cd4fefdb6296a1}\label{classnta_1_1utils_1_1Path_a5fe72e350fb984ae95cd4fefdb6296a1}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& {\bfseries operator+=} (crstring p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_aa98c57002370f63a13f91e9964aa7474}\label{classnta_1_1utils_1_1Path_aa98c57002370f63a13f91e9964aa7474}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} {\bfseries operator+} (const \hyperlink{classnta_1_1utils_1_1Path}{Path} \&p) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a65dabfa50788fa874f491d9c9d40ba8f}\label{classnta_1_1utils_1_1Path_a65dabfa50788fa874f491d9c9d40ba8f}} 
+\hyperlink{classnta_1_1utils_1_1Path}{Path} \& {\bfseries operator+=} (const \hyperlink{classnta_1_1utils_1_1Path}{Path} \&p)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ade397b8da78c752bdb9013c9655e9d3b}\label{classnta_1_1utils_1_1Path_ade397b8da78c752bdb9013c9655e9d3b}} 
+\hyperlink{classnta_1_1utils_1_1Path_1_1iterator}{Path\+::iterator} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a1a549e22ea993693a1678b9eb2db6897}\label{classnta_1_1utils_1_1Path_a1a549e22ea993693a1678b9eb2db6897}} 
+\hyperlink{classnta_1_1utils_1_1Path_1_1iterator}{Path\+::iterator} {\bfseries end} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_aec5671e324a330a1eb87ff1accc3514c}\label{classnta_1_1utils_1_1Path_aec5671e324a330a1eb87ff1accc3514c}} 
+static \hyperlink{classnta_1_1utils_1_1Path}{Path} \hyperlink{classnta_1_1utils_1_1Path_aec5671e324a330a1eb87ff1accc3514c}{cwd} ()
+\begin{DoxyCompactList}\small\item\em Returns \hyperlink{classnta_1_1utils_1_1Path}{Path} representing the current working directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_af858cf7caff9965fe406011e56818884}\label{classnta_1_1utils_1_1Path_af858cf7caff9965fe406011e56818884}} 
+std\+::string {\bfseries m\+\_\+path}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_ac7fb093b2a174ecaf6de71271bbabe56}\label{classnta_1_1utils_1_1Path_ac7fb093b2a174ecaf6de71271bbabe56}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classnta_1_1utils_1_1Path}{Path} \&path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A (case-\/sensitive) \hyperlink{classnta_1_1utils_1_1Path}{Path} in a file system. 
+
+Definition at line 17 of file Path.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Path\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{d4/d5a/classnta_1_1utils_1_1Path__coll__graph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}\label{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}} 
+\index{nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}!parent@{parent}}
+\index{parent@{parent}!nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}}
+\subsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily \hyperlink{classnta_1_1utils_1_1Path}{Path} nta\+::utils\+::\+Path\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the folder containing this path. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000026}{Todo}]Make word for relative paths \end{DoxyRefDesc}
+
+
+Definition at line 45 of file Path.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{dc/d05/classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Path.\+h\item 
+src/Path.\+cpp\end{DoxyCompactItemize}

@@ -11,6 +11,7 @@ var searchData=
   ['renderbatch',['RenderBatch',['../dd/d38/structnta_1_1RenderBatch.html#a02a531d942296d7194ca96f7ed614f14',1,'nta::RenderBatch']]],
   ['replace_5fall',['replace_all',['../d7/d33/namespacenta_1_1utils.html#acad0765e34bce437d37871dcf88a9099',1,'nta::utils::replace_all(crstring str, crstring o, crstring n)'],['../d7/d33/namespacenta_1_1utils.html#ac35b6baec75cd7b9d9ab7532cc2f9320',1,'nta::utils::replace_all(crstring str, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;os, const std::vector&lt; std::string &gt; &amp;ns)']]],
   ['resize',['resize',['../d1/d3d/classnta_1_1utils_1_1Json.html#a19f47693bafb5d8e0fe384e0357d0da1',1,'nta::utils::Json::resize()'],['../d4/dfb/classnta_1_1Window.html#a23b55b95d017fe35655ed1287869bdf1',1,'nta::Window::resize()']]],
+  ['resolve',['resolve',['../dc/d05/classnta_1_1utils_1_1Path.html#a05c3d1cf0849617292cedabb549c8669',1,'nta::utils::Path']]],
   ['result',['Result',['../d8/d2e/classnta_1_1Result.html#a6bb10dacafbf334b7209adc5615de44e',1,'nta::Result::Result()'],['../d8/d2e/classnta_1_1Result.html#a2410d4b139bc036b9ff6d30ab5e15f8d',1,'nta::Result::Result(const Result &amp;other)']]],
   ['resume',['resume',['../d4/dab/classnta_1_1Music.html#a7eb8159db905f34ebf6ad48ec9a1afa1',1,'nta::Music']]],
   ['rotate',['rotate',['../d3/d28/classnta_1_1Camera2D.html#a4529f2111c2621764c42365df5a504e0',1,'nta::Camera2D::rotate()'],['../d7/d33/namespacenta_1_1utils.html#a4171db688c28bc11eb63d3ad0e8bf136',1,'nta::utils::rotate()']]],

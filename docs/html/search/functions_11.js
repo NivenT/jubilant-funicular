@@ -7,5 +7,5 @@ var searchData=
   ['tokenize',['tokenize',['../d1/d3d/classnta_1_1utils_1_1Json.html#a905d67b125a7aadd771bb74a1bb63f34',1,'nta::utils::Json']]],
   ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
   ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]],
-  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#a5dcdd9caf6995a33370beb952759866f',1,'nta::utils']]]
+  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01',1,'nta::utils']]]
 ];

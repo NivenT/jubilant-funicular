@@ -12,6 +12,8 @@ class \hyperlink{classnta_1_1utils_1_1Json}{Json}
 \item 
 class \hyperlink{classnta_1_1utils_1_1JsonNum}{Json\+Num}
 \item 
+class \hyperlink{classnta_1_1utils_1_1Path}{Path}
+\begin{DoxyCompactList}\small\item\em A (case-\/sensitive) \hyperlink{classnta_1_1utils_1_1Path}{Path} in a file system. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1utils_1_1Semaphore}{Semaphore}
 \item 
 class \hyperlink{classnta_1_1utils_1_1ThreadPool}{Thread\+Pool}
@@ -48,6 +50,9 @@ enum \hyperlink{namespacenta_1_1utils_ac9921c0a3baf86d9facdc4927c66def3}{Json\+V
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{namespacenta_1_1utils_aafbc0cf6600011397dc89456e14a706f}\label{namespacenta_1_1utils_aafbc0cf6600011397dc89456e14a706f}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classnta_1_1utils_1_1Path}{Path} \&path)
+\item 
 \mbox{\Hypertarget{namespacenta_1_1utils_a9ad5fe63f14dd42c0db25d71e101e85c}\label{namespacenta_1_1utils_a9ad5fe63f14dd42c0db25d71e101e85c}} 
 bool \hyperlink{namespacenta_1_1utils_a9ad5fe63f14dd42c0db25d71e101e85c}{starts\+\_\+with} (crstring str, crstring prefix)
 \begin{DoxyCompactList}\small\item\em Checks if str starts with prefix. \end{DoxyCompactList}\item 
@@ -60,8 +65,8 @@ std\+::string \hyperlink{namespacenta_1_1utils_acad0765e34bce437d37871dcf88a9099
 \mbox{\Hypertarget{namespacenta_1_1utils_ac35b6baec75cd7b9d9ab7532cc2f9320}\label{namespacenta_1_1utils_ac35b6baec75cd7b9d9ab7532cc2f9320}} 
 std\+::string \hyperlink{namespacenta_1_1utils_ac35b6baec75cd7b9d9ab7532cc2f9320}{replace\+\_\+all} (crstring str, const std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ \&os, const std\+::vector$<$ std\+::string $>$ \&ns)
 \begin{DoxyCompactList}\small\item\em Replaces all occurences of any string in the ith element of os with the ith element of ns. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{namespacenta_1_1utils_a5dcdd9caf6995a33370beb952759866f}\label{namespacenta_1_1utils_a5dcdd9caf6995a33370beb952759866f}} 
-std\+::string \hyperlink{namespacenta_1_1utils_a5dcdd9caf6995a33370beb952759866f}{trim} (crstring str)
+\mbox{\Hypertarget{namespacenta_1_1utils_af4c37b245aa436ad6022581a347feb01}\label{namespacenta_1_1utils_af4c37b245aa436ad6022581a347feb01}} 
+std\+::string \hyperlink{namespacenta_1_1utils_af4c37b245aa436ad6022581a347feb01}{trim} (crstring str, crstring back\+\_\+trash=\char`\"{} \textbackslash{}\textbackslash{}\textbackslash{}\char`\"{}, crstring front\+\_\+trash=\char`\"{} \textbackslash{}\textbackslash{}\textbackslash{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em Removes leading and trailing whitespace. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{namespacenta_1_1utils_ae2b6ac39c9975a5ca13c417395fae759}\label{namespacenta_1_1utils_ae2b6ac39c9975a5ca13c417395fae759}} 
 std\+::vector$<$ std\+::string $>$ \hyperlink{namespacenta_1_1utils_ae2b6ac39c9975a5ca13c417395fae759}{split} (crstring str, char delim)

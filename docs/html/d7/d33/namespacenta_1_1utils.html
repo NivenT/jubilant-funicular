@@ -82,6 +82,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d23/classnta_1_1utils_1_1JsonNum.html">JsonNum</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (case-sensitive) <a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html" title="A (case-sensitive) Path in a file system. ">Path</a> in a file system.  <a href="../../dc/d05/classnta_1_1utils_1_1Path.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfa/classnta_1_1utils_1_1Semaphore.html">Semaphore</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5b/classnta_1_1utils_1_1ThreadPool.html">ThreadPool</a></td></tr>
@@ -120,6 +123,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aafbc0cf6600011397dc89456e14a706f"><td class="memItemLeft" align="right" valign="top"><a id="aafbc0cf6600011397dc89456e14a706f"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a> &amp;path)</td></tr>
+<tr class="separator:aafbc0cf6600011397dc89456e14a706f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top"><a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (crstring str, crstring prefix)</td></tr>
 <tr class="memdesc:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str starts with prefix. <br /></td></tr>
@@ -136,10 +142,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac35b6baec75cd7b9d9ab7532cc2f9320">replace_all</a> (crstring str, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;os, const std::vector&lt; std::string &gt; &amp;ns)</td></tr>
 <tr class="memdesc:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurences of any string in the ith element of os with the ith element of ns. <br /></td></tr>
 <tr class="separator:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dcdd9caf6995a33370beb952759866f"><td class="memItemLeft" align="right" valign="top"><a id="a5dcdd9caf6995a33370beb952759866f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a5dcdd9caf6995a33370beb952759866f">trim</a> (crstring str)</td></tr>
-<tr class="memdesc:a5dcdd9caf6995a33370beb952759866f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes leading and trailing whitespace. <br /></td></tr>
-<tr class="separator:a5dcdd9caf6995a33370beb952759866f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c37b245aa436ad6022581a347feb01"><td class="memItemLeft" align="right" valign="top"><a id="af4c37b245aa436ad6022581a347feb01"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01">trim</a> (crstring str, crstring back_trash=&quot; \\\&quot;, crstring front_trash=&quot; \\\&quot;)</td></tr>
+<tr class="memdesc:af4c37b245aa436ad6022581a347feb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes leading and trailing whitespace. <br /></td></tr>
+<tr class="separator:af4c37b245aa436ad6022581a347feb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2b6ac39c9975a5ca13c417395fae759"><td class="memItemLeft" align="right" valign="top"><a id="ae2b6ac39c9975a5ca13c417395fae759"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ae2b6ac39c9975a5ca13c417395fae759">split</a> (crstring str, char delim)</td></tr>
 <tr class="memdesc:ae2b6ac39c9975a5ca13c417395fae759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings separated by delim. <br /></td></tr>

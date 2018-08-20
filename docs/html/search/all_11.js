@@ -13,6 +13,6 @@ var searchData=
   ['topleft',['topLeft',['../d6/db3/structnta_1_1Glyph.html#a71969ecd8d228e48f9dff95787187282',1,'nta::Glyph']]],
   ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
   ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]],
-  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#a5dcdd9caf6995a33370beb952759866f',1,'nta::utils']]],
+  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01',1,'nta::utils']]],
   ['type',['type',['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error::type()'],['../d8/d00/structnta_1_1Event.html#a0d5af902fd256daec7ad0df501efbd4d',1,'nta::Event::type()']]]
 ];
