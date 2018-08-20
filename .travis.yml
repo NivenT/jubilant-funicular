@@ -55,3 +55,4 @@ before_script:
 
 script:
   - make VERBOSE=1
+  - make test VERBOSE=1
