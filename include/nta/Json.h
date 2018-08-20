@@ -110,7 +110,7 @@ namespace nta {
 		    ///
 		    /// For None: empty iterator
 		    ///
-		    /// For anything else (except None): returns the value itself (see tets/json_tests.cpp)
+		    /// For anything else (except None): returns the value itself (see tests/utils/json_tests.cpp)
 		    ///
 		    /// c=0 gives a regular iterator and c=1 gives a const_iterator
 		    template<bool c=0>

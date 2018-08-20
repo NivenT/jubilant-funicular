@@ -2,8 +2,9 @@
 
 #ifdef NTA_UNIX
 	#include <sys/stat.h>
+	#include <unistd.h>
 #elif NTA_WINDOWS
-	#include <Windows.h>
+	#include <direct.h>
 #endif
 
 #include "nta/Path.h"
@@ -11,7 +12,34 @@
 
 namespace nta {
 	namespace utils {
-		Path::Path() {
+		Path::Path(crstring path) {
+			m_path = replace_all(path, "\\", "/");
+		}
+		Path Path::cwd() {
+			char buf[FILENAME_MAX];
+			#ifdef NTA_UNIX
+				getcwd(buf, FILENAME_MAX);
+			#elif NTA_WINDOWS
+				_getcwd(buf, FILENAME_MAX);
+			#endif
+			return Path(buf);
+		}
+		Path& Path::resolve() {
+			if (is_empty()) return *this;
+			if (is_relative()) *this = Path::cwd() + *this;
+			auto parts = split(m_path, '/');
+			for (int i = parts.size()-1; i >= 0; i--) {
+				auto& part = parts[i];
+				if ((part.empty() || part == ".") && i != 0) {
+					parts.erase(parts.begin() + i);
+				} else if (part == ".." && i >= 1) {
+					parts.erase(parts.begin() + i);
+					parts.erase(parts.begin() + i - 1);
+				}
+			}
+			m_path = "";
+			for (auto& part : parts) m_path += part + "/";
+			return *this;
 		}
 		/// \todo Make word for relative paths
 		Path Path::parent() const {
@@ -53,7 +81,19 @@ namespace nta {
 			return trim(m_path, "/\\") == trim(p, "/\\");
 		}
 		Path Path::operator+(const char* p) const {
-			return ends_with(m_path, "/") ? Path(m_path + p) : Path(m_path + "/" + p);
+			Path p2(p);
+			return ends_with(m_path, "/") ? Path(m_path + p2.m_path) : 
+											Path(m_path + "/" + p2.m_path);
+		}
+		Path::iterator Path::begin() const {
+			iterator ret(this);
+			ret.set_begin(SetBeginEndKey());
+			return ret;
+		}
+		Path::iterator Path::end() const {
+			iterator ret(this);
+			ret.set_end(SetBeginEndKey());
+			return ret;
 		}
 
 		std::ostream& operator<<(std::ostream& out, const Path& path) {
