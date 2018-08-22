@@ -246,6 +246,7 @@ namespace nta {
 					} else {
 						num = other.num;
 					}
+					return *this;
 				}
 				bool operator==(const JsonToken& rhs) const {
 					return type == rhs.type && ( type == SYMBOL ?

@@ -142,7 +142,7 @@ namespace nta {
 			const std::string& to_string() { return m_path; }
 
 			Path& operator=(const char* p) { m_path = p; return *this; }
-			Path& operator=(crstring p) { operator=(p.c_str()); }
+			Path& operator=(crstring p) { return operator=(p.c_str()); }
 			bool operator==(const char* p) const;
 			bool operator==(const Path& p) const { return *this == p.m_path; }
 			bool operator==(crstring p) const { return operator==(p.c_str()); }
