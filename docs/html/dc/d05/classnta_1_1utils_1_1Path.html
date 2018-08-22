@@ -103,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa124dc05466b3f681d02579fa0022a6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html#aa124dc05466b3f681d02579fa0022a6a">parent</a> () const</td></tr>
 <tr class="memdesc:aa124dc05466b3f681d02579fa0022a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the folder containing this path.  <a href="#aa124dc05466b3f681d02579fa0022a6a">More...</a><br /></td></tr>
 <tr class="separator:aa124dc05466b3f681d02579fa0022a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7913426e42b3ac300554ae7adb740a0a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html#a7913426e42b3ac300554ae7adb740a0a">file_name</a> (bool extension=true) const</td></tr>
+<tr class="separator:a7913426e42b3ac300554ae7adb740a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a211a5a235b5f7fba36caccf6e4688427"><td class="memItemLeft" align="right" valign="top"><a id="a211a5a235b5f7fba36caccf6e4688427"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> () const</td></tr>
 <tr class="separator:a211a5a235b5f7fba36caccf6e4688427"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,10 +199,39 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 Collaboration diagram for nta::utils::Path:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d5a/classnta_1_1utils_1_1Path__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1Path_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1Path_coll__map" id="nta_1_1utils_1_1Path_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7913426e42b3ac300554ae7adb740a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7913426e42b3ac300554ae7adb740a0a">&#9670;&nbsp;</a></span>file_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::Path::file_name </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>extension</em> = <code>true</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the last componenet (file or directory) name of the path</p>
+<p>When extension=false, the extension is dropped from the returned string </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../d5/dbb/Path_8cpp_source.html">Path.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d05/classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a_cgraph.png" border="0" usemap="#dc/d05/classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a_cgraph" alt=""/></div>
+<map name="dc/d05/classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a_cgraph" id="dc/d05/classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a_cgraph">
+<area shape="rect" id="node2" href="../../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01" title="Removes leading and trailing whitespace. " alt="" coords="242,5,345,32"/>
+<area shape="rect" id="node3" href="../../d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c" title="Checks if str ends with suffix. " alt="" coords="224,56,363,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa124dc05466b3f681d02579fa0022a6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa124dc05466b3f681d02579fa0022a6a">&#9670;&nbsp;</a></span>parent()</h2>
 
@@ -217,7 +248,7 @@ Collaboration diagram for nta::utils::Path:</div>
 </div><div class="memdoc">
 
 <p>Returns the folder containing this path. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000026">Todo:</a></b></dt><dd>Make word for relative paths </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000026">Todo:</a></b></dt><dd>Make work for relative paths </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d5/dbb/Path_8cpp_source.html">Path.cpp</a>.</p>
 <div class="dynheader">
@@ -226,7 +257,6 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../dc/d05/classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a_cgraph.png" border="0" usemap="#dc/d05/classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a_cgraph" alt=""/></div>
 <map name="dc/d05/classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a_cgraph" id="dc/d05/classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a_cgraph">
 <area shape="rect" id="node2" href="../../d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c" title="Checks if str ends with suffix. " alt="" coords="204,5,343,32"/>
-<area shape="rect" id="node3" href="../../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01" title="Removes leading and trailing whitespace. " alt="" coords="222,56,325,83"/>
 </map>
 </div>
 

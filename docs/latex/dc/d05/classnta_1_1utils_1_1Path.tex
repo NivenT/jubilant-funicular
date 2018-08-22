@@ -30,6 +30,8 @@ class \hyperlink{classnta_1_1utils_1_1Path_1_1SetBeginEndKey}{Set\+Begin\+End\+K
 \begin{DoxyCompactList}\small\item\em Converts this to an absolute path and returns it. \end{DoxyCompactList}\item 
 \hyperlink{classnta_1_1utils_1_1Path}{Path} \hyperlink{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}{parent} () const
 \begin{DoxyCompactList}\small\item\em Returns the folder containing this path. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a}{file\+\_\+name} (bool extension=true) const
+\item 
 \mbox{\Hypertarget{classnta_1_1utils_1_1Path_a211a5a235b5f7fba36caccf6e4688427}\label{classnta_1_1utils_1_1Path_a211a5a235b5f7fba36caccf6e4688427}} 
 bool {\bfseries exists} () const
 \item 
@@ -123,8 +125,7 @@ Definition at line 17 of file Path.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:utils\+:\+:Path\+:
-\nopagebreak
+Collaboration diagram for nta\+:\+:utils\+:\+:Path\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -134,6 +135,26 @@ Collaboration diagram for nta\+:\+:utils\+:\+:Path\+:
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a}\label{classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a}} 
+\index{nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}!file\+\_\+name@{file\+\_\+name}}
+\index{file\+\_\+name@{file\+\_\+name}!nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}}
+\subsubsection{\texorpdfstring{file\+\_\+name()}{file\_name()}}
+{\footnotesize\ttfamily std\+::string nta\+::utils\+::\+Path\+::file\+\_\+name (\begin{DoxyParamCaption}\item[{bool}]{extension = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Returns the last componenet (file or directory) name of the path
+
+When extension=false, the extension is dropped from the returned string 
+
+Definition at line 53 of file Path.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{dc/d05/classnta_1_1utils_1_1Path_a7913426e42b3ac300554ae7adb740a0a_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}\label{classnta_1_1utils_1_1Path_aa124dc05466b3f681d02579fa0022a6a}} 
 \index{nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}!parent@{parent}}
 \index{parent@{parent}!nta\+::utils\+::\+Path@{nta\+::utils\+::\+Path}}
@@ -145,7 +166,7 @@ Collaboration diagram for nta\+:\+:utils\+:\+:Path\+:
 Returns the folder containing this path. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000026}{Todo}]Make word for relative paths \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000026}{Todo}]Make work for relative paths \end{DoxyRefDesc}
 
 
 Definition at line 45 of file Path.\+cpp.
