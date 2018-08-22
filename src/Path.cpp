@@ -41,7 +41,7 @@ namespace nta {
 			for (auto& part : parts) m_path += part + "/";
 			return *this;
 		}
-		/// \todo Make word for relative paths
+		/// \todo Make work for relative paths
 		Path Path::parent() const {
 			Path ret(m_path);
 			do {
@@ -49,6 +49,13 @@ namespace nta {
 				ret.m_path = ret.m_path.substr(0, pos);
 			} while (ret.m_path.back() == '/');
 			return ret == *this ? "." : ret + "/";
+		}
+		std::string Path::file_name(bool extension) const {
+			int pos = m_path.rfind('/');
+			std::string end = m_path.substr(pos+1);
+			if (extension) return end;
+			pos = end.rfind('.');
+			return end.substr(0, pos);
 		}
 		bool Path::exists() const {
 			return std::ifstream(m_path).good();
