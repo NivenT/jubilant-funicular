@@ -1,29 +1,16 @@
 #ifndef NTA_OBSERVER_H_INCLUDED
 #define NTA_OBSERVER_H_INCLUDED
 
-#include "nta/MyEngine.h"
+#include "nta/Message.h"
 
 namespace nta {
-    /// Something someone needs to be notified about
-    struct Event {
-        Event() : type(0), data(nullptr) {}
-        Event(uint64_t type) : type(type), data(nullptr) {}
-        Event(uint64_t type, void* data) : type(type), data(data) {}
-
-        uint64_t operator&(uint64_t rhs) const { return type & rhs; }
-
-        /// bit array (or bit mask) specifying type of event (semantic meaning is user-defined)
-        uint64_t type;
-        /// arbitrary data associated with this Event
-        void* data;
-    };
     /// Receives notifications
     class Observer {
     public:
         virtual ~Observer() {}
         /// (Synchronously) Handles event the Observer just became aware of
-        /// \todo Take Entity as well whenever I write an Entity-Component System
-        virtual void onNotify(const Event&) = 0;
+        /// \todo (?) Take Entity as well whenever I write an Entity-Component System
+        virtual void onNotify(const Message&) = 0;
     };
     /// Sends notifications
     class Subject {
@@ -43,7 +30,7 @@ namespace nta {
         /// A linked list of Observers to notify
         ObserverNode* m_head = nullptr;
     protected:
-        virtual void notify(const Event&);
+        virtual void notify(const Message&);
     public:
         virtual ~Subject() { if (m_head) delete m_head; }
         /// Adds Observer to notification list
