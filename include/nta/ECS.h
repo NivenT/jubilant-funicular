@@ -18,9 +18,52 @@ namespace nta {
 	typedef std::unordered_map<Component*, EntityID> ComponentEntityMap;
 	/// Linked list of Components
 	struct ComponentNode {
+	    /// Custom iterator for looping over Components in a ComponentNode
+		class iterator {
+		public:
+			using value_type = Component*;
+			using difference_type = std::ptrdiff_t;
+			using pointer = ComponentNode*;
+			using reference = Component*&;
+			using iterator_category = std::forward_iterator_tag;
+		private:
+			pointer m_node;
+		public:
+			iterator() {}
+			iterator(pointer node) : m_node(node) {}
+			reference operator*() const {
+				return m_node->comp;
+			}
+			reference operator->() const {
+				return operator*();
+			}
+			iterator& operator++() {
+				m_node = m_node->next;
+				return *this;
+			}
+			iterator operator++(int) {
+				auto ret = *this;
+				operator++();
+				return ret;
+			}
+			bool operator==(const iterator& rhs) const {
+				return m_node == rhs.m_node;
+			}
+			bool operator!=(const iterator& rhs) const {
+				return !operator==(rhs);
+			}
+		};
+
 		ComponentNode(Component* cmp) : comp(cmp) {}
         ComponentNode(Component* cmp, ComponentNode* nxt) : next(nxt), comp(cmp) {}
         ~ComponentNode() { if (next) delete next; }
+
+        iterator begin() {
+        	return iterator(this);
+        }
+        iterator end() {
+        	return iterator(nullptr);
+        }
 
         static void remove(ComponentNode** node, Component* cmpn) {
         	ComponentNode** curr = node;

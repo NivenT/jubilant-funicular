@@ -55,12 +55,11 @@ int main(int argc, char* argv[]) {
     assert(!system.has_component(healthy, 4));
     assert(system.get_components(noone) == nullptr);
 
-    ComponentNode* node = system.get_components(sick);
-    while (node) {
-    	if (node->comp->type & 1) {
-    		assert(((HealthComponent*)node->comp)->get_health() == 0);
+    // It's annoying that this dereference is needed
+    for (const Component* component : *system.get_components(sick)) {
+    	if (component->type & 1) {
+    		assert(((HealthComponent*)component)->get_health() == 0);
     	}
-    	node = node->next;
     }
 
     cout<<"Tests passed"<<endl;
