@@ -14,6 +14,7 @@ namespace nta {
 		/// The unique id identifying this Entity
 		EntityID m_id;
 	public:
+		/// Returns the id of this Entity
 		EntityID get_id() const { return m_id; }
 		bool operator==(const Entity rhs) const { return m_id == rhs.m_id; }
 
