@@ -13,6 +13,8 @@ namespace nta {
 	public:
 		bool operator==(const Entity rhs) const { return id == rhs.id; }
 
+		operator EntityID() const { return id; }
+
 		// The unique id identifying this Entity
 		const EntityID id;
 		friend ECS;
