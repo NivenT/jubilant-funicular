@@ -28,6 +28,8 @@ namespace nta {
 			///
 			/// id must not already be free
 			void free_id(T id);
+			/// calls free_id
+			void free(T id) { free_id(id); }
 
 			/// Returns the number of active ids
 			std::size_t get_count() const { return m_next_id - m_free.size(); }
