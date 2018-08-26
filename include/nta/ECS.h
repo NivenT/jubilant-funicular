@@ -58,6 +58,7 @@ namespace nta {
 	public:
 		ECS();
 		~ECS();
+		/// Removes all entites and components from this system
 		void clear();
 
 		/// Generates a new Entity, returning its ID
@@ -78,10 +79,16 @@ namespace nta {
 		/// Returns true on success
 		bool delete_component(Component* cmpn);
 
+		/// Returns true if the given Entity has a Component belonging to
+		/// the given list
+		bool has_component(EntityID entity, ComponentListID list);
+
 		/// Returns the associated list of components
 		///
 		/// id should have only 1 nonzero bit
 		ComponentNode* get_component_list(ComponentListID id);
+		/// Returns the list of components associated to the given Entity
+		ComponentNode* get_components(EntityID entity);
 
 		/// Forwards message to all Components associated to the same Entity as cmpn
 		void broadcast(const Message& message, Component* cmpn);

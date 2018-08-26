@@ -57,8 +57,20 @@ namespace nta {
 		m_component_set.erase(cmpn);
 		return true;
 	}
+	bool ECS::has_component(EntityID entity, ComponentListID list) {
+		ComponentNode* node = get_components(entity);
+		while (node) {
+			if (node->comp->type & list) return true;
+			node = node->next;
+		}
+		return false;
+	}
 	ComponentNode* ECS::get_component_list(ComponentListID id) {
 		return __builtin_popcount(id) == 1 ? m_component_lists[__builtin_ctz(id)] : nullptr;
+	}
+	ComponentNode* ECS::get_components(EntityID entity) {
+		if (m_entity_set.find(entity) == m_entity_set.end()) return nullptr;
+		return m_components_map[entity];
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
