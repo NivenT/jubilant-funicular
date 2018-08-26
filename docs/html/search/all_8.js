@@ -1,6 +1,8 @@
 var searchData=
 [
   ['id',['id',['../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5',1,'nta::CallbackManager::event::id()'],['../d3/dff/structnta_1_1GLTexture.html#aaf0d536088f4b1062d996679b217c0f9',1,'nta::GLTexture::id()']]],
+  ['idfactory',['IDFactory',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
+  ['idfactory_3c_20entityid_20_3e',['IDFactory&lt; EntityID &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['imageloader',['ImageLoader',['../d5/dc9/classnta_1_1ImageLoader.html',1,'nta']]],
   ['in_5frange',['in_range',['../d7/d33/namespacenta_1_1utils.html#aaa025ad45973ff6dc3a33800ccea72f0',1,'nta::utils']]],
   ['increment_5fframe',['increment_frame',['../d1/de6/classnta_1_1CallbackManager.html#ae055387e26996a024065a5b59c833e78',1,'nta::CallbackManager']]],
@@ -14,5 +16,5 @@ var searchData=
   ['islinked',['isLinked',['../dc/d9c/classnta_1_1GLSLProgram.html#a6067e49c12b542735eff255047cd8ae1',1,'nta::GLSLProgram']]],
   ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
   ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#ae97dfcf9043a3590a02387af85669871',1,'nta::InputManager']]],
-  ['iterator',['iterator',['../d4/da6/classnta_1_1utils_1_1Path_1_1iterator.html',1,'nta::utils::Path::iterator'],['../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html',1,'nta::utils::Json::iterator&lt; c &gt;']]]
+  ['iterator',['iterator',['../dd/d8e/classnta_1_1ComponentNode_1_1iterator.html',1,'nta::ComponentNode::iterator'],['../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html',1,'nta::utils::Json::iterator&lt; c &gt;'],['../d4/da6/classnta_1_1utils_1_1Path_1_1iterator.html',1,'nta::utils::Path::iterator']]]
 ];

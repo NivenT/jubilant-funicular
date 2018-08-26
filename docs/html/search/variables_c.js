@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['size',['size',['../d8/d79/structImGui_1_1TabBar.html#ac0c94b1fd908f0944d15bdcf9d58ede4',1,'ImGui::TabBar::size()'],['../d4/d51/namespacenta.html#aa2a40e6fe48ffadb4c7c95af7e82db91',1,'nta::CharGlyph::size()']]]
+  ['when',['when',['../d1/de6/classnta_1_1CallbackManager.html#ab20a0382304629ebdc2643a834c9dcff',1,'nta::CallbackManager::event']]],
+  ['width',['width',['../d3/dff/structnta_1_1GLTexture.html#a8f4d13ab2b19b700f76334c46458ac48',1,'nta::GLTexture']]]
 ];

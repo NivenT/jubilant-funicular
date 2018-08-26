@@ -3,6 +3,8 @@ var searchData=
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['delay',['delay',['../d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448',1,'nta::CallbackManager']]],
+  ['delete_5fcomponent',['delete_component',['../db/da0/classnta_1_1ECS.html#ab24523ec53373bc159f67ee20d269975',1,'nta::ECS']]],
+  ['delete_5fentity',['delete_entity',['../db/da0/classnta_1_1ECS.html#a5135be7c630456684a354563a18855c3',1,'nta::ECS']]],
   ['deletetexture',['deleteTexture',['../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489',1,'nta::ResourceManager']]],
   ['dequeue',['dequeue',['../d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14',1,'nta::CallbackManager']]],
   ['destroy',['destroy',['../da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce',1,'nta::AudioManager::destroy()'],['../d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6',1,'nta::CallbackManager::destroy()'],['../d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219',1,'nta::ScreenManager::destroy()'],['../db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282',1,'nta::SystemManager::destroy()']]],

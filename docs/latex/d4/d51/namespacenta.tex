@@ -18,16 +18,22 @@ class \hyperlink{classnta_1_1Camera2D}{Camera2D}
 \item 
 struct \hyperlink{namespacenta_d4/d26/structnta_1_1CharGlyph}{Char\+Glyph}
 \begin{DoxyCompactList}\small\item\em represents a single char in the texture  \hyperlink{namespacenta_d4/d26/structnta_1_1CharGlyph}{More...}\end{DoxyCompactList}\item 
+class \hyperlink{classnta_1_1Component}{Component}
+\begin{DoxyCompactList}\small\item\em Base class for components. \end{DoxyCompactList}\item 
+struct \hyperlink{structnta_1_1ComponentNode}{Component\+Node}
+\begin{DoxyCompactList}\small\item\em Linked list of Components. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Compressor}{Compressor}
 \begin{DoxyCompactList}\small\item\em Static class for compressing byte buffers. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1DebugBatch}{Debug\+Batch}
 \begin{DoxyCompactList}\small\item\em A collection of debug primitives (outlines of shapes) to be drawn. \end{DoxyCompactList}\item 
+class \hyperlink{classnta_1_1ECS}{E\+CS}
+\item 
+class \hyperlink{classnta_1_1Entity}{Entity}
+\begin{DoxyCompactList}\small\item\em A generic game entity (basically a wrapper around a {\itshape unique} id) \end{DoxyCompactList}\item 
 struct \hyperlink{structnta_1_1Error}{Error}
 \begin{DoxyCompactList}\small\item\em Something went wrong. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1ErrorManager}{Error\+Manager}
 \item 
-struct \hyperlink{structnta_1_1Event}{Event}
-\begin{DoxyCompactList}\small\item\em Something someone needs to be notified about. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1FontMap}{Font\+Map}
 \begin{DoxyCompactList}\small\item\em represents the organization of a texture containing the characters \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1FPSLimiter}{F\+P\+S\+Limiter}
@@ -52,6 +58,8 @@ class \hyperlink{classnta_1_1IOManager}{I\+O\+Manager}
 \begin{DoxyCompactList}\small\item\em Handles binary file operations. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Logger}{Logger}
 \begin{DoxyCompactList}\small\item\em stores program information in internal and external logs \end{DoxyCompactList}\item 
+struct \hyperlink{structnta_1_1Message}{Message}
+\begin{DoxyCompactList}\small\item\em Something someone needs to be notified about. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Music}{Music}
 \begin{DoxyCompactList}\small\item\em Represents a longer piece of music. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Observer}{Observer}
@@ -114,6 +122,24 @@ class \hyperlink{classnta_1_1Window}{Window}
 \begin{DoxyCompactList}\small\item\em Represent a window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenta_a2b7b647fe83786540b5e342a4a0474fa}\label{namespacenta_a2b7b647fe83786540b5e342a4a0474fa}} 
+typedef uint64\+\_\+t {\bfseries Component\+List\+ID}
+\item 
+\mbox{\Hypertarget{namespacenta_ab1a4e1926834dedfce30d0f6ed301fbf}\label{namespacenta_ab1a4e1926834dedfce30d0f6ed301fbf}} 
+typedef std\+::unordered\+\_\+set$<$ \hyperlink{classnta_1_1Entity}{Entity} $>$ {\bfseries Entity\+Set}
+\item 
+\mbox{\Hypertarget{namespacenta_a42c93a10ef59c9dbc5d2b24fb2a93b39}\label{namespacenta_a42c93a10ef59c9dbc5d2b24fb2a93b39}} 
+typedef std\+::unordered\+\_\+set$<$ \hyperlink{classnta_1_1Component}{Component} $\ast$ $>$ {\bfseries Component\+Set}
+\item 
+\mbox{\Hypertarget{namespacenta_a5bbe888781155ddeee0af5822e45fa16}\label{namespacenta_a5bbe888781155ddeee0af5822e45fa16}} 
+typedef std\+::unordered\+\_\+map$<$ Entity\+ID, \hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ $>$ {\bfseries Entity\+Component\+Map}
+\item 
+\mbox{\Hypertarget{namespacenta_a941d400edfbb84e895e33289b8912f26}\label{namespacenta_a941d400edfbb84e895e33289b8912f26}} 
+typedef std\+::unordered\+\_\+map$<$ \hyperlink{classnta_1_1Component}{Component} $\ast$, Entity\+ID $>$ {\bfseries Component\+Entity\+Map}
+\item 
+\mbox{\Hypertarget{namespacenta_aa68b3663f658b73faa34f47acbe800b2}\label{namespacenta_aa68b3663f658b73faa34f47acbe800b2}} 
+typedef uint64\+\_\+t {\bfseries Entity\+ID}
 \item 
 \mbox{\Hypertarget{namespacenta_a1f5715ee41c7a9174d2cc404fdb8556a}\label{namespacenta_a1f5715ee41c7a9174d2cc404fdb8556a}} 
 typedef std\+::function$<$ void(const \hyperlink{structnta_1_1Error}{Error} $\ast$)$>$ {\bfseries Error\+Callback}
@@ -190,11 +216,11 @@ bool \hyperlink{namespacenta_a65c4ac3e24918c1a26025984c474b7c8}{check\+\_\+error
 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000015}{Todo}]Make sure this code is O\+S-\/agnostic \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000014}{Todo}]Make sure this code is O\+S-\/agnostic \end{DoxyRefDesc}
 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000031}{Todo}]Figure out how to get rid of this file \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000030}{Todo}]Figure out how to get rid of this file \end{DoxyRefDesc}
 
 
 \subsection{Class Documentation}

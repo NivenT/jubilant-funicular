@@ -1,0 +1,81 @@
+\hypertarget{classnta_1_1ComponentNode_1_1iterator}{}\section{nta\+:\+:Component\+Node\+:\+:iterator Class Reference}
+\label{classnta_1_1ComponentNode_1_1iterator}\index{nta\+::\+Component\+Node\+::iterator@{nta\+::\+Component\+Node\+::iterator}}
+
+
+Custom iterator for looping over Components in a \hyperlink{structnta_1_1ComponentNode}{Component\+Node}.  
+
+
+
+
+{\ttfamily \#include $<$E\+C\+S.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a069cb5918a7ebfbc37af0386e66ff3c0}\label{classnta_1_1ComponentNode_1_1iterator_a069cb5918a7ebfbc37af0386e66ff3c0}} 
+using {\bfseries value\+\_\+type} = \hyperlink{classnta_1_1Component}{Component} $\ast$
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_abcd9c1a5a2386266a22f81a6f0ce49aa}\label{classnta_1_1ComponentNode_1_1iterator_abcd9c1a5a2386266a22f81a6f0ce49aa}} 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a855d605d35da2a160723602c4014c5f3}\label{classnta_1_1ComponentNode_1_1iterator_a855d605d35da2a160723602c4014c5f3}} 
+using {\bfseries pointer} = \hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a0b6b84e7ecf387c31b1d3e6e3eb2030f}\label{classnta_1_1ComponentNode_1_1iterator_a0b6b84e7ecf387c31b1d3e6e3eb2030f}} 
+using {\bfseries reference} = \hyperlink{classnta_1_1Component}{Component} $\ast$\&
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a0277b407044773e3dc937b9d270819d2}\label{classnta_1_1ComponentNode_1_1iterator_a0277b407044773e3dc937b9d270819d2}} 
+using {\bfseries iterator\+\_\+category} = std\+::forward\+\_\+iterator\+\_\+tag
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_aabf728c567e93359f0970bdfb53f5266}\label{classnta_1_1ComponentNode_1_1iterator_aabf728c567e93359f0970bdfb53f5266}} 
+{\bfseries iterator} (\hyperlink{structnta_1_1ComponentNode}{pointer} node)
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_ae1b2884a3e66e499c944ff1b84d73709}\label{classnta_1_1ComponentNode_1_1iterator_ae1b2884a3e66e499c944ff1b84d73709}} 
+\hyperlink{classnta_1_1Component}{reference} {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a922172b24ca872221f4ae64d7dcfb648}\label{classnta_1_1ComponentNode_1_1iterator_a922172b24ca872221f4ae64d7dcfb648}} 
+\hyperlink{classnta_1_1Component}{reference} {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_aeb459d4f29ac696eb76480f88b07b062}\label{classnta_1_1ComponentNode_1_1iterator_aeb459d4f29ac696eb76480f88b07b062}} 
+\hyperlink{classnta_1_1ComponentNode_1_1iterator}{iterator} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_aab5232252e4781925ca7c6cf1ce87c7a}\label{classnta_1_1ComponentNode_1_1iterator_aab5232252e4781925ca7c6cf1ce87c7a}} 
+\hyperlink{classnta_1_1ComponentNode_1_1iterator}{iterator} {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a7d83e4884fba008b9be12c9b42442e08}\label{classnta_1_1ComponentNode_1_1iterator_a7d83e4884fba008b9be12c9b42442e08}} 
+bool {\bfseries operator==} (const \hyperlink{classnta_1_1ComponentNode_1_1iterator}{iterator} \&rhs) const
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_af84a6aa133fa43b8495bc501510921f5}\label{classnta_1_1ComponentNode_1_1iterator_af84a6aa133fa43b8495bc501510921f5}} 
+bool {\bfseries operator!=} (const \hyperlink{classnta_1_1ComponentNode_1_1iterator}{iterator} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1ComponentNode_1_1iterator_a5ba0f32dbbeb35ab05129bbe2448644e}\label{classnta_1_1ComponentNode_1_1iterator_a5ba0f32dbbeb35ab05129bbe2448644e}} 
+\hyperlink{structnta_1_1ComponentNode}{pointer} {\bfseries m\+\_\+node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Custom iterator for looping over Components in a \hyperlink{structnta_1_1ComponentNode}{Component\+Node}. 
+
+Definition at line 22 of file E\+C\+S.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:Component\+Node\+:\+:iterator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db4/classnta_1_1ComponentNode_1_1iterator__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/E\+C\+S.\+h\end{DoxyCompactItemize}

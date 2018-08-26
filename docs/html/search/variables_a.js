@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertices',['vertices',['../d6/d4f/structnta_1_1Primitive.html#a4fbc49e3dcd593551b6e65e59d842687',1,'nta::Primitive']]]
+  ['uvrect',['uvRect',['../d4/d51/namespacenta.html#a46d9ea9c38c8bf5e1c1679e938019f53',1,'nta::CharGlyph']]]
 ];

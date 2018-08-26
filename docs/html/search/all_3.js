@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['data',['data',['../d8/d00/structnta_1_1Event.html#af9008b4870960d8070d500c9ecd2c2d6',1,'nta::Event::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
+  ['data',['data',['../d0/d9b/structnta_1_1Message.html#aedaae604be4afb61e1a5d1be15fa8efd',1,'nta::Message::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['delay',['delay',['../d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448',1,'nta::CallbackManager']]],
+  ['delete_5fcomponent',['delete_component',['../db/da0/classnta_1_1ECS.html#ab24523ec53373bc159f67ee20d269975',1,'nta::ECS']]],
+  ['delete_5fentity',['delete_entity',['../db/da0/classnta_1_1ECS.html#a5135be7c630456684a354563a18855c3',1,'nta::ECS']]],
   ['deletetexture',['deleteTexture',['../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489',1,'nta::ResourceManager']]],
   ['depth',['depth',['../d6/d4f/structnta_1_1Primitive.html#a4443e427fb512898693bba61a8ac4654',1,'nta::Primitive::depth()'],['../d6/db3/structnta_1_1Glyph.html#a259a2061c71dfd9fa0857f52d4daff8a',1,'nta::Glyph::depth()']]],
   ['dequeue',['dequeue',['../d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14',1,'nta::CallbackManager']]],

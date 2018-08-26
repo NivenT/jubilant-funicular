@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['id',['id',['../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5',1,'nta::CallbackManager::event::id()'],['../d3/dff/structnta_1_1GLTexture.html#aaf0d536088f4b1062d996679b217c0f9',1,'nta::GLTexture::id()']]],
-  ['is_5ferr_5fvariant',['is_err_variant',['../d8/d2e/classnta_1_1Result.html#a27f85dc35976426c1f5c01431ac2e1cc',1,'nta::Result']]]
+  ['free',['free',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#ac891290ce8ae269990cbbd7243cd1817',1,'nta::utils::ThreadPool::worker']]],
+  ['fromindex',['fromIndex',['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#a92f6d94b44a2945cbb0a6f93a98c9b94',1,'nta::ScreenSwitchInfo']]]
 ];

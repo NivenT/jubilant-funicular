@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['gen_5fentities',['gen_entities',['../db/da0/classnta_1_1ECS.html#aebaa7058c7a45f66faf847a1b302b332',1,'nta::ECS']]],
+  ['gen_5fentity',['gen_entity',['../db/da0/classnta_1_1ECS.html#abd79432cd214f155658835dbc9ec02da',1,'nta::ECS']]],
+  ['gen_5fid',['gen_id',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#af6afaf6d7566f52e7c2898076c7aa10e',1,'nta::utils::IDFactory']]],
+  ['get_5fcomponent_5flist',['get_component_list',['../db/da0/classnta_1_1ECS.html#a901fa4aeec5de189e6bc41635fa843e1',1,'nta::ECS']]],
+  ['get_5fcomponents',['get_components',['../db/da0/classnta_1_1ECS.html#afcc00e9823956e58744ad25f2f71fbc7',1,'nta::ECS']]],
+  ['get_5fcount',['get_count',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a9f8de8dd2a812a9c7afb249516dc872e',1,'nta::utils::IDFactory']]],
   ['get_5fdata',['get_data',['../d8/d2e/classnta_1_1Result.html#a96baacea35085048d694279d5de8c82e',1,'nta::Result']]],
   ['get_5fdata_5for',['get_data_or',['../d8/d2e/classnta_1_1Result.html#ae5fb7648fc0ecfbab99404a97fb27c83',1,'nta::Result']]],
   ['get_5ferr',['get_err',['../d8/d2e/classnta_1_1Result.html#a9ea9717e77d5e9a2371eb3cf9c896bc7',1,'nta::Result']]],
