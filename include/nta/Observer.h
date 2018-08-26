@@ -9,7 +9,6 @@ namespace nta {
     public:
         virtual ~Observer() {}
         /// (Synchronously) Handles event the Observer just became aware of
-        /// \todo (?) Take Entity as well whenever I write an Entity-Component System
         virtual void onNotify(const Message&) = 0;
     };
     /// Sends notifications

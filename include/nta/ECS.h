@@ -1,18 +1,21 @@
 #ifndef NTA_ECS_H_INCLUDED
 #define NTA_ECS_H_INCLUDED
 
-#include "nta/Message.h"
+#include <unordered_set>
+
+#include "nta/Entity.h"
+#include "nta/Component.h"
+
+#define NTA_ECS_NUM_COMPONENT_LISTS (sizeof(ComponentListID)*8)
 
 namespace nta {
-	typedef uint64_t EntityID;
-	/// A generic game entity (basically a wrapper around a *unique* id)
-	class Entity {
+	typedef uint64_t ComponentListID;
+	class ECS {
 	private:
-		/// The unique id identifying this Entity
-		EntityID m_id;
+		std::unordered_set<Entity> m_entity_set;
+		std::unordered_set<Component*> m_component_set;
 	public:
-		Entity(EntityID id) : m_id(id) {}
-		bool operator==(const Entity rhs) const { return m_id == rhs.m_id; }
+		ECS();
 	};
 }
 
