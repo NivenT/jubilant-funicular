@@ -83,10 +83,8 @@ namespace nta {
 		/// id should have only 1 nonzero bit
 		ComponentNode* get_component_list(ComponentListID id);
 
-		/// Forwards message to lists specified by recipients
-		///
-		/// Every 1 bit in recipient corresponds to a different list
-		void broadcast(const Message& message, ComponentListID recipients);
+		/// Forwards message to all Components associated to the same Entity as cmpn
+		void broadcast(const Message& message, Component* cmpn);
 	};
 }
 

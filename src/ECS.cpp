@@ -1,8 +1,8 @@
 #include "nta/ECS.h"
 
 namespace nta {
-	void Component::send(const Message& message, ComponentListID recipients) {
-		m_system.broadcast(message, recipients);
+	void Component::send(const Message& message) {
+		m_system->broadcast(message, this);
 	}
 
 	ECS::ECS() {
@@ -31,6 +31,7 @@ namespace nta {
 	}
 	bool ECS::add_component(Component* cmpn, EntityID entity) {
 		if (!cmpn || m_entity_set.find(entity) == m_entity_set.end()) return false;
+		cmpn->m_system = this;
 		for (ComponentListID list = 1; list; list <<= 1) {
 			if (cmpn->type & list) {
 				int idx = __builtin_ctz(list);
@@ -59,7 +60,13 @@ namespace nta {
 	ComponentNode* ECS::get_component_list(ComponentListID id) {
 		return __builtin_popcount(id) == 1 ? m_component_lists[__builtin_ctz(id)] : nullptr;
 	}
-	void ECS::broadcast(const Message& message, ComponentListID recipients) {
+	void ECS::broadcast(const Message& message, Component* cmpn) {
+		if (m_component_set.find(cmpn) == m_component_set.end()) return;
+		auto node = m_components_map[m_entity_map[cmpn]];
+		while (node) {
+			node->comp->receive(message);
+			node = node->next;
+		}
 	}
 	void ECS::clear() {
 		for (auto& entity : m_entity_set) {
