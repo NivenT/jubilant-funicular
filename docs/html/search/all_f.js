@@ -6,6 +6,8 @@ var searchData=
   ['randgaussian',['randGaussian',['../db/d48/classnta_1_1Random.html#a6e12bc86e5851f01d70debf422746e0e',1,'nta::Random']]],
   ['randint',['randInt',['../db/d48/classnta_1_1Random.html#aee5fa8d97f0cf1ccee84c6270b42a50d',1,'nta::Random']]],
   ['random',['Random',['../db/d48/classnta_1_1Random.html',1,'nta']]],
+  ['randrgb',['randRGB',['../db/d48/classnta_1_1Random.html#a45b43eef244823ccb5d016f79bad4ced',1,'nta::Random']]],
+  ['randvec2',['randVec2',['../db/d48/classnta_1_1Random.html#ac4fdaa10f7d4646d4489933b48aca148',1,'nta::Random']]],
   ['readfiletobuffer',['readFileToBuffer',['../d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10',1,'nta::IOManager::readFileToBuffer(crstring filePath, FileBuffer &amp;buffer)'],['../d2/d54/classnta_1_1IOManager.html#abbfd9da05b22aa488043a19344d38e0a',1,'nta::IOManager::readFileToBuffer(crstring filePath, std::string &amp;buffer)']]],
   ['readimage',['readImage',['../d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc',1,'nta::ImageLoader']]],
   ['receive',['receive',['../d8/d8c/classnta_1_1Component.html#a444c7d01911b4b348abcd3e464b367df',1,'nta::Component']]],
