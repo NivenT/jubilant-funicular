@@ -80,11 +80,15 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
 set(NTA_LIBRARIES nta CACHE INTERNAL "")
-# TODO (?): Add include dirs from required packages
 # TODO (?): Include deps one at a time instead of all at once (e.g. optionally include imgui)
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/deps
+	${GLEW_INCLUDE_DIR}
+	${GLUT_INCLUDE_DIR}
+	${OPENGL_INCLUDE_DIR}
+	${SDL2_INCLUDE_DIR}
+	${IL_INCLUDE_DIR}
 	CACHE INTERNAL "")
 
 if(${NTA_USE_DEVIL})
