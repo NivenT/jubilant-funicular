@@ -4,10 +4,10 @@
 #include "nta/Random.h"
 
 namespace nta {
-    std::default_random_engine  Random::generator;
+    std::default_random_engine Random::m_generator;
     void Random::init() {
         std::srand(std::time(nullptr));
-        generator = std::default_random_engine(std::time(nullptr));
+        m_generator = std::default_random_engine(std::time(nullptr));
     }
     long Random::randInt(long min, long max) {
         //+1 to prevent the case of rand() == RAND_MAX
@@ -18,6 +18,6 @@ namespace nta {
     }
     float Random::randGaussian(float mean, float sd) {
         std::normal_distribution<float> distribution(mean,sd);
-        return distribution(generator);
+        return distribution(m_generator);
     }
 }

@@ -38,7 +38,7 @@ public:
 };
 
 void SquareScreen::init() {
-    nta::Logger::writeToLog("Initializing main screen...");
+    nta::Logger::writeToLog("Initializing square screen...");
 
     // Admitedlly, the simple2D I'm using is more complicated than need be
     // Loads a GLSLProgram (vertex and fragment shader) from a pair of files
@@ -60,7 +60,7 @@ void SquareScreen::init() {
 
     m_batch.init();
 
-    nta::Logger::writeToLog("main screen initialized");
+    nta::Logger::writeToLog("square screen initialized");
 }
 
 void SquareScreen::update() {
@@ -78,17 +78,17 @@ void SquareScreen::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Collect all the glyphs to be drawn
-    m_batch.begin();
-    // Draws a square whose topleft corner is at (-25, 25) and whose
-    // width and height are both 50. The uv (i.e. texture) coordinates
-    // used are given by a square whose topleft corner is at (0, 0) and
-    // whose width and height are both 0. This is an empty square which
-    // would be problematic except that the texture id suuplied here is
-    // 0, so this glyph won't actually use a texture at all (i.e. since
-    // the third parameter is 0, the second one is irrelevant). Finally,
-    // this square is colored red: (1,0,0,1) in RGBA.
-    m_batch.addGlyph(vec4(-25, 25, 50, 50), vec4(0), 0, vec4(1,0,0,1));
-    m_batch.end();
+    m_batch.begin(); { // Creating a new scope like this isn't necessary (just a personal preference)
+        // Draws a square whose topleft corner is at (-25, 25) and whose
+        // width and height are both 50. The uv (i.e. texture) coordinates
+        // used are given by a square whose topleft corner is at (0, 0) and
+        // whose width and height are both 0. This is an empty square which
+        // would be problematic except that the texture id suuplied here is
+        // 0, so this glyph won't actually use a texture at all (i.e. since
+        // the third parameter is 0, the second one is irrelevant). Finally,
+        // this square is colored red: (1,0,0,1) in RGBA.
+        m_batch.addGlyph(vec4(-25, 25, 50, 50), vec4(0), 0, vec4(1,0,0,1));
+    } m_batch.end();
 
     // Actually draw stuff
     m_simple_prog->use(); {

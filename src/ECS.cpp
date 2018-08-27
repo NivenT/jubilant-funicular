@@ -14,7 +14,6 @@ namespace nta {
 	EntityID ECS::gen_entity() {
 		EntityID ret = m_entity_gen();
 		m_entity_set.insert(Entity(ret));
-		m_components_map[ret] = nullptr;
 		return ret;
 	}
 	void ECS::gen_entities(std::size_t num, EntityID* ids) {
