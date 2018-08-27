@@ -11,6 +11,7 @@
 #include <nta/ResourceManager.h>
 #include <nta/InputManager.h>
 #include <nta/SpriteBatch.h>
+#include <nta/SpriteFont.h>
 #include <nta/GLSLProgram.h>
 #include <nta/Camera2D.h>
 #include <nta/ECS.h>
@@ -19,8 +20,6 @@
 
 #define NUM_INIT_BALLS 20
 #define BALL_DENSITY 0.3f
-// decay causes balls to slow down (and sometimes even "stick" together)
-// physically inaccurate but I like the effect
 #define COLLISION_DECAY_MIN 0.6f
 #define COLLISION_DECAY_MAX 1.0f
 #define GRAVITY vec2(0, -9.81)
@@ -126,6 +125,7 @@ private:
     void addBall(nta::crvec2 pos);
 
     nta::GLSLProgram* m_simple_prog = nullptr;
+    nta::SpriteFont* m_font;
     nta::SpriteBatch m_batch;
     nta::Camera2D m_camera;
 
@@ -182,6 +182,7 @@ void MainScreen::init() {
     m_simple_prog->unuse();
 
     m_batch.init();
+    m_font = nta::ResourceManager::getSpriteFont("font.otf");
 
     // Here we initialize a bunch of random balls
     for (int i = 0; i < NUM_INIT_BALLS; i++) {
@@ -261,6 +262,9 @@ void MainScreen::render() {
             GraphicsComponent* gcmpn = (GraphicsComponent*)cmpn;
             gcmpn->draw(m_batch);
         }
+
+        string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());
+        m_font->drawText(m_batch, text, vec4(-100, 100, 20, 10));
     } m_batch.end();
 
     m_simple_prog->use(); {
@@ -275,7 +279,7 @@ void MainScreen::render() {
 int main(int argc, char* argv[]) {
     nta::init();
 
-    nta::ScreenManager screenManager("Bouncing Balls", 60);
+    nta::ScreenManager screenManager("\"Bouncing\" Balls", 60);
     screenManager.addScreen(new MainScreen);
 
     glEnable(GL_BLEND);

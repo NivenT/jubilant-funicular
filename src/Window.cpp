@@ -97,39 +97,4 @@ namespace nta {
         #endif
         SDL_GL_SwapWindow(m_window);
     }
-    /// \todo Get rid of this?
-    void Window::screenshot() const {
-        const int pixelArraySize = m_height*4*(m_width*3+3)/4;
-        GLubyte* pixels = new GLubyte[pixelArraySize];
-        glReadPixels(0, 0, m_width, m_height, GL_BGR, GL_UNSIGNED_BYTE, pixels);
-        std::stringstream imagePath;
-        for (int curr = 0;; curr++) {
-            imagePath.str("");
-            imagePath<<"screenshots/Screenshot_"<<m_title<<"_"<<curr<<".bmp";
-            std::ifstream check(imagePath.str().c_str());
-            if (!check.is_open()) {
-                break;
-            }
-        }
-        std::ofstream imageFile(imagePath.str().c_str(), std::ios::binary);
-        IOManager::writeShortLE(0x4D42, imageFile);
-        IOManager::writeIntLE(pixelArraySize+54, imageFile);
-        IOManager::writeShortLE(0, imageFile);
-        IOManager::writeShortLE(0, imageFile);
-        IOManager::writeIntLE(54, imageFile);
-        IOManager::writeIntLE(40, imageFile);
-        IOManager::writeIntLE(m_width, imageFile);
-        IOManager::writeIntLE(m_height, imageFile);
-        IOManager::writeShortLE(1, imageFile);
-        IOManager::writeShortLE(24, imageFile);
-        IOManager::writeIntLE(0, imageFile);
-        IOManager::writeIntLE(pixelArraySize, imageFile);
-        IOManager::writeIntLE(1, imageFile);
-        IOManager::writeIntLE(1, imageFile);
-        IOManager::writeIntLE(0, imageFile);
-        IOManager::writeIntLE(0, imageFile);
-        imageFile.write((char*)pixels, pixelArraySize);
-        Logger::writeToLog("Saved screenshot");
-        delete[] pixels;
-    }
 }

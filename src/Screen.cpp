@@ -71,8 +71,6 @@ namespace nta {
         }
         if (InputManager::justPressed(SDLK_ESCAPE)) {
             m_state = ScreenState::SWITCH_ESC;
-        } else if (InputManager::justPressed(SDLK_BACKQUOTE)) {
-            m_window->screenshot();
         }
     }
     void Screen::onFocus(const ScreenSwitchInfo& _) {
