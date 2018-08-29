@@ -59,6 +59,8 @@ int main(int argc, char* argv[]) {
     assert(system.get_owner(new HealthComponent) == NTA_INVALID_ID);
     assert(system.get_siblings(system.get_component_list(2)->data)->size() == 2);
 
+    assert(system.get_component_list(2)->data == system.get_component(sick, 2));
+
     system.delete_component(system.get_component_list(2)->data);
     assert(!system.has_component(sick, 2));
 
@@ -73,6 +75,7 @@ int main(int argc, char* argv[]) {
     assert(!system.delete_component(nullptr));
     assert(!system.add_component(nullptr, noone));
     assert(system.get_components(noone) == nullptr);
+    assert(system.get_component(noone, 1) == nullptr);
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();

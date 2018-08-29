@@ -57,12 +57,7 @@ namespace nta {
 		return true;
 	}
 	bool ECS::has_component(EntityID entity, ComponentListID list) const {
-		ComponentNode* node = get_components(entity);
-		while (node) {
-			if (node->data->type & list) return true;
-			node = node->next;
-		}
-		return false;
+		return get_component(entity, list) != nullptr;
 	}
 	EntityID ECS::get_owner(Component* cmpn) const {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return 0;
@@ -75,6 +70,14 @@ namespace nta {
 		if (m_entity_set.find(entity) == m_entity_set.end()) return nullptr;
 		auto it = m_components_map.find(entity);
 		return it == m_components_map.end() ? nullptr : it->second;
+	}
+	Component* ECS::get_component(EntityID entity, ComponentListID list) const {
+		ComponentNode* node = get_components(entity);
+		while (node) {
+			if (node->data->type & list) return node->data;
+			node = node->next;
+		}
+		return nullptr;
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
