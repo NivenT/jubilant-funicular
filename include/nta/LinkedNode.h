@@ -56,12 +56,18 @@ namespace nta {
 	        	return iterator(nullptr);
 	        }
 
-	        static void remove(LinkedNode** node, T* cmpn) {
-	        	LinkedNode** curr = node;
-				while ((*curr) && (*curr)->data != cmpn) {
+	        // not sure how I feel about this
+	        T*& operator->() const { return data; }
+
+	        static void remove(LinkedNode** head, T* d) {
+	        	LinkedNode** curr = head;
+				while ((*curr) && (*curr)->data != d) {
 					curr = &(*curr)->next;
 				}
 				if (*curr) *curr = (*curr)->next;
+	        }
+	        static void remove(LinkedNode*& node) {
+	        	if (node) node = node->next;
 	        }
 
 	        /// The next node in the linked list

@@ -55,6 +55,9 @@ int main(int argc, char* argv[]) {
     assert(!system.has_component(healthy, 4));
     assert(system.get_components(noone) == nullptr);
 
+    system.delete_component(system.get_component_list(2)->data);
+    assert(!system.has_component(sick, 2));
+
     // It's annoying that this dereference is needed
     for (const Component* component : *system.get_components(sick)) {
     	if (component->type & 1) {
