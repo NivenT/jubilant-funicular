@@ -64,9 +64,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d8/dc2/classnta_1_1Subject-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,12 +79,6 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="../../d8/df1/Observer_8h_source.html">Observer.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d10/structnta_1_1Subject_1_1ObserverNode.html">ObserverNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of Observers.  <a href="../../d3/d10/structnta_1_1Subject_1_1ObserverNode.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a37d15cb0563d1c9ea93be398aaf28df7"><td class="memItemLeft" align="right" valign="top"><a id="a37d15cb0563d1c9ea93be398aaf28df7"></a>
@@ -102,24 +96,29 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>notify</b> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;)</td></tr>
 <tr class="separator:a5f52e0bcb0662b943a49f7dcde00f4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a7c677f3b882eb4c8204202e9c9ed9e0e"><td class="memItemLeft" align="right" valign="top"><a id="a7c677f3b882eb4c8204202e9c9ed9e0e"></a>
+typedef <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">utils::LinkedNode</a>&lt; <a class="el" href="../../d0/d67/classnta_1_1Observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ObserverNode</b></td></tr>
+<tr class="separator:a7c677f3b882eb4c8204202e9c9ed9e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7049999f4dcfbaa6ce6af23a98ff2027"><td class="memItemLeft" align="right" valign="top"><a id="a7049999f4dcfbaa6ce6af23a98ff2027"></a>
-<a class="el" href="../../d3/d10/structnta_1_1Subject_1_1ObserverNode.html">ObserverNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4e/classnta_1_1Subject.html#a7049999f4dcfbaa6ce6af23a98ff2027">m_head</a> = nullptr</td></tr>
+<a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">ObserverNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4e/classnta_1_1Subject.html#a7049999f4dcfbaa6ce6af23a98ff2027">m_head</a> = nullptr</td></tr>
 <tr class="memdesc:a7049999f4dcfbaa6ce6af23a98ff2027"><td class="mdescLeft">&#160;</td><td class="mdescRight">A linked list of Observers to notify. <br /></td></tr>
 <tr class="separator:a7049999f4dcfbaa6ce6af23a98ff2027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sends notifications. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df1/Observer_8h_source.html#l00015">15</a> of file <a class="el" href="../../d8/df1/Observer_8h_source.html">Observer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d8/df1/Observer_8h_source.html#l00016">16</a> of file <a class="el" href="../../d8/df1/Observer_8h_source.html">Observer.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::Subject:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d37/classnta_1_1Subject__coll__graph.png" border="0" usemap="#nta_1_1Subject_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1Subject_coll__map" id="nta_1_1Subject_coll__map">
-<area shape="rect" id="node2" href="../../d3/d10/structnta_1_1Subject_1_1ObserverNode.html" title="Linked list of Observers. " alt="" coords="5,95,189,121"/>
-<area shape="rect" id="node3" href="../../d0/d67/classnta_1_1Observer.html" title="Receives notifications. " alt="" coords="47,5,148,32"/>
+<area shape="rect" id="node2" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html" title="A generic linked list. " alt="" coords="5,95,187,121"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this class was generated from the following files:<ul>

@@ -20,8 +20,6 @@ struct \hyperlink{namespacenta_d4/d26/structnta_1_1CharGlyph}{Char\+Glyph}
 \begin{DoxyCompactList}\small\item\em represents a single char in the texture  \hyperlink{namespacenta_d4/d26/structnta_1_1CharGlyph}{More...}\end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Component}{Component}
 \begin{DoxyCompactList}\small\item\em Base class for components. \end{DoxyCompactList}\item 
-struct \hyperlink{structnta_1_1ComponentNode}{Component\+Node}
-\begin{DoxyCompactList}\small\item\em Linked list of Components. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1Compressor}{Compressor}
 \begin{DoxyCompactList}\small\item\em Static class for compressing byte buffers. \end{DoxyCompactList}\item 
 class \hyperlink{classnta_1_1DebugBatch}{Debug\+Batch}
@@ -126,6 +124,9 @@ class \hyperlink{classnta_1_1Window}{Window}
 \mbox{\Hypertarget{namespacenta_a2b7b647fe83786540b5e342a4a0474fa}\label{namespacenta_a2b7b647fe83786540b5e342a4a0474fa}} 
 typedef uint64\+\_\+t {\bfseries Component\+List\+ID}
 \item 
+\mbox{\Hypertarget{namespacenta_a600e1f13567a793c734839ee428f9c68}\label{namespacenta_a600e1f13567a793c734839ee428f9c68}} 
+typedef \hyperlink{structnta_1_1utils_1_1LinkedNode}{utils\+::\+Linked\+Node}$<$ \hyperlink{classnta_1_1Component}{Component} $>$ {\bfseries Component\+Node}
+\item 
 \mbox{\Hypertarget{namespacenta_ab1a4e1926834dedfce30d0f6ed301fbf}\label{namespacenta_ab1a4e1926834dedfce30d0f6ed301fbf}} 
 typedef std\+::unordered\+\_\+set$<$ \hyperlink{classnta_1_1Entity}{Entity} $>$ {\bfseries Entity\+Set}
 \item 
@@ -133,7 +134,7 @@ typedef std\+::unordered\+\_\+set$<$ \hyperlink{classnta_1_1Entity}{Entity} $>$ 
 typedef std\+::unordered\+\_\+set$<$ \hyperlink{classnta_1_1Component}{Component} $\ast$ $>$ {\bfseries Component\+Set}
 \item 
 \mbox{\Hypertarget{namespacenta_a5bbe888781155ddeee0af5822e45fa16}\label{namespacenta_a5bbe888781155ddeee0af5822e45fa16}} 
-typedef std\+::unordered\+\_\+map$<$ Entity\+ID, \hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ $>$ {\bfseries Entity\+Component\+Map}
+typedef std\+::unordered\+\_\+map$<$ Entity\+ID, \hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node} $\ast$ $>$ {\bfseries Entity\+Component\+Map}
 \item 
 \mbox{\Hypertarget{namespacenta_a941d400edfbb84e895e33289b8912f26}\label{namespacenta_a941d400edfbb84e895e33289b8912f26}} 
 typedef std\+::unordered\+\_\+map$<$ \hyperlink{classnta_1_1Component}{Component} $\ast$, Entity\+ID $>$ {\bfseries Component\+Entity\+Map}

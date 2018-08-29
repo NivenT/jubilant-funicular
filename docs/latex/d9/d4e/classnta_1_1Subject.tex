@@ -9,11 +9,6 @@ Sends notifications.
 
 {\ttfamily \#include $<$Observer.\+h$>$}
 
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \hyperlink{structnta_1_1Subject_1_1ObserverNode}{Observer\+Node}
-\begin{DoxyCompactList}\small\item\em Linked list of Observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,26 +24,33 @@ virtual void \hyperlink{classnta_1_1Subject_ab74c154ace2f59dafe154fe5c7416e8c}{u
 \mbox{\Hypertarget{classnta_1_1Subject_a5f52e0bcb0662b943a49f7dcde00f4c5}\label{classnta_1_1Subject_a5f52e0bcb0662b943a49f7dcde00f4c5}} 
 virtual void {\bfseries notify} (const \hyperlink{structnta_1_1Message}{Message} \&)
 \end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1Subject_a7c677f3b882eb4c8204202e9c9ed9e0e}\label{classnta_1_1Subject_a7c677f3b882eb4c8204202e9c9ed9e0e}} 
+typedef \hyperlink{structnta_1_1utils_1_1LinkedNode}{utils\+::\+Linked\+Node}$<$ \hyperlink{classnta_1_1Observer}{Observer} $>$ {\bfseries Observer\+Node}
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}\label{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}} 
-\hyperlink{structnta_1_1Subject_1_1ObserverNode}{Observer\+Node} $\ast$ \hyperlink{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}{m\+\_\+head} = nullptr
+\hyperlink{structnta_1_1utils_1_1LinkedNode}{Observer\+Node} $\ast$ \hyperlink{classnta_1_1Subject_a7049999f4dcfbaa6ce6af23a98ff2027}{m\+\_\+head} = nullptr
 \begin{DoxyCompactList}\small\item\em A linked list of Observers to notify. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Sends notifications. 
 
-Definition at line 15 of file Observer.\+h.
+Definition at line 16 of file Observer.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:Subject\+:\nopagebreak
+Collaboration diagram for nta\+:\+:Subject\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=258pt]{d5/d37/classnta_1_1Subject__coll__graph}
+\includegraphics[width=256pt]{d5/d37/classnta_1_1Subject__coll__graph}
 \end{center}
 \end{figure}
 

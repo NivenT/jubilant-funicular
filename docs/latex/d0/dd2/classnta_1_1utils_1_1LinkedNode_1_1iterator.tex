@@ -1,0 +1,84 @@
+\hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator}{}\section{nta\+:\+:utils\+:\+:Linked\+Node$<$ T $>$\+:\+:iterator Class Reference}
+\label{classnta_1_1utils_1_1LinkedNode_1_1iterator}\index{nta\+::utils\+::\+Linked\+Node$<$ T $>$\+::iterator@{nta\+::utils\+::\+Linked\+Node$<$ T $>$\+::iterator}}
+
+
+Custom iterator for looping over the data in the linked list.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+Node.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_af592822b7d6005099cb20ec796267d9a}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_af592822b7d6005099cb20ec796267d9a}} 
+using {\bfseries value\+\_\+type} = T $\ast$
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a1b3b2d988c4997992b47ea9498a1035a}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a1b3b2d988c4997992b47ea9498a1035a}} 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a54252e4bdbc7c4d15a5ac7a399c434d2}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a54252e4bdbc7c4d15a5ac7a399c434d2}} 
+using {\bfseries pointer} = \hyperlink{structnta_1_1utils_1_1LinkedNode}{Linked\+Node} $\ast$
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_ab77af839fd7d7d42a80a107030f5ae44}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_ab77af839fd7d7d42a80a107030f5ae44}} 
+using {\bfseries reference} = T $\ast$\&
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a58d6cf3fe58f6a9a34198d72e754ae3d}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a58d6cf3fe58f6a9a34198d72e754ae3d}} 
+using {\bfseries iterator\+\_\+category} = std\+::forward\+\_\+iterator\+\_\+tag
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a7aa9b12af76e6a028dedc78ca64f02e3}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a7aa9b12af76e6a028dedc78ca64f02e3}} 
+{\bfseries iterator} (\hyperlink{structnta_1_1utils_1_1LinkedNode}{pointer} node)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_abeb0856fd7bbfe086eed146efe6988fe}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_abeb0856fd7bbfe086eed146efe6988fe}} 
+reference {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_aae88e0c128f8b4976f1877da123f58b7}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_aae88e0c128f8b4976f1877da123f58b7}} 
+reference {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_ab3c1c6a9d17214b7802bba157e07fe8b}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_ab3c1c6a9d17214b7802bba157e07fe8b}} 
+\hyperlink{classnta_1_1utils_1_1LinkedNode_1_1iterator}{iterator} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_af0b9488134c1e49156a5b959c122cbdd}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_af0b9488134c1e49156a5b959c122cbdd}} 
+\hyperlink{classnta_1_1utils_1_1LinkedNode_1_1iterator}{iterator} {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a1944191135defbb7a711813ebde9a417}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a1944191135defbb7a711813ebde9a417}} 
+bool {\bfseries operator==} (const \hyperlink{classnta_1_1utils_1_1LinkedNode_1_1iterator}{iterator} \&rhs) const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a830ec3c79d75903ba29ceefe9823a34e}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a830ec3c79d75903ba29ceefe9823a34e}} 
+bool {\bfseries operator!=} (const \hyperlink{classnta_1_1utils_1_1LinkedNode_1_1iterator}{iterator} \&rhs) const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1LinkedNode_1_1iterator_a896ef974c9b68fee8e8672a46272fed0}\label{classnta_1_1utils_1_1LinkedNode_1_1iterator_a896ef974c9b68fee8e8672a46272fed0}} 
+\hyperlink{structnta_1_1utils_1_1LinkedNode}{pointer} {\bfseries m\+\_\+node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class nta\+::utils\+::\+Linked\+Node$<$ T $>$\+::iterator}
+
+Custom iterator for looping over the data in the linked list. 
+
+Definition at line 13 of file Linked\+Node.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Linked\+Node$<$ T $>$\+:\+:iterator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{da/d2f/classnta_1_1utils_1_1LinkedNode_1_1iterator__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Linked\+Node.\+h\end{DoxyCompactItemize}

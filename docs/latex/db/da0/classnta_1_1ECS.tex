@@ -24,10 +24,10 @@ bool \hyperlink{classnta_1_1ECS_ab24523ec53373bc159f67ee20d269975}{delete\+\_\+c
 \item 
 bool \hyperlink{classnta_1_1ECS_acc0017328e58c4046747abf984ef1df1}{has\+\_\+component} (Entity\+ID entity, Component\+List\+ID list)
 \item 
-\hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_a901fa4aeec5de189e6bc41635fa843e1}{get\+\_\+component\+\_\+list} (Component\+List\+ID id)
+\hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_a901fa4aeec5de189e6bc41635fa843e1}{get\+\_\+component\+\_\+list} (Component\+List\+ID id)
 \item 
 \mbox{\Hypertarget{classnta_1_1ECS_afcc00e9823956e58744ad25f2f71fbc7}\label{classnta_1_1ECS_afcc00e9823956e58744ad25f2f71fbc7}} 
-\hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_afcc00e9823956e58744ad25f2f71fbc7}{get\+\_\+components} (Entity\+ID entity)
+\hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_afcc00e9823956e58744ad25f2f71fbc7}{get\+\_\+components} (Entity\+ID entity)
 \begin{DoxyCompactList}\small\item\em Returns the list of components associated to the given \hyperlink{classnta_1_1Entity}{Entity}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1ECS_a997e9fa8509387cdb0f08680b019eb64}\label{classnta_1_1ECS_a997e9fa8509387cdb0f08680b019eb64}} 
 void \hyperlink{classnta_1_1ECS_a997e9fa8509387cdb0f08680b019eb64}{broadcast} (const \hyperlink{structnta_1_1Message}{Message} \&message, \hyperlink{classnta_1_1Component}{Component} $\ast$cmpn)
@@ -47,7 +47,7 @@ Entity\+Component\+Map \hyperlink{classnta_1_1ECS_aa7069093670285de8ae96f5a8f6e7
 \mbox{\Hypertarget{classnta_1_1ECS_ab5c3a72aaaa0d6afef6f7bd7a0ee9c02}\label{classnta_1_1ECS_ab5c3a72aaaa0d6afef6f7bd7a0ee9c02}} 
 Component\+Entity\+Map \hyperlink{classnta_1_1ECS_ab5c3a72aaaa0d6afef6f7bd7a0ee9c02}{m\+\_\+entity\+\_\+map}
 \begin{DoxyCompactList}\small\item\em Map associating each component to its entity. \end{DoxyCompactList}\item 
-\hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_a2d45b9e54bcc636faac7cbb403b478bd}{m\+\_\+component\+\_\+lists} \mbox{[}N\+T\+A\+\_\+\+E\+C\+S\+\_\+\+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+L\+I\+S\+TS\mbox{]}
+\hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node} $\ast$ \hyperlink{classnta_1_1ECS_a2d45b9e54bcc636faac7cbb403b478bd}{m\+\_\+component\+\_\+lists} \mbox{[}N\+T\+A\+\_\+\+E\+C\+S\+\_\+\+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+L\+I\+S\+TS\mbox{]}
 \item 
 \mbox{\Hypertarget{classnta_1_1ECS_a8c2683281c1f6bfdc2765cca5059c8af}\label{classnta_1_1ECS_a8c2683281c1f6bfdc2765cca5059c8af}} 
 \hyperlink{classnta_1_1utils_1_1IDFactory}{utils\+::\+I\+D\+Factory}$<$ Entity\+ID $>$ \hyperlink{classnta_1_1ECS_a8c2683281c1f6bfdc2765cca5059c8af}{m\+\_\+entity\+\_\+gen}
@@ -59,11 +59,12 @@ Container class representing a complete Entity-\/\+Component System
 
 Manages creation of Entities and grouping of Components 
 
-Definition at line 84 of file E\+C\+S.\+h.
+Definition at line 23 of file E\+C\+S.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:E\+CS\+:\nopagebreak
+Collaboration diagram for nta\+:\+:E\+CS\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -113,7 +114,7 @@ Definition at line 22 of file E\+C\+S.\+cpp.
 \index{nta\+::\+E\+CS@{nta\+::\+E\+CS}!get\+\_\+component\+\_\+list@{get\+\_\+component\+\_\+list}}
 \index{get\+\_\+component\+\_\+list@{get\+\_\+component\+\_\+list}!nta\+::\+E\+CS@{nta\+::\+E\+CS}}
 \subsubsection{\texorpdfstring{get\+\_\+component\+\_\+list()}{get\_component\_list()}}
-{\footnotesize\ttfamily \hyperlink{structnta_1_1ComponentNode}{Component\+Node} $\ast$ nta\+::\+E\+C\+S\+::get\+\_\+component\+\_\+list (\begin{DoxyParamCaption}\item[{Component\+List\+ID}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node} $\ast$ nta\+::\+E\+C\+S\+::get\+\_\+component\+\_\+list (\begin{DoxyParamCaption}\item[{Component\+List\+ID}]{id }\end{DoxyParamCaption})}
 
 Returns the associated list of components
 
@@ -138,13 +139,13 @@ Definition at line 59 of file E\+C\+S.\+cpp.
 \index{nta\+::\+E\+CS@{nta\+::\+E\+CS}!m\+\_\+component\+\_\+lists@{m\+\_\+component\+\_\+lists}}
 \index{m\+\_\+component\+\_\+lists@{m\+\_\+component\+\_\+lists}!nta\+::\+E\+CS@{nta\+::\+E\+CS}}
 \subsubsection{\texorpdfstring{m\+\_\+component\+\_\+lists}{m\_component\_lists}}
-{\footnotesize\ttfamily \hyperlink{structnta_1_1ComponentNode}{Component\+Node}$\ast$ nta\+::\+E\+C\+S\+::m\+\_\+component\+\_\+lists\mbox{[}N\+T\+A\+\_\+\+E\+C\+S\+\_\+\+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+L\+I\+S\+TS\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{structnta_1_1utils_1_1LinkedNode}{Component\+Node}$\ast$ nta\+::\+E\+C\+S\+::m\+\_\+component\+\_\+lists\mbox{[}N\+T\+A\+\_\+\+E\+C\+S\+\_\+\+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+L\+I\+S\+TS\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
 Components are organized into several lists for convenience
 
 e.\+g. all Graphics\+Components may be in one list that\textquotesingle{}s looped over during rendering. 
 
-Definition at line 98 of file E\+C\+S.\+h.
+Definition at line 37 of file E\+C\+S.\+h.
 
 
 

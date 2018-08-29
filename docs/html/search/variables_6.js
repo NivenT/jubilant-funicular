@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['observer',['observer',['../d3/d10/structnta_1_1Subject_1_1ObserverNode.html#a5342cc214683af3c4d1faa60914d9155',1,'nta::Subject::ObserverNode']]],
-  ['offset',['offset',['../dd/d38/structnta_1_1RenderBatch.html#ab73ef79a5cbf8b60ad9991eb0a1ea9e6',1,'nta::RenderBatch']]]
+  ['period',['period',['../d1/de6/classnta_1_1CallbackManager.html#a15dd99ac7d4588c5ac5518c063431ef5',1,'nta::CallbackManager::event']]],
+  ['pos',['pos',['../d5/d07/structnta_1_1Vertex2D.html#a27a44e1ca52b5a5a13d37495e9376636',1,'nta::Vertex2D']]],
+  ['prev',['prev',['../d8/d66/structnta_1_1Error.html#a56fe79b4b8e915fa60f580ca80cc4ed7',1,'nta::Error']]]
 ];

@@ -93,9 +93,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for components.  <a href="../../d8/d8c/classnta_1_1Component.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d92/structnta_1_1ComponentNode.html">ComponentNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of Components.  <a href="../../d1/d92/structnta_1_1ComponentNode.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/classnta_1_1Compressor.html">Compressor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static class for compressing byte buffers.  <a href="../../d3/d18/classnta_1_1Compressor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,6 +240,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a2b7b647fe83786540b5e342a4a0474fa"><td class="memItemLeft" align="right" valign="top"><a id="a2b7b647fe83786540b5e342a4a0474fa"></a>
 typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListID</b></td></tr>
 <tr class="separator:a2b7b647fe83786540b5e342a4a0474fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600e1f13567a793c734839ee428f9c68"><td class="memItemLeft" align="right" valign="top"><a id="a600e1f13567a793c734839ee428f9c68"></a>
+typedef <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">utils::LinkedNode</a>&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentNode</b></td></tr>
+<tr class="separator:a600e1f13567a793c734839ee428f9c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1a4e1926834dedfce30d0f6ed301fbf"></a>
 typedef std::unordered_set&lt; <a class="el" href="../../d0/d95/classnta_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
 <tr class="separator:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,7 +250,7 @@ typedef std::unordered_set&lt; <a class="el" href="../../d0/d95/classnta_1_1Enti
 typedef std::unordered_set&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentSet</b></td></tr>
 <tr class="separator:a42c93a10ef59c9dbc5d2b24fb2a93b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbe888781155ddeee0af5822e45fa16"><td class="memItemLeft" align="right" valign="top"><a id="a5bbe888781155ddeee0af5822e45fa16"></a>
-typedef std::unordered_map&lt; EntityID, <a class="el" href="../../d1/d92/structnta_1_1ComponentNode.html">ComponentNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
+typedef std::unordered_map&lt; EntityID, <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">ComponentNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
 <tr class="separator:a5bbe888781155ddeee0af5822e45fa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a941d400edfbb84e895e33289b8912f26"><td class="memItemLeft" align="right" valign="top"><a id="a941d400edfbb84e895e33289b8912f26"></a>
 typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, EntityID &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
