@@ -2,6 +2,7 @@
 #define NTA_OBSERVER_H_INCLUDED
 
 #include "nta/Message.h"
+#include "nta/LinkedNode.h"
 
 namespace nta {
     /// Receives notifications
@@ -14,18 +15,7 @@ namespace nta {
     /// Sends notifications
     class Subject {
     private:
-        /// Linked list of Observers
-        struct ObserverNode {
-            ObserverNode(Observer* obs) : observer(obs) {}
-            ObserverNode(Observer* obs, ObserverNode* nxt) : next(nxt), observer(obs) {}
-            ~ObserverNode() { if (next) delete next; }
-
-            /// The next node in the linked list
-            ObserverNode* next = nullptr;
-            /// The Observer associated to this node
-            Observer* observer = nullptr;
-        };
-
+        typedef utils::LinkedNode<Observer> ObserverNode;
         /// A linked list of Observers to notify
         ObserverNode* m_head = nullptr;
     protected:

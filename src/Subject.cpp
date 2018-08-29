@@ -3,7 +3,7 @@
 namespace nta {
 	void Subject::notify(const Message& event) {
 		for (ObserverNode* curr = m_head; curr; curr = m_head->next) {
-			curr->observer->onNotify(event);
+			curr->data->onNotify(event);
 		}
 	}
 	void Subject::subscribe(Observer* obs) {
@@ -11,7 +11,7 @@ namespace nta {
 	}
 	void Subject::unsubscribe(Observer* obs) {
 		ObserverNode** curr = &m_head;
-		while ((*curr) && (*curr)->observer != obs) {
+		while ((*curr) && (*curr)->data != obs) {
 			curr = &(*curr)->next;
 		}
 		if (*curr) *curr = (*curr)->next;

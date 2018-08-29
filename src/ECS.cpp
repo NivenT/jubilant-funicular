@@ -24,7 +24,7 @@ namespace nta {
 		m_entity_set.erase(id);
 		m_entity_gen.free(id);
 		while (m_components_map[id]) {
-			delete_component(m_components_map[id]->comp);
+			delete_component(m_components_map[id]->data);
 		}
 		return true;
 	}
@@ -59,7 +59,7 @@ namespace nta {
 	bool ECS::has_component(EntityID entity, ComponentListID list) {
 		ComponentNode* node = get_components(entity);
 		while (node) {
-			if (node->comp->type & list) return true;
+			if (node->data->type & list) return true;
 			node = node->next;
 		}
 		return false;
@@ -75,7 +75,7 @@ namespace nta {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
 		auto node = m_components_map[m_entity_map[cmpn]];
 		while (node) {
-			node->comp->receive(message);
+			node->data->receive(message);
 			node = node->next;
 		}
 	}

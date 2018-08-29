@@ -38,14 +38,14 @@ int main(int argc, char* argv[]) {
 
     for (int sick_health = 100; sick_health; sick_health -= 5) {
     	ComponentNode* health_node = system.get_component_list(1);
-    	assert(((HealthComponent*)health_node->comp)->get_health() == 100);
+    	assert(((HealthComponent*)health_node->data)->get_health() == 100);
     	health_node = health_node->next;
-    	assert(((HealthComponent*)health_node->comp)->get_health() == sick_health);
+    	assert(((HealthComponent*)health_node->data)->get_health() == sick_health);
     	assert(health_node->next == nullptr);
     	
     	ComponentNode* damage_node = system.get_component_list(2);
     	while (damage_node) {
-    		damage_node->comp->send(Message(0, (void*)5));
+    		damage_node->data->send(Message(0, (void*)5));
     		damage_node = damage_node->next;
     	}
     }

@@ -1,5 +1,5 @@
-#ifndef DEBUGBATCH_H_INCLUDED
-#define DEBUGBATCH_H_INCLUDED
+#ifndef NTA_DEBUGBATCH_H_INCLUDED
+#define NTA_DEBUGBATCH_H_INCLUDED
 
 #include <GL/glew.h>
 #include <vector>
@@ -40,4 +40,4 @@ namespace nta {
     };
 }
 
-#endif // DEBUGBATCH_H_INCLUDED
+#endif // NTA_DEBUGBATCH_H_INCLUDED

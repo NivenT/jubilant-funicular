@@ -201,8 +201,8 @@ void MainScreen::update() {
     // loops over pairs of PhysicsComponents and performs collision detection
     for (nta::ComponentNode* lhs = phys_cpmns; lhs; lhs = lhs->next) {
         for (nta::ComponentNode* rhs = lhs->next; rhs; rhs = rhs->next) {
-            PhysicsComponent* plhs = (PhysicsComponent*)lhs->comp;
-            PhysicsComponent* prhs = (PhysicsComponent*)rhs->comp;
+            PhysicsComponent* plhs = (PhysicsComponent*)lhs->data;
+            PhysicsComponent* prhs = (PhysicsComponent*)rhs->data;
 
             plhs->collide(*prhs, 1./60);
         }
@@ -219,7 +219,7 @@ void MainScreen::update() {
         // Get the first component in this ball's list of components
         // Since both Physics and Grphics components store m_pos, we don't care
         // which kind it is
-        nta::Component* cmpn = m_system.get_components(ball)->comp;
+        nta::Component* cmpn = m_system.get_components(ball)->data;
 
         vec2 pos;
         if (cmpn->type & GRAPHICS_COMPONENT_TYPE) {
