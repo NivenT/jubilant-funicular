@@ -56,6 +56,13 @@ namespace nta {
 	        	return iterator(nullptr);
 	        }
 
+	        std::size_t size() const {
+	        	std::size_t len = 0;
+	        	const LinkedNode* curr = this;
+	        	while (curr && ++len) curr = curr->next;
+	        	return len;
+	        }
+
 	        static void remove(LinkedNode** head, T* d) {
 	        	LinkedNode** curr = head;
 				while ((*curr) && (*curr)->data != d) {

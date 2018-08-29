@@ -54,7 +54,7 @@ namespace nta {
 
 		/// Adds the given Component to the given Entity
 		///
-		/// Returns false if entity does not exist
+		/// Returns false on failure
 		bool add_component(Component* cmpn, EntityID entity);
 		/// Attempts to deletet the given Component
 		///
@@ -73,6 +73,8 @@ namespace nta {
 		ComponentNode* get_component_list(ComponentListID id) const;
 		/// Returns the list of components associated to the given Entity
 		ComponentNode* get_components(EntityID entity) const;
+		/// Returns the list of components with the same owner as this one
+		ComponentNode* get_siblings(Component* cmpn) const { return get_components(get_owner(cmpn)); }
 
 		/// Forwards message to all Components associated to the same Entity as cmpn
 		void broadcast(const Message& message, Component* cmpn);
