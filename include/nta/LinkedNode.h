@@ -56,9 +56,6 @@ namespace nta {
 	        	return iterator(nullptr);
 	        }
 
-	        // not sure how I feel about this
-	        T*& operator->() const { return data; }
-
 	        static void remove(LinkedNode** head, T* d) {
 	        	LinkedNode** curr = head;
 				while ((*curr) && (*curr)->data != d) {

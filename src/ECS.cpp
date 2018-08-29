@@ -56,7 +56,7 @@ namespace nta {
 		m_component_set.erase(cmpn);
 		return true;
 	}
-	bool ECS::has_component(EntityID entity, ComponentListID list) {
+	bool ECS::has_component(EntityID entity, ComponentListID list) const {
 		ComponentNode* node = get_components(entity);
 		while (node) {
 			if (node->data->type & list) return true;
@@ -64,12 +64,17 @@ namespace nta {
 		}
 		return false;
 	}
-	ComponentNode* ECS::get_component_list(ComponentListID id) {
+	EntityID ECS::get_owner(Component* cmpn) const {
+		if (m_component_set.find(cmpn) == m_component_set.end()) return 0;
+		return m_entity_map.find(cmpn)->second;
+	}
+	ComponentNode* ECS::get_component_list(ComponentListID id) const {
 		return __builtin_popcount(id) == 1 ? m_component_lists[__builtin_ctz(id)] : nullptr;
 	}
-	ComponentNode* ECS::get_components(EntityID entity) {
+	ComponentNode* ECS::get_components(EntityID entity) const {
 		if (m_entity_set.find(entity) == m_entity_set.end()) return nullptr;
-		return m_components_map[entity];
+		auto it = m_components_map.find(entity);
+		return it == m_components_map.end() ? nullptr : it->second;
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;

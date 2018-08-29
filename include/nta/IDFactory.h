@@ -1,6 +1,8 @@
 #ifndef NTA_IDFACTORY_H_INCLUDED
 #define NTA_IDFACTORY_H_INCLUDED
 
+#define NTA_INVALID_ID 0
+
 #include <stack>
 
 #include "nta/MyEngine.h"
@@ -14,11 +16,11 @@ namespace nta {
 			/// IDs that were previously active but have since been freed
 			std::stack<T> m_free;
 			/// The smallest id that has never been assigned
-			T m_next_id;
+			T m_last_id;
 		public:
-			IDFactory() : m_next_id(0) {}
+			IDFactory() : m_last_id(NTA_INVALID_ID) {}
 			/// Resets this to a new IDFactory
-			void clear() { m_free = std::stack<T>(); m_next_id = 0; }
+			void clear() { m_free = std::stack<T>(); m_last_id = NTA_INVALID_ID; }
 			/// Resets this to a new IDFactory
 			void reset() { clear(); }
 
@@ -32,7 +34,7 @@ namespace nta {
 			void free(T id) { free_id(id); }
 
 			/// Returns the number of active ids
-			std::size_t get_count() const { return m_next_id - m_free.size(); }
+			std::size_t get_count() const { return m_last_id - m_free.size() - NTA_INVALID_ID; }
 
 			/// Calls (and returns) gen_id
 			T operator()() { return gen_id(); }
@@ -41,7 +43,7 @@ namespace nta {
 		template<typename T>
 		T IDFactory<T>::gen_id() {
 			if (m_free.empty()) {
-				return m_next_id++;
+				return ++m_last_id;
 			} else {
 				T ret = m_free.top();
 				m_free.pop();

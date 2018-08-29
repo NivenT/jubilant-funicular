@@ -63,14 +63,16 @@ namespace nta {
 
 		/// Returns true if the given Entity has a Component belonging to
 		/// the given list
-		bool has_component(EntityID entity, ComponentListID list);
+		bool has_component(EntityID entity, ComponentListID list) const;
 
+		/// Returns the Entity associated to this Component
+		EntityID get_owner(Component* cmpn) const;
 		/// Returns the associated list of components
 		///
 		/// id should have only 1 nonzero bit
-		ComponentNode* get_component_list(ComponentListID id);
+		ComponentNode* get_component_list(ComponentListID id) const;
 		/// Returns the list of components associated to the given Entity
-		ComponentNode* get_components(EntityID entity);
+		ComponentNode* get_components(EntityID entity) const;
 
 		/// Forwards message to all Components associated to the same Entity as cmpn
 		void broadcast(const Message& message, Component* cmpn);

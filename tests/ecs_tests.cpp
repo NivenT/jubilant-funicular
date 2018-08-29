@@ -55,6 +55,9 @@ int main(int argc, char* argv[]) {
     assert(!system.has_component(healthy, 4));
     assert(system.get_components(noone) == nullptr);
 
+    assert(system.get_owner(system.get_component_list(2)->data) == sick);
+    assert(system.get_owner(new HealthComponent) == NTA_INVALID_ID);
+
     system.delete_component(system.get_component_list(2)->data);
     assert(!system.has_component(sick, 2));
 
