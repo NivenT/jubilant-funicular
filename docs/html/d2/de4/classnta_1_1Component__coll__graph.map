@@ -1,5 +1,5 @@
 <map id="nta::Component" name="nta::Component">
-<area shape="rect" id="node4" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; EntityID \&gt;" alt="" coords="276,42,415,83"/>
-<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="619,159,695,185"/>
-<area shape="rect" id="node8" href="$d5/dc6/structnta_1_1utils_1_1LinkedNode.html" title="A generic linked list. " alt="" coords="255,248,436,275"/>
+<area shape="rect" id="node4" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; EntityID \&gt;" alt="" coords="272,42,411,83"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="615,159,691,185"/>
+<area shape="rect" id="node8" href="$d5/dc6/structnta_1_1utils_1_1LinkedNode.html" title="A generic linked list. " alt="" coords="251,248,432,275"/>
 </map>

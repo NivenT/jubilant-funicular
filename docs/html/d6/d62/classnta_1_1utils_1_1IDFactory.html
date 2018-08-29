@@ -112,10 +112,10 @@ Private Attributes</h2></td></tr>
 std::stack&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a1bb36b967e6431640bad6d843aa15db7">m_free</a></td></tr>
 <tr class="memdesc:a1bb36b967e6431640bad6d843aa15db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs that were previously active but have since been freed. <br /></td></tr>
 <tr class="separator:a1bb36b967e6431640bad6d843aa15db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c85b0126b9b5312083d6619ff6d0c2a"><td class="memItemLeft" align="right" valign="top"><a id="a0c85b0126b9b5312083d6619ff6d0c2a"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0c85b0126b9b5312083d6619ff6d0c2a">m_next_id</a></td></tr>
-<tr class="memdesc:a0c85b0126b9b5312083d6619ff6d0c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The smallest id that has never been assigned. <br /></td></tr>
-<tr class="separator:a0c85b0126b9b5312083d6619ff6d0c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248df89e090f9d9186fc897809a59d51"><td class="memItemLeft" align="right" valign="top"><a id="a248df89e090f9d9186fc897809a59d51"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a248df89e090f9d9186fc897809a59d51">m_last_id</a></td></tr>
+<tr class="memdesc:a248df89e090f9d9186fc897809a59d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">The smallest id that has never been assigned. <br /></td></tr>
+<tr class="separator:a248df89e090f9d9186fc897809a59d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -123,11 +123,13 @@ class nta::utils::IDFactory&lt; T &gt;</h3>
 
 <p>Class for generating unique (integral) IDs. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00012">12</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00014">14</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::utils::IDFactory&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d8c/classnta_1_1utils_1_1IDFactory__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map" id="nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac136bf7941dcdc20ed51c680aaf4a369"></a>
@@ -150,9 +152,9 @@ template&lt;typename T&gt; </div>
 <p>Marks an id as free so that it can be reused</p>
 <p>id must not already be free </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00053">53</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00055">55</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00032">nta::utils::IDFactory&lt; EntityID &gt;::free()</a>, and <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00023">nta::utils::IDFactory&lt; EntityID &gt;::reset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00034">nta::utils::IDFactory&lt; EntityID &gt;::free()</a>, and <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00025">nta::utils::IDFactory&lt; EntityID &gt;::reset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
