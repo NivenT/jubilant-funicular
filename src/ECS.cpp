@@ -81,7 +81,10 @@ namespace nta {
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
-		auto node = m_components_map[m_entity_map[cmpn]];
+		broadcast(message, m_entity_map[cmpn]);
+	}
+	void ECS::broadcast(const Message& message, EntityID entity) {
+		auto node = m_components_map[entity];
 		while (node) {
 			node->data->receive(message);
 			node = node->next;

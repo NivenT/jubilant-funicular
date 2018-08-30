@@ -8,7 +8,7 @@ namespace nta {
     struct Message {
         Message() : type(0), data(nullptr) {}
         Message(uint64_t type) : type(type), data(nullptr) {}
-        Message(uint64_t type, void* data) : type(type), data(data) {}
+        Message(uint64_t type, const void* data) : type(type), data(data) {}
 
         uint64_t operator&(uint64_t rhs) const { return type & rhs; }
 
@@ -17,7 +17,7 @@ namespace nta {
         /// The semantic meaning of this variable is user-defined
         uint64_t type;
         /// arbitrary data associated with this Message
-        void* data;
+        const void* data;
     };
 }
 

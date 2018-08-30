@@ -80,6 +80,8 @@ namespace nta {
 
         /// Forwards message to all Components associated to the same Entity as cmpn
         void broadcast(const Message& message, Component* cmpn);
+        /// Forwards message to all Components belonging to entity
+        void broadcast(const Message& message, EntityID entity);
     };
 }
 

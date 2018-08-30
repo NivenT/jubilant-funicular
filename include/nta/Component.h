@@ -21,6 +21,7 @@ namespace nta {
 
 		/// A bitmask corresponding to the Lists (in m_container) that this Component belongs to
 		const ComponentListID type;
+		/// \todo Replace with SetSystemKey
 		friend ECS;
 	};
 }
