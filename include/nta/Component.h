@@ -8,7 +8,7 @@ namespace nta {
 	typedef uint64_t ComponentListID;
 	/// Base class for components
 	class Component {
-	private:
+	protected:
 		/// The System this Component belongs to
 		ECS* m_system;
 	public:

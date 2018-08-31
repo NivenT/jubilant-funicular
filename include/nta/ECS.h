@@ -56,10 +56,12 @@ namespace nta {
         ///
         /// Returns false on failure
         bool add_component(Component* cmpn, EntityID entity);
-        /// Attempts to deletet the given Component
+        /// Attempts to delete the given Component
         ///
         /// Returns true on success
         bool delete_component(Component* cmpn);
+        /// Deletes all components of the given types from the given entity
+        void delete_components(EntityID entity, ComponentListID lists);
 
         /// Returns true if the given Entity has a Component belonging to
         /// the given list

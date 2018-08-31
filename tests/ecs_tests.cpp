@@ -61,7 +61,15 @@ int main(int argc, char* argv[]) {
 
     assert(system.get_component_list(2)->data == system.get_component(sick, 2));
 
-    system.delete_component(system.get_component_list(2)->data);
+    assert(system.delete_component(system.get_component_list(2)->data));
+    assert(!system.has_component(sick, 2));
+
+    for (int i = 0; i < 4; i++) {
+        assert(system.add_component(new DamageComponent, sick));
+    }
+    assert(system.delete_component(system.get_component_list(2)->data));
+    assert(system.has_component(sick, 2));
+    system.delete_components(sick, 2);
     assert(!system.has_component(sick, 2));
 
     // It's annoying that this dereference is needed

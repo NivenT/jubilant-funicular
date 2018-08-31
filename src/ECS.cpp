@@ -57,6 +57,16 @@ namespace nta {
 		delete cmpn;
 		return true;
 	}
+	void ECS::delete_components(EntityID entity, ComponentListID lists) {
+		ComponentNode* curr = get_components(entity);
+		while (curr) {
+			ComponentNode* next = curr->next;
+			if (curr->data->type & lists) {
+				delete_component(curr->data);
+			}
+			curr = next;
+		}
+	}
 	bool ECS::has_component(EntityID entity, ComponentListID list) const {
 		return get_component(entity, list) != nullptr;
 	}
