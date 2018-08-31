@@ -54,6 +54,7 @@ namespace nta {
 			}
 		}
 		m_component_set.erase(cmpn);
+		delete cmpn;
 		return true;
 	}
 	bool ECS::has_component(EntityID entity, ComponentListID list) const {

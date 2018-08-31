@@ -10,7 +10,9 @@ namespace nta {
         Message(uint64_t type) : type(type), data(nullptr) {}
         Message(uint64_t type, const void* data) : type(type), data(data) {}
 
+        // This, I think, is mostly useless in applications
         uint64_t operator&(uint64_t rhs) const { return type & rhs; }
+        bool operator==(uint64_t rhs) const { return type == rhs; }
 
         /// bit array (or bit mask) specifying type of message 
         ///
