@@ -87,7 +87,7 @@ namespace nta {
         /// Forwards message to all Components belonging to entity
         void broadcast(const Message& message, EntityID entity);
         /// Forwards message to all Components in the given lists
-        void broadcast(const Message& message, ComponentListID lists = ~0);
+        //void broadcast(const Message& message, ComponentListID lists = ~0);
     };
 }
 

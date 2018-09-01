@@ -2,6 +2,7 @@
 #define NTA_ENTITY_H_INCLUDED
 
 #include "nta/MyEngine.h"
+#include "nta/Wrapper.h"
 
 namespace nta {
 	class ECS;
