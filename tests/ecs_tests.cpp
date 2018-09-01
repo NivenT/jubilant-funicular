@@ -85,6 +85,13 @@ int main(int argc, char* argv[]) {
     assert(system.get_components(noone) == nullptr);
     assert(system.get_component(noone, 1) == nullptr);
 
+    assert(system.does_entity_exists(sick));
+    assert(system.does_entity_exists(healthy));
+    assert(system.does_entity_exists(noone));
+    assert(system.delete_entity(healthy));
+    assert(!system.does_entity_exists(healthy));
+    assert(!system.does_entity_exists(NTA_INVALID_ID));
+
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;
