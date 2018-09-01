@@ -70,7 +70,7 @@ namespace nta {
 	bool ECS::has_component(EntityID entity, ComponentListID list) const {
 		return get_component(entity, list) != nullptr;
 	}
-	bool ECS::does_entity_exists(EntityID entity) const {
+	bool ECS::does_entity_exist(EntityID entity) const {
 		return m_entity_set.find(entity) != m_entity_set.end();
 	}
 	EntityID ECS::get_owner(Component* cmpn) const {

@@ -67,7 +67,7 @@ namespace nta {
         /// the given list
         bool has_component(EntityID entity, ComponentListID list) const;
         /// Returns true if the given Entity exists
-        bool does_entity_exists(EntityID entity) const;
+        bool does_entity_exist(EntityID entity) const;
 
         /// Returns the Entity associated to this Component
         EntityID get_owner(Component* cmpn) const;
