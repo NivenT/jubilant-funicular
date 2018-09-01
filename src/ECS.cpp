@@ -104,6 +104,17 @@ namespace nta {
 			node = node->next;
 		}
 	}
+	void ECS::broadcast(const Message& message, ComponentListID lists) {
+		for (ComponentListID list = 1; list; list <<= 1) {
+			if (list & lists) {
+				auto node = m_component_lists[__builtin_ctz(list)];
+				while (node) {
+					node->data->receive(message);
+					node = node->next;
+				}
+			}
+		}
+	}
 	void ECS::clear() {
 		for (auto& entity : m_entity_set) {
 			delete_entity(entity);
