@@ -5,6 +5,7 @@
 
 namespace nta {
 	class ECS;
+	// Note: This is a typedef and not an NTA_CREATE_WRAPPER because I'm lazy
 	typedef uint64_t ComponentListID;
 	/// Base class for components
 	class Component {

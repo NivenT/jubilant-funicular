@@ -122,11 +122,11 @@
 /// Assumes type supports ::std::hash
 ///
 /// Only use macro inside namespace std
-#define NTA_HASH_WRAPPER(name, type) \
+#define NTA_HASH_WRAPPER(name) \
   template<> \
   struct hash<name> { \
     ::std::size_t operator()(const name& n) const { \
-      return hash<type>()(n.to_inner()); \
+      return hash<name::inner>()(n.to_inner()); \
     } \
   };
 

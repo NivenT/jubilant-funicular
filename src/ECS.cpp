@@ -104,7 +104,6 @@ namespace nta {
 			node = node->next;
 		}
 	}
-	/*
 	void ECS::broadcast(const Message& message, ComponentListID lists) {
 		for (ComponentListID list = 1; list; list <<= 1) {
 			if (list & lists) {
@@ -116,7 +115,6 @@ namespace nta {
 			}
 		}
 	}
-	*/
 	void ECS::clear() {
 		for (auto& entity : m_entity_set) {
 			delete_entity(entity);

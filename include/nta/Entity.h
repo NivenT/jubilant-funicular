@@ -5,7 +5,6 @@
 
 namespace nta {
 	class ECS;
-	//typedef uint64_t EntityID;
 	NTA_CREATE_WRAPPER(EntityID, uint64_t)
 	/// A generic game entity (basically a wrapper around a *unique* id)
 	class Entity {
@@ -23,7 +22,7 @@ namespace nta {
 }
 
 namespace std {
-	NTA_HASH_WRAPPER(nta::EntityID, uint64_t)
+	NTA_HASH_WRAPPER(nta::EntityID)
 	template<>
 	struct hash<nta::Entity> {
 		std::size_t operator()(const nta::Entity& e) const {
