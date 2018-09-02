@@ -32,7 +32,7 @@ set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake")
 project(jubilant-funicular)
 
 if(NOT ${CMAKE_VERSION} VERSION_LESS 3.2)
-    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 else()
     message(STATUS "Checking compiler flags for C++14 support.")
