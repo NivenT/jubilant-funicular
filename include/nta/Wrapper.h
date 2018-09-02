@@ -4,26 +4,26 @@
 #include "nta/MyEngine.h"
 
 #define NTA_OP_CHECKER(name, op) \
-  template<typename T, typename U> Nop operator op(T&, U&); \
+  template<typename T, typename U> Nop operator op(const T&, const U&); \
   template<typename T, typename U=T> \
   struct name##Exists { \
-    enum { value = !std::is_same<decltype(*(T*)(0) op *(U*)(0)), Nop>::value }; \
+    enum { value = !::std::is_same<decltype(*(T*)(0) op *(U*)(0)), Nop>::value }; \
   };
 
 #define NTA_UNARY_OP_CHECKER(name, op) \
-  template<typename T> Nop operator op(const T&); \
+  template<typename T> Nop operator op(T&); \
   template<typename T> \
   struct name##Exists { \
-    enum { value = !std::is_same<decltype(op *(T*)(0)), Nop>::value }; \
+    enum { value = !::std::is_same<decltype(op *(T*)(0)), Nop>::value }; \
   };
 
 #define NTA_IMPL_WRAPPER_OP(wrapper, type, name, op)	\
   template<typename T, typename U>							\
-  static auto __##name(const U& lhs, const U& rhs) -> decltype(std::enable_if_t<check:: name##Exists<T>::value, wrapper>{}) { \
+  static auto __##name(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check:: name##Exists<T>::value, wrapper>{}) { \
     return lhs.m_data op rhs.m_data;					\
   } \
   template<typename T, typename U>							\
-  static auto __##name(const U& lhs, const U& rhs) -> decltype(std::enable_if_t<!check:: name##Exists<T>::value, wrapper>{}) { \
+  static auto __##name(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<!::nta::check:: name##Exists<T>::value, wrapper>{}) { \
     return wrapper();							\
   } \
   wrapper operator op(const wrapper& rhs) const {	\
@@ -34,14 +34,31 @@
     return *this;					\
   }
 
+#define NTA_IMPL_WRAPPER_OP2(wrapper, type, name, op, rhs_type)  \
+  template<typename T, typename U, typename V>              \
+  static auto __##name(const U& lhs, const V& rhs) -> decltype(::std::enable_if_t<::nta::check:: name##Exists<T, rhs_type>::value, wrapper>{}) { \
+    return lhs.m_data op rhs;          \
+  } \
+  template<typename T, typename U, typename V>              \
+  static auto __##name(const U& lhs, const V& rhs) -> decltype(::std::enable_if_t<!::nta::check:: name##Exists<T, rhs_type>::value, wrapper>{}) { \
+    return wrapper();             \
+  } \
+  wrapper operator op(const rhs_type& rhs) const { \
+    return __##name<type, wrapper, rhs_type>(*this, rhs);   \
+  }             \
+  wrapper& operator op##=(const rhs_type& rhs) {   \
+    *this = *this op rhs;       \
+    return *this;         \
+  }
+
 // c should be "const" or "" (without the quotations)
 #define NTA_IMPL_WRAPPER_UNARY_OP(wrapper, type, name, op, c)		\
   template<typename T, typename U>					\
-  static auto __##name(c U& lhs) -> decltype(std::enable_if_t<check:: name##Exists<T>::value, wrapper>{}) { \
+  static auto __##name(c U& lhs) -> decltype(::std::enable_if_t<::nta::check:: name##Exists<T>::value, wrapper>{}) { \
     return op lhs.m_data;						\
   }									\
   template<typename T, typename U>					\
-  static auto __##name(c U& lhs) -> decltype(std::enable_if_t<!check:: name##Exists<T>::value, wrapper>{}) { \
+  static auto __##name(c U& lhs) -> decltype(::std::enable_if_t<!::nta::check:: name##Exists<T>::value, wrapper>{}) { \
     return wrapper();							\
   }									\
   wrapper operator op() c {						\
@@ -60,11 +77,11 @@
     type to_inner() const { return m_data; } \
     void __nta_wrapper() {} \
     template<typename T, typename U>              \
-    static auto __Equals(const U& lhs, const U& rhs) -> decltype(std::enable_if_t<check::EqualsExists<T>::value, bool>{}) { \
+    static auto __Equals(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check::EqualsExists<T>::value, bool>{}) { \
       return lhs.m_data == rhs.m_data;          \
     } \
     template<typename T, typename U>              \
-    static auto __Equals(const U& lhs, const U& rhs) -> decltype(std::enable_if_t<!check::EqualsExists<T>::value, bool>{}) { \
+    static auto __Equals(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<!::nta::check::EqualsExists<T>::value, bool>{}) { \
       return false;            \
     } \
     bool operator==(const name& rhs) const { \
@@ -80,30 +97,35 @@
     NTA_IMPL_WRAPPER_OP(name, type, Or, |)		\
     NTA_IMPL_WRAPPER_UNARY_OP(name, type, Not, ~, const)	\
     NTA_IMPL_WRAPPER_UNARY_OP(name, type, Incr, ++,)		\
+    name operator++(int) { auto ret = *this; operator++(); return ret; } \
     NTA_IMPL_WRAPPER_UNARY_OP(name, type, Decr, --,)		\
+    name operator--(int) { auto ret = *this; operator--(); return ret; } \
+    NTA_IMPL_WRAPPER_OP2(name, type, LShift, <<, int) \
+    NTA_IMPL_WRAPPER_OP2(name, type, RShift, >>, int) \
+    NTA_IMPL_WRAPPER_OP(name, type, Mod, %) \
     template<typename T, typename U> \
-    static auto __Print(std::ostream& lhs, const U& rhs) -> decltype(std::enable_if_t<check::LShiftExists<std::ostream, T>::value, std::ostream*>{}) { \
+    static auto __Print(::std::ostream& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check::LShiftExists<::std::ostream, T>::value, ::std::ostream*>{}) { \
       lhs<<#name<<"("<<rhs.m_data<<")";          \
       return &lhs; \
     } \
     template<typename T, typename U>              \
-    static auto __Print(std::ostream& lhs, const U& rhs) -> decltype(std::enable_if_t<!check::LShiftExists<std::ostream, T>::value, std::ostream*>{}) { \
+    static auto __Print(::std::ostream& lhs, const U& rhs) -> decltype(::std::enable_if_t<!::nta::check::LShiftExists<::std::ostream, T>::value, ::std::ostream*>{}) { \
       lhs<<#name;            \
       return &lhs; \
     } \
   };						\
-  inline std::ostream& operator<<(std::ostream& lhs, const name& rhs) { \
+  inline ::std::ostream& operator<<(::std::ostream& lhs, const name& rhs) { \
     return *name::__Print<type, name>(lhs, rhs);   \
   }
 // The above function is inline to avoid the one-definition rule
 
-/// Assumes type supports std::hash
+/// Assumes type supports ::std::hash
 ///
 /// Only use macro inside namespace std
 #define NTA_HASH_WRAPPER(name, type) \
   template<> \
   struct hash<name> { \
-    std::size_t operator()(const name& n) const { \
+    ::std::size_t operator()(const name& n) const { \
       return hash<type>()(n.to_inner()); \
     } \
   };
@@ -140,9 +162,8 @@ namespace nta {
     NTA_UNARY_OP_CHECKER(Decr, --) 
     NTA_OP_CHECKER(LShift, <<)
     NTA_OP_CHECKER(RShift, >>)
+    NTA_OP_CHECKER(Mod, %)
   }
-  //NTA_CREATE_WRAPPER(Test, int)
-  //NTA_CREATE_WRAPPER(Test2, std::string)
 }
 
 #endif // NTA_WRAPPER_H_INCLUDED
