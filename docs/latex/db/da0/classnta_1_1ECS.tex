@@ -27,6 +27,9 @@ void \hyperlink{classnta_1_1ECS_a283349003457513311fe9fe205e031bc}{delete\+\_\+c
 \begin{DoxyCompactList}\small\item\em Deletes all components of the given types from the given entity. \end{DoxyCompactList}\item 
 bool \hyperlink{classnta_1_1ECS_a370204d3b816a67fe22147f00d0c9447}{has\+\_\+component} (Entity\+ID entity, Component\+List\+ID list) const
 \item 
+\mbox{\Hypertarget{classnta_1_1ECS_ac79684f4ead68218b93aa6f93877b54e}\label{classnta_1_1ECS_ac79684f4ead68218b93aa6f93877b54e}} 
+bool \hyperlink{classnta_1_1ECS_ac79684f4ead68218b93aa6f93877b54e}{does\+\_\+entity\+\_\+exist} (Entity\+ID entity) const
+\begin{DoxyCompactList}\small\item\em Returns true if the given \hyperlink{classnta_1_1Entity}{Entity} exists. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1ECS_a132c523df15f7657cf4aa35973031a31}\label{classnta_1_1ECS_a132c523df15f7657cf4aa35973031a31}} 
 Entity\+ID \hyperlink{classnta_1_1ECS_a132c523df15f7657cf4aa35973031a31}{get\+\_\+owner} (\hyperlink{classnta_1_1Component}{Component} $\ast$cmpn) const
 \begin{DoxyCompactList}\small\item\em Returns the \hyperlink{classnta_1_1Entity}{Entity} associated to this \hyperlink{classnta_1_1Component}{Component}. \end{DoxyCompactList}\item 
@@ -46,7 +49,10 @@ void \hyperlink{classnta_1_1ECS_a997e9fa8509387cdb0f08680b019eb64}{broadcast} (c
 \begin{DoxyCompactList}\small\item\em Forwards message to all Components associated to the same \hyperlink{classnta_1_1Entity}{Entity} as cmpn. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classnta_1_1ECS_a3e2dc830c422d943cba4e44612b79c22}\label{classnta_1_1ECS_a3e2dc830c422d943cba4e44612b79c22}} 
 void \hyperlink{classnta_1_1ECS_a3e2dc830c422d943cba4e44612b79c22}{broadcast} (const \hyperlink{structnta_1_1Message}{Message} \&message, Entity\+ID entity)
-\begin{DoxyCompactList}\small\item\em Forwards message to all Components belonging to entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Forwards message to all Components belonging to entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1ECS_a19f1071b0747522e3c82fcdc61d060bb}\label{classnta_1_1ECS_a19f1071b0747522e3c82fcdc61d060bb}} 
+void \hyperlink{classnta_1_1ECS_a19f1071b0747522e3c82fcdc61d060bb}{broadcast} (const \hyperlink{structnta_1_1Message}{Message} \&message, Component\+List\+ID lists=$\sim$0)
+\begin{DoxyCompactList}\small\item\em Forwards message to all Components in the given lists. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,7 +84,8 @@ Definition at line 23 of file E\+C\+S.\+h.
 
 
 
-Collaboration diagram for nta\+:\+:E\+CS\+:\nopagebreak
+Collaboration diagram for nta\+:\+:E\+CS\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -134,7 +141,7 @@ Returns the associated list of components
 
 id should have only 1 nonzero bit 
 
-Definition at line 77 of file E\+C\+S.\+cpp.
+Definition at line 80 of file E\+C\+S.\+cpp.
 
 \mbox{\Hypertarget{classnta_1_1ECS_a370204d3b816a67fe22147f00d0c9447}\label{classnta_1_1ECS_a370204d3b816a67fe22147f00d0c9447}} 
 \index{nta\+::\+E\+CS@{nta\+::\+E\+CS}!has\+\_\+component@{has\+\_\+component}}

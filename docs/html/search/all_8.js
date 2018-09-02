@@ -13,6 +13,7 @@ var searchData=
   ['is_5ferr',['is_err',['../d8/d2e/classnta_1_1Result.html#ab742b047f1e670bc6a374f32c3fd48ea',1,'nta::Result']]],
   ['is_5ferr_5fvariant',['is_err_variant',['../d8/d2e/classnta_1_1Result.html#a27f85dc35976426c1f5c01431ac2e1cc',1,'nta::Result']]],
   ['is_5fok',['is_ok',['../d8/d2e/classnta_1_1Result.html#a61deaa087694eae4fdaece2996fedda0',1,'nta::Result']]],
+  ['is_5fwrapper',['is_wrapper',['../d2/d53/structnta_1_1check_1_1is__wrapper.html',1,'nta::check']]],
   ['islinked',['isLinked',['../dc/d9c/classnta_1_1GLSLProgram.html#a6067e49c12b542735eff255047cd8ae1',1,'nta::GLSLProgram']]],
   ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
   ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#ae97dfcf9043a3590a02387af85669871',1,'nta::InputManager']]],

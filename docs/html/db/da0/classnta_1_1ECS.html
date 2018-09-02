@@ -100,6 +100,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:a283349003457513311fe9fe205e031bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a370204d3b816a67fe22147f00d0c9447"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a370204d3b816a67fe22147f00d0c9447">has_component</a> (EntityID entity, ComponentListID list) const</td></tr>
 <tr class="separator:a370204d3b816a67fe22147f00d0c9447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79684f4ead68218b93aa6f93877b54e"><td class="memItemLeft" align="right" valign="top"><a id="ac79684f4ead68218b93aa6f93877b54e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ac79684f4ead68218b93aa6f93877b54e">does_entity_exist</a> (EntityID entity) const</td></tr>
+<tr class="memdesc:ac79684f4ead68218b93aa6f93877b54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given <a class="el" href="../../d0/d95/classnta_1_1Entity.html" title="A generic game entity (basically a wrapper around a unique id) ">Entity</a> exists. <br /></td></tr>
+<tr class="separator:ac79684f4ead68218b93aa6f93877b54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a132c523df15f7657cf4aa35973031a31"><td class="memItemLeft" align="right" valign="top"><a id="a132c523df15f7657cf4aa35973031a31"></a>
 EntityID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a132c523df15f7657cf4aa35973031a31">get_owner</a> (<a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *cmpn) const</td></tr>
 <tr class="memdesc:a132c523df15f7657cf4aa35973031a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d0/d95/classnta_1_1Entity.html" title="A generic game entity (basically a wrapper around a unique id) ">Entity</a> associated to this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a>. <br /></td></tr>
@@ -126,6 +130,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a3e2dc830c422d943cba4e44612b79c22">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message, EntityID entity)</td></tr>
 <tr class="memdesc:a3e2dc830c422d943cba4e44612b79c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components belonging to entity. <br /></td></tr>
 <tr class="separator:a3e2dc830c422d943cba4e44612b79c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f1071b0747522e3c82fcdc61d060bb"><td class="memItemLeft" align="right" valign="top"><a id="a19f1071b0747522e3c82fcdc61d060bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a19f1071b0747522e3c82fcdc61d060bb">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message, ComponentListID lists=~0)</td></tr>
+<tr class="memdesc:a19f1071b0747522e3c82fcdc61d060bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components in the given lists. <br /></td></tr>
+<tr class="separator:a19f1071b0747522e3c82fcdc61d060bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -261,7 +269,7 @@ Collaboration diagram for nta::ECS:</div>
 <p>Returns the associated list of components</p>
 <p>id should have only 1 nonzero bit </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00077">77</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00080">80</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
 </div>
 </div>
