@@ -26,9 +26,6 @@ public:
 int main(int argc, char* argv[]) {
     nta::init(); // This is useless here but it can't hurt
     cout<<"Running ECS tests..."<<endl;
-
-    cout<<check::SubExists<uint64_t>::value<<endl
-	<<check::SubExists<string>::value<<endl;
     
     ECS system;
     EntityID healthy = system.gen_entity();

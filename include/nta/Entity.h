@@ -1,12 +1,12 @@
 #ifndef NTA_ENTITY_H_INCLUDED
 #define NTA_ENTITY_H_INCLUDED
 
-#include "nta/MyEngine.h"
 #include "nta/Wrapper.h"
 
 namespace nta {
 	class ECS;
-	typedef uint64_t EntityID;
+	//typedef uint64_t EntityID;
+	NTA_CREATE_WRAPPER(EntityID, uint64_t)
 	/// A generic game entity (basically a wrapper around a *unique* id)
 	class Entity {
 	private:
@@ -23,6 +23,7 @@ namespace nta {
 }
 
 namespace std {
+	NTA_HASH_WRAPPER(nta::EntityID, uint64_t)
 	template<>
 	struct hash<nta::Entity> {
 		std::size_t operator()(const nta::Entity& e) const {
