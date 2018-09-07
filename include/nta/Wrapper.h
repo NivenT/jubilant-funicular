@@ -90,8 +90,8 @@
     type m_data;				\
   public:    \
     name(type data = type()) : m_data(data) {}	\
-    type to_inner() const { return m_data; } \
     void __nta_wrapper() {} \
+    type to_inner() const { return m_data; } \
     template<typename T, typename U>              \
     static auto __Equals(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check::EqualsExists<T>::value, bool>{}) { \
       return lhs.m_data == rhs.m_data;          \

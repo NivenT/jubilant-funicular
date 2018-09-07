@@ -14,6 +14,12 @@ int main(int argc, char* argv[]) {
     nta::init(); // This is useless here but it can't hurt
     cout<<"Running Wrapper tests..."<<endl;
 
+    assert(check::is_wrapper<Inches>::value);
+    assert(check::is_wrapper<Feet>::value);
+    assert(check::is_wrapper<Name>::value);
+    assert(!check::is_wrapper<std::string>::value);
+    assert(!check::is_wrapper<int>::value);
+
     Inches a = 12;
     Feet b = 1;
     Name c("Steve");
@@ -60,7 +66,7 @@ int main(int argc, char* argv[]) {
     assert(b >= 8);
 
     assert(c + string(" Rogers") == Name("Steve Rogers"));
-    // As a quirk of the implementation, get an empty wrapper whenever
+    // As a quirk of the implementation, you get an empty wrapper whenever
     // an invalid operation is performed
     assert(c - Name("Uh-oh") == Name());
 
