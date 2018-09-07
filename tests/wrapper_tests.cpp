@@ -54,6 +54,11 @@ int main(int argc, char* argv[]) {
     assert(b == 9);
     assert(a != 10);
 
+    assert(a > 3);
+    assert(b < 10);
+    assert(a <= 45);
+    assert(b >= 8);
+
     assert(c + string(" Rogers") == Name("Steve Rogers"));
     // As a quirk of the implementation, get an empty wrapper whenever
     // an invalid operation is performed

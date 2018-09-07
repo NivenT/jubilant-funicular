@@ -51,6 +51,22 @@
     return *this;         \
   }
 
+#define NTA_IMPL_WRAPPER_COMP(wrapper, type, name, op)  \
+  template<typename T, typename U>              \
+  static auto __##name(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check:: name##Exists<T>::value, bool>{}) { \
+    return lhs.m_data op rhs.m_data;          \
+  } \
+  template<typename T, typename U>              \
+  static auto __##name(const U& lhs, const U& rhs) -> decltype(::std::enable_if_t<!::nta::check:: name##Exists<T>::value, bool>{}) { \
+    return wrapper();             \
+  } \
+  bool operator op(const wrapper& rhs) const { \
+    return __##name<type, wrapper>(*this, rhs);   \
+  }             \
+  bool operator op##=(const wrapper& rhs) {   \
+    return *this op rhs || *this == rhs; \
+  }
+
 // c should be "const" or "" (without the quotations)
 #define NTA_IMPL_WRAPPER_UNARY_OP(wrapper, type, name, op, c)		\
   template<typename T, typename U>					\
@@ -103,6 +119,8 @@
     NTA_IMPL_WRAPPER_OP2(name, type, LShift, <<, int) \
     NTA_IMPL_WRAPPER_OP2(name, type, RShift, >>, int) \
     NTA_IMPL_WRAPPER_OP(name, type, Mod, %) \
+    NTA_IMPL_WRAPPER_COMP(name, type, Greater, >) \
+    NTA_IMPL_WRAPPER_COMP(name, type, Lesser, <) \
     template<typename T, typename U> \
     static auto __Print(::std::ostream& lhs, const U& rhs) -> decltype(::std::enable_if_t<::nta::check::LShiftExists<::std::ostream, T>::value, ::std::ostream*>{}) { \
       lhs<<#name<<"("<<rhs.m_data<<")";          \
@@ -163,6 +181,8 @@ namespace nta {
     NTA_OP_CHECKER(LShift, <<)
     NTA_OP_CHECKER(RShift, >>)
     NTA_OP_CHECKER(Mod, %)
+    NTA_OP_CHECKER(Greater, >)
+    NTA_OP_CHECKER(Lesser, <)
   }
 }
 
