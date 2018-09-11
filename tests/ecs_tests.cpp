@@ -84,6 +84,7 @@ int main(int argc, char* argv[]) {
     assert(!system.add_component(nullptr, noone));
     assert(system.get_components(noone) == nullptr);
     assert(system.get_component(noone, 1) == nullptr);
+    assert(system.get_component_list(8) == nullptr);
 
     assert(system.does_entity_exist(sick));
     assert(system.does_entity_exist(healthy));
