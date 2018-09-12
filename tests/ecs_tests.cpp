@@ -86,6 +86,12 @@ int main(int argc, char* argv[]) {
     assert(system.get_component(noone, 1) == nullptr);
     assert(system.get_component_list(8) == nullptr);
 
+    // You would think this would cause a crash, but nope
+    assert(((ComponentNode*)nullptr)->begin() == ((ComponentNode*)nullptr)->end());
+    for (auto null : *system.get_component_list(8)) {
+        assert(false);
+    }
+
     assert(system.does_entity_exist(sick));
     assert(system.does_entity_exist(healthy));
     assert(system.does_entity_exist(noone));

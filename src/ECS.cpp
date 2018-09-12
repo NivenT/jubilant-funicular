@@ -116,8 +116,8 @@ namespace nta {
 		}
 	}
 	void ECS::clear() {
-		for (auto& entity : m_entity_set) {
-			delete_entity(entity);
+		while (!m_entity_set.empty()) {
+			delete_entity(*m_entity_set.begin());
 		}
 		m_entity_gen.clear();
 		memset(m_component_lists, 0, sizeof(m_component_lists));
