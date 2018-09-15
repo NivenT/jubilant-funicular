@@ -1,0 +1,85 @@
+\hypertarget{classnta_1_1utils_1_1TypeMap}{}\section{nta\+:\+:utils\+:\+:Type\+Map Class Reference}
+\label{classnta_1_1utils_1_1TypeMap}\index{nta\+::utils\+::\+Type\+Map@{nta\+::utils\+::\+Type\+Map}}
+
+
+{\ttfamily \#include $<$Type\+Map.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_ad525496cb8aea267ff762348ff7221f7}\label{classnta_1_1utils_1_1TypeMap_ad525496cb8aea267ff762348ff7221f7}} 
+using {\bfseries iterator} = std\+::unordered\+\_\+map$<$ \hyperlink{structnta_1_1utils_1_1TypeInfo}{Type\+Info}, void $\ast$ $>$\+::iterator
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a7a6c8ea4ef245b196f649a2ee45e1af4}\label{classnta_1_1utils_1_1TypeMap_a7a6c8ea4ef245b196f649a2ee45e1af4}} 
+using {\bfseries const\+\_\+iterator} = std\+::unordered\+\_\+map$<$ \hyperlink{structnta_1_1utils_1_1TypeInfo}{Type\+Info}, void $\ast$ $>$\+::const\+\_\+iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_ab2bbbc29b6ad7ad73061d7de57557194}\label{classnta_1_1utils_1_1TypeMap_ab2bbbc29b6ad7ad73061d7de57557194}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries contains} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a10d79c0c70a261dfccb725bc2d98ed99}\label{classnta_1_1utils_1_1TypeMap_a10d79c0c70a261dfccb725bc2d98ed99}} 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classnta_1_1utils_1_1TypeMap_a10d79c0c70a261dfccb725bc2d98ed99}{insert} (T data)
+\begin{DoxyCompactList}\small\item\em Returns true if data was successfully inserted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_aaa03962b8a894a090dfd85fc2ea8cc16}\label{classnta_1_1utils_1_1TypeMap_aaa03962b8a894a090dfd85fc2ea8cc16}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::add\+\_\+lvalue\+\_\+reference$<$ T $>$\+::type {\bfseries get} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a3b7e1aa962f34481bdba3ed9b63471ef}\label{classnta_1_1utils_1_1TypeMap_a3b7e1aa962f34481bdba3ed9b63471ef}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries erase} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a166c9023491a5486f5131e75cbd93ad0}\label{classnta_1_1utils_1_1TypeMap_a166c9023491a5486f5131e75cbd93ad0}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a0f0106415a8b81a7f1c11721e6c231b5}\label{classnta_1_1utils_1_1TypeMap_a0f0106415a8b81a7f1c11721e6c231b5}} 
+bool {\bfseries is\+\_\+empty} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a196addd1242cf22c3e6f40f3e62173b3}\label{classnta_1_1utils_1_1TypeMap_a196addd1242cf22c3e6f40f3e62173b3}} 
+std\+::size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_ab183b8f3fb5b6eddb3e76d98a8bd237d}\label{classnta_1_1utils_1_1TypeMap_ab183b8f3fb5b6eddb3e76d98a8bd237d}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a69008174ebe18720da3e56bed8029f75}\label{classnta_1_1utils_1_1TypeMap_a69008174ebe18720da3e56bed8029f75}} 
+iterator {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_ae6eb2b2514495c12ad7166a8aeabf2e0}\label{classnta_1_1utils_1_1TypeMap_ae6eb2b2514495c12ad7166a8aeabf2e0}} 
+const\+\_\+iterator {\bfseries cbegin} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_aea9a528186ccd2094779a5308fdfb247}\label{classnta_1_1utils_1_1TypeMap_aea9a528186ccd2094779a5308fdfb247}} 
+iterator {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_ada125db6983695a38d039023db8ee5ee}\label{classnta_1_1utils_1_1TypeMap_ada125db6983695a38d039023db8ee5ee}} 
+const\+\_\+iterator {\bfseries cend} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnta_1_1utils_1_1TypeMap_a73c41f6494b48e4c921275b8767b517e}\label{classnta_1_1utils_1_1TypeMap_a73c41f6494b48e4c921275b8767b517e}} 
+std\+::unordered\+\_\+map$<$ \hyperlink{structnta_1_1utils_1_1TypeInfo}{Type\+Info}, void $\ast$ $>$ {\bfseries m\+\_\+map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A map from types to values of the given type
+
+Note\+: Only one value of a given type may be stored Note\+: This class does not take ownership of any stored pointers It is up to the client to delete them if necessary. Warning\+: For (most) non-\/pointer types, this class allocates memory on on the heap when insert is called. Because of type erasure the inserted value\textquotesingle{}s destructor will never be called, so this map cannot store (most) types with non-\/trivial destructors. 
+
+Definition at line 82 of file Type\+Map.\+h.
+
+
+
+Collaboration diagram for nta\+:\+:utils\+:\+:Type\+Map\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{dd/d7a/classnta_1_1utils_1_1TypeMap__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/nta/Type\+Map.\+h\item 
+src/Type\+Map.\+cpp\end{DoxyCompactItemize}
