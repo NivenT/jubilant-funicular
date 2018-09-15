@@ -81,7 +81,7 @@
     return __##name<type, wrapper>(*this);				\
   }									\
 
-/// \todo Overload shifts << and >>
+// I can't tell if this code is good or trash
 #define NTA_CREATE_WRAPPER(name, type) \
   class name { \
   public: \

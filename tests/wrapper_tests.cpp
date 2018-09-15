@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
     Feet b = 1;
     Name c("Steve");
 
+    // You can cout<< a wrapper
     assert(utils::to_string(a) == "Inches(12)");
     assert(utils::to_string(b) == "Feet(1)");
     assert(utils::to_string(c) == "Name(Steve)");
@@ -66,13 +67,18 @@ int main(int argc, char* argv[]) {
     assert(b >= 8);
 
     assert(c + string(" Rogers") == Name("Steve Rogers"));
+    assert(c < Name("Tony"));
     // As a quirk of the implementation, you get an empty wrapper whenever
     // an invalid operation is performed
     assert(c - Name("Uh-oh") == Name());
+    assert(c * Name("Nope") == Name());
+    assert((c & Name("Illegal")) == Name());
 
     c += string("n Strange");
     assert(utils::to_string(c) == "Name(Steven Strange)");
     assert(c == c.to_inner());
+
+    // Issue with commas in assert's, so this check is written in a roundabout way
     if (!is_same<Name::inner, string>::value) {
         assert(false);
     }
