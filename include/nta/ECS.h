@@ -12,7 +12,7 @@
 #define NTA_ECS_NUM_COMPONENT_LISTS (sizeof(ComponentListID)*8)
 
 namespace nta {
-    typedef utils::LinkedNode<Component> ComponentNode;
+    typedef utils::LinkedNode<Component*> ComponentNode;
     typedef std::unordered_set<Entity> EntitySet;
     typedef std::unordered_set<Component*> ComponentSet;
     typedef std::unordered_map<EntityID, ComponentNode*> EntityComponentMap;

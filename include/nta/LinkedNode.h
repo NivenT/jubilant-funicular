@@ -12,21 +12,21 @@ namespace nta {
 		    /// Custom iterator for looping over the data in the linked list
 			class iterator {
 			public:
-				using value_type = T*;
+				using value_type = T;
 				using difference_type = std::ptrdiff_t;
-				using pointer = LinkedNode*;
-				using reference = T*&;
+				using pointer = T*;
+				using reference = T&;
 				using iterator_category = std::forward_iterator_tag;
 			private:
-				pointer m_node;
+				LinkedNode* m_node;
 			public:
 				iterator() {}
-				iterator(pointer node) : m_node(node) {}
+				iterator(LinkedNode* node) : m_node(node) {}
 				reference operator*() const {
 					return m_node->data;
 				}
-				reference operator->() const {
-					return operator*();
+				pointer operator->() const {
+					return &m_node->data;
 				}
 				iterator& operator++() {
 					m_node = m_node->next;
@@ -45,8 +45,8 @@ namespace nta {
 				}
 			};
 
-			LinkedNode(T* d) : data(d) {}
-	        LinkedNode(T* d, LinkedNode* nxt) : next(nxt), data(d) {}
+			LinkedNode(T d) : data(d) {}
+	        LinkedNode(T d, LinkedNode* nxt) : next(nxt), data(d) {}
 	        ~LinkedNode() { if (next) delete next; }
 
 	        iterator begin() {
@@ -63,8 +63,8 @@ namespace nta {
 	        	return len;
 	        }
 
-	        static void remove(LinkedNode** head, T* d) {
-	        	LinkedNode** curr = head;
+	        static void remove(LinkedNode*& head, T d) {
+	        	LinkedNode** curr = &head;
 				while ((*curr) && (*curr)->data != d) {
 					curr = &(*curr)->next;
 				}
@@ -77,7 +77,7 @@ namespace nta {
 	        /// The next node in the linked list
 	        LinkedNode* next = nullptr;
 	        /// The (pointer to the) data associated to this node
-	        T* data = nullptr;
+	        T data;
 		};
 	}
 }

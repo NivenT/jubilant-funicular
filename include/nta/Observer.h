@@ -15,7 +15,7 @@ namespace nta {
     /// Sends notifications
     class Subject {
     private:
-        typedef utils::LinkedNode<Observer> ObserverNode;
+        typedef utils::LinkedNode<Observer*> ObserverNode;
         /// A linked list of Observers to notify
         ObserverNode* m_head = nullptr;
     protected:

@@ -46,11 +46,11 @@ namespace nta {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return false;
 		auto entity = m_entity_map[cmpn];
 		m_entity_map.erase(cmpn);
-		ComponentNode::remove(&m_components_map[entity], cmpn);
+		ComponentNode::remove(m_components_map[entity], cmpn);
 		for (ComponentListID list = 1; list; list <<= 1) {
 			if (cmpn->type & list) {
 				int idx = __builtin_ctz(list);
-				ComponentNode::remove(&m_component_lists[idx], cmpn);
+				ComponentNode::remove(m_component_lists[idx], cmpn);
 			}
 		}
 		m_component_set.erase(cmpn);
