@@ -64,7 +64,7 @@ namespace nta {
             AudioManager::destroy();
         #endif
         CallbackManager::destroy();
-        TTF_Quit();
+        if (TTF_WasInit()) TTF_Quit();
         SDL_Quit();
     }
     bool check_error() {

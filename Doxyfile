@@ -1,5 +1,6 @@
 # Causes a segfault for some reason...
 #GENERATE_XML=YES
+GENERATE_LATEX=NO
 
 PROJECT_NAME=jubilant-funicular
 #PROJECT_TAG="I think technically this is a game engine"
