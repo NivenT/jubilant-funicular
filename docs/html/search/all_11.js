@@ -15,7 +15,5 @@ var searchData=
   ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D']]],
   ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01',1,'nta::utils']]],
   ['two',['two',['../d2/d53/structnta_1_1check_1_1is__wrapper.html#d0/ddb/structnta_1_1check_1_1is__wrapper_1_1two',1,'nta::check::is_wrapper']]],
-  ['type',['type',['../d8/d8c/classnta_1_1Component.html#a6c27f772281fd6ae13892386a75e7b4e',1,'nta::Component::type()'],['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error::type()'],['../d0/d9b/structnta_1_1Message.html#a512ef14eaa86f830247f8194cbbd4f83',1,'nta::Message::type()']]],
-  ['typeinfo',['TypeInfo',['../d0/d50/structnta_1_1utils_1_1TypeInfo.html',1,'nta::utils']]],
-  ['typemap',['TypeMap',['../d2/d37/classnta_1_1utils_1_1TypeMap.html',1,'nta::utils']]]
+  ['type',['type',['../d8/d8c/classnta_1_1Component.html#a6c27f772281fd6ae13892386a75e7b4e',1,'nta::Component::type()'],['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error::type()'],['../d0/d9b/structnta_1_1Message.html#a512ef14eaa86f830247f8194cbbd4f83',1,'nta::Message::type()']]]
 ];
