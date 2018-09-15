@@ -8,8 +8,7 @@
 
 #define NTA_TYPEINFO_POINTER_BIT    0b0000'0001
 #define NTA_TYPEINFO_SMALL_BIT      0b0000'0010
-#define NTA_TYPEINFO_TRIV_DEST_BIT  0b0000'0100
-#define NTA_TYPEINFO_REFERENCE_BIT  0b0000'1000
+#define NTA_TYPEINFO_REFERENCE_BIT  0b0000'0100
 
 namespace nta {
     namespace utils {
@@ -27,8 +26,17 @@ namespace nta {
                 ret.hash = typeid(T).hash_code();
                 ret.flags |= std::is_pointer<T>::value ? NTA_TYPEINFO_POINTER_BIT : 0;
                 ret.flags |= sizeof(T) <= sizeof(void*) ? NTA_TYPEINFO_SMALL_BIT : 0;
-                ret.flags |= std::is_trivially_destructible<T>::value ? NTA_TYPEINFO_TRIV_DEST_BIT : 0;
                 ret.flags |= std::is_reference<T>::value ? NTA_TYPEINFO_REFERENCE_BIT : 0;
+
+                bool call_delete = !ret.is_reference() && !ret.is_small();
+                ret.destructor = [call_delete](void* o) {
+                    using type = typename std::remove_reference<T>::type;
+                    if (call_delete) {
+                        delete reinterpret_cast<type*>(o);
+                    } else {
+                        reinterpret_cast<type*>(o)->~type();
+                    }
+                };
                 return ret;
             }
             bool operator==(const TypeInfo& rhs) const {
@@ -42,19 +50,17 @@ namespace nta {
             bool is_small() const {
                 return flags & NTA_TYPEINFO_SMALL_BIT;
             }
-            /// Is it ok to not call this type's destructor
-            bool is_triv_dest() const {
-                return flags & NTA_TYPEINFO_TRIV_DEST_BIT;
-            }
             /// Is this a reference type
             bool is_reference() const {
                 return flags & NTA_TYPEINFO_REFERENCE_BIT;
             }
 
-            /// The types unique hash code
+            /// The type's unique hash code
             std::size_t hash;
             /// A bit array of useful information on this type
             unsigned char flags = 0;
+            /// The type's destructor
+            std::function<void(void*)> destructor;
         };
     }
 }
@@ -73,17 +79,13 @@ namespace nta {
         /// A map from types to values of the given type
         ///
         /// Note: Only one value of a given type may be stored
-        /// Note: This class does not take ownership of any stored pointers
-        ///       It is up to the client to delete them if necessary.
-        /// Warning: For (most) non-pointer types, this class allocates memory on
-        ///          on the heap when insert is called. Because of type erasure
-        ///          the inserted value's destructor will never be called, so this
-        ///          map cannot store (most) types with non-trivial destructors.
         class TypeMap {
         public:
             using iterator = std::unordered_map<TypeInfo, void*>::iterator;
             using const_iterator = std::unordered_map<TypeInfo, void*>::const_iterator;
         private:
+            void destroy(const TypeInfo& info);
+
             std::unordered_map<TypeInfo, void*> m_map; 
         public:
             TypeMap() {}
@@ -92,11 +94,11 @@ namespace nta {
             template<typename T>
             bool contains() const { return m_map.find(TypeInfo::get<T>()) != m_map.end(); }
             template<typename T>
-            bool insert(T data);
+            void insert(T data);
             template<typename T>
             typename std::add_lvalue_reference<T>::type get();
             template<typename T>
-            void erase() { m_map.erase(TypeInfo::get<T>()); }
+            void erase();
 
             bool empty() const { return m_map.empty(); }
             bool is_empty() const { return empty(); }
@@ -110,23 +112,19 @@ namespace nta {
             const_iterator cend() { return m_map.cend(); }
 
         };
-        /// Returns true if data was successfully inserted
         template<typename T>
-        bool TypeMap::insert(T data) {
+        void TypeMap::insert(T data) {
+            using type = typename std::remove_reference<T>::type;
+
             TypeInfo info = TypeInfo::get<T>();
             // info.is_pointer() => info.is_small()
             if (info.is_reference()) {
                 m_map[info] = std::addressof(data);
             } else if (info.is_small()) {
                 memcpy(&m_map[info], &data, sizeof(T));
-            } else if (info.is_triv_dest()) {
-                m_map[info] = malloc(sizeof(T));
-                memcpy(m_map[info], &data, sizeof(T));
             } else {
-                //assert(false && "Tried inserting a (large) type with non-trivial destructor");
-                return false;
+                m_map[info] = new type(data);
             }
-            return true;
         }
         template<typename T>
         typename std::add_lvalue_reference<T>::type TypeMap::get() {
@@ -142,6 +140,14 @@ namespace nta {
             } else {
                 return *(type*)m_map[info];
             }
+        }
+        template<typename T>
+        void TypeMap::erase() {
+            if (!contains<T>()) return;
+
+            TypeInfo info = TypeInfo::get<T>();
+            destroy(info);
+            m_map.erase(info);
         }
     }
 }

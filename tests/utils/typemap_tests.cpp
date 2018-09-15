@@ -5,16 +5,12 @@
 using namespace std;
 using namespace nta::utils;
 
+int big_destructor_count = 0;
+
 struct big {
+    ~big() { big_destructor_count++; }
     bool operator==(const big& rhs) const { return r == rhs.r && i == rhs.i; }
     double r, i;
-};
-
-struct bad {
-    int* a;
-    double r;
-    double d;
-    ~bad() { delete a; }
 };
 
 int main(int argc, char* argv[]) {
@@ -26,15 +22,11 @@ int main(int argc, char* argv[]) {
     char* str = strdup("hello");
 
     TypeMap map;
-    assert(map.insert<int>(5));
-    assert(map.insert<char>('a'));
-    assert(map.insert<int*>(&a));
-    assert(map.insert<big>(b));
-    assert(map.insert<char*>(str));
-    
-    // large types (i.e. sizeof(T) > sizeof(void*)) with non-trivial destructors
-    //  can't be inserted for technical reasons
-    assert(!map.insert<bad>(bad()));
+    map.insert<int>(5);
+    map.insert<char>('a');
+    map.insert<int*>(&a);
+    map.insert<big>(b);
+    map.insert<char*>(str);
 
     assert(map.get<int>() == 5);
     assert(map.get<char>() == 'a');
@@ -56,7 +48,10 @@ int main(int argc, char* argv[]) {
 
     // TypeMap does not do memory management for you
     free(str);
+    int old_count = big_destructor_count;
     map.clear();
+    // TypeMap runs destructors when you call clear
+    assert(big_destructor_count == old_count + 1);
 
     assert(!map.contains<big>());
     assert(map.is_empty());
@@ -65,7 +60,9 @@ int main(int argc, char* argv[]) {
     map.insert<big>(b);
     assert(map.get<big>().r == b.r);
 
+    old_count = big_destructor_count;
     map.erase<big>();
+    assert(big_destructor_count == old_count + 1);
     assert(map.size() == 0);
 
     map.insert<int&>(a);
@@ -78,11 +75,10 @@ int main(int argc, char* argv[]) {
     assert(!map.contains<int*>());
 
     map.clear();
-    assert(map.insert<int*>(new int(4)));
-    assert(map.insert<char*>(new char('3')));
-    assert(map.insert<float*>(new float(3.4)));
-    assert(!map.insert<string>("bleem"));
-    assert(map.insert<string*>(new string("bleem")));
+    map.insert<int*>(new int(4));
+    map.insert<char*>(new char('3'));
+    map.insert<float*>(new float(3.4));
+    map.insert<string>("bleem");
 
     // bad example of iteratoring over a TypeMap, but the point is that you can iterator over a TypeMap
     for (auto& pair : map) {
@@ -94,13 +90,9 @@ int main(int argc, char* argv[]) {
             delete (float*)pair.second;
         }
     }
-    assert(*map.get<string*>() == "bleem");
-    delete map.get<string*>();
-
-    map.clear();
-    map.insert<int>(10);
-    map.get<int>() = 9;
-    assert(map.get<int>() == 9);
+    assert(map.get<string>() == "bleem");
+    map.get<string>() += "!";
+    assert(map.get<string>() == "bleem!");
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();
