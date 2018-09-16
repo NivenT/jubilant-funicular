@@ -95,6 +95,15 @@ namespace nta {
             bool contains() const { return m_map.find(TypeInfo::get<T>()) != m_map.end(); }
             template<typename T>
             void insert(T data);
+            /// find is the same as get except a element of type T must already exist in the TypeMap.
+            /// If not, it will crash.
+            template<typename T>
+            typename std::add_lvalue_reference<T>::type find() const;
+            /// This version of find returns a nullptr if the key does not already exist
+            ///
+            /// Properly using this function requires some knowledge of how TypeMap works internally
+            void* find(const TypeInfo& info) { return m_map.find(info) == m_map.end() ? nullptr : m_map[info]; }
+            /// \note Only call this if T has a (public) constructor taking no arguments
             template<typename T>
             typename std::add_lvalue_reference<T>::type get();
             template<typename T>
@@ -116,6 +125,7 @@ namespace nta {
         void TypeMap::insert(T data) {
             using type = typename std::remove_reference<T>::type;
 
+            erase<T>();
             TypeInfo info = TypeInfo::get<T>();
             // info.is_pointer() => info.is_small()
             if (info.is_reference()) {
@@ -127,19 +137,24 @@ namespace nta {
             }
         }
         template<typename T>
-        typename std::add_lvalue_reference<T>::type TypeMap::get() {
+        typename std::add_lvalue_reference<T>::type TypeMap::find() const {
             using type = typename std::remove_reference<T>::type;
 
             TypeInfo info = TypeInfo::get<T>();
             if (m_map.find(info) == m_map.end()) assert(false && "Tried getting nonexistent value from a TypeMap");
             
             if (info.is_reference()) {
-                return *(type*)m_map[info];
+                return *(type*)m_map.find(info)->second;
             } else if (info.is_small()) {
-                return *(type*)&m_map[info];
+                return *(type*)&m_map.find(info)->second;
             } else {
-                return *(type*)m_map[info];
+                return *(type*)m_map.find(info)->second;
             }
+        }
+        template<typename T>
+        typename std::add_lvalue_reference<T>::type TypeMap::get() {
+            if (!contains<T>()) insert<T>(T());
+            return find<T>();
         }
         template<typename T>
         void TypeMap::erase() {

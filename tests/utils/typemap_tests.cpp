@@ -28,22 +28,22 @@ int main(int argc, char* argv[]) {
     map.insert<big>(b);
     map.insert<char*>(str);
 
-    assert(map.get<int>() == 5);
-    assert(map.get<char>() == 'a');
-    assert(map.get<int*>() == &a);
-    assert(map.get<big>() == b);
-    assert(map.get<char*>() == str);
+    assert(map.find<int>() == 5);
+    assert(map.find<char>() == 'a');
+    assert(map.find<int*>() == &a);
+    assert(map.find<big>() == b);
+    assert(map.find<char*>() == str);
 
     assert(map.contains<int>());
     assert(!map.contains<double>());
     assert(!map.empty());
     assert(map.size() == 5);
 
-    *map.get<int*>() = 25;
+    *map.find<int*>() = 25;
     assert(a == 25);
 
-    map.get<char*>()[0] = 'H';
-    map.get<char*>()[2] = '\0';
+    map.find<char*>()[0] = 'H';
+    map.find<char*>()[2] = '\0';
     assert(strcmp(str, "He") == 0);
 
     // TypeMap does not do memory management for you
@@ -58,7 +58,7 @@ int main(int argc, char* argv[]) {
     assert(map.size() == 0);
 
     map.insert<big>(b);
-    assert(map.get<big>().r == b.r);
+    assert(map.find<big>().r == b.r);
 
     old_count = big_destructor_count;
     map.erase<big>();
@@ -66,13 +66,19 @@ int main(int argc, char* argv[]) {
     assert(map.size() == 0);
 
     map.insert<int&>(a);
-    map.get<int&>() = 7;
+    map.find<int&>() = 7;
     assert(a == 7);
-    assert(map.get<int&>() == 7);
+    assert(map.find<int&>() == 7);
 
     assert(map.contains<int&>());
     assert(!map.contains<int>());
     assert(!map.contains<int*>());
+
+    map.clear();
+    assert(map.empty());
+    map.get<int>() = 8;
+    assert(map.size() == 1);
+    assert(map.get<int>() == 8);
 
     map.clear();
     map.insert<int*>(new int(4));
@@ -90,9 +96,9 @@ int main(int argc, char* argv[]) {
             delete (float*)pair.second;
         }
     }
-    assert(map.get<string>() == "bleem");
-    map.get<string>() += "!";
-    assert(map.get<string>() == "bleem!");
+    assert(map.find<string>() == "bleem");
+    map.find<string>() += "!";
+    assert(map.find<string>() == "bleem!");
 
     cout<<"Tests passed"<<endl;
     nta::cleanup();
