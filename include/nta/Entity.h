@@ -5,30 +5,11 @@
 
 namespace nta {
 	class ECS;
-	NTA_CREATE_WRAPPER(EntityID, uint64_t)
-	/// A generic game entity (basically a wrapper around a *unique* id)
-	class Entity {
-	private:
-		Entity(EntityID id) : id(id) {}
-	public:
-		bool operator==(const Entity rhs) const { return id == rhs.id; }
-
-		operator EntityID() const { return id; }
-
-		// The unique id identifying this Entity
-		const EntityID id;
-		friend ECS;
-	};
+	NTA_CREATE_WRAPPER(Entity, uint64_t)
 }
 
 namespace std {
-	NTA_HASH_WRAPPER(nta::EntityID)
-	template<>
-	struct hash<nta::Entity> {
-		std::size_t operator()(const nta::Entity& e) const {
-			return hash<nta::EntityID>()(e.id);
-		}
-	};
+	NTA_HASH_WRAPPER(nta::Entity)
 }
 
 #endif // NTA_ENTITY_H_INCLUDED

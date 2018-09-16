@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include "nta/ECS.h"
 
 namespace nta {
@@ -5,113 +7,65 @@ namespace nta {
 		m_system->broadcast(message, this);
 	}
 
-	ECS::ECS() {
-		memset(m_component_lists, 0, sizeof(m_component_lists));
-	}
-	ECS::~ECS() {
-		clear();
-	}
-	EntityID ECS::gen_entity() {
-		EntityID ret = m_entity_gen();
-		m_entity_set.insert(Entity(ret));
+	Entity ECS::gen_entity() {
+		Entity ret = m_entity_gen();
+		m_entity_set.insert(ret);
 		return ret;
 	}
-	void ECS::gen_entities(std::size_t num, EntityID* ids) {
+	void ECS::gen_entities(std::size_t num, Entity* ids) {
 		for (std::size_t i = 0; i < num; i++) ids[i] = gen_entity();
 	}
-	bool ECS::delete_entity(EntityID id) {
+	bool ECS::delete_entity(Entity id) {
 		if (m_entity_set.find(id) == m_entity_set.end()) return false;
 		m_entity_set.erase(id);
 		m_entity_gen.free(id);
-		while (m_components_map[id]) {
-			delete_component(m_components_map[id]->data);
+		while (!m_components_map[id].empty()) {
+			auto list = (std::vector<Component*>*)m_components_map[id].begin()->second;
+			while (!list->empty()) delete_component(list->front());
 		}
-		return true;
-	}
-	bool ECS::add_component(Component* cmpn, EntityID entity) {
-		if (!cmpn || m_entity_set.find(entity) == m_entity_set.end()) return false;
-		cmpn->m_system = this;
-		for (ComponentListID list = 1; list; list <<= 1) {
-			if (cmpn->type & list) {
-				int idx = __builtin_ctz(list);
-				m_component_lists[idx] = new ComponentNode(cmpn, m_component_lists[idx]);
-			}
-		}
-		m_components_map[entity] = new ComponentNode(cmpn, m_components_map[entity]);
-		m_entity_map[cmpn] = entity;
-		m_component_set.insert(cmpn);
 		return true;
 	}
 	bool ECS::delete_component(Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return false;
 		auto entity = m_entity_map[cmpn];
 		m_entity_map.erase(cmpn);
-		ComponentNode::remove(m_components_map[entity], cmpn);
-		for (ComponentListID list = 1; list; list <<= 1) {
-			if (cmpn->type & list) {
-				int idx = __builtin_ctz(list);
-				ComponentNode::remove(m_component_lists[idx], cmpn);
-			}
+
+		for (auto& info : m_list_map[cmpn]) {
+			std::vector<Component*>* list = (std::vector<Component*>*)m_components_map[entity].find(info);
+			auto end = std::remove(list->begin(), list->end(), cmpn);
+			list->resize(end - list->begin());
+
+			list = (std::vector<Component*>*)m_component_lists.find(info);
+			end = std::remove(list->begin(), list->end(), cmpn);
+			list->resize(end - list->begin());
 		}
+		m_list_map.erase(cmpn);
 		m_component_set.erase(cmpn);
 		delete cmpn;
 		return true;
 	}
-	void ECS::delete_components(EntityID entity, ComponentListID lists) {
-		ComponentNode* curr = get_components(entity);
-		while (curr) {
-			ComponentNode* next = curr->next;
-			if (curr->data->type & lists) {
-				delete_component(curr->data);
-			}
-			curr = next;
-		}
-	}
-	bool ECS::has_component(EntityID entity, ComponentListID list) const {
-		return get_component(entity, list) != nullptr;
-	}
-	bool ECS::does_entity_exist(EntityID entity) const {
+	bool ECS::does_entity_exist(Entity entity) const {
 		return m_entity_set.find(entity) != m_entity_set.end();
 	}
-	EntityID ECS::get_owner(Component* cmpn) const {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return 0;
+	Entity ECS::get_owner(Component* cmpn) const {
+		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
 		return m_entity_map.find(cmpn)->second;
 	}
-	ComponentNode* ECS::get_component_list(ComponentListID id) const {
-		return __builtin_popcount(id) == 1 ? m_component_lists[__builtin_ctz(id)] : nullptr;
-	}
-	ComponentNode* ECS::get_components(EntityID entity) const {
-		if (m_entity_set.find(entity) == m_entity_set.end()) return nullptr;
+	ComponentLists ECS::get_components(Entity entity) const {
+		if (m_entity_set.find(entity) == m_entity_set.end()) return ComponentLists();
 		auto it = m_components_map.find(entity);
-		return it == m_components_map.end() ? nullptr : it->second;
-	}
-	Component* ECS::get_component(EntityID entity, ComponentListID list) const {
-		ComponentNode* node = get_components(entity);
-		while (node) {
-			if (node->data->type & list) return node->data;
-			node = node->next;
-		}
-		return nullptr;
+		return it == m_components_map.end() ? ComponentLists() : it->second;
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
 		broadcast(message, m_entity_map[cmpn]);
 	}
-	void ECS::broadcast(const Message& message, EntityID entity) {
-		auto node = m_components_map[entity];
-		while (node) {
-			node->data->receive(message);
-			node = node->next;
-		}
-	}
-	void ECS::broadcast(const Message& message, ComponentListID lists) {
-		for (ComponentListID list = 1; list; list <<= 1) {
-			if (list & lists) {
-				auto node = m_component_lists[__builtin_ctz(list)];
-				while (node) {
-					node->data->receive(message);
-					node = node->next;
-				}
+	void ECS::broadcast(const Message& message, Entity entity) {
+		auto& lists = m_components_map[entity];
+		for (auto& pair: lists) {
+			auto& list = *(std::vector<Component*>*)pair.second;
+			for (Component* cmpn : list) {
+				cmpn->receive(message);
 			}
 		}
 	}
@@ -120,6 +74,5 @@ namespace nta {
 			delete_entity(*m_entity_set.begin());
 		}
 		m_entity_gen.clear();
-		memset(m_component_lists, 0, sizeof(m_component_lists));
 	}
 }
