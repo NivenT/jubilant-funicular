@@ -7,6 +7,9 @@
 
 namespace nta {
     namespace utils {
+        /// A class that optionally holds some data
+        ///
+        /// Used to signal that a function sometimes returns nothing
         template<typename T>
         class Option {
         private:
@@ -24,9 +27,15 @@ namespace nta {
             static Option new_some(const T& data);
             /// Creates a None variant Option
             static Option none();
+            /// Does this hold some data
             bool is_some() const { return some; }
+            /// Does this hold nothing?
             bool is_none() const { return !some; }
+            /// Retreive the underlying data
+            ///
+            /// You should always call is_some/is_none beforehand
             T get() const;
+            /// unwrap and get are the same thing
             T unwrap() const { return get(); }
             /// Return the data held by this Option or optb if it's None
             T get_or(const T& optb) { return some ? data : optb; }

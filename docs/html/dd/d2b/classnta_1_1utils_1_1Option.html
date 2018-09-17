@@ -74,19 +74,24 @@ $(function() {
 <div class="title">nta::utils::Option&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad205519bf669dc6dbfddeb1a95773b79"><td class="memItemLeft" align="right" valign="top"><a id="ad205519bf669dc6dbfddeb1a95773b79"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_some</b> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#ad205519bf669dc6dbfddeb1a95773b79">is_some</a> () const</td></tr>
+<tr class="memdesc:ad205519bf669dc6dbfddeb1a95773b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this hold some data. <br /></td></tr>
 <tr class="separator:ad205519bf669dc6dbfddeb1a95773b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb083dfcd9cdb54f97b05c65599087e"><td class="memItemLeft" align="right" valign="top"><a id="a3cb083dfcd9cdb54f97b05c65599087e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_none</b> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a3cb083dfcd9cdb54f97b05c65599087e">is_none</a> () const</td></tr>
+<tr class="memdesc:a3cb083dfcd9cdb54f97b05c65599087e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this hold nothing? <br /></td></tr>
 <tr class="separator:a3cb083dfcd9cdb54f97b05c65599087e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34da9b4025cc8b95c84894237495fd40"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a34da9b4025cc8b95c84894237495fd40">get</a> () const</td></tr>
 <tr class="separator:a34da9b4025cc8b95c84894237495fd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a729b90440d09884f1c197864d7bb0be9"><td class="memItemLeft" align="right" valign="top"><a id="a729b90440d09884f1c197864d7bb0be9"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>unwrap</b> () const</td></tr>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a729b90440d09884f1c197864d7bb0be9">unwrap</a> () const</td></tr>
+<tr class="memdesc:a729b90440d09884f1c197864d7bb0be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">unwrap and get are the same thing <br /></td></tr>
 <tr class="separator:a729b90440d09884f1c197864d7bb0be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a628533b91874b189d05700ff94417cbc"><td class="memItemLeft" align="right" valign="top"><a id="a628533b91874b189d05700ff94417cbc"></a>
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a628533b91874b189d05700ff94417cbc">get_or</a> (const T &amp;optb)</td></tr>
@@ -141,14 +146,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>some</b></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class nta::utils::Option&lt; T &gt;</h3>
 
+<p>A class that optionally holds some data</p>
+<p>Used to signal that a function sometimes returns nothing </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00011">11</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00014">14</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
 </div><div class="dynheader">
 Collaboration diagram for nta::utils::Option&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/da4/classnta_1_1utils_1_1Option__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1Option_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1Option_3_01T_01_4_coll__map" id="nta_1_1utils_1_1Option_3_01T_01_4_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a34da9b4025cc8b95c84894237495fd40"></a>
@@ -167,9 +172,11 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retreive the underlying data</p>
+<p>You should always call is_some/is_none beforehand </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>Push an error to <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> instead </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00047">47</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00056">56</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
 
 </div>
 </div>

@@ -11,8 +11,6 @@
 #include "nta/TypeMap.h"
 #include "nta/Option.h"
 
-#define NTA_ECS_NUM_COMPONENT_LISTS (sizeof(ComponentListID)*8)
-
 namespace nta {
     /// Will only hold types for the form std::vector<T*>
     /// where T inherits Component
