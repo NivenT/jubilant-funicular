@@ -1,0 +1,5 @@
+<map id="nta::HuffmanNode::hasChildren" name="nta::HuffmanNode::hasChildren">
+<area shape="rect" id="node2" href="$da/dbb/classnta_1_1HuffmanNode.html#abbdee24e11a5a72a54f6187228f9b7f0" title="returns map of all the bytes and how they are encoded " alt="" coords="260,29,476,56"/>
+<area shape="rect" id="node3" href="$d3/d18/classnta_1_1Compressor.html#ade1d9da3d6a4ccc45fb17a83f9d7c4ed" title="creates a Huffman tree from a buffer " alt="" coords="524,29,713,56"/>
+<area shape="rect" id="node4" href="$d3/d18/classnta_1_1Compressor.html#ac5f5822b598309d4ef6a89edb7bdcf10" title="compresses a bye buffer " alt="" coords="761,29,945,56"/>
+</map>

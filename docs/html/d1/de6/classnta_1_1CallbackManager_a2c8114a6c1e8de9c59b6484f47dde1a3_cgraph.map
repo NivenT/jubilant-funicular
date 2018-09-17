@@ -1,0 +1,9 @@
+<map id="nta::CallbackManager::init" name="nta::CallbackManager::init">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="203,19,361,46"/>
+<area shape="rect" id="node3" href="$d1/de6/classnta_1_1CallbackManager.html#a7912dc908d7a7a44267ddd8fa6fb8686" title="nta::CallbackManager\l::dispatch" alt="" coords="207,71,357,112"/>
+<area shape="rect" id="node4" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#aa10c18b44db7449d04bb6577c70dc17b" title="Schedules a function to be executed. " alt="" coords="411,5,557,47"/>
+<area shape="rect" id="node6" href="$d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448" title="Changes when an event is next scheduled to run. " alt="" coords="409,71,559,112"/>
+<area shape="rect" id="node8" href="$d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9" title="Removes the event with the given id. " alt="" coords="409,136,559,177"/>
+<area shape="rect" id="node5" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="608,5,755,47"/>
+<area shape="rect" id="node7" href="$d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14" title="Removes event from m_queue but not m_active (assumes id is valid) " alt="" coords="607,103,756,144"/>
+</map>

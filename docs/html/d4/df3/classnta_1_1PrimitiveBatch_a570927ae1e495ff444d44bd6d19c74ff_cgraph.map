@@ -1,0 +1,9 @@
+<map id="nta::PrimitiveBatch::end" name="nta::PrimitiveBatch::end">
+<area shape="rect" id="node2" href="$d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10" title="sorts primitives " alt="" coords="227,136,361,177"/>
+<area shape="rect" id="node7" href="$d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117" title="creates render batches " alt="" coords="216,233,372,275"/>
+<area shape="rect" id="node3" href="$d4/df3/classnta_1_1PrimitiveBatch.html#a8e08dc9967ad1fc382360ea02344e1d7" title="nta::PrimitiveBatch\l::compareDepth" alt="" coords="420,5,553,47"/>
+<area shape="rect" id="node4" href="$d4/df3/classnta_1_1PrimitiveBatch.html#a589f1ebad11f83187f2ce8f81875fe22" title="begins collection of primitive " alt="" coords="420,71,553,112"/>
+<area shape="rect" id="node5" href="$d4/df3/classnta_1_1PrimitiveBatch.html#ad2da44830d62dda2177542faf32404e2" title="nta::PrimitiveBatch\l::comparePrimitive" alt="" coords="420,136,553,177"/>
+<area shape="rect" id="node6" href="$d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b" title="comparers used for sorting " alt="" coords="420,201,553,243"/>
+<area shape="rect" id="node8" href="$d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce" title="return primitive to be drawn " alt="" coords="420,267,553,308"/>
+</map>

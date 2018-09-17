@@ -1,3 +1,5 @@
 <map id="nta::utils::Json::push_back" name="nta::utils::Json::push_back">
 <area shape="rect" id="node2" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a6952edc41983e76a7e548d9c426bc680" title="Converts stream of tokens into a Json value. " alt="" coords="232,5,380,47"/>
+<area shape="rect" id="node3" href="$d1/d3d/classnta_1_1utils_1_1Json.html#ac4e9f86cd5c15c077f993d86a68eb044" title="Parses Json value from a string. " alt="" coords="428,13,576,39"/>
+<area shape="rect" id="node4" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a1f9c21e0ba80e348e2c6c19070cbc45e" title="nta::utils::Json::from_file" alt="" coords="624,13,791,39"/>
 </map>

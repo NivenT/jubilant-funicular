@@ -1,0 +1,10 @@
+<map id="nta::Compressor::compress" name="nta::Compressor::compress">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="505,5,663,32"/>
+<area shape="rect" id="node3" href="$d3/d18/classnta_1_1Compressor.html#ade1d9da3d6a4ccc45fb17a83f9d7c4ed" title="creates a Huffman tree from a buffer " alt="" coords="238,56,427,83"/>
+<area shape="rect" id="node7" href="$d3/d18/classnta_1_1Compressor.html#affed498c6ed43db813de5c46892b9163" title="converts number to its binary representation " alt="" coords="245,107,420,133"/>
+<area shape="rect" id="node8" href="$d3/d18/classnta_1_1Compressor.html#aa7950ec19d7beda1b1102d1df453861f" title="reads a binary number from a string " alt="" coords="237,157,428,184"/>
+<area shape="rect" id="node9" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="267,208,398,235"/>
+<area shape="rect" id="node4" href="$da/dbb/classnta_1_1HuffmanNode.html#aaae7f78797726f30ce584e6fd0a282c1" title="returns the frequency of the node " alt="" coords="476,56,692,83"/>
+<area shape="rect" id="node5" href="$da/dbb/classnta_1_1HuffmanNode.html#abbdee24e11a5a72a54f6187228f9b7f0" title="returns map of all the bytes and how they are encoded " alt="" coords="476,131,692,157"/>
+<area shape="rect" id="node6" href="$da/dbb/classnta_1_1HuffmanNode.html#a429374a0e433063935f6e86816be8831" title="returns whether or not the node has children " alt="" coords="740,131,947,157"/>
+</map>

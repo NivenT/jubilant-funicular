@@ -1,0 +1,10 @@
+<map id="nta::Screen::handleInput" name="nta::Screen::handleInput">
+<area shape="rect" id="node2" href="$d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d" title="updates the state of m_prevKeyMap " alt="" coords="245,5,380,47"/>
+<area shape="rect" id="node3" href="$d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e" title="tells InputManager how the wheel is rolling " alt="" coords="456,57,611,99"/>
+<area shape="rect" id="node4" href="$d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18" title="updates the state of m_KeyMap " alt="" coords="245,123,380,164"/>
+<area shape="rect" id="node8" href="$d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597" title="updates the window&#39;s stored dimensions " alt="" coords="217,189,408,215"/>
+<area shape="rect" id="node9" href="$d6/de2/classnta_1_1InputManager.html#a63f1bc4d75790755fa260f273546630d" title="returns whether or not the key was just pressed this frame " alt="" coords="245,240,380,281"/>
+<area shape="rect" id="node5" href="$d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0" title="tells InputManager that specified key was pressed " alt="" coords="466,123,601,164"/>
+<area shape="rect" id="node6" href="$d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0" title="tells InputManager that specified key was released " alt="" coords="466,188,601,229"/>
+<area shape="rect" id="node7" href="$d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f" title="tells InputManager where the mouse is " alt="" coords="466,253,601,295"/>
+</map>

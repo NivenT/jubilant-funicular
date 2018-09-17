@@ -1,5 +1,8 @@
 <map id="nta::Result::new_ok" name="nta::Result::new_ok">
-<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="432,5,587,47"/>
-<area shape="rect" id="node4" href="$d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="192,38,384,65"/>
-<area shape="rect" id="node3" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="635,13,741,39"/>
+<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#a5a9625aa03f75fad3d34c0ce222014e9" title="nta::ResourceManager\l::getFile" alt="" coords="432,5,587,47"/>
+<area shape="rect" id="node4" href="$d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="432,71,587,112"/>
+<area shape="rect" id="node7" href="$d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="192,114,384,141"/>
+<area shape="rect" id="node3" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="637,7,791,48"/>
+<area shape="rect" id="node5" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="661,75,767,102"/>
+<area shape="rect" id="node6" href="$d9/d85/structnta_1_1SpriteSheet.html#aca9119d89a8c2c9e8e88cc43844c264a" title="nta::SpriteSheet::Sprite\lSheet" alt="" coords="635,127,793,168"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowflags',['WindowFlags',['../d4/d51/namespacenta.html#a49cf148a7560d323486d7947b79a43b8',1,'nta']]]
+  ['screenstate',['ScreenState',['../d4/d51/namespacenta.html#a784064b76630398da451dbeffdfc5ad2',1,'nta']]]
 ];

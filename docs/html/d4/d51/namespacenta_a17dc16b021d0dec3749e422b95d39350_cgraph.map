@@ -1,0 +1,11 @@
+<map id="nta::cleanup" name="nta::cleanup">
+<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#a26ff6f1cb4044d8f47fa5db9a3df2514" title="nta::ResourceManager\l::destroy" alt="" coords="147,34,301,75"/>
+<area shape="rect" id="node7" href="$db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282" title="Destorys the manager, freeing all necessary data. " alt="" coords="153,99,295,141"/>
+<area shape="rect" id="node8" href="$da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="155,165,293,206"/>
+<area shape="rect" id="node9" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="149,230,299,271"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="349,165,508,192"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="363,56,494,83"/>
+<area shape="rect" id="node5" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="363,5,494,32"/>
+<area shape="rect" id="node6" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="357,107,501,133"/>
+<area shape="rect" id="node10" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516" title="Waits for all scheduled functions to finish execution. " alt="" coords="355,230,502,271"/>
+</map>

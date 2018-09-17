@@ -1,0 +1,7 @@
+<map id="nta::SpriteBatch::addGlyph" name="nta::SpriteBatch::addGlyph">
+<area shape="rect" id="node2" href="$d7/d3b/classnta_1_1SpriteBatch.html#acb6ce8e79f16c0031d661f0160e9225b" title="nta::SpriteBatch::addGlyph" alt="" coords="237,5,415,32"/>
+<area shape="rect" id="node3" href="$df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69" title="draws all the particles " alt="" coords="255,57,397,98"/>
+<area shape="rect" id="node4" href="$d6/d57/classnta_1_1SpriteFont.html#a5296f75c81b8e1626e4fbfe188ae0a96" title="renders text with specified location, color, scale, etc. " alt="" coords="241,123,411,149"/>
+<area shape="rect" id="node6" href="$d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc" title="renders texture " alt="" coords="232,173,420,200"/>
+<area shape="rect" id="node5" href="$d6/d57/classnta_1_1SpriteFont.html#a9b5f33f50b476029364b25d2e1382947" title="nta::SpriteFont::drawText" alt="" coords="468,123,639,149"/>
+</map>

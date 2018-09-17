@@ -1,0 +1,5 @@
+<map id="nta::InputManager::releaseKey" name="nta::InputManager::releaseKey">
+<area shape="rect" id="node2" href="$d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18" title="updates the state of m_KeyMap " alt="" coords="188,5,323,47"/>
+<area shape="rect" id="node3" href="$d6/d23/classnta_1_1Screen.html#a645ccabe314f6c9084b493617c3eeafe" title="handles user input " alt="" coords="371,13,535,39"/>
+<area shape="rect" id="node4" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="583,13,748,39"/>
+</map>

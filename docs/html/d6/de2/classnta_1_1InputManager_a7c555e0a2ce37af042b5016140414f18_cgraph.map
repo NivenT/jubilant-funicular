@@ -1,0 +1,6 @@
+<map id="nta::InputManager::update" name="nta::InputManager::update">
+<area shape="rect" id="node2" href="$d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0" title="tells InputManager that specified key was pressed " alt="" coords="198,5,333,47"/>
+<area shape="rect" id="node3" href="$d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0" title="tells InputManager that specified key was released " alt="" coords="198,71,333,112"/>
+<area shape="rect" id="node4" href="$d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f" title="tells InputManager where the mouse is " alt="" coords="198,136,333,177"/>
+<area shape="rect" id="node5" href="$d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e" title="tells InputManager how the wheel is rolling " alt="" coords="188,201,343,243"/>
+</map>

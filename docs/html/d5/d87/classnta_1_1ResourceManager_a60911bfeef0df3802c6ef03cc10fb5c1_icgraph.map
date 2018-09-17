@@ -1,3 +1,5 @@
 <map id="nta::ResourceManager::getTexture" name="nta::ResourceManager::getTexture">
-<area shape="rect" id="node2" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="208,13,315,39"/>
+<area shape="rect" id="node2" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="210,5,365,47"/>
+<area shape="rect" id="node3" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="234,71,341,98"/>
+<area shape="rect" id="node4" href="$d9/d85/structnta_1_1SpriteSheet.html#aca9119d89a8c2c9e8e88cc43844c264a" title="nta::SpriteSheet::Sprite\lSheet" alt="" coords="208,123,367,164"/>
 </map>

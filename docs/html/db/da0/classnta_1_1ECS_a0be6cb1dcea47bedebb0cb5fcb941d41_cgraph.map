@@ -1,0 +1,5 @@
+<map id="nta::ECS::get_siblings" name="nta::ECS::get_siblings">
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html#a429a30645db30d2f822d2b8a48a8b7c8" title="nta::ECS::get_components" alt="" coords="207,5,387,32"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html#a1ac0b605316b42b9d046330f2b56aaf1" title="Returns the Entity associated to this Component. " alt="" coords="225,56,369,83"/>
+<area shape="rect" id="node4" href="$db/da0/classnta_1_1ECS.html#a3fbc402971a4d3a34c580828086109a2" title="Returns the (first) Component of the given type associated to the given Entity. " alt="" coords="210,107,383,133"/>
+</map>

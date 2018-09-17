@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['id',['id',['../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5',1,'nta::CallbackManager::event::id()'],['../d3/dff/structnta_1_1GLTexture.html#aaf0d536088f4b1062d996679b217c0f9',1,'nta::GLTexture::id()']]],
-  ['is_5ferr_5fvariant',['is_err_variant',['../d8/d2e/classnta_1_1Result.html#a27f85dc35976426c1f5c01431ac2e1cc',1,'nta::Result']]]
+  ['center',['center',['../d5/d1a/structnta_1_1Particle2D.html#a47ae411f47152a2b064dc216692302be',1,'nta::Particle2D']]],
+  ['color',['color',['../d5/d1a/structnta_1_1Particle2D.html#a3d3233a4de4f2c2b46715dd9a7187994',1,'nta::Particle2D::color()'],['../d5/d07/structnta_1_1Vertex2D.html#a05016aff7572c60a2cb688e67b2a4a31',1,'nta::Vertex2D::color()']]]
 ];

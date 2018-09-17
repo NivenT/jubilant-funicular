@@ -1,0 +1,6 @@
+<map id="nta::Animation2D::Animation2D" name="nta::Animation2D::Animation2D">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="260,71,447,98"/>
+<area shape="rect" id="node3" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="512,5,636,47"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="495,71,653,98"/>
+<area shape="rect" id="node5" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="507,123,641,164"/>
+</map>

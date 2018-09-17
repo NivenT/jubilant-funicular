@@ -1,4 +1,4 @@
 <map id="nta::ScreenManager::getCurrScreen" name="nta::ScreenManager::getCurrScreen">
-<area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="192,5,357,32"/>
-<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="205,57,344,98"/>
+<area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="379,13,544,39"/>
+<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="192,35,331,76"/>
 </map>

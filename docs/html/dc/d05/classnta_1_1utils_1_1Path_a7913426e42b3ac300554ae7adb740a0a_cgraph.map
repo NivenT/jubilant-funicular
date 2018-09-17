@@ -1,4 +1,7 @@
 <map id="nta::utils::Path::file_name" name="nta::utils::Path::file_name">
-<area shape="rect" id="node2" href="$d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01" title="Removes leading and trailing whitespace. " alt="" coords="242,5,345,32"/>
-<area shape="rect" id="node3" href="$d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c" title="Checks if str ends with suffix. " alt="" coords="224,56,363,83"/>
+<area shape="rect" id="node2" href="$dc/d05/classnta_1_1utils_1_1Path.html#a1a549e22ea993693a1678b9eb2db6897" title="nta::utils::Path::end" alt="" coords="224,59,360,85"/>
+<area shape="rect" id="node3" href="$d4/da6/classnta_1_1utils_1_1Path_1_1iterator.html#a4b285e992bbe4433267b81f41255fd2c" title="nta::utils::Path::iterator\l::set_end" alt="" coords="408,51,563,93"/>
+<area shape="rect" id="node4" href="$dc/d05/classnta_1_1utils_1_1Path.html#ac72b706957b1cfe5b74f15cbd444a0db" title="nta::utils::Path::is_file" alt="" coords="611,29,760,56"/>
+<area shape="rect" id="node5" href="$dc/d05/classnta_1_1utils_1_1Path.html#a211a5a235b5f7fba36caccf6e4688427" title="nta::utils::Path::exists" alt="" coords="981,29,1132,56"/>
+<area shape="rect" id="node6" href="$dc/d05/classnta_1_1utils_1_1Path.html#ab72254e3a00c0b295fc9a5c4a6d301f0" title="nta::utils::Path::is\l_directory" alt="" coords="808,22,933,63"/>
 </map>

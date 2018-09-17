@@ -1,0 +1,5 @@
+<map id="nta::Animation2D::Animation2D" name="nta::Animation2D::Animation2D">
+<area shape="rect" id="node2" href="$d9/d85/structnta_1_1SpriteSheet.html#a618bc48e6978a19ad9eb56dda3307f5a" title="nta::SpriteSheet::get_uv" alt="" coords="451,5,613,32"/>
+<area shape="rect" id="node3" href="$d9/d85/structnta_1_1SpriteSheet.html#a98643a92390617ac5575b7a951e9805a" title="Like get_uv except it flips the sprite horizontally. " alt="" coords="260,27,403,69"/>
+<area shape="rect" id="node4" href="$d9/d85/structnta_1_1SpriteSheet.html#aa29557bfccf62bef73a11e7f38439fb8" title="Returns the dimensions of one sprite in this sheet. " alt="" coords="260,93,403,134"/>
+</map>

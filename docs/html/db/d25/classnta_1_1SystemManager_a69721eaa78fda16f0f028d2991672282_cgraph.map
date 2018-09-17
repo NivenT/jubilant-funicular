@@ -1,0 +1,5 @@
+<map id="nta::SystemManager::destroy" name="nta::SystemManager::destroy">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="196,5,355,32"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="210,56,341,83"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="203,107,347,133"/>
+</map>

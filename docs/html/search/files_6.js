@@ -1,27 +1,5 @@
 var searchData=
 [
-  ['fast_5fexponential_2ehpp',['fast_exponential.hpp',['../d1/d2c/fast__exponential_8hpp.html',1,'']]],
-  ['fast_5fexponential_2einl',['fast_exponential.inl',['../d9/d40/fast__exponential_8inl.html',1,'']]],
-  ['fast_5fsquare_5froot_2ehpp',['fast_square_root.hpp',['../dd/d32/fast__square__root_8hpp.html',1,'']]],
-  ['fast_5fsquare_5froot_2einl',['fast_square_root.inl',['../db/ddb/fast__square__root_8inl.html',1,'']]],
-  ['fast_5ftrigonometry_2ehpp',['fast_trigonometry.hpp',['../de/d8f/fast__trigonometry_8hpp.html',1,'']]],
-  ['fast_5ftrigonometry_2einl',['fast_trigonometry.inl',['../dd/d93/fast__trigonometry_8inl.html',1,'']]],
-  ['func_5fcommon_2einl',['func_common.inl',['../d0/d46/func__common_8inl.html',1,'']]],
-  ['func_5fcommon_5fsimd_2einl',['func_common_simd.inl',['../da/d75/func__common__simd_8inl.html',1,'']]],
-  ['func_5fexponential_2einl',['func_exponential.inl',['../d2/dae/func__exponential_8inl.html',1,'']]],
-  ['func_5fexponential_5fsimd_2einl',['func_exponential_simd.inl',['../d6/d7d/func__exponential__simd_8inl.html',1,'']]],
-  ['func_5fgeometric_2einl',['func_geometric.inl',['../d3/d55/func__geometric_8inl.html',1,'']]],
-  ['func_5fgeometric_5fsimd_2einl',['func_geometric_simd.inl',['../d6/d5b/func__geometric__simd_8inl.html',1,'']]],
-  ['func_5finteger_2einl',['func_integer.inl',['../d9/dbc/func__integer_8inl.html',1,'']]],
-  ['func_5finteger_5fsimd_2einl',['func_integer_simd.inl',['../d2/d58/func__integer__simd_8inl.html',1,'']]],
-  ['func_5fmatrix_2einl',['func_matrix.inl',['../df/db7/func__matrix_8inl.html',1,'']]],
-  ['func_5fmatrix_5fsimd_2einl',['func_matrix_simd.inl',['../d2/da7/func__matrix__simd_8inl.html',1,'']]],
-  ['func_5fpacking_2einl',['func_packing.inl',['../d6/dd9/func__packing_8inl.html',1,'']]],
-  ['func_5fpacking_5fsimd_2einl',['func_packing_simd.inl',['../d0/da0/func__packing__simd_8inl.html',1,'']]],
-  ['func_5ftrigonometric_2einl',['func_trigonometric.inl',['../d4/d25/func__trigonometric_8inl.html',1,'']]],
-  ['func_5fvector_5frelational_2einl',['func_vector_relational.inl',['../db/da4/func__vector__relational_8inl.html',1,'']]],
-  ['func_5fvector_5frelational_5fsimd_2einl',['func_vector_relational_simd.inl',['../d4/d0c/func__vector__relational__simd_8inl.html',1,'']]],
-  ['functions_2ehpp',['functions.hpp',['../db/d1a/functions_8hpp.html',1,'']]],
-  ['functions_2einl',['functions.inl',['../d6/df7/functions_8inl.html',1,'']]],
-  ['fwd_2ehpp',['fwd.hpp',['../da/dfe/fwd_8hpp.html',1,'']]]
+  ['huffmanleaf_2ecpp',['HuffmanLeaf.cpp',['../d4/d01/HuffmanLeaf_8cpp.html',1,'']]],
+  ['huffmannode_2ecpp',['HuffmanNode.cpp',['../d4/d0d/HuffmanNode_8cpp.html',1,'']]]
 ];

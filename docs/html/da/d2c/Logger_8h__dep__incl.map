@@ -1,0 +1,17 @@
+<map id="include/nta/Logger.h" name="include/nta/Logger.h">
+<area shape="rect" id="node2" href="$dc/d2a/Animation2D_8cpp.html" title="src/Animation2D.cpp" alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node3" href="$d2/d02/AudioManager_8cpp.html" title="src/AudioManager.cpp" alt="" coords="173,80,325,107"/>
+<area shape="rect" id="node4" href="$d0/dbd/CallbackManager_8cpp.html" title="src/CallbackManager.cpp" alt="" coords="349,80,520,107"/>
+<area shape="rect" id="node5" href="$d9/d46/Compressor_8cpp.html" title="src/Compressor.cpp" alt="" coords="545,80,685,107"/>
+<area shape="rect" id="node6" href="$de/de1/GLSLProgram_8cpp.html" title="src/GLSLProgram.cpp" alt="" coords="709,80,859,107"/>
+<area shape="rect" id="node7" href="$d3/d9a/GLTexture_8cpp.html" title="src/GLTexture.cpp" alt="" coords="884,80,1015,107"/>
+<area shape="rect" id="node8" href="$d5/d6f/IOManager_8cpp.html" title="src/IOManager.cpp" alt="" coords="1039,80,1172,107"/>
+<area shape="rect" id="node9" href="$d9/df5/Logger_8cpp.html" title="src/Logger.cpp" alt="" coords="1197,80,1305,107"/>
+<area shape="rect" id="node10" href="$d4/d31/MyEngine_8cpp.html" title="src/MyEngine.cpp" alt="" coords="1329,80,1455,107"/>
+<area shape="rect" id="node11" href="$d8/d44/ResourceManager_8cpp.html" title="src/ResourceManager.cpp" alt="" coords="1479,80,1654,107"/>
+<area shape="rect" id="node12" href="$d5/d81/Screen_8cpp.html" title="src/Screen.cpp" alt="" coords="1678,80,1789,107"/>
+<area shape="rect" id="node13" href="$d3/d26/ScreenManager_8cpp.html" title="src/ScreenManager.cpp" alt="" coords="1813,80,1973,107"/>
+<area shape="rect" id="node14" href="$dc/d67/SpriteFont_8cpp.html" title="src/SpriteFont.cpp" alt="" coords="1998,80,2127,107"/>
+<area shape="rect" id="node15" href="$d9/d47/SystemManager_8cpp.html" title="src/SystemManager.cpp" alt="" coords="2151,80,2315,107"/>
+<area shape="rect" id="node16" href="$d2/d84/Window_8cpp.html" title="src/Window.cpp" alt="" coords="2339,80,2455,107"/>
+</map>

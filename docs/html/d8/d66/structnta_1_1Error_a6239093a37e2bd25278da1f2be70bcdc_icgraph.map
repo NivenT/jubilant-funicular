@@ -1,0 +1,8 @@
+<map id="nta::Error::Error" name="nta::Error::Error">
+<area shape="rect" id="node2" href="$d8/d2e/classnta_1_1Result.html#a96baacea35085048d694279d5de8c82e" title="Get the data (only use if is_ok() returns true) " alt="" coords="165,78,309,105"/>
+<area shape="rect" id="node7" href="$d8/d2e/classnta_1_1Result.html#a9ea9717e77d5e9a2371eb3cf9c896bc7" title="Get the Error (only use if is_err() returns true) " alt="" coords="170,129,305,155"/>
+<area shape="rect" id="node3" href="$d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="357,71,512,112"/>
+<area shape="rect" id="node4" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="562,5,717,47"/>
+<area shape="rect" id="node5" href="$d9/d85/structnta_1_1SpriteSheet.html#aca9119d89a8c2c9e8e88cc43844c264a" title="nta::SpriteSheet::Sprite\lSheet" alt="" coords="560,71,719,112"/>
+<area shape="rect" id="node6" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="586,137,693,163"/>
+</map>

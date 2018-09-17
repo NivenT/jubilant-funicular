@@ -1,0 +1,7 @@
+<map id="nta::Component" name="nta::Component">
+<area shape="rect" id="node2" href="$d4/d88/classDamageComponent.html" title="DamageComponent" alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node3" href="$d5/d63/classFakeComponent.html" title="FakeComponent" alt="" coords="169,80,287,107"/>
+<area shape="rect" id="node4" href="$df/dc2/classGraphicsComponent.html" title="GraphicsComponent" alt="" coords="311,80,452,107"/>
+<area shape="rect" id="node5" href="$dd/d81/classHealthComponent.html" title="HealthComponent" alt="" coords="477,80,603,107"/>
+<area shape="rect" id="node6" href="$df/d21/classPhysicsComponent.html" title="PhysicsComponent" alt="" coords="628,80,764,107"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="nta::SpriteBatch::sortGlyphs" name="nta::SpriteBatch::sortGlyphs">
+<area shape="rect" id="node2" href="$d7/d3b/classnta_1_1SpriteBatch.html#ae7aea3ca736e40b3a861048e883eabdc" title="nta::SpriteBatch::compare\lDepth" alt="" coords="240,5,415,47"/>
+<area shape="rect" id="node3" href="$d7/d3b/classnta_1_1SpriteBatch.html#a8ceff37f4b281bfb1f627876bb420978" title="begins collection of glyphs for the batch " alt="" coords="250,71,405,98"/>
+<area shape="rect" id="node4" href="$d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9" title="comparers used to sort " alt="" coords="240,123,415,164"/>
+</map>

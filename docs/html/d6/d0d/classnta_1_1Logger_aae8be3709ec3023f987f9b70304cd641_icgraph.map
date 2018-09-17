@@ -1,0 +1,11 @@
+<map id="nta::Logger::indent" name="nta::Logger::indent">
+<area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df" title="adds a screen and sets some of its properties " alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node3" href="$db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282" title="Destorys the manager, freeing all necessary data. " alt="" coords="190,71,333,112"/>
+<area shape="rect" id="node6" href="$d5/d87/classnta_1_1ResourceManager.html#a26ff6f1cb4044d8f47fa5db9a3df2514" title="nta::ResourceManager\l::destroy" alt="" coords="184,136,339,177"/>
+<area shape="rect" id="node8" href="$d4/d51/namespacenta.html#a45f05b09d7a4f72d658e70dad161391e" title="initializes some basic stuff for the engine " alt="" coords="229,202,294,229"/>
+<area shape="rect" id="node9" href="$d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="192,253,331,295"/>
+<area shape="rect" id="node4" href="$db/d25/classnta_1_1SystemManager.html#a76ef4114ece83e7492600960190211b1" title="nta::SystemManager\l::getWindow" alt="" coords="398,45,541,87"/>
+<area shape="rect" id="node5" href="$d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="423,111,516,138"/>
+<area shape="rect" id="node7" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="392,163,547,204"/>
+<area shape="rect" id="node10" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="387,261,552,287"/>
+</map>

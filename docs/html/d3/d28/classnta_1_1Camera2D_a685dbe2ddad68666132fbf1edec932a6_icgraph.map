@@ -1,0 +1,6 @@
+<map id="nta::Camera2D::getDilationMatrix" name="nta::Camera2D::getDilationMatrix">
+<area shape="rect" id="node2" href="$d3/d28/classnta_1_1Camera2D.html#a203daa81f32279e969de57a549165297" title="nta::Camera2D::getCamera\lMatrix" alt="" coords="235,5,417,47"/>
+<area shape="rect" id="node3" href="$d3/d28/classnta_1_1Camera2D.html#a28bb108270be9a73ff39c2573956ab9c" title="nta::Camera2D::getInverse\lCameraMatrix" alt="" coords="465,5,645,47"/>
+<area shape="rect" id="node4" href="$d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a" title="nta::Camera2D::screenToGame" alt="" coords="693,13,901,39"/>
+<area shape="rect" id="node5" href="$d3/d28/classnta_1_1Camera2D.html#afb20fb9823724babdc8d18b17336169c" title="converts mouse coordinates to world coordinates " alt="" coords="949,13,1157,39"/>
+</map>

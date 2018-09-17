@@ -1,0 +1,6 @@
+<map id="nta::Camera2D::getInverseCameraMatrix" name="nta::Camera2D::getInverseCameraMatrix">
+<area shape="rect" id="node2" href="$d3/d28/classnta_1_1Camera2D.html#a203daa81f32279e969de57a549165297" title="nta::Camera2D::getCamera\lMatrix" alt="" coords="233,71,416,112"/>
+<area shape="rect" id="node3" href="$d3/d28/classnta_1_1Camera2D.html#a685dbe2ddad68666132fbf1edec932a6" title="nta::Camera2D::getDilation\lMatrix" alt="" coords="474,5,655,47"/>
+<area shape="rect" id="node4" href="$d3/d28/classnta_1_1Camera2D.html#ab3fb29b12f0b118dd2be95f701b81e2f" title="nta::Camera2D::getRotation\lMatrix" alt="" coords="471,71,658,112"/>
+<area shape="rect" id="node5" href="$d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3" title="returns the 3x3 matrix representing the camera&#39;s view " alt="" coords="464,136,665,177"/>
+</map>

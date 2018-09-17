@@ -1,0 +1,4 @@
+<map id="nta::Timer::end" name="nta::Timer::end">
+<area shape="rect" id="node2" href="$d7/d1f/classnta_1_1FPSLimiter.html#a17003ecbc30d60c58112615fcaee4d1e" title="ends fps calculations, delaying if necessary to cap fps " alt="" coords="164,5,307,32"/>
+<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="355,5,520,32"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="nta::ResourceManager::getFile" name="nta::ResourceManager::getFile">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="208,71,395,98"/>
+<area shape="rect" id="node6" href="$d8/d2e/classnta_1_1Result.html#ad65a9140ae2a03cfb13bd30f848b1aa5" title="nta::Result::new_err" alt="" coords="231,122,371,149"/>
+<area shape="rect" id="node7" href="$d8/d2e/classnta_1_1Result.html#af193a336ab789de94a975c6f0a039e40" title="nta::Result::new_ok" alt="" coords="232,173,371,199"/>
+<area shape="rect" id="node3" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="460,5,584,47"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="443,71,601,98"/>
+<area shape="rect" id="node5" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="455,123,589,164"/>
+</map>

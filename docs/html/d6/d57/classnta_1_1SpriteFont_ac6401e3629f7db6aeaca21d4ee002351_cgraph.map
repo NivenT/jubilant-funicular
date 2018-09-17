@@ -1,0 +1,4 @@
+<map id="nta::SpriteFont::drawText" name="nta::SpriteFont::drawText">
+<area shape="rect" id="node2" href="$d6/d57/classnta_1_1SpriteFont.html#a5296f75c81b8e1626e4fbfe188ae0a96" title="renders text with specified location, color, scale, etc. " alt="" coords="224,5,395,32"/>
+<area shape="rect" id="node3" href="$d7/d3b/classnta_1_1SpriteBatch.html#a4ec3818e1b828d84148f5ff6bbc1955b" title="nta::SpriteBatch::addGlyph" alt="" coords="443,5,621,32"/>
+</map>

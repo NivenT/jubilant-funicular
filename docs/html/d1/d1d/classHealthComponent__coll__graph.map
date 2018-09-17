@@ -1,0 +1,5 @@
+<map id="HealthComponent" name="HealthComponent">
+<area shape="rect" id="node2" href="$d8/d8c/classnta_1_1Component.html" title="Base class for components. " alt="" coords="789,221,904,248"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="600,195,676,221"/>
+<area shape="rect" id="node9" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="257,305,396,346"/>
+</map>

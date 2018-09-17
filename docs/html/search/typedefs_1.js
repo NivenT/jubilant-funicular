@@ -1,22 +1,4 @@
 var searchData=
 [
-  ['bool1',['bool1',['../d5/d8c/group__gtx__compatibility.html#gab65f19f5170f95a2f06d6aa6482c9405',1,'glm']]],
-  ['bool1x1',['bool1x1',['../d5/d8c/group__gtx__compatibility.html#ga98d9d3da22aebc872ba38ce5afa0eff7',1,'glm']]],
-  ['bool2',['bool2',['../d5/d8c/group__gtx__compatibility.html#ga19e8114c90e2c81cfa87db72f4020b52',1,'glm']]],
-  ['bool2x2',['bool2x2',['../d5/d8c/group__gtx__compatibility.html#ga1a3707855138ba2d14b7f2ccfb93f476',1,'glm']]],
-  ['bool2x3',['bool2x3',['../d5/d8c/group__gtx__compatibility.html#gabbcc655d12f2f13ddc1917414389e8e1',1,'glm']]],
-  ['bool2x4',['bool2x4',['../d5/d8c/group__gtx__compatibility.html#gaa709e6df01dc0ae495c0b5c901a0a181',1,'glm']]],
-  ['bool3',['bool3',['../d5/d8c/group__gtx__compatibility.html#ga9d9411e411bc3bcb7ec64593f5e0908f',1,'glm']]],
-  ['bool3x2',['bool3x2',['../d5/d8c/group__gtx__compatibility.html#ga24674530ea1f5c4e78ba3932dcd7504a',1,'glm']]],
-  ['bool3x3',['bool3x3',['../d5/d8c/group__gtx__compatibility.html#gac56217a837f277fa163565d9858f66cf',1,'glm']]],
-  ['bool3x4',['bool3x4',['../d5/d8c/group__gtx__compatibility.html#ga3bec11b90dfdd4c6b37af3ae6e8f7c29',1,'glm']]],
-  ['bool4',['bool4',['../d5/d8c/group__gtx__compatibility.html#ga16892e963e3aa2aa6c826a508d2df3ce',1,'glm']]],
-  ['bool4x2',['bool4x2',['../d5/d8c/group__gtx__compatibility.html#gaad9844846cb1d1f74c4b00ddb8e582ef',1,'glm']]],
-  ['bool4x3',['bool4x3',['../d5/d8c/group__gtx__compatibility.html#gab1a5519fb12e67d9940fa4d9b4590198',1,'glm']]],
-  ['bool4x4',['bool4x4',['../d5/d8c/group__gtx__compatibility.html#ga568a1c97a6c6f7253334ee5933a6cb77',1,'glm']]],
-  ['bvec1',['bvec1',['../dc/d91/gtc_2vec1_8hpp.html#a30260c045e085bb8d19eddca772cac61',1,'glm']]],
-  ['bvec2',['bvec2',['../db/dac/group__core__types.html#ga7523cf292181cf7daef3aa0a3267d8e3',1,'glm']]],
-  ['bvec3',['bvec3',['../db/dac/group__core__types.html#ga3f07d6d37fc6fe875170fd5799685bcf',1,'glm']]],
-  ['bvec4',['bvec4',['../db/dac/group__core__types.html#ga6bb211b3d3bebae3867548d5673ca5cd',1,'glm']]],
-  ['byte',['byte',['../da/dcd/group__gtx__raw__data.html#gacd7fe1f2ad60a57f7d7ad4f1e6836efd',1,'glm']]]
+  ['difference_5ftype',['difference_type',['../d1/dcb/classnta_1_1utils_1_1Json_1_1iterator.html#a1de62fed92f8ed1612fa584b191dce13',1,'nta::utils::Json::iterator::difference_type()'],['../d0/dd2/classnta_1_1utils_1_1LinkedNode_1_1iterator.html#a1b3b2d988c4997992b47ea9498a1035a',1,'nta::utils::LinkedNode::iterator::difference_type()'],['../d4/da6/classnta_1_1utils_1_1Path_1_1iterator.html#a16ec4a1e46aa7ca5d70624886df88cf8',1,'nta::utils::Path::iterator::difference_type()']]]
 ];

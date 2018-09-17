@@ -1,0 +1,6 @@
+<map id="nta::SystemManager::getWindow" name="nta::SystemManager::getWindow">
+<area shape="rect" id="node2" href="$db/d25/classnta_1_1SystemManager.html#a76ef4114ece83e7492600960190211b1" title="nta::SystemManager\l::getWindow" alt="" coords="206,5,349,47"/>
+<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#a08ff6088b399f4253b838db207d64d96" title="sets the max fps and the window to use " alt="" coords="208,71,347,112"/>
+<area shape="rect" id="node4" href="$d6/d23/classnta_1_1Screen.html#a427eb6b2e064c23a19e7b9076b8eb2c9" title="sets the window to associate with this screen " alt="" coords="196,137,359,163"/>
+<area shape="rect" id="node5" href="$d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df" title="adds a screen and sets some of its properties " alt="" coords="407,129,545,171"/>
+</map>

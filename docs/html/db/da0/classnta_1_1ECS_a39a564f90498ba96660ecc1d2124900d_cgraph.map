@@ -1,0 +1,14 @@
+<map id="nta::ECS::~ECS" name="nta::ECS::~ECS">
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html#a90b0a89b5a954f2a67465d2487cd8afb" title="Removes all entites and components from this system. " alt="" coords="216,5,328,32"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html#a71a4d6f5e2aa5f3d7d3d8dc45b7eb611" title="Generates a new Entity, returning its ID. " alt="" coords="200,56,344,83"/>
+<area shape="rect" id="node4" href="$db/da0/classnta_1_1ECS.html#abfa438a816c1174f03b0e0124a2bec20" title="Generates several entities, storing their IDs in ids. " alt="" coords="195,107,349,133"/>
+<area shape="rect" id="node5" href="$db/da0/classnta_1_1ECS.html#a26a786d2ac17fbfffa3ba93b6fcc66aa" title="nta::ECS::delete_entity" alt="" coords="193,157,351,184"/>
+<area shape="rect" id="node6" href="$db/da0/classnta_1_1ECS.html#a4523e2d6e199b1f566fd02647ddf9d0f" title="nta::ECS::add_component" alt="" coords="184,208,360,235"/>
+<area shape="rect" id="node7" href="$db/da0/classnta_1_1ECS.html#ab24523ec53373bc159f67ee20d269975" title="nta::ECS::delete_component" alt="" coords="419,280,609,307"/>
+<area shape="rect" id="node8" href="$db/da0/classnta_1_1ECS.html#aeb6f76abd4855c865f8b8264d892b3be" title="nta::ECS::delete_components" alt="" coords="173,309,371,336"/>
+<area shape="rect" id="node9" href="$db/da0/classnta_1_1ECS.html#a219f7ec9639689fc76fce97033a97d8d" title="Returns true if the given Entity exists. " alt="" coords="439,353,589,394"/>
+<area shape="rect" id="node10" href="$db/da0/classnta_1_1ECS.html#ac467c1cd6e138493d07112ace3061da1" title="Returns true if the given Entity has a Component of type T. " alt="" coords="184,411,360,437"/>
+<area shape="rect" id="node11" href="$db/da0/classnta_1_1ECS.html#a1ac0b605316b42b9d046330f2b56aaf1" title="Returns the Entity associated to this Component. " alt="" coords="200,461,344,488"/>
+<area shape="rect" id="node12" href="$db/da0/classnta_1_1ECS.html#ada6362dc2d1296747961b9e4e8ec8c2b" title="Returns a list of all components of the given type. " alt="" coords="173,512,371,539"/>
+<area shape="rect" id="node13" href="$db/da0/classnta_1_1ECS.html#a429a30645db30d2f822d2b8a48a8b7c8" title="nta::ECS::get_components" alt="" coords="182,563,362,589"/>
+</map>

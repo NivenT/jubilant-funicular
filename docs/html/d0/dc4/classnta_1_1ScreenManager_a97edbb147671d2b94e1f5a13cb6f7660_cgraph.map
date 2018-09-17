@@ -1,0 +1,10 @@
+<map id="nta::ScreenManager::switchScreen" name="nta::ScreenManager::switchScreen">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="388,17,547,44"/>
+<area shape="rect" id="node3" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="402,152,533,179"/>
+<area shape="rect" id="node4" href="$d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a" title="returns the active screen " alt="" coords="197,94,335,135"/>
+<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="201,160,331,187"/>
+<area shape="rect" id="node6" href="$d6/d23/classnta_1_1Screen.html#a172d24c2224aef718d151b621379def1" title="called when the screen is no longer active " alt="" coords="192,211,340,237"/>
+<area shape="rect" id="node7" href="$d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8" title="Checks for and logs errors. " alt="" coords="208,43,324,69"/>
+<area shape="rect" id="node8" href="$d6/d23/classnta_1_1Screen.html#a895548cdf2a5170d671983fc9189579a" title="called when the screen becomes active " alt="" coords="193,312,339,339"/>
+<area shape="rect" id="node9" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="194,363,338,389"/>
+</map>

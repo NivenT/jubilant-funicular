@@ -1,0 +1,5 @@
+<map id="nta::Component::~Component" name="nta::Component::~Component">
+<area shape="rect" id="node2" href="$d8/d8c/classnta_1_1Component.html#a444c7d01911b4b348abcd3e464b367df" title="Allows for communication between components. " alt="" coords="252,5,417,32"/>
+<area shape="rect" id="node3" href="$d8/d8c/classnta_1_1Component.html#ab0dd70aa6df1ac166095bf1919ab8cdc" title="Sends message to all components associated to the same Entity. " alt="" coords="259,56,410,83"/>
+<area shape="rect" id="node4" href="$db/da0/classnta_1_1ECS.html#a997e9fa8509387cdb0f08680b019eb64" title="Forwards message to all Components associated to the same Entity as cmpn. " alt="" coords="465,56,607,83"/>
+</map>

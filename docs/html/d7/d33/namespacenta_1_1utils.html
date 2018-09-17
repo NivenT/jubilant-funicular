@@ -99,81 +99,513 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aacec41f909698427351bd2d4e6bfb0ff"><td class="memItemLeft" align="right" valign="top"><a id="aacec41f909698427351bd2d4e6bfb0ff"></a>
-typedef std::map&lt; std::string, <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>JsonObject</b></td></tr>
+<tr class="memitem:aacec41f909698427351bd2d4e6bfb0ff"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aacec41f909698427351bd2d4e6bfb0ff">JsonObject</a></td></tr>
 <tr class="separator:aacec41f909698427351bd2d4e6bfb0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a016ff68f749b52514dae354976f110ea"><td class="memItemLeft" align="right" valign="top"><a id="a016ff68f749b52514dae354976f110ea"></a>
-typedef std::vector&lt; <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>JsonArray</b></td></tr>
+<tr class="memitem:a016ff68f749b52514dae354976f110ea"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a016ff68f749b52514dae354976f110ea">JsonArray</a></td></tr>
 <tr class="separator:a016ff68f749b52514dae354976f110ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a83ee7c4cfccd9fa43564f5fe1c0c77d3"><td class="memItemLeft" align="right" valign="top"><a id="a83ee7c4cfccd9fa43564f5fe1c0c77d3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3">JsonNumType</a> { <b>POS_INT</b>, 
-<b>NEG_INT</b>, 
-<b>FLOAT</b>
- }<tr class="memdesc:a83ee7c4cfccd9fa43564f5fe1c0c77d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The various types a Json number can take. <br /></td></tr>
+<tr class="memitem:a83ee7c4cfccd9fa43564f5fe1c0c77d3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3">JsonNumType</a> { <a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3a4a3327ec2731a0c5feb75b2c21af97fc">POS_INT</a>, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3a25972b04bf94b199882996a2a16802ec">NEG_INT</a>, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3a56bbc478b967b7ee34fd187c80b40f41">FLOAT</a>
+ }<tr class="memdesc:a83ee7c4cfccd9fa43564f5fe1c0c77d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The various types a Json number can take.  <a href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a83ee7c4cfccd9fa43564f5fe1c0c77d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9921c0a3baf86d9facdc4927c66def3"><td class="memItemLeft" align="right" valign="top"><a id="ac9921c0a3baf86d9facdc4927c66def3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">JsonValueType</a> { <br />
-&#160;&#160;<b>STRING</b> = 0, 
-<b>NUMBER</b> = 1, 
-<b>OBJECT</b> = 2, 
-<b>ARRAY</b> = 3, 
+<tr class="memitem:ac9921c0a3baf86d9facdc4927c66def3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">JsonValueType</a> { <br />
+&#160;&#160;<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3a321002b9ff06a3a845bcde2afac5b1be">STRING</a> = 0, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3a4ab9b4b47978a499789740925adfb3e9">NUMBER</a> = 1, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3a7d2706ab50898537df37407be9748495">OBJECT</a> = 2, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3ab1ebb2e245674160faf9c63377d0d761">ARRAY</a> = 3, 
 <br />
-&#160;&#160;<b>BOOLEAN</b> = 4, 
-<b>NONE</b> = 5
+&#160;&#160;<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3a6b139fd1bc56d194afa6d090ac5fd039">BOOLEAN</a> = 4, 
+<a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3aae836c62a3cb213fc08a09d8599046fd">NONE</a> = 5
 <br />
- }<tr class="memdesc:ac9921c0a3baf86d9facdc4927c66def3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The various Json types. <br /></td></tr>
+ }<tr class="memdesc:ac9921c0a3baf86d9facdc4927c66def3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The various Json types.  <a href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac9921c0a3baf86d9facdc4927c66def3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aafbc0cf6600011397dc89456e14a706f"><td class="memItemLeft" align="right" valign="top"><a id="aafbc0cf6600011397dc89456e14a706f"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a> &amp;path)</td></tr>
+<tr class="memitem:aafbc0cf6600011397dc89456e14a706f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aafbc0cf6600011397dc89456e14a706f">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a> &amp;path)</td></tr>
 <tr class="separator:aafbc0cf6600011397dc89456e14a706f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top"><a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (crstring str, crstring prefix)</td></tr>
-<tr class="memdesc:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str starts with prefix. <br /></td></tr>
+<tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> prefix)</td></tr>
+<tr class="memdesc:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str starts with prefix.  <a href="#a9ad5fe63f14dd42c0db25d71e101e85c">More...</a><br /></td></tr>
 <tr class="separator:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa31e7ef45edfc4fdb60b6459e86b519c"><td class="memItemLeft" align="right" valign="top"><a id="aa31e7ef45edfc4fdb60b6459e86b519c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c">ends_with</a> (crstring str, crstring suffix)</td></tr>
-<tr class="memdesc:aa31e7ef45edfc4fdb60b6459e86b519c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str ends with suffix. <br /></td></tr>
+<tr class="memitem:aa31e7ef45edfc4fdb60b6459e86b519c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c">ends_with</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> suffix)</td></tr>
+<tr class="memdesc:aa31e7ef45edfc4fdb60b6459e86b519c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str ends with suffix.  <a href="#aa31e7ef45edfc4fdb60b6459e86b519c">More...</a><br /></td></tr>
 <tr class="separator:aa31e7ef45edfc4fdb60b6459e86b519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acad0765e34bce437d37871dcf88a9099"><td class="memItemLeft" align="right" valign="top"><a id="acad0765e34bce437d37871dcf88a9099"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#acad0765e34bce437d37871dcf88a9099">replace_all</a> (crstring str, crstring o, crstring n)</td></tr>
-<tr class="memdesc:acad0765e34bce437d37871dcf88a9099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurences of o in str with n. <br /></td></tr>
+<tr class="memitem:acad0765e34bce437d37871dcf88a9099"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#acad0765e34bce437d37871dcf88a9099">replace_all</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> o, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> n)</td></tr>
+<tr class="memdesc:acad0765e34bce437d37871dcf88a9099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurences of o in str with n.  <a href="#acad0765e34bce437d37871dcf88a9099">More...</a><br /></td></tr>
 <tr class="separator:acad0765e34bce437d37871dcf88a9099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="memItemLeft" align="right" valign="top"><a id="ac35b6baec75cd7b9d9ab7532cc2f9320"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac35b6baec75cd7b9d9ab7532cc2f9320">replace_all</a> (crstring str, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;os, const std::vector&lt; std::string &gt; &amp;ns)</td></tr>
-<tr class="memdesc:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurences of any string in the ith element of os with the ith element of ns. <br /></td></tr>
+<tr class="memitem:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac35b6baec75cd7b9d9ab7532cc2f9320">replace_all</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;os, const std::vector&lt; std::string &gt; &amp;ns)</td></tr>
+<tr class="memdesc:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all occurences of any string in the ith element of os with the ith element of ns.  <a href="#ac35b6baec75cd7b9d9ab7532cc2f9320">More...</a><br /></td></tr>
 <tr class="separator:ac35b6baec75cd7b9d9ab7532cc2f9320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c37b245aa436ad6022581a347feb01"><td class="memItemLeft" align="right" valign="top"><a id="af4c37b245aa436ad6022581a347feb01"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01">trim</a> (crstring str, crstring back_trash=&quot; \\\&quot;, crstring front_trash=&quot; \\\&quot;)</td></tr>
-<tr class="memdesc:af4c37b245aa436ad6022581a347feb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes leading and trailing whitespace. <br /></td></tr>
+<tr class="memitem:af4c37b245aa436ad6022581a347feb01"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01">trim</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> back_trash=&quot; \\\&quot;, <a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> front_trash=&quot; \\\&quot;)</td></tr>
+<tr class="memdesc:af4c37b245aa436ad6022581a347feb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes leading and trailing whitespace.  <a href="#af4c37b245aa436ad6022581a347feb01">More...</a><br /></td></tr>
 <tr class="separator:af4c37b245aa436ad6022581a347feb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b6ac39c9975a5ca13c417395fae759"><td class="memItemLeft" align="right" valign="top"><a id="ae2b6ac39c9975a5ca13c417395fae759"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ae2b6ac39c9975a5ca13c417395fae759">split</a> (crstring str, char delim)</td></tr>
-<tr class="memdesc:ae2b6ac39c9975a5ca13c417395fae759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings separated by delim. <br /></td></tr>
+<tr class="memitem:ae2b6ac39c9975a5ca13c417395fae759"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ae2b6ac39c9975a5ca13c417395fae759">split</a> (<a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a> str, char delim)</td></tr>
+<tr class="memdesc:ae2b6ac39c9975a5ca13c417395fae759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings separated by delim.  <a href="#ae2b6ac39c9975a5ca13c417395fae759">More...</a><br /></td></tr>
 <tr class="separator:ae2b6ac39c9975a5ca13c417395fae759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4171db688c28bc11eb63d3ad0e8bf136"><td class="memItemLeft" align="right" valign="top"><a id="a4171db688c28bc11eb63d3ad0e8bf136"></a>
-glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a4171db688c28bc11eb63d3ad0e8bf136">rotate</a> (crvec2 pt, float angle)</td></tr>
-<tr class="memdesc:a4171db688c28bc11eb63d3ad0e8bf136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates a point (about the origin) by the given angle. <br /></td></tr>
+<tr class="memitem:a4171db688c28bc11eb63d3ad0e8bf136"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a4171db688c28bc11eb63d3ad0e8bf136">rotate</a> (<a class="el" href="../../d4/d51/namespacenta.html#afa1f12bf0562fad674768e6ae045ec50">crvec2</a> pt, float angle)</td></tr>
+<tr class="memdesc:a4171db688c28bc11eb63d3ad0e8bf136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates a point (about the origin) by the given angle.  <a href="#a4171db688c28bc11eb63d3ad0e8bf136">More...</a><br /></td></tr>
 <tr class="separator:a4171db688c28bc11eb63d3ad0e8bf136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab201e3eaa7a7d050ca81ca029ec2347"><td class="memTemplParams" colspan="2"><a id="aab201e3eaa7a7d050ca81ca029ec2347"></a>
-template&lt;class T &gt; </td></tr>
+<tr class="memitem:aab201e3eaa7a7d050ca81ca029ec2347"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aab201e3eaa7a7d050ca81ca029ec2347"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347">to_string</a> (const T &amp;input, std::size_t precision=0)</td></tr>
-<tr class="memdesc:aab201e3eaa7a7d050ca81ca029ec2347"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts input to a std::string <br /></td></tr>
+<tr class="memdesc:aab201e3eaa7a7d050ca81ca029ec2347"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts input to a std::string  <a href="#aab201e3eaa7a7d050ca81ca029ec2347">More...</a><br /></td></tr>
 <tr class="separator:aab201e3eaa7a7d050ca81ca029ec2347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memTemplParams" colspan="2"><a id="aaa025ad45973ff6dc3a33800ccea72f0"></a>
-template&lt;class T &gt; </td></tr>
+<tr class="memitem:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aaa025ad45973ff6dc3a33800ccea72f0">in_range</a> (T val, T min, T max)</td></tr>
-<tr class="memdesc:aaa025ad45973ff6dc3a33800ccea72f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not min &lt;= val &lt;= max <br /></td></tr>
+<tr class="memdesc:aaa025ad45973ff6dc3a33800ccea72f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not min &lt;= val &lt;= max  <a href="#aaa025ad45973ff6dc3a33800ccea72f0">More...</a><br /></td></tr>
 <tr class="separator:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for classes/functionality not necessarily specific to game/opengl development. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a016ff68f749b52514dae354976f110ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016ff68f749b52514dae354976f110ea">&#9670;&nbsp;</a></span>JsonArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&gt; <a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a016ff68f749b52514dae354976f110ea">nta::utils::JsonArray</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d57/Json_8h_source.html#l00016">16</a> of file <a class="el" href="../../dc/d57/Json_8h_source.html">Json.h</a>.</p>
+
+</div>
+</div>
+<a id="aacec41f909698427351bd2d4e6bfb0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacec41f909698427351bd2d4e6bfb0ff">&#9670;&nbsp;</a></span>JsonObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;std::string, <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a>&gt; <a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aacec41f909698427351bd2d4e6bfb0ff">nta::utils::JsonObject</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d57/Json_8h_source.html#l00014">14</a> of file <a class="el" href="../../dc/d57/Json_8h_source.html">Json.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a83ee7c4cfccd9fa43564f5fe1c0c77d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ee7c4cfccd9fa43564f5fe1c0c77d3">&#9670;&nbsp;</a></span>JsonNumType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a83ee7c4cfccd9fa43564f5fe1c0c77d3">nta::utils::JsonNumType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The various types a <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> number can take. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a83ee7c4cfccd9fa43564f5fe1c0c77d3a4a3327ec2731a0c5feb75b2c21af97fc"></a>POS_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a83ee7c4cfccd9fa43564f5fe1c0c77d3a25972b04bf94b199882996a2a16802ec"></a>NEG_INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a83ee7c4cfccd9fa43564f5fe1c0c77d3a56bbc478b967b7ee34fd187c80b40f41"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d57/Json_8h_source.html#l00019">19</a> of file <a class="el" href="../../dc/d57/Json_8h_source.html">Json.h</a>.</p>
+
+</div>
+</div>
+<a id="ac9921c0a3baf86d9facdc4927c66def3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9921c0a3baf86d9facdc4927c66def3">&#9670;&nbsp;</a></span>JsonValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d7/d33/namespacenta_1_1utils.html#ac9921c0a3baf86d9facdc4927c66def3">nta::utils::JsonValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The various <a class="el" href="../../d1/d3d/classnta_1_1utils_1_1Json.html">Json</a> types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3a321002b9ff06a3a845bcde2afac5b1be"></a>STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3a4ab9b4b47978a499789740925adfb3e9"></a>NUMBER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3a7d2706ab50898537df37407be9748495"></a>OBJECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3ab1ebb2e245674160faf9c63377d0d761"></a>ARRAY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3a6b139fd1bc56d194afa6d090ac5fd039"></a>BOOLEAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac9921c0a3baf86d9facdc4927c66def3aae836c62a3cb213fc08a09d8599046fd"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d57/Json_8h_source.html#l00084">84</a> of file <a class="el" href="../../dc/d57/Json_8h_source.html">Json.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa31e7ef45edfc4fdb60b6459e86b519c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31e7ef45edfc4fdb60b6459e86b519c">&#9670;&nbsp;</a></span>ends_with()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nta::utils::ends_with </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>suffix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if str ends with suffix. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00008">8</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00090">nta::utils::Path::operator+()</a>, and <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00045">nta::utils::Path::parent()</a>.</p>
+
+</div>
+</div>
+<a id="aaa025ad45973ff6dc3a33800ccea72f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa025ad45973ff6dc3a33800ccea72f0">&#9670;&nbsp;</a></span>in_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nta::utils::in_range </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns whether or not min &lt;= val &lt;= max </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d60/utils_8h_source.html#l00039">39</a> of file <a class="el" href="../../d5/d60/utils_8h_source.html">utils.h</a>.</p>
+
+</div>
+</div>
+<a id="aafbc0cf6600011397dc89456e14a706f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbc0cf6600011397dc89456e14a706f">&#9670;&nbsp;</a></span>operator<<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; nta::utils::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/d05/classnta_1_1utils_1_1Path.html">Path</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../d5/dbb/Path_8cpp_source.html">Path.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acad0765e34bce437d37871dcf88a9099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad0765e34bce437d37871dcf88a9099">&#9670;&nbsp;</a></span>replace_all() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::replace_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces all occurences of o in str with n. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00015">nta::utils::Path::Path()</a>, and <a class="el" href="../../de/d06/utils_8cpp_source.html#l00021">replace_all()</a>.</p>
+
+</div>
+</div>
+<a id="ac35b6baec75cd7b9d9ab7532cc2f9320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35b6baec75cd7b9d9ab7532cc2f9320">&#9670;&nbsp;</a></span>replace_all() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::replace_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replaces all occurences of any string in the ith element of os with the ith element of ns. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4171db688c28bc11eb63d3ad0e8bf136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4171db688c28bc11eb63d3ad0e8bf136">&#9670;&nbsp;</a></span>rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec2 nta::utils::rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#afa1f12bf0562fad674768e6ae045ec50">crvec2</a>&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotates a point (about the origin) by the given angle. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dc3/DebugBatch_8cpp_source.html#l00064">nta::DebugBatch::addRect()</a>, and <a class="el" href="../../db/d29/SpriteBatch_8h_source.html#l00034">nta::Glyph::Glyph()</a>.</p>
+
+</div>
+</div>
+<a id="ae2b6ac39c9975a5ca13c417395fae759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b6ac39c9975a5ca13c417395fae759">&#9670;&nbsp;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; nta::utils::split </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Splits a string into substrings separated by delim. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00027">nta::utils::Path::resolve()</a>.</p>
+
+</div>
+</div>
+<a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad5fe63f14dd42c0db25d71e101e85c">&#9670;&nbsp;</a></span>starts_with()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nta::utils::starts_with </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>prefix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if str starts with prefix. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d75/Json_8cpp_source.html#l00305">nta::utils::Json::parse_tokens()</a>.</p>
+
+</div>
+</div>
+<a id="aab201e3eaa7a7d050ca81ca029ec2347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab201e3eaa7a7d050ca81ca029ec2347">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>precision</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>converts input to a std::string </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d60/utils_8h_source.html#l00028">28</a> of file <a class="el" href="../../d5/d60/utils_8h_source.html">utils.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00027">nta::ScreenManager::addScreen()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00070">nta::check_error()</a>, <a class="el" href="../../d9/d46/Compressor_8cpp_source.html#l00061">nta::Compressor::compress()</a>, <a class="el" href="../../d2/d84/Window_8cpp_source.html#l00046">nta::Window::createWindow()</a>, <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00041">nta::ResourceManager::deleteSpriteFont()</a>, <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00051">nta::ResourceManager::destroy()</a>, <a class="el" href="../../dc/d57/Json_8h_source.html#l00074">nta::utils::JsonNum::dump()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00050">nta::AudioManager::getMusic()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00037">nta::AudioManager::getSoundEffect()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00027">nta::init()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00008">nta::AudioManager::init()</a>, <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00014">nta::ImageLoader::readImage()</a>, <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00064">nta::ScreenManager::run()</a>, <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00007">nta::SpriteFont::SpriteFont()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00041">nta::ScreenManager::switchScreen()</a>.</p>
+
+</div>
+</div>
+<a id="af4c37b245aa436ad6022581a347feb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c37b245aa436ad6022581a347feb01">&#9670;&nbsp;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::trim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>back_trash</em> = <code>&quot;&#160;\t\n\v\f\r\0&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d51/namespacenta.html#a2491f988e95afee0abb966d6a73bd2f2">crstring</a>&#160;</td>
+          <td class="paramname"><em>front_trash</em> = <code>&quot;&#160;\t\n\v\f\r\0&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes leading and trailing whitespace. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d06/utils_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../de/d06/utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/dbb/Path_8cpp_source.html#l00087">nta::utils::Path::operator==()</a>, and <a class="el" href="../../d7/d75/Json_8cpp_source.html#l00346">nta::utils::Json::parse()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

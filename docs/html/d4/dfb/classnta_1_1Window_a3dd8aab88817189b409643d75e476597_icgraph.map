@@ -1,0 +1,5 @@
+<map id="nta::Window::setDimensions" name="nta::Window::setDimensions">
+<area shape="rect" id="node2" href="$d6/d23/classnta_1_1Screen.html#a645ccabe314f6c9084b493617c3eeafe" title="handles user input " alt="" coords="244,5,408,32"/>
+<area shape="rect" id="node4" href="$d4/dfb/classnta_1_1Window.html#a23b55b95d017fe35655ed1287869bdf1" title="resizes the window " alt="" coords="257,56,395,83"/>
+<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="456,5,621,32"/>
+</map>

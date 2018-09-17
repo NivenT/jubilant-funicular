@@ -1,0 +1,43 @@
+<map id="nta::Logger::writeToLog" name="nta::Logger::writeToLog">
+<area shape="rect" id="node2" href="$dc/d9c/classnta_1_1GLSLProgram.html#a708c47abebb9ca01b0eed4d1e711cef7" title="makes an attribute useful and assigns it the next available location " alt="" coords="212,5,420,32"/>
+<area shape="rect" id="node3" href="$d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df" title="adds a screen and sets some of its properties " alt="" coords="502,107,641,149"/>
+<area shape="rect" id="node4" href="$d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8" title="Checks for and logs errors. " alt="" coords="258,216,374,243"/>
+<area shape="rect" id="node5" href="$d4/dfb/classnta_1_1Window.html#a564ca2324e54c94f9e0f19d66017c07a" title="creates a window " alt="" coords="478,239,665,265"/>
+<area shape="rect" id="node6" href="$d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="502,173,641,214"/>
+<area shape="rect" id="node7" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="731,180,897,207"/>
+<area shape="rect" id="node8" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83" title="compiles a shader from a file and returns its id " alt="" coords="480,471,663,513"/>
+<area shape="rect" id="node9" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5" title="compiles both the vertex and fragment shaders given their name " alt="" coords="723,377,905,418"/>
+<area shape="rect" id="node10" href="$d3/d18/classnta_1_1Compressor.html#ac5f5822b598309d4ef6a89edb7bdcf10" title="compresses a bye buffer " alt="" coords="479,1684,663,1711"/>
+<area shape="rect" id="node11" href="$d6/d0d/classnta_1_1Logger.html#a308a3ec22f996556b3d54737ace33543" title="creates the log " alt="" coords="240,1244,392,1271"/>
+<area shape="rect" id="node12" href="$d4/d51/namespacenta.html#a45f05b09d7a4f72d658e70dad161391e" title="initializes some basic stuff for the engine " alt="" coords="781,1143,847,1169"/>
+<area shape="rect" id="node13" href="$d3/d18/classnta_1_1Compressor.html#ade1d9da3d6a4ccc45fb17a83f9d7c4ed" title="creates a Huffman tree from a buffer " alt="" coords="221,1659,411,1685"/>
+<area shape="rect" id="node14" href="$d5/d87/classnta_1_1ResourceManager.html#a16c549cb1496d1f38b5900258b0624c7" title="nta::ResourceManager\l::deleteSpriteFont" alt="" coords="737,1273,891,1314"/>
+<area shape="rect" id="node16" href="$d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489" title="removes the resource with the given path from the map and deletes it " alt="" coords="737,1338,891,1379"/>
+<area shape="rect" id="node17" href="$db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282" title="Destorys the manager, freeing all necessary data. " alt="" coords="245,1593,387,1634"/>
+<area shape="rect" id="node20" href="$d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219" title="destroys screens " alt="" coords="247,1761,385,1802"/>
+<area shape="rect" id="node22" href="$d5/d87/classnta_1_1ResourceManager.html#a26ff6f1cb4044d8f47fa5db9a3df2514" title="nta::ResourceManager\l::destroy" alt="" coords="239,1397,393,1438"/>
+<area shape="rect" id="node23" href="$d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6" title="Destroys the CallbackManager. " alt="" coords="241,1527,391,1569"/>
+<area shape="rect" id="node24" href="$da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce" title="frees all music " alt="" coords="247,1462,385,1503"/>
+<area shape="rect" id="node25" href="$da/d29/classnta_1_1AudioManager.html#adb0a0f0efb072f57430835c849caaa39" title="nta::AudioManager::\lgetMusic" alt="" coords="502,341,641,382"/>
+<area shape="rect" id="node26" href="$da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598" title="returns sound " alt="" coords="502,406,641,447"/>
+<area shape="rect" id="node27" href="$d1/de6/classnta_1_1CallbackManager.html#a2c8114a6c1e8de9c59b6484f47dde1a3" title="Initializes the CallbackManager. " alt="" coords="241,1127,391,1169"/>
+<area shape="rect" id="node28" href="$da/d29/classnta_1_1AudioManager.html#a4da570a6cee16bd6450031f7910057fd" title="initializes SDL_Mixer " alt="" coords="493,1092,649,1119"/>
+<area shape="rect" id="node29" href="$dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0" title="links the compiled shaders to this program " alt="" coords="468,991,675,1017"/>
+<area shape="rect" id="node30" href="$d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10" title="stores the entire contents of a file in a buffer " alt="" coords="488,925,655,966"/>
+<area shape="rect" id="node32" href="$d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="475,588,667,615"/>
+<area shape="rect" id="node36" href="$d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358" title="constructor &#45; creates a texture containing the font stored in fontPath with glyphs of the given size ..." alt="" coords="483,1041,659,1068"/>
+<area shape="rect" id="node37" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="223,735,409,761"/>
+<area shape="rect" id="node42" href="$d2/d54/classnta_1_1IOManager.html#a8e22ef5a2e46a48abdefa21847cf9eff" title="stores the entire contents of a buffer in a file " alt="" coords="231,1826,401,1867"/>
+<area shape="rect" id="node15" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="955,1273,1110,1314"/>
+<area shape="rect" id="node18" href="$db/d25/classnta_1_1SystemManager.html#a76ef4114ece83e7492600960190211b1" title="nta::SystemManager\l::getWindow" alt="" coords="500,1593,643,1634"/>
+<area shape="rect" id="node19" href="$d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350" title="deinitializes some stuff and destroyes all managers " alt="" coords="525,1501,618,1528"/>
+<area shape="rect" id="node21" href="$d0/dc4/classnta_1_1ScreenManager.html#aea609a639ffdc377e798eda054e6a4ba" title="basic destructor " alt="" coords="502,1761,641,1802"/>
+<area shape="rect" id="node31" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a1f9c21e0ba80e348e2c6c19070cbc45e" title="nta::utils::Json::from_file" alt="" coords="731,932,897,959"/>
+<area shape="rect" id="node33" href="$d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="737,678,891,719"/>
+<area shape="rect" id="node34" href="$d9/d85/structnta_1_1SpriteSheet.html#aca9119d89a8c2c9e8e88cc43844c264a" title="nta::SpriteSheet::Sprite\lSheet" alt="" coords="953,707,1112,749"/>
+<area shape="rect" id="node35" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="979,656,1086,683"/>
+<area shape="rect" id="node38" href="$d2/d7a/classnta_1_1Animation2D.html#a792bd9b44d471dc526e89dc9b2b4b7e0" title="nta::Animation2D::Animation2D" alt="" coords="468,705,675,732"/>
+<area shape="rect" id="node39" href="$d5/d87/classnta_1_1ResourceManager.html#a5a9625aa03f75fad3d34c0ce222014e9" title="nta::ResourceManager\l::getFile" alt="" coords="737,841,891,882"/>
+<area shape="rect" id="node40" href="$dc/d9c/classnta_1_1GLSLProgram.html#a8140edf8b3d89de4ebf8c4b1db404f59" title="returns the location of a uniform in the shaders " alt="" coords="470,757,673,798"/>
+<area shape="rect" id="node41" href="$d2/d7a/classnta_1_1Animation2D.html#aa5de467f16ecc3851bcfbf1da68a6103" title="nta::Animation2D::switch\l_animation" alt="" coords="487,639,656,681"/>
+</map>

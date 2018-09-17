@@ -1,0 +1,14 @@
+<map id="MainScreen" name="MainScreen">
+<area shape="rect" id="node2" href="$d6/d23/classnta_1_1Screen.html" title="Represents a game screen. " alt="" coords="1376,271,1465,297"/>
+<area shape="rect" id="node5" href="$d0/dc4/classnta_1_1ScreenManager.html" title="Manages a collection of screens. " alt="" coords="1007,208,1145,235"/>
+<area shape="rect" id="node6" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="691,80,785,107"/>
+<area shape="rect" id="node15" href="$d7/d3b/classnta_1_1SpriteBatch.html" title="nta::SpriteBatch" alt="" coords="680,625,796,652"/>
+<area shape="rect" id="node19" href="$dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ..." alt="" coords="673,696,803,723"/>
+<area shape="rect" id="node24" href="$d6/d57/classnta_1_1SpriteFont.html" title="Loads in a .ttf file, creates a font texture from it, and is then used to render text. " alt="" coords="1022,519,1130,545"/>
+<area shape="rect" id="node9" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="681,208,795,235"/>
+<area shape="rect" id="node10" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="371,121,453,148"/>
+<area shape="rect" id="node22" href="$d3/d28/classnta_1_1Camera2D.html" title="nta::Camera2D" alt="" coords="683,396,793,423"/>
+<area shape="rect" id="node25" href="$d4/d51/namespacenta.html#d4/d26/structnta_1_1CharGlyph" title="represents a single char in the texture " alt="" coords="683,575,793,601"/>
+<area shape="rect" id="node28" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="1383,819,1459,845"/>
+<area shape="rect" id="node34" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="1007,811,1145,853"/>
+</map>

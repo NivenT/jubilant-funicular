@@ -1,0 +1,5 @@
+<map id="nta::ECS::broadcast" name="nta::ECS::broadcast">
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html#a24d95ccd8c2570b88f6caf8620ebe20c" title="Returns the (first) Component of the given type with the same owner as cmpn. " alt="" coords="197,5,343,32"/>
+<area shape="rect" id="node3" href="$d8/d8c/classnta_1_1Component.html#ab0dd70aa6df1ac166095bf1919ab8cdc" title="Sends message to all components associated to the same Entity. " alt="" coords="195,56,345,83"/>
+<area shape="rect" id="node4" href="$d8/d8c/classnta_1_1Component.html#a4095fbd9581c589712d8c844add28e0d" title="nta::Component::~Component" alt="" coords="393,56,592,83"/>
+</map>

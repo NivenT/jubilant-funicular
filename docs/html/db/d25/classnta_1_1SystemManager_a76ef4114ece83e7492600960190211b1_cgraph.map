@@ -1,0 +1,7 @@
+<map id="nta::SystemManager::getWindow" name="nta::SystemManager::getWindow">
+<area shape="rect" id="node2" href="$db/d25/classnta_1_1SystemManager.html#add3089790707aaf982e43b69317fe30a" title="Gets a Window with specified title, width, height, and flags. " alt="" coords="196,5,339,47"/>
+<area shape="rect" id="node3" href="$db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282" title="Destorys the manager, freeing all necessary data. " alt="" coords="196,71,339,112"/>
+<area shape="rect" id="node4" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="387,27,545,54"/>
+<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="401,78,531,105"/>
+<area shape="rect" id="node6" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="394,129,538,155"/>
+</map>

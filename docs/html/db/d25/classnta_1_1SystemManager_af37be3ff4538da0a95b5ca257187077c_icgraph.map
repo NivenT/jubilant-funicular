@@ -1,3 +1,4 @@
 <map id="nta::SystemManager::getGLSLProgram" name="nta::SystemManager::getGLSLProgram">
-<area shape="rect" id="node2" href="$db/d24/classSquareScreen.html#ae8586ec53731d0abd74e630f93ccb62c" title="initializes the screen " alt="" coords="196,13,325,39"/>
+<area shape="rect" id="node2" href="$db/d24/classSquareScreen.html#ae8586ec53731d0abd74e630f93ccb62c" title="initializes the screen " alt="" coords="196,5,325,32"/>
+<area shape="rect" id="node3" href="$d3/db9/classMainScreen.html#a5aee5401d5e293b3dd613814a54d4d54" title="initializes the screen " alt="" coords="203,56,319,83"/>
 </map>

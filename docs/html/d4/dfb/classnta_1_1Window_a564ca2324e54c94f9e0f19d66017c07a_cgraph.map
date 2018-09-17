@@ -1,0 +1,8 @@
+<map id="nta::Window::createWindow" name="nta::Window::createWindow">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="475,17,633,44"/>
+<area shape="rect" id="node3" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="489,68,619,94"/>
+<area shape="rect" id="node4" href="$d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8" title="Checks for and logs errors. " alt="" coords="275,25,391,52"/>
+<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="240,126,427,153"/>
+<area shape="rect" id="node6" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="492,119,616,160"/>
+<area shape="rect" id="node7" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="487,184,621,226"/>
+</map>

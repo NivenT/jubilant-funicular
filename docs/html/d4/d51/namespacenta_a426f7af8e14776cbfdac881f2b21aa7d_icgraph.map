@@ -1,0 +1,25 @@
+<map id="nta::get_errortype_string" name="nta::get_errortype_string">
+<area shape="rect" id="node2" href="$d8/d2e/classnta_1_1Result.html#ae5fb7648fc0ecfbab99404a97fb27c83" title="Tries getting data, returning a default value if this is an error. " alt="" coords="189,377,352,404"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="177,428,364,455"/>
+<area shape="rect" id="node4" href="$d2/d7a/classnta_1_1Animation2D.html#a792bd9b44d471dc526e89dc9b2b4b7e0" title="nta::Animation2D::Animation2D" alt="" coords="412,5,619,32"/>
+<area shape="rect" id="node5" href="$d2/d7a/classnta_1_1Animation2D.html#aa5de467f16ecc3851bcfbf1da68a6103" title="nta::Animation2D::switch\l_animation" alt="" coords="431,57,600,98"/>
+<area shape="rect" id="node6" href="$da/d29/classnta_1_1AudioManager.html#a4da570a6cee16bd6450031f7910057fd" title="initializes SDL_Mixer " alt="" coords="437,123,593,149"/>
+<area shape="rect" id="node7" href="$d4/d51/namespacenta.html#a45f05b09d7a4f72d658e70dad161391e" title="initializes some basic stuff for the engine " alt="" coords="725,148,791,175"/>
+<area shape="rect" id="node8" href="$da/d29/classnta_1_1AudioManager.html#a131e8ec62c63fd9a07a77d833b02b598" title="returns sound " alt="" coords="446,225,585,266"/>
+<area shape="rect" id="node9" href="$da/d29/classnta_1_1AudioManager.html#adb0a0f0efb072f57430835c849caaa39" title="nta::AudioManager::\lgetMusic" alt="" coords="446,290,585,331"/>
+<area shape="rect" id="node10" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83" title="compiles a shader from a file and returns its id " alt="" coords="424,355,607,397"/>
+<area shape="rect" id="node12" href="$dc/d9c/classnta_1_1GLSLProgram.html#a8140edf8b3d89de4ebf8c4b1db404f59" title="returns the location of a uniform in the shaders " alt="" coords="414,421,617,462"/>
+<area shape="rect" id="node13" href="$dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0" title="links the compiled shaders to this program " alt="" coords="412,487,619,513"/>
+<area shape="rect" id="node14" href="$d5/dc9/classnta_1_1ImageLoader.html#ae4902a82fc36dd4ec8d78a1aa610d0cc" title="loads in any image file " alt="" coords="419,537,611,564"/>
+<area shape="rect" id="node19" href="$d2/d54/classnta_1_1IOManager.html#a8225f73838465f27e6fa60b689496d10" title="stores the entire contents of a file in a buffer " alt="" coords="432,589,599,630"/>
+<area shape="rect" id="node21" href="$d5/d87/classnta_1_1ResourceManager.html#a5a9625aa03f75fad3d34c0ce222014e9" title="nta::ResourceManager\l::getFile" alt="" coords="681,647,835,689"/>
+<area shape="rect" id="node22" href="$d0/dc4/classnta_1_1ScreenManager.html#ad20be92778255ff1527e84bb8e54abe3" title="nta::ScreenManager::run" alt="" coords="433,705,598,732"/>
+<area shape="rect" id="node23" href="$d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358" title="constructor &#45; creates a texture containing the font stored in fontPath with glyphs of the given size ..." alt="" coords="427,756,603,783"/>
+<area shape="rect" id="node24" href="$d4/dfb/classnta_1_1Window.html#a564ca2324e54c94f9e0f19d66017c07a" title="creates a window " alt="" coords="422,807,609,833"/>
+<area shape="rect" id="node11" href="$dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5" title="compiles both the vertex and fragment shaders given their name " alt="" coords="667,355,849,397"/>
+<area shape="rect" id="node15" href="$d5/d87/classnta_1_1ResourceManager.html#a60911bfeef0df3802c6ef03cc10fb5c1" title="nta::ResourceManager\l::getTexture" alt="" coords="681,530,835,571"/>
+<area shape="rect" id="node16" href="$d5/d87/classnta_1_1ResourceManager.html#ae14b4380aae490abd97d0bb1073d3a0b" title="nta::ResourceManager\l::getTexture" alt="" coords="899,618,1054,659"/>
+<area shape="rect" id="node17" href="$d9/d85/structnta_1_1SpriteSheet.html#aca9119d89a8c2c9e8e88cc43844c264a" title="nta::SpriteSheet::Sprite\lSheet" alt="" coords="897,486,1056,527"/>
+<area shape="rect" id="node18" href="$d4/d60/classnta_1_1Sprite.html#a1054dba693836caca9e755acc530d2fd" title="creates the sprite " alt="" coords="923,552,1030,579"/>
+<area shape="rect" id="node20" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a1f9c21e0ba80e348e2c6c19070cbc45e" title="nta::utils::Json::from_file" alt="" coords="675,596,841,623"/>
+</map>

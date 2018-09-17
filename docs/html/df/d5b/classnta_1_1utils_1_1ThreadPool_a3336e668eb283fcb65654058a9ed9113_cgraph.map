@@ -1,0 +1,7 @@
+<map id="nta::utils::ThreadPool::ThreadPool" name="nta::utils::ThreadPool::ThreadPool">
+<area shape="rect" id="node2" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a2ca98ba5ed4510e5aac90c0507859b8d" title="Function run by dispatch thread. " alt="" coords="200,35,347,76"/>
+<area shape="rect" id="node5" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#ade9cec65b2ef535cb03fcc0ea941fe24" title="Function run by worker threads. " alt="" coords="200,100,347,141"/>
+<area shape="rect" id="node3" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#a252683ad84d75e12d30f29441f7178bc" title="Halts until value of Semaphore is &gt; 0. " alt="" coords="589,5,736,47"/>
+<area shape="rect" id="node4" href="$df/d5b/classnta_1_1utils_1_1ThreadPool.html#a0cf734e83b83378a70a67864e9eeb732" title="Returns id of an available worker. " alt="" coords="395,35,541,76"/>
+<area shape="rect" id="node6" href="$d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9" title="Increments value of Semaphore. " alt="" coords="395,100,541,141"/>
+</map>

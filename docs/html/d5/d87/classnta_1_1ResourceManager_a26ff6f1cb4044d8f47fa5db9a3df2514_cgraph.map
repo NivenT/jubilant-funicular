@@ -1,0 +1,6 @@
+<map id="nta::ResourceManager::destroy" name="nta::ResourceManager::destroy">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="208,5,367,32"/>
+<area shape="rect" id="node3" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="222,56,353,83"/>
+<area shape="rect" id="node4" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="222,107,353,133"/>
+<area shape="rect" id="node5" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="215,157,359,184"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="nta::Camera2D::getInverseCameraMatrix" name="nta::Camera2D::getInverseCameraMatrix">
+<area shape="rect" id="node2" href="$d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a" title="nta::Camera2D::screenToGame" alt="" coords="233,13,441,39"/>
+<area shape="rect" id="node3" href="$d3/d28/classnta_1_1Camera2D.html#afb20fb9823724babdc8d18b17336169c" title="converts mouse coordinates to world coordinates " alt="" coords="489,13,697,39"/>
+</map>

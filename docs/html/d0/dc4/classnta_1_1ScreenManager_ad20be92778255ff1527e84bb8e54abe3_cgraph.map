@@ -1,5 +1,36 @@
 <map id="nta::ScreenManager::run" name="nta::ScreenManager::run">
-<area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a" title="returns the active screen " alt="" coords="223,5,361,47"/>
-<area shape="rect" id="node3" href="$d6/d23/classnta_1_1Screen.html#a895548cdf2a5170d671983fc9189579a" title="called when the screen becomes active " alt="" coords="219,71,365,98"/>
-<area shape="rect" id="node4" href="$d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c" title="returns state of screen " alt="" coords="219,122,365,149"/>
+<area shape="rect" id="node2" href="$d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a" title="returns the active screen " alt="" coords="487,733,626,775"/>
+<area shape="rect" id="node3" href="$d6/d23/classnta_1_1Screen.html#a895548cdf2a5170d671983fc9189579a" title="called when the screen becomes active " alt="" coords="483,799,630,826"/>
+<area shape="rect" id="node4" href="$d6/d23/classnta_1_1Screen.html#a2d53fc8f7ac43307896863fd6b3cad1c" title="returns state of screen " alt="" coords="243,338,389,365"/>
+<area shape="rect" id="node5" href="$d6/dd4/classnta_1_1Timer.html#a4192089df7b162096d119a7d9438173f" title="begins timer " alt="" coords="256,389,376,415"/>
+<area shape="rect" id="node6" href="$d1/de6/classnta_1_1CallbackManager.html#ae055387e26996a024065a5b59c833e78" title="Informs CallbackManager that a frame has passed. " alt="" coords="241,440,391,481"/>
+<area shape="rect" id="node7" href="$d6/d23/classnta_1_1Screen.html#a645ccabe314f6c9084b493617c3eeafe" title="handles user input " alt="" coords="234,159,398,186"/>
+<area shape="rect" id="node16" href="$d6/d23/classnta_1_1Screen.html#a6892f9b74b033d8bd5f4e9f190d49efa" title="updates screen " alt="" coords="248,557,384,583"/>
+<area shape="rect" id="node17" href="$d4/dfb/classnta_1_1Window.html#a916d03b7cf059118106a4098eab11175" title="returns the underlying window " alt="" coords="219,607,413,634"/>
+<area shape="rect" id="node18" href="$d6/d23/classnta_1_1Screen.html#a323ff61ac31f55bd39fa818ccd8200fb" title="renders screen " alt="" coords="249,658,383,685"/>
+<area shape="rect" id="node19" href="$de/db1/classnta_1_1ErrorManager.html#adca13bc3b6b36366c0a803ce43daf90d" title="Handles all outstanding errors. " alt="" coords="249,272,383,313"/>
+<area shape="rect" id="node21" href="$d7/d1f/classnta_1_1FPSLimiter.html#a17003ecbc30d60c58112615fcaee4d1e" title="ends fps calculations, delaying if necessary to cap fps " alt="" coords="245,506,387,533"/>
+<area shape="rect" id="node23" href="$d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660" title="switches the to a new screen " alt="" coords="247,883,385,924"/>
+<area shape="rect" id="node24" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="700,1129,859,1155"/>
+<area shape="rect" id="node25" href="$d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347" title="converts input to a std::string " alt="" coords="714,901,845,927"/>
+<area shape="rect" id="node30" href="$d6/d23/classnta_1_1Screen.html#aba9c09cd06dfc05557b86d866a7fb2b9" title="nta::Screen::getNextIndex" alt="" coords="229,999,403,1026"/>
+<area shape="rect" id="node31" href="$d6/d23/classnta_1_1Screen.html#a506f2266b008ccd071f630a5c252567e" title="gets various screen indices " alt="" coords="231,1050,401,1077"/>
+<area shape="rect" id="node32" href="$d6/d23/classnta_1_1Screen.html#a01f4fdd4cadd6abe4fef2605a0fde52a" title="nta::Screen::getXIndex" alt="" coords="238,1101,394,1127"/>
+<area shape="rect" id="node33" href="$d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee" title="writes entry in log and then exits program " alt="" coords="223,949,409,975"/>
+<area shape="rect" id="node8" href="$d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d" title="updates the state of m_prevKeyMap " alt="" coords="489,5,624,47"/>
+<area shape="rect" id="node9" href="$d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e" title="tells InputManager how the wheel is rolling " alt="" coords="702,57,857,99"/>
+<area shape="rect" id="node10" href="$d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18" title="updates the state of m_KeyMap " alt="" coords="489,123,624,164"/>
+<area shape="rect" id="node14" href="$d4/dfb/classnta_1_1Window.html#a3dd8aab88817189b409643d75e476597" title="updates the window&#39;s stored dimensions " alt="" coords="461,189,652,215"/>
+<area shape="rect" id="node15" href="$d6/de2/classnta_1_1InputManager.html#a63f1bc4d75790755fa260f273546630d" title="returns whether or not the key was just pressed this frame " alt="" coords="489,240,624,281"/>
+<area shape="rect" id="node11" href="$d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0" title="tells InputManager that specified key was pressed " alt="" coords="712,123,847,164"/>
+<area shape="rect" id="node12" href="$d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0" title="tells InputManager that specified key was released " alt="" coords="712,188,847,229"/>
+<area shape="rect" id="node13" href="$d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f" title="tells InputManager where the mouse is " alt="" coords="712,253,847,295"/>
+<area shape="rect" id="node20" href="$de/db1/classnta_1_1ErrorManager.html#a45dcc13a0acec8c4d2cc69d9b52be305" title="Deletes all errors (without handling any of them) " alt="" coords="489,305,624,347"/>
+<area shape="rect" id="node22" href="$d6/dd4/classnta_1_1Timer.html#adb7a179f51224cca3e4c2f8f8bc20a19" title="return time since beginning of timer in nanoseconds " alt="" coords="501,506,612,533"/>
+<area shape="rect" id="node26" href="$d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641" title="indents entries " alt="" coords="491,1053,622,1079"/>
+<area shape="rect" id="node27" href="$d6/d23/classnta_1_1Screen.html#a172d24c2224aef718d151b621379def1" title="called when the screen is no longer active " alt="" coords="483,850,631,877"/>
+<area shape="rect" id="node28" href="$d4/d51/namespacenta.html#a65c4ac3e24918c1a26025984c474b7c8" title="Checks for and logs errors. " alt="" coords="499,951,615,978"/>
+<area shape="rect" id="node29" href="$d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa" title="unindents entries " alt="" coords="485,1002,629,1029"/>
+<area shape="rect" id="node34" href="$d4/d51/namespacenta.html#a426f7af8e14776cbfdac881f2b21aa7d" title="converts ErrorType enum to string " alt="" coords="495,1205,619,1247"/>
+<area shape="rect" id="node35" href="$de/db1/classnta_1_1ErrorManager.html#a5e12c42f103bfa290699c08c98d681a2" title="Adds and error to the front of the list. " alt="" coords="489,1271,624,1312"/>
 </map>

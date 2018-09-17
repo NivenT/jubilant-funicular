@@ -1,0 +1,6 @@
+<map id="nta::Compressor::createTree" name="nta::Compressor::createTree">
+<area shape="rect" id="node2" href="$d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13" title="writes an entry in the log " alt="" coords="271,5,430,32"/>
+<area shape="rect" id="node3" href="$da/dbb/classnta_1_1HuffmanNode.html#aaae7f78797726f30ce584e6fd0a282c1" title="returns the frequency of the node " alt="" coords="243,56,459,83"/>
+<area shape="rect" id="node4" href="$da/dbb/classnta_1_1HuffmanNode.html#abbdee24e11a5a72a54f6187228f9b7f0" title="returns map of all the bytes and how they are encoded " alt="" coords="243,131,459,157"/>
+<area shape="rect" id="node5" href="$da/dbb/classnta_1_1HuffmanNode.html#a429374a0e433063935f6e86816be8831" title="returns whether or not the node has children " alt="" coords="507,131,713,157"/>
+</map>

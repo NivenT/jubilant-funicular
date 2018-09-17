@@ -1,0 +1,5 @@
+<map id="nta::ECS::get_sibling" name="nta::ECS::get_sibling">
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html#a1ac0b605316b42b9d046330f2b56aaf1" title="Returns the Entity associated to this Component. " alt="" coords="200,5,344,32"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html#a997e9fa8509387cdb0f08680b019eb64" title="Forwards message to all Components associated to the same Entity as cmpn. " alt="" coords="201,56,343,83"/>
+<area shape="rect" id="node4" href="$db/da0/classnta_1_1ECS.html#a90b0a89b5a954f2a67465d2487cd8afb" title="Removes all entites and components from this system. " alt="" coords="216,107,328,133"/>
+</map>

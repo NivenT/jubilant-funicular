@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['unindent',['unindent',['../d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa',1,'nta::Logger']]],
-  ['unsubscribe',['unsubscribe',['../d9/d4e/classnta_1_1Subject.html#ab74c154ace2f59dafe154fe5c7416e8c',1,'nta::Subject']]],
-  ['unuse',['unuse',['../dc/d9c/classnta_1_1GLSLProgram.html#a3153b4281ab2b6fcf0017c90bbd199af',1,'nta::GLSLProgram']]],
-  ['update',['update',['../d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18',1,'nta::InputManager::update()'],['../df/d9f/classnta_1_1ParticleBatch2D.html#a55d3f2b663039bb95e847f0770c864cf',1,'nta::ParticleBatch2D::update()'],['../d1/de9/classnta_1_1ParticleEngine2D.html#ad9c7f1be65505d86c23f5754e5fd9430',1,'nta::ParticleEngine2D::update()'],['../d6/d23/classnta_1_1Screen.html#a6892f9b74b033d8bd5f4e9f190d49efa',1,'nta::Screen::update()']]],
-  ['updateprev',['updatePrev',['../d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d',1,'nta::InputManager']]],
-  ['use',['use',['../dc/d9c/classnta_1_1GLSLProgram.html#ac5c8fffb04aec82913b78e35db9ea31f',1,'nta::GLSLProgram']]]
+  ['test',['test',['../d2/d53/structnta_1_1check_1_1is__wrapper.html#a61cffc2c2f35b995e37335b48de3dc83',1,'nta::check::is_wrapper::test(decltype(&amp;C::__nta_wrapper))'],['../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae343dee5565b19efd0cf46cef444e512',1,'nta::check::is_wrapper::test(...)']]],
+  ['threadpool',['ThreadPool',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a3336e668eb283fcb65654058a9ed9113',1,'nta::utils::ThreadPool::ThreadPool(size_t num_threads)'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a3d928faed613a53dd61509dd8c10cf7a',1,'nta::utils::ThreadPool::ThreadPool(const ThreadPool &amp;)=delete']]],
+  ['timer',['Timer',['../d6/dd4/classnta_1_1Timer.html#ac92420dd62672b399f1b4adfd81a4007',1,'nta::Timer']]],
+  ['to_5fstring',['to_string',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a7038acc17c49e0162d6462dc0591a82d',1,'nta::utils::JsonNum::to_string()'],['../dc/d05/classnta_1_1utils_1_1Path.html#a216ce0f62a967938c5435ad4ed3d7bc5',1,'nta::utils::Path::to_string()'],['../d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347',1,'nta::utils::to_string()']]],
+  ['tobinary',['toBinary',['../d3/d18/classnta_1_1Compressor.html#affed498c6ed43db813de5c46892b9163',1,'nta::Compressor']]],
+  ['tokenize',['tokenize',['../d1/d3d/classnta_1_1utils_1_1Json.html#a905d67b125a7aadd771bb74a1bb63f34',1,'nta::utils::Json']]],
+  ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
+  ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D::translateCenter(crvec2 translation, bool move_along_axes=false)'],['../d3/d28/classnta_1_1Camera2D.html#a95ecd50d9ec6031b4d015f33d442d096',1,'nta::Camera2D::translateCenter(float dx, float dy, bool move_along_axes=false)']]],
+  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01',1,'nta::utils']]]
 ];

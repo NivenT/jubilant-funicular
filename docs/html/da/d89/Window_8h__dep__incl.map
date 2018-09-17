@@ -1,0 +1,10 @@
+<map id="include/nta/Window.h" name="include/nta/Window.h">
+<area shape="rect" id="node2" href="$d1/d25/Screen_8h.html" title="include/nta/Screen.h" alt="" coords="138,80,279,107"/>
+<area shape="rect" id="node3" href="$d3/d7a/ScreenManager_8h.html" title="include/nta/ScreenManager.h" alt="" coords="5,155,196,181"/>
+<area shape="rect" id="node6" href="$d1/dc2/SystemManager_8h.html" title="include/nta/SystemManager.h" alt="" coords="303,80,498,107"/>
+<area shape="rect" id="node9" href="$d2/d84/Window_8cpp.html" title="src/Window.cpp" alt="" coords="523,80,639,107"/>
+<area shape="rect" id="node5" href="$d5/d81/Screen_8cpp.html" title="src/Screen.cpp" alt="" coords="220,155,331,181"/>
+<area shape="rect" id="node4" href="$d3/d26/ScreenManager_8cpp.html" title="src/ScreenManager.cpp" alt="" coords="154,229,314,256"/>
+<area shape="rect" id="node7" href="$d4/d31/MyEngine_8cpp.html" title="src/MyEngine.cpp" alt="" coords="407,155,533,181"/>
+<area shape="rect" id="node8" href="$d9/d47/SystemManager_8cpp.html" title="src/SystemManager.cpp" alt="" coords="557,155,721,181"/>
+</map>

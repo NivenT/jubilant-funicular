@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['bit_2ehpp',['bit.hpp',['../d3/d51/bit_8hpp.html',1,'']]],
-  ['bit_2einl',['bit.inl',['../df/da0/bit_8inl.html',1,'']]],
-  ['bitfield_2ehpp',['bitfield.hpp',['../de/d43/bitfield_8hpp.html',1,'']]],
-  ['bitfield_2einl',['bitfield.inl',['../d5/d26/bitfield_8inl.html',1,'']]]
+  ['debugbatch_2ecpp',['DebugBatch.cpp',['../d5/dc3/DebugBatch_8cpp.html',1,'']]],
+  ['debugbatch_2eh',['DebugBatch.h',['../d0/dba/DebugBatch_8h.html',1,'']]]
 ];

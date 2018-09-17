@@ -1,0 +1,8 @@
+<map id="nta::Camera2D::mouseToGame" name="nta::Camera2D::mouseToGame">
+<area shape="rect" id="node2" href="$d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a" title="nta::Camera2D::screenToGame" alt="" coords="261,78,469,105"/>
+<area shape="rect" id="node3" href="$d3/d28/classnta_1_1Camera2D.html#a28bb108270be9a73ff39c2573956ab9c" title="nta::Camera2D::getInverse\lCameraMatrix" alt="" coords="517,71,697,112"/>
+<area shape="rect" id="node4" href="$d3/d28/classnta_1_1Camera2D.html#a203daa81f32279e969de57a549165297" title="nta::Camera2D::getCamera\lMatrix" alt="" coords="745,71,928,112"/>
+<area shape="rect" id="node5" href="$d3/d28/classnta_1_1Camera2D.html#a685dbe2ddad68666132fbf1edec932a6" title="nta::Camera2D::getDilation\lMatrix" alt="" coords="986,5,1167,47"/>
+<area shape="rect" id="node6" href="$d3/d28/classnta_1_1Camera2D.html#ab3fb29b12f0b118dd2be95f701b81e2f" title="nta::Camera2D::getRotation\lMatrix" alt="" coords="983,71,1170,112"/>
+<area shape="rect" id="node7" href="$d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3" title="returns the 3x3 matrix representing the camera&#39;s view " alt="" coords="976,136,1177,177"/>
+</map>

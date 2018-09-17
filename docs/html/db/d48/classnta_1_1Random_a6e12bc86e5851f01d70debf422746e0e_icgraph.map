@@ -1,0 +1,10 @@
+<map id="nta::Random::randGaussian" name="nta::Random::randGaussian">
+<area shape="rect" id="node2" href="$db/d48/classnta_1_1Random.html#aae9df8240d99108188bd6cb223b384a2" title="nta::Random::randFloat" alt="" coords="239,107,397,133"/>
+<area shape="rect" id="node3" href="$db/d48/classnta_1_1Random.html#aa380bcf4be06bc5b5e4707b7ae5a7907" title="nta::Random::randInt" alt="" coords="457,31,602,57"/>
+<area shape="rect" id="node7" href="$db/d48/classnta_1_1Random.html#a45b43eef244823ccb5d016f79bad4ced" title="returns a random color " alt="" coords="450,81,609,108"/>
+<area shape="rect" id="node8" href="$db/d48/classnta_1_1Random.html#a6592035f3647ba9192469ea7a149c2e2" title="nta::Random::randRGBA" alt="" coords="445,132,613,159"/>
+<area shape="rect" id="node9" href="$db/d48/classnta_1_1Random.html#ac4fdaa10f7d4646d4489933b48aca148" title="returna a random vector " alt="" coords="449,183,609,209"/>
+<area shape="rect" id="node4" href="$db/d48/classnta_1_1Random.html#a5cde49f2ac5cbd8d9d9844dbe7644759" title="randomly returns true or false " alt="" coords="661,5,817,32"/>
+<area shape="rect" id="node5" href="$d9/d4d/classnta_1_1FontMap.html#a718ff54c2a35546937602ee212bc66a9" title="adds a rectangle and associates it with c (replacing any preexisting rectangle) " alt="" coords="661,56,817,83"/>
+<area shape="rect" id="node6" href="$d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358" title="constructor &#45; creates a texture containing the font stored in fontPath with glyphs of the given size ..." alt="" coords="865,56,1041,83"/>
+</map>

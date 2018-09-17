@@ -1,0 +1,10 @@
+<map id="include/nta/GLTexture.h" name="include/nta/GLTexture.h">
+<area shape="rect" id="node2" href="$d2/d48/Animation2D_8h.html" title="include/nta/Animation2D.h" alt="" coords="34,80,209,107"/>
+<area shape="rect" id="node4" href="$de/d51/ResourceManager_8h.html" title="include/nta/ResourceManager.h" alt="" coords="254,80,461,107"/>
+<area shape="rect" id="node8" href="$d7/d31/Sprite_8h.html" title="include/nta/Sprite.h" alt="" coords="485,80,619,107"/>
+<area shape="rect" id="node9" href="$d3/d9a/GLTexture_8cpp.html" title="src/GLTexture.cpp" alt="" coords="644,80,775,107"/>
+<area shape="rect" id="node3" href="$dc/d2a/Animation2D_8cpp.html" title="src/Animation2D.cpp" alt="" coords="5,155,149,181"/>
+<area shape="rect" id="node5" href="$d4/d31/MyEngine_8cpp.html" title="src/MyEngine.cpp" alt="" coords="174,155,301,181"/>
+<area shape="rect" id="node6" href="$d8/d44/ResourceManager_8cpp.html" title="src/ResourceManager.cpp" alt="" coords="325,155,499,181"/>
+<area shape="rect" id="node7" href="$d0/dff/Sprite_8cpp.html" title="src/Sprite.cpp" alt="" coords="523,155,626,181"/>
+</map>

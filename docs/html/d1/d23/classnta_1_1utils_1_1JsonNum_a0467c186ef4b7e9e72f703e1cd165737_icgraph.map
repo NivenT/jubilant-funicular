@@ -1,0 +1,6 @@
+<map id="nta::utils::JsonNum::as_int" name="nta::utils::JsonNum::as_int">
+<area shape="rect" id="node2" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a81ab98ec58659a3c722c165b2f2cad26" title="nta::utils::Json::as_int" alt="" coords="205,5,355,32"/>
+<area shape="rect" id="node3" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a68ad0d74dc88bb726bbe4245097ec209" title="nta::utils::Json::operator int" alt="" coords="189,56,371,83"/>
+<area shape="rect" id="node4" href="$d1/d23/classnta_1_1utils_1_1JsonNum.html#a5d31c8dcc19bf7d03c83b547b922806f" title="nta::utils::JsonNum\l::operator int64_t" alt="" coords="212,107,348,149"/>
+<area shape="rect" id="node5" href="$d1/d3d/classnta_1_1utils_1_1Json.html#a06d392cd9356cacdfd356fcb16161220" title="nta::utils::Json::operator\l int64_t" alt="" coords="199,173,361,214"/>
+</map>

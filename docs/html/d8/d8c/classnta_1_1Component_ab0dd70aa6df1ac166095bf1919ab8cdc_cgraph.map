@@ -1,0 +1,3 @@
+<map id="nta::Component::send" name="nta::Component::send">
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html#a997e9fa8509387cdb0f08680b019eb64" title="Forwards message to all Components associated to the same Entity as cmpn. " alt="" coords="204,5,345,32"/>
+</map>
