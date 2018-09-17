@@ -6,6 +6,7 @@
  * The physics in this example is less than ideal since it is not the focus
  * In practice, for decent physics, you'll want to use an externel library
  */
+/*
 #include <nta/ScreenManager.h>
 #include <nta/SystemManager.h>
 #include <nta/ResourceManager.h>
@@ -290,5 +291,10 @@ int main(int argc, char* argv[]) {
     nta::cleanup();
     nta::Logger::writeToLog("Program exited cleanly");
 
+    return 0;
+}
+*/
+
+int main() {
     return 0;
 }

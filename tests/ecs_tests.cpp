@@ -9,7 +9,7 @@ class HealthComponent : public Component {
 private:
 	int m_health;
 public:
-	HealthComponent() : m_health(100), Component(1 << 0) {}
+	HealthComponent() : m_health(100) {}
 	int get_health() const { return m_health; }
 	void receive(const Message& message) {
 		int damage = static_cast<int>(reinterpret_cast<std::uintptr_t>(message.data));
@@ -19,8 +19,11 @@ public:
 
 class DamageComponent : public Component {
 public:
-	DamageComponent() : Component(1 << 1) {}
+	DamageComponent() {}
 	void receive(const Message& _) {}
+};
+
+class FakeComponent : public Component {
 };
 
 int main(int argc, char* argv[]) {
@@ -28,77 +31,75 @@ int main(int argc, char* argv[]) {
     cout<<"Running ECS tests..."<<endl;
     
     ECS system;
-    EntityID healthy = system.gen_entity();
-    EntityID sick = system.gen_entity();
-    EntityID noone = system.gen_entity();
+    Entity healthy = system.gen_entity();
+    Entity sick = system.gen_entity();
+    Entity empty = system.gen_entity();
+    Entity noone = empty + 10;
 
-    assert(system.add_component(new HealthComponent, sick));
-    assert(system.add_component(new DamageComponent, sick));
-    assert(system.add_component(new HealthComponent, healthy));
-
+    assert(system.add_component<HealthComponent>(HealthComponent(), sick));
+    assert(system.add_component<DamageComponent>(DamageComponent(), sick));
+    assert(system.add_component<HealthComponent>(HealthComponent(), healthy));
+    
     for (int sick_health = 100; sick_health; sick_health -= 5) {
-    	ComponentNode* health_node = system.get_component_list(1);
-    	assert(((HealthComponent*)health_node->data)->get_health() == 100);
-    	health_node = health_node->next;
-    	assert(((HealthComponent*)health_node->data)->get_health() == sick_health);
-    	assert(health_node->next == nullptr);
-    	
-    	ComponentNode* damage_node = system.get_component_list(2);
-    	while (damage_node) {
-    		damage_node->data->send(Message(0, (void*)5));
-    		damage_node = damage_node->next;
-    	}
+        vector<HealthComponent*> healths = system.get_component_list<HealthComponent>();
+        assert(healths[0]->get_health() == sick_health);
+        assert(healths[1]->get_health() == 100);
+        assert(healths.size() == 2);
+
+        vector<DamageComponent*> dams = system.get_component_list<DamageComponent>();
+        for (auto& dam : dams) {
+            dam->send(Message(0, (void*)5));
+        }
+        assert(dams.size() == 1);
     }
-
-    assert(!system.has_component(healthy, 2));
-    assert(system.has_component(sick, 1));
-    assert(!system.has_component(healthy, 4));
-    assert(system.get_components(noone) == nullptr);
-
-    assert(system.get_owner(system.get_component_list(2)->data) == sick);
+    
+    assert(!system.has_component<DamageComponent>(healthy));
+    assert(system.has_component<HealthComponent>(sick));
+    assert(!system.has_component<FakeComponent>(healthy));
+    assert(system.get_components(empty).empty());
+    assert(system.get_components(sick).size() == 2);
+    
+    assert(system.get_owner(system.get_component_list<DamageComponent>().front()) == sick);
     assert(system.get_owner(new HealthComponent) == NTA_INVALID_ID);
-    assert(system.get_siblings(system.get_component_list(2)->data)->size() == 2);
+    assert(system.get_siblings(system.get_component_list<DamageComponent>().front()).size() == 2);
 
-    assert(system.get_component_list(2)->data == system.get_component(sick, 2));
-
-    assert(system.delete_component(system.get_component_list(2)->data));
-    assert(!system.has_component(sick, 2));
-
+    assert(system.get_component<HealthComponent>(sick).get_health() == 0);
+    assert(system.get_component<HealthComponent>(healthy).get_health() == 100);
+    assert(system.get_component_list<DamageComponent>().front() == &system.get_component<DamageComponent>(sick));
+    
+    assert(system.delete_component(system.get_component_list<DamageComponent>().front()));
+    assert(!system.has_component<DamageComponent>(sick));
+    
     for (int i = 0; i < 4; i++) {
-        assert(system.add_component(new DamageComponent, sick));
+        assert(system.add_component<DamageComponent>(DamageComponent(), sick));
     }
-    assert(system.delete_component(system.get_component_list(2)->data));
-    assert(system.has_component(sick, 2));
-    system.delete_components(sick, 2);
-    assert(!system.has_component(sick, 2));
-
-    // It's annoying that this dereference is needed
-    for (const Component* component : *system.get_components(sick)) {
-    	if (component->type & 1) {
-    		assert(((HealthComponent*)component)->get_health() == 0);
-    	}
+    assert(system.delete_component(&system.get_component<DamageComponent>(sick)));
+    assert(system.has_component<DamageComponent>(sick));
+    assert(system.get_component_list<DamageComponent>(sick).size() == 3);
+    system.delete_components<DamageComponent>(sick);
+    assert(!system.has_component<DamageComponent>(sick));
+    
+    for (const HealthComponent* health : system.get_component_list<HealthComponent>(sick)) {
+        assert(health->get_health() == 0);
     }
-
+    
     assert(system.get_owner(nullptr) == NTA_INVALID_ID);
     assert(!system.delete_component(nullptr));
-    assert(!system.add_component(nullptr, noone));
-    assert(system.get_components(noone) == nullptr);
-    assert(system.get_component(noone, 1) == nullptr);
-    assert(system.get_component_list(8) == nullptr);
-
-    // You would think this would cause a crash, but nope
-    assert(((ComponentNode*)nullptr)->begin() == ((ComponentNode*)nullptr)->end());
-    for (auto null : *system.get_component_list(8)) {
+    assert(!system.add_component<HealthComponent>(HealthComponent(), noone));
+    assert(system.get_component_list<FakeComponent>().empty());
+    
+    for (auto null : system.get_component_list<FakeComponent>()) {
         assert(false);
     }
-
+    
     assert(system.does_entity_exist(sick));
     assert(system.does_entity_exist(healthy));
-    assert(system.does_entity_exist(noone));
+    assert(system.does_entity_exist(empty));
     assert(system.delete_entity(healthy));
     assert(!system.does_entity_exist(healthy));
     assert(!system.does_entity_exist(NTA_INVALID_ID));
-
+    assert(!system.does_entity_exist(noone));
+    
     cout<<"Tests passed"<<endl;
     nta::cleanup();
     return 0;

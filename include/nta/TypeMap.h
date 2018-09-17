@@ -102,12 +102,13 @@ namespace nta {
             /// This version of find returns a nullptr if the key does not already exist
             ///
             /// Properly using this function requires some knowledge of how TypeMap works internally
-            void* find(const TypeInfo& info) { return m_map.find(info) == m_map.end() ? nullptr : m_map[info]; }
+            void* find(const TypeInfo& info) const;
             /// \note Only call this if T has a (public) constructor taking no arguments
             template<typename T>
             typename std::add_lvalue_reference<T>::type get();
             template<typename T>
-            void erase();
+            void erase() { erase(TypeInfo::get<T>()); }
+            void erase(const TypeInfo& info);
 
             bool empty() const { return m_map.empty(); }
             bool is_empty() const { return empty(); }
@@ -155,14 +156,6 @@ namespace nta {
         typename std::add_lvalue_reference<T>::type TypeMap::get() {
             if (!contains<T>()) insert<T>(T());
             return find<T>();
-        }
-        template<typename T>
-        void TypeMap::erase() {
-            if (!contains<T>()) return;
-
-            TypeInfo info = TypeInfo::get<T>();
-            destroy(info);
-            m_map.erase(info);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace nta {
 		while (!m_components_map[id].empty()) {
 			auto list = (std::vector<Component*>*)m_components_map[id].begin()->second;
 			while (!list->empty()) delete_component(list->front());
+			m_components_map[id].erase(m_components_map[id].begin()->first);
 		}
 		return true;
 	}
@@ -32,6 +33,7 @@ namespace nta {
 
 		for (auto& info : m_list_map[cmpn]) {
 			std::vector<Component*>* list = (std::vector<Component*>*)m_components_map[entity].find(info);
+			assert(list != nullptr);
 			auto end = std::remove(list->begin(), list->end(), cmpn);
 			list->resize(end - list->begin());
 
@@ -51,10 +53,11 @@ namespace nta {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
 		return m_entity_map.find(cmpn)->second;
 	}
-	ComponentLists ECS::get_components(Entity entity) const {
-		if (m_entity_set.find(entity) == m_entity_set.end()) return ComponentLists();
-		auto it = m_components_map.find(entity);
-		return it == m_components_map.end() ? ComponentLists() : it->second;
+	ComponentLists& ECS::get_components(Entity entity) {
+		if (m_entity_set.find(entity) == m_entity_set.end()) {
+			assert(false && "Attempted to get components form a nonexistent entity");
+		}
+		return m_components_map[entity];
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
