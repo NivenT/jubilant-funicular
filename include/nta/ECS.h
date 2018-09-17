@@ -144,8 +144,8 @@ namespace nta {
     bool ECS::add_component_to_list(ComponentID cmpn) {
         auto it = m_component_set.find(cmpn);
         if (it == m_component_set.end()) return false;
-        m_component_lists.get<std::vector<T*>>().push_back((T*)*it);
-        m_components_map[m_entity_map[cmpn]].get<std::vector<T*>>().push_back((T*)*it);
+        m_component_lists.get<std::vector<T*>>().push_back((T*)it->second);
+        m_components_map[m_entity_map[cmpn]].get<std::vector<T*>>().push_back((T*)it->second);
         m_list_map[cmpn].push_back(utils::TypeInfo::get<std::vector<T*>>());
         return true;
     }
