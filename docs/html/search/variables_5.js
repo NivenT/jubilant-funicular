@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ecs',['ECS',['../d8/d8c/classnta_1_1Component.html#abed0426a01836855941e0236441eaf76',1,'nta::Component']]]
+  ['next',['next',['../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#a5a522eff45940071fc15d4327a9ed13d',1,'nta::utils::LinkedNode']]],
+  ['numvertices',['numVertices',['../dd/d38/structnta_1_1RenderBatch.html#a18e1cb5ff84364540a871db321557b7c',1,'nta::RenderBatch']]]
 ];

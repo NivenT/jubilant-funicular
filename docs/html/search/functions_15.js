@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['wait',['wait',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#a252683ad84d75e12d30f29441f7178bc',1,'nta::utils::Semaphore::wait()'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516',1,'nta::utils::ThreadPool::wait()']]],
-  ['window',['Window',['../d4/dfb/classnta_1_1Window.html#a28534e4bb354c4b38b1d97aed78fd010',1,'nta::Window']]],
-  ['worker',['worker',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#a1d8b794bc488e5dfe3ac047961d0dfbc',1,'nta::utils::ThreadPool::worker']]],
-  ['worker_5ffunc',['worker_func',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#ade9cec65b2ef535cb03fcc0ea941fe24',1,'nta::utils::ThreadPool']]],
-  ['writeerrortolog',['writeErrorToLog',['../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee',1,'nta::Logger']]],
-  ['writefilefrombuffer',['writeFileFromBuffer',['../d2/d54/classnta_1_1IOManager.html#a8e22ef5a2e46a48abdefa21847cf9eff',1,'nta::IOManager::writeFileFromBuffer(crstring filePath, const FileBuffer &amp;buffer)'],['../d2/d54/classnta_1_1IOManager.html#a88a69469ca9a8c4a632e7d7e14ae3d79',1,'nta::IOManager::writeFileFromBuffer(crstring filePath, crstring buffer)']]],
-  ['writefloatbe',['writeFloatBE',['../d2/d54/classnta_1_1IOManager.html#ae5350032528c4909c5c23bb771f969fd',1,'nta::IOManager::writeFloatBE(float val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#a9dd584ae18cdb0f9a5277e2b5b9a44ff',1,'nta::IOManager::writeFloatBE(float val, FileBuffer &amp;buffer)']]],
-  ['writefloatle',['writeFloatLE',['../d2/d54/classnta_1_1IOManager.html#aa9855baef3ed91e4e95e3a5e899ba473',1,'nta::IOManager::writeFloatLE(float val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#adc695b9f45e8eed4224ab1889619883c',1,'nta::IOManager::writeFloatLE(float val, FileBuffer &amp;buffer)']]],
-  ['writeintbe',['writeIntBE',['../d2/d54/classnta_1_1IOManager.html#a18ec253cf29a9457b00f227b8d380a24',1,'nta::IOManager::writeIntBE(int val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#ac6f46b1b1043bd7fa0cfc9c0c9e5aeee',1,'nta::IOManager::writeIntBE(int val, FileBuffer &amp;buffer)']]],
-  ['writeintle',['writeIntLE',['../d2/d54/classnta_1_1IOManager.html#ad6ed0ff2efedb9388641d9456fd215b5',1,'nta::IOManager::writeIntLE(int val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#a83cc5430e709fddd4db99c563078f257',1,'nta::IOManager::writeIntLE(int val, FileBuffer &amp;buffer)']]],
-  ['writeshortbe',['writeShortBE',['../d2/d54/classnta_1_1IOManager.html#a6051d755ed8d3ec7decb1220e074ff7f',1,'nta::IOManager::writeShortBE(short val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#ae259ec671f9b93d9cb187ef90f099529',1,'nta::IOManager::writeShortBE(short val, FileBuffer &amp;buffer)']]],
-  ['writeshortle',['writeShortLE',['../d2/d54/classnta_1_1IOManager.html#aa9d8d060c137fddc3880ce7dae7f23bf',1,'nta::IOManager::writeShortLE(short val, std::ofstream &amp;file)'],['../d2/d54/classnta_1_1IOManager.html#af82bd388b442f6a000a77db9db1a0531',1,'nta::IOManager::writeShortLE(short val, FileBuffer &amp;buffer)']]],
-  ['writetolog',['writeToLog',['../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13',1,'nta::Logger']]]
+  ['_7ecamera2d',['~Camera2D',['../d3/d28/classnta_1_1Camera2D.html#a18046ff230e055a06c6ca750e6eea8de',1,'nta::Camera2D']]],
+  ['_7ehuffmanleaf',['~HuffmanLeaf',['../d0/d39/classnta_1_1HuffmanLeaf.html#a579b5b814ae18f2230a07c186f96890f',1,'nta::HuffmanLeaf']]],
+  ['_7ehuffmannode',['~HuffmanNode',['../da/dbb/classnta_1_1HuffmanNode.html#a45afade3ee4a50baba8daa66edd32e72',1,'nta::HuffmanNode']]],
+  ['_7emusic',['~Music',['../d4/dab/classnta_1_1Music.html#a5cb0a3bbc5222752b0cbc9a90468e98b',1,'nta::Music']]],
+  ['_7eparticlebatch2d',['~ParticleBatch2D',['../df/d9f/classnta_1_1ParticleBatch2D.html#ac21b6437fdd8e746c6fce095b4dbc03a',1,'nta::ParticleBatch2D']]],
+  ['_7eparticleengine2d',['~ParticleEngine2D',['../d1/de9/classnta_1_1ParticleEngine2D.html#a9819d90a1852b474bb3014a8c8d506a1',1,'nta::ParticleEngine2D']]],
+  ['_7eprimitive',['~Primitive',['../d6/d4f/structnta_1_1Primitive.html#a39fbab541466b58744a8c7a0aa4eb49c',1,'nta::Primitive']]],
+  ['_7eresult',['~Result',['../d8/d2e/classnta_1_1Result.html#a5fd9525155666ef2eaf605d82d13bd77',1,'nta::Result']]],
+  ['_7escreenmanager',['~ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#aea609a639ffdc377e798eda054e6a4ba',1,'nta::ScreenManager']]],
+  ['_7esoundeffect',['~SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#ab9cfa134a49f54f77c2dbc05d7674630',1,'nta::SoundEffect']]],
+  ['_7espritefont',['~SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html#aa5292a1131ab6e04e23f282d2b067146',1,'nta::SpriteFont']]]
 ];

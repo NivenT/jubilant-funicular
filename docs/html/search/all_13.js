@@ -1,29 +1,6 @@
 var searchData=
 [
-  ['t',['t',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#a73546e576652ef9cded578d20e1de393',1,'nta::utils::ThreadPool::worker']]],
-  ['tab_5fsize',['TAB_SIZE',['../d6/d0d/classnta_1_1Logger.html#a15106f36caca5fb9554163f3ae47663f',1,'nta::Logger']]],
-  ['task',['task',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#a7b1599c310dcbf3ed04639aff66fe06f',1,'nta::utils::ThreadPool::worker']]],
-  ['test',['test',['../d2/d53/structnta_1_1check_1_1is__wrapper.html#a61cffc2c2f35b995e37335b48de3dc83',1,'nta::check::is_wrapper::test(decltype(&amp;C::__nta_wrapper))'],['../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae343dee5565b19efd0cf46cef444e512',1,'nta::check::is_wrapper::test(...)']]],
-  ['tex',['tex',['../d9/d85/structnta_1_1SpriteSheet.html#a6c55217abab2dbd76b61ad92fe902367',1,'nta::SpriteSheet']]],
-  ['textureid',['textureID',['../d6/d4f/structnta_1_1Primitive.html#a203f519bb8fefeaae5253ef3739b7701',1,'nta::Primitive::textureID()'],['../d6/db3/structnta_1_1Glyph.html#acd8af1fcb19c4fb960808defbee5abe5',1,'nta::Glyph::textureID()'],['../dd/d38/structnta_1_1RenderBatch.html#a65aa121e11783396f753c8f937fe9d04',1,'nta::RenderBatch::textureID()']]],
-  ['threadpool',['ThreadPool',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html',1,'nta::utils::ThreadPool'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a3336e668eb283fcb65654058a9ed9113',1,'nta::utils::ThreadPool::ThreadPool(size_t num_threads)'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a3d928faed613a53dd61509dd8c10cf7a',1,'nta::utils::ThreadPool::ThreadPool(const ThreadPool &amp;)=delete']]],
-  ['threadpool_2ecpp',['ThreadPool.cpp',['../d8/d61/ThreadPool_8cpp.html',1,'']]],
-  ['threadpool_2eh',['ThreadPool.h',['../d3/d43/ThreadPool_8h.html',1,'']]],
-  ['thunk',['thunk',['../d1/de6/classnta_1_1CallbackManager.html#ad92bce3b5cee6411a2b2c08b4c13b767',1,'nta::CallbackManager::event::thunk()'],['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#af4dfab6b1c3168a40b90f518991d7efe',1,'nta::utils::ThreadPool::worker::thunk()'],['../d3/d43/ThreadPool_8h.html#a4e471096e65bc695e1c3a1ea163df8c1',1,'Thunk():&#160;ThreadPool.h']]],
-  ['timer',['Timer',['../d6/dd4/classnta_1_1Timer.html',1,'nta::Timer'],['../d6/dd4/classnta_1_1Timer.html#ac92420dd62672b399f1b4adfd81a4007',1,'nta::Timer::Timer()']]],
-  ['timer_2ecpp',['Timer.cpp',['../d0/dc2/Timer_8cpp.html',1,'']]],
-  ['timer_2eh',['Timer.h',['../dd/d27/Timer_8h.html',1,'']]],
-  ['to_5fstring',['to_string',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a7038acc17c49e0162d6462dc0591a82d',1,'nta::utils::JsonNum::to_string()'],['../dc/d05/classnta_1_1utils_1_1Path.html#a216ce0f62a967938c5435ad4ed3d7bc5',1,'nta::utils::Path::to_string()'],['../d7/d33/namespacenta_1_1utils.html#aab201e3eaa7a7d050ca81ca029ec2347',1,'nta::utils::to_string()']]],
-  ['tobinary',['toBinary',['../d3/d18/classnta_1_1Compressor.html#affed498c6ed43db813de5c46892b9163',1,'nta::Compressor']]],
-  ['todo_20list',['Todo List',['../dd/da0/todo.html',1,'']]],
-  ['tokenize',['tokenize',['../d1/d3d/classnta_1_1utils_1_1Json.html#a905d67b125a7aadd771bb74a1bb63f34',1,'nta::utils::Json']]],
-  ['topleft',['topLeft',['../d6/db3/structnta_1_1Glyph.html#a71969ecd8d228e48f9dff95787187282',1,'nta::Glyph::topLeft()'],['../da/d7e/structnta_1_1FontMap_1_1CharRect.html#a84c89136099916d5e825d487fec1fd50',1,'nta::FontMap::CharRect::topLeft()']]],
-  ['topright',['topRight',['../d6/db3/structnta_1_1Glyph.html#a50ce474e9d7b6088e88d991d16f4b047',1,'nta::Glyph']]],
-  ['toprimitivetype',['toPrimitiveType',['../d4/df3/classnta_1_1PrimitiveBatch.html#aaa6f5af45276d6562599e82ef430a8ce',1,'nta::PrimitiveBatch']]],
-  ['translatecenter',['translateCenter',['../d3/d28/classnta_1_1Camera2D.html#a711b1b64b4e0bbca5c598ac15609f498',1,'nta::Camera2D::translateCenter(crvec2 translation, bool move_along_axes=false)'],['../d3/d28/classnta_1_1Camera2D.html#a95ecd50d9ec6031b4d015f33d442d096',1,'nta::Camera2D::translateCenter(float dx, float dy, bool move_along_axes=false)']]],
-  ['trim',['trim',['../d7/d33/namespacenta_1_1utils.html#af4c37b245aa436ad6022581a347feb01',1,'nta::utils']]],
-  ['two',['two',['../d2/d53/structnta_1_1check_1_1is__wrapper.html#d0/ddb/structnta_1_1check_1_1is__wrapper_1_1two',1,'nta::check::is_wrapper']]],
-  ['type',['type',['../d8/d66/structnta_1_1Error.html#a7bc9638dee4444ef9306b83a889d4257',1,'nta::Error::type()'],['../d5/d81/structnta_1_1utils_1_1Json_1_1JsonToken.html#ab0bf0cda189a3063f326abcbf57532bb',1,'nta::utils::Json::JsonToken::type()'],['../d0/d9b/structnta_1_1Message.html#a512ef14eaa86f830247f8194cbbd4f83',1,'nta::Message::type()'],['../d4/d51/namespacenta.html#a625cbe8f28739965a9ec29b9a426465e',1,'nta::VertexAttrib::type()']]],
-  ['typemap_2ecpp',['TypeMap.cpp',['../df/dfe/TypeMap_8cpp.html',1,'']]],
-  ['typemap_2eh',['TypeMap.h',['../d4/da2/TypeMap_8h.html',1,'']]]
+  ['vertex2d',['Vertex2D',['../d5/d07/structnta_1_1Vertex2D.html',1,'nta::Vertex2D'],['../d5/d07/structnta_1_1Vertex2D.html#a696744d55f56ae170684266eab073c0f',1,'nta::Vertex2D::Vertex2D()'],['../d5/d07/structnta_1_1Vertex2D.html#ab0988223c10ad83057c4ade8891b4814',1,'nta::Vertex2D::Vertex2D(crvec2 p)'],['../d5/d07/structnta_1_1Vertex2D.html#aa2e8619f157a72c64d2438f49ec65554',1,'nta::Vertex2D::Vertex2D(crvec2 p, crvec4 c)'],['../d5/d07/structnta_1_1Vertex2D.html#a1c2fe391aeb3ca6d0b8eebfbce1b5862',1,'nta::Vertex2D::Vertex2D(crvec2 p, crvec4 c, crvec2 u, float t=1.0)'],['../d5/d07/structnta_1_1Vertex2D.html#a7d73c085f0a4c5140b5d1c5b28256c99',1,'nta::Vertex2D::Vertex2D(crvec4 c, crvec2 u, float t=1.0)']]],
+  ['vertexattrib',['VertexAttrib',['../d4/d51/namespacenta.html#df/d9d/structnta_1_1VertexAttrib',1,'nta']]],
+  ['vertices',['vertices',['../d6/d4f/structnta_1_1Primitive.html#a4fbc49e3dcd593551b6e65e59d842687',1,'nta::Primitive']]]
 ];

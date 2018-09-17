@@ -83,22 +83,25 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab3f6ce079e6ab45794886ec8aa7daf6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ab3f6ce079e6ab45794886ec8aa7daf6caa33bad9f4c1b060b0e5b484f79dbd56d">value</a> = sizeof(test&lt;T&gt;(0)) == sizeof(one)
+<tr class="memitem:ab3f6ce079e6ab45794886ec8aa7daf6c"><td class="memItemLeft" align="right" valign="top"><a id="ab3f6ce079e6ab45794886ec8aa7daf6c"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>value</b> = sizeof(test&lt;T&gt;(0)) == sizeof(one)
  }</td></tr>
 <tr class="separator:ab3f6ce079e6ab45794886ec8aa7daf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:ae46a9f8e21aa39ac1f87de8d6c8303f2"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae46a9f8e21aa39ac1f87de8d6c8303f2">one</a></td></tr>
+<tr class="memitem:ae46a9f8e21aa39ac1f87de8d6c8303f2"><td class="memItemLeft" align="right" valign="top"><a id="ae46a9f8e21aa39ac1f87de8d6c8303f2"></a>
+typedef char&#160;</td><td class="memItemRight" valign="bottom"><b>one</b></td></tr>
 <tr class="separator:ae46a9f8e21aa39ac1f87de8d6c8303f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a61cffc2c2f35b995e37335b48de3dc83"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:a61cffc2c2f35b995e37335b48de3dc83"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae46a9f8e21aa39ac1f87de8d6c8303f2">one</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#a61cffc2c2f35b995e37335b48de3dc83">test</a> (decltype(&amp;C::__nta_wrapper))</td></tr>
+<tr class="memitem:a61cffc2c2f35b995e37335b48de3dc83"><td class="memTemplParams" colspan="2"><a id="a61cffc2c2f35b995e37335b48de3dc83"></a>
+template&lt;typename C &gt; </td></tr>
+<tr class="memitem:a61cffc2c2f35b995e37335b48de3dc83"><td class="memTemplItemLeft" align="right" valign="top">static one&#160;</td><td class="memTemplItemRight" valign="bottom"><b>test</b> (decltype(&amp;C::__nta_wrapper))</td></tr>
 <tr class="separator:a61cffc2c2f35b995e37335b48de3dc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae343dee5565b19efd0cf46cef444e512"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:ae343dee5565b19efd0cf46cef444e512"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#d0/ddb/structnta_1_1check_1_1is__wrapper_1_1two">two</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae343dee5565b19efd0cf46cef444e512">test</a> (...)</td></tr>
+<tr class="memitem:ae343dee5565b19efd0cf46cef444e512"><td class="memTemplParams" colspan="2"><a id="ae343dee5565b19efd0cf46cef444e512"></a>
+template&lt;typename C &gt; </td></tr>
+<tr class="memitem:ae343dee5565b19efd0cf46cef444e512"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#d0/ddb/structnta_1_1check_1_1is__wrapper_1_1two">two</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>test</b> (...)</td></tr>
 <tr class="separator:ae343dee5565b19efd0cf46cef444e512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -106,7 +109,7 @@ Static Private Member Functions</h2></td></tr>
 struct nta::check::is_wrapper&lt; T &gt;</h3>
 
 <p>Struct for checking (at compile time) whether or not a class is a wrapper</p>
-<p>Usage: assert(<a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ab3f6ce079e6ab45794886ec8aa7daf6caa33bad9f4c1b060b0e5b484f79dbd56d">is_wrapper&lt;EntityID&gt;::value</a> == 1); </p>
+<p>Usage: assert(is_wrapper&lt;EntityID&gt;::value == 1); </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d80/Wrapper_8h_source.html#l00160">160</a> of file <a class="el" href="../../d6/d80/Wrapper_8h_source.html">Wrapper.h</a>.</p>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
@@ -140,116 +143,6 @@ _[2]</td>
 <td class="fielddoc">
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae46a9f8e21aa39ac1f87de8d6c8303f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46a9f8e21aa39ac1f87de8d6c8303f2">&#9670;&nbsp;</a></span>one</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef char <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html">nta::check::is_wrapper</a>&lt; T &gt;::<a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae46a9f8e21aa39ac1f87de8d6c8303f2">one</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d6/d80/Wrapper_8h_source.html#l00162">162</a> of file <a class="el" href="../../d6/d80/Wrapper_8h_source.html">Wrapper.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="ab3f6ce079e6ab45794886ec8aa7daf6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3f6ce079e6ab45794886ec8aa7daf6c">&#9670;&nbsp;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab3f6ce079e6ab45794886ec8aa7daf6caa33bad9f4c1b060b0e5b484f79dbd56d"></a>value&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="../../d6/d80/Wrapper_8h_source.html#l00168">168</a> of file <a class="el" href="../../d6/d80/Wrapper_8h_source.html">Wrapper.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a61cffc2c2f35b995e37335b48de3dc83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61cffc2c2f35b995e37335b48de3dc83">&#9670;&nbsp;</a></span>test() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename C &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#ae46a9f8e21aa39ac1f87de8d6c8303f2">one</a> <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html">nta::check::is_wrapper</a>&lt; T &gt;::test </td>
-          <td>(</td>
-          <td class="paramtype">decltype &amp;::__nta_wrapper&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae343dee5565b19efd0cf46cef444e512"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae343dee5565b19efd0cf46cef444e512">&#9670;&nbsp;</a></span>test() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<div class="memtemplate">
-template&lt;typename C &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html#d0/ddb/structnta_1_1check_1_1is__wrapper_1_1two">two</a> <a class="el" href="../../d2/d53/structnta_1_1check_1_1is__wrapper.html">nta::check::is_wrapper</a>&lt; T &gt;::test </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

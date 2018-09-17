@@ -9,7 +9,7 @@ If you are interesting in using this for your own project, then looking in the `
 
 Ideally this entire library would work equally well on Linux, OSX, and Windows. In practice, the code is only tested on Linux, so while I try to keep things OS-agnostic, I cannot promise this is the case. Open an issue if it fails to build on your computer.
 
-Documentation can be found [here](https://nivent.github.io/jubilant-funicular/html/index.html)
+Documentation can be found [here](https://nivent.github.io/jubilant-funicular/html/index.html). Note that this documention is incomplete; it seems Doxygen struggles with some complex macros and templates. Of note missing from the documentation are the `Entity` type and the `TypeMap` type.
 
 # Requirements
 In a perfect world there would be no dependencies and all the necessary code would be written by me; however, in our world you should make sure you have
