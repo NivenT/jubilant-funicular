@@ -59,11 +59,20 @@ namespace nta {
 
         /// Adds the given Component to the given Entity.
         ///
+        /// You pass in the entity and any arguments needed to construct a new object of type T
+        ///
         /// T should be a concrete type, not a pointer type
         ///
         /// Returns false on failure
+        template<typename T, typename... Args>
+        bool add_component(Entity entity, Args&&... args);
+        /// Adds the given component to the vector of components of type T
+        ///
+        /// cmpn should be a pointer to a Component that inherits from T
+        ///
+        /// returns false on failure
         template<typename T>
-        bool add_component(T cmpn, Entity entity);
+        bool add_component_to_list(Component* cmpn);
         /// Attempts to delete the given Component
         ///
         /// Returns true on success
@@ -113,9 +122,10 @@ namespace nta {
         /// Removes all entites and components from this system
         void clear();
     };
-    template<typename T>
-    bool ECS::add_component(T cmpn, Entity entity) {
+    template<typename T, typename... Args>
+    bool ECS::add_component(Entity entity, Args&&... args) {
         if (m_entity_set.find(entity) == m_entity_set.end()) return false;
+        T cmpn(std::forward<Args>(args)...);
         cmpn.m_system = this;
 
         std::vector<T*>& list = m_component_lists.get<std::vector<T*>>();
@@ -124,6 +134,14 @@ namespace nta {
         m_entity_map[list.back()] = entity;
         m_component_set.insert(list.back());
         m_list_map[list.back()].push_back(utils::TypeInfo::get<std::vector<T*>>());
+        return true;
+    }
+    template<typename T>
+    bool ECS::add_component_to_list(Component* cmpn) {
+        if (m_component_set.find(cmpn) == m_component_set.end()) return false;
+        m_component_lists.get<std::vector<T*>>().push_back((T*)cmpn);
+        m_components_map[m_entity_map[cmpn]].get<std::vector<T*>>().push_back((T*)cmpn);
+        m_list_map[cmpn].push_back(utils::TypeInfo::get<std::vector<T*>>());
         return true;
     }
     template<typename T>

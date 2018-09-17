@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['add_5fcomponent',['add_component',['../db/da0/classnta_1_1ECS.html#a4523e2d6e199b1f566fd02647ddf9d0f',1,'nta::ECS']]],
+  ['add_5fcomponent',['add_component',['../db/da0/classnta_1_1ECS.html#afd9cec2d0983a802a85bbe7f38afa4fe',1,'nta::ECS']]],
+  ['add_5fcomponent_5fto_5flist',['add_component_to_list',['../db/da0/classnta_1_1ECS.html#af414779c3411e71f2f14a4d036ef5a7a',1,'nta::ECS']]],
   ['addattribute',['addAttribute',['../dc/d9c/classnta_1_1GLSLProgram.html#a708c47abebb9ca01b0eed4d1e711cef7',1,'nta::GLSLProgram']]],
   ['addbatch',['addBatch',['../d1/de9/classnta_1_1ParticleEngine2D.html#a1543908144e9aeb9ae1b7529e82c0ad7',1,'nta::ParticleEngine2D']]],
   ['addexists',['AddExists',['../db/d55/structnta_1_1check_1_1AddExists.html',1,'nta::check']]],

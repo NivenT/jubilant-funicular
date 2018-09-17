@@ -157,8 +157,8 @@ void MainScreen::addBall(nta::crvec2 pos) {
     vec4 col(nta::Random::randRGB(), 1.f);
 
     // Give the ball graphics and physics
-    m_system.add_component<PhysicsComponent>(PhysicsComponent(pos, rad), m_balls.back());
-    m_system.add_component<GraphicsComponent>(GraphicsComponent(col, rad), m_balls.back());
+    m_system.add_component<PhysicsComponent>(m_balls.back(), pos, rad);
+    m_system.add_component<GraphicsComponent>(m_balls.back(), col, rad);
 
     // Deleted Entites have their IDs recycled. Look at Log.log to see what I mean
     nta::Logger::writeToLog("Added ball with id " + nta::utils::to_string(m_balls.back()));

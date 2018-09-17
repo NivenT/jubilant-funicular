@@ -18,9 +18,12 @@ public:
 };
 
 class DamageComponent : public Component {
+private:
+    long m_damage;
 public:
-	DamageComponent() {}
+	DamageComponent(long dam = 0) : m_damage(dam) {}
 	void receive(const Message& _) {}
+    long get_damage() const { return m_damage; }
 };
 
 class FakeComponent : public Component {
@@ -35,9 +38,9 @@ int main(int argc, char* argv[]) {
     Entity empty = system.gen_entity();
     Entity noone = empty + 10;
 
-    assert(system.add_component<HealthComponent>(HealthComponent(), sick));
-    assert(system.add_component<DamageComponent>(DamageComponent(), sick));
-    assert(system.add_component<HealthComponent>(HealthComponent(), healthy));
+    assert(system.add_component<HealthComponent>(sick));
+    assert(system.add_component<DamageComponent>(sick, 5));
+    assert(system.add_component<HealthComponent>(healthy));
     
     for (int sick_health = 100; sick_health; sick_health -= 5) {
         vector<HealthComponent*> healths = system.get_component_list<HealthComponent>();
@@ -47,7 +50,7 @@ int main(int argc, char* argv[]) {
 
         vector<DamageComponent*> dams = system.get_component_list<DamageComponent>();
         for (auto& dam : dams) {
-            dam->send(Message(0, (void*)5));
+            dam->send(Message(0, (void*)dam->get_damage()));
         }
         assert(dams.size() == 1);
     }
@@ -71,7 +74,7 @@ int main(int argc, char* argv[]) {
     assert(!system.has_component<DamageComponent>(sick));
     
     for (int i = 0; i < 4; i++) {
-        assert(system.add_component<DamageComponent>(DamageComponent(), sick));
+        assert(system.add_component<DamageComponent>(sick));
     }
     assert(system.delete_component(&system.get_component<DamageComponent>(sick).unwrap()));
     assert(system.has_component<DamageComponent>(sick));
@@ -85,7 +88,7 @@ int main(int argc, char* argv[]) {
     
     assert(system.get_owner(nullptr) == NTA_INVALID_ID);
     assert(!system.delete_component(nullptr));
-    assert(!system.add_component<HealthComponent>(HealthComponent(), noone));
+    assert(!system.add_component<HealthComponent>(noone));
     assert(system.get_component_list<FakeComponent>().empty());
     
     for (auto null : system.get_component_list<FakeComponent>()) {
