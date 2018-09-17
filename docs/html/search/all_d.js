@@ -8,5 +8,6 @@ var searchData=
   ['operator_28_29',['operator()',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a88f65b6f846fa72cbab690f69b912944',1,'nta::utils::IDFactory']]],
   ['operator_5b_5d',['operator[]',['../d1/d3d/classnta_1_1utils_1_1Json.html#adf2d340a2bf7d59c537e398a1be66cf7',1,'nta::utils::Json::operator[](crstring key)'],['../d1/d3d/classnta_1_1utils_1_1Json.html#ab3b51a07ebed90330c98fd8e20785781',1,'nta::utils::Json::operator[](crstring key) const'],['../d1/d3d/classnta_1_1utils_1_1Json.html#a236b5885612b74c21fbad169b21eaf55',1,'nta::utils::Json::operator[](std::size_t idx)'],['../d1/d3d/classnta_1_1utils_1_1Json.html#a893f191111e604995488d147aaa711f8',1,'nta::utils::Json::operator[](std::size_t idx) const']]],
   ['option',['Option',['../dd/d2b/classnta_1_1utils_1_1Option.html',1,'nta::utils::Option&lt; T &gt;'],['../dd/d2b/classnta_1_1utils_1_1Option.html#aaf0ae5f078a65fd9033ae6ea3a1fe1e3',1,'nta::utils::Option::Option()']]],
+  ['option_3c_20void_20_3e',['Option&lt; void &gt;',['../d5/dcf/classnta_1_1utils_1_1Option_3_01void_01_4.html',1,'nta::utils']]],
   ['orexists',['OrExists',['../d9/daa/structnta_1_1check_1_1OrExists.html',1,'nta::check']]]
 ];

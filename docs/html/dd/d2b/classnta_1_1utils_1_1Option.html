@@ -93,18 +93,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a729b90440d09884f1c197864d7bb0be9">unwrap</a> () const</td></tr>
 <tr class="memdesc:a729b90440d09884f1c197864d7bb0be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">unwrap and get are the same thing <br /></td></tr>
 <tr class="separator:a729b90440d09884f1c197864d7bb0be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a628533b91874b189d05700ff94417cbc"><td class="memItemLeft" align="right" valign="top"><a id="a628533b91874b189d05700ff94417cbc"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a628533b91874b189d05700ff94417cbc">get_or</a> (const T &amp;optb)</td></tr>
-<tr class="memdesc:a628533b91874b189d05700ff94417cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data held by this <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> or optb if it's None. <br /></td></tr>
-<tr class="separator:a628533b91874b189d05700ff94417cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76a644c45fa6d5303c7aff79d71e9a11"><td class="memItemLeft" align="right" valign="top"><a id="a76a644c45fa6d5303c7aff79d71e9a11"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>unwrap_or</b> (const T &amp;optb)</td></tr>
-<tr class="separator:a76a644c45fa6d5303c7aff79d71e9a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6783f9c7085ab96091249781f211d8ba"><td class="memItemLeft" align="right" valign="top"><a id="a6783f9c7085ab96091249781f211d8ba"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a6783f9c7085ab96091249781f211d8ba">get_or</a> (const T &amp;optb) const</td></tr>
+<tr class="memdesc:a6783f9c7085ab96091249781f211d8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data held by this <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> or optb if it's None. <br /></td></tr>
+<tr class="separator:a6783f9c7085ab96091249781f211d8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b96222f944a4841e834d30d348f803"><td class="memItemLeft" align="right" valign="top"><a id="a07b96222f944a4841e834d30d348f803"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>unwrap_or</b> (const T &amp;optb) const</td></tr>
+<tr class="separator:a07b96222f944a4841e834d30d348f803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaca218b7761bcf348480e90e48fe5f66"><td class="memTemplParams" colspan="2"><a id="aaca218b7761bcf348480e90e48fe5f66"></a>
 template&lt;typename S &gt; </td></tr>
 <tr class="memitem:aaca218b7761bcf348480e90e48fe5f66"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#aaca218b7761bcf348480e90e48fe5f66">map</a> (std::function&lt; S(T)&gt; func)</td></tr>
 <tr class="memdesc:aaca218b7761bcf348480e90e48fe5f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> holding the result of applying func to data. <br /></td></tr>
 <tr class="separator:aaca218b7761bcf348480e90e48fe5f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ce1e6232d6f80c19ed3b75e744d221"><td class="memItemLeft" align="right" valign="top"><a id="ac7ce1e6232d6f80c19ed3b75e744d221"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (std::function&lt; void(T)&gt; func)</td></tr>
+<tr class="separator:ac7ce1e6232d6f80c19ed3b75e744d221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -176,7 +179,7 @@ template&lt;typename T &gt; </div>
 <p>You should always call is_some/is_none beforehand </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>Push an error to <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> instead </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00056">56</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00057">57</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
 
 </div>
 </div>
