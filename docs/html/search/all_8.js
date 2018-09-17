@@ -2,6 +2,7 @@ var searchData=
 [
   ['id',['id',['../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5',1,'nta::CallbackManager::event::id()'],['../d3/dff/structnta_1_1GLTexture.html#aaf0d536088f4b1062d996679b217c0f9',1,'nta::GLTexture::id()']]],
   ['idfactory',['IDFactory',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
+  ['idfactory_3c_20componentid_20_3e',['IDFactory&lt; ComponentID &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['idfactory_3c_20entity_20_3e',['IDFactory&lt; Entity &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['imageloader',['ImageLoader',['../d5/dc9/classnta_1_1ImageLoader.html',1,'nta']]],
   ['in_5frange',['in_range',['../d7/d33/namespacenta_1_1utils.html#aaa025ad45973ff6dc3a33800ccea72f0',1,'nta::utils']]],

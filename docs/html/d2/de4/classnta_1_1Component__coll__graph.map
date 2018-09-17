@@ -1,4 +1,5 @@
 <map id="nta::Component" name="nta::Component">
-<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="600,195,676,221"/>
-<area shape="rect" id="node8" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="257,305,396,346"/>
+<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="637,233,713,260"/>
+<area shape="rect" id="node4" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="299,102,438,143"/>
+<area shape="rect" id="node10" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="299,431,438,473"/>
 </map>

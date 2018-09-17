@@ -1,6 +1,7 @@
 var searchData=
 [
   ['idfactory',['IDFactory',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
+  ['idfactory_3c_20componentid_20_3e',['IDFactory&lt; ComponentID &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['idfactory_3c_20entity_20_3e',['IDFactory&lt; Entity &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['imageloader',['ImageLoader',['../d5/dc9/classnta_1_1ImageLoader.html',1,'nta']]],
   ['increxists',['IncrExists',['../d9/dee/structnta_1_1check_1_1IncrExists.html',1,'nta::check']]],

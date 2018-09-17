@@ -242,18 +242,18 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1a4e1926834dedfce30d0f6ed301fbf"></a>
 typedef std::unordered_set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
 <tr class="separator:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42c93a10ef59c9dbc5d2b24fb2a93b39"><td class="memItemLeft" align="right" valign="top"><a id="a42c93a10ef59c9dbc5d2b24fb2a93b39"></a>
-typedef std::unordered_set&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentSet</b></td></tr>
-<tr class="separator:a42c93a10ef59c9dbc5d2b24fb2a93b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d82e8ec10486599139294b3fc19308b"><td class="memItemLeft" align="right" valign="top"><a id="a4d82e8ec10486599139294b3fc19308b"></a>
+typedef std::unordered_map&lt; ComponentID, <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentSet</b></td></tr>
+<tr class="separator:a4d82e8ec10486599139294b3fc19308b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memItemLeft" align="right" valign="top"><a id="a6a37bc30927d29ad1bee779cbb8267d6"></a>
 typedef std::unordered_map&lt; Entity, <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
 <tr class="separator:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13324d80c04e3b48297acd3a4c3697ea"><td class="memItemLeft" align="right" valign="top"><a id="a13324d80c04e3b48297acd3a4c3697ea"></a>
-typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
-<tr class="separator:a13324d80c04e3b48297acd3a4c3697ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f9392d5db1d130db929976c9e9c44dc"><td class="memItemLeft" align="right" valign="top"><a id="a7f9392d5db1d130db929976c9e9c44dc"></a>
-typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, std::vector&lt; utils::TypeInfo &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
-<tr class="separator:a7f9392d5db1d130db929976c9e9c44dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe88fb56a190a6fccb55bf634cef9bd9"><td class="memItemLeft" align="right" valign="top"><a id="afe88fb56a190a6fccb55bf634cef9bd9"></a>
+typedef std::unordered_map&lt; ComponentID, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
+<tr class="separator:afe88fb56a190a6fccb55bf634cef9bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memItemLeft" align="right" valign="top"><a id="af2d36ced3610ffdf9e1adf679a0e9617"></a>
+typedef std::unordered_map&lt; ComponentID, std::vector&lt; utils::TypeInfo &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
+<tr class="separator:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memItemLeft" align="right" valign="top"><a id="a1f5715ee41c7a9174d2cc404fdb8556a"></a>
 typedef std::function&lt; void(const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b></td></tr>
 <tr class="separator:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,12 +340,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:a65c4ac3e24918c1a26025984c474b7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Add Option type </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Make all indentation 2 spaces </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000034">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Add Option type </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Make all indentation 2 spaces </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000033">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="d4/d26/structnta_1_1CharGlyph" id="d4/d26/structnta_1_1CharGlyph"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#d4/d26/structnta_1_1CharGlyph">&#9670;&nbsp;</a></span>nta::CharGlyph</h2>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ecs',['ECS',['../db/da0/classnta_1_1ECS.html',1,'nta::ECS'],['../d8/d8c/classnta_1_1Component.html#abed0426a01836855941e0236441eaf76',1,'nta::Component::ECS()']]],
+  ['ecs',['ECS',['../db/da0/classnta_1_1ECS.html',1,'nta']]],
   ['end',['end',['../dc/dbe/classnta_1_1DebugBatch.html#abc2f517c6dd1fb4a65624335d11c92f1',1,'nta::DebugBatch::end()'],['../d7/d1f/classnta_1_1FPSLimiter.html#a17003ecbc30d60c58112615fcaee4d1e',1,'nta::FPSLimiter::end()'],['../d4/df3/classnta_1_1PrimitiveBatch.html#a570927ae1e495ff444d44bd6d19c74ff',1,'nta::PrimitiveBatch::end()'],['../d7/d3b/classnta_1_1SpriteBatch.html#abadacd5bfcfc6ed0cf5a4470a22010ed',1,'nta::SpriteBatch::end()'],['../d6/dd4/classnta_1_1Timer.html#adb7a179f51224cca3e4c2f8f8bc20a19',1,'nta::Timer::end()']]],
   ['ends_5fwith',['ends_with',['../d7/d33/namespacenta_1_1utils.html#aa31e7ef45edfc4fdb60b6459e86b519c',1,'nta::utils']]],
   ['equalsexists',['EqualsExists',['../dd/d36/structnta_1_1check_1_1EqualsExists.html',1,'nta::check']]],

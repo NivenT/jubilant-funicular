@@ -8,6 +8,7 @@ var searchData=
   ['comparetexture',['compareTexture',['../d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b',1,'nta::PrimitiveBatch::compareTexture()'],['../d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9',1,'nta::SpriteBatch::compareTexture()']]],
   ['compileshader',['compileShader',['../dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83',1,'nta::GLSLProgram']]],
   ['compileshaders',['compileShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5',1,'nta::GLSLProgram']]],
+  ['component',['Component',['../d8/d8c/classnta_1_1Component.html#aeb66e0ff6bed4efc8add3b823c333bf1',1,'nta::Component']]],
   ['compress',['compress',['../d3/d18/classnta_1_1Compressor.html#ac5f5822b598309d4ef6a89edb7bdcf10',1,'nta::Compressor']]],
   ['createlog',['createLog',['../d6/d0d/classnta_1_1Logger.html#a308a3ec22f996556b3d54737ace33543',1,'nta::Logger']]],
   ['createrenderbatches',['createRenderBatches',['../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117',1,'nta::PrimitiveBatch::createRenderBatches()'],['../d7/d3b/classnta_1_1SpriteBatch.html#af22e3c4af01fef017e9522021545928f',1,'nta::SpriteBatch::createRenderBatches()']]],
