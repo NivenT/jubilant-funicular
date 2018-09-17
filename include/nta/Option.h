@@ -43,6 +43,8 @@ namespace nta {
             /// Returns an Option holding the result of applying func to data
             template<typename S>
             Option<S> map(std::function<S(T)> func);
+            template<typename S>
+            S map_or(std::function<S(T)> func, const S& def);
             void map(std::function<void(T)> func);
         };
         template<typename T>
@@ -61,10 +63,13 @@ namespace nta {
             }
             return data;
         }
-        template<typename T>
-        template<typename S>
+        template<typename T> template<typename S>
         Option<S> Option<T>::map(std::function<S(T)> func) {
             return some ? new_some(func(data)) : none();
+        }
+        template<typename T> template<typename S>
+        S Option<T>::map_or(std::function<S(T)> func, const S& def) {
+            return some ? func(data) : def;
         }
         template<typename T>
         void Option<T>::map(std::function<void(T)> func) {
