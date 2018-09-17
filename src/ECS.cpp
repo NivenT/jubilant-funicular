@@ -53,11 +53,9 @@ namespace nta {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
 		return m_entity_map.find(cmpn)->second;
 	}
-	ComponentLists& ECS::get_components(Entity entity) {
-		if (m_entity_set.find(entity) == m_entity_set.end()) {
-			assert(false && "Attempted to get components form a nonexistent entity");
-		}
-		return m_components_map[entity];
+	utils::Option<ComponentLists&> ECS::get_components(Entity entity) {
+		if (m_entity_set.find(entity) == m_entity_set.end()) return utils::Option<ComponentLists&>::none();
+		return utils::Option<ComponentLists&>::new_some(m_components_map[entity]);
 	}
 	void ECS::broadcast(const Message& message, Component* cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;

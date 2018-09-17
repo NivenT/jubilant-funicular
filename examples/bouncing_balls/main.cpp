@@ -208,8 +208,12 @@ void MainScreen::update() {
     // removes any ball whose center goes off the screen
     for (int i = 0; i < m_balls.size(); i++) {
         auto& ball = m_balls[i];
+        // This has type Option<PhysicsComponent> (its none if an invalid entity is supplied)
+        auto phys = m_system.get_component<PhysicsComponent>(ball);
+        // nothing should go wrong
+        assert(phys.is_some());
         // Get the ball's position from its physics component
-        vec2 pos = m_system.get_component<PhysicsComponent>(ball).get_pos();
+        vec2 pos = phys.unwrap().get_pos();
         if (pos.x > 100 || pos.x < -100 || pos.y > 100 || pos.y < -100) {
             m_system.delete_entity(ball);
             // ordering in m_balls doesn't matter so might as well

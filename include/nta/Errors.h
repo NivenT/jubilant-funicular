@@ -3,7 +3,7 @@
 
 #include <functional>
 
-#include "MyEngine.h"
+#include "nta/MyEngine.h"
 
 /// \todo Add Option type
 namespace nta {

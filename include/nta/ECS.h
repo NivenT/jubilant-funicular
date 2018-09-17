@@ -8,8 +8,8 @@
 #include "nta/Entity.h"
 #include "nta/Component.h"
 #include "nta/IDFactory.h"
-#include "nta/LinkedNode.h"
 #include "nta/TypeMap.h"
+#include "nta/Option.h"
 
 #define NTA_ECS_NUM_COMPONENT_LISTS (sizeof(ComponentListID)*8)
 
@@ -90,20 +90,19 @@ namespace nta {
         std::vector<T*>& get_component_list();
         /// Returna a list of all component of a given type belonging to entity
         template<typename T>
-        std::vector<T*>& get_component_list(Entity entity);
+        utils::Option<std::vector<T*>&> get_component_list(Entity entity);
         /// Returns the lists of components associated to the given Entity
         ///
         /// Crashes if entity does not exist
-        /// \todo Make return type an Optional
-        ComponentLists& get_components(Entity entity);
+        utils::Option<ComponentLists&> get_components(Entity entity);
         /// Returns the lists of components with the same owner as this one
-        ComponentLists& get_siblings(Component* cmpn) { return get_components(get_owner(cmpn)); }
+        utils::Option<ComponentLists&> get_siblings(Component* cmpn) { return get_components(get_owner(cmpn)); }
         /// Returns the (first) Component of the given type associated to the given Entity
         template<typename T>
-        T& get_component(Entity entity) const;
+        utils::Option<T&> get_component(Entity entity) const;
         /// Returns the (first) Component of the given type with the same owner as cmpn
         template<typename T>
-        T& get_sibling(Component* cmpn) const { return get_component<T>(get_owner(cmpn)); }
+        utils::Option<T&> get_sibling(Component* cmpn) const { return get_component<T>(get_owner(cmpn)); }
 
         /// Forwards message to all Components associated to the same Entity as cmpn
         void broadcast(const Message& message, Component* cmpn);
@@ -148,16 +147,14 @@ namespace nta {
         return m_component_lists.get<std::vector<T*>>();
     }
     template<typename T>
-    std::vector<T*>& ECS::get_component_list(Entity entity) {
-        if (!does_entity_exist(entity)) assert(false && "Tried getting component list of a nonexistent eneity");
-        return m_components_map[entity].get<std::vector<T*>>();
+    utils::Option<std::vector<T*>&> ECS::get_component_list(Entity entity) {
+        if (!does_entity_exist(entity)) return utils::Option<std::vector<T*>&>::none();
+        return utils::Option<std::vector<T*>&>::new_some(m_components_map[entity].get<std::vector<T*>>());
     }
     template<typename T>
-    T& ECS::get_component(Entity entity) const {
-        if (!has_component<T>(entity)) {
-            assert(false && "Tried getting nonexistent component");
-        }
-        return *m_components_map.find(entity)->second.find<std::vector<T*>>().front();
+    utils::Option<T&> ECS::get_component(Entity entity) const {
+        if (!has_component<T>(entity)) return utils::Option<T&>::none();
+        return utils::Option<T&>::new_some(*m_components_map.find(entity)->second.find<std::vector<T*>>().front());
     }
     template<typename T>
     void ECS::broadcast(const Message& message) {
