@@ -38,9 +38,13 @@ int main(int argc, char* argv[]) {
     Entity empty = system.gen_entity();
     Entity noone = empty + 10;
 
-    assert(system.add_component<HealthComponent>(sick));
-    assert(system.add_component<DamageComponent>(sick, 5));
-    assert(system.add_component<HealthComponent>(healthy));
+    ComponentID sick_h = system.add_component<HealthComponent>(sick);
+    ComponentID sick_d = system.add_component<DamageComponent>(sick, 5);
+    ComponentID healthy_h = system.add_component<HealthComponent>(healthy);
+
+    assert(sick_h != NTA_INVALID_ID);
+    assert(sick_d != NTA_INVALID_ID);
+    assert(healthy_h != NTA_INVALID_ID);
     
     for (int sick_health = 100; sick_health; sick_health -= 5) {
         vector<HealthComponent*> healths = system.get_component_list<HealthComponent>();
@@ -61,22 +65,21 @@ int main(int argc, char* argv[]) {
     assert(system.get_components(empty).unwrap().empty());
     assert(system.get_components(sick).unwrap().size() == 2);
     
-    assert(system.get_owner(system.get_component_list<DamageComponent>().front()) == sick);
-    HealthComponent temp;
-    assert(system.get_owner(&temp) == NTA_INVALID_ID);
-    assert(system.get_siblings(system.get_component_list<DamageComponent>().front()).unwrap().size() == 2);
+    assert(system.get_owner(sick_d) == sick);
+    assert(system.get_owner(NTA_INVALID_ID) == NTA_INVALID_ID);
+    assert(system.get_siblings(sick_d).unwrap().size() == 2);
 
     assert(system.get_component<HealthComponent>(sick).unwrap().get_health() == 0);
     assert(system.get_component<HealthComponent>(healthy).unwrap().get_health() == 100);
     assert(system.get_component_list<DamageComponent>().front() == &system.get_component<DamageComponent>(sick).unwrap());
     
-    assert(system.delete_component(system.get_component_list<DamageComponent>().front()));
+    assert(system.delete_component(sick_d) == sick_d);
     assert(!system.has_component<DamageComponent>(sick));
     
     for (int i = 0; i < 4; i++) {
-        assert(system.add_component<DamageComponent>(sick));
+        assert(system.add_component<DamageComponent>(sick) != NTA_INVALID_ID);
     }
-    assert(system.delete_component(&system.get_component<DamageComponent>(sick).unwrap()));
+    assert(system.delete_component(system.get_component<DamageComponent>(sick).unwrap().get_id()) != NTA_INVALID_ID);
     assert(system.has_component<DamageComponent>(sick));
     assert(system.get_component_list<DamageComponent>(sick).size() == 3);
     system.delete_components<DamageComponent>(sick);
@@ -86,9 +89,9 @@ int main(int argc, char* argv[]) {
         assert(health->get_health() == 0);
     }
     
-    assert(system.get_owner(nullptr) == NTA_INVALID_ID);
-    assert(!system.delete_component(nullptr));
-    assert(!system.add_component<HealthComponent>(noone));
+    assert(system.get_owner(1 << 10) == NTA_INVALID_ID);
+    assert(system.delete_component(NTA_INVALID_ID) == NTA_INVALID_ID);
+    assert(system.add_component<HealthComponent>(noone) == NTA_INVALID_ID);
     assert(system.get_component_list<FakeComponent>().empty());
     
     assert(system.does_entity_exist(sick));

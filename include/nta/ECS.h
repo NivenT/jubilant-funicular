@@ -16,10 +16,10 @@ namespace nta {
     /// where T inherits Component
     typedef utils::TypeMap ComponentLists;
     typedef std::unordered_set<Entity> EntitySet;
-    typedef std::unordered_set<Component*> ComponentSet;
+    typedef std::unordered_map<ComponentID, Component*> ComponentSet;
     typedef std::unordered_map<Entity, ComponentLists> EntityComponentMap;
-    typedef std::unordered_map<Component*, Entity> ComponentEntityMap;
-    typedef std::unordered_map<Component*, std::vector<utils::TypeInfo>> ComponentListMap;
+    typedef std::unordered_map<ComponentID, Entity> ComponentEntityMap;
+    typedef std::unordered_map<ComponentID, std::vector<utils::TypeInfo>> ComponentListMap;
     /// Container class representing a complete Entity-Component System
     ///
     /// Manages creation of Entities and grouping of Components
@@ -44,6 +44,8 @@ namespace nta {
         ComponentLists m_component_lists;
         /// Responsible for creating unique IDs for the Entities
         utils::IDFactory<Entity> m_entity_gen;
+        /// Responsible for creating unique IDs for the Components
+        utils::IDFactory<ComponentID> m_cmpn_gen;
     public:
         ECS() {}
         ~ECS() { clear(); }
@@ -63,20 +65,20 @@ namespace nta {
         ///
         /// T should be a concrete type, not a pointer type
         ///
-        /// Returns false on failure
+        /// Returns the id of the created Component (NTA_INVALID_ID on failure).
         template<typename T, typename... Args>
-        bool add_component(Entity entity, Args&&... args);
+        ComponentID add_component(Entity entity, Args&&... args);
         /// Adds the given component to the vector of components of type T
         ///
         /// cmpn should be a pointer to a Component that inherits from T
         ///
         /// returns false on failure
         template<typename T>
-        bool add_component_to_list(Component* cmpn);
+        bool add_component_to_list(ComponentID cmpn);
         /// Attempts to delete the given Component
         ///
-        /// Returns true on success
-        bool delete_component(Component* cmpn);
+        /// Returns the id of the deleted Component
+        ComponentID delete_component(ComponentID cmpn);
         /// Deletes all componenets of the given type from the given entity
         ///
         /// if entity == NTA_INVALID_ID, then deletes all components of that type
@@ -91,7 +93,7 @@ namespace nta {
         bool does_entity_exist(Entity entity) const;
 
         /// Returns the Entity associated to this Component
-        Entity get_owner(Component* cmpn) const;
+        Entity get_owner(ComponentID cmpn) const;
         /// Returns a list of all components of the given type
         template<typename T>
         std::vector<T*> get_component_list() const;
@@ -103,16 +105,18 @@ namespace nta {
         /// Crashes if entity does not exist
         utils::Option<ComponentLists&> get_components(Entity entity);
         /// Returns the lists of components with the same owner as this one
-        utils::Option<ComponentLists&> get_siblings(Component* cmpn) { return get_components(get_owner(cmpn)); }
+        utils::Option<ComponentLists&> get_siblings(ComponentID cmpn) { return get_components(get_owner(cmpn)); }
         /// Returns the (first) Component of the given type associated to the given Entity
         template<typename T>
         utils::Option<T&> get_component(Entity entity) const;
+        /// Returns the Component with the given id
+        Component* get_component(ComponentID id) const;
         /// Returns the (first) Component of the given type with the same owner as cmpn
         template<typename T>
-        utils::Option<T&> get_sibling(Component* cmpn) const { return get_component<T>(get_owner(cmpn)); }
+        utils::Option<T&> get_sibling(ComponentID cmpn) const { return get_component<T>(get_owner(cmpn)); }
 
         /// Forwards message to all Components associated to the same Entity as cmpn
-        void broadcast(const Message& message, Component* cmpn);
+        void broadcast(const Message& message, ComponentID cmpn);
         /// Forwards message to all Components belonging to entity
         void broadcast(const Message& message, Entity entity);
         /// Forwards message to all Components of the given type
@@ -123,23 +127,25 @@ namespace nta {
         void clear();
     };
     template<typename T, typename... Args>
-    bool ECS::add_component(Entity entity, Args&&... args) {
-        if (m_entity_set.find(entity) == m_entity_set.end()) return false;
+    ComponentID ECS::add_component(Entity entity, Args&&... args) {
+        if (m_entity_set.find(entity) == m_entity_set.end()) return NTA_INVALID_ID;
         std::vector<T*>& list = m_component_lists.get<std::vector<T*>>();
         list.push_back(new T(std::forward<Args>(args)...));
         list.back()->m_system = this;
+        list.back()->m_id = m_cmpn_gen();
 
         m_components_map[entity].get<std::vector<T*>>().push_back(list.back());
-        m_entity_map[list.back()] = entity;
-        m_component_set.insert(list.back());
-        m_list_map[list.back()].push_back(utils::TypeInfo::get<std::vector<T*>>());
-        return true;
+        m_entity_map[list.back()->m_id] = entity;
+        m_component_set[list.back()->m_id] = list.back();
+        m_list_map[list.back()->m_id].push_back(utils::TypeInfo::get<std::vector<T*>>());
+        return list.back()->m_id;
     }
     template<typename T>
-    bool ECS::add_component_to_list(Component* cmpn) {
-        if (m_component_set.find(cmpn) == m_component_set.end()) return false;
-        m_component_lists.get<std::vector<T*>>().push_back((T*)cmpn);
-        m_components_map[m_entity_map[cmpn]].get<std::vector<T*>>().push_back((T*)cmpn);
+    bool ECS::add_component_to_list(ComponentID cmpn) {
+        auto it = m_component_set.find(cmpn);
+        if (it == m_component_set.end()) return false;
+        m_component_lists.get<std::vector<T*>>().push_back((T*)*it);
+        m_components_map[m_entity_map[cmpn]].get<std::vector<T*>>().push_back((T*)*it);
         m_list_map[cmpn].push_back(utils::TypeInfo::get<std::vector<T*>>());
         return true;
     }
@@ -148,7 +154,7 @@ namespace nta {
         if (!does_entity_exist(entity)) return;
         auto& list = m_components_map[entity].get<std::vector<T*>>();
         while (!list.empty()) {
-            delete_component(list.front());
+            delete_component(list.front()->get_id());
         }
     }
     template<typename T>

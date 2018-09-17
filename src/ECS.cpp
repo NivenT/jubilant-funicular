@@ -4,7 +4,7 @@
 
 namespace nta {
 	void Component::send(const Message& message) {
-		m_system->broadcast(message, this);
+		m_system->broadcast(message, m_id);
 	}
 
 	Entity ECS::gen_entity() {
@@ -21,35 +21,36 @@ namespace nta {
 		m_entity_gen.free(id);
 		while (!m_components_map[id].empty()) {
 			auto list = (std::vector<Component*>*)m_components_map[id].begin()->second;
-			while (!list->empty()) delete_component(list->front());
+			while (!list->empty()) delete_component(list->front()->get_id());
 			m_components_map[id].erase(m_components_map[id].begin()->first);
 		}
 		return true;
 	}
-	bool ECS::delete_component(Component* cmpn) {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return false;
+	ComponentID ECS::delete_component(ComponentID cmpn) {
+		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
 		auto entity = m_entity_map[cmpn];
 		m_entity_map.erase(cmpn);
 
 		for (auto& info : m_list_map[cmpn]) {
 			std::vector<Component*>* list = (std::vector<Component*>*)m_components_map[entity].find(info);
 			assert(list != nullptr);
-			auto end = std::remove(list->begin(), list->end(), cmpn);
+			auto end = std::remove(list->begin(), list->end(), m_component_set[cmpn]);
 			list->resize(end - list->begin());
 
 			list = (std::vector<Component*>*)m_component_lists.find(info);
-			end = std::remove(list->begin(), list->end(), cmpn);
+			end = std::remove(list->begin(), list->end(), m_component_set[cmpn]);
 			list->resize(end - list->begin());
 		}
 		m_list_map.erase(cmpn);
+		delete m_component_set[cmpn];
 		m_component_set.erase(cmpn);
-		delete cmpn;
-		return true;
+		m_cmpn_gen.free(cmpn);
+		return cmpn;
 	}
 	bool ECS::does_entity_exist(Entity entity) const {
 		return m_entity_set.find(entity) != m_entity_set.end();
 	}
-	Entity ECS::get_owner(Component* cmpn) const {
+	Entity ECS::get_owner(ComponentID cmpn) const {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
 		return m_entity_map.find(cmpn)->second;
 	}
@@ -57,12 +58,16 @@ namespace nta {
 		if (m_entity_set.find(entity) == m_entity_set.end()) return utils::Option<ComponentLists&>::none();
 		return utils::Option<ComponentLists&>::new_some(m_components_map[entity]);
 	}
-	void ECS::broadcast(const Message& message, Component* cmpn) {
+	Component* ECS::get_component(ComponentID id) const {
+		auto it = m_component_set.find(id);
+		return it == m_component_set.end() ? nullptr : it->second;
+	}
+	void ECS::broadcast(const Message& message, ComponentID cmpn) {
 		if (m_component_set.find(cmpn) == m_component_set.end()) return;
 		broadcast(message, m_entity_map[cmpn]);
 	}
 	void ECS::broadcast(const Message& message, Entity entity) {
-		ComponentSet seen;
+		std::unordered_set<Component*> seen;
 		auto& lists = m_components_map[entity];
 		for (auto& pair: lists) {
 			auto& list = *(std::vector<Component*>*)pair.second;

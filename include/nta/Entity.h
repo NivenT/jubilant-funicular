@@ -4,7 +4,6 @@
 #include "nta/Wrapper.h"
 
 namespace nta {
-	class ECS;
 	NTA_CREATE_WRAPPER(Entity, uint64_t)
 }
 
