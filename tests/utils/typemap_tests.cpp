@@ -14,7 +14,6 @@ struct big {
 };
 
 int main(int argc, char* argv[]) {
-    nta::init(); // This is useless here but it can't hurt
     cout<<"Running TypeMap tests..."<<endl;
 
     int a = 11;
@@ -101,6 +100,5 @@ int main(int argc, char* argv[]) {
     assert(map.find<string>() == "bleem!");
 
     cout<<"Tests passed"<<endl;
-    nta::cleanup();
     return 0;
 }

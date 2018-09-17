@@ -11,7 +11,6 @@ NTA_CREATE_WRAPPER(Feet, int)
 NTA_CREATE_WRAPPER(Name, string)
 
 int main(int argc, char* argv[]) {
-    nta::init(); // This is useless here but it can't hurt
     cout<<"Running Wrapper tests..."<<endl;
 
     assert(check::is_wrapper<Inches>::value);
@@ -87,7 +86,6 @@ int main(int argc, char* argv[]) {
     }
 
     cout<<"Tests passed"<<endl;
-    nta::cleanup();
     return 0;
 }
 

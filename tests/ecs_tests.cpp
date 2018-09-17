@@ -27,7 +27,6 @@ class FakeComponent : public Component {
 };
 
 int main(int argc, char* argv[]) {
-    nta::init(); // This is useless here but it can't hurt
     cout<<"Running ECS tests..."<<endl;
     
     ECS system;
@@ -60,7 +59,8 @@ int main(int argc, char* argv[]) {
     assert(system.get_components(sick).size() == 2);
     
     assert(system.get_owner(system.get_component_list<DamageComponent>().front()) == sick);
-    assert(system.get_owner(new HealthComponent) == NTA_INVALID_ID);
+    HealthComponent temp;
+    assert(system.get_owner(&temp) == NTA_INVALID_ID);
     assert(system.get_siblings(system.get_component_list<DamageComponent>().front()).size() == 2);
 
     assert(system.get_component<HealthComponent>(sick).get_health() == 0);
@@ -101,7 +101,6 @@ int main(int argc, char* argv[]) {
     assert(!system.does_entity_exist(noone));
     
     cout<<"Tests passed"<<endl;
-    nta::cleanup();
     return 0;
 }
 

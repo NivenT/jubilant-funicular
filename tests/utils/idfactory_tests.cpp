@@ -6,7 +6,6 @@ using namespace std;
 using namespace nta::utils;
 
 int main(int argc, char* argv[]) {
-    nta::init(); // This is useless here but it can't hurt
     cout<<"Running IDFactory tests..."<<endl;
 
     IDFactory<unsigned int> factory;
@@ -34,7 +33,6 @@ int main(int argc, char* argv[]) {
     assert(factory() == 1);
 
     cout<<"Tests passed"<<endl;
-    nta::cleanup();
     return 0;
 }
 

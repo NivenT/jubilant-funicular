@@ -6,7 +6,6 @@ using namespace std;
 using namespace nta::utils;
 
 int main(int argc, char* argv[]) {
-    nta::init(); // This is useless here but it can't hurt
     cout<<"Running Path tests..."<<endl;
 
     Path p("path/to/a/file.txt");
@@ -64,6 +63,5 @@ int main(int argc, char* argv[]) {
     assert(Path("/").file_name() == "");
 
     cout<<"Tests passed"<<endl;
-    nta::cleanup();
     return 0;
 }
