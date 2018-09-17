@@ -94,10 +94,10 @@ namespace nta {
         Entity get_owner(Component* cmpn) const;
         /// Returns a list of all components of the given type
         template<typename T>
-        std::vector<T*>& get_component_list();
-        /// Returna a list of all component of a given type belonging to entity
+        std::vector<T*> get_component_list() const;
+        /// Same as get_component_list but returns a constant reference
         template<typename T>
-        utils::Option<std::vector<T*>&> get_component_list(Entity entity);
+        std::vector<T*> get_component_list(Entity entity) const;
         /// Returns the lists of components associated to the given Entity
         ///
         /// Crashes if entity does not exist
@@ -159,13 +159,15 @@ namespace nta {
         return !m_components_map.find(entity)->second.find<std::vector<T*>>().empty();
     }
     template<typename T>
-    std::vector<T*>& ECS::get_component_list() {
-        return m_component_lists.get<std::vector<T*>>();
+    std::vector<T*> ECS::get_component_list() const {
+        if (!m_component_lists.contains<std::vector<T*>>()) return std::vector<T*>();
+        return m_component_lists.find<std::vector<T*>>();
     }
     template<typename T>
-    utils::Option<std::vector<T*>&> ECS::get_component_list(Entity entity) {
-        if (!does_entity_exist(entity)) return utils::Option<std::vector<T*>&>::none();
-        return utils::Option<std::vector<T*>&>::new_some(m_components_map[entity].get<std::vector<T*>>());
+    std::vector<T*> ECS::get_component_list(Entity entity) const {
+        if (!does_entity_exist(entity)) return std::vector<T*>();
+        else if (!m_components_map.find(entity)->second.contains<std::vector<T*>>()) return std::vector<T*>();
+        return m_components_map.find(entity)->second.find<std::vector<T*>>();
     }
     template<typename T>
     utils::Option<T&> ECS::get_component(Entity entity) const {

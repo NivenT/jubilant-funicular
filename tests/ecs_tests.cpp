@@ -78,11 +78,11 @@ int main(int argc, char* argv[]) {
     }
     assert(system.delete_component(&system.get_component<DamageComponent>(sick).unwrap()));
     assert(system.has_component<DamageComponent>(sick));
-    assert(system.get_component_list<DamageComponent>(sick).unwrap().size() == 3);
+    assert(system.get_component_list<DamageComponent>(sick).size() == 3);
     system.delete_components<DamageComponent>(sick);
     assert(!system.has_component<DamageComponent>(sick));
     
-    for (const HealthComponent* health : system.get_component_list<HealthComponent>(sick).unwrap()) {
+    for (const HealthComponent* health : system.get_component_list<HealthComponent>(sick)) {
         assert(health->get_health() == 0);
     }
     
@@ -90,10 +90,6 @@ int main(int argc, char* argv[]) {
     assert(!system.delete_component(nullptr));
     assert(!system.add_component<HealthComponent>(noone));
     assert(system.get_component_list<FakeComponent>().empty());
-    
-    for (auto null : system.get_component_list<FakeComponent>()) {
-        assert(false);
-    }
     
     assert(system.does_entity_exist(sick));
     assert(system.does_entity_exist(healthy));
@@ -104,7 +100,7 @@ int main(int argc, char* argv[]) {
     assert(!system.does_entity_exist(noone));
 
     assert(system.get_component<DamageComponent>(healthy).is_none());
-    assert(system.get_component_list<HealthComponent>(empty).unwrap().empty());
+    assert(system.get_component_list<HealthComponent>(empty).empty());
     assert(system.get_components(noone).is_none());
     
     cout<<"Tests passed"<<endl;
