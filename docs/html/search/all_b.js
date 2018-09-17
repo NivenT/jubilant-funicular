@@ -95,6 +95,7 @@ var searchData=
   ['m_5fworkers',['m_workers',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a851ca4eb221b1d3961f345655bdabc7f',1,'nta::utils::ThreadPool']]],
   ['m_5fworking',['m_working',['../d1/de6/classnta_1_1CallbackManager.html#a20cd08f864fd62edbd68f5f309be5c30',1,'nta::CallbackManager']]],
   ['m_5fxindex',['m_xIndex',['../d6/d23/classnta_1_1Screen.html#afba24e281f497022a32416f707785b9c',1,'nta::Screen']]],
+  ['map',['map',['../dd/d2b/classnta_1_1utils_1_1Option.html#aaca218b7761bcf348480e90e48fe5f66',1,'nta::utils::Option']]],
   ['measure',['measure',['../d6/d57/classnta_1_1SpriteFont.html#a195ee5502390cd373463a774641a4677',1,'nta::SpriteFont']]],
   ['merge',['merge',['../d1/d3d/classnta_1_1utils_1_1Json.html#ac33a8a65bdfaff7c365f99c9ca71eeab',1,'nta::utils::Json']]],
   ['message',['Message',['../d0/d9b/structnta_1_1Message.html',1,'nta']]],
