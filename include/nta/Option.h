@@ -38,11 +38,12 @@ namespace nta {
             /// unwrap and get are the same thing
             T unwrap() const { return get(); }
             /// Return the data held by this Option or optb if it's None
-            T get_or(const T& optb) { return some ? data : optb; }
-            T unwrap_or(const T& optb) { return get_or(optb); }
+            T get_or(const T& optb) const { return some ? data : optb; }
+            T unwrap_or(const T& optb) const { return get_or(optb); }
             /// Returns an Option holding the result of applying func to data
             template<typename S>
             Option<S> map(std::function<S(T)> func);
+            void map(std::function<void(T)> func);
         };
         template<typename T>
         Option<T> Option<T>::new_some(const T& data) {
@@ -65,6 +66,29 @@ namespace nta {
         Option<S> Option<T>::map(std::function<S(T)> func) {
             return some ? new_some(func(data)) : none();
         }
+        template<typename T>
+        void Option<T>::map(std::function<void(T)> func) {
+            if (some) func(data);
+        }
+        /// Specialization of Option<T>. Every Option<void> is None
+        template<>
+        class Option<void> {
+        private:
+            Option();
+        public:
+            static Option new_some() { return Option(); }
+            static Option none() { return Option(); }
+            bool is_some() const { return false; }
+            bool is_none() const { return true; }
+            void get() const {}
+            void unwrap() const {}
+            void get_or() const {}
+            void unwrap_or() const {}
+            /// This may not be the right choice, but calling map returns
+            /// an option holding some data, and not a none variant.
+            template<typename S>
+            Option<S> map(std::function<S(void)> func) { return Option<S>::new_some(func()); }
+        };
     }
 };
 
