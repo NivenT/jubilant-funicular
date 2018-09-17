@@ -6,7 +6,7 @@
  * The physics in this example is less than ideal since it is not the focus
  * In practice, for decent physics, you'll want to use an externel library
  */
-/*
+
 #include <nta/ScreenManager.h>
 #include <nta/SystemManager.h>
 #include <nta/ResourceManager.h>
@@ -26,9 +26,6 @@
 #define GRAVITY vec2(0, -9.81)
 #define GROUND_Y -100.f
 
-#define GRAPHICS_COMPONENT_TYPE (1 << 0)
-#define PHYSICS_COMPONENT_TYPE (1 << 1)
-
 using namespace std;
 using namespace glm;
 
@@ -38,9 +35,9 @@ private:
     vec2 m_pos;
     float m_rad;
 public:
-    GraphicsComponent() : m_color(1), m_pos(0), m_rad(5), nta::Component(GRAPHICS_COMPONENT_TYPE) {}
-    GraphicsComponent(float rad) : m_color(1), m_pos(0), m_rad(rad), nta::Component(GRAPHICS_COMPONENT_TYPE) {}
-    GraphicsComponent(vec4 col, float rad) : m_color(col),  m_pos(0), m_rad(rad), nta::Component(GRAPHICS_COMPONENT_TYPE) {}
+    GraphicsComponent() : m_color(1), m_pos(0), m_rad(5) {}
+    GraphicsComponent(float rad) : m_color(1), m_pos(0), m_rad(rad) {}
+    GraphicsComponent(vec4 col, float rad) : m_color(col),  m_pos(0), m_rad(rad) {}
 
     vec2 get_pos() const { return m_pos; }
     void draw(nta::SpriteBatch& batch) {
@@ -68,11 +65,11 @@ private:
     vec2 m_acc;
     float m_rad;
 public:
-    PhysicsComponent() : nta::Component(PHYSICS_COMPONENT_TYPE) {
+    PhysicsComponent() {
         m_pos = m_vel = m_acc = vec2(0);
         m_rad = 5;
     }
-    PhysicsComponent(nta::crvec2 pos, float radius) : m_pos(pos), m_rad(radius), nta::Component(PHYSICS_COMPONENT_TYPE) {
+    PhysicsComponent(nta::crvec2 pos, float radius) : m_pos(pos), m_rad(radius) {
         m_vel = m_acc = vec2(0);
     }
 
@@ -130,7 +127,7 @@ private:
     nta::SpriteBatch m_batch;
     nta::Camera2D m_camera;
 
-    vector<nta::EntityID> m_balls;
+    vector<nta::Entity> m_balls;
     // An Entity Component System
     nta::ECS m_system;
 public:
@@ -160,8 +157,8 @@ void MainScreen::addBall(nta::crvec2 pos) {
     vec4 col(nta::Random::randRGB(), 1.f);
 
     // Give the ball graphics and physics
-    m_system.add_component(new PhysicsComponent(pos, rad), m_balls.back());
-    m_system.add_component(new GraphicsComponent(col, rad), m_balls.back());
+    m_system.add_component<PhysicsComponent>(PhysicsComponent(pos, rad), m_balls.back());
+    m_system.add_component<GraphicsComponent>(GraphicsComponent(col, rad), m_balls.back());
 
     // Deleted Entites have their IDs recycled. Look at Log.log to see what I mean
     nta::Logger::writeToLog("Added ball with id " + nta::utils::to_string(m_balls.back()));
@@ -198,37 +195,21 @@ void MainScreen::update() {
         addBall(getMouse());
     }
 
-    nta::ComponentNode* phys_cpmns = m_system.get_component_list(PHYSICS_COMPONENT_TYPE);
-    // loops over pairs of PhysicsComponents and performs collision detection
-    for (nta::ComponentNode* lhs = phys_cpmns; lhs; lhs = lhs->next) {
-        for (nta::ComponentNode* rhs = lhs->next; rhs; rhs = rhs->next) {
-            PhysicsComponent* plhs = (PhysicsComponent*)lhs->data;
-            PhysicsComponent* prhs = (PhysicsComponent*)rhs->data;
-
-            plhs->collide(*prhs, 1./60);
+    vector<PhysicsComponent*> phys_cpmns = m_system.get_component_list<PhysicsComponent>();
+    for (int i = 0; i < phys_cpmns.size(); i++) {
+        for (int j = i+1; j < phys_cpmns.size(); j++) {
+            phys_cpmns[i]->collide(*phys_cpmns[j], 1./60);
         }
     }
-
-    // Note the necessary dereference
-    for (nta::Component* cmpn : *phys_cpmns) {
-        ((PhysicsComponent*)cmpn)->step(1./60);
+    for (PhysicsComponent* cmpn : phys_cpmns) {
+        cmpn->step(1./60);
     }
 
     // removes any ball whose center goes off the screen
     for (int i = 0; i < m_balls.size(); i++) {
         auto& ball = m_balls[i];
-        // Get the first component in this ball's list of components
-        // Since both Physics and Grphics components store m_pos, we don't care
-        // which kind it is
-        nta::Component* cmpn = m_system.get_components(ball)->data;
-
-        vec2 pos;
-        if (cmpn->type & GRAPHICS_COMPONENT_TYPE) {
-            pos = ((GraphicsComponent*)cmpn)->get_pos();
-        } else {
-            pos = ((PhysicsComponent*)cmpn)->get_pos();
-        }
-
+        // Get the ball's position from its physics component
+        vec2 pos = m_system.get_component<PhysicsComponent>(ball).get_pos();
         if (pos.x > 100 || pos.x < -100 || pos.y > 100 || pos.y < -100) {
             m_system.delete_entity(ball);
             // ordering in m_balls doesn't matter so might as well
@@ -258,10 +239,8 @@ void MainScreen::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     m_batch.begin(); {
-        // Note the necessary dereference
-        for (nta::Component* cmpn : *m_system.get_component_list(GRAPHICS_COMPONENT_TYPE)) {
-            GraphicsComponent* gcmpn = (GraphicsComponent*)cmpn;
-            gcmpn->draw(m_batch);
+        for (GraphicsComponent* cmpn : m_system.get_component_list<GraphicsComponent>()) {
+            cmpn->draw(m_batch);
         }
 
         string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());
@@ -291,10 +270,5 @@ int main(int argc, char* argv[]) {
     nta::cleanup();
     nta::Logger::writeToLog("Program exited cleanly");
 
-    return 0;
-}
-*/
-
-int main() {
     return 0;
 }
