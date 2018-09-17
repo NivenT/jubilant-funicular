@@ -62,11 +62,15 @@ namespace nta {
 		broadcast(message, m_entity_map[cmpn]);
 	}
 	void ECS::broadcast(const Message& message, Entity entity) {
+		ComponentSet seen;
 		auto& lists = m_components_map[entity];
 		for (auto& pair: lists) {
 			auto& list = *(std::vector<Component*>*)pair.second;
 			for (Component* cmpn : list) {
-				cmpn->receive(message);
+				if (seen.find(cmpn) == seen.end()) {
+					cmpn->receive(message);
+					seen.insert(cmpn);
+				}
 			}
 		}
 	}

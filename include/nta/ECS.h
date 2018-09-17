@@ -125,11 +125,10 @@ namespace nta {
     template<typename T, typename... Args>
     bool ECS::add_component(Entity entity, Args&&... args) {
         if (m_entity_set.find(entity) == m_entity_set.end()) return false;
-        T cmpn(std::forward<Args>(args)...);
-        cmpn.m_system = this;
-
         std::vector<T*>& list = m_component_lists.get<std::vector<T*>>();
-        list.push_back(new T(cmpn));
+        list.push_back(new T(std::forward<Args>(args)...));
+        list.back()->m_system = this;
+
         m_components_map[entity].get<std::vector<T*>>().push_back(list.back());
         m_entity_map[list.back()] = entity;
         m_component_set.insert(list.back());
