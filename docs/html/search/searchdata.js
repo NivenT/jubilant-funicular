@@ -5,8 +5,9 @@ var indexSectionsWithContent =
   2: "n",
   3: "abcdefghijlmnoprstuvw~",
   4: "defimnopstuvw",
-  5: "ejmw",
-  6: "jrt"
+  5: "c",
+  6: "ejmw",
+  7: "jrt"
 };
 
 var indexSectionNames =
@@ -16,8 +17,9 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "variables",
-  5: "enums",
-  6: "pages"
+  5: "typedefs",
+  6: "enums",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -27,7 +29,8 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Functions",
   4: "Variables",
-  5: "Enumerations",
-  6: "Pages"
+  5: "Typedefs",
+  6: "Enumerations",
+  7: "Pages"
 };
 

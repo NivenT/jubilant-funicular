@@ -104,9 +104,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d95/classnta_1_1Entity.html">Entity</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic game entity (basically a wrapper around a <em>unique</em> id)  <a href="../../d0/d95/classnta_1_1Entity.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Something went wrong.  <a href="../../d8/d66/structnta_1_1Error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,24 +237,23 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a2b7b647fe83786540b5e342a4a0474fa"><td class="memItemLeft" align="right" valign="top"><a id="a2b7b647fe83786540b5e342a4a0474fa"></a>
-typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListID</b></td></tr>
-<tr class="separator:a2b7b647fe83786540b5e342a4a0474fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a600e1f13567a793c734839ee428f9c68"><td class="memItemLeft" align="right" valign="top"><a id="a600e1f13567a793c734839ee428f9c68"></a>
-typedef <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">utils::LinkedNode</a>&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentNode</b></td></tr>
-<tr class="separator:a600e1f13567a793c734839ee428f9c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100c83ea1448fb60494df3c73ba38e4a"><td class="memItemLeft" align="right" valign="top">typedef utils::TypeMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a></td></tr>
+<tr class="separator:a100c83ea1448fb60494df3c73ba38e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1a4e1926834dedfce30d0f6ed301fbf"></a>
-typedef std::unordered_set&lt; <a class="el" href="../../d0/d95/classnta_1_1Entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
+typedef std::unordered_set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
 <tr class="separator:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c93a10ef59c9dbc5d2b24fb2a93b39"><td class="memItemLeft" align="right" valign="top"><a id="a42c93a10ef59c9dbc5d2b24fb2a93b39"></a>
 typedef std::unordered_set&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentSet</b></td></tr>
 <tr class="separator:a42c93a10ef59c9dbc5d2b24fb2a93b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bbe888781155ddeee0af5822e45fa16"><td class="memItemLeft" align="right" valign="top"><a id="a5bbe888781155ddeee0af5822e45fa16"></a>
-typedef std::unordered_map&lt; EntityID, <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">ComponentNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
-<tr class="separator:a5bbe888781155ddeee0af5822e45fa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941d400edfbb84e895e33289b8912f26"><td class="memItemLeft" align="right" valign="top"><a id="a941d400edfbb84e895e33289b8912f26"></a>
-typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, EntityID &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
-<tr class="separator:a941d400edfbb84e895e33289b8912f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memItemLeft" align="right" valign="top"><a id="a6a37bc30927d29ad1bee779cbb8267d6"></a>
+typedef std::unordered_map&lt; Entity, <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
+<tr class="separator:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13324d80c04e3b48297acd3a4c3697ea"><td class="memItemLeft" align="right" valign="top"><a id="a13324d80c04e3b48297acd3a4c3697ea"></a>
+typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
+<tr class="separator:a13324d80c04e3b48297acd3a4c3697ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f9392d5db1d130db929976c9e9c44dc"><td class="memItemLeft" align="right" valign="top"><a id="a7f9392d5db1d130db929976c9e9c44dc"></a>
+typedef std::unordered_map&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *, std::vector&lt; utils::TypeInfo &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
+<tr class="separator:a7f9392d5db1d130db929976c9e9c44dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memItemLeft" align="right" valign="top"><a id="a1f5715ee41c7a9174d2cc404fdb8556a"></a>
 typedef std::function&lt; void(const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b></td></tr>
 <tr class="separator:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,12 +340,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:a65c4ac3e24918c1a26025984c474b7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Add Option type </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000015">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>Make all indentation 2 spaces </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000032">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>Add Option type </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>Make all indentation 2 spaces </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000034">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="d4/d26/structnta_1_1CharGlyph" id="d4/d26/structnta_1_1CharGlyph"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#d4/d26/structnta_1_1CharGlyph">&#9670;&nbsp;</a></span>nta::CharGlyph</h2>
@@ -497,6 +493,24 @@ type</td>
 <td class="fielddoc">
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a100c83ea1448fb60494df3c73ba38e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100c83ea1448fb60494df3c73ba38e4a">&#9670;&nbsp;</a></span>ComponentLists</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef utils::TypeMap <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">nta::ComponentLists</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Will only hold types for the form std::vector&lt;T*&gt; where T inherits <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00020">20</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
