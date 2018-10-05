@@ -77,12 +77,15 @@ option(NTA_BUILD_EXAMPLES "Turn off if you don't want to build the examples" ON)
 option(NTA_BUILD_TESTS "Turn off if you don't want to build the tests" ON)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+set(UTILS_BUILD_TESTS ${NTA_BUILD_TESTS} CACHE BOOL "" FORCE)
 
 find_package(SDL2 REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
+
+add_subdirectory(utilities)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
@@ -92,6 +95,7 @@ set(NTA_LIBRARIES nta CACHE INTERNAL "")
 set(NTA_INCLUDE_DIR
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	${CMAKE_CURRENT_SOURCE_DIR}/deps
+  ${UTILS_INCLUDE_DIR}
 	${GLEW_INCLUDE_DIR}
 	${GLUT_INCLUDE_DIR}
 	${OPENGL_INCLUDE_DIR}
@@ -144,6 +148,7 @@ endif()
 
 # Is it standard practice to bundle libraries I don't own like this?
 set(NTA_LIBRARIES ${NTA_LIBRARIES}
+  ${UTILS_LIBRARIES}
   ${SDL2_LIBRARY}
   ${SDL2_TTF_LIBRARIES}
   ${GLEW_LIBRARIES}

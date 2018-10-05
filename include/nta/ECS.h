@@ -5,12 +5,13 @@
 #include <unordered_map>
 #include <vector>
 
-#include "nta/Entity.h"
 #include "nta/Component.h"
 #include "nta/IDFactory.h"
+#include "nta/Wrapper.h"
 #include "nta/TypeMap.h"
 
 namespace nta {
+    typedef utils::Wrapper<uint64_t, struct EntityTag> Entity;
     /// Will only hold types for the form std::vector<T*>
     /// where T inherits Component
     typedef utils::TypeMap ComponentLists;

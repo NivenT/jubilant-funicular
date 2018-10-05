@@ -33,10 +33,6 @@ public:
 class FakeComponent : public Component {
 };
 
-Option<Message> temp() {
-    return utils::Option<Message>::some(Message(0, (void*)95));
-}
-
 int main(int argc, char* argv[]) {
     cout<<"Running ECS tests..."<<endl;
     

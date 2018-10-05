@@ -2,17 +2,17 @@
 #define NTA_COMPONENT_H_INCLUDED
 
 #include "nta/Message.h"
-#include "nta/Wrapper.h"
 #include "nta/Option.h"
+#include "nta/Wrapper.h"
 
 namespace nta {
 	class ECS;
-	NTA_CREATE_WRAPPER(ComponentID, uint64_t)
+	typedef utils::Wrapper<uint64_t, struct ComponentIDTag> ComponentID;
 	/// Base class for components
 	class Component {
 	protected:
 		/// Create using ECS::add_component
-		Component() : m_system(nullptr) {}
+		Component() : m_system(nullptr), m_id(0) {}
 		/// The System this Component belongs to
 		ECS* m_system;
 		/// Unique identifier
@@ -33,10 +33,6 @@ namespace nta {
 
 		friend ECS;
 	};
-}
-
-namespace std {
-	NTA_HASH_WRAPPER(nta::ComponentID)
 }
 
 #endif // NTA_COMPONENT_H_INCLUDED

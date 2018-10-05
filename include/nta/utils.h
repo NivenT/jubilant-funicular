@@ -1,10 +1,12 @@
 #ifndef NTA_UTILS_H_INCLUDED
 #define NTA_UTILS_H_INCLUDED
 
-#include "nta/MyEngine.h"
-
 #include <string>
 #include <vector>
+
+#include <utils/common.h>
+
+#include "nta/MyEngine.h"
 
 namespace nta {
 	namespace utils {
@@ -26,12 +28,7 @@ namespace nta {
 		/// converts input to a std::string
 	    template<class T>
 	    std::string to_string(const T& input, std::size_t precision = 0) {
-	        std::ostringstream os;
-	        if (precision != 0) {
-	            os.precision(precision);
-	        }
-	        os<<input;
-	        return os.str();
+	        return ::utils::to_string(input, precision);
 	    }
 
 	    /// returns whether or not min <= val <= max
