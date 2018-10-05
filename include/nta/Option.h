@@ -17,8 +17,7 @@ namespace nta {
             using type = typename std::remove_reference<T>::type;
 
             /// Private constructor (use some or none instead)
-            Option() : m_data(*(type*)(new char(0))), m_some(false) {}
-            Option(const T& d) : m_data(d), m_some(true) {}
+            Option(const T& d, bool isSome) : m_data(d), m_some(isSome) {}
 
             T m_data;
             bool m_some;
@@ -51,11 +50,14 @@ namespace nta {
         };
         template<typename T>
         Option<T> Option<T>::some(const T& data) {
-            return Option<T>(data);
+            return Option<T>(data, true);
         }
         template<typename T>
         Option<T> Option<T>::none() {
-            return Option<T>();
+            char* temp = new char(0);
+            auto ret = Option<T>(*(type*)temp, false);
+            delete temp;
+            return ret;
         }
         template<typename T>
         T Option<T>::get() const {
