@@ -4,6 +4,7 @@
 
 using namespace std;
 using namespace nta;
+using namespace nta::utils;
 
 class HealthComponent : public Component {
 private:
@@ -15,6 +16,9 @@ public:
 		int damage = static_cast<int>(reinterpret_cast<std::uintptr_t>(message.data));
 		m_health -= damage;
 	}
+    Option<Message> respond(const Message& req) {
+        return Option<Message>::some(Message(0, (void*)(long)m_health));
+    }
 };
 
 class DamageComponent : public Component {
@@ -28,6 +32,10 @@ public:
 
 class FakeComponent : public Component {
 };
+
+Option<Message> temp() {
+    return utils::Option<Message>::some(Message(0, (void*)95));
+}
 
 int main(int argc, char* argv[]) {
     cout<<"Running ECS tests..."<<endl;
@@ -55,6 +63,9 @@ int main(int argc, char* argv[]) {
         vector<DamageComponent*> dams = system.get_component_list<DamageComponent>();
         for (auto& dam : dams) {
             dam->send(Message(0, (void*)dam->get_damage()));
+            auto resp = dam->request(Message());
+            assert(resp.is_some());
+            assert((long)resp.unwrap().data == sick_health - dam->get_damage());
         }
         assert(dams.size() == 1);
     }

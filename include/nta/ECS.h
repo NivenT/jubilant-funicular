@@ -9,7 +9,6 @@
 #include "nta/Component.h"
 #include "nta/IDFactory.h"
 #include "nta/TypeMap.h"
-#include "nta/Option.h"
 
 namespace nta {
     /// Will only hold types for the form std::vector<T*>
@@ -123,6 +122,12 @@ namespace nta {
         template<typename T>
         void broadcast(const Message& message);
 
+        /// Like broadcast but returns the first response received
+        utils::Option<Message> shout(const Message& request, ComponentID cmpn);
+        utils::Option<Message> shout(const Message& request, Entity entity);
+        template<typename T>
+        utils::Option<Message> shout(const Message& request);
+
         /// Removes all entites and components from this system
         void clear();
     };
@@ -177,13 +182,21 @@ namespace nta {
     template<typename T>
     utils::Option<T&> ECS::get_component(Entity entity) const {
         if (!has_component<T>(entity)) return utils::Option<T&>::none();
-        return utils::Option<T&>::new_some(*m_components_map.find(entity)->second.find<std::vector<T*>>().front());
+        return utils::Option<T&>::some(*m_components_map.find(entity)->second.find<std::vector<T*>>().front());
     }
     template<typename T>
     void ECS::broadcast(const Message& message) {
         for (auto& cmpn : m_component_lists.get<std::vector<T*>>()) {
             cmpn->receive(message);
         }
+    }
+    template<typename T>
+    utils::Option<Message> ECS::shout(const Message& request) {
+        for (auto& cmpn : m_component_lists.get<std::vector<T*>>()) {
+            auto response = cmpn->respond(request);
+            if (response.is_some()) return response;
+        }
+        return utils::Option<Message>::none();
     }
 }
 

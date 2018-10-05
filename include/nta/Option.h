@@ -4,6 +4,7 @@
 #include <functional>
 
 #include "nta/MyEngine.h"
+#include "nta/Wrapper.h"
 
 namespace nta {
     namespace utils {
@@ -15,22 +16,23 @@ namespace nta {
         private:
             using type = typename std::remove_reference<T>::type;
 
-            /// Private constructor (use new_some or none instead)
-            Option() : data(*(type*)(0)), some(false) {}
-            Option(T d) : data(d), some(true) {}
+            /// Private constructor (use some or none instead)
+            Option() : m_data(*(type*)(new char(0))), m_some(false) {}
+            Option(const T& d) : m_data(d), m_some(true) {}
 
-            T data;
-            bool some;
+            T m_data;
+            bool m_some;
         public:
-            ~Option() { some = false; }
+            Option(const Option&) = default;
+            ~Option() { m_some = false; }
             /// Creates an Option holding some data
-            static Option new_some(const T& data);
+            static Option some(const T& data);
             /// Creates a None variant Option
             static Option none();
             /// Does this hold some data
-            bool is_some() const { return some; }
+            bool is_some() const { return m_some; }
             /// Does this hold nothing?
-            bool is_none() const { return !some; }
+            bool is_none() const { return !m_some; }
             /// Retreive the underlying data
             ///
             /// You should always call is_some/is_none beforehand
@@ -38,7 +40,7 @@ namespace nta {
             /// unwrap and get are the same thing
             T unwrap() const { return get(); }
             /// Return the data held by this Option or optb if it's None
-            T get_or(const T& optb) const { return some ? data : optb; }
+            T get_or(const T& optb) const { return m_some ? m_data : optb; }
             T unwrap_or(const T& optb) const { return get_or(optb); }
             /// Returns an Option holding the result of applying func to data
             template<typename S>
@@ -48,7 +50,7 @@ namespace nta {
             void map(std::function<void(T)> func);
         };
         template<typename T>
-        Option<T> Option<T>::new_some(const T& data) {
+        Option<T> Option<T>::some(const T& data) {
             return Option<T>(data);
         }
         template<typename T>
@@ -58,30 +60,38 @@ namespace nta {
         template<typename T>
         T Option<T>::get() const {
             /// \todo Push an error to ErrorManager instead
-            if (!some) {
+            if (!m_some) {
                 assert(false && "Tried getting data from a none Option");
             }
-            return data;
+            return m_data;
         }
         template<typename T> template<typename S>
         Option<S> Option<T>::map(std::function<S(T)> func) {
-            return some ? new_some(func(data)) : none();
+            return m_some ? Option<S>::some(func(m_data)) : Option<S>::none();
         }
         template<typename T> template<typename S>
         S Option<T>::map_or(std::function<S(T)> func, const S& def) {
-            return some ? func(data) : def;
+            return m_some ? func(m_data) : def;
         }
         template<typename T>
         void Option<T>::map(std::function<void(T)> func) {
-            if (some) func(data);
+            if (m_some) func(m_data);
         }
-        /// Specialization of Option<T>. Every Option<void> is None
+        template<typename T, typename std::enable_if_t<check::LShiftExists<std::ostream, T>::value>* = nullptr>
+        std::ostream& operator<<(std::ostream& lhs, const Option<T>& rhs) {
+            if (rhs.is_some()) {
+                return lhs<<"Some("<<rhs.unwrap()<<")";
+            } else {
+                return lhs<<"None";
+            }
+        }
+        /// (Untested) Specialization of Option<T>. Every Option<void> is None
         template<>
         class Option<void> {
         private:
             Option();
         public:
-            static Option new_some() { return Option(); }
+            static Option some() { return Option(); }
             static Option none() { return Option(); }
             bool is_some() const { return false; }
             bool is_none() const { return true; }
@@ -92,7 +102,7 @@ namespace nta {
             /// This may not be the right choice, but calling map returns
             /// an option holding some data, and not a none variant.
             template<typename S>
-            Option<S> map(std::function<S(void)> func) { return Option<S>::new_some(func()); }
+            Option<S> map(std::function<S(void)> func) { return Option<S>::some(func()); }
         };
     }
 };

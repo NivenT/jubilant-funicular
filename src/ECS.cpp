@@ -6,6 +6,9 @@ namespace nta {
 	void Component::send(const Message& message) {
 		m_system->broadcast(message, m_id);
 	}
+	utils::Option<Message> Component::request(const Message& request) {
+		return m_system->shout(request, m_id);
+	}
 
 	Entity ECS::gen_entity() {
 		Entity ret = m_entity_gen();
@@ -56,7 +59,7 @@ namespace nta {
 	}
 	utils::Option<ComponentLists&> ECS::get_components(Entity entity) {
 		if (m_entity_set.find(entity) == m_entity_set.end()) return utils::Option<ComponentLists&>::none();
-		return utils::Option<ComponentLists&>::new_some(m_components_map[entity]);
+		return utils::Option<ComponentLists&>::some(m_components_map[entity]);
 	}
 	Component* ECS::get_component(ComponentID id) const {
 		auto it = m_component_set.find(id);
@@ -78,6 +81,25 @@ namespace nta {
 				}
 			}
 		}
+	}
+	utils::Option<Message> ECS::shout(const Message& request, ComponentID cmpn) {
+		if (m_component_set.find(cmpn) == m_component_set.end()) return utils::Option<Message>::none();
+		return shout(request, m_entity_map[cmpn]);
+	}
+	utils::Option<Message> ECS::shout(const Message& request, Entity entity) {
+		std::unordered_set<Component*> seen;
+		auto& lists = m_components_map[entity];
+		for (auto& pair: lists) {
+			auto& list = *(std::vector<Component*>*)pair.second;
+			for (Component* cmpn : list) {
+				if (seen.find(cmpn) == seen.end()) {
+					utils::Option<Message> response = cmpn->respond(request);
+					if (response.is_some()) return response;
+					seen.insert(cmpn);
+				}
+			}
+		}
+		return utils::Option<Message>::none();
 	}
 	void ECS::clear() {
 		while (!m_entity_set.empty()) {
