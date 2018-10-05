@@ -1,1 +1,0 @@
-The files here came from the [doxygen-theme](https://github.com/nnen/doxygen-theme/tree/46111c61a9f49b7a9886127e679d4317478fab1c) repo, and are used to make the doc site look a little better.

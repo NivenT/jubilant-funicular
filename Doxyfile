@@ -1,7 +1,7 @@
 GENERATE_LATEX=NO
 
 PROJECT_NAME=jubilant-funicular
-#PROJECT_TAG="I think technically this is a game engine"
+PROJECT_TAG="I think technically this is a game engine"
 USE_MDFILE_AS_MAINPAGE=./README.md
 
 OUTPUT_DIRECTORY=./docs
@@ -33,6 +33,3 @@ SHOW_GROUPED_MEMB_INC=YES
 HIDE_UNDOC_RELATIONS=NO
 #CALL_GRAPH=YES
 #CALLER_GRAPH=YES
-
-HTML_EXTRA_STYLESHEET=doxygen-theme/customdoxygen.css
-LAYOUT_FILE=doxygen-theme/DoxygenLayout.xml
