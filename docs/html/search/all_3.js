@@ -3,7 +3,7 @@ var searchData=
   ['data',['data',['../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#a8df70567a8ff969dbec63a756d90837f',1,'nta::utils::LinkedNode::data()'],['../d0/d9b/structnta_1_1Message.html#acdc6a80330922946fc6b8657602e43a0',1,'nta::Message::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
-  ['decrexists',['DecrExists',['../dd/d98/structnta_1_1check_1_1DecrExists.html',1,'nta::check']]],
+  ['decrexists',['DecrExists',['../d4/d6f/structutils_1_1check_1_1DecrExists.html',1,'utils::check']]],
   ['delay',['delay',['../d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448',1,'nta::CallbackManager']]],
   ['delete_5fcomponent',['delete_component',['../db/da0/classnta_1_1ECS.html#ac53a5c8c535c5dbb7496e83c1bf3fa3a',1,'nta::ECS']]],
   ['delete_5fcomponents',['delete_components',['../db/da0/classnta_1_1ECS.html#aeb6f76abd4855c865f8b8264d892b3be',1,'nta::ECS']]],
@@ -13,12 +13,13 @@ var searchData=
   ['dequeue',['dequeue',['../d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14',1,'nta::CallbackManager']]],
   ['description',['description',['../d8/d66/structnta_1_1Error.html#afd857a214f99264d095d42fcf076318b',1,'nta::Error']]],
   ['destroy',['destroy',['../da/d29/classnta_1_1AudioManager.html#aa337e5cc1825c6e2b971e1fc173b17ce',1,'nta::AudioManager::destroy()'],['../d1/de6/classnta_1_1CallbackManager.html#a70be77ca2505257376250c660a3082d6',1,'nta::CallbackManager::destroy()'],['../d0/dc4/classnta_1_1ScreenManager.html#ad4e28094d9293b55f38ea463ac802219',1,'nta::ScreenManager::destroy()'],['../db/d25/classnta_1_1SystemManager.html#a69721eaa78fda16f0f028d2991672282',1,'nta::SystemManager::destroy()']]],
+  ['destructor',['destructor',['../d1/dc9/structutils_1_1TypeInfo.html#a51c2b7594f29bbdb0cd1026ce878059f',1,'utils::TypeInfo']]],
   ['dispatch',['dispatch',['../d1/de6/classnta_1_1CallbackManager.html#a7912dc908d7a7a44267ddd8fa6fb8686',1,'nta::CallbackManager']]],
   ['dispatcher',['dispatcher',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a2ca98ba5ed4510e5aac90c0507859b8d',1,'nta::utils::ThreadPool']]],
-  ['divexists',['DivExists',['../d6/d50/structnta_1_1check_1_1DivExists.html',1,'nta::check']]],
+  ['divexists',['DivExists',['../d8/de2/structutils_1_1check_1_1DivExists.html',1,'utils::check']]],
   ['does_5fentity_5fexist',['does_entity_exist',['../db/da0/classnta_1_1ECS.html#a219f7ec9639689fc76fce97033a97d8d',1,'nta::ECS']]],
   ['draw',['draw',['../df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69',1,'nta::ParticleBatch2D::draw()'],['../d1/de9/classnta_1_1ParticleEngine2D.html#a759937cf45e74162ce85269ddf59237b',1,'nta::ParticleEngine2D::draw()']]],
   ['drawtext',['drawText',['../d6/d57/classnta_1_1SpriteFont.html#a5296f75c81b8e1626e4fbfe188ae0a96',1,'nta::SpriteFont']]],
   ['drawtexture',['drawTexture',['../d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc',1,'nta::SpriteFont']]],
-  ['dump',['dump',['../d1/d23/classnta_1_1utils_1_1JsonNum.html#a304a9adefcdf875554ef0bd04225594a',1,'nta::utils::JsonNum::dump()'],['../d1/d3d/classnta_1_1utils_1_1Json.html#ab0e60f7a55d12aab005d420c8f924035',1,'nta::utils::Json::dump()']]]
+  ['dump',['dump',['../d3/d2d/classutils_1_1JsonNum.html#ac742ab7b0d292371740ce491031a3bed',1,'utils::JsonNum::dump()'],['../de/df3/classutils_1_1Json.html#a281a8b7e40a039bab59726a46d72a213',1,'utils::Json::dump()']]]
 ];

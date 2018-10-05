@@ -78,7 +78,8 @@ Collaboration diagram for nta::ECS:</div>
 <div class="center"><img src="../../d5/d5c/classnta_1_1ECS__coll__graph.png" border="0" usemap="#nta_1_1ECS_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1ECS_coll__map" id="nta_1_1ECS_coll__map">
 <area shape="rect" id="node3" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="299,57,438,98"/>
-<area shape="rect" id="node9" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="299,321,438,362"/>
+<area shape="rect" id="node6" href="../../d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="315,123,423,149"/>
+<area shape="rect" id="node10" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="299,321,438,362"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -161,6 +162,17 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6803f967743a6f014c138712d4754df5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a6803f967743a6f014c138712d4754df5">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message)</td></tr>
 <tr class="memdesc:a6803f967743a6f014c138712d4754df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components of the given type. <br /></td></tr>
 <tr class="separator:a6803f967743a6f014c138712d4754df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41897e4f2ab03c0d9af25fcb1ea4e6b5"><td class="memItemLeft" align="right" valign="top"><a id="a41897e4f2ab03c0d9af25fcb1ea4e6b5"></a>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a41897e4f2ab03c0d9af25fcb1ea4e6b5">shout</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request, ComponentID cmpn)</td></tr>
+<tr class="memdesc:a41897e4f2ab03c0d9af25fcb1ea4e6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like broadcast but returns the first response received. <br /></td></tr>
+<tr class="separator:a41897e4f2ab03c0d9af25fcb1ea4e6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1739880bd8fd969d482e50b306ad1e"><td class="memItemLeft" align="right" valign="top"><a id="aba1739880bd8fd969d482e50b306ad1e"></a>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shout</b> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request, Entity entity)</td></tr>
+<tr class="separator:aba1739880bd8fd969d482e50b306ad1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7af9962235f15e21859af0369c2082d"><td class="memTemplParams" colspan="2"><a id="ac7af9962235f15e21859af0369c2082d"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac7af9962235f15e21859af0369c2082d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shout</b> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request)</td></tr>
+<tr class="separator:ac7af9962235f15e21859af0369c2082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b0a89b5a954f2a67465d2487cd8afb"><td class="memItemLeft" align="right" valign="top"><a id="a90b0a89b5a954f2a67465d2487cd8afb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a90b0a89b5a954f2a67465d2487cd8afb">clear</a> ()</td></tr>
 <tr class="memdesc:a90b0a89b5a954f2a67465d2487cd8afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all entites and components from this system. <br /></td></tr>
@@ -238,7 +250,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>T should be a concrete type, not a pointer type</p>
 <p>Returns the id of the created <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> (NTA_INVALID_ID on failure). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00130">130</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00136">136</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +275,7 @@ template&lt;typename T &gt; </div>
 <p>cmpn should be a pointer to a <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> that inherits from T</p>
 <p>returns false on failure </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00144">144</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00150">150</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
@@ -285,9 +297,9 @@ template&lt;typename T &gt; </div>
 <p>Attempts to delete the given <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a></p>
 <p>Returns the id of the deleted <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00153">delete_components()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00159">delete_components()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +323,7 @@ template&lt;typename T &gt; </div>
 <p>Deletes all componenets of the given type from the given entity</p>
 <p>if entity == NTA_INVALID_ID, then deletes all components of that type from all entities </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00153">153</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00159">159</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +345,7 @@ template&lt;typename T &gt; </div>
 <p>Attempts to delete Entity with given id.</p>
 <p>Returns true on success </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00018">18</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +367,7 @@ template&lt;typename T &gt; </div>
 <p>Returns the lists of components associated to the given Entity</p>
 <p>Crashes if entity does not exist </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00057">57</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00108">get_siblings()</a>.</p>
 
@@ -386,7 +398,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00044">44</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00130">add_component()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00144">add_component_to_list()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00183">broadcast()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00167">get_component_list()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00136">add_component()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00150">add_component_to_list()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00189">broadcast()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00173">get_component_list()</a>.</p>
 
 </div>
 </div>

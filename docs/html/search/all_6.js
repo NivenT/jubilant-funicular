@@ -3,7 +3,7 @@ var searchData=
   ['gen_5fentities',['gen_entities',['../db/da0/classnta_1_1ECS.html#abfa438a816c1174f03b0e0124a2bec20',1,'nta::ECS']]],
   ['gen_5fentity',['gen_entity',['../db/da0/classnta_1_1ECS.html#a71a4d6f5e2aa5f3d7d3d8dc45b7eb611',1,'nta::ECS']]],
   ['gen_5fid',['gen_id',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#af6afaf6d7566f52e7c2898076c7aa10e',1,'nta::utils::IDFactory']]],
-  ['get',['get',['../dd/d2b/classnta_1_1utils_1_1Option.html#a34da9b4025cc8b95c84894237495fd40',1,'nta::utils::Option']]],
+  ['get',['get',['../dd/d2b/classnta_1_1utils_1_1Option.html#a34da9b4025cc8b95c84894237495fd40',1,'nta::utils::Option::get()'],['../d1/dc9/structutils_1_1TypeInfo.html#a34bd0dde5f01ca6fcdb0781b3b960bb9',1,'utils::TypeInfo::get()'],['../d6/d89/classutils_1_1TypeMap.html#a620c2fdf50f172752057efbbed50fc30',1,'utils::TypeMap::get()']]],
   ['get_5fcomponent',['get_component',['../db/da0/classnta_1_1ECS.html#aa229a416ef078523e51e3667b1d3573b',1,'nta::ECS::get_component(Entity entity) const'],['../db/da0/classnta_1_1ECS.html#a7c9148515292513f5b389e1c81a26664',1,'nta::ECS::get_component(ComponentID id) const']]],
   ['get_5fcomponent_5flist',['get_component_list',['../db/da0/classnta_1_1ECS.html#a816701b6849409e70b4280a62ac4924e',1,'nta::ECS::get_component_list() const'],['../db/da0/classnta_1_1ECS.html#af864fd81d7e160e71fb47f9e65e48ce8',1,'nta::ECS::get_component_list(Entity entity) const']]],
   ['get_5fcomponents',['get_components',['../db/da0/classnta_1_1ECS.html#a177762a44aa67fc1284f2fb6eae0ba2b',1,'nta::ECS']]],
@@ -55,5 +55,5 @@ var searchData=
   ['glslprogram',['GLSLProgram',['../dc/d9c/classnta_1_1GLSLProgram.html',1,'nta::GLSLProgram'],['../dc/d9c/classnta_1_1GLSLProgram.html#ad8a89f518a3a6ecaa26125d3bbefafaa',1,'nta::GLSLProgram::GLSLProgram()']]],
   ['gltexture',['GLTexture',['../d3/dff/structnta_1_1GLTexture.html',1,'nta']]],
   ['glyph',['Glyph',['../d6/db3/structnta_1_1Glyph.html',1,'nta::Glyph'],['../d6/db3/structnta_1_1Glyph.html#a3b2afa4370140736d9d1b28de20d2105',1,'nta::Glyph::Glyph()']]],
-  ['greaterexists',['GreaterExists',['../df/d2e/structnta_1_1check_1_1GreaterExists.html',1,'nta::check']]]
+  ['greaterexists',['GreaterExists',['../dc/d72/structutils_1_1check_1_1GreaterExists.html',1,'utils::check']]]
 ];

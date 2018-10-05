@@ -71,9 +71,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:d7/d10/namespacenta_1_1check"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/namespacenta_1_1check.html">check</a></td></tr>
-<tr class="memdesc:d7/d10/namespacenta_1_1check"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for checking whether types support certain operations. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d7/d33/namespacenta_1_1utils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html">utils</a></td></tr>
 <tr class="memdesc:d7/d33/namespacenta_1_1utils"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for classes/functionality not necessarily specific to game/opengl development. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,7 +233,13 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a100c83ea1448fb60494df3c73ba38e4a"><td class="memItemLeft" align="right" valign="top">typedef utils::TypeMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a></td></tr>
+<tr class="memitem:af3292da35acbfbe999dcc0484b876bac"><td class="memItemLeft" align="right" valign="top"><a id="af3292da35acbfbe999dcc0484b876bac"></a>
+typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; uint64_t, struct ComponentIDTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentID</b></td></tr>
+<tr class="separator:af3292da35acbfbe999dcc0484b876bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1a0fc0f27e8a0b4d1766c19f4f2333"><td class="memItemLeft" align="right" valign="top"><a id="a0f1a0fc0f27e8a0b4d1766c19f4f2333"></a>
+typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; uint64_t, struct EntityTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b></td></tr>
+<tr class="separator:a0f1a0fc0f27e8a0b4d1766c19f4f2333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100c83ea1448fb60494df3c73ba38e4a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a></td></tr>
 <tr class="separator:a100c83ea1448fb60494df3c73ba38e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1a4e1926834dedfce30d0f6ed301fbf"></a>
 typedef std::unordered_set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
@@ -251,7 +254,7 @@ typedef std::unordered_map&lt; Entity, <a class="el" href="../../d4/d51/namespac
 typedef std::unordered_map&lt; ComponentID, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
 <tr class="separator:afe88fb56a190a6fccb55bf634cef9bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memItemLeft" align="right" valign="top"><a id="af2d36ced3610ffdf9e1adf679a0e9617"></a>
-typedef std::unordered_map&lt; ComponentID, std::vector&lt; utils::TypeInfo &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
+typedef std::unordered_map&lt; ComponentID, std::vector&lt; <a class="el" href="../../d1/dc9/structutils_1_1TypeInfo.html">utils::TypeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
 <tr class="separator:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memItemLeft" align="right" valign="top"><a id="a1f5715ee41c7a9174d2cc404fdb8556a"></a>
 typedef std::function&lt; void(const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b></td></tr>
@@ -340,11 +343,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Add Option type </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Make all indentation 2 spaces </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000033">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>prefix all include guards with NTA_ </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="d4/d26/structnta_1_1CharGlyph" id="d4/d26/structnta_1_1CharGlyph"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#d4/d26/structnta_1_1CharGlyph">&#9670;&nbsp;</a></span>nta::CharGlyph</h2>
@@ -503,7 +505,7 @@ type</td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef utils::TypeMap <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">nta::ComponentLists</a></td>
+          <td class="memname">typedef <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">nta::ComponentLists</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

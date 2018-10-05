@@ -1,5 +1,6 @@
 <map id="nta::Component" name="nta::Component">
-<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="637,233,713,260"/>
-<area shape="rect" id="node4" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="299,102,438,143"/>
-<area shape="rect" id="node10" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="299,431,438,473"/>
+<area shape="rect" id="node3" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="689,225,765,252"/>
+<area shape="rect" id="node5" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="299,63,438,105"/>
+<area shape="rect" id="node8" href="$d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="315,129,423,156"/>
+<area shape="rect" id="node12" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="299,327,438,369"/>
 </map>
