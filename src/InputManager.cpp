@@ -12,15 +12,15 @@ namespace nta {
     }
     bool InputManager::isPressed(unsigned int key) const {
         auto it = m_keyMap.find(key);
-        return it != m_keyMap.end() ? it->second : false;
+        return it == m_keyMap.end() ? false : it->second;
     }
     bool InputManager::justPressed(unsigned int key) const {
         auto it = m_prevKeyMap.find(key);
-        return it != m_prevKeyMap.end() ? isPressed(key) : isPressed(key) && !it->second;
+        return it == m_prevKeyMap.end() ? isPressed(key) : isPressed(key) && !it->second;
     }
     bool InputManager::justReleased(unsigned int key) const {
         auto it = m_prevKeyMap.find(key);
-        return it != m_prevKeyMap.end() ? false : !isPressed(key) && it->second;
+        return it == m_prevKeyMap.end() ? false : !isPressed(key) && it->second;
     }
     void InputManager::pressKey(unsigned int key) {
         m_keyMap[key] = true;
