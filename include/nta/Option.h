@@ -105,6 +105,8 @@ namespace nta {
             /// an option holding some data, and not a none variant.
             template<typename S>
             Option<S> map(std::function<S(void)> func) { return Option<S>::some(func()); }
+            template<typename S>
+            S map_or(std::function<S(void)> func) { return func(); }
         };
     }
 };
