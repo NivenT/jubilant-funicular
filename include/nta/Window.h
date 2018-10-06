@@ -1,12 +1,16 @@
 #ifndef NTA_WINDOW_H_INCLUDED
 #define NTA_WINDOW_H_INCLUDED
 
+#include <atomic>
+
 #include <SDL2/SDL.h>
 
-#include "MyEngine.h"
+#include "nta/MyEngine.h"
+#include "nta/Wrapper.h"
 
 namespace nta {
-    class SystemManager;
+    class WindowManager;
+    typedef utils::Wrapper<uint32_t, struct WIDTAG> WindowID;
     /// Flags used for creating a window
     enum WindowFlags {
         INVISIBLE = 0x1, 
@@ -25,6 +29,8 @@ namespace nta {
     /// Represent a window
     class Window {
     private:
+        static std::atomic<WindowID> m_keyboard_focus;
+        static std::atomic<WindowID> m_mouse_focus;
         /// creates a window
         void createWindow(crstring title, int width, int height, int flags = 0);
         /// the window
@@ -43,19 +49,27 @@ namespace nta {
         glm::vec2 getDimensions() const;
         /// returns the window's title
         std::string getTitle() const;
+        /// return the window's id
+        WindowID getID() const { return SDL_GetWindowID(m_window); }
         /// returns the width of the window
         int getWidth() const;
         /// returns the height of the window
         int getHeight() const;
+        bool hasKeyboardFocus() const { return getKeyboardFocus() == getID(); }
+        bool hasMouseFocus() const { return getMouseFocus() == getID(); }
         /// resizes the window
         void resize(int width, int height);
         /// updates the window's stored dimensions
         void setDimensions(int width, int height);
         /// updates the screen
         void swapBuffers() const;
-        /// stores a screenshot
-        void screenshot() const;
-        friend class SystemManager;
+        
+        static WindowID getKeyboardFocus() { return m_keyboard_focus; }
+        static WindowID getMouseFocus() { return m_mouse_focus; }
+        static void setKeyboardFocus(const WindowID& win) { m_keyboard_focus = win; }
+        static void setMouseFocus(const WindowID& win) { m_mouse_focus = win; }
+
+        friend class WindowManager;
     };
 }
 

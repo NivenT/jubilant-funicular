@@ -1,21 +1,40 @@
+#include <queue>
+
+#include <GL/glew.h>
+
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
     #include <imgui/imgui_impl_sdl_gl3.h>
 #endif
 
 #include "nta/ScreenManager.h"
-#include "nta/SystemManager.h"
+#include "nta/WindowManager.h"
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 #include "nta/utils.h"
 
 namespace nta {
-    ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) {
-        m_window = SystemManager::getWindow(title, width, height);
+    std::mutex ScreenManager::m_window_creation_lock;
+    std::mutex ScreenManager::m_event_lock;
+    ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) : m_input(CreateInputManagerKey()) {
+        std::lock_guard<std::mutex> g(m_window_creation_lock);
+        m_window = WindowManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
     }
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
+    }
+    GLSLProgram* ScreenManager::getGLSLProgram(crstring progPath) {
+        if (m_glslMap.find(progPath) == m_glslMap.end()) {
+            m_glslMap[progPath].compileShaders(progPath);
+        }
+        return &m_glslMap[progPath];
+    }
+    GLSLProgram* ScreenManager::getGLSLProgram(crstring name, crstring vert, crstring frag) {
+        if (m_glslMap.find(name) == m_glslMap.end()) {
+            m_glslMap[name].compileShaders(vert, frag);
+        }
+        return &m_glslMap[name];
     }
     Screen* ScreenManager::getCurrScreen() const {
         /// \todo write log error if m_currScreen is out of range
@@ -61,6 +80,68 @@ namespace nta {
             m_currScreen = -1;
         }
     }
+    bool ScreenManager::owns_event(const SDL_Event& event) const {
+        switch(event.type) {
+        case SDL_WINDOWEVENT: return m_window->getID() == event.window.windowID;
+        case SDL_KEYDOWN: case SDL_KEYUP: return m_window->hasKeyboardFocus();
+        case SDL_MOUSEMOTION: case SDL_MOUSEBUTTONDOWN: case SDL_MOUSEBUTTONUP: case SDL_MOUSEWHEEL: return m_window->hasMouseFocus();
+        }
+        return true;
+    }
+    void ScreenManager::update_input() {
+        //SDL_PumpEvents();
+        std::lock_guard<std::mutex> g(m_event_lock);
+
+        if (m_window->hasKeyboardFocus()) {
+            m_input.updatePrev();
+        }
+        if (m_window->hasMouseFocus()) {
+            m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
+        }
+
+        std::queue<SDL_Event> skipped_events;
+
+        SDL_Event e;
+        while (SDL_PollEvent(&e)) {
+            if (!owns_event(e)) {
+                skipped_events.push(e);
+                continue;
+            }
+
+            switch(e.type) {
+            case SDL_WINDOWEVENT: {
+                switch(e.window.event) {
+                case SDL_WINDOWEVENT_RESIZED:
+                    glViewport(0, 0, e.window.data1, e.window.data2);
+                    m_window->setDimensions(e.window.data1, e.window.data2);
+                    break;
+                case SDL_WINDOWEVENT_ENTER:
+                    Window::setMouseFocus(e.window.windowID);
+                    break;
+                case SDL_WINDOWEVENT_FOCUS_GAINED:
+                    Window::setKeyboardFocus(e.window.windowID);
+                    break;
+                case SDL_WINDOWEVENT_CLOSE:
+                    getCurrScreen()->close();
+                    break;
+                }
+            } break;
+            }
+
+            m_input.update(e);
+            #ifdef NTA_USE_IMGUI
+                ImGui_ImplSdlGL3_ProcessEvent(&e);
+            #endif
+        }
+        while (!skipped_events.empty()) {
+            SDL_PushEvent(&skipped_events.front());
+            skipped_events.pop();
+        }
+
+        if (m_input.justPressed(SDLK_ESCAPE)) {
+            getCurrScreen()->esc();
+        }
+    }
     void ScreenManager::run(void* initFocusData) {
         Screen* currScreen = nullptr;
         if (m_currScreen != -1) {
@@ -72,7 +153,7 @@ namespace nta {
             while (currScreen->getState() == ScreenState::RUNNING) {
                 m_limiter.begin();
                 CallbackManager::increment_frame();
-                currScreen->handleInput();
+                update_input();
                 currScreen->update();
                 #ifdef NTA_USE_IMGUI
                     ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
@@ -100,6 +181,8 @@ namespace nta {
             delete screen;
         }
         m_screens.clear();
-        Logger::writeToLog("Destroyed ScreenManager...");
+        m_glslMap.clear();
+        WindowManager::destroyWindow(m_window->getTitle());
+        Logger::writeToLog("Destroyed ScreenManager");
     }
 }

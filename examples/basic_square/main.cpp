@@ -4,7 +4,6 @@
  * but this extra required structure is helpful for larger projects.
  */
 #include <nta/ScreenManager.h>
-#include <nta/SystemManager.h>
 #include <nta/InputManager.h>
 #include <nta/SpriteBatch.h>
 #include <nta/GLSLProgram.h>
@@ -43,7 +42,7 @@ void SquareScreen::init() {
     // Admitedlly, the simple2D I'm using is more complicated than need be
     // Loads a GLSLProgram (vertex and fragment shader) from a pair of files
     //   named "simple2D.vert" and "simple2D.frag"
-    m_simple_prog = nta::SystemManager::getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         // Adds the various attributes used by simple2D.vert
         // the order here must match the order of the fields of Vertex2D
@@ -65,7 +64,7 @@ void SquareScreen::init() {
 
 void SquareScreen::update() {
     // If the enter key was just pressed...
-    if (nta::InputManager::justPressed(SDLK_RETURN)) {
+    if (getInput().justPressed(SDLK_RETURN)) {
         // Let the ScreenManager know that it is time to switch screens
         // Switch to the screen at index -1 (i.e. exit the ScreenManager)
         m_state = nta::ScreenState::SWITCH;

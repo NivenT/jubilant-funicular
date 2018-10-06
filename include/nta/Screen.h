@@ -2,6 +2,7 @@
 #define SCREEN_H_INCLUDED
 
 #include "nta/Window.h"
+#include "nta/InputManager.h"
 
 namespace nta {
     class ScreenManager;
@@ -51,12 +52,14 @@ namespace nta {
         /// the index of the screen to go to when the window's X button is pressed
         int m_xIndex = -1;
     protected:
+        const InputManager& getInput() const;
+
         /// the state of this screen
         ScreenState m_state = ScreenState::NONE;
-        /// the window the screen is rendered in
-        Window* m_window = nullptr;
         /// the ScreenManager that owns this screen
         ScreenManager* m_manager = nullptr;
+        /// the Window this Screen appears on
+        Window* m_window = nullptr;
         /// the name of the Screen
         std::string m_name;
         /// the index of the screen to go to when m_state == SWITCH
@@ -88,14 +91,14 @@ namespace nta {
         virtual void render() = 0;
         /// updates screen
         virtual void update() = 0;
-        /// handles user input
-        virtual void handleInput();
         /// called when the screen becomes active
         virtual void onFocus(const ScreenSwitchInfo& info);
         /// called when the screen is no longer active
         virtual void offFocus();
         /// initializes the screen
         virtual void init() = 0;
+        void close() { m_state = ScreenState::SWITCH_X; }
+        void esc() { m_state = ScreenState::SWITCH_ESC; }
     };
 }
 

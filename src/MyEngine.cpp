@@ -1,3 +1,6 @@
+#include <memory>
+#include <mutex>
+
 #ifdef NTA_USE_DEVIL
     #include <IL/il.h>
     #include <IL/ilu.h>
@@ -13,7 +16,7 @@
 
 #include "nta/MyEngine.h"
 #include "nta/ResourceManager.h"
-#include "nta/SystemManager.h"
+#include "nta/WindowManager.h"
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 #include "nta/Random.h"
@@ -22,6 +25,11 @@
 #ifdef NTA_USE_AUDIO
     #include "nta/AudioManager.h"
 #endif
+
+// This might be surprising if you look at most of the code I write, but I
+// do know about smart pointers
+static std::map<std::ostream*, std::unique_ptr<std::mutex>> g_stream_locks;
+static std::mutex g_map_lock;
 
 namespace nta {
     void init(int gl_major_version, int gl_minor_version, bool use_gl_core) {
@@ -59,7 +67,7 @@ namespace nta {
             ImGui::DestroyContext();
         #endif
         ResourceManager::destroy();
-        SystemManager::destroy();
+        WindowManager::destroy();
         #ifdef NTA_USE_AUDIO
             AudioManager::destroy();
         #endif
@@ -84,5 +92,22 @@ namespace nta {
             SDL_ClearError();
         }
         return err != GL_NO_ERROR || sdl_err != "";
+    }
+    std::ostream& lock_stream(std::ostream& stream) {
+        g_map_lock.lock();
+        auto& lock = g_stream_locks[&stream];
+        if (!lock) lock.reset(new std::mutex);
+        g_map_lock.unlock();
+        lock->lock();
+        return stream;
+    }
+    std::ostream& unlock_stream(std::ostream& stream) {
+        g_map_lock.lock();
+        auto& lock = g_stream_locks[&stream];
+        g_map_lock.unlock();
+        if (lock) {
+            lock->unlock();
+        }
+        return stream;
     }
 }

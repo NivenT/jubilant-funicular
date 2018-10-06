@@ -16,7 +16,7 @@ namespace nta {
 
         std::stringstream logEntry;
         logEntry<<SDL_GetTicks()/1000.<<" seconds: "<<tabs<<entry;
-        m_logFile<<logEntry.str()<<std::endl<<std::endl;
+        m_logFile<<lock_stream<<logEntry.str()<<std::endl<<std::endl<<unlock_stream;
     }
     /// \todo Make sure all the code that previously assumed this function always
     ///       exits still behaves sensibly
