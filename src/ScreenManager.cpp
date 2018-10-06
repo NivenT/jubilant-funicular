@@ -1,6 +1,6 @@
-#include <GL/glew.h>
-#include <iostream>
+#include <queue>
 
+#include <GL/glew.h>
 
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
@@ -15,21 +15,11 @@
 
 namespace nta {
     std::mutex ScreenManager::m_window_creation_lock;
+    std::mutex ScreenManager::m_event_lock;
     ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) : m_input(CreateInputManagerKey()) {
         std::lock_guard<std::mutex> g(m_window_creation_lock);
         m_window = WindowManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
-
-        SDL_AddEventWatch([](void* user, SDL_Event* event) {
-            ScreenManager* me = (ScreenManager*)user;
-            if (me->owns_event(*event)) {
-                me->m_event_lock.lock();
-                me->m_event_queue.push(*event);
-                me->m_event_lock.unlock();
-                return 0;
-            }
-            return 1;
-        }, this);
     }
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
@@ -99,7 +89,7 @@ namespace nta {
         return true;
     }
     void ScreenManager::update_input() {
-        SDL_PumpEvents();
+        //SDL_PumpEvents();
         std::lock_guard<std::mutex> g(m_event_lock);
 
         if (m_window->hasKeyboardFocus()) {
@@ -109,8 +99,14 @@ namespace nta {
             m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
         }
 
-        while (!m_event_queue.empty()) {
-            SDL_Event& e = m_event_queue.front();
+        std::queue<SDL_Event> skipped_events;
+
+        SDL_Event e;
+        while (SDL_PollEvent(&e)) {
+            if (!owns_event(e)) {
+                skipped_events.push(e);
+                continue;
+            }
 
             switch(e.type) {
             case SDL_WINDOWEVENT: {
@@ -132,18 +128,14 @@ namespace nta {
             } break;
             }
 
-            if (m_window->hasMouseFocus()) {
-                m_input.update_mouse(e);
-            }
-            if (m_window->hasKeyboardFocus()) {
-                m_input.update_keys(e);
-            }
+            m_input.update(e);
             #ifdef NTA_USE_IMGUI
-                /// \todo Separte into process keyevent and process mouseevent
                 ImGui_ImplSdlGL3_ProcessEvent(&e);
             #endif
-
-            m_event_queue.pop();
+        }
+        while (!skipped_events.empty()) {
+            SDL_PushEvent(&skipped_events.front());
+            skipped_events.pop();
         }
 
         if (m_input.justPressed(SDLK_ESCAPE)) {

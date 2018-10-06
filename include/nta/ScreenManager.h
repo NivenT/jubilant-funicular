@@ -2,7 +2,6 @@
 #define NTA_SCREENMANAGER_H_INCLUDED
 
 #include <vector>
-#include <queue>
 #include <map>
 #include <mutex>
 
@@ -21,15 +20,13 @@ namespace nta {
         void update_input();
 
         static std::mutex m_window_creation_lock;
+        /// Lock for access the event queue
+        static std::mutex m_event_lock;
 
         /// Collection of GLSLProgram
         std::map<std::string, GLSLProgram> m_glslMap;
         /// the screens
         std::vector<Screen*> m_screens;
-        /// An internal event queue
-        std::queue<SDL_Event> m_event_queue;
-        /// Lock for access the event queue
-        std::mutex m_event_lock;
         /// Keeps track of all input received in this window
         InputManager m_input;
         /// used to cap the FPS
