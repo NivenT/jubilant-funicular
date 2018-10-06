@@ -15,6 +15,7 @@ var searchData=
   ['componentlists',['ComponentLists',['../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a',1,'nta']]],
   ['compress',['compress',['../d3/d18/classnta_1_1Compressor.html#ac5f5822b598309d4ef6a89edb7bdcf10',1,'nta::Compressor']]],
   ['compressor',['Compressor',['../d3/d18/classnta_1_1Compressor.html',1,'nta']]],
+  ['createinputmanagerkey',['CreateInputManagerKey',['../dc/d0b/classnta_1_1CreateInputManagerKey.html',1,'nta']]],
   ['createlog',['createLog',['../d6/d0d/classnta_1_1Logger.html#a308a3ec22f996556b3d54737ace33543',1,'nta::Logger']]],
   ['createrenderbatches',['createRenderBatches',['../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117',1,'nta::PrimitiveBatch::createRenderBatches()'],['../d7/d3b/classnta_1_1SpriteBatch.html#af22e3c4af01fef017e9522021545928f',1,'nta::SpriteBatch::createRenderBatches()']]],
   ['createtree',['createTree',['../d3/d18/classnta_1_1Compressor.html#ade1d9da3d6a4ccc45fb17a83f9d7c4ed',1,'nta::Compressor']]],

@@ -63,8 +63,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../db/d5e/classnta_1_1InputManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nta::InputManager Class Reference</div>  </div>
@@ -79,82 +79,95 @@ $(function() {
 Collaboration diagram for nta::InputManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d97/classnta_1_1InputManager__coll__graph.png" border="0" usemap="#nta_1_1InputManager_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1InputManager_coll__map" id="nta_1_1InputManager_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abaa04adc67f8025133fd1360b171b95f"><td class="memItemLeft" align="right" valign="top"><a id="abaa04adc67f8025133fd1360b171b95f"></a>
-static glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#abaa04adc67f8025133fd1360b171b95f">getMouseCoords</a> ()</td></tr>
-<tr class="memdesc:abaa04adc67f8025133fd1360b171b95f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse's coordinates <br /></td></tr>
-<tr class="separator:abaa04adc67f8025133fd1360b171b95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a899371ac784e0a1aeb6f9dc1e7f0f58c"><td class="memItemLeft" align="right" valign="top"><a id="a899371ac784e0a1aeb6f9dc1e7f0f58c"></a>
-static glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a899371ac784e0a1aeb6f9dc1e7f0f58c">getMouseCoordsStandard</a> (int height)</td></tr>
-<tr class="memdesc:a899371ac784e0a1aeb6f9dc1e7f0f58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse's coordinates with the y axis flipped (0 represents the bottom of the screen instead of top) <br /></td></tr>
-<tr class="separator:a899371ac784e0a1aeb6f9dc1e7f0f58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f308e79f224806eb923ce2ef0f8023a"><td class="memItemLeft" align="right" valign="top"><a id="a9f308e79f224806eb923ce2ef0f8023a"></a>
-static <a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a9f308e79f224806eb923ce2ef0f8023a">getMouseWheelMotion</a> ()</td></tr>
-<tr class="memdesc:a9f308e79f224806eb923ce2ef0f8023a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse wheel's motion <br /></td></tr>
-<tr class="separator:a9f308e79f224806eb923ce2ef0f8023a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97dfcf9043a3590a02387af85669871"><td class="memItemLeft" align="right" valign="top"><a id="ae97dfcf9043a3590a02387af85669871"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ae97dfcf9043a3590a02387af85669871">isPressed</a> (unsigned int key)</td></tr>
-<tr class="memdesc:ae97dfcf9043a3590a02387af85669871"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not specified key is pressed <br /></td></tr>
-<tr class="separator:ae97dfcf9043a3590a02387af85669871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f1bc4d75790755fa260f273546630d"><td class="memItemLeft" align="right" valign="top"><a id="a63f1bc4d75790755fa260f273546630d"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a63f1bc4d75790755fa260f273546630d">justPressed</a> (unsigned int key)</td></tr>
-<tr class="memdesc:a63f1bc4d75790755fa260f273546630d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not the key was just pressed this frame <br /></td></tr>
-<tr class="separator:a63f1bc4d75790755fa260f273546630d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e4b4450234805eca3837bc8d365d0bc"><td class="memItemLeft" align="right" valign="top"><a id="a2e4b4450234805eca3837bc8d365d0bc"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a2e4b4450234805eca3837bc8d365d0bc">justReleased</a> (unsigned int key)</td></tr>
-<tr class="memdesc:a2e4b4450234805eca3837bc8d365d0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not the key was just released this frame <br /></td></tr>
-<tr class="separator:a2e4b4450234805eca3837bc8d365d0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8b1e4ffbaf1ecba971d922f44594990a"><td class="memItemLeft" align="right" valign="top"><a id="a8b1e4ffbaf1ecba971d922f44594990a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>InputManager</b> (<a class="el" href="../../dc/d0b/classnta_1_1CreateInputManagerKey.html">CreateInputManagerKey</a>)</td></tr>
+<tr class="separator:a8b1e4ffbaf1ecba971d922f44594990a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c030ccd10d23d81324d52240c88c873"><td class="memItemLeft" align="right" valign="top"><a id="a0c030ccd10d23d81324d52240c88c873"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a0c030ccd10d23d81324d52240c88c873">getMouseCoords</a> () const</td></tr>
+<tr class="memdesc:a0c030ccd10d23d81324d52240c88c873"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse's coordinates <br /></td></tr>
+<tr class="separator:a0c030ccd10d23d81324d52240c88c873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee164aa8a02130a49f145535f0a816b"><td class="memItemLeft" align="right" valign="top"><a id="acee164aa8a02130a49f145535f0a816b"></a>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#acee164aa8a02130a49f145535f0a816b">getMouseCoordsStandard</a> (int height) const</td></tr>
+<tr class="memdesc:acee164aa8a02130a49f145535f0a816b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse's coordinates with the y axis flipped (0 represents the bottom of the screen instead of top) <br /></td></tr>
+<tr class="separator:acee164aa8a02130a49f145535f0a816b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde9bf58870ff7c8d1ef258a55b7ced4"><td class="memItemLeft" align="right" valign="top"><a id="abde9bf58870ff7c8d1ef258a55b7ced4"></a>
+<a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#abde9bf58870ff7c8d1ef258a55b7ced4">getMouseWheelMotion</a> () const</td></tr>
+<tr class="memdesc:abde9bf58870ff7c8d1ef258a55b7ced4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the mouse wheel's motion <br /></td></tr>
+<tr class="separator:abde9bf58870ff7c8d1ef258a55b7ced4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800d3c1fb16eb6e0fb2a1cb176a1280f"><td class="memItemLeft" align="right" valign="top"><a id="a800d3c1fb16eb6e0fb2a1cb176a1280f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a800d3c1fb16eb6e0fb2a1cb176a1280f">isPressed</a> (unsigned int key) const</td></tr>
+<tr class="memdesc:a800d3c1fb16eb6e0fb2a1cb176a1280f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not specified key is pressed <br /></td></tr>
+<tr class="separator:a800d3c1fb16eb6e0fb2a1cb176a1280f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b3f12d4907f235e430006e51aa1315"><td class="memItemLeft" align="right" valign="top"><a id="ac5b3f12d4907f235e430006e51aa1315"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ac5b3f12d4907f235e430006e51aa1315">justPressed</a> (unsigned int key) const</td></tr>
+<tr class="memdesc:ac5b3f12d4907f235e430006e51aa1315"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not the key was just pressed this frame <br /></td></tr>
+<tr class="separator:ac5b3f12d4907f235e430006e51aa1315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e8f141221568b4e046ee73186ccb9b"><td class="memItemLeft" align="right" valign="top"><a id="ad3e8f141221568b4e046ee73186ccb9b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ad3e8f141221568b4e046ee73186ccb9b">justReleased</a> (unsigned int key) const</td></tr>
+<tr class="memdesc:ad3e8f141221568b4e046ee73186ccb9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not the key was just released this frame <br /></td></tr>
+<tr class="separator:ad3e8f141221568b4e046ee73186ccb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a190e5a8e2c26f28648538be7b4bea9e0"><td class="memItemLeft" align="right" valign="top"><a id="a190e5a8e2c26f28648538be7b4bea9e0"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0">pressKey</a> (unsigned int key)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a190e5a8e2c26f28648538be7b4bea9e0">pressKey</a> (unsigned int key)</td></tr>
 <tr class="memdesc:a190e5a8e2c26f28648538be7b4bea9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">tells <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> that specified key was pressed <br /></td></tr>
 <tr class="separator:a190e5a8e2c26f28648538be7b4bea9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb2f11b5580141d4c3345499eea485c0"><td class="memItemLeft" align="right" valign="top"><a id="acb2f11b5580141d4c3345499eea485c0"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0">releaseKey</a> (unsigned int key)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#acb2f11b5580141d4c3345499eea485c0">releaseKey</a> (unsigned int key)</td></tr>
 <tr class="memdesc:acb2f11b5580141d4c3345499eea485c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">tells <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> that specified key was released <br /></td></tr>
 <tr class="separator:acb2f11b5580141d4c3345499eea485c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42590ba480b5fd5280cbc69732bb025f"><td class="memItemLeft" align="right" valign="top"><a id="a42590ba480b5fd5280cbc69732bb025f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f">setMouseCoords</a> (float x, float y)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a42590ba480b5fd5280cbc69732bb025f">setMouseCoords</a> (float x, float y)</td></tr>
 <tr class="memdesc:a42590ba480b5fd5280cbc69732bb025f"><td class="mdescLeft">&#160;</td><td class="mdescRight">tells <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> where the mouse is <br /></td></tr>
 <tr class="separator:a42590ba480b5fd5280cbc69732bb025f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a716c722f10dfe636b79384087bbf1a6e"><td class="memItemLeft" align="right" valign="top"><a id="a716c722f10dfe636b79384087bbf1a6e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e">setMouseWheelMotion</a> (const <a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a> &amp;motion)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a716c722f10dfe636b79384087bbf1a6e">setMouseWheelMotion</a> (const <a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a> &amp;motion)</td></tr>
 <tr class="memdesc:a716c722f10dfe636b79384087bbf1a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">tells <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> how the wheel is rolling <br /></td></tr>
 <tr class="separator:a716c722f10dfe636b79384087bbf1a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c555e0a2ce37af042b5016140414f18"><td class="memItemLeft" align="right" valign="top"><a id="a7c555e0a2ce37af042b5016140414f18"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18">update</a> (SDL_Event &amp;event)</td></tr>
-<tr class="memdesc:a7c555e0a2ce37af042b5016140414f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the state of m_KeyMap <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a7c555e0a2ce37af042b5016140414f18">update</a> (SDL_Event &amp;event)</td></tr>
+<tr class="memdesc:a7c555e0a2ce37af042b5016140414f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates internal state <br /></td></tr>
 <tr class="separator:a7c555e0a2ce37af042b5016140414f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7978b37686999c1ae8aa5a03ebd99c00"><td class="memItemLeft" align="right" valign="top"><a id="a7978b37686999c1ae8aa5a03ebd99c00"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a7978b37686999c1ae8aa5a03ebd99c00">update_keys</a> (SDL_Event &amp;event)</td></tr>
+<tr class="memdesc:a7978b37686999c1ae8aa5a03ebd99c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates key information <br /></td></tr>
+<tr class="separator:a7978b37686999c1ae8aa5a03ebd99c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354889313c87ae81543adcd4f5db1b8a"><td class="memItemLeft" align="right" valign="top"><a id="a354889313c87ae81543adcd4f5db1b8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a354889313c87ae81543adcd4f5db1b8a">update_mouse</a> (SDL_Event &amp;event)</td></tr>
+<tr class="memdesc:a354889313c87ae81543adcd4f5db1b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">update mouse information <br /></td></tr>
+<tr class="separator:a354889313c87ae81543adcd4f5db1b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea4219a830a2b1d9ee87bdc5f954903d"><td class="memItemLeft" align="right" valign="top"><a id="aea4219a830a2b1d9ee87bdc5f954903d"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d">updatePrev</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d">updatePrev</a> ()</td></tr>
 <tr class="memdesc:aea4219a830a2b1d9ee87bdc5f954903d"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the state of m_prevKeyMap <br /></td></tr>
 <tr class="separator:aea4219a830a2b1d9ee87bdc5f954903d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a00aa67b739a6762219dc97cc2e23c3f5"><td class="memItemLeft" align="right" valign="top"><a id="a00aa67b739a6762219dc97cc2e23c3f5"></a>
-static std::unordered_map&lt; unsigned int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a00aa67b739a6762219dc97cc2e23c3f5">m_keyMap</a></td></tr>
-<tr class="memdesc:a00aa67b739a6762219dc97cc2e23c3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores whether each key is pressed or not <br /></td></tr>
-<tr class="separator:a00aa67b739a6762219dc97cc2e23c3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fef83321ad801f59f5a4f3b2542db47"><td class="memItemLeft" align="right" valign="top"><a id="a5fef83321ad801f59f5a4f3b2542db47"></a>
-static std::unordered_map&lt; unsigned int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a5fef83321ad801f59f5a4f3b2542db47">m_prevKeyMap</a></td></tr>
-<tr class="memdesc:a5fef83321ad801f59f5a4f3b2542db47"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores whether the key was pressed last frame or not <br /></td></tr>
-<tr class="separator:a5fef83321ad801f59f5a4f3b2542db47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad5b3fdaca4efe91c07c82d3e665f6d33"><td class="memItemLeft" align="right" valign="top"><a id="ad5b3fdaca4efe91c07c82d3e665f6d33"></a>
+std::unordered_map&lt; unsigned int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ad5b3fdaca4efe91c07c82d3e665f6d33">m_keyMap</a></td></tr>
+<tr class="memdesc:ad5b3fdaca4efe91c07c82d3e665f6d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores whether each key is pressed or not <br /></td></tr>
+<tr class="separator:ad5b3fdaca4efe91c07c82d3e665f6d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464c6690b55d78dec535a5803679505e"><td class="memItemLeft" align="right" valign="top"><a id="a464c6690b55d78dec535a5803679505e"></a>
+std::unordered_map&lt; unsigned int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a464c6690b55d78dec535a5803679505e">m_prevKeyMap</a></td></tr>
+<tr class="memdesc:a464c6690b55d78dec535a5803679505e"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores whether the key was pressed last frame or not <br /></td></tr>
+<tr class="separator:a464c6690b55d78dec535a5803679505e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f0b4d6c78182a49313144c712cb460e"><td class="memItemLeft" align="right" valign="top"><a id="a9f0b4d6c78182a49313144c712cb460e"></a>
-static glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a9f0b4d6c78182a49313144c712cb460e">m_mouseCoords</a></td></tr>
+glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#a9f0b4d6c78182a49313144c712cb460e">m_mouseCoords</a></td></tr>
 <tr class="memdesc:a9f0b4d6c78182a49313144c712cb460e"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the location of the mouse in mouse coordinates <br /></td></tr>
 <tr class="separator:a9f0b4d6c78182a49313144c712cb460e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66e8c723d33a51ece6700e266191f01"><td class="memItemLeft" align="right" valign="top"><a id="ae66e8c723d33a51ece6700e266191f01"></a>
-static <a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ae66e8c723d33a51ece6700e266191f01">m_mouseWheelMotion</a></td></tr>
+<a class="el" href="../../d4/d51/namespacenta.html#aabafd53ba7264997db9e6e934a8ade2b">MouseWheelMotion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de2/classnta_1_1InputManager.html#ae66e8c723d33a51ece6700e266191f01">m_mouseWheelMotion</a></td></tr>
 <tr class="memdesc:ae66e8c723d33a51ece6700e266191f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the motion of the mouse wheel <br /></td></tr>
 <tr class="separator:ae66e8c723d33a51ece6700e266191f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>keeps track of all input </p>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d10/InputManager_8h_source.html#l00012">12</a> of file <a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d10/InputManager_8h_source.html#l00020">20</a> of file <a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../df/d10/InputManager_8h_source.html">InputManager.h</a></li>
 <li>src/<a class="el" href="../../dd/d14/InputManager_8cpp_source.html">InputManager.cpp</a></li>

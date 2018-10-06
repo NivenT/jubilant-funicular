@@ -9,5 +9,6 @@ var searchData=
   ['operator_5b_5d',['operator[]',['../de/df3/classutils_1_1Json.html#a4009102e0e4dd8eff7a650b2b1224e3c',1,'utils::Json::operator[](const std::string &amp;key)'],['../de/df3/classutils_1_1Json.html#aacecf1dda4eb2b204ff22616b75051f6',1,'utils::Json::operator[](const std::string &amp;key) const'],['../de/df3/classutils_1_1Json.html#a9773f6be43bc8720ec90e3e17803ba02',1,'utils::Json::operator[](std::size_t idx)']]],
   ['option',['Option',['../dd/d2b/classnta_1_1utils_1_1Option.html',1,'nta::utils::Option&lt; T &gt;'],['../dd/d2b/classnta_1_1utils_1_1Option.html#aa9b963565a506766c32f06db630cefb2',1,'nta::utils::Option::Option()']]],
   ['option_3c_20void_20_3e',['Option&lt; void &gt;',['../d5/dcf/classnta_1_1utils_1_1Option_3_01void_01_4.html',1,'nta::utils']]],
-  ['orexists',['OrExists',['../df/d65/structutils_1_1check_1_1OrExists.html',1,'utils::check']]]
+  ['orexists',['OrExists',['../df/d65/structutils_1_1check_1_1OrExists.html',1,'utils::check']]],
+  ['owns_5fevent',['owns_event',['../d0/dc4/classnta_1_1ScreenManager.html#ace9fa72754a0dd8b2034927aa816db3c',1,'nta::ScreenManager']]]
 ];

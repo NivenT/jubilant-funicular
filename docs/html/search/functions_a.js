@@ -4,5 +4,6 @@ var searchData=
   ['lex_5fnull',['lex_null',['../de/df3/classutils_1_1Json.html#a954b6ad51604c6a53a0cab5ac998bbda',1,'utils::Json']]],
   ['lex_5fnumber',['lex_number',['../de/df3/classutils_1_1Json.html#a5ec5139b3b7717d3b2824aca94bbc548',1,'utils::Json']]],
   ['lex_5fstring',['lex_string',['../de/df3/classutils_1_1Json.html#a6c3833ad6ea4cae941cf6b04dd03e38c',1,'utils::Json']]],
-  ['linkshaders',['linkShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0',1,'nta::GLSLProgram']]]
+  ['linkshaders',['linkShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#aa1d946246f4b04ba0b947362152ec1c0',1,'nta::GLSLProgram']]],
+  ['lock_5fstream',['lock_stream',['../d4/d51/namespacenta.html#a6e8d0ce069f7d82b49db74c633699e21',1,'nta']]]
 ];
