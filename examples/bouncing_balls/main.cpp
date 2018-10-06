@@ -8,7 +8,6 @@
  */
 
 #include <nta/ScreenManager.h>
-#include <nta/SystemManager.h>
 #include <nta/ResourceManager.h>
 #include <nta/InputManager.h>
 #include <nta/SpriteBatch.h>
@@ -167,7 +166,7 @@ void MainScreen::addBall(nta::crvec2 pos) {
 void MainScreen::init() {
     nta::Logger::writeToLog("Initializing main screen...");
 
-    m_simple_prog = nta::SystemManager::getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         m_simple_prog->addAttribute("pos");
         m_simple_prog->addAttribute("color");

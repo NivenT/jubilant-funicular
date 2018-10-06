@@ -4,18 +4,32 @@
 #endif
 
 #include "nta/ScreenManager.h"
-#include "nta/SystemManager.h"
+#include "nta/WindowManager.h"
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 #include "nta/utils.h"
 
 namespace nta {
+    std::mutex ScreenManager::m_window_creation_lock;
     ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) {
-        m_window = SystemManager::getWindow(title, width, height);
+        std::lock_guard<std::mutex> g(m_window_creation_lock);
+        m_window = WindowManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
     }
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
+    }
+    GLSLProgram* ScreenManager::getGLSLProgram(crstring progPath) {
+        if (m_glslMap.find(progPath) == m_glslMap.end()) {
+            m_glslMap[progPath].compileShaders(progPath);
+        }
+        return &m_glslMap[progPath];
+    }
+    GLSLProgram* ScreenManager::getGLSLProgram(crstring name, crstring vert, crstring frag) {
+        if (m_glslMap.find(name) == m_glslMap.end()) {
+            m_glslMap[name].compileShaders(vert, frag);
+        }
+        return &m_glslMap[name];
     }
     Screen* ScreenManager::getCurrScreen() const {
         /// \todo write log error if m_currScreen is out of range
@@ -100,6 +114,7 @@ namespace nta {
             delete screen;
         }
         m_screens.clear();
+        m_glslMap.clear();
         Logger::writeToLog("Destroyed ScreenManager...");
     }
 }

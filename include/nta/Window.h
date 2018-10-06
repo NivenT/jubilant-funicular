@@ -6,7 +6,7 @@
 #include "MyEngine.h"
 
 namespace nta {
-    class SystemManager;
+    class WindowManager;
     /// Flags used for creating a window
     enum WindowFlags {
         INVISIBLE = 0x1, 
@@ -55,7 +55,7 @@ namespace nta {
         void swapBuffers() const;
         /// stores a screenshot
         void screenshot() const;
-        friend class SystemManager;
+        friend class WindowManager;
     };
 }
 

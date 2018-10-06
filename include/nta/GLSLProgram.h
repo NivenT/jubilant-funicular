@@ -1,14 +1,14 @@
-#ifndef GLSLProgram_H_INCLUDED
-#define GLSLProgram_H_INCLUDED
+#ifndef NTA_GLSLProgram_H_INCLUDED
+#define NTA_GLSLProgram_H_INCLUDED
 
-#include "MyEngine.h"
+#include "nta/MyEngine.h"
 
 typedef unsigned int GLuint;
 typedef unsigned int GLenum;
 typedef int GLint;
 
 namespace nta {
-    class SystemManager;
+    class ScreenManager;
     /// represents a program written in GLSL comprised of a vertex shader and a fragment shader
     class GLSLProgram {
     private:
@@ -41,8 +41,8 @@ namespace nta {
         void use() const;
         /// unbinds this program
         void unuse() const;
-        friend class SystemManager;
+        friend class ScreenManager;
     };
 }
 
-#endif // GLSLProgra m_H_INCLUDED
+#endif // NTA_GLSLProgram_H_INCLUDED

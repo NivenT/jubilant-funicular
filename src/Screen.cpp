@@ -7,7 +7,7 @@
 
 #include "nta/Screen.h"
 #include "nta/InputManager.h"
-#include "nta/SystemManager.h"
+#include "nta/WindowManager.h"
 #include "nta/Logger.h"
 
 namespace nta {
@@ -45,7 +45,7 @@ namespace nta {
         m_xIndex = xIndex;
     }
     void Screen::setWindow(crstring title, SetWindowKey key) {
-        m_window = SystemManager::getWindow(title);
+        m_window = WindowManager::getWindow(title);
     }
     void Screen::handleInput() {
         SDL_Event event;

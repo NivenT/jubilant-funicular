@@ -6,7 +6,6 @@
 #include <thread>
 
 #include <nta/ScreenManager.h>
-#include <nta/SystemManager.h>
 #include <nta/InputManager.h>
 #include <nta/SpriteBatch.h>
 #include <nta/GLSLProgram.h>
@@ -46,7 +45,7 @@ void SquareScreen::init() {
     // Admitedlly, the simple2D I'm using is more complicated than need be
     // Loads a GLSLProgram (vertex and fragment shader) from a pair of files
     //   named "simple2D.vert" and "simple2D.frag"
-    m_simple_prog = SystemManager::getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         // Adds the various attributes used by simple2D.vert
         // the order here must match the order of the fields of Vertex2D
@@ -113,16 +112,16 @@ int main(int argc, char* argv[]) {
         s1.run();
         s1.destroy();
     });
-    /*
+    
     thread t2 = thread([]{
         ScreenManager s2("Block Screen", 60);
         s2.addScreen(new SquareScreen);
         s2.run();
         s2.destroy();
     });
-    */
+    
     t1.join();
-    //t2.join();
+    t2.join();
 
     cleanup();
     Logger::writeToLog("Program exited cleanly");

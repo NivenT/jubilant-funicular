@@ -13,7 +13,7 @@
 
 #include "nta/MyEngine.h"
 #include "nta/ResourceManager.h"
-#include "nta/SystemManager.h"
+#include "nta/WindowManager.h"
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
 #include "nta/Random.h"
@@ -59,7 +59,7 @@ namespace nta {
             ImGui::DestroyContext();
         #endif
         ResourceManager::destroy();
-        SystemManager::destroy();
+        WindowManager::destroy();
         #ifdef NTA_USE_AUDIO
             AudioManager::destroy();
         #endif

@@ -2,15 +2,21 @@
 #define NTA_SCREENMANAGER_H_INCLUDED
 
 #include <vector>
+#include <map>
+#include <mutex>
 
-#include "Screen.h"
-#include "FPSLimiter.h"
-#include "Window.h"
+#include "nta/Screen.h"
+#include "nta/FPSLimiter.h"
+#include "nta/Window.h"
+#include "nta/GLSLProgram.h"
 
 namespace nta {
     /// Manages a collection of screens
     class ScreenManager {
     private:
+        static std::mutex m_window_creation_lock;
+        /// Collection of GLSLProgram
+        std::map<std::string, GLSLProgram> m_glslMap;
         /// the screens
         std::vector<Screen*> m_screens;
         /// used to cap the FPS
@@ -24,6 +30,16 @@ namespace nta {
         ScreenManager(crstring title, float maxFPS, int width = 640, int height = 480);
         /// basic destructor
         ~ScreenManager();
+        /// Gets GLSLProgram at specified path
+        ///
+        /// Assumes vertex shader is (progPath + ".vert") and
+        /// fragment shader is (progPath + ".frag")
+        GLSLProgram* getGLSLProgram(crstring progPath);
+        /// Gets GLSLProgram, specifying explicitly where the vertex and fragment
+        /// shaders are. 
+        ///
+        /// Uses name as the key in the map
+        GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
         /// returns the active screen
         Screen* getCurrScreen() const;
         /// returns the current fps
@@ -35,6 +51,7 @@ namespace nta {
         /// destroys screens
         void destroy();
         /// runs screen logic (render, update, handleInput, etc.)
+        ///
         /// initFocusData is the input to onFocus for the first screen
         void run(void* initFocusData = nullptr);
     };
