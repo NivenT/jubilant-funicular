@@ -48,6 +48,8 @@ namespace nta {
     void Window::createWindow(crstring title, int width, int height, int flags) {
         Logger::writeToLog("Creating window with dimensions " + utils::to_string(width) +
                            " x " + utils::to_string(height) + ": " + title + "...");
+        Logger::indent();
+
         m_width = width;
         m_height = height;
         m_title = title;
@@ -89,6 +91,9 @@ namespace nta {
         #ifdef NTA_USE_IMGUI
             ImGui_ImplSdlGL3_Init(m_window);
         #endif
+
+        Logger::writeToLog("The window's ID is " + utils::to_string(getID()));
+        Logger::unindent();
         Logger::writeToLog("Created window using OpenGL version "
                            + utils::to_string(glGetString(GL_VERSION)));
     }

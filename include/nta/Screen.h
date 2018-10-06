@@ -97,7 +97,7 @@ namespace nta {
         virtual void offFocus();
         /// initializes the screen
         virtual void init() = 0;
-        void quit() { m_state = ScreenState::SWITCH_X; }
+        void close() { m_state = ScreenState::SWITCH_X; }
         void esc() { m_state = ScreenState::SWITCH_ESC; }
     };
 }

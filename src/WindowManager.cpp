@@ -10,6 +10,9 @@ namespace nta {
         }
         return &m_windowMap[windowTitle];
     }
+    void WindowManager::destroyWindow(crstring title) {
+        m_windowMap.erase(title);
+    }
     void WindowManager::destroy() {
         Logger::writeToLog("Destroying WindowManager...");
         m_windowMap.clear();

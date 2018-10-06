@@ -18,6 +18,7 @@ namespace nta {
         static Window* getWindow(crstring windowTitle, int flags) {
             return getWindow(windowTitle, 640, 480, flags);
         }
+        static void destroyWindow(crstring title);
         /// Destorys the manager, freeing all necessary data
         static void destroy();
     };

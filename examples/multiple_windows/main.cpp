@@ -3,6 +3,7 @@
  * state. In one window, the player moves left and right dodging falling blocks that
  * can only be seen in the other window.
  */
+#include <iostream>
 #include <thread>
 
 #include <nta/ScreenManager.h>
@@ -85,7 +86,11 @@ void SquareScreen::update() {
     if (getInput().isPressed(SDLK_d)) {
         top_left.x += 1;
     }
-
+    /*
+    cout<<lock_stream<<"The active mouse window is "<<Window::getMouseFocus()<<endl
+                     <<"           key   window is "<<Window::getKeyboardFocus()<<endl
+        <<unlock_stream;
+    */
     while (abs(top_left.x) > 100) top_left.x -= sign(top_left.x)*200;
     while (abs(top_left.y) > 100) top_left.y -= sign(top_left.y)*200;
 }

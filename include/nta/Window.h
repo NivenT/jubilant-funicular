@@ -49,12 +49,14 @@ namespace nta {
         glm::vec2 getDimensions() const;
         /// returns the window's title
         std::string getTitle() const;
+        /// return the window's id
+        WindowID getID() const { return SDL_GetWindowID(m_window); }
         /// returns the width of the window
         int getWidth() const;
         /// returns the height of the window
         int getHeight() const;
-        bool hasKeyboardFocus() const { return m_keyboard_focus.load() == SDL_GetWindowID(m_window); }
-        bool hasMouseFocus() const { return m_mouse_focus.load() == SDL_GetWindowID(m_window); }
+        bool hasKeyboardFocus() const { return getKeyboardFocus() == getID(); }
+        bool hasMouseFocus() const { return getMouseFocus() == getID(); }
         /// resizes the window
         void resize(int width, int height);
         /// updates the window's stored dimensions
@@ -62,8 +64,10 @@ namespace nta {
         /// updates the screen
         void swapBuffers() const;
         
-        static void setKeyboardFocus(const Window* win) { m_keyboard_focus = SDL_GetWindowID(win->m_window); }
-        static void setMouseFocus(const Window* win) { m_mouse_focus = SDL_GetWindowID(win->m_window); }
+        static WindowID getKeyboardFocus() { return m_keyboard_focus; }
+        static WindowID getMouseFocus() { return m_mouse_focus; }
+        static void setKeyboardFocus(const WindowID& win) { m_keyboard_focus = win; }
+        static void setMouseFocus(const WindowID& win) { m_mouse_focus = win; }
 
         friend class WindowManager;
     };

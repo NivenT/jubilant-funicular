@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 
 /// \todo Throughout codebase, indent `case` inside of `switch` blocks
+/// \todo Get a linter or something
 namespace nta {
 	typedef const std::string& crstring; // constant reference string
 	typedef const glm::ivec2& crivec2;
@@ -19,6 +20,10 @@ namespace nta {
     extern void cleanup();
     /// Checks for and logs errors
     extern bool check_error();
+    /// Lock stream for thread-safe manipulation
+    extern std::ostream& lock_stream(std::ostream& stream);
+    /// Unlock stream
+    extern std::ostream& unlock_stream(std::ostream& stream);
 };
 
 #endif // NTA_MYENGINE_H_INCLUDED

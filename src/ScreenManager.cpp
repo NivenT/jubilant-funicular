@@ -1,4 +1,6 @@
 #include <GL/glew.h>
+#include <iostream>
+
 
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
@@ -17,6 +19,17 @@ namespace nta {
         std::lock_guard<std::mutex> g(m_window_creation_lock);
         m_window = WindowManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
+
+        SDL_AddEventWatch([](void* user, SDL_Event* event) {
+            ScreenManager* me = (ScreenManager*)user;
+            if (me->owns_event(*event)) {
+                me->m_event_lock.lock();
+                me->m_event_queue.push(*event);
+                me->m_event_lock.unlock();
+                return 0;
+            }
+            return 1;
+        }, this);
     }
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
@@ -77,45 +90,62 @@ namespace nta {
             m_currScreen = -1;
         }
     }
+    bool ScreenManager::owns_event(const SDL_Event& event) const {
+        switch(event.type) {
+        case SDL_WINDOWEVENT: return m_window->getID() == event.window.windowID;
+        case SDL_KEYDOWN: case SDL_KEYUP: return m_window->hasKeyboardFocus();
+        case SDL_MOUSEMOTION: case SDL_MOUSEBUTTONDOWN: case SDL_MOUSEBUTTONUP: case SDL_MOUSEWHEEL: return m_window->hasMouseFocus();
+        }
+        return true;
+    }
     void ScreenManager::update_input() {
-        SDL_Event event;
+        SDL_PumpEvents();
+        std::lock_guard<std::mutex> g(m_event_lock);
 
-        m_input.updatePrev();
+        if (m_window->hasKeyboardFocus()) {
+            m_input.updatePrev();
+        }
         if (m_window->hasMouseFocus()) {
             m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
         }
-        while (SDL_PollEvent(&event)) {
-            switch(event.type) {
-            case SDL_QUIT:
-                getCurrScreen()->quit();
-                break;
-            case SDL_WINDOWEVENT:
-                switch(event.window.event) {
+
+        while (!m_event_queue.empty()) {
+            SDL_Event& e = m_event_queue.front();
+
+            switch(e.type) {
+            case SDL_WINDOWEVENT: {
+                switch(e.window.event) {
                 case SDL_WINDOWEVENT_RESIZED:
-                    glViewport(0, 0, event.window.data1, event.window.data2);
-                    m_window->setDimensions(event.window.data1, event.window.data2);
+                    glViewport(0, 0, e.window.data1, e.window.data2);
+                    m_window->setDimensions(e.window.data1, e.window.data2);
                     break;
                 case SDL_WINDOWEVENT_ENTER:
-                    Window::setMouseFocus(m_window);
+                    Window::setMouseFocus(e.window.windowID);
                     break;
                 case SDL_WINDOWEVENT_FOCUS_GAINED:
-                    Window::setKeyboardFocus(m_window);
+                    Window::setKeyboardFocus(e.window.windowID);
+                    break;
+                case SDL_WINDOWEVENT_CLOSE:
+                    getCurrScreen()->close();
                     break;
                 }
-                break;
+            } break;
             }
 
             if (m_window->hasMouseFocus()) {
-                m_input.update_mouse(event);
+                m_input.update_mouse(e);
             }
             if (m_window->hasKeyboardFocus()) {
-                m_input.update_keys(event);
+                m_input.update_keys(e);
             }
             #ifdef NTA_USE_IMGUI
                 /// \todo Separte into process keyevent and process mouseevent
-                ImGui_ImplSdlGL3_ProcessEvent(&event);
+                ImGui_ImplSdlGL3_ProcessEvent(&e);
             #endif
+
+            m_event_queue.pop();
         }
+
         if (m_input.justPressed(SDLK_ESCAPE)) {
             getCurrScreen()->esc();
         }
@@ -160,6 +190,7 @@ namespace nta {
         }
         m_screens.clear();
         m_glslMap.clear();
-        Logger::writeToLog("Destroyed ScreenManager...");
+        WindowManager::destroyWindow(m_window->getTitle());
+        Logger::writeToLog("Destroyed ScreenManager");
     }
 }
