@@ -9,7 +9,6 @@
 
 #include <nta/ScreenManager.h>
 #include <nta/ResourceManager.h>
-#include <nta/InputManager.h>
 #include <nta/SpriteBatch.h>
 #include <nta/SpriteFont.h>
 #include <nta/GLSLProgram.h>
@@ -140,7 +139,7 @@ public:
 vec2 MainScreen::getMouse() const {
     // width by height of window
     vec2 win_dims = m_window->getDimensions();
-    vec2 screen = nta::InputManager::getMouseCoordsStandard(win_dims[1]);
+    vec2 screen = getInput().getMouseCoordsStandard(win_dims[1]);
     // convert screen to have coordinates in the range [-1, 1] like gl_Position
     screen *= 2.f/win_dims;
     screen -= 1.f;
@@ -190,7 +189,7 @@ void MainScreen::init() {
 
 void MainScreen::update() {
     // Adds a ball whenver you click on the screen
-    if (nta::InputManager::justPressed(SDL_BUTTON_LEFT)) {
+    if (getInput().justPressed(SDL_BUTTON_LEFT)) {
         addBall(getMouse());
     }
 

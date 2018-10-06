@@ -64,7 +64,7 @@ void SquareScreen::init() {
 
 void SquareScreen::update() {
     // If the enter key was just pressed...
-    if (nta::InputManager::justPressed(SDLK_RETURN)) {
+    if (getInput().justPressed(SDLK_RETURN)) {
         // Let the ScreenManager know that it is time to switch screens
         // Switch to the screen at index -1 (i.e. exit the ScreenManager)
         m_state = nta::ScreenState::SWITCH;

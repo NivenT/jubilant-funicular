@@ -1,3 +1,5 @@
+#include <GL/glew.h>
+
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
     #include <imgui/imgui_impl_sdl_gl3.h>
@@ -11,7 +13,7 @@
 
 namespace nta {
     std::mutex ScreenManager::m_window_creation_lock;
-    ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) {
+    ScreenManager::ScreenManager(crstring title, float maxFPS, int width, int height) : m_input(CreateInputManagerKey()) {
         std::lock_guard<std::mutex> g(m_window_creation_lock);
         m_window = WindowManager::getWindow(title, width, height);
         m_limiter.setMaxFPS(maxFPS);
@@ -75,6 +77,32 @@ namespace nta {
             m_currScreen = -1;
         }
     }
+    void ScreenManager::update_input() {
+        SDL_Event event;
+
+        m_input.updatePrev();
+        m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
+        while (SDL_PollEvent(&event)) {
+            m_input.update(event);
+            #ifdef NTA_USE_IMGUI
+                ImGui_ImplSdlGL3_ProcessEvent(&event);
+            #endif
+            switch(event.type) {
+            case SDL_QUIT:
+                getCurrScreen()->quit();
+                break;
+            case SDL_WINDOWEVENT:
+                if (event.window.event == SDL_WINDOWEVENT_RESIZED) {
+                    glViewport(0, 0, event.window.data1, event.window.data2);
+                    m_window->setDimensions(event.window.data1, event.window.data2);
+                }
+                break;
+            }
+        }
+        if (m_input.justPressed(SDLK_ESCAPE)) {
+            getCurrScreen()->esc();
+        }
+    }
     void ScreenManager::run(void* initFocusData) {
         Screen* currScreen = nullptr;
         if (m_currScreen != -1) {
@@ -86,7 +114,7 @@ namespace nta {
             while (currScreen->getState() == ScreenState::RUNNING) {
                 m_limiter.begin();
                 CallbackManager::increment_frame();
-                currScreen->handleInput();
+                update_input();
                 currScreen->update();
                 #ifdef NTA_USE_IMGUI
                     ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));

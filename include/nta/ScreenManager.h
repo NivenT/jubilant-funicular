@@ -9,16 +9,23 @@
 #include "nta/FPSLimiter.h"
 #include "nta/Window.h"
 #include "nta/GLSLProgram.h"
+#include "nta/InputManager.h"
 
 namespace nta {
     /// Manages a collection of screens
+    /// \todo (?) Move m_glslMap and m_input to Window?
     class ScreenManager {
     private:
+        /// Updates the state of m_input
+        void update_input();
+
         static std::mutex m_window_creation_lock;
         /// Collection of GLSLProgram
         std::map<std::string, GLSLProgram> m_glslMap;
         /// the screens
         std::vector<Screen*> m_screens;
+        /// Keeps track of all input received in this window
+        InputManager m_input;
         /// used to cap the FPS
         FPSLimiter m_limiter;
         /// the main window used by the manager
@@ -42,6 +49,10 @@ namespace nta {
         GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
         /// returns the active screen
         Screen* getCurrScreen() const;
+        /// returns the window
+        const Window* getWindow() const { return m_window; }
+        /// return the InputManager
+        const InputManager&  getInput() const { return m_input; }
         /// returns the current fps
         float getFPS() const;
         /// adds a screen and sets some of its properties
