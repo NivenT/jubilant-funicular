@@ -12,6 +12,8 @@
 #include "nta/utils.h"
 
 namespace nta {
+    std::atomic<WindowID> Window::m_keyboard_focus(0);
+    std::atomic<WindowID> Window::m_mouse_focus(0);
     Window::Window() {
     }
     Window::~Window() {

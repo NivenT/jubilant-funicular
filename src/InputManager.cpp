@@ -36,9 +36,17 @@ namespace nta {
         m_mouseWheelMotion = motion;
     }
     void InputManager::update(SDL_Event& event) {
+        update_keys(event);
+        update_mouse(event);
+    }
+    void InputManager::update_keys(SDL_Event& event) {
         switch(event.type) {
         case SDL_KEYDOWN: pressKey(event.key.keysym.sym); break;
         case SDL_KEYUP: releaseKey(event.key.keysym.sym); break;
+        }
+    }
+    void InputManager::update_mouse(SDL_Event& event) {
+        switch(event.type) {
         case SDL_MOUSEMOTION: setMouseCoords(event.motion.x, event.motion.y); break;
         case SDL_MOUSEBUTTONDOWN: pressKey(event.button.button); break;
         case SDL_MOUSEBUTTONUP: releaseKey(event.button.button); break;

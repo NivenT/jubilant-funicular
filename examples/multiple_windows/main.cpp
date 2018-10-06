@@ -30,8 +30,10 @@ private:
     //            the top right is            (100,100)
     //            the bottom left is          (-100,-100)
     Camera2D m_camera;
+
+    vec2 top_left;
 public:
-    SquareScreen() {}
+    SquareScreen() : top_left(-25, 25) {}
     ~SquareScreen() {}
     // The following three functions must be defined children of the Screen class
     void init();
@@ -71,6 +73,21 @@ void SquareScreen::update() {
         m_nextIndex = -1;
     }
     */
+    if (getInput().isPressed(SDLK_w)) {
+        top_left.y += 1;
+    }
+    if (getInput().isPressed(SDLK_a)) {
+        top_left.x -= 1;
+    }
+    if (getInput().isPressed(SDLK_s)) {
+        top_left.y -= 1;
+    }
+    if (getInput().isPressed(SDLK_d)) {
+        top_left.x += 1;
+    }
+
+    while (abs(top_left.x) > 100) top_left.x -= sign(top_left.x)*200;
+    while (abs(top_left.y) > 100) top_left.y -= sign(top_left.y)*200;
 }
 
 void SquareScreen::render() {
@@ -87,7 +104,7 @@ void SquareScreen::render() {
         // 0, so this glyph won't actually use a texture at all (i.e. since
         // the third parameter is 0, the second one is irrelevant). Finally,
         // this square is colored red: (1,0,0,1) in RGBA.
-        m_batch.addGlyph(vec4(-25, 25, 50, 50), vec4(0), 0, vec4(1,0,0,1));
+        m_batch.addGlyph(vec4(top_left, 50, 50), vec4(0), 0, vec4(1,0,0,1));
     } m_batch.end();
 
     // Actually draw stuff
@@ -102,7 +119,7 @@ void SquareScreen::render() {
 
 int main(int argc, char* argv[]) {
     // Remember to initialize the library
-    init();
+    nta::init();
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

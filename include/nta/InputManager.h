@@ -49,8 +49,12 @@ namespace nta {
         void setMouseCoords(float x, float y);
         /// tells InputManager how the wheel is rolling
         void setMouseWheelMotion(const MouseWheelMotion& motion);
-        /// updates the state of m_KeyMap
+        /// updates internal state
         void update(SDL_Event& event);
+        /// updates key information
+        void update_keys(SDL_Event& event);
+        /// update mouse information
+        void update_mouse(SDL_Event& event);
         /// updates the state of m_prevKeyMap
         void updatePrev();
     };

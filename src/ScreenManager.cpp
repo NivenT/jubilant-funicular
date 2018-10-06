@@ -81,23 +81,40 @@ namespace nta {
         SDL_Event event;
 
         m_input.updatePrev();
-        m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
+        if (m_window->hasMouseFocus()) {
+            m_input.setMouseWheelMotion(MouseWheelMotion::STATIONARY);
+        }
         while (SDL_PollEvent(&event)) {
-            m_input.update(event);
-            #ifdef NTA_USE_IMGUI
-                ImGui_ImplSdlGL3_ProcessEvent(&event);
-            #endif
             switch(event.type) {
             case SDL_QUIT:
                 getCurrScreen()->quit();
                 break;
             case SDL_WINDOWEVENT:
-                if (event.window.event == SDL_WINDOWEVENT_RESIZED) {
+                switch(event.window.event) {
+                case SDL_WINDOWEVENT_RESIZED:
                     glViewport(0, 0, event.window.data1, event.window.data2);
                     m_window->setDimensions(event.window.data1, event.window.data2);
+                    break;
+                case SDL_WINDOWEVENT_ENTER:
+                    Window::setMouseFocus(m_window);
+                    break;
+                case SDL_WINDOWEVENT_FOCUS_GAINED:
+                    Window::setKeyboardFocus(m_window);
+                    break;
                 }
                 break;
             }
+
+            if (m_window->hasMouseFocus()) {
+                m_input.update_mouse(event);
+            }
+            if (m_window->hasKeyboardFocus()) {
+                m_input.update_keys(event);
+            }
+            #ifdef NTA_USE_IMGUI
+                /// \todo Separte into process keyevent and process mouseevent
+                ImGui_ImplSdlGL3_ProcessEvent(&event);
+            #endif
         }
         if (m_input.justPressed(SDLK_ESCAPE)) {
             getCurrScreen()->esc();
