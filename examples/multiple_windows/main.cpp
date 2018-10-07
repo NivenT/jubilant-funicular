@@ -1,7 +1,8 @@
 /*
  * Here's an example of a program with multiple windows. Each window draws a
  * single red square. Using WASD, you can independently move around the squares
- * in each of the windows.
+ * in each of the windows. See dodging_boxes for a more involved example with
+ * multiple windows
  */
 #include <iostream>
 #include <thread>
@@ -103,14 +104,14 @@ int main(int argc, char* argv[]) {
     // In order for the windows to be able to run at the same time, we give each
     // one its own thread.
     thread t1 = thread([]{
-        ScreenManager s1("Player Screen", 60);
+        ScreenManager s1("Window 1", 60);
         s1.addScreen(new SquareScreen);
         s1.run();
         s1.destroy();
     });
     
     thread t2 = thread([]{
-        ScreenManager s2("Block Screen", 60);
+        ScreenManager s2("Window 2", 60);
         s2.addScreen(new SquareScreen);
         s2.run();
         s2.destroy();

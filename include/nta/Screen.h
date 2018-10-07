@@ -6,6 +6,7 @@
 
 namespace nta {
     class ScreenManager;
+    class ResourceManager;
     enum class ScreenState{NONE, RUNNING, SWITCH, SWITCH_ESC, SWITCH_X};
     /// Key unlocking the setManager() "private" function of class Screen
     class SetManagerKey {

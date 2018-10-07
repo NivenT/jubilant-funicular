@@ -76,7 +76,7 @@ namespace nta {
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
             Logger::writeToLog("Exiting ScreenManager...");
-            getCurrScreen()->offFocus(); // necessary?
+            getCurrScreen()->offFocus();
             m_currScreen = -1;
         }
     }

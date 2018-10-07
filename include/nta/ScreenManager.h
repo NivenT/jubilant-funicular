@@ -10,6 +10,7 @@
 #include "nta/Window.h"
 #include "nta/GLSLProgram.h"
 #include "nta/InputManager.h"
+#include "nta/ResourceManager.h"
 
 namespace nta {
     /// Manages a collection of screens
@@ -54,7 +55,7 @@ namespace nta {
         Screen* getCurrScreen() const;
         /// returns the window
         const Window* getWindow() const { return m_window; }
-        /// return the InputManager
+        /// returns the InputManager
         const InputManager&  getInput() const { return m_input; }
         /// returns the current fps
         float getFPS() const;
