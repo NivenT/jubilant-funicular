@@ -165,12 +165,14 @@ namespace nta {
     }
     void ScreenManager::destroy() {
         Logger::writeToLog("Destroying ScreenManager...");
+        Logger::indent();
         for (auto screen : m_screens) {
             delete screen;
         }
         m_screens.clear();
         m_context_data.destroy();
         WindowManager::destroyWindow(m_window->getTitle());
+        Logger::unindent();
         Logger::writeToLog("Destroyed ScreenManager");
     }
 }

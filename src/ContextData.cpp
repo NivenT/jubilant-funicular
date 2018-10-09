@@ -18,8 +18,9 @@ namespace nta {
     Result<GLTexture> ContextData::getTexture(crstring path) {
         if (m_textureMap.find(path) == m_textureMap.end()) {
             auto raw = ResourceManager::getTexture(path);
-            // I really like this line
+            // I really like this bit
             return raw.map<GLTexture>([&](const RawTexture& raw) {
+                Logger::writeToLog("RawTexture \"" + path + "\" doesn't have a GLTexture in this context.");
                 return m_textureMap[path] = GLTexture(raw);
             });
         }
