@@ -12,8 +12,10 @@
 #include "nta/utils.h"
 
 namespace nta {
-    std::atomic<WindowID> Window::m_keyboard_focus(0);
-    std::atomic<WindowID> Window::m_mouse_focus(0);
+    WindowID    Window::m_keyboard_focus(0);
+    std::mutex  Window::m_keyboard_mutex;
+    WindowID    Window::m_mouse_focus(0);
+    std::mutex  Window::m_mouse_mutex;
     Window::Window() {
     }
     Window::~Window() {
@@ -24,6 +26,22 @@ namespace nta {
     }
     SDL_Window* Window::getSDLWindow(GetSDLWindowKey key) const {
         return m_window;
+    }
+    WindowID Window::getKeyboardFocus() {
+        std::lock_guard<std::mutex> g(m_keyboard_mutex);
+        return m_keyboard_focus;
+    }
+    void Window::setKeyboardFocus(const WindowID& win) {
+        std::lock_guard<std::mutex> g(m_keyboard_mutex);
+        m_keyboard_focus = win;
+    }
+    WindowID Window::getMouseFocus() {
+        std::lock_guard<std::mutex> g(m_mouse_mutex);
+        return m_mouse_focus;
+    }
+    void Window::setMouseFocus(const WindowID& win) {
+        std::lock_guard<std::mutex> g(m_mouse_mutex);
+        m_mouse_focus = win;
     }
     glm::vec2 Window::getDimensions() const {
         return glm::vec2(m_width, m_height);

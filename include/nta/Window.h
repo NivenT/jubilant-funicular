@@ -1,7 +1,7 @@
 #ifndef NTA_WINDOW_H_INCLUDED
 #define NTA_WINDOW_H_INCLUDED
 
-#include <atomic>
+#include <mutex>
 
 #include <SDL2/SDL.h>
 
@@ -29,8 +29,11 @@ namespace nta {
     /// Represent a window
     class Window {
     private:
-        static std::atomic<WindowID> m_keyboard_focus;
-        static std::atomic<WindowID> m_mouse_focus;
+        static WindowID m_keyboard_focus;
+        static std::mutex m_keyboard_mutex;
+        static WindowID m_mouse_focus;
+        static std::mutex m_mouse_mutex;
+
         /// creates a window
         void createWindow(crstring title, int width, int height, int flags = 0);
         /// the window
@@ -64,10 +67,10 @@ namespace nta {
         /// updates the screen
         void swapBuffers() const;
         
-        static WindowID getKeyboardFocus() { return m_keyboard_focus; }
-        static WindowID getMouseFocus() { return m_mouse_focus; }
-        static void setKeyboardFocus(const WindowID& win) { m_keyboard_focus = win; }
-        static void setMouseFocus(const WindowID& win) { m_mouse_focus = win; }
+        static WindowID getKeyboardFocus();
+        static WindowID getMouseFocus();
+        static void setKeyboardFocus(const WindowID& win);
+        static void setMouseFocus(const WindowID& win);
 
         friend class WindowManager;
     };
