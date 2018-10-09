@@ -56,7 +56,7 @@ private:
     nta::ECS m_ecs;
     nta::Entity m_player;
     nta::ComponentID m_player_ball_component_id;
-    int m_num_objects = 10;
+    const int m_num_objects = 10;
     int m_num_active_screens = 2;
 public:
     GameState();
