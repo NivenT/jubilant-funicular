@@ -17,7 +17,7 @@ private:
 
     bool m_touched_ground = false;
 public:
-    BallComponent(nta::crvec2 cen, float rad, nta::crvec4 col) : m_col(col), m_rad(rad), m_cen(cen) {}
+    BallComponent(nta::crvec2 cen, float rad, nta::crvec4 col) : m_col(col), m_rad(rad), m_cen(cen), m_vel(0) {}
     bool has_touched_ground() const { return m_touched_ground; }
     void draw(nta::SpriteBatch& batch, nta::ContextData& context) const {
         // Using Result::map means that nothing will be rendered if an error occurs
