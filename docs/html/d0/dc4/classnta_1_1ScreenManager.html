@@ -79,10 +79,11 @@ Collaboration diagram for nta::ScreenManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d00/classnta_1_1ScreenManager__coll__graph.png" border="0" usemap="#nta_1_1ScreenManager_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1ScreenManager_coll__map" id="nta_1_1ScreenManager_coll__map">
-<area shape="rect" id="node2" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="696,83,823,109"/>
-<area shape="rect" id="node9" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="712,240,807,267"/>
-<area shape="rect" id="node14" href="../../d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="703,459,816,485"/>
-<area shape="rect" id="node15" href="../../d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="367,429,448,456"/>
+<area shape="rect" id="node2" href="../../df/dac/classnta_1_1ContextData.html" title="nta::ContextData" alt="" coords="698,111,821,138"/>
+<area shape="rect" id="node6" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="696,266,823,293"/>
+<area shape="rect" id="node12" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="712,429,807,455"/>
+<area shape="rect" id="node17" href="../../d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="703,611,816,638"/>
+<area shape="rect" id="node18" href="../../d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="367,611,448,638"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -96,10 +97,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#aea609a639ffdc377e798eda054e6a4ba">~ScreenManager</a> ()</td></tr>
 <tr class="memdesc:aea609a639ffdc377e798eda054e6a4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">basic destructor <br /></td></tr>
 <tr class="separator:aea609a639ffdc377e798eda054e6a4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb81a6948d830cd725ee4e7d70eea450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#afb81a6948d830cd725ee4e7d70eea450">getGLSLProgram</a> (crstring progPath)</td></tr>
-<tr class="separator:afb81a6948d830cd725ee4e7d70eea450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ba6b011368a23379a5d4d74fe7a8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#aa4ba6b011368a23379a5d4d74fe7a8cb">getGLSLProgram</a> (crstring name, crstring vert, crstring frag)</td></tr>
-<tr class="separator:aa4ba6b011368a23379a5d4d74fe7a8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b26e8adc481bfb37a088e047e4ccc2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d23/classnta_1_1Screen.html">Screen</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a4b26e8adc481bfb37a088e047e4ccc2a">getCurrScreen</a> () const</td></tr>
 <tr class="memdesc:a4b26e8adc481bfb37a088e047e4ccc2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the active screen  <a href="#a4b26e8adc481bfb37a088e047e4ccc2a">More...</a><br /></td></tr>
 <tr class="separator:a4b26e8adc481bfb37a088e047e4ccc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,8 +106,12 @@ const <a class="el" href="../../d4/dfb/classnta_1_1Window.html">Window</a> *&#16
 <tr class="separator:a466c3ed3fdd10a475157d51fc9b3e56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d597bf63867fcef1e04c215011f005e"><td class="memItemLeft" align="right" valign="top"><a id="a2d597bf63867fcef1e04c215011f005e"></a>
 const <a class="el" href="../../d6/de2/classnta_1_1InputManager.html">InputManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a2d597bf63867fcef1e04c215011f005e">getInput</a> () const</td></tr>
-<tr class="memdesc:a2d597bf63867fcef1e04c215011f005e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> <br /></td></tr>
+<tr class="memdesc:a2d597bf63867fcef1e04c215011f005e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the <a class="el" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input ">InputManager</a> <br /></td></tr>
 <tr class="separator:a2d597bf63867fcef1e04c215011f005e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab002ef8eef5b25f5a98b73b8386cd708"><td class="memItemLeft" align="right" valign="top"><a id="ab002ef8eef5b25f5a98b73b8386cd708"></a>
+<a class="el" href="../../df/dac/classnta_1_1ContextData.html">ContextData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ab002ef8eef5b25f5a98b73b8386cd708">getContextData</a> ()</td></tr>
+<tr class="memdesc:ab002ef8eef5b25f5a98b73b8386cd708"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the <a class="el" href="../../df/dac/classnta_1_1ContextData.html">ContextData</a> <br /></td></tr>
+<tr class="separator:ab002ef8eef5b25f5a98b73b8386cd708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e61f523b383277b7284cab76ad9e5a"><td class="memItemLeft" align="right" valign="top"><a id="a24e61f523b383277b7284cab76ad9e5a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a24e61f523b383277b7284cab76ad9e5a">getFPS</a> () const</td></tr>
 <tr class="memdesc:a24e61f523b383277b7284cab76ad9e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the current fps <br /></td></tr>
@@ -143,14 +144,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a593cef7f3bae73a9b8b2d8e7c13791d5"><td class="memItemLeft" align="right" valign="top"><a id="a593cef7f3bae73a9b8b2d8e7c13791d5"></a>
-std::map&lt; std::string, <a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a593cef7f3bae73a9b8b2d8e7c13791d5">m_glslMap</a></td></tr>
-<tr class="memdesc:a593cef7f3bae73a9b8b2d8e7c13791d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of <a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ...">GLSLProgram</a>. <br /></td></tr>
-<tr class="separator:a593cef7f3bae73a9b8b2d8e7c13791d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed16963ad12365acbaf0191e1a72243d"><td class="memItemLeft" align="right" valign="top"><a id="aed16963ad12365acbaf0191e1a72243d"></a>
 std::vector&lt; <a class="el" href="../../d6/d23/classnta_1_1Screen.html">Screen</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#aed16963ad12365acbaf0191e1a72243d">m_screens</a></td></tr>
 <tr class="memdesc:aed16963ad12365acbaf0191e1a72243d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the screens <br /></td></tr>
 <tr class="separator:aed16963ad12365acbaf0191e1a72243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7db619a85aa1b5813b6ca38779e39e"><td class="memItemLeft" align="right" valign="top"><a id="aff7db619a85aa1b5813b6ca38779e39e"></a>
+<a class="el" href="../../df/dac/classnta_1_1ContextData.html">ContextData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#aff7db619a85aa1b5813b6ca38779e39e">m_context_data</a></td></tr>
+<tr class="memdesc:aff7db619a85aa1b5813b6ca38779e39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLTextures and GLSLPrograms and whatnot. <br /></td></tr>
+<tr class="separator:aff7db619a85aa1b5813b6ca38779e39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3407e386dc4dc202dc33a5201f63556"><td class="memItemLeft" align="right" valign="top"><a id="ae3407e386dc4dc202dc33a5201f63556"></a>
 <a class="el" href="../../d6/de2/classnta_1_1InputManager.html">InputManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ae3407e386dc4dc202dc33a5201f63556">m_input</a></td></tr>
 <tr class="memdesc:ae3407e386dc4dc202dc33a5201f63556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps track of all input received in this window. <br /></td></tr>
@@ -179,9 +180,9 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="separator:a3ea71cd8f9d9bfa38cb47e76711f30ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages a collection of screens </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>(?) Move m_glslMap and m_input to <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a>? </dd></dl>
+<div class="textblock"><p>Manages a collection of screens </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>(?) Move m_glslMap and m_input to <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a>? </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00017">17</a> of file <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html">ScreenManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00016">16</a> of file <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html">ScreenManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4b26e8adc481bfb37a088e047e4ccc2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b26e8adc481bfb37a088e047e4ccc2a">&#9670;&nbsp;</a></span>getCurrScreen()</h2>
@@ -199,71 +200,11 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </div><div class="memdoc">
 
 <p>returns the active screen </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00145">run()</a>, <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00060">switchScreen()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00091">update_input()</a>.</p>
-
-</div>
-</div>
-<a id="afb81a6948d830cd725ee4e7d70eea450"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb81a6948d830cd725ee4e7d70eea450">&#9670;&nbsp;</a></span>getGLSLProgram() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> * nta::ScreenManager::getGLSLProgram </td>
-          <td>(</td>
-          <td class="paramtype">crstring&#160;</td>
-          <td class="paramname"><em>progPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Gets <a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ...">GLSLProgram</a> at specified path</p>
-<p>Assumes vertex shader is (progPath + ".vert") and fragment shader is (progPath + ".frag") </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
 
-</div>
-</div>
-<a id="aa4ba6b011368a23379a5d4d74fe7a8cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4ba6b011368a23379a5d4d74fe7a8cb">&#9670;&nbsp;</a></span>getGLSLProgram() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> * nta::ScreenManager::getGLSLProgram </td>
-          <td>(</td>
-          <td class="paramtype">crstring&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">crstring&#160;</td>
-          <td class="paramname"><em>vert</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">crstring&#160;</td>
-          <td class="paramname"><em>frag</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Gets <a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ...">GLSLProgram</a>, specifying explicitly where the vertex and fragment shaders are.</p>
-<p>Uses name as the key in the map </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00133">run()</a>, <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00048">switchScreen()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00079">update_input()</a>.</p>
 
 </div>
 </div>
@@ -285,9 +226,9 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>runs screen logic (render, update, handleInput, etc.)</p>
 <p>initFocusData is the input to onFocus for the first screen </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00145">145</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00058">getInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00049">getContextData()</a>.</p>
 
 </div>
 </div>

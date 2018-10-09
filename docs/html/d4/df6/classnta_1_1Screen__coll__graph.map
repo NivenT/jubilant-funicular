@@ -1,7 +1,8 @@
 <map id="nta::Screen" name="nta::Screen">
-<area shape="rect" id="node4" href="$d0/dc4/classnta_1_1ScreenManager.html" title="nta::ScreenManager" alt="" coords="1037,388,1176,415"/>
-<area shape="rect" id="node11" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="712,427,807,453"/>
-<area shape="rect" id="node5" href="$d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="696,208,823,235"/>
-<area shape="rect" id="node15" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="703,544,816,571"/>
-<area shape="rect" id="node16" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="367,528,448,555"/>
+<area shape="rect" id="node4" href="$d0/dc4/classnta_1_1ScreenManager.html" title="nta::ScreenManager" alt="" coords="1037,380,1176,407"/>
+<area shape="rect" id="node14" href="$d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="712,351,807,377"/>
+<area shape="rect" id="node5" href="$df/dac/classnta_1_1ContextData.html" title="nta::ContextData" alt="" coords="698,620,821,647"/>
+<area shape="rect" id="node9" href="$d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="696,123,823,149"/>
+<area shape="rect" id="node18" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="703,408,816,435"/>
+<area shape="rect" id="node19" href="$d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="367,529,448,556"/>
 </map>

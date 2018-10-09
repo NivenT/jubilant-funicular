@@ -95,6 +95,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:abfa438a816c1174f03b0e0124a2bec20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a786d2ac17fbfffa3ba93b6fcc66aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a26a786d2ac17fbfffa3ba93b6fcc66aa">delete_entity</a> (Entity id)</td></tr>
 <tr class="separator:a26a786d2ac17fbfffa3ba93b6fcc66aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fb3a53f033c6cb33cf3d0da71aacbf"><td class="memItemLeft" align="right" valign="top"><a id="a03fb3a53f033c6cb33cf3d0da71aacbf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a03fb3a53f033c6cb33cf3d0da71aacbf">num_entities</a> () const</td></tr>
+<tr class="memdesc:a03fb3a53f033c6cb33cf3d0da71aacbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entities in the system. <br /></td></tr>
+<tr class="separator:a03fb3a53f033c6cb33cf3d0da71aacbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81600b75a067e9b180ab38b9e8a37af3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:a81600b75a067e9b180ab38b9e8a37af3"><td class="memTemplItemLeft" align="right" valign="top">ComponentID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a81600b75a067e9b180ab38b9e8a37af3">add_component</a> (Entity entity, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a81600b75a067e9b180ab38b9e8a37af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,7 +254,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>T should be a concrete type, not a pointer type</p>
 <p>Returns the id of the created <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> (NTA_INVALID_ID on failure). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00136">136</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00138">138</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00062">num_entities()</a>.</p>
 
 </div>
 </div>
@@ -275,7 +281,9 @@ template&lt;typename T &gt; </div>
 <p>cmpn should be a pointer to a <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> that inherits from T</p>
 <p>returns false on failure </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00150">150</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00152">152</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00062">num_entities()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +307,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00159">delete_components()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00161">delete_components()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00062">num_entities()</a>.</p>
 
 </div>
 </div>
@@ -323,7 +331,9 @@ template&lt;typename T &gt; </div>
 <p>Deletes all componenets of the given type from the given entity</p>
 <p>if entity == NTA_INVALID_ID, then deletes all components of that type from all entities </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00159">159</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00161">161</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00062">num_entities()</a>.</p>
 
 </div>
 </div>
@@ -369,7 +379,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00108">get_siblings()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00110">get_siblings()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00062">num_entities()</a>.</p>
 
 </div>
 </div>
@@ -398,7 +408,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00044">44</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00136">add_component()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00150">add_component_to_list()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00189">broadcast()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00173">get_component_list()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00138">add_component()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00152">add_component_to_list()</a>, <a class="el" href="../../d5/d24/ECS_8h_source.html#l00191">broadcast()</a>, and <a class="el" href="../../d5/d24/ECS_8h_source.html#l00175">get_component_list()</a>.</p>
 
 </div>
 </div>
