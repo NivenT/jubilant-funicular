@@ -12,7 +12,7 @@ private:
 public:
     ObjectScreen(GameState* state) : m_state(state) {}
     void init();
-    void update() {}
+    void update() { if (m_state->is_over()) { close(); } }
     void render();
     /// Called whenever the window switches screens (e.g. when the window closes)
     void offFocus() {

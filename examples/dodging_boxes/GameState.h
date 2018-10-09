@@ -40,10 +40,16 @@ public:
         m_cen += translation;
         while (abs(m_cen.x) > 100) m_cen.x -= glm::sign(m_cen.x)*200;
     }
+    bool collide(const BallComponent& rhs) {
+        auto diff = m_cen - rhs.m_cen;
+        auto rad = m_rad + rhs.m_rad;
+        return diff.x*diff.x + diff.y*diff.y < rad*rad;
+    }
 };
 
 class GameState {
 private:
+    // I'm overly causious in my use of this here
     static std::mutex m_state_lock;
 
     /// Using ECS is overkill here, but meh
@@ -58,6 +64,7 @@ public:
         return m_num_active_screens <= 0;
     }
     void draw_player(nta::SpriteBatch& batch, nta::ContextData& context) const {
+        std::lock_guard<std::mutex> g(m_state_lock);
         // get_component returns an nta::Option.
         // Using map means we only try and draw the BallComponent when it is succesfully found
         m_ecs.get_component<BallComponent>(m_player).map([&](BallComponent& cmpn) {
@@ -65,6 +72,7 @@ public:
         });
     }
     void draw_objects(nta::SpriteBatch& batch, nta::ContextData& context) const {
+        std::lock_guard<std::mutex> g(m_state_lock);
         for (BallComponent* cmpn : m_ecs.get_component_list<BallComponent>()) {
             if (cmpn->get_id() != m_player_ball_component_id) {
                 cmpn->draw(batch, context);
@@ -72,6 +80,7 @@ public:
         }
     }
     void move_left() {
+        std::lock_guard<std::mutex> g(m_state_lock);
         // If you want, instead of using map you can just do something like
         // BallComponent& cmpn = m_ecs.get_component<BallComponent>(m_player).unwrap();
         // but in that case you should be confident that m_player actually has a BallComponent
@@ -80,30 +89,46 @@ public:
         });
     }
     void move_right() {
+        std::lock_guard<std::mutex> g(m_state_lock);
         m_ecs.get_component<BallComponent>(m_player).map([](BallComponent& cmpn) {
             cmpn.move(glm::vec2(1, 0));
         });
     }
     void update(float dt) {
+        std::lock_guard<std::mutex> g(m_state_lock);
+        if (m_ecs.num_entities() < m_num_objects && nta::Random::randFloat() < dt*2.f) {
+            auto x_pos = nta::Random::randFloat(-100, 100);
+            auto rad = nta::Random::randGaussian(6, 3);
+            auto col = nta::Random::randRGB();
+            m_ecs.add_component<BallComponent>(m_ecs.gen_entity(), glm::vec2(x_pos, 90),
+                                               rad,  glm::vec4(col, 1));
+        }
+
+        std::vector<BallComponent*> trash;
         for (BallComponent* cmpn : m_ecs.get_component_list<BallComponent>()) {
             cmpn->update(dt);
+            if (cmpn->get_id() != m_player_ball_component_id) {
+                nta::utils::Option<BallComponent&> pball = m_ecs.get_component<BallComponent>(m_player);
+                if (pball.is_some() && cmpn->collide(pball.unwrap())) {
+                    m_num_active_screens = 0;
+                } else if (cmpn->has_touched_ground()) {
+                    trash.push_back(cmpn);
+                }
+            }
+        }
+        for (auto& cmpn : trash) {
+            m_ecs.delete_entity(m_ecs.get_owner(cmpn->get_id()));
         }
     }
     void closed_screen() {
         m_num_active_screens--;
     }
 };
+std::mutex GameState::m_state_lock;
 
 GameState::GameState() {
     m_player = m_ecs.gen_entity();
     m_player_ball_component_id = m_ecs.add_component<BallComponent>(m_player, glm::vec2(0, -90), 5, glm::vec4(1,0,0,1));
-    for (int i = 0; i < m_num_objects; i++) {
-        auto x_pos = nta::Random::randFloat(-100, 100);
-        auto rad = nta::Random::randGaussian(5, 2);
-        auto col = nta::Random::randRGB();
-        m_ecs.add_component<BallComponent>(m_ecs.gen_entity(), glm::vec2(x_pos, 90),
-                                           rad,  glm::vec4(col, 1));
-    }
 }
 
 #endif // GAMESTATE_H_INCLUDED

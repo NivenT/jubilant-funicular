@@ -58,6 +58,8 @@ namespace nta {
         ///
         /// Returns true on success
         bool delete_entity(Entity id);
+        /// Returns the number of entities in the system
+        int num_entities() const { return m_entity_set.size(); }
 
         /// Adds the given Component to the given Entity.
         ///

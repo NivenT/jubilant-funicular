@@ -40,6 +40,9 @@ void PlayerScreen::init() {
 }
 
 void PlayerScreen::update() {
+    if (m_state->is_over()) {
+        close();
+    }
     if (getInput().isPressed(SDLK_a)) {
         m_state->move_left();
     }

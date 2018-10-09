@@ -1,6 +1,6 @@
 /*
  * Here's an example of a game with multiple windows. The goal of the game
- * is to dodge a bunch of falling boxes. The catch is that the boxes only
+ * is to dodge a bunch of falling balls. The catch is that the balls only
  * appear in one window, and the player only shows up on the other.
  */
 #include <iostream>
@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
     });
     
     thread t2 = thread([&state]{
-        ScreenManager s2("Block Screen", 60);
+        ScreenManager s2("Obstacle Screen", 60);
         s2.addScreen(new ObjectScreen(&state));
         
         // These calls only make sense after an OpenGL context has been set up
