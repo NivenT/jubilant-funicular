@@ -29,6 +29,12 @@ namespace nta {
             Logger::writeToLog("The RawTexture was empty");
         }
     }
+    void GLTexture::free() {
+        Logger::writeToLog("Freeing GLTexture with id " + utils::to_string(id));
+        glDeleteTextures(1, &id);
+        Logger::writeToLog("Freed GLTexture");
+    }
+
     Result<RawTexture> ImageLoader::readImage(crstring filePath, crvec2 dimensions) {
         Logger::writeToLog("Loading image \"" + filePath + "\" into RawTexture...");
         Logger::indent();

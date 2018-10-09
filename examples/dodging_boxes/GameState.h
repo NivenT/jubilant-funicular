@@ -20,9 +20,10 @@ public:
     BallComponent(nta::crvec2 cen, float rad, nta::crvec4 col) : m_col(col), m_rad(rad), m_cen(cen) {}
     bool has_touched_ground() const { return m_touched_ground; }
     void draw(nta::SpriteBatch& batch) const {
-        static nta::GLTexture tex = nta::ResourceManager::getTexture("circle.png").get_data();
+        nta::GLTexture tex = nta::GLTexture(nta::ResourceManager::getTexture("circle.png").get_data());
         batch.addGlyph(glm::vec4(m_cen.x - m_rad, m_cen.y + m_rad, m_rad*2.f, m_rad*2.f),
                        glm::vec4(0, 0, 1, 1), tex.id, m_col);
+        //glDeleteTextures(1, &tex.id);
     }
     void update(float dt) {
         m_vel.y -= 9.8f * dt;

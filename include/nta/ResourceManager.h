@@ -8,29 +8,19 @@
 #include "nta/Errors.h"
 
 namespace nta {
-    /// Handles storing and retrieving textures so an image isn't loaded multiple times
+    /// Handles storing and retrieving images so an image isn't loaded multiple times
+    ///
+    /// \todo Map from Path instead of std::string
     class ResourceManager {
     private:
         /// a map for associating a texture with the name of its file
-        static std::map<std::string, GLTexture> m_textureMap;
-        /// Inverse map to m_textureMap
-        static std::unordered_map<GLTexture, std::string> m_textureFiles;
+        static std::map<std::string, RawTexture> m_textureMap;
         /// \question Why does this hold pointers?
         static std::map<std::pair<std::string, int>, SpriteFont*> m_fontMap;
     public:
         /// returns the resource with the given path, loading it if need be
-        /// \question Why was I returning references before?
-        static Result<GLTexture> getTexture(crstring imagePath, 
-                                             GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
-                                             GLint magFilt = GL_LINEAR, 
+        static Result<RawTexture> getTexture(crstring imagePath, 
                                              crvec2 dimensions = glm::vec2(0));
-        static Result<GLTexture> getTexture(crstring imagePath, 
-                                             crvec2 dimensions,
-                                             GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
-                                             GLint magFilt = GL_LINEAR) {
-            return getTexture(imagePath, minFilt, magFilt, dimensions);
-        }
-        static Result<std::string> getFile(GLTexture tex);
         static SpriteFont* getSpriteFont(crstring fontPath, int fontSize = 32);
         /// removes the resource with the given path from the map and deletes it
         static void deleteTexture(crstring imagePath);

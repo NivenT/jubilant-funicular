@@ -36,6 +36,8 @@ namespace nta {
         bool operator==(const GLTexture& rhs) const {
             return id == rhs.id;
         }
+        /// Deletes this texture
+        void free();
 
         /// the id of the texture
         GLuint id;

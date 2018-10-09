@@ -10,7 +10,7 @@
 #include "nta/Window.h"
 #include "nta/GLSLProgram.h"
 #include "nta/InputManager.h"
-#include "nta/ResourceManager.h"
+#include "nta/GLTexture.h"
 
 namespace nta {
     /// Manages a collection of screens
@@ -26,6 +26,11 @@ namespace nta {
 
         /// Collection of GLSLProgram
         std::map<std::string, GLSLProgram> m_glslMap;
+        /// a map file names to textures
+        std::map<std::string, GLTexture> m_textureMap;
+        /// Inverse map to m_textureMap
+        std::unordered_map<GLTexture, std::string> m_textureFiles;
+
         /// the screens
         std::vector<Screen*> m_screens;
         /// Keeps track of all input received in this window
@@ -51,6 +56,10 @@ namespace nta {
         ///
         /// Uses name as the key in the map
         GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
+        /// Gets a GLTexture representing the image at the given path
+        Result<GLTexture> getTexture(crstring path);
+        /// Gets the name of the file used the create tex
+        Result<std::string> getTextureFile(GLTexture tex);
         /// returns the active screen
         Screen* getCurrScreen() const;
         /// returns the window

@@ -24,16 +24,20 @@ int main(int argc, char* argv[]) {
     // Remember to initialize the library
     nta::init();
 
+    // Global GameState shared by both threads
     GameState state;
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     // Each Window is ownder by a ScreenManager
     // In order for the windows to be able to run at the same time, we give each
     // one its own thread.
     thread t1 = thread([&state]{
         ScreenManager s1("Player Screen", 60);
         s1.addScreen(new PlayerScreen(&state));
+        
+        // These calls only make sense after an OpenGL context has been set up
+        // i.e. after a Window was created by the ScreenManager constructor
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
         s1.run();
         s1.destroy();
     });
@@ -41,6 +45,12 @@ int main(int argc, char* argv[]) {
     thread t2 = thread([&state]{
         ScreenManager s2("Block Screen", 60);
         s2.addScreen(new ObjectScreen(&state));
+        
+        // These calls only make sense after an OpenGL context has been set up
+        // i.e. after a Window was created by the ScreenManager constructor
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
         s2.run();
         s2.destroy();
     });

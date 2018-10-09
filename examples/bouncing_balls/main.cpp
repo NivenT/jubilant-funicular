@@ -39,22 +39,20 @@ public:
 
     vec2 get_pos() const { return m_pos; }
     void draw(nta::SpriteBatch& batch) {
-        // Gets a cached texture so we don't repeatedly load in the same file
-        nta::Result<nta::GLTexture> tex = nta::ResourceManager::getTexture("circle.png");
-        // There should be no error
-        assert(!tex.is_err());
-        // get the id for the associated gl texture
-        GLuint id = tex.get_data().id;
-
         vec2 top_left = m_pos + vec2(-m_rad, m_rad);
-        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, m_color);
+        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), tex.id, 
+                       m_color);
     }
     void receive(const nta::Message& message) {
         // there's also a message.type field
         // This program only uses one type of message so that field is irrelevant
         m_pos = *(vec2*)message.data;
     }
+
+    // All GraphicsComponent will use the same texture
+    static nta::GLTexture tex;
 };
+nta::GLTexture GraphicsComponent::tex;
 
 class PhysicsComponent : public nta::Component {
 private:
@@ -179,6 +177,13 @@ void MainScreen::init() {
 
     m_batch.init();
     m_font = nta::ResourceManager::getSpriteFont("font.otf");
+
+    // Gets a cached texture so we don't repeatedly load in the same file
+    nta::Result<nta::GLTexture> tex = m_manager->getTexture("circle.png");
+    // There should be no error
+    assert(!tex.is_err());
+    // Set this as the texture used by GraphicsComponents
+    GraphicsComponent::tex = tex.get_data();
 
     // Here we initialize a bunch of random balls
     for (int i = 0; i < NUM_INIT_BALLS; i++) {

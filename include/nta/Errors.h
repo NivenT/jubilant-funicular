@@ -140,6 +140,15 @@ namespace nta {
         Result<S> map(std::function<S(T)> func) {
             return is_err_variant ? Result<S>::new_err(err) : Result<S>::new_ok(func(data));
         }
+        /// Converts an error variant of Result<T> to an error variant of Result<S>
+        template<typename S>
+        Result<S> convert_error() {
+            if (is_ok()) {
+                ErrorManager::push_error(Error("Called convert_error on ok Result",
+                                               UNWRAP_WRONG_RESULT_VARIANT));
+            }
+            return Result<S>::new_err(err);
+        }
     };
 
     /// converts ErrorType enum to string
