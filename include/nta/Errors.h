@@ -135,6 +135,11 @@ namespace nta {
     	}
     	/// Tries getting data, returning a default value if this is an error
     	T get_data_or(T optb) const { return is_err_variant ? optb : data; }
+        /// Applies a function if no error has occured, else returns the same error
+        template<typename S>
+        Result<S> map(std::function<S(T)> func) {
+            return is_err_variant ? Result<S>::new_err(err) : Result<S>::new_ok(func(data));
+        }
     };
 
     /// converts ErrorType enum to string

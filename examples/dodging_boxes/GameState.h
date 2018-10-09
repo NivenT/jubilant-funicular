@@ -1,6 +1,8 @@
 #ifndef GAMESTATE_H_INCLUDED
 #define GAMESTATE_H_INCLUDED
 
+#include <mutex>
+
 #include <nta/ECS.h>
 #include <nta/SpriteBatch.h>
 #include <nta/ResourceManager.h>
@@ -39,6 +41,8 @@ public:
 
 class GameState {
 private:
+    static std::mutex m_state_lock;
+
     /// Using ECS is overkill here, but meh
     nta::ECS m_ecs;
     nta::Entity m_player;
