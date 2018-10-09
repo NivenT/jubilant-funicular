@@ -24,18 +24,6 @@ namespace nta {
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
     }
-    GLSLProgram* ScreenManager::getGLSLProgram(crstring progPath) {
-        if (m_glslMap.find(progPath) == m_glslMap.end()) {
-            m_glslMap[progPath].compileShaders(progPath);
-        }
-        return &m_glslMap[progPath];
-    }
-    GLSLProgram* ScreenManager::getGLSLProgram(crstring name, crstring vert, crstring frag) {
-        if (m_glslMap.find(name) == m_glslMap.end()) {
-            m_glslMap[name].compileShaders(vert, frag);
-        }
-        return &m_glslMap[name];
-    }
     Screen* ScreenManager::getCurrScreen() const {
         /// \todo write log error if m_currScreen is out of range
         return utils::in_range<int>(m_currScreen, 0, m_screens.size()-1) ? m_screens[m_currScreen] : nullptr;
@@ -76,7 +64,7 @@ namespace nta {
             Logger::writeToLog("Switched screen");
         } else if (newIndex == -1) {
             Logger::writeToLog("Exiting ScreenManager...");
-            getCurrScreen()->offFocus(); // necessary?
+            getCurrScreen()->offFocus();
             m_currScreen = -1;
         }
     }
@@ -177,12 +165,14 @@ namespace nta {
     }
     void ScreenManager::destroy() {
         Logger::writeToLog("Destroying ScreenManager...");
+        Logger::indent();
         for (auto screen : m_screens) {
             delete screen;
         }
         m_screens.clear();
-        m_glslMap.clear();
+        m_context_data.destroy();
         WindowManager::destroyWindow(m_window->getTitle());
+        Logger::unindent();
         Logger::writeToLog("Destroyed ScreenManager");
     }
 }

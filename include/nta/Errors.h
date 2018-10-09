@@ -135,6 +135,24 @@ namespace nta {
     	}
     	/// Tries getting data, returning a default value if this is an error
     	T get_data_or(T optb) const { return is_err_variant ? optb : data; }
+        /// Applies a function if no error has occured, else returns the same error
+        template<typename S>
+        Result<S> map(std::function<S(T)> func) {
+            return is_err_variant ? Result<S>::new_err(err) : Result<S>::new_ok(func(data));
+        }
+        /// \todo (?) Return an Option<Error> instead?
+        void map(std::function<void(T)> func) {
+            if (!is_err_variant) func(data);
+        }
+        /// Converts an error variant of Result<T> to an error variant of Result<S>
+        template<typename S>
+        Result<S> convert_error() {
+            if (is_ok()) {
+                ErrorManager::push_error(Error("Called convert_error on ok Result",
+                                               UNWRAP_WRONG_RESULT_VARIANT));
+            }
+            return Result<S>::new_err(err);
+        }
     };
 
     /// converts ErrorType enum to string

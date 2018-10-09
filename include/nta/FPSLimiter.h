@@ -13,7 +13,7 @@ namespace nta {
         float m_maxFPS;
     public:
         /// constructor and destructor
-        FPSLimiter();
+        FPSLimiter(float max = 60) : m_maxFPS(max) {}
         ~FPSLimiter();
         /// sets maximum allowed fps
         void setMaxFPS(float maxFPS);

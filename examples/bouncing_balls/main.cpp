@@ -38,23 +38,29 @@ public:
     GraphicsComponent(vec4 col, float rad) : m_color(col),  m_pos(0), m_rad(rad) {}
 
     vec2 get_pos() const { return m_pos; }
-    void draw(nta::SpriteBatch& batch) {
+    // The ContextData is what stores GLTextures, among other things
+    void draw(nta::SpriteBatch& batch, nta::ContextData& context) {
         // Gets a cached texture so we don't repeatedly load in the same file
-        nta::Result<nta::GLTexture> tex = nta::ResourceManager::getTexture("circle.png");
+        nta::Result<nta::GLTexture> tex = context.getTexture("circle.png");
         // There should be no error
         assert(!tex.is_err());
-        // get the id for the associated gl texture
+        // Get the id of this texture
         GLuint id = tex.get_data().id;
 
         vec2 top_left = m_pos + vec2(-m_rad, m_rad);
-        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, m_color);
+        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, 
+                       m_color);
     }
     void receive(const nta::Message& message) {
         // there's also a message.type field
         // This program only uses one type of message so that field is irrelevant
         m_pos = *(vec2*)message.data;
     }
+
+    // All GraphicsComponent will use the same texture
+    static nta::GLTexture tex;
 };
+nta::GLTexture GraphicsComponent::tex;
 
 class PhysicsComponent : public nta::Component {
 private:
@@ -165,7 +171,7 @@ void MainScreen::addBall(nta::crvec2 pos) {
 void MainScreen::init() {
     nta::Logger::writeToLog("Initializing main screen...");
 
-    m_simple_prog = m_manager->getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getContextData().getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         m_simple_prog->addAttribute("pos");
         m_simple_prog->addAttribute("color");
@@ -242,7 +248,7 @@ void MainScreen::render() {
 
     m_batch.begin(); {
         for (GraphicsComponent* cmpn : m_system.get_component_list<GraphicsComponent>()) {
-            cmpn->draw(m_batch);
+            cmpn->draw(m_batch, m_manager->getContextData());
         }
 
         string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());

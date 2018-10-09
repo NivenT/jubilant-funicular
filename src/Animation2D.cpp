@@ -7,7 +7,7 @@
 
 namespace nta {
     SpriteSheet::SpriteSheet(crstring file_path, crivec2 dims) : dims(dims) {
-        // unsafe but meh
+        // Why is this compiling?
         tex = ResourceManager::getTexture(file_path).get_data();
     }
 

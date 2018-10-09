@@ -116,4 +116,8 @@ namespace nta {
             glDisableVertexAttribArray(i);
         }
     }
+    void GLSLProgram::destroy() {
+        glDeleteProgram(m_programID);
+        m_programID = 0;
+    }
 }

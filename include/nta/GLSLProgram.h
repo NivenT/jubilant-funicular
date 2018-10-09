@@ -8,7 +8,7 @@ typedef unsigned int GLenum;
 typedef int GLint;
 
 namespace nta {
-    class ScreenManager;
+    class ContextData;
     /// represents a program written in GLSL comprised of a vertex shader and a fragment shader
     class GLSLProgram {
     private:
@@ -41,7 +41,9 @@ namespace nta {
         void use() const;
         /// unbinds this program
         void unuse() const;
-        friend class ScreenManager;
+        /// deletes this program
+        void destroy();
+        friend class ContextData;
     };
 }
 

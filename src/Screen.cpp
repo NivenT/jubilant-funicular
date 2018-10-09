@@ -2,6 +2,7 @@
 #include "nta/InputManager.h"
 #include "nta/WindowManager.h"
 #include "nta/ScreenManager.h"
+#include "nta/ResourceManager.h"
 #include "nta/Logger.h"
 
 namespace nta {

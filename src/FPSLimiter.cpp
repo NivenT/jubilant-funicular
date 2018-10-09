@@ -4,8 +4,6 @@
 #include "nta/FPSLimiter.h"
 
 namespace nta {
-    FPSLimiter::FPSLimiter() {
-    }
     FPSLimiter::~FPSLimiter() {
         m_maxFPS = m_fps = 0;
     }
