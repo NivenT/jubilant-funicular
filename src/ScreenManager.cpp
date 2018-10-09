@@ -10,7 +10,6 @@
 #include "nta/ScreenManager.h"
 #include "nta/WindowManager.h"
 #include "nta/CallbackManager.h"
-#include "nta/ResourceManager.h"
 #include "nta/Logger.h"
 #include "nta/utils.h"
 
@@ -24,35 +23,6 @@ namespace nta {
     }
     ScreenManager::~ScreenManager() {
         if (!m_screens.empty()) destroy();
-    }
-    GLSLProgram* ScreenManager::getGLSLProgram(crstring progPath) {
-        if (m_glslMap.find(progPath) == m_glslMap.end()) {
-            m_glslMap[progPath].compileShaders(progPath);
-        }
-        return &m_glslMap[progPath];
-    }
-    GLSLProgram* ScreenManager::getGLSLProgram(crstring name, crstring vert, crstring frag) {
-        if (m_glslMap.find(name) == m_glslMap.end()) {
-            m_glslMap[name].compileShaders(vert, frag);
-        }
-        return &m_glslMap[name];
-    }
-    Result<GLTexture> ScreenManager::getTexture(crstring path) {
-        if (m_textureMap.find(path) == m_textureMap.end()) {
-            auto raw = ResourceManager::getTexture(path);
-            // I really like this line
-            return raw.map<GLTexture>([&](const RawTexture& raw) {
-                return m_textureMap[path] = GLTexture(raw);
-            });
-        }
-        return Result<GLTexture>::new_ok(m_textureMap[path]);
-    }
-    Result<std::string> ScreenManager::getTextureFile(GLTexture tex) {
-        if (m_textureFiles.find(tex) == m_textureFiles.end()) {
-            auto err = Logger::writeErrorToLog("tex not found in ScreenManager::m_textureFiles", MISSING_RESOURCE);
-            return Result<std::string>::new_err(err);
-        }
-        return Result<std::string>::new_ok(m_textureFiles[tex]);
     }
     Screen* ScreenManager::getCurrScreen() const {
         /// \todo write log error if m_currScreen is out of range
@@ -199,7 +169,7 @@ namespace nta {
             delete screen;
         }
         m_screens.clear();
-        m_glslMap.clear();
+        m_context_data.destroy();
         WindowManager::destroyWindow(m_window->getTitle());
         Logger::writeToLog("Destroyed ScreenManager");
     }

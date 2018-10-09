@@ -36,7 +36,7 @@ public:
 void SquareScreen::init() {
     Logger::writeToLog("Initializing screen...");
 
-    m_simple_prog = m_manager->getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getContextData().getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         m_simple_prog->addAttribute("pos");
         m_simple_prog->addAttribute("color");

@@ -19,11 +19,13 @@ private:
 public:
     BallComponent(nta::crvec2 cen, float rad, nta::crvec4 col) : m_col(col), m_rad(rad), m_cen(cen) {}
     bool has_touched_ground() const { return m_touched_ground; }
-    void draw(nta::SpriteBatch& batch) const {
-        nta::GLTexture tex = nta::GLTexture(nta::ResourceManager::getTexture("circle.png").get_data());
-        batch.addGlyph(glm::vec4(m_cen.x - m_rad, m_cen.y + m_rad, m_rad*2.f, m_rad*2.f),
-                       glm::vec4(0, 0, 1, 1), tex.id, m_col);
-        //glDeleteTextures(1, &tex.id);
+    void draw(nta::SpriteBatch& batch, nta::ContextData& context) const {
+        // Using Result::map means that nothing will be rendered if an error occurs
+        // while trying to get the texture
+        context.getTexture("circle.png").map([&](const nta::GLTexture& tex) {
+            batch.addGlyph(glm::vec4(m_cen.x-m_rad, m_cen.y+m_rad, m_rad*2.f, m_rad*2.f),
+                           glm::vec4(0, 0, 1, 1), tex.id, m_col);
+        });
     }
     void update(float dt) {
         m_vel.y -= 9.8f * dt;
@@ -55,17 +57,17 @@ public:
     bool is_over() const {
         return m_num_active_screens <= 0;
     }
-    void draw_player(nta::SpriteBatch& batch) const {
+    void draw_player(nta::SpriteBatch& batch, nta::ContextData& context) const {
         // get_component returns an nta::Option.
         // Using map means we only try and draw the BallComponent when it is succesfully found
-        m_ecs.get_component<BallComponent>(m_player).map([&batch](BallComponent& cmpn) {
-            cmpn.draw(batch);
+        m_ecs.get_component<BallComponent>(m_player).map([&](BallComponent& cmpn) {
+            cmpn.draw(batch, context);
         });
     }
-    void draw_objects(nta::SpriteBatch& batch) const {
+    void draw_objects(nta::SpriteBatch& batch, nta::ContextData& context) const {
         for (BallComponent* cmpn : m_ecs.get_component_list<BallComponent>()) {
             if (cmpn->get_id() != m_player_ball_component_id) {
-                cmpn->draw(batch);
+                cmpn->draw(batch, context);
             }
         }
     }

@@ -26,7 +26,7 @@ public:
 void PlayerScreen::init() {
     nta::Logger::writeToLog("Initializing PlayerScreen...");
 
-    m_glsl_prog = m_manager->getGLSLProgram("simple2D");
+    m_glsl_prog = m_manager->getContextData().getGLSLProgram("simple2D");
     if (!m_glsl_prog->isLinked()) {
         m_glsl_prog->addAttribute("pos");
         m_glsl_prog->addAttribute("color");
@@ -53,7 +53,7 @@ void PlayerScreen::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     m_batch.begin(); {
-        m_state->draw_player(m_batch);
+        m_state->draw_player(m_batch, m_manager->getContextData());
     } m_batch.end();
 
     m_glsl_prog->use(); {

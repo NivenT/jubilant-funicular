@@ -38,9 +38,17 @@ public:
     GraphicsComponent(vec4 col, float rad) : m_color(col),  m_pos(0), m_rad(rad) {}
 
     vec2 get_pos() const { return m_pos; }
-    void draw(nta::SpriteBatch& batch) {
+    // The ContextData is what stores GLTextures, among other things
+    void draw(nta::SpriteBatch& batch, nta::ContextData& context) {
+        // Gets a cached texture so we don't repeatedly load in the same file
+        nta::Result<nta::GLTexture> tex = context.getTexture("circle.png");
+        // There should be no error
+        assert(!tex.is_err());
+        // Get the id of this texture
+        GLuint id = tex.get_data().id;
+
         vec2 top_left = m_pos + vec2(-m_rad, m_rad);
-        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), tex.id, 
+        batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, 
                        m_color);
     }
     void receive(const nta::Message& message) {
@@ -163,7 +171,7 @@ void MainScreen::addBall(nta::crvec2 pos) {
 void MainScreen::init() {
     nta::Logger::writeToLog("Initializing main screen...");
 
-    m_simple_prog = m_manager->getGLSLProgram("simple2D");
+    m_simple_prog = m_manager->getContextData().getGLSLProgram("simple2D");
     if (!m_simple_prog->isLinked()) {
         m_simple_prog->addAttribute("pos");
         m_simple_prog->addAttribute("color");
@@ -177,13 +185,6 @@ void MainScreen::init() {
 
     m_batch.init();
     m_font = nta::ResourceManager::getSpriteFont("font.otf");
-
-    // Gets a cached texture so we don't repeatedly load in the same file
-    nta::Result<nta::GLTexture> tex = m_manager->getTexture("circle.png");
-    // There should be no error
-    assert(!tex.is_err());
-    // Set this as the texture used by GraphicsComponents
-    GraphicsComponent::tex = tex.get_data();
 
     // Here we initialize a bunch of random balls
     for (int i = 0; i < NUM_INIT_BALLS; i++) {
@@ -247,7 +248,7 @@ void MainScreen::render() {
 
     m_batch.begin(); {
         for (GraphicsComponent* cmpn : m_system.get_component_list<GraphicsComponent>()) {
-            cmpn->draw(m_batch);
+            cmpn->draw(m_batch, m_manager->getContextData());
         }
 
         string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());

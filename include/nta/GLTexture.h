@@ -37,7 +37,7 @@ namespace nta {
             return id == rhs.id;
         }
         /// Deletes this texture
-        void free();
+        void destroy() { glDeleteTextures(1, &id); }
 
         /// the id of the texture
         GLuint id;

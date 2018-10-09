@@ -2,15 +2,13 @@
 #define NTA_SCREENMANAGER_H_INCLUDED
 
 #include <vector>
-#include <map>
 #include <mutex>
 
 #include "nta/Screen.h"
 #include "nta/FPSLimiter.h"
 #include "nta/Window.h"
-#include "nta/GLSLProgram.h"
 #include "nta/InputManager.h"
-#include "nta/GLTexture.h"
+#include "nta/ContextData.h"
 
 namespace nta {
     /// Manages a collection of screens
@@ -24,15 +22,10 @@ namespace nta {
         /// Lock for access the event queue
         static std::mutex m_event_lock;
 
-        /// Collection of GLSLProgram
-        std::map<std::string, GLSLProgram> m_glslMap;
-        /// a map file names to textures
-        std::map<std::string, GLTexture> m_textureMap;
-        /// Inverse map to m_textureMap
-        std::unordered_map<GLTexture, std::string> m_textureFiles;
-
         /// the screens
         std::vector<Screen*> m_screens;
+        /// GLTextures and GLSLPrograms and whatnot
+        ContextData m_context_data;
         /// Keeps track of all input received in this window
         InputManager m_input;
         /// used to cap the FPS
@@ -46,26 +39,14 @@ namespace nta {
         ScreenManager(crstring title, float maxFPS, int width = 640, int height = 480);
         /// basic destructor
         ~ScreenManager();
-        /// Gets GLSLProgram at specified path
-        ///
-        /// Assumes vertex shader is (progPath + ".vert") and
-        /// fragment shader is (progPath + ".frag")
-        GLSLProgram* getGLSLProgram(crstring progPath);
-        /// Gets GLSLProgram, specifying explicitly where the vertex and fragment
-        /// shaders are. 
-        ///
-        /// Uses name as the key in the map
-        GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
-        /// Gets a GLTexture representing the image at the given path
-        Result<GLTexture> getTexture(crstring path);
-        /// Gets the name of the file used the create tex
-        Result<std::string> getTextureFile(GLTexture tex);
         /// returns the active screen
         Screen* getCurrScreen() const;
         /// returns the window
         const Window* getWindow() const { return m_window; }
         /// returns the InputManager
         const InputManager&  getInput() const { return m_input; }
+        /// returns the ContextData
+        ContextData& getContextData() { return m_context_data; }
         /// returns the current fps
         float getFPS() const;
         /// returns true if this manager is responsible for handling the event
