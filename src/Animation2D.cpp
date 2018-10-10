@@ -1,14 +1,12 @@
 #include "nta/Animation2D.h"
-#include "nta/ResourceManager.h"
 #include "nta/Logger.h"
 
 #define INVALID_LEN_MSG "Animation2D Error: Tried creating animation with 0 length"
 #define INVALID_IDX_MSG "Animation2D Error: Tried creating animation start with nonexistent index"
 
 namespace nta {
-    SpriteSheet::SpriteSheet(crstring file_path, crivec2 dims) : dims(dims) {
-        // Why is this compiling?
-        tex = ResourceManager::getTexture(file_path).get_data();
+    SpriteSheet::SpriteSheet(ContextData& context, crstring file_path, crivec2 dims) : dims(dims) {
+        tex = context.getTexture(file_path).get_data_or(GLTexture::no_texture());
     }
 
     Animation2D::Animation2D(const SpriteSheet& sheet, std::size_t start, std::size_t length, float speed) :
@@ -20,11 +18,11 @@ namespace nta {
             Logger::writeErrorToLog(INVALID_IDX_MSG, INVALID_VALUE);
         }
     }
-    Animation2D::Animation2D(crstring file_path, crivec2 dims, std::size_t start, std::size_t length, float speed) :
-        Animation2D(SpriteSheet(file_path, dims), start, length, speed) {
+    Animation2D::Animation2D(ContextData& context, crstring file_path, crivec2 dims, std::size_t start, std::size_t length, float speed) :
+        Animation2D(SpriteSheet(context, file_path, dims), start, length, speed) {
     }
-    Animation2D::Animation2D(crstring file_path, int num_cols, std::size_t start, std::size_t length, float speed) :
-        Animation2D(SpriteSheet(file_path, num_cols), start, length, speed) {
+    Animation2D::Animation2D(ContextData& context, crstring file_path, int num_cols, std::size_t start, std::size_t length, float speed) :
+        Animation2D(SpriteSheet(context, file_path, num_cols), start, length, speed) {
     }
     glm::vec4 Animation2D::get_uv() const {
         return m_sheet.get_uv(get_index());

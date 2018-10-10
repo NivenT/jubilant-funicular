@@ -1,7 +1,7 @@
 #ifndef NTA_ANIMATION2D_H_INCLUDED
 #define NTA_ANIMATION2D_H_INCLUDED
 
-#include "nta/GLTexture.h"
+#include "nta/ContextData.h"
 
 namespace nta {
     /// Multiple sprites (each the same size) in one texture
@@ -12,8 +12,8 @@ namespace nta {
         }
         SpriteSheet(const GLTexture& tex, crivec2 dims) : tex(tex), dims(dims) {
         }
-        SpriteSheet(crstring file_path, crivec2 dims);
-        SpriteSheet(crstring file_path, int num_cols) : SpriteSheet(file_path, glm::ivec2(1, num_cols)) {
+        SpriteSheet(ContextData& context, crstring file_path, crivec2 dims);
+        SpriteSheet(ContextData& context, crstring file_path, int num_cols) : SpriteSheet(context, file_path, glm::ivec2(1, num_cols)) {
         }
         /// Gets UV-coordinates of specific sprite in the sheet
         ///
@@ -62,10 +62,10 @@ namespace nta {
         Animation2D() {}
         Animation2D(const SpriteSheet& sheet, std::size_t start = 0, 
                     std::size_t length = 1, float speed = 1);
-        Animation2D(crstring file_path, crivec2 dims, std::size_t start = 0, 
-                    std::size_t length = 1, float speed = 1);
-        Animation2D(crstring file_path, int num_cols, std::size_t start = 0, 
-                    std::size_t length = 1, float speed = 1);
+        Animation2D(ContextData& context, crstring file_path, crivec2 dims, 
+                    std::size_t start = 0, std::size_t length = 1, float speed = 1);
+        Animation2D(ContextData& context, crstring file_path, int num_cols, 
+                    std::size_t start = 0, std::size_t length = 1, float speed = 1);
         glm::vec4 get_uv() const;
         glm::vec4 get_flipped_uv() const;
         glm::vec2 get_frame_dims() const;
