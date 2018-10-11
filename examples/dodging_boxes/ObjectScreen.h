@@ -6,6 +6,7 @@
 class ObjectScreen : public nta::Screen {
 private:
     nta::GLSLProgram* m_glsl_prog = nullptr;
+    nta::SpriteFont* m_font;
     nta::SpriteBatch m_batch;
     nta::Camera2D m_camera;
     GameState * const m_state;
@@ -31,6 +32,10 @@ void ObjectScreen::init() {
         m_glsl_prog->linkShaders();
     }
 
+    auto maybe_font = m_manager->getContextData().getSpriteFont("font.otf");
+    assert(maybe_font.is_ok()); // nothing should go wrong
+    m_font = maybe_font.unwrap();
+    
     m_batch.init();
 
     nta::Logger::writeToLog("ObjectScreen initialized");
@@ -42,6 +47,9 @@ void ObjectScreen::render() {
 
     m_batch.begin(); {
         m_state->draw_objects(m_batch, m_manager->getContextData());
+
+        std::string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());
+        m_font->drawText(m_batch, text, glm::vec4(-100, 100, 20, 10));
     } m_batch.end();
 
     m_glsl_prog->use(); {

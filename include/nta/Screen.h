@@ -1,5 +1,5 @@
-#ifndef SCREEN_H_INCLUDED
-#define SCREEN_H_INCLUDED
+#ifndef NTA_SCREEN_H_INCLUDED
+#define NTA_SCREEN_H_INCLUDED
 
 #include "nta/Window.h"
 #include "nta/InputManager.h"
@@ -103,4 +103,4 @@ namespace nta {
     };
 }
 
-#endif // SCREEN_H_INCLUDED
+#endif // NTA_SCREEN_H_INCLUDED

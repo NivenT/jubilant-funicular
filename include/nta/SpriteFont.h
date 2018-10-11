@@ -1,9 +1,11 @@
-#ifndef SPRITEFONT_H_INCLUDED
-#define SPRITEFONT_H_INCLUDED
+#ifndef NTA_SPRITEFONT_H_INCLUDED
+#define NTA_SPRITEFONT_H_INCLUDED
 
 #include <map>
 
-#include "SpriteBatch.h"
+#include <SDL2/SDL_ttf.h>
+
+#include "nta/SpriteBatch.h"
 
 #define FIRST_PRINTABLE_CHAR ((char)32)  //space
 #define LAST_PRINTABLE_CHAR  ((char)126) //~
@@ -11,7 +13,7 @@
 
 namespace nta {
     class SpriteFont;
-    class ResourceManager;
+    class ContextData;
     /// represents a single char in the texture
     struct CharGlyph {
         /// the rectangle containing this glyph in the texture
@@ -51,10 +53,10 @@ namespace nta {
     /// Loads in a .ttf file, creates a font texture from it, and is then used to render text
     class SpriteFont {
     private:
-        /// constructor - creates a texture containing the font stored in fontPath with glyphs of the given size
-        SpriteFont(crstring fontPath, unsigned int size);
-        /// destructor
-        ~SpriteFont();
+        /// Initializes the SpriteFont
+        ///
+        /// Creates a texture from the font
+        void init(TTF_Font* font);
         /// a collection of glyphs for each char
         CharGlyph* m_charGlyphs = nullptr;
         /// the idea of the generated texture
@@ -62,6 +64,9 @@ namespace nta {
         /// the height of the font
         int m_fontHeight = 0;
     public:
+        SpriteFont() {}
+        /// destructor
+        ~SpriteFont() { destroy(); }
         /// returns the dimensions of the rectangle containing the text
         glm::vec2 measure(crstring text) const;
         /// renders text with specified location, color, scale, etc.
@@ -73,8 +78,10 @@ namespace nta {
                       crvec4 color = glm::vec4(1), float depth = NTA_DEFAULT_DEPTH) const;
         /// renders texture
         void drawTexture(SpriteBatch& batch) const;
-        friend ResourceManager;
+        /// Destroys this SpriteFont
+        void destroy();
+        friend ContextData;
     };
 }
 
-#endif // SPRITEFONT_H_INCLUDED
+#endif // NTA_SPRITEFONT_H_INCLUDED

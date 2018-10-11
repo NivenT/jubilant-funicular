@@ -184,7 +184,10 @@ void MainScreen::init() {
     m_simple_prog->unuse();
 
     m_batch.init();
-    m_font = nta::ResourceManager::getSpriteFont("font.otf");
+    
+    auto maybe_font = m_manager->getContextData().getSpriteFont("font.otf");
+    assert(maybe_font.is_ok()); // nothing should go wrong
+    m_font = maybe_font.unwrap();
 
     // Here we initialize a bunch of random balls
     for (int i = 0; i < NUM_INIT_BALLS; i++) {

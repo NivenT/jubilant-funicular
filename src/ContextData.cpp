@@ -33,6 +33,16 @@ namespace nta {
         }
         return Result<std::string>::new_ok(m_textureFiles[tex]);
     }
+    Result<SpriteFont*> ContextData::getSpriteFont(crstring fontPath, int fontSize) {
+        std::pair<std::string, int> key = std::make_pair(fontPath, fontSize);
+        if (m_fontMap.find(key) == m_fontMap.end()) {
+            auto ttf_font = ResourceManager::getFont(fontPath, fontSize);
+            if (ttf_font.is_err()) return ttf_font.convert_error<SpriteFont*>();
+            Logger::writeToLog("TTF_Font \"" + fontPath + "\" (size: " + utils::to_string(fontSize) + ") doesn't have a SpriteFont in this context.");
+            m_fontMap[key].init(ttf_font.unwrap());
+        }
+        return Result<SpriteFont*>::new_ok(&m_fontMap[key]);
+    }
     void ContextData::destroy() {
         Logger::writeToLog("Destroying ContextData...");
         Logger::indent();
@@ -45,6 +55,11 @@ namespace nta {
             Logger::writeToLog("Deleting GLTexture \"" + pair.first + "\"...");
             pair.second.destroy();
             Logger::writeToLog("Deleted GLTexture");
+        }
+        for (auto& pair : m_fontMap) {
+            Logger::writeToLog("Deleting SpriteFont \"" + pair.first.first + "\"...");
+            pair.second.destroy();
+            Logger::writeToLog("Deleted SpriteFont");
         }
         Logger::unindent();
         Logger::writeToLog("Destroyed ContextData");

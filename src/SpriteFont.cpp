@@ -1,10 +1,8 @@
-#include <SDL2/SDL_ttf.h>
-
 #include "nta/SpriteFont.h"
 #include "nta/Logger.h"
 
 namespace nta {
-    SpriteFont::SpriteFont(crstring fontPath, unsigned int size) {
+    void SpriteFont::init(TTF_Font* font) {
         static auto toPower2 = [](int i) {
             i--;
             i |= i >> 1;
@@ -14,17 +12,8 @@ namespace nta {
             i |= i >> 16;
             return ++i;
         };
-        if (!TTF_WasInit()) {
-            TTF_Init();
-        }
-        Logger::writeToLog("Loading ttf font: " + fontPath + "...");
-        TTF_Font* font = TTF_OpenFont(fontPath.c_str(), size);
-        if (!font) {
-            Logger::writeErrorToLog("Could not load font", MISSING_RESOURCE);
-        }
         m_fontHeight = TTF_FontHeight(font);
-        Logger::writeToLog("Loaded font");
-        Logger::writeToLog("Creating sprite font (" + utils::to_string(size) + ")...");
+        Logger::writeToLog("Creating SpriteFont...");
         FontMap* seed = new FontMap; /// \todo Rename now that we're no longer using simulated annealing
         SDL_Surface* glyphSurface = nullptr;
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
@@ -42,6 +31,7 @@ namespace nta {
         memset(graySquare, 0x50, dimensions.x*dimensions.y*4);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, dimensions.x, dimensions.y, 0, GL_RGBA,
                      GL_UNSIGNED_BYTE, graySquare);
+        delete[] graySquare;
         // add glyphs to texture
         m_charGlyphs = new CharGlyph[NUM_PRINTABLE_CHARS];
         for (char c = FIRST_PRINTABLE_CHAR; c <= LAST_PRINTABLE_CHAR; c++) {
@@ -62,12 +52,11 @@ namespace nta {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
         glBindTexture(GL_TEXTURE_2D, 0);
-        TTF_CloseFont(font);
-        Logger::writeToLog("Created sprite font");
+        Logger::writeToLog("Created SpriteFont");
         Logger::writeToLog("Generated font has dimensions: " + utils::to_string(dimensions.x) + " x " +
                            utils::to_string(dimensions.y));
     }
-    SpriteFont::~SpriteFont() {
+    void SpriteFont::destroy() {
         if (m_texId != 0) {
             glDeleteTextures(1, &m_texId);
         }

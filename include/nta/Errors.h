@@ -125,6 +125,8 @@ namespace nta {
     		}
     		return data; 
     	}
+        /// Same as get_data
+        T unwrap() const { return get_data(); }
     	/// Get the Error (only use if is_err() returns true)
     	Error get_err() const { 
     		if (is_ok()) {
@@ -135,6 +137,8 @@ namespace nta {
     	}
     	/// Tries getting data, returning a default value if this is an error
     	T get_data_or(T optb) const { return is_err_variant ? optb : data; }
+        /// Same as get_data_or
+        T unwrap_or(T optb) const { return get_data_or(optb); }
         /// Applies a function if no error has occured, else returns the same error
         template<typename S>
         Result<S> map(std::function<S(T)> func) {

@@ -44,6 +44,7 @@ namespace nta {
         if (gl_minor_version >= 0) SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, gl_minor_version);
         if (use_gl_core) SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
         SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_CROSSHAIR));
+        TTF_Init();
         #ifdef NTA_USE_IMGUI
             IMGUI_CHECKVERSION();
             ImGui::CreateContext();
@@ -72,7 +73,7 @@ namespace nta {
             AudioManager::destroy();
         #endif
         CallbackManager::destroy();
-        if (TTF_WasInit()) TTF_Quit();
+        TTF_Quit();
         SDL_Quit();
     }
     bool check_error() {
