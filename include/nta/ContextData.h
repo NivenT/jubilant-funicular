@@ -36,7 +36,7 @@ namespace nta {
         /// Uses name as the key in the map
         GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
         /// Gets a GLTexture representing the image at the given path
-        Result<GLTexture> getTexture(crstring path);
+        Result<GLTexture> getTexture(crstring path, crvec2 dimensions = glm::vec2(0));
         /// Gets the name of the file used the create tex
         Result<std::string> getTextureFile(GLTexture tex);
         /// Gets SpriteFont created from the given font with the given size

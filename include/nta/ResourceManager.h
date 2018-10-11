@@ -20,9 +20,8 @@ namespace nta {
         static std::map<std::pair<std::string, int>, TTF_Font*> m_fontMap;
     public:
         /// returns the resource with the given path, loading it if need be
-        static Result<RawTexture> getTexture(crstring imagePath, 
-                                             crvec2 dimensions = glm::vec2(0));
-        static Result<TTF_Font*> getFont(crstring fontPath, int fontSize = 32);
+        static Result<RawTexture> getTexture(crstring imagePath, crvec2 dimensions);
+        static Result<TTF_Font*> getFont(crstring fontPath, int fontSize);
         static void destroy();
     };
 }

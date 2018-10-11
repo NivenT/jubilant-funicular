@@ -56,7 +56,7 @@ private:
     nta::ECS m_ecs;
     nta::Entity m_player;
     nta::ComponentID m_player_ball_component_id;
-    const int m_num_objects = 10;
+    const int m_num_objects = 15;
     int m_num_active_screens = 2;
 public:
     GameState();
@@ -96,7 +96,7 @@ public:
     }
     void update(float dt) {
         std::lock_guard<std::mutex> g(m_state_lock);
-        if (m_ecs.num_entities() < m_num_objects && nta::Random::randFloat() < dt*2.f) {
+        if (m_ecs.num_entities()-1 < m_num_objects && nta::Random::randFloat() < dt*2.f) {
             auto x_pos = nta::Random::randFloat(-100, 100);
             auto rad = nta::Random::randGaussian(6, 3);
             auto col = nta::Random::randRGB();

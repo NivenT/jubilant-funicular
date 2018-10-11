@@ -69,7 +69,7 @@ namespace nta {
         void* m_switchData = nullptr;
     public:
         /// basic constructor and destructor
-        Screen(crstring name = "nameless");
+        Screen(crstring name = "UNAMED_SCREEN");
         virtual ~Screen();
         /// returns state of screen
         ScreenState getState() const;

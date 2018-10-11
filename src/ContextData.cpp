@@ -15,9 +15,9 @@ namespace nta {
         }
         return &m_glslMap[name];
     }
-    Result<GLTexture> ContextData::getTexture(crstring path) {
+    Result<GLTexture> ContextData::getTexture(crstring path, crvec2 dimensions) {
         if (m_textureMap.find(path) == m_textureMap.end()) {
-            auto raw = ResourceManager::getTexture(path);
+            auto raw = ResourceManager::getTexture(path, dimensions);
             // I really like this bit
             return raw.map<GLTexture>([&](const RawTexture& raw) {
                 Logger::writeToLog("RawTexture \"" + path + "\" doesn't have a GLTexture in this context.");
