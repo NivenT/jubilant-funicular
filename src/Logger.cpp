@@ -4,6 +4,7 @@
 
 namespace nta {
     std::ofstream   Logger::m_logFile;
+    std::ostream*   Logger::m_secondLog = nullptr;
     size_t          Logger::m_tabs = 0;
     const size_t    Logger::TAB_SIZE = 4;
     void Logger::createLog() {
@@ -17,6 +18,9 @@ namespace nta {
         std::stringstream logEntry;
         logEntry<<SDL_GetTicks()/1000.<<" seconds: "<<tabs<<entry;
         m_logFile<<lock_stream<<logEntry.str()<<std::endl<<std::endl<<unlock_stream;
+        if (m_secondLog) {
+            (*m_secondLog)<<lock_stream<<logEntry.str()<<std::endl<<std::endl<<unlock_stream;
+        }
     }
     /// \todo Make sure all the code that previously assumed this function always
     ///       exits still behaves sensibly

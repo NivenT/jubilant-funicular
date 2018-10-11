@@ -269,6 +269,8 @@ void MainScreen::render() {
 
 int main(int argc, char* argv[]) {
     nta::init();
+    /// All logged information will be sent to std::cout as well
+    nta::Logger::useSecondLog(std::cout);
 
     nta::ScreenManager screenManager("\"Bouncing\" Balls", 60);
     screenManager.addScreen(new MainScreen);
