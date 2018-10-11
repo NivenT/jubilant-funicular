@@ -82,20 +82,13 @@ Collaboration diagram for nta::ResourceManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7141ba79fe781349cc2037e31c13b66"><td class="memItemLeft" align="right" valign="top"><a id="ae7141ba79fe781349cc2037e31c13b66"></a>
-static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d5/d41/structnta_1_1RawTexture.html">RawTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#ae7141ba79fe781349cc2037e31c13b66">getTexture</a> (crstring imagePath, crvec2 dimensions=glm::vec2(0))</td></tr>
-<tr class="memdesc:ae7141ba79fe781349cc2037e31c13b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the resource with the given path, loading it if need be <br /></td></tr>
-<tr class="separator:ae7141ba79fe781349cc2037e31c13b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0411e5cf357d6d285820338d92d06a0e"><td class="memItemLeft" align="right" valign="top"><a id="a0411e5cf357d6d285820338d92d06a0e"></a>
-static <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getSpriteFont</b> (crstring fontPath, int fontSize=32)</td></tr>
-<tr class="separator:a0411e5cf357d6d285820338d92d06a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f9971f86fc9e50d7a62aa5f6f91a489"><td class="memItemLeft" align="right" valign="top"><a id="a2f9971f86fc9e50d7a62aa5f6f91a489"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#a2f9971f86fc9e50d7a62aa5f6f91a489">deleteTexture</a> (crstring imagePath)</td></tr>
-<tr class="memdesc:a2f9971f86fc9e50d7a62aa5f6f91a489"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes the resource with the given path from the map and deletes it <br /></td></tr>
-<tr class="separator:a2f9971f86fc9e50d7a62aa5f6f91a489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c549cb1496d1f38b5900258b0624c7"><td class="memItemLeft" align="right" valign="top"><a id="a16c549cb1496d1f38b5900258b0624c7"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteSpriteFont</b> (crstring fontPath, int fontSize=32)</td></tr>
-<tr class="separator:a16c549cb1496d1f38b5900258b0624c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ce2275e4d3ce1b1c09b71b3c8e7619"><td class="memItemLeft" align="right" valign="top"><a id="af1ce2275e4d3ce1b1c09b71b3c8e7619"></a>
+static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d5/d41/structnta_1_1RawTexture.html">RawTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#af1ce2275e4d3ce1b1c09b71b3c8e7619">getTexture</a> (crstring imagePath, crvec2 dimensions)</td></tr>
+<tr class="memdesc:af1ce2275e4d3ce1b1c09b71b3c8e7619"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the resource with the given path, loading it if need be <br /></td></tr>
+<tr class="separator:af1ce2275e4d3ce1b1c09b71b3c8e7619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ba1765ba93de35918eac97b48a273e"><td class="memItemLeft" align="right" valign="top"><a id="a10ba1765ba93de35918eac97b48a273e"></a>
+static <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; TTF_Font * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getFont</b> (crstring fontPath, int fontSize)</td></tr>
+<tr class="separator:a10ba1765ba93de35918eac97b48a273e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ff6f1cb4044d8f47fa5db9a3df2514"><td class="memItemLeft" align="right" valign="top"><a id="a26ff6f1cb4044d8f47fa5db9a3df2514"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> ()</td></tr>
 <tr class="separator:a26ff6f1cb4044d8f47fa5db9a3df2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,16 +99,15 @@ Static Private Attributes</h2></td></tr>
 static std::map&lt; std::string, <a class="el" href="../../d5/d41/structnta_1_1RawTexture.html">RawTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#a21a29579bde7aeb98038d081982471a5">m_textureMap</a></td></tr>
 <tr class="memdesc:a21a29579bde7aeb98038d081982471a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">a map for associating a texture with the name of its file <br /></td></tr>
 <tr class="separator:a21a29579bde7aeb98038d081982471a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6a87b69211ba52452b4c02847ea934e"><td class="memItemLeft" align="right" valign="top"><a id="ac6a87b69211ba52452b4c02847ea934e"></a>
-static std::map&lt; std::pair&lt; std::string, int &gt;, <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html#ac6a87b69211ba52452b4c02847ea934e">m_fontMap</a></td></tr>
-<tr class="memdesc:ac6a87b69211ba52452b4c02847ea934e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Why does this hold pointers? <br /></td></tr>
-<tr class="separator:ac6a87b69211ba52452b4c02847ea934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b465dd783f1bd5bf22e491b50701c8d"><td class="memItemLeft" align="right" valign="top"><a id="a9b465dd783f1bd5bf22e491b50701c8d"></a>
+static std::map&lt; std::pair&lt; std::string, int &gt;, TTF_Font * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_fontMap</b></td></tr>
+<tr class="separator:a9b465dd783f1bd5bf22e491b50701c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles storing and retrieving images so an image isn't loaded multiple times</p>
+<div class="textblock"><p>Responsible for loading and caching external files, so they are only loaded in once during program execution. In general, you you probably don't want to use <a class="el" href="../../d5/d87/classnta_1_1ResourceManager.html">ResourceManager</a> directly, but instead use <a class="el" href="../../df/dac/classnta_1_1ContextData.html">ContextData</a>.</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>Map from Path instead of std::string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d51/ResourceManager_8h_source.html#l00014">14</a> of file <a class="el" href="../../de/d51/ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ResourceManager_8h_source.html#l00016">16</a> of file <a class="el" href="../../de/d51/ResourceManager_8h_source.html">ResourceManager.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../de/d51/ResourceManager_8h_source.html">ResourceManager.h</a></li>
 <li>src/<a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html">ResourceManager.cpp</a></li>

@@ -9,7 +9,6 @@ var searchData=
   ['setmanagerkey',['SetManagerKey',['../d5/d4e/classnta_1_1SetManagerKey.html',1,'nta']]],
   ['setwindowkey',['SetWindowKey',['../d0/dfc/classnta_1_1SetWindowKey.html',1,'nta']]],
   ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html',1,'nta']]],
-  ['sprite',['Sprite',['../d4/d60/classnta_1_1Sprite.html',1,'nta']]],
   ['spritebatch',['SpriteBatch',['../d7/d3b/classnta_1_1SpriteBatch.html',1,'nta']]],
   ['spritefont',['SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html',1,'nta']]],
   ['spritesheet',['SpriteSheet',['../d9/d85/structnta_1_1SpriteSheet.html',1,'nta']]],

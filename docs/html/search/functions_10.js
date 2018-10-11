@@ -2,7 +2,7 @@ var searchData=
 [
   ['scaledimensions',['scaleDimensions',['../d3/d28/classnta_1_1Camera2D.html#aa89b58a2a5ca0c3df56d07e2722afcd6',1,'nta::Camera2D']]],
   ['schedule',['schedule',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#aa10c18b44db7449d04bb6577c70dc17b',1,'nta::utils::ThreadPool']]],
-  ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html#a268c9de735197debab91eb54f787fdea',1,'nta::Screen']]],
+  ['screen',['Screen',['../d6/d23/classnta_1_1Screen.html#a3ee264f646d8b3b0fafd3207b5bfb0ef',1,'nta::Screen']]],
   ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#a08ff6088b399f4253b838db207d64d96',1,'nta::ScreenManager']]],
   ['screentogame',['screenToGame',['../d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a',1,'nta::Camera2D']]],
   ['semaphore',['Semaphore',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ae01dc768910e74be62cbc81765693f44',1,'nta::utils::Semaphore']]],
@@ -29,9 +29,7 @@ var searchData=
   ['sortprimitives',['sortPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10',1,'nta::PrimitiveBatch']]],
   ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#a90adfaad718cb8d4fcec601bb87c0227',1,'nta::SoundEffect']]],
   ['split',['split',['../d7/d33/namespacenta_1_1utils.html#ae2b6ac39c9975a5ca13c417395fae759',1,'nta::utils']]],
-  ['sprite',['Sprite',['../d4/d60/classnta_1_1Sprite.html#a5d208eb1b82f0a60155887b5f4103dbc',1,'nta::Sprite']]],
   ['spritebatch',['SpriteBatch',['../d7/d3b/classnta_1_1SpriteBatch.html#a554ec4ee678b6f97621d299e4a258f95',1,'nta::SpriteBatch']]],
-  ['spritefont',['SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html#a9dc96f31efd0830dcb476ea87534e358',1,'nta::SpriteFont']]],
   ['starts_5fwith',['starts_with',['../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c',1,'nta::utils']]],
   ['stop',['stop',['../d4/dab/classnta_1_1Music.html#ade2d11ebc9273494b344e089cd7b58b8',1,'nta::Music']]],
   ['subscribe',['subscribe',['../d9/d4e/classnta_1_1Subject.html#a37d15cb0563d1c9ea93be398aaf28df7',1,'nta::Subject']]],

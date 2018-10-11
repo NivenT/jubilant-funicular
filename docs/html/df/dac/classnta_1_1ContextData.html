@@ -86,14 +86,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a35fffa039d5ab62981ed1e14dcc43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcca101dd1dba9a1b71c5f2e16ddd623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#afcca101dd1dba9a1b71c5f2e16ddd623">getGLSLProgram</a> (crstring name, crstring vert, crstring frag)</td></tr>
 <tr class="separator:afcca101dd1dba9a1b71c5f2e16ddd623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac98ebb970e0068a6104f0791743822f6"><td class="memItemLeft" align="right" valign="top"><a id="ac98ebb970e0068a6104f0791743822f6"></a>
-<a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#ac98ebb970e0068a6104f0791743822f6">getTexture</a> (crstring path)</td></tr>
-<tr class="memdesc:ac98ebb970e0068a6104f0791743822f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html" title="represents a texture (tied to a specific GL context) ">GLTexture</a> representing the image at the given path. <br /></td></tr>
-<tr class="separator:ac98ebb970e0068a6104f0791743822f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95437c16d35e7ac867242ed7e4536410"><td class="memItemLeft" align="right" valign="top"><a id="a95437c16d35e7ac867242ed7e4536410"></a>
+<a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a95437c16d35e7ac867242ed7e4536410">getTexture</a> (crstring path, crvec2 dimensions=glm::vec2(0))</td></tr>
+<tr class="memdesc:a95437c16d35e7ac867242ed7e4536410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html" title="represents a texture (tied to a specific GL context) ">GLTexture</a> representing the image at the given path. <br /></td></tr>
+<tr class="separator:a95437c16d35e7ac867242ed7e4536410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07c9ed2bb255d4de4065f84d6c599754"><td class="memItemLeft" align="right" valign="top"><a id="a07c9ed2bb255d4de4065f84d6c599754"></a>
 <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a07c9ed2bb255d4de4065f84d6c599754">getTextureFile</a> (<a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> tex)</td></tr>
 <tr class="memdesc:a07c9ed2bb255d4de4065f84d6c599754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the file used the create tex. <br /></td></tr>
 <tr class="separator:a07c9ed2bb255d4de4065f84d6c599754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6199fbcb0e2d03ae9af7b711f6ee298e"><td class="memItemLeft" align="right" valign="top"><a id="a6199fbcb0e2d03ae9af7b711f6ee298e"></a>
+<a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a6199fbcb0e2d03ae9af7b711f6ee298e">getSpriteFont</a> (crstring fontPath, int fontSize=32)</td></tr>
+<tr class="memdesc:a6199fbcb0e2d03ae9af7b711f6ee298e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html" title="Loads in a .ttf file, creates a font texture from it, and is then used to render text. ">SpriteFont</a> created from the given font with the given size. <br /></td></tr>
+<tr class="separator:a6199fbcb0e2d03ae9af7b711f6ee298e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399eeecf3b38affcb3df59943b5bfbb4"><td class="memItemLeft" align="right" valign="top"><a id="a399eeecf3b38affcb3df59943b5bfbb4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a399eeecf3b38affcb3df59943b5bfbb4">destroy</a> ()</td></tr>
 <tr class="memdesc:a399eeecf3b38affcb3df59943b5bfbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all data. <br /></td></tr>
@@ -113,12 +117,16 @@ std::map&lt; std::string, <a class="el" href="../../d3/dff/structnta_1_1GLTextur
 std::unordered_map&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a25b6c6604752aaa55c2bd2b31f5a8eb8">m_textureFiles</a></td></tr>
 <tr class="memdesc:a25b6c6604752aaa55c2bd2b31f5a8eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse map to m_textureMap. <br /></td></tr>
 <tr class="separator:a25b6c6604752aaa55c2bd2b31f5a8eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356e6331ef736d050d860c631d990661"><td class="memItemLeft" align="right" valign="top"><a id="a356e6331ef736d050d860c631d990661"></a>
+std::map&lt; std::pair&lt; std::string, int &gt;, <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a356e6331ef736d050d860c631d990661">m_fontMap</a></td></tr>
+<tr class="memdesc:a356e6331ef736d050d860c631d990661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map front (font name, font size) -&gt; <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html" title="Loads in a .ttf file, creates a font texture from it, and is then used to render text. ">SpriteFont</a>. <br /></td></tr>
+<tr class="separator:a356e6331ef736d050d860c631d990661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Certain pieces of data are tied to a specific GL context (e.g. a <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a>). This class manages all such data specific to one context.</p>
 <p>Generally, there should be one <a class="el" href="../../df/dac/classnta_1_1ContextData.html">ContextData</a> per <a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html">ScreenManager</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d4f/ContextData_8h_source.html#l00015">15</a> of file <a class="el" href="../../d7/d4f/ContextData_8h_source.html">ContextData.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d4f/ContextData_8h_source.html#l00017">17</a> of file <a class="el" href="../../d7/d4f/ContextData_8h_source.html">ContextData.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8a35fffa039d5ab62981ed1e14dcc43d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a35fffa039d5ab62981ed1e14dcc43d">&#9670;&nbsp;</a></span>getGLSLProgram() <span class="overload">[1/2]</span></h2>
