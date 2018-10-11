@@ -75,6 +75,7 @@ var searchData=
   ['m_5froot',['m_root',['../d3/d18/classnta_1_1Compressor.html#a9cec9a631892c8cd4b9c2358c7ac41f4',1,'nta::Compressor']]],
   ['m_5fscheduled',['m_scheduled',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545160bd42d91789b0e91d33fe1a4c87',1,'nta::utils::ThreadPool']]],
   ['m_5fscreens',['m_screens',['../d0/dc4/classnta_1_1ScreenManager.html#aed16963ad12365acbaf0191e1a72243d',1,'nta::ScreenManager']]],
+  ['m_5fsecondlog',['m_secondLog',['../d6/d0d/classnta_1_1Logger.html#ad110e0dbd7cbce6788f5e28c0b5ade28',1,'nta::Logger']]],
   ['m_5fsheet',['m_sheet',['../d2/d7a/classnta_1_1Animation2D.html#a7299c55bbae2e3a8eed7bbfde8362523',1,'nta::Animation2D']]],
   ['m_5fspeed',['m_speed',['../d2/d7a/classnta_1_1Animation2D.html#ae2df81906b0e98c7df18ed19950695e7',1,'nta::Animation2D']]],
   ['m_5fstart_5findex',['m_start_index',['../d2/d7a/classnta_1_1Animation2D.html#a61cdaf3599067dc1e2fe3b926b29b838',1,'nta::Animation2D']]],
