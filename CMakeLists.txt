@@ -1,30 +1,5 @@
 cmake_minimum_required(VERSION 2.8.7)
 
-# https://stackoverflow.com/questions/7787823/cmake-how-to-get-the-name-of-all-subdirectories-of-a-directory
-MACRO(SUBDIRLIST result curdir)
-  FILE(GLOB children RELATIVE ${curdir} ${curdir}/*)
-  SET(dirlist "")
-  FOREACH(child ${children})
-    IF(IS_DIRECTORY ${curdir}/${child})
-      LIST(APPEND dirlist ${child})
-    ENDIF()
-  ENDFOREACH()
-  SET(${result} ${dirlist})
-ENDMACRO()
-
-# This is kinda trash
-MACRO(COMPLEMENT_FILE_LIST result curdir glob1)
-  file(GLOB_RECURSE all RELATIVE ${curdir} ${curdir}/*)
-  set(complement "")
-  set(globs ${glob1} ${ARGN})
-  foreach(glob ${globs})
-    file(GLOB_RECURSE temp RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${glob})
-    list(APPEND complement ${temp})
-  endforeach(glob)
-  list(REMOVE_ITEM all ${complement})
-  set(${result} ${all})
-ENDMACRO()
-
 # Allow use of project folders for IDEs like Visual Studio, so we
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake")
