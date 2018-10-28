@@ -82,6 +82,9 @@ namespace nta {
             if (c == '\n') {
                 dim.y += m_fontHeight;
                 xOffset = 0;
+            } else if (c == '\t') {
+                // not the best way to implement tabs, but meh
+                xOffset += SPRITE_FONT_TAB_SIZE * m_charGlyphs[' '-FIRST_PRINTABLE_CHAR].size.x;
             } else {
                 xOffset += m_charGlyphs[c-FIRST_PRINTABLE_CHAR].size.x;
                 if (xOffset > dim.x) {
@@ -98,6 +101,9 @@ namespace nta {
             if (c == '\n') {
                 offset.y -= m_fontHeight*scale.y;
                 offset.x = 0;
+            } else if (c == '\t') {
+                CharGlyph cg = m_charGlyphs[' '-FIRST_PRINTABLE_CHAR];
+                offset.x += SPRITE_FONT_TAB_SIZE*cg.size.x*scale.x;
             } else {
                 CharGlyph cg = m_charGlyphs[c-FIRST_PRINTABLE_CHAR];
                 batch.addGlyph(glm::vec4(topLeft+offset, cg.size*scale), cg.uvRect, m_texId,

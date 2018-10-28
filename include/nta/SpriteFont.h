@@ -10,6 +10,7 @@
 #define FIRST_PRINTABLE_CHAR ((char)32)  //space
 #define LAST_PRINTABLE_CHAR  ((char)126) //~
 #define NUM_PRINTABLE_CHARS  (LAST_PRINTABLE_CHAR-FIRST_PRINTABLE_CHAR+1)
+#define SPRITE_FONT_TAB_SIZE 4
 
 namespace nta {
     class SpriteFont;
