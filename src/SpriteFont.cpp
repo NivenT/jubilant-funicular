@@ -3,6 +3,7 @@
 
 namespace nta {
     void SpriteFont::init(TTF_Font* font) {
+        /*
         static auto toPower2 = [](int i) {
             i--;
             i |= i >> 1;
@@ -12,6 +13,7 @@ namespace nta {
             i |= i >> 16;
             return ++i;
         };
+        */
         m_fontHeight = TTF_FontHeight(font);
         Logger::writeToLog("Creating SpriteFont...");
         FontMap* seed = new FontMap; /// \todo Rename now that we're no longer using simulated annealing
@@ -22,8 +24,12 @@ namespace nta {
             SDL_FreeSurface(glyphSurface);
         }
         seed->position();
+        /* Why did I want these to be powers of 2 before?
         glm::ivec2 dimensions = glm::ivec2(toPower2(seed->getBoundingDimensions().x),
                                            toPower2(seed->getBoundingDimensions().y));
+        */
+        glm::ivec2 dimensions(ceil(seed->getBoundingDimensions().x),
+                              ceil(seed->getBoundingDimensions().y));
         // create initial gray texture
         glGenTextures(1, &m_texId);
         glBindTexture(GL_TEXTURE_2D, m_texId);
@@ -111,7 +117,7 @@ namespace nta {
                           glm::abs(corner1-corner2));
         drawText(batch, text, posRect, color, depth);
     }
-    void SpriteFont::drawTexture(SpriteBatch& batch) const {
-        batch.addGlyph(glm::vec4(-100,100,200,200), glm::vec4(0,0,1,1), m_texId, 1);
+    void SpriteFont::drawTexture(SpriteBatch& batch, crvec4 posRect) const {
+        batch.addGlyph(posRect, glm::vec4(0,0,1,1), m_texId, 1);
     }
 }

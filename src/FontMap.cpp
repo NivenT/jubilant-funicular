@@ -16,11 +16,11 @@ namespace nta {
     glm::vec2 FontMap::getBoundingDimensions() const {
         float minX = 999, maxX = -999, minY = 999, maxY = -999;
         std::for_each(m_rects, m_rects+NUM_PRINTABLE_CHARS, [&](const CharRect& r) {
-                minX = std::min(r.topLeft.x,                minX);
-                maxX = std::max(r.topLeft.x+r.dimensions.x, maxX);
-                minY = std::min(r.topLeft.y-r.dimensions.y, minY);
-                maxY = std::max(r.topLeft.y,                maxY);
-            });
+            minX = std::min(r.topLeft.x,                minX);
+            maxX = std::max(r.topLeft.x+r.dimensions.x, maxX);
+            minY = std::min(r.topLeft.y-r.dimensions.y, minY);
+            maxY = std::max(r.topLeft.y,                maxY);
+        });
         return glm::vec2(maxX-minX, maxY-minY);
     }
     bool FontMap::isOverlapping(const CharRect& rect) const {

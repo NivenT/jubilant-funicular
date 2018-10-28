@@ -77,7 +77,7 @@ namespace nta {
         void drawText(SpriteBatch& batch, crvec2 corner1, crvec2 corner2, crstring text,
                       crvec4 color = glm::vec4(1), float depth = NTA_DEFAULT_DEPTH) const;
         /// renders texture
-        void drawTexture(SpriteBatch& batch) const;
+        void drawTexture(SpriteBatch& batch, crvec4 posRect = glm::vec4(-100, 100, 200, 200)) const;
         /// Destroys this SpriteFont
         void destroy();
         friend ContextData;
