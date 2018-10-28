@@ -13,6 +13,6 @@ var searchData=
   ['does_5fentity_5fexist',['does_entity_exist',['../db/da0/classnta_1_1ECS.html#a219f7ec9639689fc76fce97033a97d8d',1,'nta::ECS']]],
   ['draw',['draw',['../df/d9f/classnta_1_1ParticleBatch2D.html#a270e573b2a767bf32fde34d17d838e69',1,'nta::ParticleBatch2D::draw()'],['../d1/de9/classnta_1_1ParticleEngine2D.html#a759937cf45e74162ce85269ddf59237b',1,'nta::ParticleEngine2D::draw()']]],
   ['drawtext',['drawText',['../d6/d57/classnta_1_1SpriteFont.html#afdd646f19b11d9c8128151afad994a77',1,'nta::SpriteFont']]],
-  ['drawtexture',['drawTexture',['../d6/d57/classnta_1_1SpriteFont.html#ac5e60e0a7b6f9c0302c81f0d5b6628cc',1,'nta::SpriteFont']]],
+  ['drawtexture',['drawTexture',['../d6/d57/classnta_1_1SpriteFont.html#aaa2a3b5a60e095b1b23f0142825561e0',1,'nta::SpriteFont']]],
   ['dump',['dump',['../d3/d2d/classutils_1_1JsonNum.html#ac742ab7b0d292371740ce491031a3bed',1,'utils::JsonNum::dump()'],['../de/df3/classutils_1_1Json.html#a281a8b7e40a039bab59726a46d72a213',1,'utils::Json::dump()']]]
 ];
