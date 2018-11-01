@@ -3,7 +3,7 @@
 
 #include <functional>
 
-#include "nta/MyEngine.h"
+#include "nta/Option.h"
 
 /// \todo Add Option type
 namespace nta {
@@ -144,9 +144,11 @@ namespace nta {
         Result<S> map(std::function<S(T)> func) {
             return is_err_variant ? Result<S>::new_err(err) : Result<S>::new_ok(func(data));
         }
-        /// \todo (?) Return an Option<Error> instead?
-        void map(std::function<void(T)> func) {
-            if (!is_err_variant) func(data);
+        // Result<void> is basically Option<Error>
+        utils::Option<Error> map(std::function<void(T)> func) {
+            if (is_err_variant) return utils::Option<Error>::some(err);
+            func(data);
+            return utils::Option<Error>::none();
         }
         /// Converts an error variant of Result<T> to an error variant of Result<S>
         template<typename S>
