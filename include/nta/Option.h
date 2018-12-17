@@ -15,12 +15,22 @@ namespace nta {
         class Option {
         private:
             using type = typename std::remove_reference<T>::type;
+            using storage_type = typename std::conditional<std::is_reference<T>::value,
+                                                           void*,
+                                                           T>::type;
 
             /// Private constructor (use some or none instead)
-            Option(const T& d) : m_some(true) { new(&m_data) type(d); }
+            Option(const T& d) : m_some(true) { 
+                if (std::is_reference<T>::value) {
+                    // Maybe I should just memcpy instead
+                    new(&m_data) const void*(std::addressof(d));
+                } else {
+                    new(&m_data) type(std::move(d));
+                }
+            }
             Option() : m_some(false) {}
 
-            typename std::aligned_storage_t<sizeof(T), alignof(T)> m_data;
+            typename std::aligned_storage_t<sizeof(storage_type), alignof(storage_type)> m_data;
             bool m_some;
         public:
             Option(const Option&) = default;
@@ -66,8 +76,11 @@ namespace nta {
             /// \todo Push an error to ErrorManager instead
             if (!m_some) {
                 assert(false && "Tried getting data from a none Option");
+            } else if (std::is_reference<T>::value) {
+                return (T)**reinterpret_cast<const type * const *>(&m_data);
+            } else {
+                return (T)*reinterpret_cast<const type*>(&m_data);
             }
-            return (T)*reinterpret_cast<const type*>(&m_data);
         }
         template<typename T>
         void Option<T>::destroy() {
