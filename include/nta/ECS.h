@@ -15,7 +15,7 @@
 using namespace std;
 
 namespace nta {
-    typedef utils::Wrapper<uint64_t, struct EntityTag> Entity;
+    typedef utils::Wrapper<std::size_t, struct EntityTag> Entity;
     template<typename T>
     using ComponentList = std::vector<utils::LinkedNode<T>*>;
     /// A store of every Component type in use by an ECS

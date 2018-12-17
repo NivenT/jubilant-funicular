@@ -7,7 +7,7 @@
 
 namespace nta {
 	class ECS;
-	typedef utils::Wrapper<uint64_t, struct ComponentIDTag> ComponentID;
+	typedef utils::Wrapper<std::size_t, struct ComponentIDTag> ComponentID;
 	/// Base class for components
 	class Component {
 	protected:
