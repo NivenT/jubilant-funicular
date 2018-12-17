@@ -35,6 +35,8 @@ namespace nta {
 
 			/// Returns the number of active ids
 			std::size_t get_count() const { return m_last_id - m_free.size() - NTA_INVALID_ID; }
+			/// Returns m_last_id
+			T get_last_id() const { return m_last_id; }
 
 			/// Calls (and returns) gen_id
 			T operator()() { return gen_id(); }

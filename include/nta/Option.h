@@ -29,6 +29,8 @@ namespace nta {
             static Option some(const T& data);
             /// Creates a None variant Option
             static Option none();
+            /// Same as is_some
+            operator bool() const { return m_some; }
             /// Does this hold some data
             bool is_some() const { return m_some; }
             /// Does this hold nothing?
@@ -42,6 +44,8 @@ namespace nta {
             /// Return the data held by this Option or optb if it's None
             T get_or(const T& optb) { return m_some ? get() : optb; }
             T unwrap_or(const T& optb) { return get_or(optb); }
+            /// Turns this into None variant, calling destructor if necessary
+            void destroy();
             /// Returns an Option holding the result of applying func to data
             template<typename S>
             Option<S> map(std::function<S(T)> func);
@@ -64,6 +68,13 @@ namespace nta {
                 assert(false && "Tried getting data from a none Option");
             }
             return (T)*reinterpret_cast<const type*>(&m_data);
+        }
+        template<typename T>
+        void Option<T>::destroy() {
+            if (m_some) {
+                reinterpret_cast<type*>(&m_data)->~type();
+            }
+            m_some = false;
         }
         template<typename T> template<typename S>
         Option<S> Option<T>::map(std::function<S(T)> func) {
