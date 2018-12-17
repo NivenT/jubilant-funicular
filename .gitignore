@@ -1,4 +1,5 @@
 *~
 build/
 clang_build/
+debug_build/
 *.sublime-*

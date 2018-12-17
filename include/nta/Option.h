@@ -17,11 +17,11 @@ namespace nta {
             using type = typename std::remove_reference<T>::type;
 
             /// Private constructor (use some or none instead)
-            Option(const T& d) : m_data(d), m_some(true) {}
+            Option(const T& d) : m_some(true) { new(&m_data) type(d); }
             // This line is hacky trash
-            Option() : m_data(*(type*)(new(&m_data) char(0))), m_some(false) {}
+            Option() : m_some(false) {}
 
-            T m_data;
+            typename std::aligned_storage_t<sizeof(T), alignof(T)> m_data;
             bool m_some;
         public:
             Option(const Option&) = default;
@@ -41,8 +41,8 @@ namespace nta {
             /// unwrap and get are the same thing
             T unwrap() const { return get(); }
             /// Return the data held by this Option or optb if it's None
-            T get_or(const T& optb) const { return m_some ? m_data : optb; }
-            T unwrap_or(const T& optb) const { return get_or(optb); }
+            T get_or(const T& optb) { return m_some ? get() : optb; }
+            T unwrap_or(const T& optb) { return get_or(optb); }
             /// Returns an Option holding the result of applying func to data
             template<typename S>
             Option<S> map(std::function<S(T)> func);
@@ -64,19 +64,19 @@ namespace nta {
             if (!m_some) {
                 assert(false && "Tried getting data from a none Option");
             }
-            return m_data;
+            return (T)*reinterpret_cast<const type*>(&m_data);
         }
         template<typename T> template<typename S>
         Option<S> Option<T>::map(std::function<S(T)> func) {
-            return m_some ? Option<S>::some(func(m_data)) : Option<S>::none();
+            return m_some ? Option<S>::some(func(get())) : Option<S>::none();
         }
         template<typename T> template<typename S>
         S Option<T>::map_or(std::function<S(T)> func, const S& def) {
-            return m_some ? func(m_data) : def;
+            return m_some ? func(get()) : def;
         }
         template<typename T>
         void Option<T>::map(std::function<void(T)> func) {
-            if (m_some) func(m_data);
+            if (m_some) func(get());
         }
         template<typename T, typename std::enable_if_t<check::LShiftExists<std::ostream, T>::value>* = nullptr>
         std::ostream& operator<<(std::ostream& lhs, const Option<T>& rhs) {
