@@ -49,7 +49,7 @@ public:
 
 class GameState {
 private:
-    // I'm overly causious in my use of this here
+    // I'm overly cautious in my use of this here
     static std::mutex m_state_lock;
 
     /// Using ECS is overkill here, but meh
@@ -58,11 +58,12 @@ private:
     nta::ComponentID m_player_ball_component_id;
     const int m_num_objects = 15;
     int m_num_active_screens = 2;
+    bool m_lost = false;
+    BallComponent* m_winner = nullptr;
 public:
     GameState(const nta::ComponentRegistry& reg);
-    bool is_over() const {
-        return m_num_active_screens <= 0;
-    }
+    bool is_over() const { return m_num_active_screens <= 0; }
+    bool lost() const { return m_lost; }
     void draw_player(nta::SpriteBatch& batch, nta::ContextData& context) const {
         std::lock_guard<std::mutex> g(m_state_lock);
         // get_component returns an nta::Option.
@@ -80,8 +81,12 @@ public:
             cmpn->draw(batch, context);
         }
     }
+    void draw_winner(nta::SpriteBatch& batch, nta::ContextData& context) const {
+        if (m_winner) m_winner->draw(batch, context);
+    }
     void move_left() {
         std::lock_guard<std::mutex> g(m_state_lock);
+        if (m_lost) return;
         // If you want, instead of using map you can just do something like
         // BallComponent& cmpn = m_ecs.get_component<BallComponent>(m_player).unwrap();
         // but in that case you should be confident that m_player actually has a BallComponent
@@ -91,12 +96,15 @@ public:
     }
     void move_right() {
         std::lock_guard<std::mutex> g(m_state_lock);
+        if (m_lost) return;
         m_ecs.get_component<BallComponent>(m_player).map([](BallComponent& cmpn) {
             cmpn.move(glm::vec2(1, 0));
         });
     }
     void update(float dt) {
         std::lock_guard<std::mutex> g(m_state_lock);
+        if (m_lost) return;
+
         if (m_ecs.num_entities()-1 < m_num_objects && nta::Random::randFloat() < dt*2.f) {
             auto x_pos = nta::Random::randFloat(-100, 100);
             auto rad = nta::Random::randGaussian(6, 3);
@@ -106,17 +114,20 @@ public:
         }
 
         std::vector<BallComponent*> trash;
+
         m_ecs.for_each<BallComponent>([&](BallComponent& ball) {
             ball.update(dt);
             if (ball.get_id() != m_player_ball_component_id) {
                 nta::utils::Option<BallComponent&> pball = m_ecs.get_component<BallComponent>(m_player);
                 if (pball.is_some() && ball.collide(pball.unwrap())) {
-                    m_num_active_screens = 0;
+                    m_lost = true;
+                    m_winner = &ball;
                 } else if (ball.has_touched_ground()) {
                     trash.push_back(&ball);
                 }
             }
         });
+
         for (auto& cmpn : trash) {
             m_ecs.delete_entity(m_ecs.get_owner(cmpn->get_id()));
         }

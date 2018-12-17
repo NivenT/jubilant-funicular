@@ -47,6 +47,7 @@ void ObjectScreen::render() {
 
     m_batch.begin(); {
         m_state->draw_objects(m_batch, m_manager->getContextData());
+        if (m_state->lost()) m_state->draw_player(m_batch, m_manager->getContextData());
 
         std::string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());
         m_font->drawText(m_batch, text, glm::vec4(-100, 100, 20, 10));
