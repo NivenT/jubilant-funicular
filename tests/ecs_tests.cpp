@@ -35,8 +35,13 @@ class FakeComponent : public Component {
 
 int main(int argc, char* argv[]) {
     cout<<"Running ECS tests..."<<endl;
+
+    ComponentRegistry registry;
+    registry.register_component<HealthComponent>();
+    registry.register_component<DamageComponent>();
+    registry.register_component<FakeComponent>();
     
-    ECS system;
+    ECS system(registry);
     Entity healthy = system.gen_entity();
     Entity sick = system.gen_entity();
     Entity empty = system.gen_entity();
@@ -49,14 +54,17 @@ int main(int argc, char* argv[]) {
     assert(sick_h != NTA_INVALID_ID);
     assert(sick_d != NTA_INVALID_ID);
     assert(healthy_h != NTA_INVALID_ID);
+
+    assert(system.get_owner(sick_d) == sick);
     
     for (int sick_health = 100; sick_health; sick_health -= 5) {
-        vector<HealthComponent*> healths = system.get_component_list<HealthComponent>();
-        assert(healths[0]->get_health() == sick_health);
-        assert(healths[1]->get_health() == 100);
+        vector<HealthComponent*> healths = system.get_flat_component_list<HealthComponent>();
+        // No guarantee about the order of the components
+        assert(healths[0]->get_health() == sick_health || healths[0]->get_health() == 100);
+        assert(healths[1]->get_health() == 100 || healths[1]->get_health() == sick_health);
         assert(healths.size() == 2);
 
-        vector<DamageComponent*> dams = system.get_component_list<DamageComponent>();
+        vector<DamageComponent*> dams = system.get_flat_component_list<DamageComponent>();
         for (auto& dam : dams) {
             dam->send(Message(0, (void*)dam->get_damage()));
             auto resp = dam->request(Message());
@@ -69,16 +77,14 @@ int main(int argc, char* argv[]) {
     assert(!system.has_component<DamageComponent>(healthy));
     assert(system.has_component<HealthComponent>(sick));
     assert(!system.has_component<FakeComponent>(healthy));
-    assert(system.get_components(empty).unwrap().empty());
-    assert(system.get_components(sick).unwrap().size() == 2);
     
     assert(system.get_owner(sick_d) == sick);
     assert(system.get_owner(NTA_INVALID_ID) == NTA_INVALID_ID);
-    assert(system.get_siblings(sick_d).unwrap().size() == 2);
 
     assert(system.get_component<HealthComponent>(sick).unwrap().get_health() == 0);
     assert(system.get_component<HealthComponent>(healthy).unwrap().get_health() == 100);
-    assert(system.get_component_list<DamageComponent>().front() == &system.get_component<DamageComponent>(sick).unwrap());
+
+    assert(system.get_flat_component_list<DamageComponent>().front() == &system.get_component<DamageComponent>(sick).unwrap());
     
     assert(system.delete_component(sick_d) == sick_d);
     assert(!system.has_component<DamageComponent>(sick));
@@ -88,18 +94,18 @@ int main(int argc, char* argv[]) {
     }
     assert(system.delete_component(system.get_component<DamageComponent>(sick).unwrap().get_id()) != NTA_INVALID_ID);
     assert(system.has_component<DamageComponent>(sick));
-    assert(system.get_component_list<DamageComponent>(sick).size() == 3);
+    assert(system.get_flat_component_list<DamageComponent>(sick).size() == 3);
     system.delete_components<DamageComponent>(sick);
     assert(!system.has_component<DamageComponent>(sick));
     
-    for (const HealthComponent* health : system.get_component_list<HealthComponent>(sick)) {
+    for (const HealthComponent* health : system.get_flat_component_list<HealthComponent>(sick)) {
         assert(health->get_health() == 0);
     }
     
     assert(system.get_owner(1 << 10) == NTA_INVALID_ID);
     assert(system.delete_component(NTA_INVALID_ID) == NTA_INVALID_ID);
     assert(system.add_component<HealthComponent>(noone) == NTA_INVALID_ID);
-    assert(system.get_component_list<FakeComponent>().empty());
+    assert(system.get_flat_component_list<FakeComponent>().empty());
     
     assert(system.does_entity_exist(sick));
     assert(system.does_entity_exist(healthy));
@@ -110,8 +116,7 @@ int main(int argc, char* argv[]) {
     assert(!system.does_entity_exist(noone));
 
     assert(system.get_component<DamageComponent>(healthy).is_none());
-    assert(system.get_component_list<HealthComponent>(empty).empty());
-    assert(system.get_components(noone).is_none());
+    assert(system.get_flat_component_list<HealthComponent>(empty).empty());
     
     cout<<"Tests passed"<<endl;
     return 0;

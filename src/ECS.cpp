@@ -1,5 +1,3 @@
-#include <algorithm>
-
 #include "nta/ECS.h"
 
 namespace nta {
@@ -10,100 +8,77 @@ namespace nta {
 		return m_system->shout(request, m_id);
 	}
 
+	ECS::ECS(const ComponentRegistry& registry) : m_registry(registry) {
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			it->second.create_list(m_components);
+		}
+	}
 	Entity ECS::gen_entity() {
 		Entity ret = m_entity_gen();
-		m_entity_set.insert(ret);
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			it->second.resize_list(m_components, m_entity_gen.get_last_id().to_inner()+1);
+		}
 		return ret;
 	}
 	void ECS::gen_entities(std::size_t num, Entity* ids) {
 		for (std::size_t i = 0; i < num; i++) ids[i] = gen_entity();
 	}
 	bool ECS::delete_entity(Entity id) {
-		if (m_entity_set.find(id) == m_entity_set.end()) return false;
-		m_entity_set.erase(id);
+		if (m_entity_gen.is_free(id)) return false;
 		m_entity_gen.free(id);
-		while (!m_components_map[id].empty()) {
-			auto list = (std::vector<Component*>*)m_components_map[id].begin()->second;
-			while (!list->empty()) delete_component(list->front()->get_id());
-			m_components_map[id].erase(m_components_map[id].begin()->first);
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			it->second.delete_entity(m_components, m_cmpn_gen, id);
 		}
 		return true;
 	}
 	ComponentID ECS::delete_component(ComponentID cmpn) {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
-		auto entity = m_entity_map[cmpn];
-		m_entity_map.erase(cmpn);
+		if (m_cmpn_gen.is_free(cmpn)) return NTA_INVALID_ID;
 
-		for (auto& info : m_list_map[cmpn]) {
-			std::vector<Component*>* list = (std::vector<Component*>*)m_components_map[entity].find(info);
-			assert(list != nullptr);
-			auto end = std::remove(list->begin(), list->end(), m_component_set[cmpn]);
-			list->resize(end - list->begin());
-
-			list = (std::vector<Component*>*)m_component_lists.find(info);
-			end = std::remove(list->begin(), list->end(), m_component_set[cmpn]);
-			list->resize(end - list->begin());
-		}
-		m_list_map.erase(cmpn);
-		delete m_component_set[cmpn];
-		m_component_set.erase(cmpn);
 		m_cmpn_gen.free(cmpn);
-		return cmpn;
+		return m_registry[m_component_types[cmpn.to_inner()]].map_or<ComponentID>([&](ComponentRegistry::Record rec) {
+			return rec.delete_component(m_components, cmpn);
+		}, NTA_INVALID_ID);
 	}
 	bool ECS::does_entity_exist(Entity entity) const {
-		return m_entity_set.find(entity) != m_entity_set.end();
+		return m_entity_gen.is_in_use(entity);
 	}
 	Entity ECS::get_owner(ComponentID cmpn) const {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return NTA_INVALID_ID;
-		return m_entity_map.find(cmpn)->second;
+		if (m_cmpn_gen.is_free(cmpn)) return NTA_INVALID_ID;
+		return m_registry[m_component_types[cmpn.to_inner()]].map_or<Entity>([&](ComponentRegistry::Record rec) {
+			return rec.get_owner(m_components, cmpn);
+		}, NTA_INVALID_ID);
 	}
-	utils::Option<ComponentLists&> ECS::get_components(Entity entity) {
-		if (m_entity_set.find(entity) == m_entity_set.end()) return utils::Option<ComponentLists&>::none();
-		return utils::Option<ComponentLists&>::some(m_components_map[entity]);
-	}
-	Component* ECS::get_component(ComponentID id) const {
-		auto it = m_component_set.find(id);
-		return it == m_component_set.end() ? nullptr : it->second;
+	Component* ECS::get_component(ComponentID cmpn) const {
+		if (m_cmpn_gen.is_free(cmpn)) return nullptr;
+		return m_registry[m_component_types[cmpn.to_inner()]].map_or<Component*>([&](ComponentRegistry::Record rec) {
+			return rec.get_component(m_components, cmpn);
+		}, nullptr);
 	}
 	void ECS::broadcast(const Message& message, ComponentID cmpn) {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return;
-		broadcast(message, m_entity_map[cmpn]);
+		if (m_cmpn_gen.is_free(cmpn)) return;
+		broadcast(message, get_owner(cmpn));
 	}
 	void ECS::broadcast(const Message& message, Entity entity) {
-		std::unordered_set<Component*> seen;
-		auto& lists = m_components_map[entity];
-		for (auto& pair: lists) {
-			auto& list = *(std::vector<Component*>*)pair.second;
-			for (Component* cmpn : list) {
-				if (seen.find(cmpn) == seen.end()) {
-					cmpn->receive(message);
-					seen.insert(cmpn);
-				}
-			}
+		if (m_entity_gen.is_free(entity)) return;
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			it->second.broadcast(m_components, entity, message);
 		}
 	}
 	utils::Option<Message> ECS::shout(const Message& request, ComponentID cmpn) {
-		if (m_component_set.find(cmpn) == m_component_set.end()) return utils::Option<Message>::none();
-		return shout(request, m_entity_map[cmpn]);
+		if (m_cmpn_gen.is_free(cmpn)) return utils::Option<Message>::none();
+		return shout(request, get_owner(cmpn));
 	}
 	utils::Option<Message> ECS::shout(const Message& request, Entity entity) {
-		std::unordered_set<Component*> seen;
-		auto& lists = m_components_map[entity];
-		for (auto& pair: lists) {
-			auto& list = *(std::vector<Component*>*)pair.second;
-			for (Component* cmpn : list) {
-				if (seen.find(cmpn) == seen.end()) {
-					utils::Option<Message> response = cmpn->respond(request);
-					if (response.is_some()) return response;
-					seen.insert(cmpn);
-				}
-			}
+		if (m_entity_gen.is_free(entity)) return utils::Option<Message>::none();
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			auto resp = it->second.shout(m_components, entity, request);
+			if (resp) return resp;
 		}
 		return utils::Option<Message>::none();
 	}
 	void ECS::clear() {
-		while (!m_entity_set.empty()) {
-			delete_entity(*m_entity_set.begin());
+		for (std::size_t e = 0; e < m_entity_gen.get_last_id().to_inner(); e++) {
+			delete_entity(e);
 		}
 		m_entity_gen.clear();
 	}

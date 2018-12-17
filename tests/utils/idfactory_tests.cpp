@@ -14,8 +14,11 @@ int main(int argc, char* argv[]) {
     assert(factory() == 3);
     assert(factory.get_count() == 3);
     assert(factory.get_last_id() == 3);
+    assert(!factory.is_free(2));
+    assert(factory.is_free(4));
 
     factory.free_id(1);
+    assert(factory.is_free(1));
     assert(factory.get_count() == 2);
     assert(factory() == 1);
     assert(factory() == 4);
@@ -26,6 +29,8 @@ int main(int argc, char* argv[]) {
     factory.free_id(3);
     assert(factory.get_count() == 3);
     assert(factory() == 3);
+    assert(!factory.is_free(3));
+    assert(factory.is_free(1));
     assert(factory() == 1);
     assert(factory() == 6);
     assert(factory.get_count() == 6);
@@ -35,6 +40,8 @@ int main(int argc, char* argv[]) {
     assert(factory.get_count() == 0);
     assert(factory.get_last_id() == 0);
     assert(factory() == 1);
+
+    assert(!factory.is_free(NTA_INVALID_ID));
 
     cout<<"Tests passed"<<endl;
     return 0;

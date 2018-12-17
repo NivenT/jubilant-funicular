@@ -1,6 +1,8 @@
 #ifndef NTA_LINKEDNODE_H_INCLUDED
 #define NTA_LINKEDNODE_H_INCLUDED
 
+#include <functional>
+
 #include "nta/MyEngine.h"
 
 namespace nta {
@@ -47,7 +49,7 @@ namespace nta {
 
 			LinkedNode(T d) : data(d) {}
 	        LinkedNode(T d, LinkedNode* nxt) : next(nxt), data(d) {}
-	        ~LinkedNode() { if (next) delete next; }
+	        ~LinkedNode() { if (next) delete next; next = nullptr; }
 
 	        iterator begin() {
 	        	return iterator(this);
@@ -72,6 +74,18 @@ namespace nta {
 	        }
 	        static void remove(LinkedNode*& node) {
 	        	if (node) node = node->next;
+	        }
+	        /// returns true on success
+	        static bool remove(LinkedNode*& head, std::function<bool(const T&)> pred) {
+	        	LinkedNode** curr = &head;
+	        	while (*curr && !pred((*curr)->data)) {
+	        		curr = &(*curr)->next;
+	        	}
+	        	if (*curr) {
+	        		*curr = (*curr)->next;
+	        		return true;
+	        	}
+	        	return false;
 	        }
 
 	        /// The next node in the linked list
