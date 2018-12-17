@@ -18,7 +18,6 @@ namespace nta {
 
             /// Private constructor (use some or none instead)
             Option(const T& d) : m_some(true) { new(&m_data) type(d); }
-            // This line is hacky trash
             Option() : m_some(false) {}
 
             typename std::aligned_storage_t<sizeof(T), alignof(T)> m_data;
@@ -86,27 +85,6 @@ namespace nta {
                 return lhs<<"None";
             }
         }
-        /// (Untested) Specialization of Option<T>. Every Option<void> is None
-        template<>
-        class Option<void> {
-        private:
-            Option();
-        public:
-            static Option some() { return Option(); }
-            static Option none() { return Option(); }
-            bool is_some() const { return false; }
-            bool is_none() const { return true; }
-            void get() const {}
-            void unwrap() const {}
-            void get_or() const {}
-            void unwrap_or() const {}
-            /// This may not be the right choice, but calling map returns
-            /// an option holding some data, and not a none variant.
-            template<typename S>
-            Option<S> map(std::function<S(void)> func) { return Option<S>::some(func()); }
-            template<typename S>
-            S map_or(std::function<S(void)> func) { return func(); }
-        };
     }
 };
 
