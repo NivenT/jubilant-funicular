@@ -15,9 +15,13 @@ namespace nta {
         class Option {
         private:
             using type = typename std::remove_reference<T>::type;
+            /// Only exists to avoid a warning when using Option<T&>
+            struct Nop { Nop(const type&& _) {} };
+
             using storage_type = typename std::conditional<std::is_reference<T>::value,
-                                                           void*,
-                                                           T>::type;
+                                                           void*, T>::type;
+            using placement_type = typename std::conditional<std::is_reference<T>::value,
+                                                             Nop, type>::type;
 
             /// Private constructor (use some or none instead)
             Option(const T& d) : m_some(true) { 
@@ -25,7 +29,7 @@ namespace nta {
                     // Maybe I should just memcpy instead
                     new(&m_data) const void*(std::addressof(d));
                 } else {
-                    new(&m_data) type(std::move(d));
+                    new(&m_data) placement_type(std::move(d));
                 }
             }
             Option() : m_some(false) {}

@@ -64,12 +64,18 @@ int main(int argc, char* argv[]) {
         assert(healths[1]->get_health() == 100 || healths[1]->get_health() == sick_health);
         assert(healths.size() == 2);
 
+        // You can loop over componenets with for_each
+        system.for_each<DamageComponent>([sick_health](DamageComponent& dam) {
+            dam.send(Message(0, (void*)dam.get_damage()));
+            auto resp = dam.request(Message());
+            assert(resp.is_some());
+            assert((long)resp.unwrap().data == sick_health - dam.get_damage());
+        });
+
+        // or by manually requesting a vector of them
         vector<DamageComponent*> dams = system.get_flat_component_list<DamageComponent>();
         for (auto& dam : dams) {
-            dam->send(Message(0, (void*)dam->get_damage()));
-            auto resp = dam->request(Message());
-            assert(resp.is_some());
-            assert((long)resp.unwrap().data == sick_health - dam->get_damage());
+            assert(dam->get_damage() == 5);
         }
         assert(dams.size() == 1);
     }
@@ -83,6 +89,11 @@ int main(int argc, char* argv[]) {
 
     assert(system.get_component<HealthComponent>(sick).unwrap().get_health() == 0);
     assert(system.get_component<HealthComponent>(healthy).unwrap().get_health() == 100);
+    // ECS::filter<T> is like ECS::get_flat_component_list<T> except it only gathers
+    // the component's satisfying some predicate
+    assert(system.filter<HealthComponent>([&](HealthComponent& health) {
+        return system.get_owner(health.get_id()) == healthy;
+    }).front()->get_health() == 100);
 
     assert(system.get_flat_component_list<DamageComponent>().front() == &system.get_component<DamageComponent>(sick).unwrap());
     

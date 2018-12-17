@@ -246,9 +246,9 @@ void MainScreen::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     m_batch.begin(); {
-        for (GraphicsComponent* cmpn : m_system.get_flat_component_list<GraphicsComponent>()) {
-            cmpn->draw(m_batch, m_manager->getContextData());
-        }
+        m_system.for_each<GraphicsComponent>([&](GraphicsComponent& graphics) {
+            graphics.draw(m_batch, m_manager->getContextData());
+        });
 
         string text = "FPS: " + nta::utils::to_string((int)m_manager->getFPS());
         m_font->drawText(m_batch, text, vec4(-100, 100, 20, 10));

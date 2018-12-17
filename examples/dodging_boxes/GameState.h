@@ -73,10 +73,11 @@ public:
     }
     void draw_objects(nta::SpriteBatch& batch, nta::ContextData& context) const {
         std::lock_guard<std::mutex> g(m_state_lock);
-        for (BallComponent* cmpn : m_ecs.get_flat_component_list<BallComponent>()) {
-            if (cmpn->get_id() != m_player_ball_component_id) {
-                cmpn->draw(batch, context);
-            }
+        std::vector<BallComponent*> balls = m_ecs.filter<BallComponent>([&](BallComponent& ball) {
+            return ball.get_id() != m_player_ball_component_id;
+        });
+        for (BallComponent* cmpn : balls) {
+            cmpn->draw(batch, context);
         }
     }
     void move_left() {
@@ -105,17 +106,17 @@ public:
         }
 
         std::vector<BallComponent*> trash;
-        for (BallComponent* cmpn : m_ecs.get_flat_component_list<BallComponent>()) {
-            cmpn->update(dt);
-            if (cmpn->get_id() != m_player_ball_component_id) {
+        m_ecs.for_each<BallComponent>([&](BallComponent& ball) {
+            ball.update(dt);
+            if (ball.get_id() != m_player_ball_component_id) {
                 nta::utils::Option<BallComponent&> pball = m_ecs.get_component<BallComponent>(m_player);
-                if (pball.is_some() && cmpn->collide(pball.unwrap())) {
+                if (pball.is_some() && ball.collide(pball.unwrap())) {
                     m_num_active_screens = 0;
-                } else if (cmpn->has_touched_ground()) {
-                    trash.push_back(cmpn);
+                } else if (ball.has_touched_ground()) {
+                    trash.push_back(&ball);
                 }
             }
-        }
+        });
         for (auto& cmpn : trash) {
             m_ecs.delete_entity(m_ecs.get_owner(cmpn->get_id()));
         }

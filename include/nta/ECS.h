@@ -233,6 +233,13 @@ namespace nta {
         template<typename T>
         utils::Option<T&> get_sibling(ComponentID cmpn) const { return get_component<T>(get_owner(cmpn)); }
 
+        /// Runs a function of each Component of a given type
+        template<typename T>
+        void for_each(std::function<void(T&)> func) const;
+        /// Returns a list of all compoonents of a given type satisfying some predicate
+        template<typename T>
+        std::vector<T*> filter(std::function<bool(T&)> pred) const;
+
         /// Forwards message to all Components associated to the same Entity as cmpn
         void broadcast(const Message& message, ComponentID cmpn);
         /// Forwards message to all Components belonging to entity
@@ -318,6 +325,28 @@ namespace nta {
     utils::Option<T&> ECS::get_component(Entity entity) const {
         if (!has_component<T>(entity)) return utils::Option<T&>::none();
         return utils::Option<T&>::some(m_components.find<ComponentList<T>>()[(std::size_t)entity]->data);
+    }
+    template<typename T>
+    void ECS::for_each(std::function<void(T&)> func) const {
+        auto list = get_component_list<T>();
+        for (auto node : list) {
+            while (node) {
+                func(node->data);
+                node = node->next;
+            }
+        }
+    }
+    template<typename T>
+    std::vector<T*> ECS::filter(std::function<bool(T&)> pred) const {
+        auto list = get_component_list<T>();
+        std::vector<T*> flat_list;
+        for (auto node : list) {
+            while (node) {
+                if (pred(node->data)) flat_list.push_back(&node->data);
+                node = node->next;
+            }
+        }
+        return flat_list;
     }
     /* \todo Implement these
     template<typename T>
