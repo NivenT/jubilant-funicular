@@ -1,8 +1,6 @@
 #ifndef NTA_LOGGER_H_INCLUDED
 #define NTA_LOGGER_H_INCLUDED
 
-// Not sure how I feel about including this, but it's probably for the best
-#include <iostream>
 #include <fstream>
 
 #include "nta/Errors.h"
@@ -21,7 +19,7 @@ namespace nta {
         /// creates the log
         static void createLog();
         /// Sets a secondary stream for logging
-        static void useSecondLog(std::ostream& stream = std::cout) { m_secondLog = std::addressof(stream); }
+        static void useSecondLog(std::ostream& stream) { m_secondLog = std::addressof(stream); }
         /// Stop using a secondary stream
         static void unuseSecondLog() { m_secondLog = nullptr; }
         /// writes an entry in the log

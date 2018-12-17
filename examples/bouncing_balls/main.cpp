@@ -56,11 +56,7 @@ public:
         // This program only uses one type of message so that field is irrelevant
         m_pos = *(vec2*)message.data;
     }
-
-    // All GraphicsComponent will use the same texture
-    static nta::GLTexture tex;
 };
-nta::GLTexture GraphicsComponent::tex;
 
 class PhysicsComponent : public nta::Component {
 private:
@@ -135,7 +131,7 @@ private:
     // An Entity Component System
     nta::ECS m_system;
 public:
-    MainScreen() {}
+    MainScreen(const nta::ComponentRegistry& reg) : m_system(reg) {}
     ~MainScreen() {}
     void init();
     void update();
@@ -202,7 +198,7 @@ void MainScreen::update() {
         addBall(getMouse());
     }
 
-    vector<PhysicsComponent*> phys_cpmns = m_system.get_component_list<PhysicsComponent>();
+    vector<PhysicsComponent*> phys_cpmns = m_system.get_flat_component_list<PhysicsComponent>();
     for (int i = 0; i < phys_cpmns.size(); i++) {
         for (int j = i+1; j < phys_cpmns.size(); j++) {
             phys_cpmns[i]->collide(*phys_cpmns[j], 1./60);
@@ -250,7 +246,7 @@ void MainScreen::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     m_batch.begin(); {
-        for (GraphicsComponent* cmpn : m_system.get_component_list<GraphicsComponent>()) {
+        for (GraphicsComponent* cmpn : m_system.get_flat_component_list<GraphicsComponent>()) {
             cmpn->draw(m_batch, m_manager->getContextData());
         }
 
@@ -272,8 +268,13 @@ int main(int argc, char* argv[]) {
     /// All logged information will be sent to std::cout as well
     nta::Logger::useSecondLog(std::cout);
 
+    /// Using nta::ECS requires a pre-made list of all components in the project
+    nta::ComponentRegistry registry;
+    registry.register_component<GraphicsComponent>();
+    registry.register_component<PhysicsComponent>();
+
     nta::ScreenManager screenManager("\"Bouncing\" Balls", 60);
-    screenManager.addScreen(new MainScreen);
+    screenManager.addScreen(new MainScreen(registry));
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

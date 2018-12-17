@@ -24,8 +24,11 @@ int main(int argc, char* argv[]) {
     // Remember to initialize the library
     nta::init();
 
+    nta::ComponentRegistry reg;
+    reg.register_component<BallComponent>();
+
     // Global GameState shared by both threads
-    GameState state;
+    GameState state(reg);
     // Each Window is ownder by a ScreenManager
     // In order for the windows to be able to run at the same time, we give each
     // one its own thread.

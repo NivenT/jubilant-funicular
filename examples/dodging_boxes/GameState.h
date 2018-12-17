@@ -59,7 +59,7 @@ private:
     const int m_num_objects = 15;
     int m_num_active_screens = 2;
 public:
-    GameState();
+    GameState(const nta::ComponentRegistry& reg);
     bool is_over() const {
         return m_num_active_screens <= 0;
     }
@@ -73,7 +73,7 @@ public:
     }
     void draw_objects(nta::SpriteBatch& batch, nta::ContextData& context) const {
         std::lock_guard<std::mutex> g(m_state_lock);
-        for (BallComponent* cmpn : m_ecs.get_component_list<BallComponent>()) {
+        for (BallComponent* cmpn : m_ecs.get_flat_component_list<BallComponent>()) {
             if (cmpn->get_id() != m_player_ball_component_id) {
                 cmpn->draw(batch, context);
             }
@@ -105,7 +105,7 @@ public:
         }
 
         std::vector<BallComponent*> trash;
-        for (BallComponent* cmpn : m_ecs.get_component_list<BallComponent>()) {
+        for (BallComponent* cmpn : m_ecs.get_flat_component_list<BallComponent>()) {
             cmpn->update(dt);
             if (cmpn->get_id() != m_player_ball_component_id) {
                 nta::utils::Option<BallComponent&> pball = m_ecs.get_component<BallComponent>(m_player);
@@ -126,7 +126,7 @@ public:
 };
 std::mutex GameState::m_state_lock;
 
-GameState::GameState() {
+GameState::GameState(const nta::ComponentRegistry& reg) : m_ecs(reg) {
     m_player = m_ecs.gen_entity();
     m_player_ball_component_id = m_ecs.add_component<BallComponent>(m_player, glm::vec2(0, -90), 5, glm::vec4(1,0,0,1));
 }
