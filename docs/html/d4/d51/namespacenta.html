@@ -92,6 +92,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for components.  <a href="../../d8/d8c/classnta_1_1Component.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/classnta_1_1ComponentRegistry.html">ComponentRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A store of every <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> type in use by an <a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a>.  <a href="../../d6/d90/classnta_1_1ComponentRegistry.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d18/classnta_1_1Compressor.html">Compressor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static class for compressing byte buffers.  <a href="../../d3/d18/classnta_1_1Compressor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,29 +239,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af3292da35acbfbe999dcc0484b876bac"><td class="memItemLeft" align="right" valign="top"><a id="af3292da35acbfbe999dcc0484b876bac"></a>
-typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; uint64_t, struct ComponentIDTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentID</b></td></tr>
-<tr class="separator:af3292da35acbfbe999dcc0484b876bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f1a0fc0f27e8a0b4d1766c19f4f2333"><td class="memItemLeft" align="right" valign="top"><a id="a0f1a0fc0f27e8a0b4d1766c19f4f2333"></a>
-typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; uint64_t, struct EntityTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b></td></tr>
-<tr class="separator:a0f1a0fc0f27e8a0b4d1766c19f4f2333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100c83ea1448fb60494df3c73ba38e4a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a></td></tr>
-<tr class="separator:a100c83ea1448fb60494df3c73ba38e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memItemLeft" align="right" valign="top"><a id="ab1a4e1926834dedfce30d0f6ed301fbf"></a>
-typedef std::unordered_set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySet</b></td></tr>
-<tr class="separator:ab1a4e1926834dedfce30d0f6ed301fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d82e8ec10486599139294b3fc19308b"><td class="memItemLeft" align="right" valign="top"><a id="a4d82e8ec10486599139294b3fc19308b"></a>
-typedef std::unordered_map&lt; ComponentID, <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentSet</b></td></tr>
-<tr class="separator:a4d82e8ec10486599139294b3fc19308b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memItemLeft" align="right" valign="top"><a id="a6a37bc30927d29ad1bee779cbb8267d6"></a>
-typedef std::unordered_map&lt; Entity, <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">ComponentLists</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EntityComponentMap</b></td></tr>
-<tr class="separator:a6a37bc30927d29ad1bee779cbb8267d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe88fb56a190a6fccb55bf634cef9bd9"><td class="memItemLeft" align="right" valign="top"><a id="afe88fb56a190a6fccb55bf634cef9bd9"></a>
-typedef std::unordered_map&lt; ComponentID, Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentEntityMap</b></td></tr>
-<tr class="separator:afe88fb56a190a6fccb55bf634cef9bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memItemLeft" align="right" valign="top"><a id="af2d36ced3610ffdf9e1adf679a0e9617"></a>
-typedef std::unordered_map&lt; ComponentID, std::vector&lt; <a class="el" href="../../d1/dc9/structutils_1_1TypeInfo.html">utils::TypeInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentListMap</b></td></tr>
-<tr class="separator:af2d36ced3610ffdf9e1adf679a0e9617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293fe543844070aa66e1fdf5fcb7bb48"><td class="memItemLeft" align="right" valign="top"><a id="a293fe543844070aa66e1fdf5fcb7bb48"></a>
+typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; std::size_t, struct ComponentIDTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentID</b></td></tr>
+<tr class="separator:a293fe543844070aa66e1fdf5fcb7bb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01298dd0ac7e0ea2e0148db7fb6c756"><td class="memItemLeft" align="right" valign="top"><a id="ae01298dd0ac7e0ea2e0148db7fb6c756"></a>
+typedef <a class="el" href="../../d5/d25/classutils_1_1Wrapper.html">utils::Wrapper</a>&lt; std::size_t, struct EntityTag &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b></td></tr>
+<tr class="separator:ae01298dd0ac7e0ea2e0148db7fb6c756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b55869f79873750d608ad7dbc82836e"><td class="memTemplParams" colspan="2"><a id="a3b55869f79873750d608ad7dbc82836e"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3b55869f79873750d608ad7dbc82836e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ComponentList</b> = std::vector&lt; <a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">utils::LinkedNode</a>&lt; T &gt; * &gt;</td></tr>
+<tr class="separator:a3b55869f79873750d608ad7dbc82836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memItemLeft" align="right" valign="top"><a id="a1f5715ee41c7a9174d2cc404fdb8556a"></a>
 typedef std::function&lt; void(const <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b></td></tr>
 <tr class="separator:a1f5715ee41c7a9174d2cc404fdb8556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,13 +346,13 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="separator:a4b56373c30ea930fe09f9b20a3d17285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Add Option type </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd><p class="startdd">prefix all include guards with NTA_ </p>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>Add Option type </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">prefix all include guards with NTA_ </p>
 <p class="enddd">Get a linter or something </p>
 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>Throughout codebase, indent <code>case</code> inside of <code>switch</code> blocks </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Make sure this code is OS-agnostic </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>Figure out how to get rid of this file </dd></dl>
 </div><hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="d4/d26/structnta_1_1CharGlyph" id="d4/d26/structnta_1_1CharGlyph"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#d4/d26/structnta_1_1CharGlyph">&#9670;&nbsp;</a></span>nta::CharGlyph</h2>
@@ -510,24 +500,6 @@ type</td>
 <td class="fielddoc">
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a100c83ea1448fb60494df3c73ba38e4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a100c83ea1448fb60494df3c73ba38e4a">&#9670;&nbsp;</a></span>ComponentLists</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> <a class="el" href="../../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a">nta::ComponentLists</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Will only hold types for the form std::vector&lt;T*&gt; where T inherits <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00017">17</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>

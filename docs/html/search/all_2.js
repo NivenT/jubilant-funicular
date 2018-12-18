@@ -12,7 +12,7 @@ var searchData=
   ['compileshader',['compileShader',['../dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83',1,'nta::GLSLProgram']]],
   ['compileshaders',['compileShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5',1,'nta::GLSLProgram']]],
   ['component',['Component',['../d8/d8c/classnta_1_1Component.html',1,'nta::Component'],['../d8/d8c/classnta_1_1Component.html#aeb66e0ff6bed4efc8add3b823c333bf1',1,'nta::Component::Component()']]],
-  ['componentlists',['ComponentLists',['../d4/d51/namespacenta.html#a100c83ea1448fb60494df3c73ba38e4a',1,'nta']]],
+  ['componentregistry',['ComponentRegistry',['../d6/d90/classnta_1_1ComponentRegistry.html',1,'nta']]],
   ['compress',['compress',['../d3/d18/classnta_1_1Compressor.html#ac5f5822b598309d4ef6a89edb7bdcf10',1,'nta::Compressor']]],
   ['compressor',['Compressor',['../d3/d18/classnta_1_1Compressor.html',1,'nta']]],
   ['contextdata',['ContextData',['../df/dac/classnta_1_1ContextData.html',1,'nta']]],

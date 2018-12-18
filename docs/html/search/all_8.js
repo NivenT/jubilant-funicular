@@ -14,6 +14,8 @@ var searchData=
   ['iomanager',['IOManager',['../d2/d54/classnta_1_1IOManager.html',1,'nta']]],
   ['is_5ferr',['is_err',['../d8/d2e/classnta_1_1Result.html#ab742b047f1e670bc6a374f32c3fd48ea',1,'nta::Result']]],
   ['is_5ferr_5fvariant',['is_err_variant',['../d8/d2e/classnta_1_1Result.html#a27f85dc35976426c1f5c01431ac2e1cc',1,'nta::Result']]],
+  ['is_5ffree',['is_free',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a13880bdacc47c0fa0dbbfde6d96be2b0',1,'nta::utils::IDFactory']]],
+  ['is_5fin_5fuse',['is_in_use',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a34f7a35af6ab6a6a02f82b15e2f04d3c',1,'nta::utils::IDFactory']]],
   ['is_5fnone',['is_none',['../dd/d2b/classnta_1_1utils_1_1Option.html#a3cb083dfcd9cdb54f97b05c65599087e',1,'nta::utils::Option']]],
   ['is_5fok',['is_ok',['../d8/d2e/classnta_1_1Result.html#a61deaa087694eae4fdaece2996fedda0',1,'nta::Result']]],
   ['is_5fpointer',['is_pointer',['../d1/dc9/structutils_1_1TypeInfo.html#a7197345902a9a0ab30bc9b0fd2c3f324',1,'utils::TypeInfo']]],

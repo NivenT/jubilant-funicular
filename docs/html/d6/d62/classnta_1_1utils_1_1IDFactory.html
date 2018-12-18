@@ -79,6 +79,8 @@ $(function() {
 Collaboration diagram for nta::utils::IDFactory&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/d8c/classnta_1_1utils_1_1IDFactory__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map" id="nta_1_1utils_1_1IDFactory_3_01T_01_4_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -101,10 +103,22 @@ T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0f0dfbba08147d20d6c71ee2b8d9f6b0">free</a> (T id)</td></tr>
 <tr class="memdesc:a0f0dfbba08147d20d6c71ee2b8d9f6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calls free_id <br /></td></tr>
 <tr class="separator:a0f0dfbba08147d20d6c71ee2b8d9f6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13880bdacc47c0fa0dbbfde6d96be2b0"><td class="memItemLeft" align="right" valign="top"><a id="a13880bdacc47c0fa0dbbfde6d96be2b0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a13880bdacc47c0fa0dbbfde6d96be2b0">is_free</a> (T id) const</td></tr>
+<tr class="memdesc:a13880bdacc47c0fa0dbbfde6d96be2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not an id is free. <br /></td></tr>
+<tr class="separator:a13880bdacc47c0fa0dbbfde6d96be2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f7a35af6ab6a6a02f82b15e2f04d3c"><td class="memItemLeft" align="right" valign="top"><a id="a34f7a35af6ab6a6a02f82b15e2f04d3c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a34f7a35af6ab6a6a02f82b15e2f04d3c">is_in_use</a> (T id) const</td></tr>
+<tr class="memdesc:a34f7a35af6ab6a6a02f82b15e2f04d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the id is in use. <br /></td></tr>
+<tr class="separator:a34f7a35af6ab6a6a02f82b15e2f04d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8de8dd2a812a9c7afb249516dc872e"><td class="memItemLeft" align="right" valign="top"><a id="a9f8de8dd2a812a9c7afb249516dc872e"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a9f8de8dd2a812a9c7afb249516dc872e">get_count</a> () const</td></tr>
 <tr class="memdesc:a9f8de8dd2a812a9c7afb249516dc872e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of active ids. <br /></td></tr>
 <tr class="separator:a9f8de8dd2a812a9c7afb249516dc872e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc2ca5358d405b84aa68ece1881e126"><td class="memItemLeft" align="right" valign="top"><a id="a0fc2ca5358d405b84aa68ece1881e126"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0fc2ca5358d405b84aa68ece1881e126">get_last_id</a> () const</td></tr>
+<tr class="memdesc:a0fc2ca5358d405b84aa68ece1881e126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns m_last_id. <br /></td></tr>
+<tr class="separator:a0fc2ca5358d405b84aa68ece1881e126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f65b6f846fa72cbab690f69b912944"><td class="memItemLeft" align="right" valign="top"><a id="a88f65b6f846fa72cbab690f69b912944"></a>
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a88f65b6f846fa72cbab690f69b912944">operator()</a> ()</td></tr>
 <tr class="memdesc:a88f65b6f846fa72cbab690f69b912944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls (and returns) gen_id. <br /></td></tr>
@@ -112,10 +126,10 @@ T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1bb36b967e6431640bad6d843aa15db7"><td class="memItemLeft" align="right" valign="top"><a id="a1bb36b967e6431640bad6d843aa15db7"></a>
-std::stack&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a1bb36b967e6431640bad6d843aa15db7">m_free</a></td></tr>
-<tr class="memdesc:a1bb36b967e6431640bad6d843aa15db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs that were previously active but have since been freed. <br /></td></tr>
-<tr class="separator:a1bb36b967e6431640bad6d843aa15db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5525e8f561c75a753a073b08dbe0d4e"><td class="memItemLeft" align="right" valign="top"><a id="af5525e8f561c75a753a073b08dbe0d4e"></a>
+std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#af5525e8f561c75a753a073b08dbe0d4e">m_free</a></td></tr>
+<tr class="memdesc:af5525e8f561c75a753a073b08dbe0d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs that were previously active but have since been freed. <br /></td></tr>
+<tr class="separator:af5525e8f561c75a753a073b08dbe0d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248df89e090f9d9186fc897809a59d51"><td class="memItemLeft" align="right" valign="top"><a id="a248df89e090f9d9186fc897809a59d51"></a>
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#a248df89e090f9d9186fc897809a59d51">m_last_id</a></td></tr>
 <tr class="memdesc:a248df89e090f9d9186fc897809a59d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">The smallest id that has never been assigned. <br /></td></tr>
@@ -149,7 +163,7 @@ template&lt;typename T&gt; </div>
 <p>Marks an id as free so that it can be reused</p>
 <p>id must not already be free </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00055">55</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00059">59</a> of file <a class="el" href="../../d7/d16/IDFactory_8h_source.html">IDFactory.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00034">nta::utils::IDFactory&lt; Entity &gt;::free()</a>, and <a class="el" href="../../d7/d16/IDFactory_8h_source.html#l00025">nta::utils::IDFactory&lt; Entity &gt;::reset()</a>.</p>
 

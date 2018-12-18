@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
@@ -79,13 +80,25 @@ $(function() {
 Collaboration diagram for nta::utils::Option&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/da4/classnta_1_1utils_1_1Option__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1Option_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1utils_1_1Option_3_01T_01_4_coll__map" id="nta_1_1utils_1_1Option_3_01T_01_4_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1d/structnta_1_1utils_1_1Option_1_1Nop.html">Nop</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only exists to avoid a warning when using Option&lt;T&amp;&gt;  <a href="../../dc/d1d/structnta_1_1utils_1_1Option_1_1Nop.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2ee4f05834dbf57cfbfed6c545b9c2d"><td class="memItemLeft" align="right" valign="top"><a id="ad2ee4f05834dbf57cfbfed6c545b9c2d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Option</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> &amp;)=default</td></tr>
 <tr class="separator:ad2ee4f05834dbf57cfbfed6c545b9c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a8574f8d687f7d195cdf5fc64c2165"><td class="memItemLeft" align="right" valign="top"><a id="aa4a8574f8d687f7d195cdf5fc64c2165"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#aa4a8574f8d687f7d195cdf5fc64c2165">operator bool</a> () const</td></tr>
+<tr class="memdesc:aa4a8574f8d687f7d195cdf5fc64c2165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as is_some. <br /></td></tr>
+<tr class="separator:aa4a8574f8d687f7d195cdf5fc64c2165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad205519bf669dc6dbfddeb1a95773b79"><td class="memItemLeft" align="right" valign="top"><a id="ad205519bf669dc6dbfddeb1a95773b79"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#ad205519bf669dc6dbfddeb1a95773b79">is_some</a> () const</td></tr>
 <tr class="memdesc:ad205519bf669dc6dbfddeb1a95773b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this hold some data. <br /></td></tr>
@@ -100,13 +113,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a729b90440d09884f1c197864d7bb0be9">unwrap</a> () const</td></tr>
 <tr class="memdesc:a729b90440d09884f1c197864d7bb0be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">unwrap and get are the same thing <br /></td></tr>
 <tr class="separator:a729b90440d09884f1c197864d7bb0be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6783f9c7085ab96091249781f211d8ba"><td class="memItemLeft" align="right" valign="top"><a id="a6783f9c7085ab96091249781f211d8ba"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a6783f9c7085ab96091249781f211d8ba">get_or</a> (const T &amp;optb) const</td></tr>
-<tr class="memdesc:a6783f9c7085ab96091249781f211d8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data held by this <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> or optb if it's None. <br /></td></tr>
-<tr class="separator:a6783f9c7085ab96091249781f211d8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07b96222f944a4841e834d30d348f803"><td class="memItemLeft" align="right" valign="top"><a id="a07b96222f944a4841e834d30d348f803"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>unwrap_or</b> (const T &amp;optb) const</td></tr>
-<tr class="separator:a07b96222f944a4841e834d30d348f803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628533b91874b189d05700ff94417cbc"><td class="memItemLeft" align="right" valign="top"><a id="a628533b91874b189d05700ff94417cbc"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a628533b91874b189d05700ff94417cbc">get_or</a> (const T &amp;optb)</td></tr>
+<tr class="memdesc:a628533b91874b189d05700ff94417cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data held by this <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a> or optb if it's None. <br /></td></tr>
+<tr class="separator:a628533b91874b189d05700ff94417cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a644c45fa6d5303c7aff79d71e9a11"><td class="memItemLeft" align="right" valign="top"><a id="a76a644c45fa6d5303c7aff79d71e9a11"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>unwrap_or</b> (const T &amp;optb)</td></tr>
+<tr class="separator:a76a644c45fa6d5303c7aff79d71e9a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb142eb98145565360fe899bcccddd8c"><td class="memItemLeft" align="right" valign="top"><a id="aeb142eb98145565360fe899bcccddd8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#aeb142eb98145565360fe899bcccddd8c">destroy</a> ()</td></tr>
+<tr class="memdesc:aeb142eb98145565360fe899bcccddd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns this into None variant, calling destructor if necessary. <br /></td></tr>
+<tr class="separator:aeb142eb98145565360fe899bcccddd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaca218b7761bcf348480e90e48fe5f66"><td class="memTemplParams" colspan="2"><a id="aaca218b7761bcf348480e90e48fe5f66"></a>
 template&lt;typename S &gt; </td></tr>
 <tr class="memitem:aaca218b7761bcf348480e90e48fe5f66"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#aaca218b7761bcf348480e90e48fe5f66">map</a> (std::function&lt; S(T)&gt; func)</td></tr>
@@ -136,19 +153,25 @@ Private Types</h2></td></tr>
 <tr class="memitem:a719d0f5b1e888faf78dac317b60a1cdf"><td class="memItemLeft" align="right" valign="top"><a id="a719d0f5b1e888faf78dac317b60a1cdf"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = typename std::remove_reference&lt; T &gt;::type</td></tr>
 <tr class="separator:a719d0f5b1e888faf78dac317b60a1cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b504cd5188a074fe1db8e928b88295"><td class="memItemLeft" align="right" valign="top"><a id="ad2b504cd5188a074fe1db8e928b88295"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>storage_type</b> = typename std::conditional&lt; std::is_reference&lt; T &gt;::value, void *, T &gt;::type</td></tr>
+<tr class="separator:ad2b504cd5188a074fe1db8e928b88295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5be079ccfa8456f8049fe1dfe659c96"><td class="memItemLeft" align="right" valign="top"><a id="aa5be079ccfa8456f8049fe1dfe659c96"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>placement_type</b> = typename std::conditional&lt; std::is_reference&lt; T &gt;::value, <a class="el" href="../../dc/d1d/structnta_1_1utils_1_1Option_1_1Nop.html">Nop</a>, type &gt;::type</td></tr>
+<tr class="separator:aa5be079ccfa8456f8049fe1dfe659c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aa9b963565a506766c32f06db630cefb2"><td class="memItemLeft" align="right" valign="top"><a id="aa9b963565a506766c32f06db630cefb2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#aa9b963565a506766c32f06db630cefb2">Option</a> (const T &amp;d, bool isSome)</td></tr>
-<tr class="memdesc:aa9b963565a506766c32f06db630cefb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor (use some or none instead) <br /></td></tr>
-<tr class="separator:aa9b963565a506766c32f06db630cefb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8839d4fa18becdfd4286c17ae8a8fae2"><td class="memItemLeft" align="right" valign="top"><a id="a8839d4fa18becdfd4286c17ae8a8fae2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a8839d4fa18becdfd4286c17ae8a8fae2">Option</a> (const T &amp;d)</td></tr>
+<tr class="memdesc:a8839d4fa18becdfd4286c17ae8a8fae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor (use some or none instead) <br /></td></tr>
+<tr class="separator:a8839d4fa18becdfd4286c17ae8a8fae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9a3e204e96a683ddb09139c78432abd9"><td class="memItemLeft" align="right" valign="top"><a id="a9a3e204e96a683ddb09139c78432abd9"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b></td></tr>
-<tr class="separator:a9a3e204e96a683ddb09139c78432abd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3910c8a599353785b0afa88cd0912e5d"><td class="memItemLeft" align="right" valign="top"><a id="a3910c8a599353785b0afa88cd0912e5d"></a>
+std::aligned_storage_t&lt; sizeof(storage_type), alignof(storage_type)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b></td></tr>
+<tr class="separator:a3910c8a599353785b0afa88cd0912e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4147027a4b2a2d01a336f0e2ae4df881"><td class="memItemLeft" align="right" valign="top"><a id="a4147027a4b2a2d01a336f0e2ae4df881"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_some</b></td></tr>
 <tr class="separator:a4147027a4b2a2d01a336f0e2ae4df881"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,9 +203,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Retreive the underlying data</p>
 <p>You should always call is_some/is_none beforehand </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>Push an error to <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> instead </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>Push an error to <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a> instead </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00063">63</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/dee/Option_8h_source.html#l00079">79</a> of file <a class="el" href="../../da/dee/Option_8h_source.html">Option.h</a>.</p>
 
 </div>
 </div>

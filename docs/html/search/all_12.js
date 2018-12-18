@@ -15,6 +15,6 @@ var searchData=
   ['update_5fmouse',['update_mouse',['../d6/de2/classnta_1_1InputManager.html#a354889313c87ae81543adcd4f5db1b8a',1,'nta::InputManager']]],
   ['updateprev',['updatePrev',['../d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d',1,'nta::InputManager']]],
   ['use',['use',['../dc/d9c/classnta_1_1GLSLProgram.html#ac5c8fffb04aec82913b78e35db9ea31f',1,'nta::GLSLProgram']]],
-  ['usesecondlog',['useSecondLog',['../d6/d0d/classnta_1_1Logger.html#a5960b8f34890df1aa333e6fb787b4c18',1,'nta::Logger']]],
+  ['usesecondlog',['useSecondLog',['../d6/d0d/classnta_1_1Logger.html#ae6f6bdd0314203430b35afcd73c81d85',1,'nta::Logger']]],
   ['uvrect',['uvRect',['../d4/d51/namespacenta.html#a46d9ea9c38c8bf5e1c1679e938019f53',1,'nta::CharGlyph']]]
 ];
