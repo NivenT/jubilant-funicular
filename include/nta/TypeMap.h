@@ -10,5 +10,4 @@ namespace nta {
     }
 }
 
-
 #endif // NTA_TYPEMAP_H_INCLUDED

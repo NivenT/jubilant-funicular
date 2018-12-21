@@ -11,9 +11,6 @@
 #include "nta/Wrapper.h"
 #include "nta/TypeMap.h"
 
-#include <iostream>
-using namespace std;
-
 namespace nta {
     typedef utils::Wrapper<std::size_t, struct EntityTag> Entity;
     template<typename T>
@@ -244,21 +241,17 @@ namespace nta {
         void broadcast(const Message& message, ComponentID cmpn);
         /// Forwards message to all Components belonging to entity
         void broadcast(const Message& message, Entity entity);
-        /*
         /// Forwards message to all Components of the given type
         template<typename T>
         void broadcast(const Message& message);
-        */
 
         /// Like broadcast but returns the first response received
         ///
         /// \todo Return utils::LinkedNode<Message> of all received responses
         utils::Option<Message> shout(const Message& request, ComponentID cmpn);
         utils::Option<Message> shout(const Message& request, Entity entity);
-        /*
         template<typename T>
         utils::Option<Message> shout(const Message& request);
-        */
 
         /// Removes all entites and components from this system
         void clear();
@@ -348,22 +341,24 @@ namespace nta {
         }
         return flat_list;
     }
-    /* \todo Implement these
+    /// \todo Make these more efficient
     template<typename T>
     void ECS::broadcast(const Message& message) {
-        m_registry.get_record<T>().map([&](Record rec) {
-            rec.broadcast
-        })
+        m_registry.get_record<T>().map([&](ComponentRegistry::Record rec) {
+            for (Entity e = 0; e < m_entity_gen.get_last_id(); e++) {
+                rec.broadcast(m_components, e, message);
+            }
+        });
     }
     template<typename T>
     utils::Option<Message> ECS::shout(const Message& request) {
-        for (auto& cmpn : m_component_lists.get<std::vector<T*>>()) {
-            auto response = cmpn->respond(request);
-            if (response.is_some()) return response;
-        }
-        return utils::Option<Message>::none();
+        return m_registry.get_record<T>().map_or([&](ComponentRegistry::Record rec) {
+            for (Entity e = 0; e < m_entity_gen.get_last_id(); e++) {
+                auto resp = rec.shout(m_components, e, request);
+                if (resp) return resp;
+            }
+        }, utils::Option<Message>::none());
     }
-    */
 }
 
 #endif // NTA_ECS_H_INCLUDED

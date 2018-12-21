@@ -7,6 +7,8 @@
  * In practice, for decent physics, you'll want to use an externel library
  */
 
+#include <iostream>
+
 #include <nta/ScreenManager.h>
 #include <nta/ResourceManager.h>
 #include <nta/SpriteBatch.h>
