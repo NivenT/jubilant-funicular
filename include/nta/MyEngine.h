@@ -7,6 +7,7 @@
 
 /// \todo Throughout codebase, indent `case` inside of `switch` blocks
 /// \todo Get a linter or something
+/// \todo Decide what things you want to be CamelCase and which you want to snake_case
 namespace nta {
 	typedef const std::string& crstring; // constant reference string
 	typedef const glm::ivec2& crivec2;

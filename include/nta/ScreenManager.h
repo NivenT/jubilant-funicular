@@ -44,13 +44,18 @@ namespace nta {
         /// returns the window
         const Window* getWindow() const { return m_window; }
         /// returns the InputManager
-        const InputManager&  getInput() const { return m_input; }
+        const InputManager& getInput() const { return m_input; }
         /// returns the ContextData
         ContextData& getContextData() { return m_context_data; }
         /// returns the current fps
         float getFPS() const;
         /// returns true if this manager is responsible for handling the event
+        /// \todo CamelCase
         bool owns_event(const SDL_Event& event) const;
+        /// Sets the location of textures, shaders, and fonts
+        void setResourceFolders(const utils::Path& tex_fldr,
+                                const utils::Path& glsl_fldr,
+                                const utils::Path& font_fldr);
         /// adds a screen and sets some of its properties
         void addScreen(Screen* newScreen, int escIndex = -1, int xIndex = -1, crstring title = "");
         /// switches the to a new screen

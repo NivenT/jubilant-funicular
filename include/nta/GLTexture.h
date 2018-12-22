@@ -36,6 +36,9 @@ namespace nta {
         bool operator==(const GLTexture& rhs) const {
             return id == rhs.id;
         }
+        bool operator<(const GLTexture& rhs) const {
+            return id < rhs.id;
+        }
         /// Deletes this texture
         void destroy() { glDeleteTextures(1, &id); }
 

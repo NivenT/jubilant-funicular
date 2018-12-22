@@ -31,6 +31,13 @@ namespace nta {
     float ScreenManager::getFPS() const {
         return m_limiter.getFPS();
     }
+    void ScreenManager::setResourceFolders(const utils::Path& tex_fldr,
+                                           const utils::Path& glsl_fldr,
+                                           const utils::Path& font_fldr) {
+        m_context_data.setTextureFolder(tex_fldr);
+        m_context_data.setGLSLFolder(glsl_fldr);
+        m_context_data.setFontFolder(font_fldr);
+    }
     void ScreenManager::addScreen(Screen* newScreen, int escIndex, int xIndex, crstring title) {
         Logger::writeToLog("Adding screen " + utils::to_string(m_screens.size()) + 
                            " (\"" + newScreen->getName() + "\") to ScreenManager...");
