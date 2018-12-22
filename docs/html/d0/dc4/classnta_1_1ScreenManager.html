@@ -79,11 +79,12 @@ Collaboration diagram for nta::ScreenManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d00/classnta_1_1ScreenManager__coll__graph.png" border="0" usemap="#nta_1_1ScreenManager_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1ScreenManager_coll__map" id="nta_1_1ScreenManager_coll__map">
-<area shape="rect" id="node2" href="../../df/dac/classnta_1_1ContextData.html" title="nta::ContextData" alt="" coords="698,159,821,185"/>
-<area shape="rect" id="node7" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="696,347,823,373"/>
-<area shape="rect" id="node13" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="712,591,807,617"/>
-<area shape="rect" id="node18" href="../../d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="703,783,816,809"/>
-<area shape="rect" id="node19" href="../../d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="367,783,448,809"/>
+<area shape="rect" id="node2" href="../../df/dac/classnta_1_1ContextData.html" title="nta::ContextData" alt="" coords="721,443,843,469"/>
+<area shape="rect" id="node4" href="../../d9/d63/classutils_1_1Path.html" title="A (case&#45;sensitive) Path in a file system. " alt="" coords="378,427,459,453"/>
+<area shape="rect" id="node15" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. " alt="" coords="735,161,829,188"/>
+<area shape="rect" id="node9" href="../../d6/de2/classnta_1_1InputManager.html" title="keeps track of all input " alt="" coords="719,608,845,635"/>
+<area shape="rect" id="node19" href="../../d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="725,781,839,808"/>
+<area shape="rect" id="node20" href="../../d6/dd4/classnta_1_1Timer.html" title="represents a timer " alt="" coords="378,832,459,859"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -116,10 +117,12 @@ const <a class="el" href="../../d6/de2/classnta_1_1InputManager.html">InputManag
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a24e61f523b383277b7284cab76ad9e5a">getFPS</a> () const</td></tr>
 <tr class="memdesc:a24e61f523b383277b7284cab76ad9e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the current fps <br /></td></tr>
 <tr class="separator:a24e61f523b383277b7284cab76ad9e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace9fa72754a0dd8b2034927aa816db3c"><td class="memItemLeft" align="right" valign="top"><a id="ace9fa72754a0dd8b2034927aa816db3c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ace9fa72754a0dd8b2034927aa816db3c">owns_event</a> (const SDL_Event &amp;event) const</td></tr>
-<tr class="memdesc:ace9fa72754a0dd8b2034927aa816db3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if this manager is responsible for handling the event <br /></td></tr>
+<tr class="memitem:ace9fa72754a0dd8b2034927aa816db3c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ace9fa72754a0dd8b2034927aa816db3c">owns_event</a> (const SDL_Event &amp;event) const</td></tr>
 <tr class="separator:ace9fa72754a0dd8b2034927aa816db3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b5f1f7e68f1cc72cf188a3a105baec"><td class="memItemLeft" align="right" valign="top"><a id="ac4b5f1f7e68f1cc72cf188a3a105baec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#ac4b5f1f7e68f1cc72cf188a3a105baec">setResourceFolders</a> (const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;tex_fldr, const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;glsl_fldr, const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;font_fldr)</td></tr>
+<tr class="memdesc:ac4b5f1f7e68f1cc72cf188a3a105baec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the location of textures, shaders, and fonts. <br /></td></tr>
+<tr class="separator:ac4b5f1f7e68f1cc72cf188a3a105baec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18659a2edcddd60d53094ac46ac0b0df"><td class="memItemLeft" align="right" valign="top"><a id="a18659a2edcddd60d53094ac46ac0b0df"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc4/classnta_1_1ScreenManager.html#a18659a2edcddd60d53094ac46ac0b0df">addScreen</a> (<a class="el" href="../../d6/d23/classnta_1_1Screen.html">Screen</a> *newScreen, int escIndex=-1, int xIndex=-1, crstring title=&quot;&quot;)</td></tr>
 <tr class="memdesc:a18659a2edcddd60d53094ac46ac0b0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a screen and sets some of its properties <br /></td></tr>
@@ -180,7 +183,7 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="separator:a3ea71cd8f9d9bfa38cb47e76711f30ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages a collection of screens </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>(?) Move m_glslMap and m_input to <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a>? </dd></dl>
+<div class="textblock"><p>Manages a collection of screens </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">Todo:</a></b></dt><dd>(?) Move m_glslMap and m_input to <a class="el" href="../../d4/dfb/classnta_1_1Window.html" title="Represent a window. ">Window</a>? </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00016">16</a> of file <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html">ScreenManager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -200,11 +203,34 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </div><div class="memdoc">
 
 <p>returns the active screen </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>write log error if m_currScreen is out of range </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00133">run()</a>, <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00048">switchScreen()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00079">update_input()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00140">run()</a>, <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00055">switchScreen()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00086">update_input()</a>.</p>
+
+</div>
+</div>
+<a id="ace9fa72754a0dd8b2034927aa816db3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9fa72754a0dd8b2034927aa816db3c">&#9670;&nbsp;</a></span>owns_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nta::ScreenManager::owns_event </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Event &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns true if this manager is responsible for handling the event </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000015">Todo:</a></b></dt><dd>CamelCase </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00078">78</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00049">getContextData()</a>, and <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00086">update_input()</a>.</p>
 
 </div>
 </div>
@@ -226,7 +252,7 @@ static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>runs screen logic (render, update, handleInput, etc.)</p>
 <p>initFocusData is the input to onFocus for the first screen </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../d3/d26/ScreenManager_8cpp_source.html">ScreenManager.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d3/d7a/ScreenManager_8h_source.html#l00049">getContextData()</a>.</p>
 
