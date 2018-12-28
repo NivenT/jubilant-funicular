@@ -1,7 +1,8 @@
-#ifndef NTA_GLSLProgram_H_INCLUDED
-#define NTA_GLSLProgram_H_INCLUDED
+#ifndef NTA_GLSLPROGRAM_H_INCLUDED
+#define NTA_GLSLPROGRAM_H_INCLUDED
 
 #include "nta/MyEngine.h"
+#include "nta/Path.h"
 
 typedef unsigned int GLuint;
 typedef unsigned int GLenum;
@@ -21,6 +22,8 @@ namespace nta {
         GLuint m_programID = 0;
         /// the ids for the vertex and fragment shaders
         GLuint m_vertShaderID = 0, m_fragShaderID = 0;
+        /// The files containing the vertex and fragment shaders
+        utils::Path m_vert, m_frag;
         /// the number of attributes used by the vertex shader
         int m_numAttributes = 0;
         /// keeps track of whether or not the shaders have been linked
@@ -43,8 +46,10 @@ namespace nta {
         void unuse() const;
         /// deletes this program
         void destroy();
+        /// Reloads the program
+        void reload();
         friend class ContextData;
     };
 }
 
-#endif // NTA_GLSLProgram_H_INCLUDED
+#endif // NTA_GLSLPROGRAM_H_INCLUDED

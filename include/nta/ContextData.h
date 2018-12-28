@@ -1,5 +1,5 @@
-#ifndef NTA_CONTEXTDATAMANAGER_H_INCLUDED
-#define NTA_CONTEXTDATAMANAGER_H_INCLUDED
+#ifndef NTA_CONTEXTDATA_H_INCLUDED
+#define NTA_CONTEXTDATA_H_INCLUDED
 
 #include <map>
 
@@ -47,6 +47,8 @@ namespace nta {
         Result<utils::Path> getTextureFile(GLTexture tex);
         /// Gets SpriteFont created from the given font with the given size
         Result<SpriteFont*> getSpriteFont(const utils::Path& fontPath, int fontSize = 32);
+        /// Reloads all known shaders
+        void reloadShaders();
         /// Sets the texture folder
         void setTextureFolder(const utils::Path& fldr) { m_texture_folder = fldr; }
         /// Sets the shader folder
@@ -58,4 +60,4 @@ namespace nta {
     };
 }
 
-#endif // NTA_CONTEXTDATAMANAGER_H_INCLUDED
+#endif // NTA_CONTEXTDATA_H_INCLUDED

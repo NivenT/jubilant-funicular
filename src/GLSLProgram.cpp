@@ -1,5 +1,7 @@
-#include <GL/glew.h>
 #include <fstream>
+#include <queue>
+
+#include <GL/glew.h>
 
 #include "nta/GLSLProgram.h"
 #include "nta/Logger.h"
@@ -62,13 +64,16 @@ namespace nta {
     void GLSLProgram::compileShaders(crstring shaderProgName) {
         Logger::writeToLog("Compiling shaders: " + shaderProgName + "...");
         m_programID = glCreateProgram();
-        m_vertShaderID = compileShader(shaderProgName + ".vert", GL_VERTEX_SHADER);
-        m_fragShaderID = compileShader(shaderProgName + ".frag", GL_FRAGMENT_SHADER);
+        m_vert = shaderProgName + ".vert";
+        m_vertShaderID = compileShader(m_vert.to_string(), GL_VERTEX_SHADER);
+        m_frag = shaderProgName + ".frag";
+        m_fragShaderID = compileShader(m_frag.to_string(), GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
     }
     void GLSLProgram::compileShaders(crstring vert, crstring frag) {
         Logger::writeToLog("Compiling shaders: " + vert + " | " + frag + "...");
         m_programID = glCreateProgram();
+        std::tie(m_vert, m_frag) = std::make_tuple(vert, frag);
         m_vertShaderID = compileShader(vert, GL_VERTEX_SHADER);
         m_fragShaderID = compileShader(frag, GL_FRAGMENT_SHADER);
         Logger::writeToLog("Compiled shaders");
@@ -119,5 +124,32 @@ namespace nta {
     void GLSLProgram::destroy() {
         glDeleteProgram(m_programID);
         m_programID = 0;
+        m_numAttributes = 0;
+        m_isLinked = false;
+    }
+    void GLSLProgram::reload() {
+        static const std::size_t MAX_ATTRIB_NAME_SIZE = 64;
+        Logger::writeToLog("Reloading shaders: " + m_vert.to_string() + " | " + m_frag.to_string() + "...");
+        Logger::indent();
+
+        std::vector<std::string> attribs(m_numAttributes);
+        for (int i = 0; i < m_numAttributes; i++) {
+            char attribName[MAX_ATTRIB_NAME_SIZE];
+            GLint size;
+            GLenum type;
+            glGetActiveAttrib(m_programID, i, MAX_ATTRIB_NAME_SIZE, nullptr,
+                              &size, &type, attribName);
+            attribs[glGetAttribLocation(m_programID, attribName)] = attribName;
+        }
+
+        destroy();
+        compileShaders(m_vert.to_string(), m_frag.to_string());
+        for (auto& attrib : attribs) {
+            addAttribute(attrib);
+        }
+        linkShaders();
+
+        Logger::unindent();
+        Logger::writeToLog("Reloaded shaders");
     }
 }

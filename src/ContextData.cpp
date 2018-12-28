@@ -50,6 +50,15 @@ namespace nta {
         }
         return Result<SpriteFont*>::new_ok(&m_fontMap[key]);
     }
+    void ContextData::reloadShaders() {
+        Logger::writeToLog("Reloading shaders...");
+        Logger::indent();
+        for (auto& pair : m_glslMap) {
+            pair.second.reload();
+        }
+        Logger::unindent();
+        Logger::writeToLog("Reloaded shaders");
+    }
     void ContextData::destroy() {
         Logger::writeToLog("Destroying ContextData...");
         Logger::indent();
