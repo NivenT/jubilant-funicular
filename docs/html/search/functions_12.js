@@ -3,7 +3,7 @@ var searchData=
   ['unindent',['unindent',['../d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa',1,'nta::Logger']]],
   ['unlock_5fstream',['unlock_stream',['../d4/d51/namespacenta.html#a4b56373c30ea930fe09f9b20a3d17285',1,'nta']]],
   ['unsubscribe',['unsubscribe',['../d9/d4e/classnta_1_1Subject.html#ab74c154ace2f59dafe154fe5c7416e8c',1,'nta::Subject']]],
-  ['unuse',['unuse',['../dc/d9c/classnta_1_1GLSLProgram.html#a3153b4281ab2b6fcf0017c90bbd199af',1,'nta::GLSLProgram']]],
+  ['unuse',['unuse',['../de/ded/classnta_1_1FrameBuffer.html#ab11a4d1e6e01fa17d8953890954ed89f',1,'nta::FrameBuffer::unuse()'],['../dc/d9c/classnta_1_1GLSLProgram.html#a3153b4281ab2b6fcf0017c90bbd199af',1,'nta::GLSLProgram::unuse()']]],
   ['unusesecondlog',['unuseSecondLog',['../d6/d0d/classnta_1_1Logger.html#a16785b13e8c950802890f92a92fd6bb7',1,'nta::Logger']]],
   ['unwrap',['unwrap',['../d8/d2e/classnta_1_1Result.html#ab3155310417aa43097087dbddabf5228',1,'nta::Result::unwrap()'],['../dd/d2b/classnta_1_1utils_1_1Option.html#a729b90440d09884f1c197864d7bb0be9',1,'nta::utils::Option::unwrap()']]],
   ['unwrap_5for',['unwrap_or',['../d8/d2e/classnta_1_1Result.html#aba1b7bda8b555e6fad474d5402799895',1,'nta::Result']]],
@@ -12,6 +12,6 @@ var searchData=
   ['update_5fkeys',['update_keys',['../d6/de2/classnta_1_1InputManager.html#a7978b37686999c1ae8aa5a03ebd99c00',1,'nta::InputManager']]],
   ['update_5fmouse',['update_mouse',['../d6/de2/classnta_1_1InputManager.html#a354889313c87ae81543adcd4f5db1b8a',1,'nta::InputManager']]],
   ['updateprev',['updatePrev',['../d6/de2/classnta_1_1InputManager.html#aea4219a830a2b1d9ee87bdc5f954903d',1,'nta::InputManager']]],
-  ['use',['use',['../dc/d9c/classnta_1_1GLSLProgram.html#ac5c8fffb04aec82913b78e35db9ea31f',1,'nta::GLSLProgram']]],
+  ['use',['use',['../de/ded/classnta_1_1FrameBuffer.html#a3a5334ba524b00a78ddbf497e7632b09',1,'nta::FrameBuffer::use()'],['../dc/d9c/classnta_1_1GLSLProgram.html#ac5c8fffb04aec82913b78e35db9ea31f',1,'nta::GLSLProgram::use()']]],
   ['usesecondlog',['useSecondLog',['../d6/d0d/classnta_1_1Logger.html#ae6f6bdd0314203430b35afcd73c81d85',1,'nta::Logger']]]
 ];

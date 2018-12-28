@@ -81,6 +81,9 @@ $(function() {
 Collaboration diagram for nta::GLSLProgram:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/df1/classnta_1_1GLSLProgram__coll__graph.png" border="0" usemap="#nta_1_1GLSLProgram_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1GLSLProgram_coll__map" id="nta_1_1GLSLProgram_coll__map">
+<area shape="rect" id="node4" href="../../d9/d63/classutils_1_1Path.html" title="A (case&#45;sensitive) Path in a file system. " alt="" coords="213,95,295,121"/>
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -117,6 +120,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html#a4c93500284d936f8dcd1f1f8441f301d">destroy</a> ()</td></tr>
 <tr class="memdesc:a4c93500284d936f8dcd1f1f8441f301d"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes this program <br /></td></tr>
 <tr class="separator:a4c93500284d936f8dcd1f1f8441f301d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deafe4920f1b70a172f247f6cc43928"><td class="memItemLeft" align="right" valign="top"><a id="a0deafe4920f1b70a172f247f6cc43928"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html#a0deafe4920f1b70a172f247f6cc43928">reload</a> ()</td></tr>
+<tr class="memdesc:a0deafe4920f1b70a172f247f6cc43928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads the program. <br /></td></tr>
+<tr class="separator:a0deafe4920f1b70a172f247f6cc43928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -145,6 +152,13 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <tr class="memitem:a4762bd58f72875cdda7513684f530bed"><td class="memItemLeft" align="right" valign="top"><a id="a4762bd58f72875cdda7513684f530bed"></a>
 GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_fragShaderID</b> = 0</td></tr>
 <tr class="separator:a4762bd58f72875cdda7513684f530bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd55f0b38c87ec46ef3c52b7d6016fd4"><td class="memItemLeft" align="right" valign="top"><a id="acd55f0b38c87ec46ef3c52b7d6016fd4"></a>
+<a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html#acd55f0b38c87ec46ef3c52b7d6016fd4">m_vert</a></td></tr>
+<tr class="memdesc:acd55f0b38c87ec46ef3c52b7d6016fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The files containing the vertex and fragment shaders. <br /></td></tr>
+<tr class="separator:acd55f0b38c87ec46ef3c52b7d6016fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e49eed9e8c40e6b51e453219d8d64c"><td class="memItemLeft" align="right" valign="top"><a id="a84e49eed9e8c40e6b51e453219d8d64c"></a>
+<a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_frag</b></td></tr>
+<tr class="separator:a84e49eed9e8c40e6b51e453219d8d64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa90cbc60f99bdfc69ef68633e351a118"><td class="memItemLeft" align="right" valign="top"><a id="aa90cbc60f99bdfc69ef68633e351a118"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html#aa90cbc60f99bdfc69ef68633e351a118">m_numAttributes</a> = 0</td></tr>
 <tr class="memdesc:aa90cbc60f99bdfc69ef68633e351a118"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of attributes used by the vertex shader <br /></td></tr>
@@ -163,7 +177,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ContextData</b></td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>represents a program written in GLSL comprised of a vertex shader and a fragment shader </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d67/GLSLProgram_8h_source.html#l00013">13</a> of file <a class="el" href="../../d4/d67/GLSLProgram_8h_source.html">GLSLProgram.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d67/GLSLProgram_8h_source.html#l00014">14</a> of file <a class="el" href="../../d4/d67/GLSLProgram_8h_source.html">GLSLProgram.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/nta/<a class="el" href="../../d4/d67/GLSLProgram_8h_source.html">GLSLProgram.h</a></li>
 <li>src/<a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html">GLSLProgram.cpp</a></li>

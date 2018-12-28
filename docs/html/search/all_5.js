@@ -8,6 +8,7 @@ var searchData=
   ['fontmap',['FontMap',['../d9/d4d/classnta_1_1FontMap.html',1,'nta::FontMap'],['../d9/d4d/classnta_1_1FontMap.html#a1839735db2d53428126d3381dc7f3928',1,'nta::FontMap::FontMap()']]],
   ['for_5feach',['for_each',['../db/da0/classnta_1_1ECS.html#a808a566a7d08438e7f3f5d5d732a2e21',1,'nta::ECS']]],
   ['fpslimiter',['FPSLimiter',['../d7/d1f/classnta_1_1FPSLimiter.html',1,'nta::FPSLimiter'],['../d7/d1f/classnta_1_1FPSLimiter.html#a2f811b3c9a5dc744020ea185f9a804e8',1,'nta::FPSLimiter::FPSLimiter()']]],
+  ['framebuffer',['FrameBuffer',['../de/ded/classnta_1_1FrameBuffer.html',1,'nta']]],
   ['free',['free',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#ac891290ce8ae269990cbbd7243cd1817',1,'nta::utils::ThreadPool::worker::free()'],['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0f0dfbba08147d20d6c71ee2b8d9f6b0',1,'nta::utils::IDFactory::free()']]],
   ['free_5fid',['free_id',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#ac136bf7941dcdc20ed51c680aaf4a369',1,'nta::utils::IDFactory']]],
   ['from_5ffile',['from_file',['../de/df3/classutils_1_1Json.html#a58e372e88f87b45315835f2dd18325d9',1,'utils::Json']]],

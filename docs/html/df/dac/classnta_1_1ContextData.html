@@ -85,8 +85,8 @@ Collaboration diagram for nta::ContextData:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a727e9437dcd810dbaa4bdee878a62732"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a727e9437dcd810dbaa4bdee878a62732">getGLSLProgram</a> (const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;progPath)</td></tr>
 <tr class="separator:a727e9437dcd810dbaa4bdee878a62732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcca101dd1dba9a1b71c5f2e16ddd623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#afcca101dd1dba9a1b71c5f2e16ddd623">getGLSLProgram</a> (crstring name, crstring vert, crstring frag)</td></tr>
-<tr class="separator:afcca101dd1dba9a1b71c5f2e16ddd623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca6c0def26dbc8123ee4ec7669c59aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html">GLSLProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#aeca6c0def26dbc8123ee4ec7669c59aa">getGLSLProgram</a> (crstring name, const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;vert, const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;frag)</td></tr>
+<tr class="separator:aeca6c0def26dbc8123ee4ec7669c59aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3f0782a88e4ce3a4df56b4be52a34a"><td class="memItemLeft" align="right" valign="top"><a id="a4f3f0782a88e4ce3a4df56b4be52a34a"></a>
 <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html">GLTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a4f3f0782a88e4ce3a4df56b4be52a34a">getTexture</a> (const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;path, crvec2 dimensions=glm::vec2(0))</td></tr>
 <tr class="memdesc:a4f3f0782a88e4ce3a4df56b4be52a34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a <a class="el" href="../../d3/dff/structnta_1_1GLTexture.html" title="represents a texture (tied to a specific GL context) ">GLTexture</a> representing the image at the given path. <br /></td></tr>
@@ -99,6 +99,17 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../d8/d2e/classnta_1_1Result.html">Result</a>&lt; <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html">SpriteFont</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a8416932623dddbeab7b3eb108e9d6f1c">getSpriteFont</a> (const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;fontPath, int fontSize=32)</td></tr>
 <tr class="memdesc:a8416932623dddbeab7b3eb108e9d6f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets <a class="el" href="../../d6/d57/classnta_1_1SpriteFont.html" title="Loads in a .ttf file, creates a font texture from it, and is then used to render text. ">SpriteFont</a> created from the given font with the given size. <br /></td></tr>
 <tr class="separator:a8416932623dddbeab7b3eb108e9d6f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a3d71e38ccb97a9158b39d8e2077d9"><td class="memItemLeft" align="right" valign="top"><a id="a40a3d71e38ccb97a9158b39d8e2077d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a40a3d71e38ccb97a9158b39d8e2077d9">reloadShaders</a> ()</td></tr>
+<tr class="memdesc:a40a3d71e38ccb97a9158b39d8e2077d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads all known shaders. <br /></td></tr>
+<tr class="separator:a40a3d71e38ccb97a9158b39d8e2077d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b652ca7f1a0c009f69e7f82347a9c9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#a4b652ca7f1a0c009f69e7f82347a9c9a">reloadTextures</a> ()</td></tr>
+<tr class="memdesc:a4b652ca7f1a0c009f69e7f82347a9c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads all known texture.  <a href="#a4b652ca7f1a0c009f69e7f82347a9c9a">More...</a><br /></td></tr>
+<tr class="separator:a4b652ca7f1a0c009f69e7f82347a9c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61693676ef84d97b5491430d3296410"><td class="memItemLeft" align="right" valign="top"><a id="af61693676ef84d97b5491430d3296410"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#af61693676ef84d97b5491430d3296410">reload</a> ()</td></tr>
+<tr class="memdesc:af61693676ef84d97b5491430d3296410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads everything. <br /></td></tr>
+<tr class="separator:af61693676ef84d97b5491430d3296410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefb58db21a0f86236466f65a68db8473"><td class="memItemLeft" align="right" valign="top"><a id="aefb58db21a0f86236466f65a68db8473"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dac/classnta_1_1ContextData.html#aefb58db21a0f86236466f65a68db8473">setTextureFolder</a> (const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;fldr)</td></tr>
 <tr class="memdesc:aefb58db21a0f86236466f65a68db8473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the texture folder. <br /></td></tr>
@@ -170,14 +181,14 @@ std::map&lt; std::pair&lt; <a class="el" href="../../d9/d63/classutils_1_1Path.h
 </div><div class="memdoc">
 <p>Gets <a class="el" href="../../dc/d9c/classnta_1_1GLSLProgram.html" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader ...">GLSLProgram</a> at specified path</p>
 <p>Assumes vertex shader is (progPath + ".vert") and fragment shader is (progPath + ".frag") </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>call resolve (?) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>call resolve (?) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d05/ContextData_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../d3/d05/ContextData_8cpp_source.html">ContextData.cpp</a>.</p>
 
 </div>
 </div>
-<a id="afcca101dd1dba9a1b71c5f2e16ddd623"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcca101dd1dba9a1b71c5f2e16ddd623">&#9670;&nbsp;</a></span>getGLSLProgram() <span class="overload">[2/2]</span></h2>
+<a id="aeca6c0def26dbc8123ee4ec7669c59aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca6c0def26dbc8123ee4ec7669c59aa">&#9670;&nbsp;</a></span>getGLSLProgram() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,13 +202,13 @@ std::map&lt; std::pair&lt; <a class="el" href="../../d9/d63/classutils_1_1Path.h
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">crstring&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;&#160;</td>
           <td class="paramname"><em>vert</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">crstring&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a> &amp;&#160;</td>
           <td class="paramname"><em>frag</em>&#160;</td>
         </tr>
         <tr>
@@ -211,6 +222,30 @@ std::map&lt; std::pair&lt; <a class="el" href="../../d9/d63/classutils_1_1Path.h
 <p>Uses name as the key in the map </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d05/ContextData_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d3/d05/ContextData_8cpp_source.html">ContextData.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4b652ca7f1a0c009f69e7f82347a9c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b652ca7f1a0c009f69e7f82347a9c9a">&#9670;&nbsp;</a></span>reloadTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nta::ContextData::reloadTextures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reloads all known texture. </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>Implement </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d05/ContextData_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../d3/d05/ContextData_8cpp_source.html">ContextData.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d4f/ContextData_8h_source.html#l00055">reload()</a>.</p>
 
 </div>
 </div>
