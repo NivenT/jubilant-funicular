@@ -40,7 +40,7 @@ namespace nta {
         /// shaders are. 
         ///
         /// Uses name as the key in the map
-        GLSLProgram* getGLSLProgram(crstring name, crstring vert, crstring frag);
+        GLSLProgram* getGLSLProgram(crstring name, const utils::Path& vert, const utils::Path& frag);
         /// Gets a GLTexture representing the image at the given path
         Result<GLTexture> getTexture(const utils::Path& path, crvec2 dimensions = glm::vec2(0));
         /// Gets the name of the file used the create tex

@@ -11,9 +11,11 @@ namespace nta {
         }
         return &m_glslMap[full_path];
     }
-    GLSLProgram* ContextData::getGLSLProgram(crstring name, crstring vert, crstring frag) {
+    GLSLProgram* ContextData::getGLSLProgram(crstring name, const utils::Path& vert, const utils::Path& frag) {
+        std::string full_vert_path = (m_glsl_folder + vert).to_string(),
+                    full_frag_path = (m_glsl_folder + frag).to_string();
         if (m_glslMap.find(name) == m_glslMap.end()) {
-            m_glslMap[name].compileShaders(vert, frag);
+            m_glslMap[name].compileShaders(full_vert_path, full_frag_path);
         }
         return &m_glslMap[name];
     }
