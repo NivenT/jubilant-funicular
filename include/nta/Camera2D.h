@@ -9,6 +9,7 @@ namespace nta {
     /// You can imagine the 2D world is flat against the wall, and this camera is 
     /// facing that wall. You can move the camera in space (i.e. setCenter/setDimensions),
     /// and it can be rotated about an axis orthogonal to the world, through its center. 
+    /// \todo Rename m_dimensions to union { m_extents; m_half_dimensions; }
     class Camera2D {
     private:
         /// center of the camera's view in world coordinates

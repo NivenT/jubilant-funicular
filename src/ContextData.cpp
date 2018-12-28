@@ -30,7 +30,7 @@ namespace nta {
                 return m_textureMap[full_path] = GLTexture(raw);
             });
         }
-        return Result<GLTexture>::new_ok(m_textureMap[path]);
+        return Result<GLTexture>::new_ok(m_textureMap[full_path]);
     }
     Result<utils::Path> ContextData::getTextureFile(GLTexture tex) {
         if (m_textureFiles.find(tex) == m_textureFiles.end()) {
