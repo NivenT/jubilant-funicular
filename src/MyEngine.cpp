@@ -78,15 +78,16 @@ namespace nta {
     }
     bool check_error() {
         std::string gl_err;
-        int err;
-        while ((err = glGetError()) != GL_NO_ERROR) {
-            gl_err += gl_err == "" ? "" : "\n";
-            gl_err += utils::to_string(gluErrorString(err)) + " (" + utils::to_string(err) + ")";
+        int err = GL_NO_ERROR;
+        if (SDL_GL_GetCurrentContext() != nullptr) {
+            while ((err = glGetError()) != GL_NO_ERROR) {
+                gl_err += gl_err == "" ? "" : "\n";
+                gl_err += utils::to_string(gluErrorString(err)) + " (" + utils::to_string(err) + ")";
+            }
+            if (gl_err != "") {
+                Logger::writeToLog("GL Error(s): " + gl_err);
+            }
         }
-        if (gl_err != "") {
-            Logger::writeToLog("GL Error(s): " + gl_err);
-        }
-        
         std::string sdl_err = SDL_GetError();
         if (sdl_err != "") {
             Logger::writeToLog("SDL Error: "+sdl_err);

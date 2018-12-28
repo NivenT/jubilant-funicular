@@ -19,10 +19,12 @@ namespace nta {
     Window::Window() {
     }
     Window::~Window() {
+        Logger::writeToLog("Destorying Window " + m_title + "...");
         m_width = m_height = 0;
         m_title = "";
         SDL_DestroyWindow(m_window);
         m_window = nullptr;
+        Logger::writeToLog("Destroyed Window");
     }
     SDL_Window* Window::getSDLWindow(GetSDLWindowKey key) const {
         return m_window;
