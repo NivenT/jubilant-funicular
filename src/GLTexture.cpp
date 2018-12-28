@@ -10,11 +10,17 @@
 #include "nta/utils.h"
 
 namespace nta {
-    GLTexture::GLTexture(const RawTexture& raw, GLint minFilt, GLint magFilt) : 
-        width(raw.width), height(raw.height) {
-        Logger::writeToLog("Creating GLTexture from RawTexture...");
+    void GLTexture::init(const RawTexture& raw, GLint minFilt, GLint magFilt) {
+        GLuint old_id = id;
+        if (id == 0) {
+            Logger::writeToLog("Initializing GLTexture from RawTexture...");
+        } else {
+            Logger::writeToLog("Updating GLTexture using RawTexture...");
+        }
+        width = raw.width;
+        height = raw.height;
         if (raw.data) {
-            glGenTextures(1, &id);
+            if (id == 0) glGenTextures(1, &id);
             glBindTexture(GL_TEXTURE_2D, id);
             glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, raw.width, raw.height, 0,
                          raw.format, GL_UNSIGNED_BYTE, raw.data);
@@ -24,7 +30,11 @@ namespace nta {
             glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
             glGenerateMipmap(GL_TEXTURE_2D);
             glBindTexture(GL_TEXTURE_2D, 0);
-            Logger::writeToLog("Created GLTexture with id " + utils::to_string(id));
+            if (old_id == 0) {
+                Logger::writeToLog("Created GLTexture with id " + utils::to_string(id));
+            } else {
+                Logger::writeToLog("Updated GLTexture");
+            }
         } else {
             Logger::writeToLog("The RawTexture was empty");
         }

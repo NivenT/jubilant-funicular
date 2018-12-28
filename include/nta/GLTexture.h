@@ -24,6 +24,8 @@ namespace nta {
     struct GLTexture {
         GLTexture() : id(0) {}
         GLTexture(const RawTexture& raw, GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
+                  GLint magFilt = GL_LINEAR) : id(0) { init(raw, minFilt, magFilt); }
+        void init(const RawTexture& raw, GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
                   GLint magFilt = GL_LINEAR);
         static GLTexture no_texture() {
             GLTexture ret;

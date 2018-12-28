@@ -59,6 +59,9 @@ namespace nta {
         Logger::unindent();
         Logger::writeToLog("Reloaded shaders");
     }
+    void ContextData::reloadTextures() {
+        /// \todo Implement
+    }
     void ContextData::destroy() {
         Logger::writeToLog("Destroying ContextData...");
         Logger::indent();

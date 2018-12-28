@@ -49,6 +49,10 @@ namespace nta {
         Result<SpriteFont*> getSpriteFont(const utils::Path& fontPath, int fontSize = 32);
         /// Reloads all known shaders
         void reloadShaders();
+        /// Reloads all known texture
+        void reloadTextures();
+        /// Reloads everything
+        void reload() { reloadShaders(); reloadTextures(); }
         /// Sets the texture folder
         void setTextureFolder(const utils::Path& fldr) { m_texture_folder = fldr; }
         /// Sets the shader folder
