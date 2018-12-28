@@ -68,6 +68,9 @@ namespace nta {
             pair.second.destroy();
             Logger::writeToLog("Deleted SpriteFont");
         }
+        m_glslMap.clear();
+        m_textureMap.clear();
+        m_fontMap.clear();
         Logger::unindent();
         Logger::writeToLog("Destroyed ContextData");
     }
