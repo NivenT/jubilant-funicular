@@ -70,6 +70,7 @@ namespace nta {
         ~SpriteFont() { destroy(); }
         /// returns the dimensions of the rectangle containing the text
         glm::vec2 measure(crstring text) const;
+        GLuint getTexture() const { return m_texId; }
         /// renders text with specified location, color, scale, etc.
         void drawText(SpriteBatch& batch, crstring text, crvec2 topLeft, crvec2 scale,
                       crvec4 color = glm::vec4(1), float depth = NTA_DEFAULT_DEPTH) const;

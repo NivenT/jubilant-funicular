@@ -3,7 +3,7 @@
 
 #include <GL/glew.h>
 
-#include "Errors.h"
+#include "nta/Errors.h"
 
 namespace nta {
     /// A loaded image (not tied to any specific GL context)
