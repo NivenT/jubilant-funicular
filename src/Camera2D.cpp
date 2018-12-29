@@ -100,6 +100,14 @@ namespace nta {
         glm::vec3 orig = getInverseCameraMatrix() * glm::vec3(screen, 1);
         return glm::vec2(orig.x, orig.y);
     }
+    bool Camera2D::inBounds(crvec2 pt) const {
+        glm::vec2 transformed_pt = getRotationMatrix() * glm::vec3(pt - m_center, 1);
+        return -m_dimensions.x <= transformed_pt.x && transformed_pt.x <= m_dimensions.x &&
+               -m_dimensions.y <= transformed_pt.y && transformed_pt.y <= m_dimensions.y;
+    }
+    bool Camera2D::inBounds(float x, float y) const {
+        return inBounds(glm::vec2(x, y));
+    }
     void Camera2D::setCenter(crvec2 center) {
         m_center = center;
     }

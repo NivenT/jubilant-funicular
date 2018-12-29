@@ -27,12 +27,14 @@ namespace nta {
         Camera2D(crvec2 center, crvec2 dimensions, float orientation);
         /// destructor
         ~Camera2D();
-        /// returns the 3x3 matrix representing the camera's view
         glm::mat3 getTranslationMatrix() const;
         glm::mat3 getRotationMatrix() const;
         glm::mat3 getInverseRotationMatrix() const;
         glm::mat3 getDilationMatrix() const;
         glm::mat3 getCameraMatrix() const;
+        /// returns the 3x3 matrix representing the camera's view
+        ///
+        /// The camera translates, rotates, and then dilates
         glm::mat3 getInverseCameraMatrix() const;
         /// returns camera bounds in the given format
         glm::vec4 getBoundsCenter() const;
@@ -52,6 +54,9 @@ namespace nta {
         /// screen here just means the coordinates after multiplying by the camera matrix
         /// this is usually what's passed into gl_Position
         glm::vec2 screenToGame(crvec2 screen) const;
+        /// Returns true if this pt is contained within the camera 
+        bool inBounds(crvec2 pt) const;
+        bool inBounds(float x, float y) const;
         /// sets the values of the camera's fields
         void setCenter(crvec2 center);
         void setCenter(float x, float y);
