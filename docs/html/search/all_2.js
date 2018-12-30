@@ -17,6 +17,7 @@ var searchData=
   ['compressor',['Compressor',['../d3/d18/classnta_1_1Compressor.html',1,'nta']]],
   ['contextdata',['ContextData',['../df/dac/classnta_1_1ContextData.html',1,'nta']]],
   ['convert_5ferror',['convert_error',['../d8/d2e/classnta_1_1Result.html#af206123a7a636c6f3050c657cf0dc3bf',1,'nta::Result']]],
+  ['count',['count',['../d9/de6/structnta_1_1InstancedGlyph.html#ad968ffd6199fe05adb4099847a9f00d6',1,'nta::InstancedGlyph']]],
   ['createinputmanagerkey',['CreateInputManagerKey',['../dc/d0b/classnta_1_1CreateInputManagerKey.html',1,'nta']]],
   ['createlog',['createLog',['../d6/d0d/classnta_1_1Logger.html#a308a3ec22f996556b3d54737ace33543',1,'nta::Logger']]],
   ['createrenderbatches',['createRenderBatches',['../d4/df3/classnta_1_1PrimitiveBatch.html#a8b1bcf740a16d65a79566c0a9aebd117',1,'nta::PrimitiveBatch::createRenderBatches()'],['../d7/d3b/classnta_1_1SpriteBatch.html#af22e3c4af01fef017e9522021545928f',1,'nta::SpriteBatch::createRenderBatches()']]],

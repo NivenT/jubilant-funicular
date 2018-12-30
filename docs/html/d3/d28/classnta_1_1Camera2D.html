@@ -96,8 +96,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a18046ff230e055a06c6ca750e6eea8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor <br /></td></tr>
 <tr class="separator:a18046ff230e055a06c6ca750e6eea8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbd89d9119dcd820e60756b816ad0b3"><td class="memItemLeft" align="right" valign="top"><a id="a5bbd89d9119dcd820e60756b816ad0b3"></a>
-glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a5bbd89d9119dcd820e60756b816ad0b3">getTranslationMatrix</a> () const</td></tr>
-<tr class="memdesc:a5bbd89d9119dcd820e60756b816ad0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the 3x3 matrix representing the camera's view <br /></td></tr>
+glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getTranslationMatrix</b> () const</td></tr>
 <tr class="separator:a5bbd89d9119dcd820e60756b816ad0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3fb29b12f0b118dd2be95f701b81e2f"><td class="memItemLeft" align="right" valign="top"><a id="ab3fb29b12f0b118dd2be95f701b81e2f"></a>
 glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getRotationMatrix</b> () const</td></tr>
@@ -111,8 +110,7 @@ glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getDilationMatri
 <tr class="memitem:a203daa81f32279e969de57a549165297"><td class="memItemLeft" align="right" valign="top"><a id="a203daa81f32279e969de57a549165297"></a>
 glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getCameraMatrix</b> () const</td></tr>
 <tr class="separator:a203daa81f32279e969de57a549165297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28bb108270be9a73ff39c2573956ab9c"><td class="memItemLeft" align="right" valign="top"><a id="a28bb108270be9a73ff39c2573956ab9c"></a>
-glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><b>getInverseCameraMatrix</b> () const</td></tr>
+<tr class="memitem:a28bb108270be9a73ff39c2573956ab9c"><td class="memItemLeft" align="right" valign="top">glm::mat3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a28bb108270be9a73ff39c2573956ab9c">getInverseCameraMatrix</a> () const</td></tr>
 <tr class="separator:a28bb108270be9a73ff39c2573956ab9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02d4b9a995f3919c753fd2ea6d9f8f1"><td class="memItemLeft" align="right" valign="top"><a id="ad02d4b9a995f3919c753fd2ea6d9f8f1"></a>
 glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#ad02d4b9a995f3919c753fd2ea6d9f8f1">getBoundsCenter</a> () const</td></tr>
@@ -147,6 +145,13 @@ glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="separator:afb20fb9823724babdc8d18b17336169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2be32484dee689c6014cf88a6ce80a"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a">screenToGame</a> (crvec2 screen) const</td></tr>
 <tr class="separator:a8b2be32484dee689c6014cf88a6ce80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958c50f81111f33379b2b251493bd40f"><td class="memItemLeft" align="right" valign="top"><a id="a958c50f81111f33379b2b251493bd40f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a958c50f81111f33379b2b251493bd40f">inBounds</a> (crvec2 pt) const</td></tr>
+<tr class="memdesc:a958c50f81111f33379b2b251493bd40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this pt is contained within the camera. <br /></td></tr>
+<tr class="separator:a958c50f81111f33379b2b251493bd40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf55ce57adb8fab01f529a456882fdf"><td class="memItemLeft" align="right" valign="top"><a id="a6bf55ce57adb8fab01f529a456882fdf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>inBounds</b> (float x, float y) const</td></tr>
+<tr class="separator:a6bf55ce57adb8fab01f529a456882fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a7edceed0964b375fbfe154b9a9895"><td class="memItemLeft" align="right" valign="top"><a id="a11a7edceed0964b375fbfe154b9a9895"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895">setCenter</a> (crvec2 center)</td></tr>
 <tr class="memdesc:a11a7edceed0964b375fbfe154b9a9895"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the values of the camera's fields <br /></td></tr>
@@ -222,6 +227,29 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28bb108270be9a73ff39c2573956ab9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28bb108270be9a73ff39c2573956ab9c">&#9670;&nbsp;</a></span>getInverseCameraMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::mat3 nta::Camera2D::getInverseCameraMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns the 3x3 matrix representing the camera's view</p>
+<p>The camera translates, rotates, and then dilates </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00099">screenToGame()</a>.</p>
+
+</div>
+</div>
 <a id="a8b2be32484dee689c6014cf88a6ce80a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b2be32484dee689c6014cf88a6ce80a">&#9670;&nbsp;</a></span>screenToGame()</h2>
 
@@ -273,7 +301,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </div><div class="memdoc">
 <p>moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00120">120</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
 </div>
 </div>

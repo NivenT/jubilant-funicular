@@ -2,7 +2,7 @@ var searchData=
 [
   ['typemap',['TypeMap',['../de/d3a/md_utilities_utils_typemap_README.html',1,'']]],
   ['t',['t',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#a73546e576652ef9cded578d20e1de393',1,'nta::utils::ThreadPool::worker']]],
-  ['tex',['tex',['../d9/d85/structnta_1_1SpriteSheet.html#a6c55217abab2dbd76b61ad92fe902367',1,'nta::SpriteSheet']]],
+  ['tex',['tex',['../d9/d85/structnta_1_1SpriteSheet.html#a6c55217abab2dbd76b61ad92fe902367',1,'nta::SpriteSheet::tex()'],['../d9/de6/structnta_1_1InstancedGlyph.html#a38ee1a013ef3b8a46454e7c0e5b16202',1,'nta::InstancedGlyph::tex()']]],
   ['textureid',['textureID',['../d6/d4f/structnta_1_1Primitive.html#a203f519bb8fefeaae5253ef3739b7701',1,'nta::Primitive::textureID()'],['../d6/db3/structnta_1_1Glyph.html#acd8af1fcb19c4fb960808defbee5abe5',1,'nta::Glyph::textureID()'],['../dd/d38/structnta_1_1RenderBatch.html#a65aa121e11783396f753c8f937fe9d04',1,'nta::RenderBatch::textureID()']]],
   ['threadpool',['ThreadPool',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html',1,'nta::utils::ThreadPool'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a3336e668eb283fcb65654058a9ed9113',1,'nta::utils::ThreadPool::ThreadPool()']]],
   ['thunk',['thunk',['../d1/de6/classnta_1_1CallbackManager.html#ad92bce3b5cee6411a2b2c08b4c13b767',1,'nta::CallbackManager::event::thunk()'],['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#af4dfab6b1c3168a40b90f518991d7efe',1,'nta::utils::ThreadPool::worker::thunk()']]],

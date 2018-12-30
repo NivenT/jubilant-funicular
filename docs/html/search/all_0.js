@@ -1,11 +1,13 @@
 var searchData=
 [
   ['add_5fcomponent',['add_component',['../db/da0/classnta_1_1ECS.html#a81600b75a067e9b180ab38b9e8a37af3',1,'nta::ECS']]],
+  ['add_5fglyph',['add_glyph',['../d9/dcf/classnta_1_1InstanceBatch.html#a82901420a0d796b457b1e528bbe2af5c',1,'nta::InstanceBatch']]],
+  ['add_5finstance_5fdata',['add_instance_data',['../d9/dcf/classnta_1_1InstanceBatch.html#a0daa681e47a4e2167799478ea75266da',1,'nta::InstanceBatch']]],
   ['add_5ftexture',['add_texture',['../de/ded/classnta_1_1FrameBuffer.html#a80ee15021ddc1c4425c477d331dc011a',1,'nta::FrameBuffer']]],
   ['addattribute',['addAttribute',['../dc/d9c/classnta_1_1GLSLProgram.html#a708c47abebb9ca01b0eed4d1e711cef7',1,'nta::GLSLProgram']]],
   ['addbatch',['addBatch',['../d1/de9/classnta_1_1ParticleEngine2D.html#a1543908144e9aeb9ae1b7529e82c0ad7',1,'nta::ParticleEngine2D']]],
   ['addexists',['AddExists',['../dc/d8e/structutils_1_1check_1_1AddExists.html',1,'utils::check']]],
-  ['addglyph',['addGlyph',['../d7/d3b/classnta_1_1SpriteBatch.html#a4ec3818e1b828d84148f5ff6bbc1955b',1,'nta::SpriteBatch']]],
+  ['addglyph',['addGlyph',['../d7/d3b/classnta_1_1SpriteBatch.html#ade6103e188a384aaa18cbc352b22dc2a',1,'nta::SpriteBatch']]],
   ['addline',['addLine',['../dc/dbe/classnta_1_1DebugBatch.html#abc7c94706f334db36992b486885868a2',1,'nta::DebugBatch']]],
   ['addparticle',['addParticle',['../df/d9f/classnta_1_1ParticleBatch2D.html#aeb80340cf60145569e7d30e5e25fd9c0',1,'nta::ParticleBatch2D']]],
   ['addprimitive',['addPrimitive',['../d4/df3/classnta_1_1PrimitiveBatch.html#a61a1fd06003233eac050ea7317fafc43',1,'nta::PrimitiveBatch']]],

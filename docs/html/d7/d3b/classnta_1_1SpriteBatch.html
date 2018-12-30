@@ -98,7 +98,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#abadacd5bfcfc6ed0cf5a4470a22010ed">end</a> ()</td></tr>
 <tr class="memdesc:abadacd5bfcfc6ed0cf5a4470a22010ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">ends collection of glyphs and prepares to render <br /></td></tr>
 <tr class="separator:abadacd5bfcfc6ed0cf5a4470a22010ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec3818e1b828d84148f5ff6bbc1955b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#a4ec3818e1b828d84148f5ff6bbc1955b">addGlyph</a> (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=0.5, crvec4 color=glm::vec4(1))</td></tr>
+<tr class="memitem:ade6103e188a384aaa18cbc352b22dc2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/classnta_1_1SpriteBatch.html#ade6103e188a384aaa18cbc352b22dc2a">addGlyph</a> (crvec4 posRect, GLuint texture=0, crvec4 uvRect=glm::vec4(0, 0, 1, 1), crvec4 color=glm::vec4(1), float angle=0, float depth=0.5)</td></tr>
+<tr class="separator:ade6103e188a384aaa18cbc352b22dc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec3818e1b828d84148f5ff6bbc1955b"><td class="memItemLeft" align="right" valign="top"><a id="a4ec3818e1b828d84148f5ff6bbc1955b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec4 posRect, crvec4 uvRect, GLuint texture, float depth=0.5, crvec4 color=glm::vec4(1))</td></tr>
 <tr class="separator:a4ec3818e1b828d84148f5ff6bbc1955b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6ce8e79f16c0031d661f0160e9225b"><td class="memItemLeft" align="right" valign="top"><a id="acb6ce8e79f16c0031d661f0160e9225b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlyph</b> (crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, float depth=0.5, crvec4 color=glm::vec4(1))</td></tr>
@@ -162,12 +165,15 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td><
 <tr class="separator:a80916f3903da74581339d9295d454367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>represents a collection of sprites to be drawn If you want to draw a shape other than a square, use <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html" title="represents a collection of primitives to be drawn ">PrimitiveBatch</a> instead </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>Allow for custom vertex types </dd></dl>
+<div class="textblock"><p>represents a collection of sprites to be drawn</p>
+<p>If you want to draw a shape other than a square, use <a class="el" href="../../d4/df3/classnta_1_1PrimitiveBatch.html" title="represents a collection of primitives to be drawn ">PrimitiveBatch</a> instead </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd><p class="startdd">Allow for custom vertex types </p>
+<p class="enddd">Rewrite to use glDrawElements instead of glDrawArrays </p>
+</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d29/SpriteBatch_8h_source.html#l00085">85</a> of file <a class="el" href="../../db/d29/SpriteBatch_8h_source.html">SpriteBatch.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d29/SpriteBatch_8h_source.html#l00087">87</a> of file <a class="el" href="../../db/d29/SpriteBatch_8h_source.html">SpriteBatch.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4ec3818e1b828d84148f5ff6bbc1955b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ec3818e1b828d84148f5ff6bbc1955b">&#9670;&nbsp;</a></span>addGlyph()</h2>
+<a id="ade6103e188a384aaa18cbc352b22dc2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6103e188a384aaa18cbc352b22dc2a">&#9670;&nbsp;</a></span>addGlyph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,26 +187,32 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">crvec4&#160;</td>
-          <td class="paramname"><em>uvRect</em>, </td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>texture</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLuint&#160;</td>
-          <td class="paramname"><em>texture</em>, </td>
+          <td class="paramtype">crvec4&#160;</td>
+          <td class="paramname"><em>uvRect</em> = <code>glm::vec4(0,0,1,1)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">crvec4&#160;</td>
+          <td class="paramname"><em>color</em> = <code>glm::vec4(1)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>depth</em> = <code>0.5</code>, </td>
+          <td class="paramname"><em>angle</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">crvec4&#160;</td>
-          <td class="paramname"><em>color</em> = <code>glm::vec4(1)</code>&#160;</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>0.5</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,9 +221,9 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_vbo</b> = 0</td><
         </tr>
       </table>
 </div><div class="memdoc">
-<p>adds a glyph to the batch </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>Give some of these different names? </dd></dl>
+<p>adds a glyph to the batch </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Give some of these different names? </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html#l00103">103</a> of file <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html">SpriteBatch.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html#l00100">100</a> of file <a class="el" href="../../dd/dc9/SpriteBatch_8cpp_source.html">SpriteBatch.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../d1/d73/ParticleBatch2D_8cpp_source.html#l00041">nta::ParticleBatch2D::draw()</a>, <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00097">nta::SpriteFont::drawText()</a>, and <a class="el" href="../../dc/d67/SpriteFont_8cpp_source.html#l00126">nta::SpriteFont::drawTexture()</a>.</p>
 
