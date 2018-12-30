@@ -10,10 +10,15 @@
 namespace nta {
     /// represents an attribute of a vertex (e.g. a call to glVertexAttribPointer)
     struct VertexAttrib {
+        void setup() const {
+            glVertexAttribPointer(index, size, type, normalized, stride, pointer);
+        }
+
+        GLuint index;
         GLint size;
         GLenum type;
         GLboolean normalized;
-        //GLsizei stride; // always sizeof(Vertex2D)
+        GLsizei stride;
         GLvoid* pointer;
     };
     /// represents a vertex in 2 dimensions

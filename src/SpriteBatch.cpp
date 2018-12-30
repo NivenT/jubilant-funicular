@@ -30,11 +30,8 @@ namespace nta {
         glBindVertexArray(m_vao);
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
         for (int i = 0; i < NUM_VERTEX_ATTRIBS; i++) {
-            auto& attrib = Vertex2D::attribs[i];
-
             glEnableVertexAttribArray(i);
-            glVertexAttribPointer(i, attrib.size, attrib.type, attrib.normalized, sizeof(Vertex2D), 
-                                  attrib.pointer);
+            Vertex2D::attribs[i].setup();
         }
         glBindVertexArray(0);
     }
@@ -100,6 +97,10 @@ namespace nta {
         glBufferSubData(GL_ARRAY_BUFFER, 0, vertexData.size()*sizeof(Vertex2D), vertexData.data());
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
+    void SpriteBatch::addGlyph(crvec4 posRect, GLuint texture, crvec4 uvRect, 
+                               crvec4 color, float angle, float depth) {
+        addGlyph(posRect, uvRect, texture, color, angle, depth);
+    }
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth,
                                crvec4 color) {
         addGlyph(posRect, uvRect, texture, color, 0, depth);
@@ -108,16 +109,6 @@ namespace nta {
                                float depth, crvec4 color) {
         addGlyph(corner1, corner2, uvRect, texture, color, 0, depth);
     }
-    /*
-    void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color,
-                               float depth) {
-        addGlyph(posRect, uvRect, texture, depth, color);
-    }
-    void SpriteBatch::addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
-                               crvec4 color, float depth) {
-        addGlyph(corner1, corner2, uvRect, texture, depth, color);
-    }
-    */
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, crvec4 color,
                                float angle, float depth) {
         m_glyphs.emplace_back(posRect, uvRect, texture, depth, color, angle);

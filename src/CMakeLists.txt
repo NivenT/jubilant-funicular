@@ -15,6 +15,7 @@ set(NTA_LIBRARY_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/HuffmanLeaf.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/HuffmanNode.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/InputManager.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/InstanceBatch.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/IOManager.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Logger.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/MyEngine.cpp

@@ -80,8 +80,10 @@ namespace nta {
         GLenum mode;
     };
     /// represents a collection of sprites to be drawn
+    ///
     /// If you want to draw a shape other than a square, use PrimitiveBatch instead
     /// \todo Allow for custom vertex types
+    /// \todo Rewrite to use glDrawElements instead of glDrawArrays
     class SpriteBatch {
     private:
         /// creates the vertex array object
@@ -114,6 +116,11 @@ namespace nta {
         void end();
         /// adds a glyph to the batch
         /// \todo Give some of these different names?
+        void addGlyph(crvec4 posRect, GLuint texture = 0, 
+                      crvec4 uvRect = glm::vec4(0,0,1,1), 
+                      crvec4 color = glm::vec4(1),
+                      float angle = 0,
+                      float depth = NTA_DEFAULT_DEPTH);
         void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, 
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
         void addGlyph(crvec2 corner1, crvec2 corner2, crvec4 uvRect, GLuint texture, 
