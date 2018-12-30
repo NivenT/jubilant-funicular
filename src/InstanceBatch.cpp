@@ -1,5 +1,3 @@
-#include <numeric>
-
 #include "nta/InstanceBatch.h"
 
 namespace nta {
@@ -13,7 +11,6 @@ namespace nta {
         m_glyphs.clear();
     }
     void InstanceBatch::end() {
-
     }
     void InstanceBatch::add_glyph(crvec4 posRect, GLuint texture, crvec4 uvRect, 
                                   crvec4 color) {
