@@ -39,6 +39,48 @@ namespace nta {
             Logger::writeToLog("The RawTexture was empty");
         }
     }
+    GLTexture GLTexture::combine(const GLTexture& lhs, const GLTexture& rhs) {
+        GLTexture ret;
+        glGenTextures(1, &ret.id);
+        ret.width = lhs.width + rhs.width;
+        ret.height = std::max(lhs.height, rhs.height);
+
+        GLubyte* pixels = new GLubyte[ret.width*ret.height*4];
+        GLubyte* lpixels = new GLubyte[lhs.width*lhs.height*4];
+        GLubyte* rpixels = new GLubyte[rhs.width*rhs.height*4];
+
+        glBindTexture(GL_TEXTURE_2D, lhs.id);
+        glGetTexImage(GL_TEXTURE_2D, 0, GL_RGBA, GL_UNSIGNED_BYTE, lpixels);
+        glBindTexture(GL_TEXTURE_2D, rhs.id);
+        glGetTexImage(GL_TEXTURE_2D, 0, GL_RGBA, GL_UNSIGNED_BYTE, rpixels);
+
+        memset(pixels, 0, ret.width*ret.height*4);
+        for (int r = 0; r < ret.height; r++) {
+            if (r < lhs.height) {
+                memcpy(&pixels[r*ret.width*4], &lpixels[r*lhs.width*4], lhs.width*4);
+            }
+            if (r < rhs.height) {
+                memcpy(&pixels[r*ret.width*4 + lhs.width*4], &rpixels[r*rhs.width*4], 
+                       rhs.width*4);
+            }
+        }
+
+        glBindTexture(GL_TEXTURE_2D, ret.id);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, ret.width, ret.height, 0,
+                     GL_RGBA, GL_UNSIGNED_BYTE, pixels);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glGenerateMipmap(GL_TEXTURE_2D);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        delete[] pixels;
+        delete[] lpixels;
+        delete[] rpixels;
+
+        return ret;
+    }
 
     Result<RawTexture> ImageLoader::readImage(crstring filePath, crvec2 dimensions) {
         Logger::writeToLog("Loading image \"" + filePath + "\" into RawTexture...");

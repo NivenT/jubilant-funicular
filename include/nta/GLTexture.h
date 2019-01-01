@@ -16,7 +16,7 @@ namespace nta {
         }
 
         GLuint width, height;
-        GLint format;
+        GLenum format;
         /// Data stored on the heap
         GLubyte* data = nullptr;
     };
@@ -27,11 +27,15 @@ namespace nta {
                   GLint magFilt = GL_LINEAR) : id(0) { init(raw, minFilt, magFilt); }
         void init(const RawTexture& raw, GLint minFilt = GL_LINEAR_MIPMAP_LINEAR,
                   GLint magFilt = GL_LINEAR);
+
         static GLTexture no_texture() {
             GLTexture ret;
             ret.id = ret.width = ret.height = 0;
             return ret;
         }
+        /// Creates a new texture that is the result of placing lhs and rhs side by side
+        static GLTexture combine(const GLTexture& lhs, const GLTexture& rhs);
+
         bool is_valid() const {
             return id != 0;
         }
@@ -41,6 +45,11 @@ namespace nta {
         bool operator<(const GLTexture& rhs) const {
             return id < rhs.id;
         }
+        /// calls combine
+        GLTexture operator+(const GLTexture& rhs) const {
+            return combine(*this, rhs);
+        }
+
         /// Deletes this texture
         void destroy() { glDeleteTextures(1, &id); }
 
