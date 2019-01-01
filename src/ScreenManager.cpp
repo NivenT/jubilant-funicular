@@ -138,6 +138,7 @@ namespace nta {
         }
     }
     void ScreenManager::run(void* initFocusData) {
+        Logger::writeToLog("Running ScreenManager...");
         Screen* currScreen = nullptr;
         if (m_currScreen != -1) {
             getCurrScreen()->onFocus(ScreenSwitchInfo(initFocusData));
@@ -154,6 +155,7 @@ namespace nta {
                     ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
                 #endif
                 currScreen->render();
+                check_error();
                 ErrorManager::handle_errors();
                 m_limiter.end();
             }

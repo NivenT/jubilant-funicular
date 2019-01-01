@@ -40,6 +40,9 @@ namespace nta {
         }
     }
     GLTexture GLTexture::combine(const GLTexture& lhs, const GLTexture& rhs) {
+        if (!lhs.is_valid()) return rhs;
+        if (!rhs.is_valid()) return lhs;
+        
         GLTexture ret;
         glGenTextures(1, &ret.id);
         ret.width = lhs.width + rhs.width;
