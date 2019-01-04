@@ -32,12 +32,14 @@ namespace nta {
         /// Clears out data from the previous frame
         void begin();
         /// Doesn't actually do anything. This is purely cosmetic
-        void end();
+        void end() const {}
+        /// If you don't want to follow the begin/end pattern, you can just call reset instead before adding glyphs
+        void reset() { begin(); }
         /// \todo (?) add depth
         void add_glyph(crvec4 posRect, GLuint texture = 0, 
                        crvec4 uvRect = glm::vec4(0,0,1,1), 
                        crvec4 color = glm::vec4(1));
-        /// Adds data that varies between instances.
+        /// Adds data that varies between instances (data associated to most recently added glyph).
         ///
         /// attribs describes the glsl "in" variables to change
         ///

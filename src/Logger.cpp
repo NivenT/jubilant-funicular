@@ -1,3 +1,5 @@
+#include <iomanip>
+
 #include <SDL2/SDL.h>
 
 #include "nta/Logger.h"
@@ -16,7 +18,9 @@ namespace nta {
         std::string tabs(m_tabs, ' ');
 
         std::stringstream logEntry;
+        logEntry<<std::fixed<<std::setprecision(3);
         logEntry<<SDL_GetTicks()/1000.<<" seconds: "<<tabs<<entry;
+
         m_logFile<<lock_stream<<logEntry.str()<<std::endl<<std::endl<<unlock_stream;
         if (m_secondLog) {
             (*m_secondLog)<<lock_stream<<logEntry.str()<<std::endl<<std::endl<<unlock_stream;
