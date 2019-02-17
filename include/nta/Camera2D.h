@@ -57,6 +57,8 @@ namespace nta {
         /// Returns true if this pt is contained within the camera 
         bool inBounds(crvec2 pt) const;
         bool inBounds(float x, float y) const;
+        /// Returns ture if this polygon would show up in the camera
+        bool isVisible(const std::vector<glm::vec2>& polygon) const;
         /// sets the values of the camera's fields
         void setCenter(crvec2 center);
         void setCenter(float x, float y);

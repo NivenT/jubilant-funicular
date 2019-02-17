@@ -1,3 +1,6 @@
+#include <algorithm>
+#include <numeric>
+#include <vector>
 #include <tuple>
 
 #include "nta/Camera2D.h"
@@ -101,12 +104,59 @@ namespace nta {
         return glm::vec2(orig.x, orig.y);
     }
     bool Camera2D::inBounds(crvec2 pt) const {
-        glm::vec2 transformed_pt = getRotationMatrix() * glm::vec3(pt - m_center, 1);
+        glm::vec2 transformed_pt = getInverseRotationMatrix() * glm::vec3(pt - m_center, 1);
         return -m_dimensions.x <= transformed_pt.x && transformed_pt.x <= m_dimensions.x &&
                -m_dimensions.y <= transformed_pt.y && transformed_pt.y <= m_dimensions.y;
     }
     bool Camera2D::inBounds(float x, float y) const {
         return inBounds(glm::vec2(x, y));
+    }
+    // There's gotta be a better way to do this
+    bool Camera2D::isVisible(const std::vector<glm::vec2>& polygon) const {
+        std::vector<glm::vec2> transformed_poly(polygon.size());
+        std::transform(polygon.begin(), polygon.end(), transformed_poly.begin(), [&](crvec2 pt) {
+            return getInverseRotationMatrix() * glm::vec3(pt - m_center, 1);
+        });
+
+        std::vector<glm::vec2> normals(polygon.size()+2);
+        normals[0] = glm::vec2(1,0);
+        normals[1] = glm::vec2(0,1);
+        for (int i = 0; i < polygon.size(); i++) {
+            glm::vec2& p1 = transformed_poly[i];
+            glm::vec2& p2 = transformed_poly[(i+1)%polygon.size()];
+            glm::vec2 side = p2 - p1;
+
+            normals[i+2] = glm::vec2(-side.y, side.x);
+        }
+
+        glm::vec2 cam_pts[4] = {
+            glm::vec2(-m_dimensions.x, m_dimensions.y),
+            glm::vec2(m_dimensions.x, m_dimensions.y),
+            glm::vec2(m_dimensions.x, -m_dimensions.y),
+            glm::vec2(-m_dimensions.x, -m_dimensions.y)
+        };
+        for (const auto& n : normals) {
+            auto cam_minmax = std::accumulate(cam_pts, cam_pts+4, std::make_pair(FLT_MAX, FLT_MIN), 
+                                              [&](std::pair<float, float> p, crvec2 pt) {
+              float proj = glm::dot(n, pt);
+              p.first = std::min(p.first, proj);
+              p.second = std::max(p.second, proj);
+              return p;
+            });
+            auto poly_minmax = std::accumulate(transformed_poly.begin(), transformed_poly.end(), std::make_pair(FLT_MAX, FLT_MIN), 
+                                              [&](std::pair<float, float> p, crvec2 pt) {
+              float proj = glm::dot(n, pt);
+              p.first = std::min(p.first, proj);
+              p.second = std::max(p.second, proj);
+              return p;
+            });
+
+            if (cam_minmax.first > poly_minmax.second || 
+                poly_minmax.first > cam_minmax.second) {
+                return false;
+            }
+        }
+        return true;
     }
     void Camera2D::setCenter(crvec2 center) {
         m_center = center;
