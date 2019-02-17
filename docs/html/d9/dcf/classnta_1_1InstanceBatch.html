@@ -84,10 +84,14 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#a35dcc07fcb6f28216eb95aea81ade3c2">begin</a> ()</td></tr>
 <tr class="memdesc:a35dcc07fcb6f28216eb95aea81ade3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears out data from the previous frame. <br /></td></tr>
 <tr class="separator:a35dcc07fcb6f28216eb95aea81ade3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1ba1571e2679e9e1997e5c1461f6d04"><td class="memItemLeft" align="right" valign="top"><a id="af1ba1571e2679e9e1997e5c1461f6d04"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#af1ba1571e2679e9e1997e5c1461f6d04">end</a> ()</td></tr>
-<tr class="memdesc:af1ba1571e2679e9e1997e5c1461f6d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Doesn't actually do anything. This is purely cosmetic. <br /></td></tr>
-<tr class="separator:af1ba1571e2679e9e1997e5c1461f6d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e620c1e331fb0bb856b57d703c9a5a"><td class="memItemLeft" align="right" valign="top"><a id="ad4e620c1e331fb0bb856b57d703c9a5a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#ad4e620c1e331fb0bb856b57d703c9a5a">end</a> () const</td></tr>
+<tr class="memdesc:ad4e620c1e331fb0bb856b57d703c9a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Doesn't actually do anything. This is purely cosmetic. <br /></td></tr>
+<tr class="separator:ad4e620c1e331fb0bb856b57d703c9a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c39b4e2704d9144c39000ae903ffe48"><td class="memItemLeft" align="right" valign="top"><a id="a5c39b4e2704d9144c39000ae903ffe48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#a5c39b4e2704d9144c39000ae903ffe48">reset</a> ()</td></tr>
+<tr class="memdesc:a5c39b4e2704d9144c39000ae903ffe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">If you don't want to follow the begin/end pattern, you can just call reset instead before adding glyphs. <br /></td></tr>
+<tr class="separator:a5c39b4e2704d9144c39000ae903ffe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82901420a0d796b457b1e528bbe2af5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#a82901420a0d796b457b1e528bbe2af5c">add_glyph</a> (crvec4 posRect, GLuint texture=0, crvec4 uvRect=glm::vec4(0, 0, 1, 1), crvec4 color=glm::vec4(1))</td></tr>
 <tr class="separator:a82901420a0d796b457b1e528bbe2af5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0daa681e47a4e2167799478ea75266da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/classnta_1_1InstanceBatch.html#a0daa681e47a4e2167799478ea75266da">add_instance_data</a> (const <a class="el" href="../../df/d9d/structnta_1_1VertexAttrib.html">VertexAttrib</a> *attribs, std::size_t num_attribs, void *data, GLsizeiptr size, GLuint divisor=1)</td></tr>
@@ -146,7 +150,7 @@ std::vector&lt; <a class="el" href="../../d9/de6/structnta_1_1InstancedGlyph.htm
 </div><div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>(?) add depth </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html">InstanceBatch.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html">InstanceBatch.cpp</a>.</p>
 
 </div>
 </div>
@@ -193,12 +197,12 @@ std::vector&lt; <a class="el" href="../../d9/de6/structnta_1_1InstancedGlyph.htm
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds data that varies between instances.</p>
+<p>Adds data that varies between instances (data associated to most recently added glyph).</p>
 <p>attribs describes the glsl "in" variables to change</p>
 <p>OpenGL fetches new data after divisor instances are rendered </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000026">Todo:</a></b></dt><dd>Push error to <a class="el" href="../../de/db1/classnta_1_1ErrorManager.html">ErrorManager</a>? </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html">InstanceBatch.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d4/d49/InstanceBatch_8cpp_source.html">InstanceBatch.cpp</a>.</p>
 
 </div>
 </div>

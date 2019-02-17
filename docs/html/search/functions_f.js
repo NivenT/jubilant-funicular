@@ -18,7 +18,7 @@ var searchData=
   ['renderbatch',['RenderBatch',['../dd/d38/structnta_1_1RenderBatch.html#a02a531d942296d7194ca96f7ed614f14',1,'nta::RenderBatch']]],
   ['replace_5fall',['replace_all',['../d7/d33/namespacenta_1_1utils.html#acad0765e34bce437d37871dcf88a9099',1,'nta::utils::replace_all(crstring str, crstring o, crstring n)'],['../d7/d33/namespacenta_1_1utils.html#ac35b6baec75cd7b9d9ab7532cc2f9320',1,'nta::utils::replace_all(crstring str, const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;os, const std::vector&lt; std::string &gt; &amp;ns)']]],
   ['request',['request',['../d8/d8c/classnta_1_1Component.html#a2b8cf4806dfd5adae95d65c3c6cddb93',1,'nta::Component']]],
-  ['reset',['reset',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a057eab0751fb05e341c9c3040805aa2a',1,'nta::utils::IDFactory']]],
+  ['reset',['reset',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a057eab0751fb05e341c9c3040805aa2a',1,'nta::utils::IDFactory::reset()'],['../d9/dcf/classnta_1_1InstanceBatch.html#a5c39b4e2704d9144c39000ae903ffe48',1,'nta::InstanceBatch::reset()']]],
   ['resize',['resize',['../d4/dfb/classnta_1_1Window.html#a23b55b95d017fe35655ed1287869bdf1',1,'nta::Window::resize()'],['../de/df3/classutils_1_1Json.html#a3c345b192b27b8dc11bdc2549f0ac0ca',1,'utils::Json::resize()']]],
   ['resolve',['resolve',['../d9/d63/classutils_1_1Path.html#a25d1904627042c0554de9f60b9e24b4d',1,'utils::Path']]],
   ['respond',['respond',['../d8/d8c/classnta_1_1Component.html#ae959f150340511c99dbfd2afc996f5d4',1,'nta::Component']]],

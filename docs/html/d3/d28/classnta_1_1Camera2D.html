@@ -152,6 +152,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a6bf55ce57adb8fab01f529a456882fdf"><td class="memItemLeft" align="right" valign="top"><a id="a6bf55ce57adb8fab01f529a456882fdf"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>inBounds</b> (float x, float y) const</td></tr>
 <tr class="separator:a6bf55ce57adb8fab01f529a456882fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec593b22a30542dcf7863c6a34d29096"><td class="memItemLeft" align="right" valign="top"><a id="aec593b22a30542dcf7863c6a34d29096"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#aec593b22a30542dcf7863c6a34d29096">isVisible</a> (const std::vector&lt; glm::vec2 &gt; &amp;polygon) const</td></tr>
+<tr class="memdesc:aec593b22a30542dcf7863c6a34d29096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns ture if this polygon would show up in the camera. <br /></td></tr>
+<tr class="separator:aec593b22a30542dcf7863c6a34d29096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a7edceed0964b375fbfe154b9a9895"><td class="memItemLeft" align="right" valign="top"><a id="a11a7edceed0964b375fbfe154b9a9895"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895">setCenter</a> (crvec2 center)</td></tr>
 <tr class="memdesc:a11a7edceed0964b375fbfe154b9a9895"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the values of the camera's fields <br /></td></tr>
@@ -222,7 +226,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </div><div class="memdoc">
 <p>Constructs a new <a class="el" href="../../d3/d28/classnta_1_1Camera2D.html">Camera2D</a>. By default, the center is at (0,0), the dimensions are (100, 100), and orientation is 0 </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,9 +248,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <p>returns the 3x3 matrix representing the camera's view</p>
 <p>The camera translates, rotates, and then dilates </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00062">62</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00065">65</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00099">screenToGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00102">screenToGame()</a>.</p>
 
 </div>
 </div>
@@ -268,9 +272,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <p>converts screen coordinates to world coordinates</p>
 <p>screen here just means the coordinates after multiplying by the camera matrix this is usually what's passed into gl_Position </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00093">mouseToGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00096">mouseToGame()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +305,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </div><div class="memdoc">
 <p>moves the camera around the world By default, if the world is rotated, it does not move along the rotated axes </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00128">128</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html#l00178">178</a> of file <a class="el" href="../../dd/d55/Camera2D_8cpp_source.html">Camera2D.cpp</a>.</p>
 
 </div>
 </div>

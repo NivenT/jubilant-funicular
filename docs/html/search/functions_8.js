@@ -16,5 +16,6 @@ var searchData=
   ['is_5fsome',['is_some',['../dd/d2b/classnta_1_1utils_1_1Option.html#ad205519bf669dc6dbfddeb1a95773b79',1,'nta::utils::Option']]],
   ['islinked',['isLinked',['../dc/d9c/classnta_1_1GLSLProgram.html#a6067e49c12b542735eff255047cd8ae1',1,'nta::GLSLProgram']]],
   ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
-  ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#a800d3c1fb16eb6e0fb2a1cb176a1280f',1,'nta::InputManager']]]
+  ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#a800d3c1fb16eb6e0fb2a1cb176a1280f',1,'nta::InputManager']]],
+  ['isvisible',['isVisible',['../d3/d28/classnta_1_1Camera2D.html#aec593b22a30542dcf7863c6a34d29096',1,'nta::Camera2D']]]
 ];
