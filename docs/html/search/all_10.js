@@ -10,6 +10,7 @@ var searchData=
   ['send',['send',['../d8/d8c/classnta_1_1Component.html#ab0dd70aa6df1ac166095bf1919ab8cdc',1,'nta::Component']]],
   ['set_5fperiodic_5fcallback',['set_periodic_callback',['../de/db1/classnta_1_1ErrorManager.html#a7a8c3c22602b437d160e860da877fffe',1,'nta::ErrorManager']]],
   ['set_5fpush_5fcallback',['set_push_callback',['../de/db1/classnta_1_1ErrorManager.html#acd7eb6eafdace10701e4e59bd727a823',1,'nta::ErrorManager']]],
+  ['set_5ftexture',['set_texture',['../de/ded/classnta_1_1FrameBuffer.html#aa0b9883e62f30f4ce5d1486ed897995c',1,'nta::FrameBuffer']]],
   ['setbeginendkey',['SetBeginEndKey',['../d4/d90/classutils_1_1Path_1_1SetBeginEndKey.html',1,'utils::Path::SetBeginEndKey'],['../df/d7b/classutils_1_1Json_1_1SetBeginEndKey.html',1,'utils::Json::SetBeginEndKey']]],
   ['setcenter',['setCenter',['../d3/d28/classnta_1_1Camera2D.html#a11a7edceed0964b375fbfe154b9a9895',1,'nta::Camera2D']]],
   ['setcolor',['setColor',['../d5/d07/structnta_1_1Vertex2D.html#a12483720589a9836dd4628b2c2bc480c',1,'nta::Vertex2D']]],
