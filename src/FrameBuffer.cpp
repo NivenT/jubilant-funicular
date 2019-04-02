@@ -14,9 +14,11 @@ namespace nta {
     void FrameBuffer::set_texture(GLuint idx) const {
         if (idx >= m_texs.size()) return;
         glDrawBuffer(GL_COLOR_ATTACHMENT0 + idx);
+        glReadBuffer(GL_COLOR_ATTACHMENT0 + idx);
     }
     void FrameBuffer::unuse() const {
         glDrawBuffer(GL_COLOR_ATTACHMENT0);
+        glReadBuffer(GL_COLOR_ATTACHMENT0);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
     }
     GLuint FrameBuffer::add_texture(GLuint width, GLuint height, bool rgba) {
