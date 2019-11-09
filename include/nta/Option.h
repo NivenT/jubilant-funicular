@@ -11,6 +11,8 @@ namespace nta {
         /// A class that optionally holds some data
         ///
         /// Used to signal that a function sometimes returns nothing
+        ///
+        /// T can be a reference type
         template<typename T>
         class Option {
         private:
@@ -112,6 +114,16 @@ namespace nta {
             } else {
                 return lhs<<"None";
             }
+        }
+        /// Replacement for calling Option<T>::some()
+        template<typename T>
+        Option<T> make_some(const T& data) {
+            return Option<T>::some(data);
+        }
+        /// Replacement for calling Option<T>::none()
+        template<typename T>
+        Option<T> make_none() {
+            return Option<T>::none();
         }
     }
 };
