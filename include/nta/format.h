@@ -8,6 +8,7 @@
 
 namespace nta {
     namespace utils {
+        /// Specialize this struct to use custom types with format
         template<typename T>
         struct Formatter {
             std::string operator()(const T& arg) {
@@ -29,6 +30,11 @@ namespace nta {
             sofar += fmt.substr(0, end) + arg;
             return format_helper(sofar, rest, std::forward<Args>(args)...);
         }
+        /// (Very basic) string formatting function
+        ///
+        /// Use {} as a placeholder for arguments
+        ///
+        /// e.g. format("Hello {}!", "World");
         template<typename... Args>
         std::string format(const std::string& fmt, Args&&... args) {
             std::string ret;

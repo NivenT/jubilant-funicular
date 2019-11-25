@@ -7,6 +7,8 @@ var searchData=
   ['flags',['flags',['../d1/dc9/structutils_1_1TypeInfo.html#a2eb3c7a518d5a985b4e2f5e10ef77697',1,'utils::TypeInfo']]],
   ['fontmap',['FontMap',['../d9/d4d/classnta_1_1FontMap.html',1,'nta::FontMap'],['../d9/d4d/classnta_1_1FontMap.html#a1839735db2d53428126d3381dc7f3928',1,'nta::FontMap::FontMap()']]],
   ['for_5feach',['for_each',['../db/da0/classnta_1_1ECS.html#a808a566a7d08438e7f3f5d5d732a2e21',1,'nta::ECS']]],
+  ['format',['format',['../d7/d33/namespacenta_1_1utils.html#a45ca37968c440dd99e663ddce270616d',1,'nta::utils']]],
+  ['formatter',['Formatter',['../d6/dfc/structnta_1_1utils_1_1Formatter.html',1,'nta::utils']]],
   ['fpslimiter',['FPSLimiter',['../d7/d1f/classnta_1_1FPSLimiter.html',1,'nta::FPSLimiter'],['../d7/d1f/classnta_1_1FPSLimiter.html#a2f811b3c9a5dc744020ea185f9a804e8',1,'nta::FPSLimiter::FPSLimiter()']]],
   ['framebuffer',['FrameBuffer',['../de/ded/classnta_1_1FrameBuffer.html',1,'nta']]],
   ['free',['free',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#ac891290ce8ae269990cbbd7243cd1817',1,'nta::utils::ThreadPool::worker::free()'],['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0f0dfbba08147d20d6c71ee2b8d9f6b0',1,'nta::utils::IDFactory::free()']]],

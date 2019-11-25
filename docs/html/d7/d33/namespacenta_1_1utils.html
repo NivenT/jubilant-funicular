@@ -82,6 +82,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/structnta_1_1utils_1_1Formatter.html">Formatter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialize this struct to use custom types with format.  <a href="../../d6/dfc/structnta_1_1utils_1_1Formatter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">IDFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for generating unique (integral) IDs.  <a href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,10 +135,30 @@ template&lt;typename T , typename TAG &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2f2d143fa432924dd151b247a15c8bda"><td class="memItemLeft" align="right" valign="top"><a id="a2f2d143fa432924dd151b247a15c8bda"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format_helper</b> (std::string &amp;sofar, const std::string &amp;fmt)</td></tr>
+<tr class="separator:a2f2d143fa432924dd151b247a15c8bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aaee9494cbde34b1c3abfc01db85fc8"><td class="memTemplParams" colspan="2"><a id="a5aaee9494cbde34b1c3abfc01db85fc8"></a>
+template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a5aaee9494cbde34b1c3abfc01db85fc8"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>format_helper</b> (std::string &amp;sofar, const std::string &amp;fmt, const T &amp;arg0, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a5aaee9494cbde34b1c3abfc01db85fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ca37968c440dd99e663ddce270616d"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a45ca37968c440dd99e663ddce270616d"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a45ca37968c440dd99e663ddce270616d">format</a> (const std::string &amp;fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a45ca37968c440dd99e663ddce270616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplParams" colspan="2"><a id="a722964a4e8c51e08803037d32ad1b3d8"></a>
 template&lt;typename T , typename std::enable_if_t&lt; check::LShiftExists&lt; std::ostream, T &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="separator:a722964a4e8c51e08803037d32ad1b3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplParams" colspan="2"><a id="a948a0e5e3738c8aa6692ad55e813865f"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a948a0e5e3738c8aa6692ad55e813865f">make_some</a> (const T &amp;data)</td></tr>
+<tr class="memdesc:a948a0e5e3738c8aa6692ad55e813865f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#ac51266e46816062198340ea939419cf3" title="Creates an Option holding some data. ">Option&lt;T&gt;::some()</a> <br /></td></tr>
+<tr class="separator:a948a0e5e3738c8aa6692ad55e813865f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memTemplParams" colspan="2"><a id="a6e689c62a5329b664d0cbaf5e4c4d769"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a6e689c62a5329b664d0cbaf5e4c4d769">make_none</a> ()</td></tr>
+<tr class="memdesc:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a3ef088f6d5f5c9ec50f2585bcdff3b8a" title="Creates a None variant Option. ">Option&lt;T&gt;::none()</a> <br /></td></tr>
+<tr class="separator:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top"><a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (crstring str, crstring prefix)</td></tr>
 <tr class="memdesc:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str starts with prefix. <br /></td></tr>
@@ -177,7 +200,43 @@ template&lt;class T &gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for classes/functionality not necessarily specific to game/opengl development. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a45ca37968c440dd99e663ddce270616d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ca37968c440dd99e663ddce270616d">&#9670;&nbsp;</a></span>format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string nta::utils::format </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>(Very basic) string formatting function</p>
+<p>Use {} as a placeholder for arguments</p>
+<p>e.g. format("Hello {}!", "World"); </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00039">39</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

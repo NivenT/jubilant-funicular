@@ -6,6 +6,7 @@ var searchData=
   ['find',['find',['../d6/d89/classutils_1_1TypeMap.html#aca80b27410a714c3fe63fa5e2c5bf2b5',1,'utils::TypeMap::find() const'],['../d6/d89/classutils_1_1TypeMap.html#ae874e214372ca6dc87af24881317f7e6',1,'utils::TypeMap::find(const TypeInfo &amp;info) const']]],
   ['fontmap',['FontMap',['../d9/d4d/classnta_1_1FontMap.html#a1839735db2d53428126d3381dc7f3928',1,'nta::FontMap']]],
   ['for_5feach',['for_each',['../db/da0/classnta_1_1ECS.html#a808a566a7d08438e7f3f5d5d732a2e21',1,'nta::ECS']]],
+  ['format',['format',['../d7/d33/namespacenta_1_1utils.html#a45ca37968c440dd99e663ddce270616d',1,'nta::utils']]],
   ['fpslimiter',['FPSLimiter',['../d7/d1f/classnta_1_1FPSLimiter.html#a2f811b3c9a5dc744020ea185f9a804e8',1,'nta::FPSLimiter']]],
   ['free',['free',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0f0dfbba08147d20d6c71ee2b8d9f6b0',1,'nta::utils::IDFactory']]],
   ['free_5fid',['free_id',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#ac136bf7941dcdc20ed51c680aaf4a369',1,'nta::utils::IDFactory']]],
