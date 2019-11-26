@@ -13,7 +13,7 @@ namespace nta {
         template<typename T, std::size_t Cap>
         class StaticVector {
         private:
-            std::array<T, Cap> m_data;
+            T m_data[Cap];
             std::size_t m_size;
         public:
             StaticVector() : m_size(0) {}
@@ -22,12 +22,12 @@ namespace nta {
             }
 
             constexpr std::size_t capacity() const { return Cap; }
-            std::size_t size() const { return m_data.size(); }
-            bool is_empty() const { return m_data.empty(); }
+            std::size_t size() const { return m_size; }
+            bool is_empty() const { return m_size == 0; }
 
-            T& front() { return m_data.front(); }
+            T& front() { return m_data[0]; }
             T& back() { return m_data[m_size-1]; }
-            T* data() { return m_data.data(); }
+            T* data() { return &m_data[0]; }
 
             T& operator[](std::size_t idx) { return m_data[idx]; }
             T& at(std::size_t idx) { return m_data[idx]; }
