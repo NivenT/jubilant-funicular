@@ -4,6 +4,7 @@
 #include <fstream>
 
 #include "nta/Errors.h"
+#include "nta/format.h"
 
 namespace nta {
     /// stores program information in internal and external logs
@@ -24,6 +25,10 @@ namespace nta {
         static void unuseSecondLog() { m_secondLog = nullptr; }
         /// writes an entry in the log
         static void writeToLog(crstring entry);
+        template<typename... Args>
+        static void writeToLog(crstring entry, Args&&... args) { 
+            writeToLog(utils::format(entry, std::forward<Args>(args)...)); 
+        }
         /// writes entry in log and then exits program
         static Error writeErrorToLog(crstring error, ErrorType type = OTHER);
         /// indents entries

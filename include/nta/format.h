@@ -18,9 +18,7 @@ namespace nta {
             }
         };
 
-        std::string format_helper(std::string& sofar, const std::string& fmt) {
-            return sofar + fmt;
-        }
+        extern std::string format_helper(std::string& sofar, const std::string& fmt);
         template<typename T, typename... Args>
         std::string format_helper(std::string& sofar, const std::string& fmt,
                                   const T& arg0, Args&&... args) {

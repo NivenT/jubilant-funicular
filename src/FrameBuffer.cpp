@@ -64,8 +64,9 @@ namespace nta {
         return height;
     }
     void FrameBuffer::destroy() {
+        if (m_fbo == 0) return;
         Logger::writeToLog("Destroying FrameBuffer...");
-        if (m_fbo != 0) glDeleteFramebuffers(1, &m_fbo);
+        glDeleteFramebuffers(1, &m_fbo);
         glDeleteTextures(m_texs.size(), &m_texs[0]);
         m_texs.clear();
         m_fbo = 0;

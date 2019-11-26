@@ -82,7 +82,7 @@ namespace nta {
     /// represents a collection of sprites to be drawn
     ///
     /// If you want to draw a shape other than a square, use PrimitiveBatch instead
-    /// \todo Allow for custom vertex types
+    /// \todo Allow for custom vertex types (Important)
     /// \todo Rewrite to use glDrawElements instead of glDrawArrays
     class SpriteBatch {
     private:

@@ -15,6 +15,10 @@ namespace nta {
         SpriteSheet(ContextData& context, crstring file_path, crivec2 dims);
         SpriteSheet(ContextData& context, crstring file_path, int num_cols) : SpriteSheet(context, file_path, glm::ivec2(1, num_cols)) {
         }
+        /// Returns the number of sprites in this sheet
+        std::size_t num_sprites() const {
+            return num_rows * num_cols;
+        }
         /// Gets UV-coordinates of specific sprite in the sheet
         ///
         /// The topleft sprite is index 0 and indices increase moving to the right
@@ -38,7 +42,7 @@ namespace nta {
         }
         /// The texture holding all the sprites
         GLTexture tex;
-        /// The dimensions of the sheat (rows x cols)
+        /// The dimensions of the sheet (rows x cols)
         union {
             glm::ivec2 dims;
             struct {

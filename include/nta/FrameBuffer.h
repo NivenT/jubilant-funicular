@@ -24,18 +24,18 @@ namespace nta {
         /// Binds this FrameBuffer
         void use() const;
         /// Sets which texture to draw to
-        void set_texture(GLuint idx) const;
+        void set_texture(GLuint idx = 0) const;
         /// Binds the default FrameBuffer (i.e. the screen)
         void unuse() const;
 
         /// Returns index of added texture
         GLuint add_texture(GLuint width, GLuint height, bool rgba = true);
         /// Returns id of texture associated with GL_COLOR_ATTACHMENTidx
-        GLuint get_tex(GLuint idx) const;
+        GLuint get_tex(GLuint idx = 0) const;
         /// Returns width of texture associated with GL_COLOR_ATTACHMENTidx
-        GLuint get_width(GLuint idx) const;
+        GLuint get_width(GLuint idx = 0) const;
         /// Returns height of texture associated with GL_COLOR_ATTACHMENTidx
-        GLuint get_height(GLuint idx) const;
+        GLuint get_height(GLuint idx = 0) const;
         GLuint num_texs() const { return m_texs.size(); }
 
         /// Destroys this FrameBuffer

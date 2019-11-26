@@ -34,7 +34,8 @@ namespace nta {
             return ret;
         }
         /// Creates a new texture that is the result of placing lhs and rhs side by side
-        static GLTexture combine(const GLTexture& lhs, const GLTexture& rhs);
+        static GLTexture combine_horizontal(const GLTexture& lhs, const GLTexture& rhs);
+        static GLTexture combine_vertical(const GLTexture& lhs, const GLTexture& rhs);
 
         bool is_valid() const {
             return id != 0;
@@ -45,9 +46,13 @@ namespace nta {
         bool operator<(const GLTexture& rhs) const {
             return id < rhs.id;
         }
-        /// calls combine
+        /// calls combine_horizontal
         GLTexture operator+(const GLTexture& rhs) const {
-            return combine(*this, rhs);
+            return combine_horizontal(*this, rhs);
+        }
+        /// calls combine_vertical (not sure how I feel about making this an operator)
+        GLTexture operator*(const GLTexture& rhs) const {
+            return combine_vertical(*this, rhs);
         }
 
         /// Deletes this texture
