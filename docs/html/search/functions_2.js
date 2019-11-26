@@ -5,7 +5,7 @@ var searchData=
   ['cleanup',['cleanup',['../d4/d51/namespacenta.html#a17dc16b021d0dec3749e422b95d39350',1,'nta']]],
   ['clear',['clear',['../d1/de6/classnta_1_1CallbackManager.html#a4af0feb66d42bd32d5bde2e4a52519a9',1,'nta::CallbackManager::clear()'],['../db/da0/classnta_1_1ECS.html#a90b0a89b5a954f2a67465d2487cd8afb',1,'nta::ECS::clear()'],['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a2b59ec29039b726baf9cc3925228ded0',1,'nta::utils::IDFactory::clear()'],['../df/d9f/classnta_1_1ParticleBatch2D.html#a1046b22d239222435e74011b3683a5c6',1,'nta::ParticleBatch2D::clear()']]],
   ['clear_5ferrors',['clear_errors',['../de/db1/classnta_1_1ErrorManager.html#a45dcc13a0acec8c4d2cc69d9b52be305',1,'nta::ErrorManager']]],
-  ['combine',['combine',['../d3/dff/structnta_1_1GLTexture.html#a07268148adfcbecd5c21a17fafc791e8',1,'nta::GLTexture']]],
+  ['combine_5fhorizontal',['combine_horizontal',['../d3/dff/structnta_1_1GLTexture.html#a60517bfa97d6bcac095bdadca6677d0b',1,'nta::GLTexture']]],
   ['comparetexture',['compareTexture',['../d4/df3/classnta_1_1PrimitiveBatch.html#a84712b51e21465f4943cce9f7b20a36b',1,'nta::PrimitiveBatch::compareTexture()'],['../d7/d3b/classnta_1_1SpriteBatch.html#acd5b622817c1bab5c60de488b089f0f9',1,'nta::SpriteBatch::compareTexture()']]],
   ['compileshader',['compileShader',['../dc/d9c/classnta_1_1GLSLProgram.html#a6ec17ca27433ffd2afa0f214fda7eb83',1,'nta::GLSLProgram']]],
   ['compileshaders',['compileShaders',['../dc/d9c/classnta_1_1GLSLProgram.html#a6de85b6da0514bb9461268ff4806bed5',1,'nta::GLSLProgram']]],

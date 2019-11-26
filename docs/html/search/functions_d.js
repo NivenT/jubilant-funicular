@@ -5,6 +5,7 @@ var searchData=
   ['onnotify',['onNotify',['../d0/d67/classnta_1_1Observer.html#af12cc337d76d1ca8a7f49edbb465eaa6',1,'nta::Observer']]],
   ['operator_20bool',['operator bool',['../dd/d2b/classnta_1_1utils_1_1Option.html#aa4a8574f8d687f7d195cdf5fc64c2165',1,'nta::utils::Option']]],
   ['operator_28_29',['operator()',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a88f65b6f846fa72cbab690f69b912944',1,'nta::utils::IDFactory']]],
+  ['operator_2a',['operator*',['../d3/dff/structnta_1_1GLTexture.html#adae38cb9d2d4ec44ac10883e10ba1667',1,'nta::GLTexture']]],
   ['operator_2b',['operator+',['../d3/dff/structnta_1_1GLTexture.html#aa6575ccd966fca0b1399ae336ba9a8ce',1,'nta::GLTexture']]],
   ['operator_5b_5d',['operator[]',['../de/df3/classutils_1_1Json.html#a4009102e0e4dd8eff7a650b2b1224e3c',1,'utils::Json::operator[](const std::string &amp;key)'],['../de/df3/classutils_1_1Json.html#aacecf1dda4eb2b204ff22616b75051f6',1,'utils::Json::operator[](const std::string &amp;key) const'],['../de/df3/classutils_1_1Json.html#a9773f6be43bc8720ec90e3e17803ba02',1,'utils::Json::operator[](std::size_t idx)']]],
   ['option',['Option',['../dd/d2b/classnta_1_1utils_1_1Option.html#a8839d4fa18becdfd4286c17ae8a8fae2',1,'nta::utils::Option']]],

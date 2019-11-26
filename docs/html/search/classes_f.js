@@ -14,6 +14,7 @@ var searchData=
   ['spritesheet',['SpriteSheet',['../d9/d85/structnta_1_1SpriteSheet.html',1,'nta']]],
   ['spritesheet_2e_5f_5funnamed_5f_5f',['SpriteSheet.__unnamed__',['../d4/d51/namespacenta.html#d1/d70/unionnta_1_1SpriteSheet_8____unnamed____',1,'nta']]],
   ['spritesheet_2e_5f_5funnamed_5f_5f_2e_5f_5funnamed_5f_5f',['SpriteSheet.__unnamed__.__unnamed__',['../d4/d51/namespacenta.html#df/d10/structnta_1_1SpriteSheet_8____unnamed_____8____unnamed____',1,'nta']]],
+  ['staticvector',['StaticVector',['../da/d5c/classnta_1_1utils_1_1StaticVector.html',1,'nta::utils']]],
   ['strongwrapper',['StrongWrapper',['../d4/d2d/classutils_1_1StrongWrapper.html',1,'utils']]],
   ['subexists',['SubExists',['../dc/d42/structutils_1_1check_1_1SubExists.html',1,'utils::check']]],
   ['subject',['Subject',['../d9/d4e/classnta_1_1Subject.html',1,'nta']]]

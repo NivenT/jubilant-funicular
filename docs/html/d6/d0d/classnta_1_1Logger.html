@@ -99,6 +99,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13">writeToLog</a> (crstring entry)</td></tr>
 <tr class="memdesc:a71196417598ddd975959924c2ce53c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes an entry in the log <br /></td></tr>
 <tr class="separator:a71196417598ddd975959924c2ce53c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1351043f291f54146ae1863b0125c49f"><td class="memTemplParams" colspan="2"><a id="a1351043f291f54146ae1863b0125c49f"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a1351043f291f54146ae1863b0125c49f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>writeToLog</b> (crstring entry, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a1351043f291f54146ae1863b0125c49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee">writeErrorToLog</a> (crstring error, <a class="el" href="../../d4/d51/namespacenta.html#a1ddeff35318678e360dfa44ca9577b16">ErrorType</a> type=OTHER)</td></tr>
 <tr class="memdesc:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes entry in log and then exits program  <a href="#a22e0cfbb0e04de2c377cdd5297c39eee">More...</a><br /></td></tr>
 <tr class="separator:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +135,7 @@ static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>TAB_SI
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>stores program information in internal and external logs </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/da4/Logger_8h_source.html#l00010">10</a> of file <a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/da4/Logger_8h_source.html#l00011">11</a> of file <a class="el" href="../../dd/da4/Logger_8h_source.html">Logger.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a22e0cfbb0e04de2c377cdd5297c39eee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22e0cfbb0e04de2c377cdd5297c39eee">&#9670;&nbsp;</a></span>writeErrorToLog()</h2>
@@ -172,7 +176,7 @@ static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>TAB_SI
 
 <p class="definition">Definition at line <a class="el" href="../../d9/df5/Logger_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d9/df5/Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00042">nta::GLTexture::combine()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00018">nta::GLSLProgram::compileShader()</a>, <a class="el" href="../../d2/d84/Window_8cpp_source.html#l00068">nta::Window::createWindow()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00037">nta::AudioManager::getSoundEffect()</a>, <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00007">nta::ResourceManager::getTexture()</a>, <a class="el" href="../../d3/d05/ContextData_8cpp_source.html#l00035">nta::ContextData::getTextureFile()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00053">nta::GLSLProgram::getUniformLocation()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00035">nta::init()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00008">nta::AudioManager::init()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00085">nta::GLSLProgram::linkShaders()</a>, <a class="el" href="../../d5/d6f/IOManager_8cpp_source.html#l00008">nta::IOManager::readFileToBuffer()</a>, and <a class="el" href="../../dd/da4/Logger_8h_source.html#l00024">unuseSecondLog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d3/d9a/GLTexture_8cpp_source.html#l00042">nta::GLTexture::combine_horizontal()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00018">nta::GLSLProgram::compileShader()</a>, <a class="el" href="../../d2/d84/Window_8cpp_source.html#l00068">nta::Window::createWindow()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00037">nta::AudioManager::getSoundEffect()</a>, <a class="el" href="../../d8/d44/ResourceManager_8cpp_source.html#l00007">nta::ResourceManager::getTexture()</a>, <a class="el" href="../../d3/d05/ContextData_8cpp_source.html#l00035">nta::ContextData::getTextureFile()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00053">nta::GLSLProgram::getUniformLocation()</a>, <a class="el" href="../../d4/d31/MyEngine_8cpp_source.html#l00035">nta::init()</a>, <a class="el" href="../../d2/d02/AudioManager_8cpp_source.html#l00008">nta::AudioManager::init()</a>, <a class="el" href="../../de/de1/GLSLProgram_8cpp_source.html#l00085">nta::GLSLProgram::linkShaders()</a>, <a class="el" href="../../d5/d6f/IOManager_8cpp_source.html#l00008">nta::IOManager::readFileToBuffer()</a>, and <a class="el" href="../../dd/da4/Logger_8h_source.html#l00025">unuseSecondLog()</a>.</p>
 
 </div>
 </div>

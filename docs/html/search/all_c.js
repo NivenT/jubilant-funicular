@@ -10,6 +10,7 @@ var searchData=
   ['notexists',['NotExists',['../d4/d09/structutils_1_1check_1_1NotExists.html',1,'utils::check']]],
   ['nta',['nta',['../d4/d51/namespacenta.html',1,'']]],
   ['num_5fentities',['num_entities',['../db/da0/classnta_1_1ECS.html#a69e1eb10574d593ad6ae5f6c0bad39ec',1,'nta::ECS']]],
+  ['num_5fsprites',['num_sprites',['../d9/d85/structnta_1_1SpriteSheet.html#aa9ea5b7f2548cad8380baa95c4bb385e',1,'nta::SpriteSheet']]],
   ['numprimitives',['numPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#a3cf74d5aaf9e56b0d98512ba8b94d01f',1,'nta::PrimitiveBatch']]],
   ['numvertices',['numVertices',['../dd/d38/structnta_1_1RenderBatch.html#a18e1cb5ff84364540a871db321557b7c',1,'nta::RenderBatch']]],
   ['utils',['utils',['../d7/d33/namespacenta_1_1utils.html',1,'nta']]]
