@@ -104,7 +104,6 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a1351043f291f54146ae1863b0125c49f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>writeToLog</b> (crstring entry, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a1351043f291f54146ae1863b0125c49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d66/structnta_1_1Error.html">Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee">writeErrorToLog</a> (crstring error, <a class="el" href="../../d4/d51/namespacenta.html#a1ddeff35318678e360dfa44ca9577b16">ErrorType</a> type=OTHER)</td></tr>
-<tr class="memdesc:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">writes entry in log and then exits program  <a href="#a22e0cfbb0e04de2c377cdd5297c39eee">More...</a><br /></td></tr>
 <tr class="separator:a22e0cfbb0e04de2c377cdd5297c39eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae8be3709ec3023f987f9b70304cd641"><td class="memItemLeft" align="right" valign="top"><a id="aae8be3709ec3023f987f9b70304cd641"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641">indent</a> (size_t tab_size=TAB_SIZE)</td></tr>
@@ -170,9 +169,8 @@ static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>TAB_SI
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>writes entry in log and then exits program </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000028">Todo:</a></b></dt><dd>Make sure all the code that previously assumed this function always exits still behaves sensibly </dd></dl>
+<p>writes entry in log and then exits program </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>Make ErrorType the first argument and allow for formatting </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000029">Todo:</a></b></dt><dd>Make sure all the code that previously assumed this function always exits still behaves sensibly </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/df5/Logger_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d9/df5/Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
