@@ -85,12 +85,12 @@ namespace nta {
                 gl_err += utils::to_string(gluErrorString(err)) + " (" + utils::to_string(err) + ")";
             }
             if (gl_err != "") {
-                Logger::writeToLog("GL Error(s): " + gl_err);
+                Logger::writeToLog("GL Error(s): {}", gl_err);
             }
         }
         std::string sdl_err = SDL_GetError();
         if (sdl_err != "") {
-            Logger::writeToLog("SDL Error: "+sdl_err);
+            Logger::writeToLog("SDL Error: {}", sdl_err);
             SDL_ClearError();
         }
         return err != GL_NO_ERROR || sdl_err != "";
@@ -107,9 +107,7 @@ namespace nta {
         g_map_lock.lock();
         auto& lock = g_stream_locks[&stream];
         g_map_lock.unlock();
-        if (lock) {
-            lock->unlock();
-        }
+        if (lock) lock->unlock();
         return stream;
     }
 }

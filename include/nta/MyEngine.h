@@ -8,6 +8,7 @@
 /// \todo Throughout codebase, indent `case` inside of `switch` blocks
 /// \todo Get a linter or something
 /// \todo Decide what things you want to be CamelCase and which you want to snake_case
+/// \todo Replace (almost) all raw pointers with (potentially custom) smart pointers
 namespace nta {
 	typedef const std::string& crstring; // constant reference string
 	typedef const glm::ivec2& crivec2;
@@ -17,7 +18,7 @@ namespace nta {
 
     /// initializes some basic stuff for the engine
     extern void init(int gl_major_version = 3, int gl_minor_version = 2, bool use_gl_core = true);
-    /// deinitializes some stuff and destroyes all managers
+    /// deinitializes some stuff and destroys all managers
     extern void cleanup();
     /// Checks for and logs errors
     extern bool check_error();

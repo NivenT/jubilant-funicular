@@ -30,6 +30,7 @@ namespace nta {
             writeToLog(utils::format(entry, std::forward<Args>(args)...)); 
         }
         /// writes entry in log and then exits program
+        /// \todo Make ErrorType the first argument and allow for formatting
         static Error writeErrorToLog(crstring error, ErrorType type = OTHER);
         /// indents entries
         static void indent(size_t tab_size = TAB_SIZE);
