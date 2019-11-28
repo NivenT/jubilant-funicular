@@ -8,6 +8,14 @@
 
 namespace nta {
     namespace utils {
+        /// (Very basic) string formatting function
+        ///
+        /// Use {} as a placeholder for arguments
+        ///
+        /// e.g. format("Hello {}!", "World");
+        template<typename... Args>
+        std::string format(const std::string& fmt, Args&&... args);
+
         /// Specialize this struct to use custom types with format
         template<typename T>
         struct Formatter {
@@ -27,21 +35,37 @@ namespace nta {
         template<>
         struct Formatter<glm::vec2> {
             std::string operator()(const glm::vec2& arg) {
-                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) + ")";
+                return format("({}, {})", arg.x, arg.y);
             }
         };
         template<>
         struct Formatter<glm::vec3> {
             std::string operator()(const glm::vec3& arg) {
-                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) 
-                     + "," + std::to_string(arg.z) + ")";
+                return format("({}, {}, {})", arg.x, arg.y, arg.z);
             }
         };
         template<>
         struct Formatter<glm::vec4> {
             std::string operator()(const glm::vec4& arg) {
-                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) 
-                     + "," + std::to_string(arg.z) + ", " + std::to_string(arg.w) + ")";
+                return format("({}, {}, {}, {})", arg.x, arg.y, arg.z, arg.w);
+            }
+        };
+        template<>
+        struct Formatter<glm::ivec2> {
+            std::string operator()(const glm::ivec2& arg) {
+                return format("({}, {})", arg.x, arg.y);
+            }
+        };
+        template<>
+        struct Formatter<glm::ivec3> {
+            std::string operator()(const glm::ivec3& arg) {
+                return format("({}, {}, {})", arg.x, arg.y, arg.z);
+            }
+        };
+        template<>
+        struct Formatter<glm::ivec4> {
+            std::string operator()(const glm::ivec4& arg) {
+                return format("({}, {}, {}, {})", arg.x, arg.y, arg.z, arg.w);
             }
         };
 
@@ -55,11 +79,6 @@ namespace nta {
             sofar += fmt.substr(0, end) + arg;
             return format_helper(sofar, rest, std::forward<Args>(args)...);
         }
-        /// (Very basic) string formatting function
-        ///
-        /// Use {} as a placeholder for arguments
-        ///
-        /// e.g. format("Hello {}!", "World");
         template<typename... Args>
         std::string format(const std::string& fmt, Args&&... args) {
             std::string ret;
