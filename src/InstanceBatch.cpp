@@ -33,6 +33,7 @@ namespace nta {
     void InstanceBatch::add_instance_data(const VertexAttrib* attribs, std::size_t num_attribs,
                                           void* data, GLsizeiptr size, GLuint divisor) {
         assert(num_attribs > 0);
+        assert(m_glyphs.size() > 0);
         GLuint vbo = m_glyphs.back().gen_vbo();
         GLsizei new_count = size/attribs[0].stride;
 

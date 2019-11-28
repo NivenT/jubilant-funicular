@@ -1,5 +1,5 @@
-#ifndef VERTEX_H_INCLUDED
-#define VERTEX_H_INCLUDED
+#ifndef NTA_VERTEX_H_INCLUDED
+#define NTA_VERTEX_H_INCLUDED
 
 #include <GL/glew.h>
 
@@ -71,4 +71,4 @@ namespace nta {
     };
 }
 
-#endif // VERTEX_H_INCLUDED
+#endif // NTA_VERTEX_H_INCLUDED

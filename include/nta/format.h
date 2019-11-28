@@ -17,6 +17,33 @@ namespace nta {
                 return os.str();
             }
         };
+        // Should I not have these here in jubliant-funicular?
+        template<>
+        struct Formatter<bool> {
+            std::string operator()(const bool& arg) {
+                return arg ? "true" : "false";
+            }
+        };
+        template<>
+        struct Formatter<glm::vec2> {
+            std::string operator()(const glm::vec2& arg) {
+                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) + ")";
+            }
+        };
+        template<>
+        struct Formatter<glm::vec3> {
+            std::string operator()(const glm::vec3& arg) {
+                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) 
+                     + "," + std::to_string(arg.z) + ")";
+            }
+        };
+        template<>
+        struct Formatter<glm::vec4> {
+            std::string operator()(const glm::vec4& arg) {
+                return "(" + std::to_string(arg.x) + ", " + std::to_string(arg.y) 
+                     + "," + std::to_string(arg.z) + ", " + std::to_string(arg.w) + ")";
+            }
+        };
 
         extern std::string format_helper(std::string& sofar, const std::string& fmt);
         template<typename T, typename... Args>
