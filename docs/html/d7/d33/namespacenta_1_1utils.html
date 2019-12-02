@@ -163,6 +163,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>format_helper<
 template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:a5aaee9494cbde34b1c3abfc01db85fc8"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>format_helper</b> (std::string &amp;sofar, const std::string &amp;fmt, const T &amp;arg0, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a5aaee9494cbde34b1c3abfc01db85fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46daa90eb2860fd276227246be0e3653"><td class="memTemplParams" colspan="2"><a id="a46daa90eb2860fd276227246be0e3653"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a46daa90eb2860fd276227246be0e3653"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>print</b> (const std::string &amp;fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a46daa90eb2860fd276227246be0e3653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225d0276f9a4fc0823d2debeebe39091"><td class="memTemplParams" colspan="2"><a id="a225d0276f9a4fc0823d2debeebe39091"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a225d0276f9a4fc0823d2debeebe39091"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>println</b> (const std::string &amp;fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a225d0276f9a4fc0823d2debeebe39091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplParams" colspan="2"><a id="a722964a4e8c51e08803037d32ad1b3d8"></a>
 template&lt;typename T , typename std::enable_if_t&lt; check::LShiftExists&lt; std::ostream, T &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;rhs)</td></tr>
@@ -250,7 +258,7 @@ template&lt;typename... Args&gt; </div>
 <p>Use {} as a placeholder for arguments</p>
 <p>e.g. format("Hello {}!", "World"); </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00083">83</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dd/da4/Logger_8h_source.html#l00025">nta::Logger::unuseSecondLog()</a>.</p>
 
