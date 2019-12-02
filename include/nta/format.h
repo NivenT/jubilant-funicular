@@ -3,6 +3,7 @@
 
 #include <string>
 #include <sstream>
+#include <iostream>
 
 #include "nta/MyEngine.h"
 
@@ -83,6 +84,14 @@ namespace nta {
         std::string format(const std::string& fmt, Args&&... args) {
             std::string ret;
             return format_helper(ret, fmt, std::forward<Args>(args)...);
+        }
+        template<typename... Args>
+        std::ostream& print(const std::string& fmt, Args&&... args) {
+            return std::cout<<format(fmt, std::forward<Args>(args)...);
+        }
+        template<typename... Args>
+        std::ostream& println(const std::string& fmt, Args&&... args) {
+            return std::cout<<format(fmt, std::forward<Args>(args)...)<<std::endl;
         }
     }
 }

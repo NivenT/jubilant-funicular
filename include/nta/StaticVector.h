@@ -1,6 +1,8 @@
 #ifndef NTA_STATICVECTOR_H_INCLUDED
 #define NTA_STATICVECTOR_H_INCLUDED
 
+#include <algorithm>
+
 #include "nta/MyEngine.h"
 
 namespace nta {
@@ -8,23 +10,44 @@ namespace nta {
         /// A (fixed capacity) vector with data stored on the stack instead of the heap.
         ///
         /// Currently does no error checking, so use carefully.
-        /// \todo Add tests
         template<typename T, std::size_t Cap>
         class StaticVector {
+        public:
+            using value_type = T;
+            using iterator = T*;
+            using const_iterator = const T*;
+            using reverse_iterator = std::reverse_iterator<iterator>;
+            using const_reverse_iterator = std::reverse_iterator<const_iterator>;
         private:
             typename std::aligned_storage_t<sizeof(T), alignof(T)> m_data[Cap];
             std::size_t m_size;
         public:
             StaticVector() : m_size(0) {}
+            template<std::size_t Cap2>
+            StaticVector(const StaticVector<T, Cap2>& other) : m_size(other.size()) {
+                std::uninitialized_copy(other.cbegin(), other.cend(), begin());
+            }
+            template<std::size_t Cap2>
+            StaticVector(StaticVector<T, Cap2>&& other) : m_size(other.size()) {
+                std::uninitialized_copy(std::make_move_iterator(other.begin()), std::make_move_iterator(other.end()), begin());
+            }
+            explicit StaticVector(std::size_t count, const T& value = T()) : m_size(count) {
+                std::uninitialized_fill(begin(), end(), value);
+            }
             StaticVector(const std::initializer_list<T>& data) : m_size(0) {
                 for (const T& elem : data) push_back(elem);
             }
             ~StaticVector() { clear(); }
 
             constexpr std::size_t capacity() const { return Cap; }
+            constexpr std::size_t cap() const { return Cap; }
+            constexpr std::size_t max_size() const { return Cap; }
+
             std::size_t size() const { return m_size; }
             bool is_empty() const { return m_size == 0; }
             bool empty() const { return is_empty(); }
+            bool is_full() const { return m_size == Cap; }
+            bool full() const { return is_full(); }
 
             T& front() { return at(0); }
             T& back() { return at(m_size-1); }
@@ -35,9 +58,12 @@ namespace nta {
 
             void clear() { while (m_size > 0) pop_back(); }
             void pop_back() { at(--m_size).~T(); }
-            // When you value using only one line over efficiency
+            void erase(iterator pos) { remove(pos); }
             void resize(std::size_t size) { 
                 while (size < (m_size = std::max(m_size, size))) pop_back();
+            }
+            void remove(iterator pos) {
+                for (auto it = (m_size--, pos->~T(), pos); it != cend(); ++it) *it = *(it+1);
             }
 
             void push_back(const T& elem) { new(&m_data[m_size++]) T(elem); }
@@ -45,13 +71,25 @@ namespace nta {
             void emplace_back(Args&&... args) {
                 new(&m_data[m_size++]) T(std::forward<Args>(args)...);
             }
+            // When you value using only one line over efficiency/readability
+            void insert(iterator pos, const T& elem) {
+                for (auto it = (m_size++, rbegin()); it != reverse_iterator(pos) || (*pos = elem, false); ++it) *it = *(it+1);
+            }
+            template<typename... Args>
+            void emplace(iterator pos, Args&&... args) {
+                for (auto it = (m_size++, rbegin()); it != reverse_iterator(pos) || (new(std::addressof(*pos)) T(std::forward<Args>(args)...), false); ++it) *it = *(it+1);
+            }
 
-            T* begin() { return reinterpret_cast<T*>(std::launder(&m_data[0])); }
-            T* end() { return begin() + m_size; }
-            const T* cbegin() const { 
+            iterator begin() { return reinterpret_cast<T*>(std::launder(&m_data[0])); }
+            iterator end() { return begin() + m_size; }
+            const_iterator cbegin() const { 
                 return reinterpret_cast<const T*>(std::launder(&m_data[0])); 
             }
-            const T* cend() const { return cbegin() + m_size; }
+            const_iterator cend() const { return cbegin() + m_size; }
+            reverse_iterator rbegin() { return reverse_iterator(end()); }
+            reverse_iterator rend() { return reverse_iterator(begin()); }
+            const_reverse_iterator crbegin() { return const_reverse_iterator(cend()); }
+            const_reverse_iterator crend() { return const_reverse_iterator(cbegin()); }
         };
     }
 }
