@@ -9,7 +9,7 @@ namespace nta {
         /// invalidating references to its elements.
         ///
         /// Warning: Doesn't really do error checking, so use carefully.
-        /// \todo Add tests
+        /// \todo Add tests (There are many issues/unclear-ities with the current implementation)
         template<typename T, typename IndexType = std::size_t, typename GenType = uint16_t>
         class SlotMap {
         public:
