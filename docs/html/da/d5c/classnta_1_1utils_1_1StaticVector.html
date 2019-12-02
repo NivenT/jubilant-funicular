@@ -76,6 +76,8 @@ $(function() {
 Collaboration diagram for nta::utils::StaticVector&lt; T, Cap &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d43/classnta_1_1utils_1_1StaticVector__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1StaticVector_3_01T_00_01Cap_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1utils_1_1StaticVector_3_01T_00_01Cap_01_4_coll__map" id="nta_1_1utils_1_1StaticVector_3_01T_00_01Cap_01_4_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -141,9 +143,9 @@ const T *&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () cons
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a6d98956974e6c2df68383196c4177a2a"><td class="memItemLeft" align="right" valign="top"><a id="a6d98956974e6c2df68383196c4177a2a"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b> [Cap]</td></tr>
-<tr class="separator:a6d98956974e6c2df68383196c4177a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0083e582945c07a9411344c477f4af5"><td class="memItemLeft" align="right" valign="top"><a id="ab0083e582945c07a9411344c477f4af5"></a>
+std::aligned_storage_t&lt; sizeof(T), alignof(T)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b> [Cap]</td></tr>
+<tr class="separator:ab0083e582945c07a9411344c477f4af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe35780dc376c4f8bbeae317247735f"><td class="memItemLeft" align="right" valign="top"><a id="a6fe35780dc376c4f8bbeae317247735f"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_size</b></td></tr>
 <tr class="separator:a6fe35780dc376c4f8bbeae317247735f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,9 +155,9 @@ std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_size</b></td
 class nta::utils::StaticVector&lt; T, Cap &gt;</h3>
 
 <p>A (fixed capacity) vector with data stored on the stack instead of the heap.</p>
-<p>Currently does no error checking, so use carefully. </p>
+<p>Currently does no error checking, so use carefully. </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>Add tests </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/df3/StaticVector_8h_source.html#l00012">12</a> of file <a class="el" href="../../da/df3/StaticVector_8h_source.html">StaticVector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/df3/StaticVector_8h_source.html#l00013">13</a> of file <a class="el" href="../../da/df3/StaticVector_8h_source.html">StaticVector.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/nta/<a class="el" href="../../da/df3/StaticVector_8h_source.html">StaticVector.h</a></li>
 </ul>
