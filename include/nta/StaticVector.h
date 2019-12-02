@@ -1,7 +1,7 @@
 #ifndef NTA_STATICVECTOR_H_INCLUDED
 #define NTA_STATICVECTOR_H_INCLUDED
 
-#include <algorithm>
+#include <memory>
 
 #include "nta/MyEngine.h"
 
