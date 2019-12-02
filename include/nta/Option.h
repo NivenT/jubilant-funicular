@@ -51,7 +51,7 @@ namespace nta {
             bool is_some() const { return m_some; }
             /// Does this hold nothing?
             bool is_none() const { return !m_some; }
-            /// Retreive the underlying data
+            /// Retrieve the underlying data
             ///
             /// You should always call is_some/is_none beforehand
             T get() const;
