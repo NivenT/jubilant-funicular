@@ -34,7 +34,7 @@ namespace nta {
             T& at(std::size_t idx) { return *(data() + idx); }
 
             void clear() { while (m_size > 0) pop_back(); }
-            void pop_back() { at(m_size--).~T(); }
+            void pop_back() { at(--m_size).~T(); }
             // When you value using only one line over efficiency
             void resize(std::size_t size) { 
                 while (size < (m_size = std::max(m_size, size))) pop_back();
