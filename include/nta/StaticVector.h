@@ -35,9 +35,9 @@ namespace nta {
 
             void clear() { while (m_size > 0) pop_back(); }
             void pop_back() { at(m_size--).~T(); }
+            // When you value using only one line over efficiency
             void resize(std::size_t size) { 
-                while (size < m_size--) pop_back(); 
-                m_size = size; 
+                while (size < (m_size = std::max(m_size, size))) pop_back();
             }
 
             void push_back(const T& elem) { new(&m_data[m_size++]) T(elem); }
