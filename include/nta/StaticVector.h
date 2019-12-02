@@ -1,8 +1,6 @@
 #ifndef NTA_STATICVECTOR_H_INCLUDED
 #define NTA_STATICVECTOR_H_INCLUDED
 
-#include <array>
-
 #include "nta/MyEngine.h"
 
 namespace nta {
@@ -24,6 +22,7 @@ namespace nta {
             constexpr std::size_t capacity() const { return Cap; }
             std::size_t size() const { return m_size; }
             bool is_empty() const { return m_size == 0; }
+            bool empty() const { return is_empty(); }
 
             T& front() { return m_data[0]; }
             T& back() { return m_data[m_size-1]; }

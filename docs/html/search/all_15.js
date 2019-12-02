@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['_7ecamera2d',['~Camera2D',['../d3/d28/classnta_1_1Camera2D.html#a18046ff230e055a06c6ca750e6eea8de',1,'nta::Camera2D']]],
-  ['_7ehuffmanleaf',['~HuffmanLeaf',['../d0/d39/classnta_1_1HuffmanLeaf.html#a579b5b814ae18f2230a07c186f96890f',1,'nta::HuffmanLeaf']]],
-  ['_7ehuffmannode',['~HuffmanNode',['../da/dbb/classnta_1_1HuffmanNode.html#a45afade3ee4a50baba8daa66edd32e72',1,'nta::HuffmanNode']]],
-  ['_7emusic',['~Music',['../d4/dab/classnta_1_1Music.html#a5cb0a3bbc5222752b0cbc9a90468e98b',1,'nta::Music']]],
-  ['_7eparticlebatch2d',['~ParticleBatch2D',['../df/d9f/classnta_1_1ParticleBatch2D.html#ac21b6437fdd8e746c6fce095b4dbc03a',1,'nta::ParticleBatch2D']]],
-  ['_7eparticleengine2d',['~ParticleEngine2D',['../d1/de9/classnta_1_1ParticleEngine2D.html#a9819d90a1852b474bb3014a8c8d506a1',1,'nta::ParticleEngine2D']]],
-  ['_7eprimitive',['~Primitive',['../d6/d4f/structnta_1_1Primitive.html#a39fbab541466b58744a8c7a0aa4eb49c',1,'nta::Primitive']]],
-  ['_7eresult',['~Result',['../d8/d2e/classnta_1_1Result.html#a5fd9525155666ef2eaf605d82d13bd77',1,'nta::Result']]],
-  ['_7escreenmanager',['~ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#aea609a639ffdc377e798eda054e6a4ba',1,'nta::ScreenManager']]],
-  ['_7esoundeffect',['~SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#ab9cfa134a49f54f77c2dbc05d7674630',1,'nta::SoundEffect']]],
-  ['_7espritefont',['~SpriteFont',['../d6/d57/classnta_1_1SpriteFont.html#aa5292a1131ab6e04e23f282d2b067146',1,'nta::SpriteFont']]]
+  ['wrapper',['Wrapper',['../d2/d4a/md_utilities_utils_wrapper_README.html',1,'']]],
+  ['wait',['wait',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#a252683ad84d75e12d30f29441f7178bc',1,'nta::utils::Semaphore::wait()'],['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a267245d18bf040ebfb469cdce5221516',1,'nta::utils::ThreadPool::wait()']]],
+  ['when',['when',['../d1/de6/classnta_1_1CallbackManager.html#ab20a0382304629ebdc2643a834c9dcff',1,'nta::CallbackManager::event']]],
+  ['width',['width',['../d3/dff/structnta_1_1GLTexture.html#a8f4d13ab2b19b700f76334c46458ac48',1,'nta::GLTexture']]],
+  ['window',['Window',['../d4/dfb/classnta_1_1Window.html',1,'nta::Window'],['../d4/dfb/classnta_1_1Window.html#a28534e4bb354c4b38b1d97aed78fd010',1,'nta::Window::Window()']]],
+  ['windowflags',['WindowFlags',['../d4/d51/namespacenta.html#a49cf148a7560d323486d7947b79a43b8',1,'nta']]],
+  ['windowmanager',['WindowManager',['../d3/ded/classnta_1_1WindowManager.html',1,'nta']]],
+  ['worker',['worker',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html',1,'nta::utils::ThreadPool']]],
+  ['worker_5ffunc',['worker_func',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#ade9cec65b2ef535cb03fcc0ea941fe24',1,'nta::utils::ThreadPool']]],
+  ['wrapper',['Wrapper',['../d5/d25/classutils_1_1Wrapper.html',1,'utils']]],
+  ['writeerrortolog',['writeErrorToLog',['../d6/d0d/classnta_1_1Logger.html#a22e0cfbb0e04de2c377cdd5297c39eee',1,'nta::Logger']]],
+  ['writefilefrombuffer',['writeFileFromBuffer',['../d2/d54/classnta_1_1IOManager.html#a8e22ef5a2e46a48abdefa21847cf9eff',1,'nta::IOManager']]],
+  ['writefloatle',['writeFloatLE',['../d2/d54/classnta_1_1IOManager.html#aa9855baef3ed91e4e95e3a5e899ba473',1,'nta::IOManager']]],
+  ['writeintle',['writeIntLE',['../d2/d54/classnta_1_1IOManager.html#ad6ed0ff2efedb9388641d9456fd215b5',1,'nta::IOManager']]],
+  ['writeshortle',['writeShortLE',['../d2/d54/classnta_1_1IOManager.html#aa9d8d060c137fddc3880ce7dae7f23bf',1,'nta::IOManager']]],
+  ['writetolog',['writeToLog',['../d6/d0d/classnta_1_1Logger.html#a71196417598ddd975959924c2ce53c13',1,'nta::Logger']]]
 ];

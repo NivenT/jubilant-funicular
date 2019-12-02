@@ -21,7 +21,8 @@ namespace nta {
         glReadBuffer(GL_COLOR_ATTACHMENT0);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
     }
-    GLuint FrameBuffer::add_texture(GLuint width, GLuint height, bool rgba) {
+    GLuint FrameBuffer::add_texture(GLuint width, GLuint height,
+                                    GLint min_filt, GLint mag_filt, bool rgba) {
         Logger::writeToLog("Adding texture to FrameBuffer " + std::to_string(m_fbo) + "...");
         use();
 
@@ -32,8 +33,8 @@ namespace nta {
         auto format = rgba ? GL_RGBA : GL_RGB;
         glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, 
                      GL_UNSIGNED_BYTE, nullptr);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, min_filt);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, mag_filt);
 
         glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 + m_texs.size(), 
                                GL_TEXTURE_2D, tex, 0);

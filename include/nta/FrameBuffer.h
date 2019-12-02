@@ -29,7 +29,9 @@ namespace nta {
         void unuse() const;
 
         /// Returns index of added texture
-        GLuint add_texture(GLuint width, GLuint height, bool rgba = true);
+        GLuint add_texture(GLuint width, GLuint height, 
+                           GLint min_filt = GL_LINEAR, GLint mag_filt = GL_LINEAR,
+                           bool rgba = true);
         /// Returns id of texture associated with GL_COLOR_ATTACHMENTidx
         GLuint get_tex(GLuint idx = 0) const;
         /// Returns width of texture associated with GL_COLOR_ATTACHMENTidx
