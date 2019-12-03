@@ -2,6 +2,7 @@
 #define NTA_STATICVECTOR_H_INCLUDED
 
 #include <memory>
+#include <new>
 
 #include "nta/MyEngine.h"
 
