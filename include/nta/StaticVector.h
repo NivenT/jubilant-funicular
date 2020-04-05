@@ -82,13 +82,17 @@ namespace nta {
             }
 
             iterator begin() { return reinterpret_cast<T*>(std::launder(&m_data[0])); }
+            const_iterator begin() const { return cbegin(); }
             iterator end() { return begin() + m_size; }
+            const_iterator end() const { return cend(); }
             const_iterator cbegin() const { 
                 return reinterpret_cast<const T*>(std::launder(&m_data[0])); 
             }
             const_iterator cend() const { return cbegin() + m_size; }
             reverse_iterator rbegin() { return reverse_iterator(end()); }
+            const_reverse_iterator rbegin() const { return crbegin(); }
             reverse_iterator rend() { return reverse_iterator(begin()); }
+            const_reverse_iterator rend() const { return crend(); }
             const_reverse_iterator crbegin() { return const_reverse_iterator(cend()); }
             const_reverse_iterator crend() { return const_reverse_iterator(cbegin()); }
         };
