@@ -2,9 +2,11 @@
 #define NTA_SLOTMAP_H_INCLUDED
 
 #include "nta/Option.h"
+#include "nta/IDFactory.h"
 
 namespace nta {
     namespace utils {
+        /// A generational index
         template<typename IndexType = std::size_t, typename GenType = uint16_t>
         struct SlotMapKey {
             using index_type = IndexType;
@@ -13,6 +15,73 @@ namespace nta {
             index_type idx;
             gen_type gen;
         };
+        template<typename IndexType, typename GenType>
+        using GenIndex = SlotMapKey<IndexType, GenType>;
+        /// Specialization for generation indices
+        ///
+        /// \todo Add tests
+        template<typename IndexType, typename GenType>
+        class IDFactory<GenIndex<IndexType, GenType>> {
+        private:
+            using value_type = GenIndex<IndexType, GenType>;
+            /// IDs that were previously active but have since been freed
+            std::vector<value_type> m_free;
+            /// The smallest id that has never been assigned
+            IndexType m_last_id;
+        public:
+            IDFactory() : m_last_id(NTA_INVALID_ID) {}
+            /// Resets this to a new IDFactory
+            void clear() { m_free.clear(); m_last_id = NTA_INVALID_ID; }
+            /// Resets this to a new IDFactory
+            void reset() { clear(); }
+
+            /// Generates a new, unused ID
+            value_type gen_id();
+            /// Marks an id as free so that it can be reused
+            ///
+            /// id must not already be free
+            void free_id(value_type id);
+            /// calls free_id
+            void free(value_type id) { free_id(id); }
+            /// Returns whether or not an id is free
+            bool is_free(value_type id) const;
+            /// Returns whether or not the id is in use
+            bool is_in_use(value_type id) const { return id.idx != NTA_INVALID_ID && !is_free(id); }
+
+            /// Returns the number of active ids
+            std::size_t get_count() const { return (std::size_t)m_last_id - m_free.size() - NTA_INVALID_ID; }
+            /// Returns m_last_id
+            IndexType get_last_id() const { return m_last_id; }
+
+            /// Calls (and returns) gen_id
+            value_type operator()() { return gen_id(); }
+        };
+        template<>
+        template<typename IndexType, typename GenType>
+        GenIndex<IndexType, GenType> IDFactory<GenIndex<IndexType, GenType>>::gen_id() {
+            if (m_free.empty()) {
+                return { .idx = ++m_last_id, .gen = 0 };
+            } else {
+                value_type ret = m_free.back();
+                m_free.pop_back();
+                return ret;
+            }
+        }
+        template<>
+        template<typename IndexType, typename GenType>
+        void IDFactory<GenIndex<IndexType, GenType>>::free_id(value_type id) {
+            id.gen++;
+            m_free.push_back(id);
+        }
+        template<>
+        template<typename IndexType, typename GenType>
+        bool IDFactory<GenIndex<IndexType, GenType>>::is_free(value_type id) const {
+            if (id.idx > m_last_id) return true;
+            for (const auto& id2 : m_free) {
+                if (id == id2) return true;
+            }
+            return false;
+        }
         /// An unsorted container supporting fast insertion/deletion without
         /// invalidating references to its elements.
         ///
@@ -68,7 +137,6 @@ namespace nta {
             bool insert(Key k, const T& elem);
 
             void reserve(size_type new_cap);
-            void resize(size_type new_size);
 
             void remove(Key k);
             void erase(Key k) { remove(k); }
@@ -144,12 +212,6 @@ namespace nta {
             m_cap = new_cap;
         }
         template<typename T, typename IndexType, typename GenType>
-        void SlotMap<T, IndexType, GenType>::resize(size_type new_size) {
-            while (new_size > m_cap) grow(); // This is dumb, but whatever
-            while (new_size < m_size) remove(m_slots[--m_size]);
-
-        }
-        template<typename T, typename IndexType, typename GenType>
         bool SlotMap<T, IndexType, GenType>::insert(Key k, const T& elem) {
             if (m_size == m_cap) return false;
 
@@ -209,7 +271,7 @@ namespace nta {
         template<typename T, typename IndexType, typename GenType>
         void SlotMap<T, IndexType, GenType>::clear() {
             for (index_type i = 0; i < m_cap; i++) remove({.idx = i, .gen = m_slots[i].gen});
-        }    
+        }  
     }
 }
 
