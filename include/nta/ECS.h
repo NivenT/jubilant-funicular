@@ -10,11 +10,12 @@
 #include "nta/IDFactory.h"
 #include "nta/Wrapper.h"
 #include "nta/TypeMap.h"
+#include "nta/SlotMap.h"
 
 namespace nta {
     typedef utils::Wrapper<std::size_t, struct EntityTag> Entity;
     template<typename T>
-    using ComponentList = std::vector<utils::LinkedNode<T>*>;
+    using ComponentList = std::vector<utils::LinkedNode<T>*>;// utils::SlotMap<T>;
     /// A store of every Component type in use by an ECS
     class ComponentRegistry {
     public:
@@ -138,7 +139,9 @@ namespace nta {
     };
     /// Container class representing a complete Entity-Component System
     ///
-    /// Manages creation of Entities and grouping of Components
+    /// Manages creation of Entities and grouping of Components.
+    ///
+    /// Assumes each entity can only have one Component of a given type.
     ///
     /// \todo Make this class's implementation less complicated
     class ECS {
@@ -160,7 +163,7 @@ namespace nta {
         utils::IDFactory<ComponentID> m_cmpn_gen;
         /// The various Component types in use
         ///
-        /// This registry should not change after its associated to an ECS
+        /// This registry should not change after it's associated to an ECS
         const ComponentRegistry& m_registry;
     public:
         ECS(const ComponentRegistry& registry);

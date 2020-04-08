@@ -5,24 +5,27 @@
 
 namespace nta {
     namespace utils {
+        template<typename IndexType = std::size_t, typename GenType = uint16_t>
+        struct SlotMapKey {
+            using index_type = IndexType;
+            using gen_type = GenType;
+
+            index_type idx;
+            gen_type gen;
+        };
         /// An unsorted container supporting fast insertion/deletion without
         /// invalidating references to its elements.
         ///
         /// Warning: Doesn't really do error checking, so use carefully.
-        /// \todo Add tests (There are many issues/unclear-ities with the current implementation)
         template<typename T, typename IndexType = std::size_t, typename GenType = uint16_t>
         class SlotMap {
         public:
             using index_type = IndexType;
             using size_type = IndexType;
             using gen_type = GenType;
-
-            struct Key {
-                index_type idx;
-                gen_type gen;
-            };
+            using Key = SlotMapKey<IndexType, GenType>;
         private:
-            void grow();
+            void grow() { reserve(m_cap == 0 ? DEFAULT_CAP : m_cap << 1); }
 
             // Should these be aligned storage?
             // m_data probably should be. TODO: Fix later...
@@ -51,20 +54,30 @@ namespace nta {
 
             gen_type get_curr_gen(index_type idx) const { return idx < m_cap ? m_slots[idx].gen : 0; }
             gen_type get_curr_gen(Key k) const { return get_curr_gen(k.idx); }
-            bool is_removed(index_type key_idx) const;
-            bool is_removed(Key k) const { return is_removed(k.idx); }
+            bool is_free(index_type key_idx) const;
+            bool is_free(Key k) const { return is_free(k.idx); }
 
             Key add(const T& elem);
             Key push(const T& elem) { return add(elem); }
+            // This isn't really emplacing
             template<typename... Args>
             Key emplace(Args&&... args) { return add(T(std::forward<Args>(args)...)); }
+            /// Checks that k refers to a free slot with the right generation
+            ///
+            /// Returns true on success
+            bool insert(Key k, const T& elem);
+
+            void reserve(size_type new_cap);
+            void resize(size_type new_size);
 
             void remove(Key k);
             void erase(Key k) { remove(k); }
             void clear();
 
             T* begin() { return &m_data[0]; }
+            const T* begin() const  { return &m_data[0]; }
             T* end() { return &m_data[m_size]; }
+            const T* end() const { return &m_data[m_size]; }
             const T* cbegin() const { return &m_data[0]; }
             const T* cend() const { return &m_data[m_size]; }
         };
@@ -80,7 +93,7 @@ namespace nta {
             m_size = m_cap = m_free_head = 0;
         }
         template<typename T, typename IndexType, typename GenType>
-        bool SlotMap<T, IndexType, GenType>::is_removed(index_type key_idx) const {
+        bool SlotMap<T, IndexType, GenType>::is_free(index_type key_idx) const {
             if (m_size == m_cap) return false;
             for (index_type idx = m_free_head;; idx = m_slots[idx].idx) {
                 if (idx == key_idx) return true;
@@ -93,12 +106,12 @@ namespace nta {
             if (k.idx >= m_cap) return Option<T&>::none();
             const Key& key = m_slots[k.idx];
             if (key.gen != k.gen) return Option<T&>::none();
-            if (is_removed(k.idx)) return Option<T&>::none();
+            if (is_free(k.idx)) return Option<T&>::none();
             return Option<T&>::some(m_data[key.idx]);
         }
         template<typename T, typename IndexType, typename GenType>
-        void SlotMap<T, IndexType, GenType>::grow() {
-            const size_type new_cap = m_cap == 0 ? DEFAULT_CAP : m_cap << 1;
+        void SlotMap<T, IndexType, GenType>::reserve(size_type new_cap) {
+            if (new_cap <= m_cap) return;
 
             T* new_data = static_cast<T*>(std::aligned_alloc(alignof(T), 
                                                              sizeof(T) * new_cap));
@@ -131,6 +144,36 @@ namespace nta {
             m_cap = new_cap;
         }
         template<typename T, typename IndexType, typename GenType>
+        void SlotMap<T, IndexType, GenType>::resize(size_type new_size) {
+            while (new_size > m_cap) grow(); // This is dumb, but whatever
+            while (new_size < m_size) remove(m_slots[--m_size]);
+
+        }
+        template<typename T, typename IndexType, typename GenType>
+        bool SlotMap<T, IndexType, GenType>::insert(Key k, const T& elem) {
+            if (m_size == m_cap) return false;
+
+            index_type prev_idx;
+            for (index_type idx = m_free_head;; idx = m_slots[idx].idx) {
+                if (idx == k.idx) break;
+                if (idx == m_slots[idx].idx) return false;
+                prev_idx = idx;
+            }
+            if (k.gen != m_slots[k.idx].gen) return false;
+
+            if (m_size == m_cap) grow();
+            new(&m_data[m_size]) T(elem);
+
+            if (k.idx == m_free_head) {
+                m_free_head = m_slots[k.idx].idx;
+            } else {
+                m_slots[prev_idx].idx = m_slots[k.idx].idx;
+            }
+            m_slots[k.idx].idx = m_size;
+            m_slot_idxes[m_size++] = k.idx;
+            return true;
+        }
+        template<typename T, typename IndexType, typename GenType>
         typename SlotMap<T, IndexType, GenType>::Key SlotMap<T, IndexType, GenType>::add(const T& elem) {
             if (m_size == m_cap) grow();
             new(&m_data[m_size]) T(elem);
@@ -147,7 +190,7 @@ namespace nta {
             if (k.idx >= m_cap) return;
             Key& key = m_slots[k.idx];
             if (key.gen != k.gen) return;
-            if (is_removed(k.idx)) return;
+            if (is_free(k.idx)) return;
 
             m_size--;
             m_data[key.idx].~T();
@@ -166,9 +209,7 @@ namespace nta {
         template<typename T, typename IndexType, typename GenType>
         void SlotMap<T, IndexType, GenType>::clear() {
             for (index_type i = 0; i < m_cap; i++) remove({.idx = i, .gen = m_slots[i].gen});
-        }
-        template<typename T, typename IndexType = std::size_t, typename GenType = uint16_t>
-        using SlotMapKey = typename SlotMap<T, IndexType, GenType>::Key;
+        }    
     }
 }
 
