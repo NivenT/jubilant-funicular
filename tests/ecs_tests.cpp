@@ -35,7 +35,7 @@ class FakeComponent : public Component {
 
 int main(int argc, char* argv[]) {
     cout<<"Running ECS tests..."<<endl;
-
+    
     ComponentRegistry registry;
     registry.register_component<HealthComponent>();
     registry.register_component<DamageComponent>();

@@ -12,6 +12,10 @@ namespace nta {
             using index_type = IndexType;
             using gen_type = GenType;
 
+            bool operator==(SlotMapKey<IndexType, GenType> rhs) {
+                return idx == rhs.idx && gen == rhs.gen;
+            }
+
             index_type idx;
             gen_type gen;
         };
@@ -135,6 +139,8 @@ namespace nta {
             ///
             /// Returns true on success
             bool insert(Key k, const T& elem);
+            template<typename... Args>
+            bool insert_emplace(Key k, Args&&... args);
 
             void reserve(size_type new_cap);
 
@@ -212,7 +218,8 @@ namespace nta {
             m_cap = new_cap;
         }
         template<typename T, typename IndexType, typename GenType>
-        bool SlotMap<T, IndexType, GenType>::insert(Key k, const T& elem) {
+        template<typename... Args>
+        bool SlotMap<T, IndexType, GenType>::insert_emplace(Key k, Args&&... args) {
             if (m_size == m_cap) return false;
 
             index_type prev_idx;
@@ -224,7 +231,7 @@ namespace nta {
             if (k.gen != m_slots[k.idx].gen) return false;
 
             if (m_size == m_cap) grow();
-            new(&m_data[m_size]) T(elem);
+            new(&m_data[m_size]) T(std::forward<Args>(args)...);
 
             if (k.idx == m_free_head) {
                 m_free_head = m_slots[k.idx].idx;
@@ -234,6 +241,10 @@ namespace nta {
             m_slots[k.idx].idx = m_size;
             m_slot_idxes[m_size++] = k.idx;
             return true;
+        }
+        template<typename T, typename IndexType, typename GenType>
+        bool SlotMap<T, IndexType, GenType>::insert(Key k, const T& elem) {
+            return insert_emplace(k, elem);
         }
         template<typename T, typename IndexType, typename GenType>
         typename SlotMap<T, IndexType, GenType>::Key SlotMap<T, IndexType, GenType>::add(const T& elem) {

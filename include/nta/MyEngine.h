@@ -5,6 +5,8 @@
 #include <sstream>
 #include <glm/glm.hpp>
 
+#define NTA_ASSERT(expr, msg) assert(expr && __FILE__ ", line __LINE__" ": " msg)
+
 /// \todo Throughout codebase, indent `case` inside of `switch` blocks
 /// \todo Get a linter or something
 /// \todo Decide what things you want to be CamelCase and which you want to snake_case
