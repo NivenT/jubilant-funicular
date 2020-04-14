@@ -76,6 +76,8 @@ $(function() {
 Collaboration diagram for nta::ComponentRegistry::Record:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/dd5/structnta_1_1ComponentRegistry_1_1Record__coll__graph.png" border="0" usemap="#nta_1_1ComponentRegistry_1_1Record_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1ComponentRegistry_1_1Record_coll__map" id="nta_1_1ComponentRegistry_1_1Record_coll__map">
+</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -91,31 +93,22 @@ Public Attributes</h2></td></tr>
 std::function&lt; void(<a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create_list</b></td></tr>
 <tr class="separator:a5653dd59785dfa1a2e3ed3b5ae4ffd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48a05f55e669c8025793b51c82ea396"><td class="memItemLeft" align="right" valign="top"><a id="ad48a05f55e669c8025793b51c82ea396"></a>
-std::function&lt; void(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, <a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; ComponentID &gt; &amp;, Entity)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>delete_entity</b></td></tr>
+std::function&lt; void(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, <a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> &gt; &amp;, <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>delete_entity</b></td></tr>
 <tr class="separator:ad48a05f55e669c8025793b51c82ea396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae614a160d3c31c126c42410995536bc1"><td class="memItemLeft" align="right" valign="top"><a id="ae614a160d3c31c126c42410995536bc1"></a>
-std::function&lt; ComponentID(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, ComponentID)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>delete_component</b></td></tr>
-<tr class="separator:ae614a160d3c31c126c42410995536bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac19ea7f52a0bd672e16a2c98ab1baf6"><td class="memItemLeft" align="right" valign="top"><a id="aac19ea7f52a0bd672e16a2c98ab1baf6"></a>
-std::function&lt; void(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, std::size_t)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>resize_list</b></td></tr>
-<tr class="separator:aac19ea7f52a0bd672e16a2c98ab1baf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a259db07094877bb5bfe6e55f048edafb"><td class="memItemLeft" align="right" valign="top"><a id="a259db07094877bb5bfe6e55f048edafb"></a>
-std::function&lt; Entity(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, ComponentID)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_owner</b></td></tr>
-<tr class="separator:a259db07094877bb5bfe6e55f048edafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81221ff2992e54a0e506a78119ebbd4d"><td class="memItemLeft" align="right" valign="top"><a id="a81221ff2992e54a0e506a78119ebbd4d"></a>
-std::function&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, ComponentID)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_component</b></td></tr>
-<tr class="separator:a81221ff2992e54a0e506a78119ebbd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd7e4eab1a83e2ec4cdbbe93355c4ae"><td class="memItemLeft" align="right" valign="top"><a id="a3cd7e4eab1a83e2ec4cdbbe93355c4ae"></a>
-std::function&lt; void(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, Entity, const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>broadcast</b></td></tr>
-<tr class="separator:a3cd7e4eab1a83e2ec4cdbbe93355c4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6377cb6ef99e186c805f6db886411bd"><td class="memItemLeft" align="right" valign="top"><a id="ad6377cb6ef99e186c805f6db886411bd"></a>
-std::function&lt; <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, Entity, const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shout</b></td></tr>
-<tr class="separator:ad6377cb6ef99e186c805f6db886411bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0e8da7c68cf6a5a874fbf9f7f882d9"><td class="memItemLeft" align="right" valign="top"><a id="a1b0e8da7c68cf6a5a874fbf9f7f882d9"></a>
+std::function&lt; bool(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a>, <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>delete_component</b></td></tr>
+<tr class="separator:a1b0e8da7c68cf6a5a874fbf9f7f882d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc117841688124e6907666f94c557df"><td class="memItemLeft" align="right" valign="top"><a id="a7fc117841688124e6907666f94c557df"></a>
+std::function&lt; <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> &amp; &gt;const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;, <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_component</b></td></tr>
+<tr class="separator:a7fc117841688124e6907666f94c557df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1a73114f834b04446b6d8f160534fb"><td class="memItemLeft" align="right" valign="top"><a id="abe1a73114f834b04446b6d8f160534fb"></a>
+std::function&lt; void(const <a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b></td></tr>
+<tr class="separator:abe1a73114f834b04446b6d8f160534fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>Reduce the number of functions this needs to store </dd></dl>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Reduce the number of functions this needs to store </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00022">22</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00054">54</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/nta/<a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a></li>
 </ul>

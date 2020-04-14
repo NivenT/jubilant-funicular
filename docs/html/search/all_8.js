@@ -2,8 +2,9 @@ var searchData=
 [
   ['id',['id',['../d1/de6/classnta_1_1CallbackManager.html#a743978e02001b9ceff1145c41214d2e5',1,'nta::CallbackManager::event::id()'],['../d3/dff/structnta_1_1GLTexture.html#aaf0d536088f4b1062d996679b217c0f9',1,'nta::GLTexture::id()']]],
   ['idfactory',['IDFactory',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
-  ['idfactory_3c_20componentid_20_3e',['IDFactory&lt; ComponentID &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
-  ['idfactory_3c_20entity_20_3e',['IDFactory&lt; Entity &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
+  ['idfactory_3c_20genindex_3c_20indextype_2c_20gentype_20_3e_20_3e',['IDFactory&lt; GenIndex&lt; IndexType, GenType &gt; &gt;',['../d5/d16/classnta_1_1utils_1_1IDFactory_3_01GenIndex_3_01IndexType_00_01GenType_01_4_01_4.html',1,'nta::utils']]],
+  ['idfactory_3c_20nta_3a_3autils_3a_3aslotmapkey_20_3e',['IDFactory&lt; nta::utils::SlotMapKey &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
+  ['idfactory_3c_20slotmapkey_3c_3e_20_3e',['IDFactory&lt; SlotMapKey&lt;&gt; &gt;',['../d6/d62/classnta_1_1utils_1_1IDFactory.html',1,'nta::utils']]],
   ['imageloader',['ImageLoader',['../d5/dc9/classnta_1_1ImageLoader.html',1,'nta']]],
   ['in_5frange',['in_range',['../d7/d33/namespacenta_1_1utils.html#aaa025ad45973ff6dc3a33800ccea72f0',1,'nta::utils']]],
   ['inbounds',['inBounds',['../d3/d28/classnta_1_1Camera2D.html#a958c50f81111f33379b2b251493bd40f',1,'nta::Camera2D']]],
@@ -12,13 +13,14 @@ var searchData=
   ['indent',['indent',['../d6/d0d/classnta_1_1Logger.html#aae8be3709ec3023f987f9b70304cd641',1,'nta::Logger']]],
   ['init',['init',['../da/d29/classnta_1_1AudioManager.html#a4da570a6cee16bd6450031f7910057fd',1,'nta::AudioManager::init()'],['../d1/de6/classnta_1_1CallbackManager.html#a2c8114a6c1e8de9c59b6484f47dde1a3',1,'nta::CallbackManager::init()'],['../dc/dbe/classnta_1_1DebugBatch.html#a9d60f69ba86c7267e69984cc29e1f53c',1,'nta::DebugBatch::init()'],['../de/ded/classnta_1_1FrameBuffer.html#ad523486bc26391770af380b6924e458b',1,'nta::FrameBuffer::init()'],['../df/d9f/classnta_1_1ParticleBatch2D.html#a328f04a39eb9baa821ad95b2f455a7b0',1,'nta::ParticleBatch2D::init()'],['../d4/df3/classnta_1_1PrimitiveBatch.html#a425c70802333e18a6cd019aec145f07b',1,'nta::PrimitiveBatch::init()'],['../db/d48/classnta_1_1Random.html#ac310b6b657b1bdb78795d529c48f537f',1,'nta::Random::init()'],['../d6/d23/classnta_1_1Screen.html#ae749bdd554cea6beb81ed8bcd1cd4ed1',1,'nta::Screen::init()'],['../d7/d3b/classnta_1_1SpriteBatch.html#a91cb54c5e459f9cb0142f7d4b6e3272c',1,'nta::SpriteBatch::init()'],['../d6/d57/classnta_1_1SpriteFont.html#ab00ea1965938724cc70c297107392c34',1,'nta::SpriteFont::init()'],['../d4/d51/namespacenta.html#a45f05b09d7a4f72d658e70dad161391e',1,'nta::init()']]],
   ['inputmanager',['InputManager',['../d6/de2/classnta_1_1InputManager.html',1,'nta']]],
+  ['insert',['insert',['../dd/d7a/classnta_1_1utils_1_1SlotMap.html#ab3b30423dc74aaa25af4c659530fb469',1,'nta::utils::SlotMap']]],
   ['instancebatch',['InstanceBatch',['../d9/dcf/classnta_1_1InstanceBatch.html',1,'nta']]],
   ['instancedglyph',['InstancedGlyph',['../d9/de6/structnta_1_1InstancedGlyph.html',1,'nta']]],
   ['iomanager',['IOManager',['../d2/d54/classnta_1_1IOManager.html',1,'nta']]],
   ['is_5ferr',['is_err',['../d8/d2e/classnta_1_1Result.html#ab742b047f1e670bc6a374f32c3fd48ea',1,'nta::Result']]],
   ['is_5ferr_5fvariant',['is_err_variant',['../d8/d2e/classnta_1_1Result.html#a27f85dc35976426c1f5c01431ac2e1cc',1,'nta::Result']]],
-  ['is_5ffree',['is_free',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a13880bdacc47c0fa0dbbfde6d96be2b0',1,'nta::utils::IDFactory']]],
-  ['is_5fin_5fuse',['is_in_use',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a34f7a35af6ab6a6a02f82b15e2f04d3c',1,'nta::utils::IDFactory']]],
+  ['is_5ffree',['is_free',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a13880bdacc47c0fa0dbbfde6d96be2b0',1,'nta::utils::IDFactory::is_free()'],['../d5/d16/classnta_1_1utils_1_1IDFactory_3_01GenIndex_3_01IndexType_00_01GenType_01_4_01_4.html#a3e61be77e9a40323ebc4ad5b08c3aaa2',1,'nta::utils::IDFactory&lt; GenIndex&lt; IndexType, GenType &gt; &gt;::is_free()']]],
+  ['is_5fin_5fuse',['is_in_use',['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a34f7a35af6ab6a6a02f82b15e2f04d3c',1,'nta::utils::IDFactory::is_in_use()'],['../d5/d16/classnta_1_1utils_1_1IDFactory_3_01GenIndex_3_01IndexType_00_01GenType_01_4_01_4.html#ad021372755784ec280892e187d17b5f8',1,'nta::utils::IDFactory&lt; GenIndex&lt; IndexType, GenType &gt; &gt;::is_in_use()']]],
   ['is_5fnone',['is_none',['../dd/d2b/classnta_1_1utils_1_1Option.html#a3cb083dfcd9cdb54f97b05c65599087e',1,'nta::utils::Option']]],
   ['is_5fok',['is_ok',['../d8/d2e/classnta_1_1Result.html#a61deaa087694eae4fdaece2996fedda0',1,'nta::Result']]],
   ['is_5fpointer',['is_pointer',['../d1/dc9/structutils_1_1TypeInfo.html#a7197345902a9a0ab30bc9b0fd2c3f324',1,'utils::TypeInfo']]],
@@ -29,5 +31,5 @@ var searchData=
   ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
   ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#a800d3c1fb16eb6e0fb2a1cb176a1280f',1,'nta::InputManager']]],
   ['isvisible',['isVisible',['../d3/d28/classnta_1_1Camera2D.html#aec593b22a30542dcf7863c6a34d29096',1,'nta::Camera2D']]],
-  ['iterator',['iterator',['../d8/d57/classutils_1_1Json_1_1iterator.html',1,'utils::Json::iterator&lt; c &gt;'],['../d0/dd2/classnta_1_1utils_1_1LinkedNode_1_1iterator.html',1,'nta::utils::LinkedNode&lt; T &gt;::iterator'],['../dc/d78/classutils_1_1Path_1_1iterator.html',1,'utils::Path::iterator']]]
+  ['iterator',['iterator',['../d8/d57/classutils_1_1Json_1_1iterator.html',1,'utils::Json::iterator&lt; c &gt;'],['../dc/d78/classutils_1_1Path_1_1iterator.html',1,'utils::Path::iterator'],['../d0/dd2/classnta_1_1utils_1_1LinkedNode_1_1iterator.html',1,'nta::utils::LinkedNode&lt; T &gt;::iterator']]]
 ];

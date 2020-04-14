@@ -2,7 +2,6 @@ var searchData=
 [
   ['unindent',['unindent',['../d6/d0d/classnta_1_1Logger.html#a34abdfe89740b8e37461a610f441c8fa',1,'nta::Logger']]],
   ['unlock_5fstream',['unlock_stream',['../d4/d51/namespacenta.html#a4b56373c30ea930fe09f9b20a3d17285',1,'nta']]],
-  ['unsubscribe',['unsubscribe',['../d9/d4e/classnta_1_1Subject.html#ab74c154ace2f59dafe154fe5c7416e8c',1,'nta::Subject']]],
   ['unuse',['unuse',['../de/ded/classnta_1_1FrameBuffer.html#ab11a4d1e6e01fa17d8953890954ed89f',1,'nta::FrameBuffer::unuse()'],['../dc/d9c/classnta_1_1GLSLProgram.html#a3153b4281ab2b6fcf0017c90bbd199af',1,'nta::GLSLProgram::unuse()']]],
   ['unusesecondlog',['unuseSecondLog',['../d6/d0d/classnta_1_1Logger.html#a16785b13e8c950802890f92a92fd6bb7',1,'nta::Logger']]],
   ['unwrap',['unwrap',['../d8/d2e/classnta_1_1Result.html#ab3155310417aa43097087dbddabf5228',1,'nta::Result::unwrap()'],['../dd/d2b/classnta_1_1utils_1_1Option.html#a729b90440d09884f1c197864d7bb0be9',1,'nta::utils::Option::unwrap()']]],

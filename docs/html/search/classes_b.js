@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['message',['Message',['../d0/d9b/structnta_1_1Message.html',1,'nta']]],
-  ['modexists',['ModExists',['../d6/d00/structutils_1_1check_1_1ModExists.html',1,'utils::check']]],
-  ['mulexists',['MulExists',['../d3/d1b/structutils_1_1check_1_1MulExists.html',1,'utils::check']]],
-  ['music',['Music',['../d4/dab/classnta_1_1Music.html',1,'nta']]]
+  ['negexists',['NegExists',['../d9/d6b/structutils_1_1check_1_1NegExists.html',1,'utils::check']]],
+  ['nop',['Nop',['../dc/d1d/structnta_1_1utils_1_1Option_1_1Nop.html',1,'nta::utils::Option&lt; T &gt;::Nop'],['../d6/d0d/namespaceutils_1_1check.html#d3/daa/structutils_1_1check_1_1Nop',1,'utils::check::Nop']]],
+  ['notexists',['NotExists',['../d4/d09/structutils_1_1check_1_1NotExists.html',1,'utils::check']]]
 ];

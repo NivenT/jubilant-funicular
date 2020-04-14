@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d5/d95/classnta_1_1ECS-members.html">List of all members</a>  </div>
@@ -77,113 +78,84 @@ Collaboration diagram for nta::ECS:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d5c/classnta_1_1ECS__coll__graph.png" border="0" usemap="#nta_1_1ECS_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1ECS_coll__map" id="nta_1_1ECS_coll__map">
-<area shape="rect" id="node2" href="../../d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="333,39,497,65"/>
-<area shape="rect" id="node4" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="346,129,485,170"/>
-<area shape="rect" id="node7" href="../../d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="361,195,469,221"/>
-<area shape="rect" id="node9" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="346,246,485,287"/>
+<area shape="rect" id="node2" href="../../d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="805,35,969,61"/>
+<area shape="rect" id="node4" href="../../d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="833,100,941,127"/>
+<area shape="rect" id="node6" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html" title="nta::utils::SlotMap\l\&lt; nta::ECS::ComponentInfo \&gt;" alt="" coords="788,315,985,357"/>
+<area shape="rect" id="node7" href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo" title="Info directly attached to a ComponentID. " alt="" coords="465,233,638,260"/>
+<area shape="rect" id="node8" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="148,165,315,192"/>
+<area shape="rect" id="node15" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; SlotMapKey\&lt;\&gt; \&gt;" alt="" coords="482,151,621,193"/>
+<area shape="rect" id="node12" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index. " alt="" coords="467,462,635,503"/>
+<area shape="rect" id="node17" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; nta::utils::SlotMapKey \&gt;" alt="" coords="799,473,974,514"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:d7/def/structnta_1_1ECS_1_1ComponentInfo"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo">ComponentInfo</a></td></tr>
+<tr class="memdesc:d7/def/structnta_1_1ECS_1_1ComponentInfo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Info directly attached to a ComponentID.  <a href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo">More...</a><br /></td></tr>
+<tr class="separator:d7/def/structnta_1_1ECS_1_1ComponentInfo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a60177e98362167aaa76d5831f8dd3a59"><td class="memItemLeft" align="right" valign="top"><a id="a60177e98362167aaa76d5831f8dd3a59"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ECS</b> (const <a class="el" href="../../d6/d90/classnta_1_1ComponentRegistry.html">ComponentRegistry</a> &amp;registry)</td></tr>
 <tr class="separator:a60177e98362167aaa76d5831f8dd3a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71a4d6f5e2aa5f3d7d3d8dc45b7eb611"><td class="memItemLeft" align="right" valign="top"><a id="a71a4d6f5e2aa5f3d7d3d8dc45b7eb611"></a>
-Entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a71a4d6f5e2aa5f3d7d3d8dc45b7eb611">gen_entity</a> ()</td></tr>
+<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a71a4d6f5e2aa5f3d7d3d8dc45b7eb611">gen_entity</a> ()</td></tr>
 <tr class="memdesc:a71a4d6f5e2aa5f3d7d3d8dc45b7eb611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new Entity, returning its ID. <br /></td></tr>
 <tr class="separator:a71a4d6f5e2aa5f3d7d3d8dc45b7eb611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa438a816c1174f03b0e0124a2bec20"><td class="memItemLeft" align="right" valign="top"><a id="abfa438a816c1174f03b0e0124a2bec20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#abfa438a816c1174f03b0e0124a2bec20">gen_entities</a> (std::size_t num, Entity *ids)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#abfa438a816c1174f03b0e0124a2bec20">gen_entities</a> (std::size_t num, <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> *ids)</td></tr>
 <tr class="memdesc:abfa438a816c1174f03b0e0124a2bec20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates several entities, storing their IDs in ids. <br /></td></tr>
 <tr class="separator:abfa438a816c1174f03b0e0124a2bec20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a786d2ac17fbfffa3ba93b6fcc66aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a26a786d2ac17fbfffa3ba93b6fcc66aa">delete_entity</a> (Entity id)</td></tr>
+<tr class="memitem:a26a786d2ac17fbfffa3ba93b6fcc66aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a26a786d2ac17fbfffa3ba93b6fcc66aa">delete_entity</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> id)</td></tr>
 <tr class="separator:a26a786d2ac17fbfffa3ba93b6fcc66aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e1eb10574d593ad6ae5f6c0bad39ec"><td class="memItemLeft" align="right" valign="top"><a id="a69e1eb10574d593ad6ae5f6c0bad39ec"></a>
 std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a69e1eb10574d593ad6ae5f6c0bad39ec">num_entities</a> () const</td></tr>
 <tr class="memdesc:a69e1eb10574d593ad6ae5f6c0bad39ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entities in the system. <br /></td></tr>
 <tr class="separator:a69e1eb10574d593ad6ae5f6c0bad39ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81600b75a067e9b180ab38b9e8a37af3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:a81600b75a067e9b180ab38b9e8a37af3"><td class="memTemplItemLeft" align="right" valign="top">ComponentID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a81600b75a067e9b180ab38b9e8a37af3">add_component</a> (Entity entity, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a81600b75a067e9b180ab38b9e8a37af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac53a5c8c535c5dbb7496e83c1bf3fa3a"><td class="memItemLeft" align="right" valign="top">ComponentID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ac53a5c8c535c5dbb7496e83c1bf3fa3a">delete_component</a> (ComponentID cmpn)</td></tr>
-<tr class="separator:ac53a5c8c535c5dbb7496e83c1bf3fa3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb6f76abd4855c865f8b8264d892b3be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aeb6f76abd4855c865f8b8264d892b3be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#aeb6f76abd4855c865f8b8264d892b3be">delete_components</a> (Entity entity)</td></tr>
-<tr class="separator:aeb6f76abd4855c865f8b8264d892b3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a8b511a8afbf9e9be90da09a650ea8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:af7a8b511a8afbf9e9be90da09a650ea8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#af7a8b511a8afbf9e9be90da09a650ea8">add_component</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> entity, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:af7a8b511a8afbf9e9be90da09a650ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408be9d936b69be97562186b6db2b355"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a408be9d936b69be97562186b6db2b355">delete_component</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> cmpn)</td></tr>
+<tr class="separator:a408be9d936b69be97562186b6db2b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac467c1cd6e138493d07112ace3061da1"><td class="memTemplParams" colspan="2"><a id="ac467c1cd6e138493d07112ace3061da1"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac467c1cd6e138493d07112ace3061da1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ac467c1cd6e138493d07112ace3061da1">has_component</a> (Entity entity) const</td></tr>
+<tr class="memitem:ac467c1cd6e138493d07112ace3061da1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ac467c1cd6e138493d07112ace3061da1">has_component</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> entity) const</td></tr>
 <tr class="memdesc:ac467c1cd6e138493d07112ace3061da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given Entity has a <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of type T. <br /></td></tr>
 <tr class="separator:ac467c1cd6e138493d07112ace3061da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219f7ec9639689fc76fce97033a97d8d"><td class="memItemLeft" align="right" valign="top"><a id="a219f7ec9639689fc76fce97033a97d8d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a219f7ec9639689fc76fce97033a97d8d">does_entity_exist</a> (Entity entity) const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a219f7ec9639689fc76fce97033a97d8d">does_entity_exist</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> entity) const</td></tr>
 <tr class="memdesc:a219f7ec9639689fc76fce97033a97d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given Entity exists. <br /></td></tr>
 <tr class="separator:a219f7ec9639689fc76fce97033a97d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1810e1e79f98f3c21bb97a7b6969489"><td class="memItemLeft" align="right" valign="top"><a id="af1810e1e79f98f3c21bb97a7b6969489"></a>
-Entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#af1810e1e79f98f3c21bb97a7b6969489">get_owner</a> (ComponentID cmpn) const</td></tr>
-<tr class="memdesc:af1810e1e79f98f3c21bb97a7b6969489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Entity associated to this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a>. <br /></td></tr>
-<tr class="separator:af1810e1e79f98f3c21bb97a7b6969489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca27e6f8df03c6432efd5159815a600b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aca27e6f8df03c6432efd5159815a600b"><td class="memTemplItemLeft" align="right" valign="top">ComponentList&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#aca27e6f8df03c6432efd5159815a600b">get_component_list</a> () const</td></tr>
+<tr class="memitem:a511854b9bf7616061bb09767c6131599"><td class="memItemLeft" align="right" valign="top"><a id="a511854b9bf7616061bb09767c6131599"></a>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a511854b9bf7616061bb09767c6131599">get_owner</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> cmpn) const</td></tr>
+<tr class="memdesc:a511854b9bf7616061bb09767c6131599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Entity associated to this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a>. <br /></td></tr>
+<tr class="separator:a511854b9bf7616061bb09767c6131599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca27e6f8df03c6432efd5159815a600b"><td class="memTemplParams" colspan="2"><a id="aca27e6f8df03c6432efd5159815a600b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aca27e6f8df03c6432efd5159815a600b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">ComponentList</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#aca27e6f8df03c6432efd5159815a600b">get_component_list</a> () const</td></tr>
+<tr class="memdesc:aca27e6f8df03c6432efd5159815a600b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all components of the given type. <br /></td></tr>
 <tr class="separator:aca27e6f8df03c6432efd5159815a600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737db20c3203eb7e833afe7cd9cc3f65"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a737db20c3203eb7e833afe7cd9cc3f65"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a737db20c3203eb7e833afe7cd9cc3f65">get_flat_component_list</a> () const</td></tr>
-<tr class="separator:a737db20c3203eb7e833afe7cd9cc3f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f95520aa683fc1ded3ca7f8bc9b4728"><td class="memTemplParams" colspan="2"><a id="a0f95520aa683fc1ded3ca7f8bc9b4728"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0f95520aa683fc1ded3ca7f8bc9b4728"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">utils::LinkedNode</a>&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a0f95520aa683fc1ded3ca7f8bc9b4728">get_component_list</a> (Entity entity) const</td></tr>
-<tr class="memdesc:a0f95520aa683fc1ded3ca7f8bc9b4728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all components of the given type associated to this entity. <br /></td></tr>
-<tr class="separator:a0f95520aa683fc1ded3ca7f8bc9b4728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973c678e6029d8310194bfbd495a03a0"><td class="memTemplParams" colspan="2"><a id="a973c678e6029d8310194bfbd495a03a0"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a973c678e6029d8310194bfbd495a03a0"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_flat_component_list</b> (Entity entity) const</td></tr>
-<tr class="separator:a973c678e6029d8310194bfbd495a03a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa229a416ef078523e51e3667b1d3573b"><td class="memTemplParams" colspan="2"><a id="aa229a416ef078523e51e3667b1d3573b"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa229a416ef078523e51e3667b1d3573b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; T &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#aa229a416ef078523e51e3667b1d3573b">get_component</a> (Entity entity) const</td></tr>
-<tr class="memdesc:aa229a416ef078523e51e3667b1d3573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (first) <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of the given type associated to the given Entity. <br /></td></tr>
+<tr class="memitem:aa229a416ef078523e51e3667b1d3573b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; T &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#aa229a416ef078523e51e3667b1d3573b">get_component</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> entity) const</td></tr>
+<tr class="memdesc:aa229a416ef078523e51e3667b1d3573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of the given type associated to the given Entity. <br /></td></tr>
 <tr class="separator:aa229a416ef078523e51e3667b1d3573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c9148515292513f5b389e1c81a26664"><td class="memItemLeft" align="right" valign="top"><a id="a7c9148515292513f5b389e1c81a26664"></a>
-<a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a7c9148515292513f5b389e1c81a26664">get_component</a> (ComponentID id) const</td></tr>
-<tr class="memdesc:a7c9148515292513f5b389e1c81a26664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> with the given id. <br /></td></tr>
-<tr class="separator:a7c9148515292513f5b389e1c81a26664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6c86f68c604a3395c6a2a5c2cf1806"><td class="memItemLeft" align="right" valign="top"><a id="a5f6c86f68c604a3395c6a2a5c2cf1806"></a>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d8/d8c/classnta_1_1Component.html">Component</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a5f6c86f68c604a3395c6a2a5c2cf1806">get_component</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> id) const</td></tr>
+<tr class="memdesc:a5f6c86f68c604a3395c6a2a5c2cf1806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> with the given id. <br /></td></tr>
+<tr class="separator:a5f6c86f68c604a3395c6a2a5c2cf1806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="memTemplParams" colspan="2"><a id="a8b4c279bf525d0194604ab0a7d78c4ea"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; T &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a8b4c279bf525d0194604ab0a7d78c4ea">get_sibling</a> (ComponentID cmpn) const</td></tr>
-<tr class="memdesc:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (first) <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of the given type with the same owner as cmpn. <br /></td></tr>
+<tr class="memitem:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; T &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a8b4c279bf525d0194604ab0a7d78c4ea">get_sibling</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> cmpn) const</td></tr>
+<tr class="memdesc:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of the given type with the same owner as cmpn. <br /></td></tr>
 <tr class="separator:a8b4c279bf525d0194604ab0a7d78c4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a808a566a7d08438e7f3f5d5d732a2e21"><td class="memTemplParams" colspan="2"><a id="a808a566a7d08438e7f3f5d5d732a2e21"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a808a566a7d08438e7f3f5d5d732a2e21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a808a566a7d08438e7f3f5d5d732a2e21">for_each</a> (std::function&lt; void(T &amp;)&gt; func) const</td></tr>
 <tr class="memdesc:a808a566a7d08438e7f3f5d5d732a2e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a function of each <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of a given type. <br /></td></tr>
 <tr class="separator:a808a566a7d08438e7f3f5d5d732a2e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0a50c8eaa95c57104390e904de0a3d"><td class="memTemplParams" colspan="2"><a id="a4a0a50c8eaa95c57104390e904de0a3d"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4a0a50c8eaa95c57104390e904de0a3d"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a4a0a50c8eaa95c57104390e904de0a3d">filter</a> (std::function&lt; bool(T &amp;)&gt; pred) const</td></tr>
-<tr class="memdesc:a4a0a50c8eaa95c57104390e904de0a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all compoonents of a given type satisfying some predicate. <br /></td></tr>
-<tr class="separator:a4a0a50c8eaa95c57104390e904de0a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23801625380b81926e5284e759fb2be3"><td class="memItemLeft" align="right" valign="top"><a id="a23801625380b81926e5284e759fb2be3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a23801625380b81926e5284e759fb2be3">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message, ComponentID cmpn)</td></tr>
-<tr class="memdesc:a23801625380b81926e5284e759fb2be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components associated to the same Entity as cmpn. <br /></td></tr>
-<tr class="separator:a23801625380b81926e5284e759fb2be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8f131b9ec0537aa76547baccf719f8b"><td class="memItemLeft" align="right" valign="top"><a id="ae8f131b9ec0537aa76547baccf719f8b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ae8f131b9ec0537aa76547baccf719f8b">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message, Entity entity)</td></tr>
-<tr class="memdesc:ae8f131b9ec0537aa76547baccf719f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components belonging to entity. <br /></td></tr>
-<tr class="separator:ae8f131b9ec0537aa76547baccf719f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6803f967743a6f014c138712d4754df5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6803f967743a6f014c138712d4754df5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a6803f967743a6f014c138712d4754df5">broadcast</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message)</td></tr>
-<tr class="memdesc:a6803f967743a6f014c138712d4754df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards message to all Components of the given type.  <a href="#a6803f967743a6f014c138712d4754df5">More...</a><br /></td></tr>
-<tr class="separator:a6803f967743a6f014c138712d4754df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41897e4f2ab03c0d9af25fcb1ea4e6b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a41897e4f2ab03c0d9af25fcb1ea4e6b5">shout</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request, ComponentID cmpn)</td></tr>
-<tr class="separator:a41897e4f2ab03c0d9af25fcb1ea4e6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba1739880bd8fd969d482e50b306ad1e"><td class="memItemLeft" align="right" valign="top"><a id="aba1739880bd8fd969d482e50b306ad1e"></a>
-<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shout</b> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request, Entity entity)</td></tr>
-<tr class="separator:aba1739880bd8fd969d482e50b306ad1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7af9962235f15e21859af0369c2082d"><td class="memTemplParams" colspan="2"><a id="ac7af9962235f15e21859af0369c2082d"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac7af9962235f15e21859af0369c2082d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shout</b> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request)</td></tr>
-<tr class="separator:ac7af9962235f15e21859af0369c2082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b0a89b5a954f2a67465d2487cd8afb"><td class="memItemLeft" align="right" valign="top"><a id="a90b0a89b5a954f2a67465d2487cd8afb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a90b0a89b5a954f2a67465d2487cd8afb">clear</a> ()</td></tr>
 <tr class="memdesc:a90b0a89b5a954f2a67465d2487cd8afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all entites and components from this system. <br /></td></tr>
@@ -193,14 +165,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 Private Attributes</h2></td></tr>
 <tr class="memitem:a168e31fb2be65d484a9da52f0be0526e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d89/classutils_1_1TypeMap.html">utils::TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#a168e31fb2be65d484a9da52f0be0526e">m_components</a></td></tr>
 <tr class="separator:a168e31fb2be65d484a9da52f0be0526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab147bb547ca03b00ca84b552405257dc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ab147bb547ca03b00ca84b552405257dc">m_component_types</a></td></tr>
-<tr class="separator:ab147bb547ca03b00ca84b552405257dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4bf48cfe7cfd7398fbbbf7c8085084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">utils::SlotMap</a>&lt; <a class="el" href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo">ComponentInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#acd4bf48cfe7cfd7398fbbbf7c8085084">m_component_info</a></td></tr>
+<tr class="separator:acd4bf48cfe7cfd7398fbbbf7c8085084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29b15022c2d2481e7577e533163016b"><td class="memItemLeft" align="right" valign="top"><a id="af29b15022c2d2481e7577e533163016b"></a>
-<a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#af29b15022c2d2481e7577e533163016b">m_entity_gen</a></td></tr>
+<a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#af29b15022c2d2481e7577e533163016b">m_entity_gen</a></td></tr>
 <tr class="memdesc:af29b15022c2d2481e7577e533163016b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responsible for creating unique IDs for the Entities. <br /></td></tr>
 <tr class="separator:af29b15022c2d2481e7577e533163016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0ec46a6f33c8a485eeea972b492adf9"><td class="memItemLeft" align="right" valign="top"><a id="ab0ec46a6f33c8a485eeea972b492adf9"></a>
-<a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; ComponentID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ab0ec46a6f33c8a485eeea972b492adf9">m_cmpn_gen</a></td></tr>
+<a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">utils::IDFactory</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ab0ec46a6f33c8a485eeea972b492adf9">m_cmpn_gen</a></td></tr>
 <tr class="memdesc:ab0ec46a6f33c8a485eeea972b492adf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responsible for creating unique IDs for the Components. <br /></td></tr>
 <tr class="separator:ab0ec46a6f33c8a485eeea972b492adf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab92132cf65eeb18505297ce57a7310f6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d6/d90/classnta_1_1ComponentRegistry.html">ComponentRegistry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/classnta_1_1ECS.html#ab92132cf65eeb18505297ce57a7310f6">m_registry</a></td></tr>
@@ -208,13 +180,55 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container class representing a complete Entity-Component System</p>
-<p>Manages creation of Entities and grouping of Components</p>
+<p>Manages creation of Entities and grouping of Components.</p>
+<p>Assumes each entity can only have one <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> of a given type.</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Make this class's implementation less complicated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00144">144</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a81600b75a067e9b180ab38b9e8a37af3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81600b75a067e9b180ab38b9e8a37af3">&#9670;&nbsp;</a></span>add_component()</h2>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00157">157</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+</div><hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="d7/def/structnta_1_1ECS_1_1ComponentInfo" id="d7/def/structnta_1_1ECS_1_1ComponentInfo"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d7/def/structnta_1_1ECS_1_1ComponentInfo">&#9670;&nbsp;</a></span>nta::ECS::ComponentInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct nta::ECS::ComponentInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Info directly attached to a ComponentID. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00160">160</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+</div><div class="dynheader">
+Collaboration diagram for nta::ECS::ComponentInfo:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/d4b/structnta_1_1ECS_1_1ComponentInfo__coll__graph.png" border="0" usemap="#nta_1_1ECS_1_1ComponentInfo_coll__map" alt="Collaboration graph"/></div>
+<map name="nta_1_1ECS_1_1ComponentInfo_coll__map" id="nta_1_1ECS_1_1ComponentInfo_coll__map">
+<area shape="rect" id="node2" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="5,95,172,121"/>
+</map>
+<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
+<table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a id="a7c228ca9eb09e9d47e170ff3939d7009"></a><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a></td>
+<td class="fieldname">
+owner</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aa84c276d1ba6cb50593db1ccd95cb908"></a>size_t</td>
+<td class="fieldname">
+type</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af7a8b511a8afbf9e9be90da09a650ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a8b511a8afbf9e9be90da09a650ea8">&#9670;&nbsp;</a></span>add_component()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,9 +236,9 @@ Private Attributes</h2></td></tr>
 template&lt;typename T , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">ComponentID nta::ECS::add_component </td>
+          <td class="memname"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a> &gt; nta::ECS::add_component </td>
           <td>(</td>
-          <td class="paramtype">Entity&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>&#160;</td>
           <td class="paramname"><em>entity</em>, </td>
         </tr>
         <tr>
@@ -243,80 +257,31 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Adds the given <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> to the given Entity.</p>
 <p>You pass in the entity and any arguments needed to construct a new object of type T</p>
 <p>T should be a concrete type, not a pointer type</p>
-<p>Returns the id of the created <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> (NTA_INVALID_ID on failure). </p>
+<p>Returns the id of the created <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> (or None on failure). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00260">260</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
-
-</div>
-</div>
-<a id="a6803f967743a6f014c138712d4754df5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6803f967743a6f014c138712d4754df5">&#9670;&nbsp;</a></span>broadcast()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void nta::ECS::broadcast </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Forwards message to all Components of the given type. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Make these more efficient </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00346">346</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00266">266</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
-<a id="ac53a5c8c535c5dbb7496e83c1bf3fa3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac53a5c8c535c5dbb7496e83c1bf3fa3a">&#9670;&nbsp;</a></span>delete_component()</h2>
+<a id="a408be9d936b69be97562186b6db2b355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a408be9d936b69be97562186b6db2b355">&#9670;&nbsp;</a></span>delete_component()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ComponentID nta::ECS::delete_component </td>
+          <td class="memname">bool nta::ECS::delete_component </td>
           <td>(</td>
-          <td class="paramtype">ComponentID&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a>&#160;</td>
           <td class="paramname"><em>cmpn</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Attempts to delete the given <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a></p>
-<p>Returns the ID of the deleted <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> </p>
+<p>Returns false on failure </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aeb6f76abd4855c865f8b8264d892b3be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb6f76abd4855c865f8b8264d892b3be">&#9670;&nbsp;</a></span>delete_components()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void nta::ECS::delete_components </td>
-          <td>(</td>
-          <td class="paramtype">Entity&#160;</td>
-          <td class="paramname"><em>entity</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Deletes all componenets of the given type from the given entity</p>
-<p>if entity == NTA_INVALID_ID, then deletes all components of that type from all entities </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00273">273</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +294,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">bool nta::ECS::delete_entity </td>
           <td>(</td>
-          <td class="paramtype">Entity&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Entity</a>&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -338,94 +303,13 @@ template&lt;typename T &gt; </div>
 <p>Attempts to delete Entity with given id.</p>
 <p>Returns true on success </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aca27e6f8df03c6432efd5159815a600b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca27e6f8df03c6432efd5159815a600b">&#9670;&nbsp;</a></span>get_component_list()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">ComponentList&lt; T &gt; nta::ECS::get_component_list </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns a list of all components of the given type</p>
-<p>This is a vector of linked lists where the ith entry of the vector is the list of components associated to entity i </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00286">286</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
-
-</div>
-</div>
-<a id="a737db20c3203eb7e833afe7cd9cc3f65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a737db20c3203eb7e833afe7cd9cc3f65">&#9670;&nbsp;</a></span>get_flat_component_list()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; T * &gt; nta::ECS::get_flat_component_list </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns a vector of all components of the given type without information on which component belongs to which entity </p>
-
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00291">291</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00303">get_component_list()</a>.</p>
-
-</div>
-</div>
-<a id="a41897e4f2ab03c0d9af25fcb1ea4e6b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41897e4f2ab03c0d9af25fcb1ea4e6b5">&#9670;&nbsp;</a></span>shout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt; nta::ECS::shout </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ComponentID&#160;</td>
-          <td class="paramname"><em>cmpn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Like broadcast but returns the first response received</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>Return utils::LinkedNode&lt;Message&gt; of all received responses </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d5/d24/ECS_8h_source.html#l00346">broadcast()</a>, and <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00007">nta::Component::request()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab147bb547ca03b00ca84b552405257dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab147bb547ca03b00ca84b552405257dc">&#9670;&nbsp;</a></span>m_component_types</h2>
+<a id="acd4bf48cfe7cfd7398fbbbf7c8085084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4bf48cfe7cfd7398fbbbf7c8085084">&#9670;&nbsp;</a></span>m_component_info</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,7 +318,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::size_t&gt; nta::ECS::m_component_types</td>
+          <td class="memname"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">utils::SlotMap</a>&lt;<a class="el" href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo">ComponentInfo</a>&gt; nta::ECS::m_component_info</td>
         </tr>
       </table>
   </td>
@@ -443,10 +327,10 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A map from ComponentID to type of <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> with that ID</p>
+<p>A map from ComponentID to relevant information about that <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a></p>
 <p>Since ComponentIDs are unique, I could get rid of this and just always loop over all records instead. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00156">156</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00184">184</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
@@ -472,7 +356,7 @@ template&lt;typename T &gt; </div>
 <p>All the components in this system</p>
 <p>Only stores types of the form ComponentList&lt;T&gt; where T inherits <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a>. Each vector has size m_entity_gen.get_last_id(). </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00151">151</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00170">170</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>
@@ -496,9 +380,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>The various <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> types in use</p>
-<p>This registry should not change after its associated to an <a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a> </p>
+<p>This registry should not change after it's associated to an <a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00164">164</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00192">192</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add_5fcomponent',['add_component',['../db/da0/classnta_1_1ECS.html#a81600b75a067e9b180ab38b9e8a37af3',1,'nta::ECS']]],
+  ['add_5fcomponent',['add_component',['../db/da0/classnta_1_1ECS.html#af7a8b511a8afbf9e9be90da09a650ea8',1,'nta::ECS']]],
   ['add_5fglyph',['add_glyph',['../d9/dcf/classnta_1_1InstanceBatch.html#a82901420a0d796b457b1e528bbe2af5c',1,'nta::InstanceBatch']]],
   ['add_5finstance_5fdata',['add_instance_data',['../d9/dcf/classnta_1_1InstanceBatch.html#a0daa681e47a4e2167799478ea75266da',1,'nta::InstanceBatch']]],
   ['add_5ftexture',['add_texture',['../de/ded/classnta_1_1FrameBuffer.html#ac1d1fbeaf6cd2f5851b1814d7b8cf837',1,'nta::FrameBuffer']]],
