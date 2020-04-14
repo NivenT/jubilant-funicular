@@ -1,10 +1,11 @@
 #ifndef NTA_OBSERVER_H_INCLUDED
 #define NTA_OBSERVER_H_INCLUDED
 
-#include "nta/Message.h"
+#include "nta/Event.h"
 #include "nta/LinkedNode.h"
 
 namespace nta {
+    /*
     /// Receives notifications
     class Observer {
     public:
@@ -27,6 +28,7 @@ namespace nta {
         /// Removes Observer from notification list
         virtual void unsubscribe(Observer*);
     };
+    */
 }
 
 #endif // NTA_OBSERVER_H_INCLUDED

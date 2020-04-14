@@ -64,5 +64,6 @@ namespace nta {
         case OTHER:
             return "Other";
         }
+        return "";
     }
 }

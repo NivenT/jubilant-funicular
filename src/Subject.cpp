@@ -1,6 +1,7 @@
 #include "nta/Observer.h"
 
 namespace nta {
+	/*
 	void Subject::notify(const Message& event) {
 		for (ObserverNode* curr = m_head; curr; curr = m_head->next) {
 			curr->data->onNotify(event);
@@ -16,4 +17,5 @@ namespace nta {
 		}
 		if (*curr) *curr = (*curr)->next;
 	}
+	*/
 }

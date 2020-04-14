@@ -14,7 +14,7 @@ option(NTA_USE_DEVIL "Turn off to use CImg instead of DevIL for image loading" O
 option(NTA_USE_AUDIO "Turn off if you don't need AudioManager or SDL2_mixer" ON)
 option(NTA_USE_IMGUI "Turn on if you want to use Imgui" OFF)	
 option(NTA_BUILD_EXAMPLES "Turn off if you don't want to build the examples" OFF)
-option(NTA_BUILD_TESTS "Turn off if you don't want to build the tests" OFF)
+option(NTA_BUILD_TESTS "Turn off if you don't want to build the tests" ON)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(UTILS_BUILD_TESTS ${NTA_BUILD_TESTS} CACHE BOOL "" FORCE)

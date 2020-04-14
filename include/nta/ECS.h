@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "nta/Message.h"
+#include "nta/Event.h"
 #include "nta/Option.h"
 #include "nta/IDFactory.h"
 #include "nta/TypeMap.h"
@@ -31,6 +31,7 @@ namespace nta {
         ComponentID m_id;
     public:
         virtual ~Component() {}
+        /*
         /// Receives a message from another component
         virtual void receive(const Message& message) {};
         /// (Possibly) responds to a request from another component
@@ -40,6 +41,7 @@ namespace nta {
         /// Sends a request to all sibling components, returning the first
         /// received response.
         virtual utils::Option<Message> request(const Message& request);
+        */
         /// Returns this Component's id
         const ComponentID get_id() const { return m_id; }
 
@@ -115,8 +117,10 @@ namespace nta {
             std::function<bool(const utils::TypeMap&, ComponentID, Entity)> delete_component;
             std::function<utils::Option<Component&>(const utils::TypeMap&, Entity)> get_component;
             std::function<void(const utils::TypeMap&)> clear;
+            /*
             std::function<void(const utils::TypeMap&, Entity, const Message&)> broadcast;
             std::function<utils::Option<Message>(const utils::TypeMap&, Entity, const Message&)> shout;
+            */
         };
 
         using iterator = std::unordered_map<std::size_t, Record>::iterator;
