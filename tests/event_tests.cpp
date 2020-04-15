@@ -9,7 +9,7 @@ struct Entity { int health = 100; };
 struct Player : public Entity { int level = 0; };
 struct Enemy : public Entity { int power; };
 
-// The last invariant must be called COUNT so Message knows how many recipients there are
+// The last invariant must be called COUNT so Event knows how many recipients there are
 // Underlying values need to start at 0 and go up by 1 each time
 enum class EntityType { ENTITY, PLAYER, ENEMY, COUNT };
 
@@ -38,30 +38,32 @@ void test_scenario1() {
         Enemy e = { .power = power };
         // This will do nothing because the function just subscribed cannot be
         // applied to enemies
+        level_up.enact<EntityType::PLAYER>(e);
+        // This will do nothing because nothing has been subscribed to ENEMY
         level_up.enact<EntityType::ENEMY>(e);
 
         print_state(p, e);
         while (e.health > 0) {
-            // Create message that will deal damage to any entity
+            // Create event that will deal damage to any entity
             Event damage;
             damage.subscribe<EntityType::ENTITY>([&](Entity& ent) {
                 ent.health -= e.power;
             });
 
             int health_before = p.health;
-            // Apply message to player
+            // Apply event to player
             damage.enact<EntityType::ENTITY>(p);
             assert(p.health == health_before - e.power);
             if (p.health <= 0) break;
 
             int player_damange = 19 + p.level;
-            // Reuse damage message for player's retaliation
+            // Reuse damage event for player's retaliation
             damage.subscribe<EntityType::ENTITY>([&](Entity& ent) {
                 ent.health -= player_damange;
             });
 
             health_before = e.health;
-            // Can apply message using function call syntax instead
+            // Can apply event using function call syntax instead
             // first parameter must be the type of the recipient
             //
             // This is slower than calling .enact though
@@ -75,8 +77,8 @@ void test_scenario1() {
 
 // Imagine a player and an enemy caught in a fire
 void test_scenario2() {
-    // Instead of creating different message types individually, can
-    // make each message type its own class
+    // Instead of creating different event types individually, can
+    // make each event type its own class
     struct FireDamage : public Event {
         FireDamage() {
             subscribe<EntityType::PLAYER>([](Player& p) {
