@@ -5,11 +5,11 @@
 #include <unordered_map>
 #include <vector>
 
-#include "nta/Event.h"
 #include "nta/Option.h"
 #include "nta/IDFactory.h"
 #include "nta/TypeMap.h"
 #include "nta/SlotMap.h"
+#include "nta/Event.h"
 
 namespace nta {
     class ECS;
@@ -23,9 +23,7 @@ namespace nta {
     class Component {
     protected:
         /// Create using ECS::add_component
-        Component() : m_ecs(nullptr) {}
-        /// The System this Component belongs to
-        ECS* m_ecs;
+        Component() {}
         /// Unique identifier
         ComponentID m_id;
     public:
@@ -113,9 +111,17 @@ namespace nta {
     ///
     /// Assumes each entity can only have one Component of a given type.
     ///
-    /// \todo Make this class's implementation less complicated
-    /// \todo (?) Replace ComponentRegistry with template parameters a la EventTemplate
-    /// ^^^^^^^^^^^^ These todo's are in conflict
+    /// The Event template parameter used in some functions should usually be 
+    /// an instantiation of EventTemplate. It is used for passing 
+    /// around events/signals/commands, i.e. it should be invokable on components
+    /// ```
+    /// Event f;
+    /// Component c;
+    /// ...
+    /// f(c);
+    /// ```
+    ///
+    /// If you don't need events, leave this parameter unspecified.
     class ECS {
     private:
         /// Info directly attached to a ComponentID
@@ -201,7 +207,20 @@ namespace nta {
         template<typename T>
         void for_each(std::function<void(T&)> func) const;
 
-        /// Removes all entites and components from this system
+        /// Enacts the event of the Component of the given type on the given Entity
+        template<typename T, typename Event>
+        void enact_on(const Event& event, Entity entity) const;
+        template<typename T, typename Event, typename Event::enum_type e>
+        void enact_on(const Event& event, Entity entity) const;
+        template<typename T, typename Event>
+        void enact_on(const Event& event, typename Event::enum_type e, Entity entity) const;
+        /// Enacts the event on all the Components of the given type
+        template<typename T, typename Event>
+        void enact_on_all(const Event& event, typename Event::enum_type e) const;
+        template<typename T, typename Event, typename Event::enum_type e>
+        void enact_on_all(const Event& event) const;
+
+        /// Removes all entities and components from this system
         void clear();
     };
     template<typename T, typename... Args>
@@ -217,7 +236,7 @@ namespace nta {
         assert(list.get_curr_gen(entity) == entity.gen);
         assert(!list.is_free(entity));
         T& cmpn = list[entity].unwrap();
-        cmpn.m_ecs = this;
+        //cmpn.m_ecs = this;
         cmpn.m_id = m_cmpn_gen();
 
         m_component_info.reserve(cmpn.m_id.idx+1);
@@ -262,6 +281,30 @@ namespace nta {
         auto& list = get_component_list<T>();
         for (auto& cmpn : list) {
             func(cmpn);
+        }
+    }
+    template<typename T, typename Event>
+    void ECS::enact_on(const Event& event, Entity entity) const {
+        get_component<T>(entity).map([&](T& cmpn) { event(cmpn); });
+    }
+    template<typename T, typename Event, typename Event::enum_type e>
+    void ECS::enact_on(const Event& event, Entity entity) const {
+        get_component<T>(entity).map([&](T& cmpn) { event.enact<e>(cmpn); });
+    }
+    template<typename T, typename Event>
+    void ECS::enact_on(const Event& event, typename Event::enum_type e, Entity entity) const {
+        get_component<T>(entity).map([&](T& cmpn) { event(e, cmpn); });
+    }
+    template<typename T, typename Event>
+    void ECS::enact_on_all(const Event& event, typename Event::enum_type e) const {
+        for (auto& cmpn : get_component_list<T>()) {
+            event(e, cmpn);
+        }
+    }
+    template<typename T, typename Event, typename Event::enum_type e>
+    void ECS::enact_on_all(const Event& event) const {
+        for (auto& cmpn : get_component_list<T>()) {
+            event.enact<e>(cmpn);
         }
     }
 }

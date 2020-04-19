@@ -65,6 +65,14 @@ namespace nta {
         void operator()(Args&&... args) {
             operator2_helper<sizeof...(FuncTypes)-1>(std::forward<Args>(args)...);
         }
+
+        using enum_type = RecipientEnum;
+    };
+    /// Empty variant for use by ECS
+    template<>
+    class EventTemplate<void> {
+    public:
+        using enum_type = void;
     };
 }
 

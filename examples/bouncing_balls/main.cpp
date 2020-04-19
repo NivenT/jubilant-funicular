@@ -4,10 +4,8 @@
  * The program exists when there are no balls left
  *
  * The physics in this example is less than ideal since it is not the focus
- * In practice, for decent physics, you'll want to use an externel library
+ * In practice, for decent physics, you'll want to use an external library
  */
-
-#include <iostream>
 
 #include <nta/ScreenManager.h>
 #include <nta/ResourceManager.h>
@@ -18,6 +16,7 @@
 #include <nta/ECS.h>
 #include <nta/Random.h>
 #include <nta/Logger.h>
+#include <nta/format.h>
 
 #define NUM_INIT_BALLS 20
 #define BALL_DENSITY 0.3f
@@ -53,11 +52,13 @@ public:
         batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, 
                        m_color);
     }
+    /*
     void receive(const nta::Message& message) {
         // there's also a message.type field
         // This program only uses one type of message so that field is irrelevant
         m_pos = *(vec2*)message.data;
     }
+    */
 };
 
 class PhysicsComponent : public nta::Component {
