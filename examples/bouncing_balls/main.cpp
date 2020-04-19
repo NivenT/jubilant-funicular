@@ -28,6 +28,18 @@
 using namespace std;
 using namespace glm;
 
+class GraphicsComponent;
+class PhysicsComponent;
+
+// see event_tests.cpp for more information on how events work
+//
+// Briefly, in order to keep things type-safe, events are supplied
+// with a list of possible function signatures indexed by a given
+// enum type, and then their particular effects can be customized
+// on an object-by-object basis
+enum class ComponentType { GRAPHICS, PHYSICS, COUNT };
+using Event = nta::EventTemplate<ComponentType, void(GraphicsComponent&), void(PhysicsComponent&)>;
+
 class GraphicsComponent : public nta::Component {
 private:
     vec4 m_color;
@@ -39,6 +51,8 @@ public:
     GraphicsComponent(vec4 col, float rad) : m_color(col),  m_pos(0), m_rad(rad) {}
 
     vec2 get_pos() const { return m_pos; }
+    // nta::crvec2 is short hand for "const glm::vec2&"
+    void set_pos(nta::crvec2 pos) { m_pos = pos; }
     // The ContextData is what stores GLTextures, among other things
     void draw(nta::SpriteBatch& batch, nta::ContextData& context) {
         // Gets a cached texture so we don't repeatedly load in the same file
@@ -52,13 +66,6 @@ public:
         batch.addGlyph(vec4(top_left, 2.f*m_rad, 2.f*m_rad), vec4(0,0,1,1), id, 
                        m_color);
     }
-    /*
-    void receive(const nta::Message& message) {
-        // there's also a message.type field
-        // This program only uses one type of message so that field is irrelevant
-        m_pos = *(vec2*)message.data;
-    }
-    */
 };
 
 class PhysicsComponent : public nta::Component {
@@ -78,7 +85,7 @@ public:
 
     float get_mass() const { return m_rad*m_rad*BALL_DENSITY; }
     vec2 get_pos() const { return m_pos; }
-    void step(float dt) {
+    void step(nta::ECS& ecs, float dt) {
         vec2 acc = m_acc + GRAVITY;
         m_vel += acc * dt;
         m_pos += m_vel * dt;
@@ -87,7 +94,13 @@ public:
             m_vel.y = abs(m_vel.y);
         }
 
-        send(nta::Message(0, &m_pos));
+        // Create an event that updates the position of a GraphicsComponent
+        Event update_pos;
+        update_pos.define_for<ComponentType::GRAPHICS>([&](GraphicsComponent& gc) {
+            gc.set_pos(m_pos);
+        });
+        // Enact this event on the GraphicsComponent with the same owner at this 
+        ecs.enact_on_sibling<GraphicsComponent>(update_pos, m_id);
     }
     // Reminder: Ignore the physics in this example
     // It's not the focus and it is wrong
@@ -115,8 +128,6 @@ public:
             m_pos -= diff*overlap/rad_sum;
         }
     }
-    // Every Component needs to be able to receive Messages
-    void receive(const nta::Message& _) {}
 };
 
 class MainScreen : public nta::Screen {
@@ -156,15 +167,18 @@ void MainScreen::addBall(nta::crvec2 pos) {
     // Generate a new entity (i.e. ball)
     m_balls.emplace_back(m_system.gen_entity());
 
+    // Deleted Entities have their IDs recycled. Look at Log.log to see what I mean
+    //
+    // Their id is a generational index to prevent "use after free" errors
+    // if a part of the code holds onto to one after that entity is deleted
+    nta::Logger::writeToLog("Adding ball with id {}", m_balls.back());
+
     float rad = nta::Random::randFloat(3.f, 10.f);
     vec4 col(nta::Random::randRGB(), 1.f);
 
     // Give the ball graphics and physics
     m_system.add_component<PhysicsComponent>(m_balls.back(), pos, rad);
     m_system.add_component<GraphicsComponent>(m_balls.back(), col, rad);
-
-    // Deleted Entites have their IDs recycled. Look at Log.log to see what I mean
-    nta::Logger::writeToLog("Added ball with id " + nta::utils::to_string(m_balls.back()));
 }
 
 void MainScreen::init() {
@@ -196,19 +210,19 @@ void MainScreen::init() {
 }
 
 void MainScreen::update() {
-    // Adds a ball whenver you click on the screen
+    // Adds a ball whenever you click on the screen
     if (getInput().justPressed(SDL_BUTTON_LEFT)) {
         addBall(getMouse());
     }
 
-    vector<PhysicsComponent*> phys_cpmns = m_system.get_flat_component_list<PhysicsComponent>();
-    for (int i = 0; i < phys_cpmns.size(); i++) {
-        for (int j = i+1; j < phys_cpmns.size(); j++) {
-            phys_cpmns[i]->collide(*phys_cpmns[j], 1./60);
+    nta::utils::SlotMap<PhysicsComponent>& phys_cmpns = m_system.get_component_list<PhysicsComponent>();
+    for (auto it = phys_cmpns.begin(); it != phys_cmpns.end(); ++it) {
+        for (auto it2 = it + 1; it2 != phys_cmpns.end(); ++it2) {
+            it->collide(*it2, 1./60);
         }
     }
-    for (PhysicsComponent* cmpn : phys_cpmns) {
-        cmpn->step(1./60);
+    for (auto& cmpn : phys_cmpns) {
+        cmpn.step(m_system, 1./60);
     }
 
     // removes any ball whose center goes off the screen

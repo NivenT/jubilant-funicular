@@ -21,7 +21,7 @@ namespace nta {
             "EventTemplate: Every FuncType should be a function type");
     private:
         template<std::size_t idx, typename... Args>
-        void enact_helper(Args&&... args) {
+        void enact_helper(Args&&... args) const {
             if constexpr (std::is_invocable_v<decltype(std::get<idx>(m_actions).get()),
                                               Args...>) {
                 auto func = std::get<idx>(m_actions);
@@ -29,13 +29,13 @@ namespace nta {
             }
         }
         template<std::size_t i, typename... Args>
-        void operator_helper(std::size_t e, Args&&... args) {
+        void operator_helper(std::size_t e, Args&&... args) const {
             if (e == i) enact_helper<i>(std::forward<Args>(args)...);
             else if constexpr (i > 0) operator_helper<i-1>(e, 
                                                            std::forward<Args>(args)...);
         }
         template<std::size_t i, typename... Args>
-        void operator2_helper(Args&&... args) {
+        void operator2_helper(Args&&... args) const {
             enact_helper<i>(std::forward<Args>(args)...);
             if constexpr (i > 0) operator2_helper<i-1>(std::forward<Args>(args)...);
         }
@@ -52,17 +52,17 @@ namespace nta {
         }
 
         template<RecipientEnum e, typename... Args>
-        void enact(Args&&... args) {
+        void enact(Args&&... args) const {
             enact_helper<std::size_t(e)>(std::forward<Args>(args)...);
         }
 
         template<typename... Args>
-        void operator()(RecipientEnum e, Args&&... args) {
+        void operator()(RecipientEnum e, Args&&... args) const {
             operator_helper<sizeof...(FuncTypes)-1>(std::size_t(e), 
                                                     std::forward<Args>(args)...);
         }
         template<typename... Args>
-        void operator()(Args&&... args) {
+        void operator()(Args&&... args) const {
             operator2_helper<sizeof...(FuncTypes)-1>(std::forward<Args>(args)...);
         }
 

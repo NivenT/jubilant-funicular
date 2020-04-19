@@ -17,6 +17,9 @@ namespace nta {
 		if (!does_entity_exist(id)) return false;
 		m_entity_gen.free(id);
 		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			it->second.get_component(m_components, id).map([&](Component& cmpn) {
+				m_component_info.remove(cmpn.get_id());
+			});
 			it->second.delete_entity(m_components, m_cmpn_gen, id);
 		}
 		return true;

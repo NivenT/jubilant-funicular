@@ -3,6 +3,7 @@
 
 #include "nta/Option.h"
 #include "nta/IDFactory.h"
+#include "nta/format.h"
 
 namespace nta {
     namespace utils {
@@ -18,6 +19,12 @@ namespace nta {
 
             index_type idx;
             gen_type gen;
+        };
+        template<>
+        struct Formatter<SlotMapKey<>> {
+            std::string operator()(const SlotMapKey<>& arg) {
+                return format("{ .idx = {}, .gen = {} }", arg.idx, arg.gen);
+            }
         };
         template<typename IndexType, typename GenType>
         using GenIndex = SlotMapKey<IndexType, GenType>;
@@ -198,15 +205,15 @@ namespace nta {
             index_type* new_idxes = static_cast<index_type*>(std::aligned_alloc(alignof(index_type),
                                                                                sizeof(index_type) * new_cap));
 
-            std::uninitialized_copy(m_data, m_data + m_cap, new_data);
+            std::uninitialized_copy(m_data, m_data + m_size, new_data);
             std::uninitialized_copy(m_slots, m_slots + m_cap, new_slots);
-            std::uninitialized_copy(m_slot_idxes, m_slot_idxes + m_cap, new_idxes);
+            std::uninitialized_copy(m_slot_idxes, m_slot_idxes + m_size, new_idxes);
 
-            std::destroy(m_data, m_data + m_cap);
+            std::destroy(m_data, m_data + m_size);
             std::free(m_data);
             std::destroy(m_slots, m_slots + m_cap);
             std::free(m_slots);
-            std::destroy(m_slot_idxes, m_slot_idxes + m_cap);
+            std::destroy(m_slot_idxes, m_slot_idxes + m_size);
             std::free(m_slot_idxes);
 
             m_data = new_data;

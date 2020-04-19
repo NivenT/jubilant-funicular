@@ -5,17 +5,6 @@ using namespace std;
 using namespace nta;
 using namespace nta::utils;
 
-namespace nta {
-    namespace utils {
-        template<>
-        struct Formatter<SlotMapKey<>> {
-            std::string operator()(const SlotMapKey<>& arg) {
-                return format("{ .idx = {}, .gen = {} }", arg.idx, arg.gen);
-            }
-        };
-    }
-}
-
 class HealthComponent : public Component {
 private:
 	int m_health;

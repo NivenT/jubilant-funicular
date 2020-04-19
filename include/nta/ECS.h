@@ -122,6 +122,7 @@ namespace nta {
     /// ```
     ///
     /// If you don't need events, leave this parameter unspecified.
+    // I really should have just called this thing EntityManager
     class ECS {
     private:
         /// Info directly attached to a ComponentID
@@ -207,13 +208,20 @@ namespace nta {
         template<typename T>
         void for_each(std::function<void(T&)> func) const;
 
-        /// Enacts the event of the Component of the given type on the given Entity
+        /// Enacts the event on the Component of the given type owned by the given Entity
         template<typename T, typename Event>
         void enact_on(const Event& event, Entity entity) const;
         template<typename T, typename Event, typename Event::enum_type e>
         void enact_on(const Event& event, Entity entity) const;
         template<typename T, typename Event>
         void enact_on(const Event& event, typename Event::enum_type e, Entity entity) const;
+        /// Enacts the event on the Component of the given type owned by the same entity
+        template<typename T, typename Event>
+        void enact_on_sibling(const Event& event, ComponentID cmpn) const;
+        template<typename T, typename Event, typename Event::enum_type e>
+        void enact_on_sibling(const Event& event, ComponentID cmpn) const;
+        template<typename T, typename Event>
+        void enact_on_sibling(const Event& event, typename Event::enum_type e, ComponentID cmpn) const;
         /// Enacts the event on all the Components of the given type
         template<typename T, typename Event>
         void enact_on_all(const Event& event, typename Event::enum_type e) const;
@@ -232,9 +240,6 @@ namespace nta {
         if (!list.insert_emplace(entity, std::forward<Args>(args)...)) {
             return utils::make_none<ComponentID>();
         }
-        assert(list.cap() > entity.idx);
-        assert(list.get_curr_gen(entity) == entity.gen);
-        assert(!list.is_free(entity));
         T& cmpn = list[entity].unwrap();
         //cmpn.m_ecs = this;
         cmpn.m_id = m_cmpn_gen();
@@ -244,9 +249,6 @@ namespace nta {
         if (!m_component_info.insert(cmpn.m_id, info)) {
             assert(false && "This should never happen");
         }
-        assert(m_component_info.cap() > cmpn.m_id.idx);
-        assert(m_component_info.get_curr_gen(cmpn.m_id) == cmpn.m_id.gen);
-        assert(!m_component_info.is_free(cmpn.m_id));
         return utils::make_some(cmpn.m_id);
     }
     template<typename T>
@@ -294,6 +296,18 @@ namespace nta {
     template<typename T, typename Event>
     void ECS::enact_on(const Event& event, typename Event::enum_type e, Entity entity) const {
         get_component<T>(entity).map([&](T& cmpn) { event(e, cmpn); });
+    }
+    template<typename T, typename Event>
+    void ECS::enact_on_sibling(const Event& event, ComponentID cmpn) const {
+        get_sibling<T>(cmpn).map([&](T& sib) { event(sib); });
+    }
+    template<typename T, typename Event, typename Event::enum_type e>
+    void ECS::enact_on_sibling(const Event& event, ComponentID cmpn) const {
+        get_sibling<T>(cmpn).map([&](T& sib) { event.enact<e>(sib); });
+    }
+    template<typename T, typename Event>
+    void ECS::enact_on_sibling(const Event& event, typename Event::enum_type e, ComponentID cmpn) const {
+        get_sibling<T>(cmpn).map([&](T& sib) { event(e, sib); });
     }
     template<typename T, typename Event>
     void ECS::enact_on_all(const Event& event, typename Event::enum_type e) const {
