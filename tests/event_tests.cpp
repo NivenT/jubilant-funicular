@@ -28,7 +28,7 @@ void test_scenario1() {
         int prev_level = p.level;
         // Beat an enemy, gain a level
         Event level_up;
-        level_up.subscribe<EntityType::PLAYER>([](Player& play) {
+        level_up.define_for<EntityType::PLAYER>([](Player& play) {
             play.level++;
             play.health += play.level == 1 ? 0 : 25;
         });
@@ -36,17 +36,17 @@ void test_scenario1() {
         assert(p.level == prev_level + 1);
 
         Enemy e = { .power = power };
-        // This will do nothing because the function just subscribed cannot be
+        // This will do nothing because the function just define_ford cannot be
         // applied to enemies
         level_up.enact<EntityType::PLAYER>(e);
-        // This will do nothing because nothing has been subscribed to ENEMY
+        // This will do nothing because nothing has been define_ford to ENEMY
         level_up.enact<EntityType::ENEMY>(e);
 
         print_state(p, e);
         while (e.health > 0) {
             // Create event that will deal damage to any entity
             Event damage;
-            damage.subscribe<EntityType::ENTITY>([&](Entity& ent) {
+            damage.define_for<EntityType::ENTITY>([&](Entity& ent) {
                 ent.health -= e.power;
             });
 
@@ -56,19 +56,19 @@ void test_scenario1() {
             assert(p.health == health_before - e.power);
             if (p.health <= 0) break;
 
-            int player_damange = 19 + p.level;
+            int player_dammage = 19 + p.level;
             // Reuse damage event for player's retaliation
-            damage.subscribe<EntityType::ENTITY>([&](Entity& ent) {
-                ent.health -= player_damange;
+            damage.define_for<EntityType::ENTITY>([&](Entity& ent) {
+                ent.health -= player_dammage;
             });
 
             health_before = e.health;
             // Can apply event using function call syntax instead
-            // first parameter must be the type of the recipient
+            // first parameter should usually be the type of the recipient
             //
             // This is slower than calling .enact though
             damage(EntityType::ENTITY, e);
-            assert(e.health == health_before - player_damange);
+            assert(e.health == health_before - player_dammage);
 
             print_state(p, e);
         }
@@ -81,11 +81,11 @@ void test_scenario2() {
     // make each event type its own class
     struct FireDamage : public Event {
         FireDamage() {
-            subscribe<EntityType::PLAYER>([](Player& p) {
+            define_for<EntityType::PLAYER>([](Player& p) {
                 p.health -= 10;
             });
             // enemies are slightly fire resistant
-            subscribe<EntityType::ENEMY>([](Enemy& e) {
+            define_for<EntityType::ENEMY>([](Enemy& e) {
                 e.health -= 5;
             });
         }
@@ -102,7 +102,7 @@ void test_scenario2() {
         int prev_p_health = p.health;
 
         // If you apply a Message using function call syntax without providing
-        // the type of the recipient, then every subscribed response that takes
+        // the type of the recipient, then every define_ford response that takes
         // arguments of the given types will be called.
         fire(p);
         fire(e);
@@ -116,15 +116,15 @@ void test_scenario2() {
 void test_scenario3() {
     Event power_up;
     // Everything recovers some health when powering up
-    power_up.subscribe<EntityType::ENTITY>([](Entity& e) {
+    power_up.define_for<EntityType::ENTITY>([](Entity& e) {
         e.health += 20;
     });
     // Player increase level
-    power_up.subscribe<EntityType::PLAYER>([](Player& p) {
+    power_up.define_for<EntityType::PLAYER>([](Player& p) {
         p.level++;
     });
     // Enemies increase their power stat
-    power_up.subscribe<EntityType::ENEMY>([](Enemy& e) {
+    power_up.define_for<EntityType::ENEMY>([](Enemy& e) {
         e.power += 5;
     });
 
@@ -145,7 +145,7 @@ void test_scenario3() {
     assert(e.power == e_before.power + 5);
 
     // They no longer gain health of power up
-    power_up.unsubscribe<EntityType::ENTITY>();
+    power_up.undefine_for<EntityType::ENTITY>();
 
     p_before = p;
     e_before = e;

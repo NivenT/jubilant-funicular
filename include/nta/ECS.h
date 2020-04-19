@@ -154,6 +154,8 @@ namespace nta {
     /// Assumes each entity can only have one Component of a given type.
     ///
     /// \todo Make this class's implementation less complicated
+    /// \todo (?) Replace ComponentRegistry with template parameters a la EventTemplate
+    /// ^^^^^^^^^^^^ These todo's are in conflict
     class ECS {
     private:
         /// Info directly attached to a ComponentID
@@ -168,15 +170,6 @@ namespace nta {
         /// where T inherits Component. Each vector has size
         /// m_entity_gen.get_last_id().
         utils::TypeMap m_components;
-        /*
-        /// A map from ComponentID to type of Component with that ID
-        ///
-        /// Since ComponentIDs are unique, I could get rid of this and just
-        /// always loop over all records instead.
-        utils::SlotMap<std::size_t> m_component_types;
-        /// A map from ComponentID to the Entity owning that component
-        utils::SlotMap<Entity> m_component_owners;
-        */
         /// A map from ComponentID to relevant information about that Component
         ///
         /// Since ComponentIDs are unique, I could get rid of this and just
@@ -242,22 +235,15 @@ namespace nta {
         /// Runs a function of each Component of a given type
         template<typename T>
         void for_each(std::function<void(T&)> func) const;
-        /*
-        /// Forwards message to all Components associated to the same Entity as cmpn
-        void broadcast(const Message& message, ComponentID cmpn);
-        /// Forwards message to all Components belonging to entity
-        void broadcast(const Message& message, Entity entity);
-        /// Forwards message to all Components of the given type
-        template<typename T>
-        void broadcast(const Message& message);
 
-        /// Like broadcast but returns the first response received
-        ///
-        /// \todo Return utils::LinkedNode<Message> of all received responses
-        utils::Option<Message> shout(const Message& request, ComponentID cmpn);
-        utils::Option<Message> shout(const Message& request, Entity entity);
-        template<typename T>
-        utils::Option<Message> shout(const Message& request);
+        /// Enacts event on the Component of type T owned by the given Entity
+        template<typename T, typename RecipientEnum, typename... FuncTypes>
+        void enact_on(const EventTemplate<RecipientEnum, FuncTypes>& event, Entity entity);
+        /*
+        /// Enacts event on the Component with the given ComponentID
+        void enact_on(const Event& event, ComponentID cmpn);
+        /// Enacts even on all Components owned by the given Entity
+        void enact_on_all(const Event& event, Entity entity);
         */
         /// Removes all entites and components from this system
         void clear();
@@ -304,6 +290,12 @@ namespace nta {
         for (auto& cmpn : list) {
             func(cmpn);
         }
+    }
+    template<typename T>
+    void ECS::enact_on(const Event& event, Entity entity) {
+        get_component<T>(entity).map([&](T& cmpn) {
+            event
+        })
     }
     /*
     /// \todo Make these more efficient

@@ -43,11 +43,11 @@ namespace nta {
         std::tuple<utils::Option<std::function<FuncTypes>>...> m_actions;
     public:
         template<RecipientEnum e, typename Func>
-        void subscribe(Func&& func) {
+        void define_for(Func&& func) {
             std::get<std::size_t(e)>(m_actions) = utils::make_some(func);
         }
         template<RecipientEnum e>
-        void unsubscribe() {
+        void undefine_for() {
             std::get<std::size_t(e)>(m_actions).destroy();
         }
 
