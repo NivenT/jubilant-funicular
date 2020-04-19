@@ -70,6 +70,8 @@ namespace nta {
             template<typename S>
             Option<S> map(std::function<S(T)> func);
             template<typename S>
+            Option<S> map(std::function<Option<S>(T)> func);
+            template<typename S>
             S map_or(std::function<S(T)> func, const S& def);
             void map(std::function<void(T)> func);
         };
@@ -103,6 +105,10 @@ namespace nta {
             return m_some ? Option<S>::some(func(get())) : Option<S>::none();
         }
         template<typename T> template<typename S>
+        Option<S> Option<T>::map(std::function<Option<S>(T)> func) {
+            return m_some ? func(get()) : Option<S>::none();
+        }
+        template<typename T> template<typename S>
         S Option<T>::map_or(std::function<S(T)> func, const S& def) {
             return m_some ? func(get()) : def;
         }
@@ -117,6 +123,19 @@ namespace nta {
             } else {
                 return lhs<<"None";
             }
+        }
+        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        bool operator==(const Option<T>& lhs, S& rhs) {
+            return lhs.is_some() && lhs.unwrap() == rhs;
+        }
+        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        bool operator==(const Option<T>& lhs, Option<S>& rhs) {
+            return (lhs.is_none() && rhs.is_none()) ||
+                   (lhs && rhs && lhs.unwarp() == rhs.unwarp());
+        }
+        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        bool operator==(const T& lhs, Option<S>& rhs) {
+            return rhs.is_some() && lhs == rhs.unwrap();
         }
         /// Replacement for calling Option<T>::some()
         template<typename T>

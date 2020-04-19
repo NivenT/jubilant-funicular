@@ -14,7 +14,6 @@
 namespace nta {
     class ECS;
 
-    // Use signed integer type 
     using Entity = utils::SlotMapKey<>;
     using ComponentID = utils::SlotMapKey<>;
     template<typename T>
@@ -31,17 +30,6 @@ namespace nta {
         ComponentID m_id;
     public:
         virtual ~Component() {}
-        /*
-        /// Receives a message from another component
-        virtual void receive(const Message& message) {};
-        /// (Possibly) responds to a request from another component
-        virtual utils::Option<Message> respond(const Message& request) { return utils::Option<Message>::none(); };
-        /// Sends message to all components associated to the same Entity
-        virtual void send(const Message& message);
-        /// Sends a request to all sibling components, returning the first
-        /// received response.
-        virtual utils::Option<Message> request(const Message& request);
-        */
         /// Returns this Component's id
         const ComponentID get_id() const { return m_id; }
 
@@ -73,7 +61,7 @@ namespace nta {
                 ret.delete_component = [](const utils::TypeMap& map, ComponentID c, Entity e) -> bool {
                     if (!map.contains<ComponentList<T>>()) return false;
                     auto& list = map.find<ComponentList<T>>();
-                    list.remove(e);
+                    list.deactivate(e);
                     return true;
                 };
                 ret.get_component = [](const utils::TypeMap& map, Entity e) -> utils::Option<Component&> {
@@ -82,33 +70,9 @@ namespace nta {
                     return list[e];
                 };
                 ret.clear = [](const utils::TypeMap& map) {
-                    if (!map.contains<ComponentList<T>>()) return false;
+                    if (!map.contains<ComponentList<T>>()) return;
                     map.find<ComponentList<T>>().clear();
                 };
-                /*
-                ret.broadcast = [](const utils::TypeMap& map, Entity e, const Message& msg) {
-                    if (!map.contains<ComponentList<T>>()) return;
-                    auto& list = map.find<ComponentList<T>>();
-                    if (e >= list.size()) return;
-                    auto node = list[(std::size_t)e];
-                    while (node) {
-                        node->data.receive(msg);
-                        node = node->next;
-                    }
-                };
-                ret.shout = [](const utils::TypeMap& map, Entity e, const Message& req) {
-                    if (!map.contains<ComponentList<T>>()) return utils::Option<Message>::none();
-                    auto& list = map.find<ComponentList<T>>();
-                    if (e >= list.size()) return utils::Option<Message>::none();
-                    auto node = list[(std::size_t)e];
-                    while (node) {
-                        auto resp = node->data.respond(req);
-                        if (resp) return resp;
-                        node = node->next;
-                    }
-                    return utils::Option<Message>::none();
-                };
-                */
                 return ret;
             }
 
@@ -117,10 +81,6 @@ namespace nta {
             std::function<bool(const utils::TypeMap&, ComponentID, Entity)> delete_component;
             std::function<utils::Option<Component&>(const utils::TypeMap&, Entity)> get_component;
             std::function<void(const utils::TypeMap&)> clear;
-            /*
-            std::function<void(const utils::TypeMap&, Entity, const Message&)> broadcast;
-            std::function<utils::Option<Message>(const utils::TypeMap&, Entity, const Message&)> shout;
-            */
         };
 
         using iterator = std::unordered_map<std::size_t, Record>::iterator;
@@ -197,6 +157,9 @@ namespace nta {
         bool delete_entity(Entity id);
         /// Returns the number of entities in the system
         std::size_t num_entities() const { return m_entity_gen.get_count(); }
+        /// Returns the number of components of the given type
+        template<typename T>
+        std::size_t num_components() const { return get_component_list<T>().size(); }
 
         /// Adds the given Component to the given Entity.
         ///
@@ -215,6 +178,8 @@ namespace nta {
         /// Returns true if the given Entity has a Component of type T
         template<typename T>
         bool has_component(Entity entity) const;
+        template<typename T>
+        bool has_sibling(ComponentID cmpn) const;
         /// Returns true if the given Entity exists
         bool does_entity_exist(Entity entity) const;
 
@@ -222,7 +187,7 @@ namespace nta {
         utils::Option<Entity> get_owner(ComponentID cmpn) const;
         /// Returns a list of all components of the given type
         template<typename T>
-        ComponentList<T> get_component_list() const;
+        ComponentList<T>& get_component_list() const;
         /// Returns the Component of the given type associated to the given Entity
         template<typename T>
         utils::Option<T&> get_component(Entity entity) const;
@@ -236,15 +201,6 @@ namespace nta {
         template<typename T>
         void for_each(std::function<void(T&)> func) const;
 
-        /// Enacts event on the Component of type T owned by the given Entity
-        template<typename T, typename RecipientEnum, typename... FuncTypes>
-        void enact_on(const EventTemplate<RecipientEnum, FuncTypes>& event, Entity entity);
-        /*
-        /// Enacts event on the Component with the given ComponentID
-        void enact_on(const Event& event, ComponentID cmpn);
-        /// Enacts even on all Components owned by the given Entity
-        void enact_on_all(const Event& event, Entity entity);
-        */
         /// Removes all entites and components from this system
         void clear();
     };
@@ -252,21 +208,27 @@ namespace nta {
     utils::Option<ComponentID> ECS::add_component(Entity entity, Args&&... args) {
         if (!does_entity_exist(entity)) return utils::make_none<ComponentID>();
         ComponentList<T>& list = m_components.get<ComponentList<T>>();
-        if (list.size() <= entity.idx) list.reserve(entity.idx+1);
+        list.reserve(entity.idx+1);
 
         if (!list.insert_emplace(entity, std::forward<Args>(args)...)) {
-            NTA_ASSERT(false, "This should never happen 1");
+            return utils::make_none<ComponentID>();
         }
+        assert(list.cap() > entity.idx);
+        assert(list.get_curr_gen(entity) == entity.gen);
+        assert(!list.is_free(entity));
         T& cmpn = list[entity].unwrap();
         cmpn.m_ecs = this;
         cmpn.m_id = m_cmpn_gen();
 
         m_component_info.reserve(cmpn.m_id.idx+1);
         ComponentInfo info = { .type = typeid(T).hash_code(), .owner = entity };
-        if (!m_component_info.insert(cmpn, info)) {
-            NTA_ASSERT(false, "This should never happen");
+        if (!m_component_info.insert(cmpn.m_id, info)) {
+            assert(false && "This should never happen");
         }
-        return list[entity].m_id;
+        assert(m_component_info.cap() > cmpn.m_id.idx);
+        assert(m_component_info.get_curr_gen(cmpn.m_id) == cmpn.m_id.gen);
+        assert(!m_component_info.is_free(cmpn.m_id));
+        return utils::make_some(cmpn.m_id);
     }
     template<typename T>
     bool ECS::has_component(Entity entity) const {
@@ -275,8 +237,15 @@ namespace nta {
         return m_components.find<ComponentList<T>>()[entity].is_some();
     }
     template<typename T>
-    ComponentList<T> ECS::get_component_list() const {
-        if (!m_components.contains<ComponentList<T>>()) return ComponentList<T>();
+    bool ECS::has_sibling(ComponentID cmpn) const {
+        auto maybe_owner = get_owner(cmpn);
+        return maybe_owner ? has_component<T>(maybe_owner.unwrap()) : false;
+    }
+    template<typename T>
+    ComponentList<T>& ECS::get_component_list() const {
+        if (!m_components.contains<ComponentList<T>>()) {
+            assert(false && "Attempted to get a ComponentList for a non-registered type");
+        }
         return m_components.find<ComponentList<T>>();
     }
     template<typename T>
@@ -285,38 +254,16 @@ namespace nta {
         return m_components.find<ComponentList<T>>()[entity];
     }
     template<typename T>
+    utils::Option<T&> ECS::get_sibling(ComponentID cmpn) const {
+        return get_owner(cmpn).map<T&>([&](Entity e) { return get_component<T>(e); });
+    }
+    template<typename T>
     void ECS::for_each(std::function<void(T&)> func) const {
-        auto list = get_component_list<T>();
+        auto& list = get_component_list<T>();
         for (auto& cmpn : list) {
             func(cmpn);
         }
     }
-    template<typename T>
-    void ECS::enact_on(const Event& event, Entity entity) {
-        get_component<T>(entity).map([&](T& cmpn) {
-            event
-        })
-    }
-    /*
-    /// \todo Make these more efficient
-    template<typename T>
-    void ECS::broadcast(const Message& message) {
-        m_registry.get_record<T>().map([&](ComponentRegistry::Record rec) {
-            for (Entity e = 0; e < m_entity_gen.get_last_id(); e++) {
-                rec.broadcast(m_components, e, message);
-            }
-        });
-    }
-    template<typename T>
-    utils::Option<Message> ECS::shout(const Message& request) {
-        return m_registry.get_record<T>().map_or([&](ComponentRegistry::Record rec) {
-            for (Entity e = 0; e < m_entity_gen.get_last_id(); e++) {
-                auto resp = rec.shout(m_components, e, request);
-                if (resp) return resp;
-            }
-        }, utils::Option<Message>::none());
-    }
-    */
 }
 
 #endif // NTA_ECS_H_INCLUDED

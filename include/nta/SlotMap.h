@@ -68,13 +68,13 @@ namespace nta {
             } else {
                 value_type ret = m_free.back();
                 m_free.pop_back();
+                ret.gen++;
                 return ret;
             }
         }
         template<>
         template<typename IndexType, typename GenType>
         void IDFactory<GenIndex<IndexType, GenType>>::free_id(value_type id) {
-            id.gen++;
             m_free.push_back(id);
         }
         template<>
@@ -99,6 +99,7 @@ namespace nta {
             using Key = SlotMapKey<IndexType, GenType>;
         private:
             void grow() { reserve(m_cap == 0 ? DEFAULT_CAP : m_cap << 1); }
+            void remove_impl(Key k, bool gen_bump);
 
             // Should these be aligned storage?
             // m_data probably should be. TODO: Fix later...
@@ -118,6 +119,7 @@ namespace nta {
 
             size_type size() const { return m_size; }
             size_type capacity() const { return m_cap; }
+            size_type cap() const { return m_cap; }
             bool is_empty() const { return m_size == 0; }
             bool empty() const { return is_empty(); }
 
@@ -145,6 +147,8 @@ namespace nta {
             void reserve(size_type new_cap);
 
             void remove(Key k);
+            /// Same thing as remove, but odes not bump the generation
+            void deactivate(Key k);
             void erase(Key k) { remove(k); }
             void clear();
 
@@ -209,11 +213,18 @@ namespace nta {
             m_slots = new_slots;
             m_slot_idxes = new_idxes;
 
-            m_free_head = m_cap;
             for (index_type idx = m_cap; idx < new_cap; idx++) {
                 m_slots[idx].gen = 0;
                 // end of free list points to itself
                 m_slots[idx].idx = std::min(idx+1, new_cap-1);
+            }
+            if (m_size == m_cap) {
+                m_free_head = m_cap;
+            } else for (index_type idx = m_free_head;; idx = m_slots[idx].idx) {
+                if (idx == m_slots[idx].idx) {
+                    m_slots[idx].idx = m_cap;
+                    break;
+                }
             }
             m_cap = new_cap;
         }
@@ -235,6 +246,8 @@ namespace nta {
 
             if (k.idx == m_free_head) {
                 m_free_head = m_slots[k.idx].idx;
+            } else if (k.idx == m_slots[k.idx].idx) {
+                m_slots[prev_idx].idx = prev_idx;
             } else {
                 m_slots[prev_idx].idx = m_slots[k.idx].idx;
             }
@@ -259,7 +272,7 @@ namespace nta {
             return {.idx = key_idx, .gen = m_slots[key_idx].gen};
         }
         template<typename T, typename IndexType, typename GenType>
-        void SlotMap<T, IndexType, GenType>::remove(SlotMap<T, IndexType, GenType>::Key k) {
+        void SlotMap<T, IndexType, GenType>::remove_impl(SlotMap<T, IndexType, GenType>::Key k, bool gen_bump) {
             if (k.idx >= m_cap) return;
             Key& key = m_slots[k.idx];
             if (key.gen != k.gen) return;
@@ -270,14 +283,20 @@ namespace nta {
 
             std::swap(m_data[key.idx], m_data[m_size]);
 
-            //if (m_size > 0) assert(m_slots[m_slot_idxes[m_size]].idx == m_size);
-
             m_slots[m_slot_idxes[m_size]].idx = key.idx;
             m_slot_idxes[key.idx] = m_slot_idxes[m_size];
 
             key.idx = m_free_head;
-            key.gen++;
+            if (gen_bump) key.gen++;
             m_free_head = k.idx;
+        }
+        template<typename T, typename IndexType, typename GenType>
+        void SlotMap<T, IndexType, GenType>::remove(SlotMap<T, IndexType, GenType>::Key k) {
+            remove_impl(k, true);
+        }
+        template<typename T, typename IndexType, typename GenType>
+        void SlotMap<T, IndexType, GenType>::deactivate(SlotMap<T, IndexType, GenType>::Key k) {
+            remove_impl(k, false);
         }
         template<typename T, typename IndexType, typename GenType>
         void SlotMap<T, IndexType, GenType>::clear() {
