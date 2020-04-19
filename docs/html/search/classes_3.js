@@ -5,5 +5,6 @@ var searchData=
   ['error',['Error',['../d8/d66/structnta_1_1Error.html',1,'nta']]],
   ['errormanager',['ErrorManager',['../de/db1/classnta_1_1ErrorManager.html',1,'nta']]],
   ['event',['event',['../d1/de6/classnta_1_1CallbackManager.html#d3/dc5/structnta_1_1CallbackManager_1_1event',1,'nta::CallbackManager']]],
-  ['eventtemplate',['EventTemplate',['../df/d04/classnta_1_1EventTemplate.html',1,'nta']]]
+  ['eventtemplate',['EventTemplate',['../df/d04/classnta_1_1EventTemplate.html',1,'nta']]],
+  ['eventtemplate_3c_20void_20_3e',['EventTemplate&lt; void &gt;',['../d4/d51/namespacenta.html#d9/d1e/classnta_1_1EventTemplate_3_01void_01_4',1,'nta']]]
 ];

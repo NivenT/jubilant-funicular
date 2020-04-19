@@ -31,5 +31,5 @@ var searchData=
   ['isoverlapping',['isOverlapping',['../d9/d4d/classnta_1_1FontMap.html#aae874cb1975e6be920bf785f34f14c3e',1,'nta::FontMap']]],
   ['ispressed',['isPressed',['../d6/de2/classnta_1_1InputManager.html#a800d3c1fb16eb6e0fb2a1cb176a1280f',1,'nta::InputManager']]],
   ['isvisible',['isVisible',['../d3/d28/classnta_1_1Camera2D.html#aec593b22a30542dcf7863c6a34d29096',1,'nta::Camera2D']]],
-  ['iterator',['iterator',['../d8/d57/classutils_1_1Json_1_1iterator.html',1,'utils::Json::iterator&lt; c &gt;'],['../dc/d78/classutils_1_1Path_1_1iterator.html',1,'utils::Path::iterator'],['../d0/dd2/classnta_1_1utils_1_1LinkedNode_1_1iterator.html',1,'nta::utils::LinkedNode&lt; T &gt;::iterator']]]
+  ['iterator',['iterator',['../d8/d57/classutils_1_1Json_1_1iterator.html',1,'utils::Json::iterator&lt; c &gt;'],['../d0/dd2/classnta_1_1utils_1_1LinkedNode_1_1iterator.html',1,'nta::utils::LinkedNode&lt; T &gt;::iterator'],['../dc/d78/classutils_1_1Path_1_1iterator.html',1,'utils::Path::iterator']]]
 ];

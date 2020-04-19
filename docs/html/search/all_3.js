@@ -1,6 +1,7 @@
 var searchData=
 [
   ['data',['data',['../d5/d41/structnta_1_1RawTexture.html#aacc59753f61e31003d39f0ef2f19e09d',1,'nta::RawTexture::data()'],['../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#a8df70567a8ff969dbec63a756d90837f',1,'nta::utils::LinkedNode::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
+  ['deactivate',['deactivate',['../dd/d7a/classnta_1_1utils_1_1SlotMap.html#a608d01648ec0b616e42cbcc58d4d7131',1,'nta::utils::SlotMap']]],
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['decrexists',['DecrExists',['../d4/d6f/structutils_1_1check_1_1DecrExists.html',1,'utils::check']]],

@@ -17,7 +17,6 @@ var searchData=
   ['m_5fdimensions',['m_dimensions',['../d3/d28/classnta_1_1Camera2D.html#a403ec8d18fd31d5164ba81267cca555e',1,'nta::Camera2D']]],
   ['m_5fdispatch_5fthread',['m_dispatch_thread',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a6fe6bfa4607803f5f3f9b64b47c0417a',1,'nta::utils::ThreadPool']]],
   ['m_5fdispatcher',['m_dispatcher',['../d1/de6/classnta_1_1CallbackManager.html#abc47b7e18fc1576edb799be131baf116',1,'nta::CallbackManager']]],
-  ['m_5fecs',['m_ecs',['../d8/d8c/classnta_1_1Component.html#a9bf623b9cae899b465183735bc25597f',1,'nta::Component']]],
   ['m_5feffectmap',['m_effectMap',['../da/d29/classnta_1_1AudioManager.html#a745f3ef1216f7e6bf848a9eb4054c5b4',1,'nta::AudioManager']]],
   ['m_5fempty',['m_empty',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a0616dc7650be6550ac0a7a718da46225',1,'nta::utils::ThreadPool']]],
   ['m_5fencodings',['m_encodings',['../d3/d18/classnta_1_1Compressor.html#a85e378612ff069d0bc915c87fae74e7d',1,'nta::Compressor']]],

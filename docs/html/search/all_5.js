@@ -15,6 +15,7 @@ var searchData=
   ['formatter_3c_20glm_3a_3avec2_20_3e',['Formatter&lt; glm::vec2 &gt;',['../d9/db3/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec2_01_4.html',1,'nta::utils']]],
   ['formatter_3c_20glm_3a_3avec3_20_3e',['Formatter&lt; glm::vec3 &gt;',['../d1/d73/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec3_01_4.html',1,'nta::utils']]],
   ['formatter_3c_20glm_3a_3avec4_20_3e',['Formatter&lt; glm::vec4 &gt;',['../d6/d90/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec4_01_4.html',1,'nta::utils']]],
+  ['formatter_3c_20slotmapkey_3c_3e_20_3e',['Formatter&lt; SlotMapKey&lt;&gt; &gt;',['../d4/d56/structnta_1_1utils_1_1Formatter_3_01SlotMapKey_3_4_01_4.html',1,'nta::utils']]],
   ['fpslimiter',['FPSLimiter',['../d7/d1f/classnta_1_1FPSLimiter.html',1,'nta::FPSLimiter'],['../d7/d1f/classnta_1_1FPSLimiter.html#a2f811b3c9a5dc744020ea185f9a804e8',1,'nta::FPSLimiter::FPSLimiter()']]],
   ['framebuffer',['FrameBuffer',['../de/ded/classnta_1_1FrameBuffer.html',1,'nta']]],
   ['free',['free',['../d5/dae/structnta_1_1utils_1_1ThreadPool_1_1worker.html#ac891290ce8ae269990cbbd7243cd1817',1,'nta::utils::ThreadPool::worker::free()'],['../d6/d62/classnta_1_1utils_1_1IDFactory.html#a0f0dfbba08147d20d6c71ee2b8d9f6b0',1,'nta::utils::IDFactory::free()'],['../d5/d16/classnta_1_1utils_1_1IDFactory_3_01GenIndex_3_01IndexType_00_01GenType_01_4_01_4.html#a62d5b9386ad58d5aa72539cb6963f836',1,'nta::utils::IDFactory&lt; GenIndex&lt; IndexType, GenType &gt; &gt;::free()']]],

@@ -9,6 +9,7 @@ var searchData=
   ['nop',['Nop',['../dc/d1d/structnta_1_1utils_1_1Option_1_1Nop.html',1,'nta::utils::Option&lt; T &gt;::Nop'],['../d6/d0d/namespaceutils_1_1check.html#d3/daa/structutils_1_1check_1_1Nop',1,'utils::check::Nop']]],
   ['notexists',['NotExists',['../d4/d09/structutils_1_1check_1_1NotExists.html',1,'utils::check']]],
   ['nta',['nta',['../d4/d51/namespacenta.html',1,'']]],
+  ['num_5fcomponents',['num_components',['../db/da0/classnta_1_1ECS.html#a0d0e2bce819c95319e5459af6215174a',1,'nta::ECS']]],
   ['num_5fentities',['num_entities',['../db/da0/classnta_1_1ECS.html#a69e1eb10574d593ad6ae5f6c0bad39ec',1,'nta::ECS']]],
   ['num_5fsprites',['num_sprites',['../d9/d85/structnta_1_1SpriteSheet.html#aa9ea5b7f2548cad8380baa95c4bb385e',1,'nta::SpriteSheet']]],
   ['numprimitives',['numPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#a3cf74d5aaf9e56b0d98512ba8b94d01f',1,'nta::PrimitiveBatch']]],

@@ -107,6 +107,9 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () cons
 <tr class="memitem:a625c271632975bd44e05050ffa64b9f0"><td class="memItemLeft" align="right" valign="top"><a id="a625c271632975bd44e05050ffa64b9f0"></a>
 size_type&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const</td></tr>
 <tr class="separator:a625c271632975bd44e05050ffa64b9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713a6c064f1c3d02bf974a3d9ae6eba1"><td class="memItemLeft" align="right" valign="top"><a id="a713a6c064f1c3d02bf974a3d9ae6eba1"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><b>cap</b> () const</td></tr>
+<tr class="separator:a713a6c064f1c3d02bf974a3d9ae6eba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38cf9ca53ce289998935fa115849bd82"><td class="memItemLeft" align="right" valign="top"><a id="a38cf9ca53ce289998935fa115849bd82"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> () const</td></tr>
 <tr class="separator:a38cf9ca53ce289998935fa115849bd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +159,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (size_typ
 <tr class="memitem:a185f31e9b0fe3adc4a6dbeb7a8183fbf"><td class="memItemLeft" align="right" valign="top"><a id="a185f31e9b0fe3adc4a6dbeb7a8183fbf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k)</td></tr>
 <tr class="separator:a185f31e9b0fe3adc4a6dbeb7a8183fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608d01648ec0b616e42cbcc58d4d7131"><td class="memItemLeft" align="right" valign="top"><a id="a608d01648ec0b616e42cbcc58d4d7131"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#a608d01648ec0b616e42cbcc58d4d7131">deactivate</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k)</td></tr>
+<tr class="memdesc:a608d01648ec0b616e42cbcc58d4d7131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same thing as remove, but odes not bump the generation. <br /></td></tr>
+<tr class="separator:a608d01648ec0b616e42cbcc58d4d7131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561337a07afaeeb360cb3be4d273dffd"><td class="memItemLeft" align="right" valign="top"><a id="a561337a07afaeeb360cb3be4d273dffd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>erase</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k)</td></tr>
 <tr class="separator:a561337a07afaeeb360cb3be4d273dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +193,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ac1510df99ed894ca1f270fe75a43175e"><td class="memItemLeft" align="right" valign="top"><a id="ac1510df99ed894ca1f270fe75a43175e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>grow</b> ()</td></tr>
 <tr class="separator:ac1510df99ed894ca1f270fe75a43175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d48eab7d800bb76825525fb2f7c78f"><td class="memItemLeft" align="right" valign="top"><a id="a46d48eab7d800bb76825525fb2f7c78f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remove_impl</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k, bool gen_bump)</td></tr>
+<tr class="separator:a46d48eab7d800bb76825525fb2f7c78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -221,7 +231,7 @@ class nta::utils::SlotMap&lt; T, IndexType, GenType &gt;</h3>
 <p>An unsorted container supporting fast insertion/deletion without invalidating references to its elements.</p>
 <p>Warning: Doesn't really do error checking, so use carefully. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00094">94</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00104">104</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab3b30423dc74aaa25af4c659530fb469"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3b30423dc74aaa25af4c659530fb469">&#9670;&nbsp;</a></span>insert()</h2>
@@ -253,7 +263,7 @@ template&lt;typename T, typename IndexType , typename GenType &gt; </div>
 <p>Checks that k refers to a free slot with the right generation</p>
 <p>Returns true on success </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00246">246</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00269">269</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
 
 </div>
 </div>

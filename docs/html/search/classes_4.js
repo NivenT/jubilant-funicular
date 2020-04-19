@@ -9,6 +9,7 @@ var searchData=
   ['formatter_3c_20glm_3a_3avec2_20_3e',['Formatter&lt; glm::vec2 &gt;',['../d9/db3/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec2_01_4.html',1,'nta::utils']]],
   ['formatter_3c_20glm_3a_3avec3_20_3e',['Formatter&lt; glm::vec3 &gt;',['../d1/d73/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec3_01_4.html',1,'nta::utils']]],
   ['formatter_3c_20glm_3a_3avec4_20_3e',['Formatter&lt; glm::vec4 &gt;',['../d6/d90/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec4_01_4.html',1,'nta::utils']]],
+  ['formatter_3c_20slotmapkey_3c_3e_20_3e',['Formatter&lt; SlotMapKey&lt;&gt; &gt;',['../d4/d56/structnta_1_1utils_1_1Formatter_3_01SlotMapKey_3_4_01_4.html',1,'nta::utils']]],
   ['fpslimiter',['FPSLimiter',['../d7/d1f/classnta_1_1FPSLimiter.html',1,'nta']]],
   ['framebuffer',['FrameBuffer',['../de/ded/classnta_1_1FrameBuffer.html',1,'nta']]]
 ];

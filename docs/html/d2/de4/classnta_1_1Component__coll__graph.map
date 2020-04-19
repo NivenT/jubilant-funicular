@@ -1,11 +1,3 @@
 <map id="nta::Component" name="nta::Component">
-<area shape="rect" id="node2" href="$db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="1148,285,1224,312"/>
-<area shape="rect" id="node3" href="$d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="805,52,969,79"/>
-<area shape="rect" id="node5" href="$d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="833,244,941,271"/>
-<area shape="rect" id="node7" href="$dd/d7a/classnta_1_1utils_1_1SlotMap.html" title="nta::utils::SlotMap\l\&lt; nta::ECS::ComponentInfo \&gt;" alt="" coords="788,317,985,358"/>
-<area shape="rect" id="node8" href="$db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo" title="Info directly attached to a ComponentID. " alt="" coords="465,448,638,475"/>
-<area shape="rect" id="node9" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="148,523,315,549"/>
-<area shape="rect" id="node16" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; SlotMapKey\&lt;\&gt; \&gt;" alt="" coords="482,521,621,562"/>
-<area shape="rect" id="node13" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index. " alt="" coords="467,151,635,193"/>
-<area shape="rect" id="node18" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; nta::utils::SlotMapKey \&gt;" alt="" coords="799,135,974,177"/>
+<area shape="rect" id="node2" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="5,95,172,121"/>
 </map>

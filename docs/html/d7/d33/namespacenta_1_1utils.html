@@ -99,6 +99,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec4_01_4.html">Formatter&lt; glm::vec4 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d56/structnta_1_1utils_1_1Formatter_3_01SlotMapKey_3_4_01_4.html">Formatter&lt; SlotMapKey&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">IDFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for generating unique (integral) IDs.  <a href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +186,18 @@ template&lt;typename... Args&gt; </td></tr>
 template&lt;typename T , typename std::enable_if_t&lt; check::LShiftExists&lt; std::ostream, T &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;rhs)</td></tr>
 <tr class="separator:a722964a4e8c51e08803037d32ad1b3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplParams" colspan="2"><a id="a6932a9da42e58fd52b2fd10bc531339e"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, S &amp;rhs)</td></tr>
+<tr class="separator:a6932a9da42e58fd52b2fd10bc531339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplParams" colspan="2"><a id="adceecea039ec960f696f284a60f58447"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
+<tr class="separator:adceecea039ec960f696f284a60f58447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplParams" colspan="2"><a id="a9926c9d7d5ed8e1b882c4a8bbbd677c4"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const T &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
+<tr class="separator:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplParams" colspan="2"><a id="a948a0e5e3738c8aa6692ad55e813865f"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a948a0e5e3738c8aa6692ad55e813865f">make_some</a> (const T &amp;data)</td></tr>
