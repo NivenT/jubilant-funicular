@@ -76,38 +76,28 @@ $(function() {
 <p>Base class for components.  
  <a href="../../d8/d8c/classnta_1_1Component.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../d0/da1/Component_8h_source.html">Component.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for nta::Component:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/de4/classnta_1_1Component__coll__graph.png" border="0" usemap="#nta_1_1Component_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1Component_coll__map" id="nta_1_1Component_coll__map">
-<area shape="rect" id="node3" href="../../db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="729,195,805,221"/>
-<area shape="rect" id="node4" href="../../d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="333,39,497,65"/>
-<area shape="rect" id="node6" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; ComponentID \&gt;" alt="" coords="346,129,485,170"/>
-<area shape="rect" id="node9" href="../../d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="361,195,469,221"/>
-<area shape="rect" id="node11" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; Entity \&gt;" alt="" coords="346,246,485,287"/>
+<area shape="rect" id="node2" href="../../db/da0/classnta_1_1ECS.html" title="nta::ECS" alt="" coords="1148,285,1224,312"/>
+<area shape="rect" id="node3" href="../../d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="805,52,969,79"/>
+<area shape="rect" id="node5" href="../../d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="833,244,941,271"/>
+<area shape="rect" id="node7" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html" title="nta::utils::SlotMap\l\&lt; nta::ECS::ComponentInfo \&gt;" alt="" coords="788,317,985,358"/>
+<area shape="rect" id="node8" href="../../db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo" title="Info directly attached to a ComponentID. " alt="" coords="465,448,638,475"/>
+<area shape="rect" id="node9" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="148,523,315,549"/>
+<area shape="rect" id="node16" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; SlotMapKey\&lt;\&gt; \&gt;" alt="" coords="482,521,621,562"/>
+<area shape="rect" id="node13" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index. " alt="" coords="467,151,635,193"/>
+<area shape="rect" id="node18" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; nta::utils::SlotMapKey \&gt;" alt="" coords="799,135,974,177"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0688eda7df4b764688b0c05e2d452971"><td class="memItemLeft" align="right" valign="top"><a id="a0688eda7df4b764688b0c05e2d452971"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#a0688eda7df4b764688b0c05e2d452971">receive</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message)</td></tr>
-<tr class="memdesc:a0688eda7df4b764688b0c05e2d452971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives a message from another component. <br /></td></tr>
-<tr class="separator:a0688eda7df4b764688b0c05e2d452971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae959f150340511c99dbfd2afc996f5d4"><td class="memItemLeft" align="right" valign="top"><a id="ae959f150340511c99dbfd2afc996f5d4"></a>
-virtual <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#ae959f150340511c99dbfd2afc996f5d4">respond</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;<a class="el" href="../../d8/d8c/classnta_1_1Component.html#a2b8cf4806dfd5adae95d65c3c6cddb93">request</a>)</td></tr>
-<tr class="memdesc:ae959f150340511c99dbfd2afc996f5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Possibly) responds to a request from another component <br /></td></tr>
-<tr class="separator:ae959f150340511c99dbfd2afc996f5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0dd70aa6df1ac166095bf1919ab8cdc"><td class="memItemLeft" align="right" valign="top"><a id="ab0dd70aa6df1ac166095bf1919ab8cdc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#ab0dd70aa6df1ac166095bf1919ab8cdc">send</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;message)</td></tr>
-<tr class="memdesc:ab0dd70aa6df1ac166095bf1919ab8cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends message to all components associated to the same Entity. <br /></td></tr>
-<tr class="separator:ab0dd70aa6df1ac166095bf1919ab8cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b8cf4806dfd5adae95d65c3c6cddb93"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#a2b8cf4806dfd5adae95d65c3c6cddb93">request</a> (const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;request)</td></tr>
-<tr class="separator:a2b8cf4806dfd5adae95d65c3c6cddb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3593d5b60ca1a188be4ad9a6b2b27b"><td class="memItemLeft" align="right" valign="top"><a id="acb3593d5b60ca1a188be4ad9a6b2b27b"></a>
-const ComponentID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#acb3593d5b60ca1a188be4ad9a6b2b27b">get_id</a> () const</td></tr>
+const <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#acb3593d5b60ca1a188be4ad9a6b2b27b">get_id</a> () const</td></tr>
 <tr class="memdesc:acb3593d5b60ca1a188be4ad9a6b2b27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a>'s id. <br /></td></tr>
 <tr class="separator:acb3593d5b60ca1a188be4ad9a6b2b27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -121,59 +111,26 @@ friend&#160;</td><td class="memItemRight" valign="bottom"><b>ECS</b></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aeb66e0ff6bed4efc8add3b823c333bf1"><td class="memItemLeft" align="right" valign="top"><a id="aeb66e0ff6bed4efc8add3b823c333bf1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#aeb66e0ff6bed4efc8add3b823c333bf1">Component</a> ()</td></tr>
-<tr class="memdesc:aeb66e0ff6bed4efc8add3b823c333bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create using <a class="el" href="../../db/da0/classnta_1_1ECS.html#a81600b75a067e9b180ab38b9e8a37af3">ECS::add_component</a>. <br /></td></tr>
+<tr class="memdesc:aeb66e0ff6bed4efc8add3b823c333bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create using <a class="el" href="../../db/da0/classnta_1_1ECS.html#af7a8b511a8afbf9e9be90da09a650ea8">ECS::add_component</a>. <br /></td></tr>
 <tr class="separator:aeb66e0ff6bed4efc8add3b823c333bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a382b6ded0bc1bfa123ac31a666d21b20"><td class="memItemLeft" align="right" valign="top"><a id="a382b6ded0bc1bfa123ac31a666d21b20"></a>
-<a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#a382b6ded0bc1bfa123ac31a666d21b20">m_system</a></td></tr>
-<tr class="memdesc:a382b6ded0bc1bfa123ac31a666d21b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The System this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> belongs to. <br /></td></tr>
-<tr class="separator:a382b6ded0bc1bfa123ac31a666d21b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf623b9cae899b465183735bc25597f"><td class="memItemLeft" align="right" valign="top"><a id="a9bf623b9cae899b465183735bc25597f"></a>
+<a class="el" href="../../db/da0/classnta_1_1ECS.html">ECS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#a9bf623b9cae899b465183735bc25597f">m_ecs</a></td></tr>
+<tr class="memdesc:a9bf623b9cae899b465183735bc25597f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The System this <a class="el" href="../../d8/d8c/classnta_1_1Component.html" title="Base class for components. ">Component</a> belongs to. <br /></td></tr>
+<tr class="separator:a9bf623b9cae899b465183735bc25597f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae58c45b5313135681d68751a9c94090e"><td class="memItemLeft" align="right" valign="top"><a id="ae58c45b5313135681d68751a9c94090e"></a>
-ComponentID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#ae58c45b5313135681d68751a9c94090e">m_id</a></td></tr>
+<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">ComponentID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classnta_1_1Component.html#ae58c45b5313135681d68751a9c94090e">m_id</a></td></tr>
 <tr class="memdesc:ae58c45b5313135681d68751a9c94090e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier. <br /></td></tr>
 <tr class="separator:ae58c45b5313135681d68751a9c94090e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for components. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da1/Component_8h_source.html#l00012">12</a> of file <a class="el" href="../../d0/da1/Component_8h_source.html">Component.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2b8cf4806dfd5adae95d65c3c6cddb93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b8cf4806dfd5adae95d65c3c6cddb93">&#9670;&nbsp;</a></span>request()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">utils::Option</a>&lt; <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &gt; nta::Component::request </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d0/d9b/structnta_1_1Message.html">Message</a> &amp;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sends a request to all sibling components, returning the first received response. </p>
-
-<p class="definition">Definition at line <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d0/da1/Component_8h_source.html#l00025">respond()</a>, and <a class="el" href="../../da/d37/ECS_8cpp_source.html#l00067">nta::ECS::shout()</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/nta/<a class="el" href="../../d0/da1/Component_8h_source.html">Component.h</a></li>
-<li>src/<a class="el" href="../../da/d37/ECS_8cpp_source.html">ECS.cpp</a></li>
+<p class="definition">Definition at line <a class="el" href="../../d5/d24/ECS_8h_source.html#l00024">24</a> of file <a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/nta/<a class="el" href="../../d5/d24/ECS_8h_source.html">ECS.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

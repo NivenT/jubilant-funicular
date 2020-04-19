@@ -6,7 +6,6 @@ var searchData=
   ['screenmanager',['ScreenManager',['../d0/dc4/classnta_1_1ScreenManager.html#a08ff6088b399f4253b838db207d64d96',1,'nta::ScreenManager']]],
   ['screentogame',['screenToGame',['../d3/d28/classnta_1_1Camera2D.html#a8b2be32484dee689c6014cf88a6ce80a',1,'nta::Camera2D']]],
   ['semaphore',['Semaphore',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ae01dc768910e74be62cbc81765693f44',1,'nta::utils::Semaphore']]],
-  ['send',['send',['../d8/d8c/classnta_1_1Component.html#ab0dd70aa6df1ac166095bf1919ab8cdc',1,'nta::Component']]],
   ['set_5fperiodic_5fcallback',['set_periodic_callback',['../de/db1/classnta_1_1ErrorManager.html#a7a8c3c22602b437d160e860da877fffe',1,'nta::ErrorManager']]],
   ['set_5fpush_5fcallback',['set_push_callback',['../de/db1/classnta_1_1ErrorManager.html#acd7eb6eafdace10701e4e59bd727a823',1,'nta::ErrorManager']]],
   ['set_5ftexture',['set_texture',['../de/ded/classnta_1_1FrameBuffer.html#a63fb9dbea89473f28043a468eca18055',1,'nta::FrameBuffer']]],
@@ -27,9 +26,8 @@ var searchData=
   ['settimeout',['setTimeout',['../d1/de6/classnta_1_1CallbackManager.html#ac51c18a014641ffe9dbfe8ead0f6bae0',1,'nta::CallbackManager']]],
   ['setuv',['setUV',['../d5/d07/structnta_1_1Vertex2D.html#adb7b7e6498200e6f11965b0ecadeaa97',1,'nta::Vertex2D']]],
   ['setwindow',['setWindow',['../d6/d23/classnta_1_1Screen.html#a427eb6b2e064c23a19e7b9076b8eb2c9',1,'nta::Screen']]],
-  ['shout',['shout',['../db/da0/classnta_1_1ECS.html#a41897e4f2ab03c0d9af25fcb1ea4e6b5',1,'nta::ECS']]],
   ['signal',['signal',['../d2/dfa/classnta_1_1utils_1_1Semaphore.html#ac80b0637a59c63cf9c553954c6cd0be9',1,'nta::utils::Semaphore']]],
-  ['some',['some',['../dd/d2b/classnta_1_1utils_1_1Option.html#ac51266e46816062198340ea939419cf3',1,'nta::utils::Option']]],
+  ['some',['some',['../dd/d2b/classnta_1_1utils_1_1Option.html#ab62f02c222fc3183354f292bde47381f',1,'nta::utils::Option']]],
   ['sortglyphs',['sortGlyphs',['../d7/d3b/classnta_1_1SpriteBatch.html#ae8cf94595c26211521df9e1580776289',1,'nta::SpriteBatch']]],
   ['sortprimitives',['sortPrimitives',['../d4/df3/classnta_1_1PrimitiveBatch.html#ab3bcbcbff64333a994938d6b6862db10',1,'nta::PrimitiveBatch']]],
   ['soundeffect',['SoundEffect',['../dc/d23/classnta_1_1SoundEffect.html#a90adfaad718cb8d4fcec601bb87c0227',1,'nta::SoundEffect']]],
@@ -37,7 +35,6 @@ var searchData=
   ['spritebatch',['SpriteBatch',['../d7/d3b/classnta_1_1SpriteBatch.html#a554ec4ee678b6f97621d299e4a258f95',1,'nta::SpriteBatch']]],
   ['starts_5fwith',['starts_with',['../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c',1,'nta::utils']]],
   ['stop',['stop',['../d4/dab/classnta_1_1Music.html#ade2d11ebc9273494b344e089cd7b58b8',1,'nta::Music']]],
-  ['subscribe',['subscribe',['../d9/d4e/classnta_1_1Subject.html#a37d15cb0563d1c9ea93be398aaf28df7',1,'nta::Subject']]],
   ['swapbuffers',['swapBuffers',['../d4/dfb/classnta_1_1Window.html#a5fdc643079410c14855a260ace84478e',1,'nta::Window']]],
   ['switchscreen',['switchScreen',['../d0/dc4/classnta_1_1ScreenManager.html#a97edbb147671d2b94e1f5a13cb6f7660',1,'nta::ScreenManager']]]
 ];

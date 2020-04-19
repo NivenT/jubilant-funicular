@@ -102,6 +102,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">IDFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for generating unique (integral) IDs.  <a href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d16/classnta_1_1utils_1_1IDFactory_3_01GenIndex_3_01IndexType_00_01GenType_01_4_01_4.html">IDFactory&lt; GenIndex&lt; IndexType, GenType &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html">LinkedNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic linked list.  <a href="../../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,6 +112,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfa/classnta_1_1utils_1_1Semaphore.html">Semaphore</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">SlotMap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">SlotMapKey</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generational index.  <a href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/classnta_1_1utils_1_1StaticVector.html">StaticVector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,10 +145,10 @@ typedef ::utils::JsonValueType&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:a835735526922992546721c0b76439476"><td class="memItemLeft" align="right" valign="top"><a id="a835735526922992546721c0b76439476"></a>
 typedef ::<a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Path</b></td></tr>
 <tr class="separator:a835735526922992546721c0b76439476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a532e5728e34a423170d15b5779c52659"><td class="memTemplParams" colspan="2"><a id="a532e5728e34a423170d15b5779c52659"></a>
-template&lt;typename T , typename IndexType  = std::size_t, typename GenType  = uint16_t&gt; </td></tr>
-<tr class="memitem:a532e5728e34a423170d15b5779c52659"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SlotMapKey</b> = typename <a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">SlotMap</a>&lt; T, IndexType, GenType &gt;::Key</td></tr>
-<tr class="separator:a532e5728e34a423170d15b5779c52659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54a75607a62bea828bd21167b093f74"><td class="memTemplParams" colspan="2"><a id="ae54a75607a62bea828bd21167b093f74"></a>
+template&lt;typename IndexType , typename GenType &gt; </td></tr>
+<tr class="memitem:ae54a75607a62bea828bd21167b093f74"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GenIndex</b> = <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">SlotMapKey</a>&lt; IndexType, GenType &gt;</td></tr>
+<tr class="separator:ae54a75607a62bea828bd21167b093f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a6cd275bfe405c6c1e68247fba6d49"><td class="memItemLeft" align="right" valign="top"><a id="a41a6cd275bfe405c6c1e68247fba6d49"></a>
 typedef ::<a class="el" href="../../d1/dc9/structutils_1_1TypeInfo.html">utils::TypeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TypeInfo</b></td></tr>
 <tr class="separator:a41a6cd275bfe405c6c1e68247fba6d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,12 +187,12 @@ template&lt;typename T , typename std::enable_if_t&lt; check::LShiftExists&lt; s
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplParams" colspan="2"><a id="a948a0e5e3738c8aa6692ad55e813865f"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a948a0e5e3738c8aa6692ad55e813865f">make_some</a> (const T &amp;data)</td></tr>
-<tr class="memdesc:a948a0e5e3738c8aa6692ad55e813865f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#ac51266e46816062198340ea939419cf3" title="Creates an Option holding some data. ">Option&lt;T&gt;::some()</a> <br /></td></tr>
+<tr class="memdesc:a948a0e5e3738c8aa6692ad55e813865f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#ab62f02c222fc3183354f292bde47381f" title="Creates an Option holding some data. ">Option&lt;T&gt;::some()</a> <br /></td></tr>
 <tr class="separator:a948a0e5e3738c8aa6692ad55e813865f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memTemplParams" colspan="2"><a id="a6e689c62a5329b664d0cbaf5e4c4d769"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a6e689c62a5329b664d0cbaf5e4c4d769">make_none</a> ()</td></tr>
-<tr class="memdesc:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a3ef088f6d5f5c9ec50f2585bcdff3b8a" title="Creates a None variant Option. ">Option&lt;T&gt;::none()</a> <br /></td></tr>
+<tr class="memdesc:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a94dfb87ea2a17082576f88cf7cbaf2d2" title="Creates a None variant Option. ">Option&lt;T&gt;::none()</a> <br /></td></tr>
 <tr class="separator:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top"><a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (crstring str, crstring prefix)</td></tr>

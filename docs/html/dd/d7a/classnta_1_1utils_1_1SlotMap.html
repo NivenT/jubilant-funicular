@@ -63,7 +63,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -81,15 +80,10 @@ Collaboration diagram for nta::utils::SlotMap&lt; T, IndexType, GenType &gt;:</d
 <div class="dyncontent">
 <div class="center"><img src="../../df/d27/classnta_1_1utils_1_1SlotMap__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_coll__map" id="nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_coll__map">
-<area shape="rect" id="node2" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key" title="nta::utils::SlotMap\l\&lt; T, IndexType, GenType\l \&gt;::Key" alt="" coords="5,96,177,152"/>
+<area shape="rect" id="node4" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index. " alt="" coords="198,103,366,145"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a></td></tr>
-<tr class="separator:dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a3c80538909868f0dfbe088379f2a330f"><td class="memItemLeft" align="right" valign="top"><a id="a3c80538909868f0dfbe088379f2a330f"></a>
@@ -101,6 +95,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = Inde
 <tr class="memitem:a8d6679ba58b53219e2d6df08bbc9c932"><td class="memItemLeft" align="right" valign="top"><a id="a8d6679ba58b53219e2d6df08bbc9c932"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>gen_type</b> = GenType</td></tr>
 <tr class="separator:a8d6679ba58b53219e2d6df08bbc9c932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d0c0772785ec1f1efcc4a3fcec2156"><td class="memItemLeft" align="right" valign="top"><a id="a48d0c0772785ec1f1efcc4a3fcec2156"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b> = <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">SlotMapKey</a>&lt; IndexType, GenType &gt;</td></tr>
+<tr class="separator:a48d0c0772785ec1f1efcc4a3fcec2156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -117,41 +114,50 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> () const
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</td></tr>
 <tr class="separator:a2d43e26311eb1afecfb8ef29d0e7e830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac192894eb4f1ff876d42a706e1137ba0"><td class="memItemLeft" align="right" valign="top"><a id="ac192894eb4f1ff876d42a706e1137ba0"></a>
-<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k) const</td></tr>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k) const</td></tr>
 <tr class="separator:ac192894eb4f1ff876d42a706e1137ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2df6210338198bddd81f207849e16b"><td class="memItemLeft" align="right" valign="top"><a id="aed2df6210338198bddd81f207849e16b"></a>
-<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k) const</td></tr>
+<a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k) const</td></tr>
 <tr class="separator:aed2df6210338198bddd81f207849e16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a05f48614b376628a6ca34d5bc4fb7"><td class="memItemLeft" align="right" valign="top"><a id="a66a05f48614b376628a6ca34d5bc4fb7"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at_unsafe</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k) const</td></tr>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at_unsafe</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k) const</td></tr>
 <tr class="separator:a66a05f48614b376628a6ca34d5bc4fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759e4f0729ae4d73991cf7ccff384a1d"><td class="memItemLeft" align="right" valign="top"><a id="a759e4f0729ae4d73991cf7ccff384a1d"></a>
 gen_type&#160;</td><td class="memItemRight" valign="bottom"><b>get_curr_gen</b> (index_type idx) const</td></tr>
 <tr class="separator:a759e4f0729ae4d73991cf7ccff384a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5b3f80005c2ba392ca6311ce3be10f"><td class="memItemLeft" align="right" valign="top"><a id="a6f5b3f80005c2ba392ca6311ce3be10f"></a>
-gen_type&#160;</td><td class="memItemRight" valign="bottom"><b>get_curr_gen</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k) const</td></tr>
+gen_type&#160;</td><td class="memItemRight" valign="bottom"><b>get_curr_gen</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k) const</td></tr>
 <tr class="separator:a6f5b3f80005c2ba392ca6311ce3be10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ebd1c8b880409fdaa4d8e2e2eecd4c"><td class="memItemLeft" align="right" valign="top"><a id="a06ebd1c8b880409fdaa4d8e2e2eecd4c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_removed</b> (index_type key_idx) const</td></tr>
-<tr class="separator:a06ebd1c8b880409fdaa4d8e2e2eecd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a837c7b43dcb539c397202dbecd0e6b27"><td class="memItemLeft" align="right" valign="top"><a id="a837c7b43dcb539c397202dbecd0e6b27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_removed</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k) const</td></tr>
-<tr class="separator:a837c7b43dcb539c397202dbecd0e6b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c922dcc17c0c6e1607f8e0153a4c30e"><td class="memItemLeft" align="right" valign="top"><a id="a5c922dcc17c0c6e1607f8e0153a4c30e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_free</b> (index_type key_idx) const</td></tr>
+<tr class="separator:a5c922dcc17c0c6e1607f8e0153a4c30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543820ee03c7d145098740f9ba3bbf53"><td class="memItemLeft" align="right" valign="top"><a id="a543820ee03c7d145098740f9ba3bbf53"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_free</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k) const</td></tr>
+<tr class="separator:a543820ee03c7d145098740f9ba3bbf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82bba8f1e37f469c6387184779d96eab"><td class="memItemLeft" align="right" valign="top"><a id="a82bba8f1e37f469c6387184779d96eab"></a>
-<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const T &amp;elem)</td></tr>
+<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const T &amp;elem)</td></tr>
 <tr class="separator:a82bba8f1e37f469c6387184779d96eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0da3fb41ccdcde400679717071d81ea7"><td class="memItemLeft" align="right" valign="top"><a id="a0da3fb41ccdcde400679717071d81ea7"></a>
-<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (const T &amp;elem)</td></tr>
+<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (const T &amp;elem)</td></tr>
 <tr class="separator:a0da3fb41ccdcde400679717071d81ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa712856123dc25fa503f0df390439c5b"><td class="memTemplParams" colspan="2"><a id="aa712856123dc25fa503f0df390439c5b"></a>
 template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aa712856123dc25fa503f0df390439c5b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:aa712856123dc25fa503f0df390439c5b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:aa712856123dc25fa503f0df390439c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b30423dc74aaa25af4c659530fb469"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#ab3b30423dc74aaa25af4c659530fb469">insert</a> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k, const T &amp;elem)</td></tr>
+<tr class="separator:ab3b30423dc74aaa25af4c659530fb469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeae42bbca16e976dd0e7c8a31fa57ac"><td class="memTemplParams" colspan="2"><a id="adeae42bbca16e976dd0e7c8a31fa57ac"></a>
+template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:adeae42bbca16e976dd0e7c8a31fa57ac"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>insert_emplace</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:adeae42bbca16e976dd0e7c8a31fa57ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5183d50b2472568e20d2566a3de52fbe"><td class="memItemLeft" align="right" valign="top"><a id="a5183d50b2472568e20d2566a3de52fbe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (size_type new_cap)</td></tr>
+<tr class="separator:a5183d50b2472568e20d2566a3de52fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185f31e9b0fe3adc4a6dbeb7a8183fbf"><td class="memItemLeft" align="right" valign="top"><a id="a185f31e9b0fe3adc4a6dbeb7a8183fbf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k)</td></tr>
 <tr class="separator:a185f31e9b0fe3adc4a6dbeb7a8183fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561337a07afaeeb360cb3be4d273dffd"><td class="memItemLeft" align="right" valign="top"><a id="a561337a07afaeeb360cb3be4d273dffd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>erase</b> (<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> k)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>erase</b> (<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> k)</td></tr>
 <tr class="separator:a561337a07afaeeb360cb3be4d273dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9caab059008b651ccf9527f90521d048"><td class="memItemLeft" align="right" valign="top"><a id="a9caab059008b651ccf9527f90521d048"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
@@ -159,9 +165,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <tr class="memitem:acb42a5451187df02060b95f515c16600"><td class="memItemLeft" align="right" valign="top"><a id="acb42a5451187df02060b95f515c16600"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> ()</td></tr>
 <tr class="separator:acb42a5451187df02060b95f515c16600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f196c20d9f06ec78ad52488cf98afca"><td class="memItemLeft" align="right" valign="top"><a id="a8f196c20d9f06ec78ad52488cf98afca"></a>
+const T *&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="separator:a8f196c20d9f06ec78ad52488cf98afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33454f8dca32921d90e716f0847d2ce7"><td class="memItemLeft" align="right" valign="top"><a id="a33454f8dca32921d90e716f0847d2ce7"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> ()</td></tr>
 <tr class="separator:a33454f8dca32921d90e716f0847d2ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48120b6103bb6ee9a0d98da5e18aee6f"><td class="memItemLeft" align="right" valign="top"><a id="a48120b6103bb6ee9a0d98da5e18aee6f"></a>
+const T *&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="separator:a48120b6103bb6ee9a0d98da5e18aee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8a02cd942cb95cb808ca65a8d6c50e2"><td class="memItemLeft" align="right" valign="top"><a id="ac8a02cd942cb95cb808ca65a8d6c50e2"></a>
 const T *&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const</td></tr>
 <tr class="separator:ac8a02cd942cb95cb808ca65a8d6c50e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,7 +190,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>grow</b> ()</td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a65aa18e28c5aa0faf3fc150d74d4deef"><td class="memItemLeft" align="right" valign="top"><a id="a65aa18e28c5aa0faf3fc150d74d4deef"></a>
-<a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">Key</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_slots</b> {}</td></tr>
+<a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_slots</b> {}</td></tr>
 <tr class="separator:a65aa18e28c5aa0faf3fc150d74d4deef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa890189ed4405c264145fe4c8bf1efd"><td class="memItemLeft" align="right" valign="top"><a id="afa890189ed4405c264145fe4c8bf1efd"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b> {}</td></tr>
@@ -207,48 +219,41 @@ static constexpr size_type&#160;</td><td class="memItemRight" valign="bottom"><b
 class nta::utils::SlotMap&lt; T, IndexType, GenType &gt;</h3>
 
 <p>An unsorted container supporting fast insertion/deletion without invalidating references to its elements.</p>
-<p>Warning: Doesn't really do error checking, so use carefully. </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Add tests (There are many issues/unclear-ities with the current implementation) </dd></dl>
+<p>Warning: Doesn't really do error checking, so use carefully. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00014">14</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
-</div><hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key" id="dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#dd/d71/structnta_1_1utils_1_1SlotMap_1_1Key">&#9670;&nbsp;</a></span>nta::utils::SlotMap::Key</h2>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00094">94</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab3b30423dc74aaa25af4c659530fb469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b30423dc74aaa25af4c659530fb469">&#9670;&nbsp;</a></span>insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename IndexType , typename GenType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">struct nta::utils::SlotMap::Key</td>
+          <td class="memname">bool <a class="el" href="../../dd/d7a/classnta_1_1utils_1_1SlotMap.html">nta::utils::SlotMap</a>&lt; T, IndexType, GenType &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">Key</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>elem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><h3>template&lt;typename T, typename IndexType = std::size_t, typename GenType = uint16_t&gt;<br />
-struct nta::utils::SlotMap&lt; T, IndexType, GenType &gt;::Key</h3>
+<p>Checks that k refers to a free slot with the right generation</p>
+<p>Returns true on success </p>
 
-
-<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00020">20</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
-</div><div class="dynheader">
-Collaboration diagram for nta::utils::SlotMap&lt; T, IndexType, GenType &gt;::Key:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/d12/structnta_1_1utils_1_1SlotMap_1_1Key__coll__graph.png" border="0" usemap="#nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_1_1Key_coll__map" alt="Collaboration graph"/></div>
-<map name="nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_1_1Key_coll__map" id="nta_1_1utils_1_1SlotMap_3_01T_00_01IndexType_00_01GenType_01_4_1_1Key_coll__map">
-</map>
-<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
-<table class="fieldtable">
-<tr><th colspan="3">Class Members</th></tr>
-<tr><td class="fieldtype">
-<a id="a3c09e8ff89d467a7c94a775479cac336"></a>gen_type</td>
-<td class="fieldname">
-gen</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a7544c6c95ab47a8ad0863f0b4d7b9e6e"></a>index_type</td>
-<td class="fieldname">
-idx</td>
-<td class="fielddoc">
-</td></tr>
-</table>
+<p class="definition">Definition at line <a class="el" href="../../d0/d1f/SlotMap_8h_source.html#l00246">246</a> of file <a class="el" href="../../d0/d1f/SlotMap_8h_source.html">SlotMap.h</a>.</p>
 
 </div>
 </div>

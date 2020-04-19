@@ -10,6 +10,8 @@ namespace nta {
             typedef ::utils::check::Nop Nop;
             template<typename T, typename U=T>
             using LShiftExists = ::utils::check::LShiftExists<T, U>;
+            template<typename T, typename U=T>
+            using EqualsExists = ::utils::check::EqualsExists<T, U>;
         }
         template<typename T, typename TAG>
         using Wrapper = ::utils::Wrapper<T, TAG>;

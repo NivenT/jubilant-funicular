@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['data',['data',['../d5/d41/structnta_1_1RawTexture.html#aacc59753f61e31003d39f0ef2f19e09d',1,'nta::RawTexture::data()'],['../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#a8df70567a8ff969dbec63a756d90837f',1,'nta::utils::LinkedNode::data()'],['../d0/d9b/structnta_1_1Message.html#acdc6a80330922946fc6b8657602e43a0',1,'nta::Message::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
+  ['data',['data',['../d5/d41/structnta_1_1RawTexture.html#aacc59753f61e31003d39f0ef2f19e09d',1,'nta::RawTexture::data()'],['../d5/dc6/structnta_1_1utils_1_1LinkedNode.html#a8df70567a8ff969dbec63a756d90837f',1,'nta::utils::LinkedNode::data()'],['../d9/dc1/structnta_1_1ScreenSwitchInfo.html#aed1a9c21a062863f6777c0cf3a00f23e',1,'nta::ScreenSwitchInfo::data()']]],
   ['debugbatch',['DebugBatch',['../dc/dbe/classnta_1_1DebugBatch.html',1,'nta::DebugBatch'],['../dc/dbe/classnta_1_1DebugBatch.html#ab546a069bab54be8d89a3937f418292e',1,'nta::DebugBatch::DebugBatch()']]],
   ['decompress',['decompress',['../d3/d18/classnta_1_1Compressor.html#aaf2c8b87946d2cee8b4edcf4c48f7f71',1,'nta::Compressor']]],
   ['decrexists',['DecrExists',['../d4/d6f/structutils_1_1check_1_1DecrExists.html',1,'utils::check']]],
   ['delay',['delay',['../d1/de6/classnta_1_1CallbackManager.html#af184e9fbc5353c8e019cf61c51c03448',1,'nta::CallbackManager']]],
-  ['delete_5fcomponent',['delete_component',['../db/da0/classnta_1_1ECS.html#ac53a5c8c535c5dbb7496e83c1bf3fa3a',1,'nta::ECS']]],
-  ['delete_5fcomponents',['delete_components',['../db/da0/classnta_1_1ECS.html#aeb6f76abd4855c865f8b8264d892b3be',1,'nta::ECS']]],
+  ['delete_5fcomponent',['delete_component',['../db/da0/classnta_1_1ECS.html#a408be9d936b69be97562186b6db2b355',1,'nta::ECS']]],
   ['delete_5fentity',['delete_entity',['../db/da0/classnta_1_1ECS.html#a26a786d2ac17fbfffa3ba93b6fcc66aa',1,'nta::ECS']]],
   ['depth',['depth',['../d6/d4f/structnta_1_1Primitive.html#a4443e427fb512898693bba61a8ac4654',1,'nta::Primitive::depth()'],['../d6/db3/structnta_1_1Glyph.html#a259a2061c71dfd9fa0857f52d4daff8a',1,'nta::Glyph::depth()']]],
   ['dequeue',['dequeue',['../d1/de6/classnta_1_1CallbackManager.html#a897df241a317572ff96bb89e28aadc14',1,'nta::CallbackManager']]],

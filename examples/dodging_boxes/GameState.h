@@ -74,11 +74,8 @@ public:
     }
     void draw_objects(nta::SpriteBatch& batch, nta::ContextData& context) const {
         std::lock_guard<std::mutex> g(m_state_lock);
-        std::vector<BallComponent*> balls = m_ecs.filter<BallComponent>([&](BallComponent& ball) {
-            return ball.get_id() != m_player_ball_component_id;
-        });
-        for (BallComponent* cmpn : balls) {
-            cmpn->draw(batch, context);
+        for (BallComponent& ball : m_ecs.get_component_list<BallComponent>()) {
+            if (ball.get_id() != m_player_ball_component_id) ball.draw(batch, context);
         }
     }
     void draw_winner(nta::SpriteBatch& batch, nta::ContextData& context) const {
@@ -128,9 +125,7 @@ public:
             }
         });
 
-        for (auto& cmpn : trash) {
-            m_ecs.delete_entity(m_ecs.get_owner(cmpn->get_id()));
-        }
+        for (auto& cmpn : trash) m_ecs.delete_owner(cmpn->get_id());
     }
     void closed_screen() {
         m_num_active_screens--;
@@ -140,7 +135,8 @@ std::mutex GameState::m_state_lock;
 
 GameState::GameState(const nta::ComponentRegistry& reg) : m_ecs(reg) {
     m_player = m_ecs.gen_entity();
-    m_player_ball_component_id = m_ecs.add_component<BallComponent>(m_player, glm::vec2(0, -90), 5, glm::vec4(1,0,0,1));
+    // The unwrap is maybe technically unsafe, but if this fails, we have bigger issues
+    m_player_ball_component_id = m_ecs.add_component<BallComponent>(m_player, glm::vec2(0, -90), 5, glm::vec4(1,0,0,1)).unwrap();
 }
 
 #endif // GAMESTATE_H_INCLUDED

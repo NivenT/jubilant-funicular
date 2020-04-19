@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     SlotMap<Particle> map;
     assert(map.empty());
 
-    using Key = SlotMapKey<Particle>;
+    using Key = SlotMapKey<>;
 
     auto key = map.add({1});
     assert(map.size() == 1);
@@ -57,10 +57,28 @@ int main(int argc, char* argv[]) {
             if (maybe.is_some()) assert(maybe.unwrap().val == i);
         }
 
+        for (int i = 0; i < keys.size(); i++) {
+            if (!keys[i].second && rand()%10 == 0) {
+                bool free = map.is_free(keys[i].first);
+                if (free) keys[i].first.gen = map.get_curr_gen(keys[i].first);
+                assert(map.insert(keys[i].first, i) == free);
+                if (free) {
+                    keys[i].second = true;
+                    assert(map[keys[i].first].unwrap().val == i);
+                }
+            }
+        }
+
         int count = 0;
         for (auto& p : map) {
             assert(0 <= p.val && p.val < keys.size());
             count++;
+        }
+        assert(count == map.size());
+
+        count = 0;
+        for (auto& k : keys) {
+            if (k.second) count++;
         }
         assert(count == map.size());
     }
@@ -70,7 +88,7 @@ int main(int argc, char* argv[]) {
         if (key.second) removed[key.first.idx] = false;
     }
     for (int i = 0; i < removed.size(); i++) {
-        assert(map.is_removed(i) == removed[i]);
+        assert(map.is_free(i) == removed[i]);
     }
 
     auto cap = map.capacity();
