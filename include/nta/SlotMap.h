@@ -13,8 +13,11 @@ namespace nta {
             using index_type = IndexType;
             using gen_type = GenType;
 
-            bool operator==(SlotMapKey<IndexType, GenType> rhs) {
+            bool operator==(const SlotMapKey<IndexType, GenType> rhs) const {
                 return idx == rhs.idx && gen == rhs.gen;
+            }
+            bool operator!=(const SlotMapKey<IndexType, GenType> rhs) const {
+                return !(*this == rhs);
             }
 
             index_type idx;

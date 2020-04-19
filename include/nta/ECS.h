@@ -162,6 +162,7 @@ namespace nta {
         ///
         /// Returns true on success
         bool delete_entity(Entity id);
+        bool delete_owner(ComponentID cmpn);
         /// Returns the number of entities in the system
         std::size_t num_entities() const { return m_entity_gen.get_count(); }
         /// Returns the number of components of the given type

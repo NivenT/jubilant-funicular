@@ -24,6 +24,11 @@ namespace nta {
 		}
 		return true;
 	}
+	bool ECS::delete_owner(ComponentID cmpn) {
+		return get_owner(cmpn).map_or<bool>([&](Entity owner) {
+			return delete_entity(owner);
+		}, false);
+	}
 	bool ECS::delete_component(ComponentID cmpn) {
 		if (m_cmpn_gen.is_free(cmpn)) return false;
 
