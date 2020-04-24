@@ -235,7 +235,7 @@ namespace nta {
     template<typename T, typename... Args>
     utils::Option<ComponentID> ECS::add_component(Entity entity, Args&&... args) {
         if (!does_entity_exist(entity)) return utils::make_none<ComponentID>();
-        ComponentList<T>& list = m_components.get<ComponentList<T>>();
+        ComponentList<T>& list = m_components.find<ComponentList<T>>();
         list.reserve(entity.idx+1);
 
         if (!list.insert_emplace(entity, std::forward<Args>(args)...)) {
