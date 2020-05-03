@@ -91,12 +91,15 @@ namespace nta {
 
         template<typename T>
         void register_component() { m_records.insert(std::make_pair(typeid(T).hash_code(), Record::get<T>())); }
+        
         template<typename T>
         utils::Option<Record> get_record() const { return operator[](typeid(T).hash_code()); }
         utils::Option<Record> operator[](std::size_t hash) const {
             auto rec = m_records.find(hash);
             return rec == m_records.end() ? utils::Option<Record>::none() : utils::Option<Record>::some(rec->second);
         };
+
+        std::size_t size() const { return m_records.size(); }
 
         iterator begin() { return m_records.begin(); }
         const_iterator begin() const { return m_records.cbegin(); }

@@ -82,6 +82,7 @@ namespace nta {
         void switch_animation(std::size_t start, std::size_t length, float speed = 1);
         // ugh I have a setter and a getter (maybe I should just make m_speed public...)
         void set_speed(float speed);
+        void reset_time() { m_time = 0.0f; }
         void step(float dt);
     };
 }
