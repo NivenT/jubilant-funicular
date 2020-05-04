@@ -34,5 +34,7 @@ jobs:
       run: cd build && cmake ../ -DCMAKE_CXX_COMPILER=g++-9
     - name: make
       run: cd build && make
+    - name: check directory
+      run: ls -lhR build
     - name: make test
       run: cd build && make test
