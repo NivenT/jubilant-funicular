@@ -70,7 +70,7 @@ var searchData=
   ['m_5fradius',['m_radius',['../df/d9f/classnta_1_1ParticleBatch2D.html#ac564b88da2f73d5692cbdec15478fe4d',1,'nta::ParticleBatch2D']]],
   ['m_5frbos',['m_rbos',['../de/ded/classnta_1_1FrameBuffer.html#afdfaf76568cb6b834256a9cbe446b990',1,'nta::FrameBuffer']]],
   ['m_5frects',['m_rects',['../d9/d4d/classnta_1_1FontMap.html#a24e415fd025230fce6a304a3dfd320a8',1,'nta::FontMap']]],
-  ['m_5fregistry',['m_registry',['../db/da0/classnta_1_1ECS.html#ab92132cf65eeb18505297ce57a7310f6',1,'nta::ECS']]],
+  ['m_5fregistry',['m_registry',['../db/da0/classnta_1_1ECS.html#ae38c9ffa6df6c3cbba2bd003111ed89c',1,'nta::ECS']]],
   ['m_5frenderbatches',['m_renderBatches',['../d4/df3/classnta_1_1PrimitiveBatch.html#a3abb09d0693913206ed7e580827d6fd7',1,'nta::PrimitiveBatch::m_renderBatches()'],['../d7/d3b/classnta_1_1SpriteBatch.html#ae194b160a5de1c3a45ccebc570acd4b5',1,'nta::SpriteBatch::m_renderBatches()']]],
   ['m_5froot',['m_root',['../d3/d18/classnta_1_1Compressor.html#a9cec9a631892c8cd4b9c2358c7ac41f4',1,'nta::Compressor']]],
   ['m_5fscheduled',['m_scheduled',['../df/d5b/classnta_1_1utils_1_1ThreadPool.html#a545160bd42d91789b0e91d33fe1a4c87',1,'nta::utils::ThreadPool']]],

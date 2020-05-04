@@ -66,7 +66,8 @@ $(function() {
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">nta::utils Namespace Reference</div>  </div>
 </div><!--header-->
@@ -82,9 +83,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dfc/structnta_1_1utils_1_1Formatter.html">Formatter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialize this struct to use custom types with format.  <a href="../../d6/dfc/structnta_1_1utils_1_1Formatter.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/dfc/structnta_1_1utils_1_1Formatter"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#d6/dfc/structnta_1_1utils_1_1Formatter">Formatter</a></td></tr>
+<tr class="memdesc:d6/dfc/structnta_1_1utils_1_1Formatter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialize this struct to use custom types with format.  <a href="../../d7/d33/namespacenta_1_1utils.html#d6/dfc/structnta_1_1utils_1_1Formatter">More...</a><br /></td></tr>
+<tr class="separator:d6/dfc/structnta_1_1utils_1_1Formatter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d59/structnta_1_1utils_1_1Formatter_3_01bool_01_4.html">Formatter&lt; bool &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d01/structnta_1_1utils_1_1Formatter_3_01glm_1_1ivec2_01_4.html">Formatter&lt; glm::ivec2 &gt;</a></td></tr>
@@ -99,7 +100,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d90/structnta_1_1utils_1_1Formatter_3_01glm_1_1vec4_01_4.html">Formatter&lt; glm::vec4 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d67/structnta_1_1utils_1_1Formatter_3_01Option_3_01T_01_4_01_4.html">Formatter&lt; Option&lt; T &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d56/structnta_1_1utils_1_1Formatter_3_01SlotMapKey_3_4_01_4.html">Formatter&lt; SlotMapKey&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dca/structnta_1_1utils_1_1Formatter_3_01T_00_01typename_01std_1_1enable__if__t_3_01can__cout_3_01T_01_4_01_4_01_4.html">Formatter&lt; T, typename std::enable_if_t&lt; can_cout&lt; T &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for types you can cout.  <a href="../../dc/dca/structnta_1_1utils_1_1Formatter_3_01T_00_01typename_01std_1_1enable__if__t_3_01can__cout_3_01T_01_4_01_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html">IDFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for generating unique (integral) IDs.  <a href="../../d6/d62/classnta_1_1utils_1_1IDFactory.html#details">More...</a><br /></td></tr>
@@ -151,6 +157,10 @@ typedef ::<a class="el" href="../../d9/d63/classutils_1_1Path.html">utils::Path<
 template&lt;typename IndexType , typename GenType &gt; </td></tr>
 <tr class="memitem:ae54a75607a62bea828bd21167b093f74"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GenIndex</b> = <a class="el" href="../../d0/dfd/structnta_1_1utils_1_1SlotMapKey.html">SlotMapKey</a>&lt; IndexType, GenType &gt;</td></tr>
 <tr class="separator:ae54a75607a62bea828bd21167b093f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db5516c2f7017519ee98fa069a2318d"><td class="memTemplParams" colspan="2"><a id="a1db5516c2f7017519ee98fa069a2318d"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1db5516c2f7017519ee98fa069a2318d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is_defined</b> = decltype(is_defined_impl(std::declval&lt; T * &gt;()))</td></tr>
+<tr class="separator:a1db5516c2f7017519ee98fa069a2318d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a6cd275bfe405c6c1e68247fba6d49"><td class="memItemLeft" align="right" valign="top"><a id="a41a6cd275bfe405c6c1e68247fba6d49"></a>
 typedef ::<a class="el" href="../../d1/dc9/structutils_1_1TypeInfo.html">utils::TypeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TypeInfo</b></td></tr>
 <tr class="separator:a41a6cd275bfe405c6c1e68247fba6d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,20 +192,16 @@ template&lt;typename... Args&gt; </td></tr>
 template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a225d0276f9a4fc0823d2debeebe39091"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>println</b> (const std::string &amp;fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a225d0276f9a4fc0823d2debeebe39091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplParams" colspan="2"><a id="a722964a4e8c51e08803037d32ad1b3d8"></a>
-template&lt;typename T , typename std::enable_if_t&lt; check::LShiftExists&lt; std::ostream, T &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a722964a4e8c51e08803037d32ad1b3d8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="separator:a722964a4e8c51e08803037d32ad1b3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplParams" colspan="2"><a id="a6932a9da42e58fd52b2fd10bc531339e"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
 <tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, S &amp;rhs)</td></tr>
 <tr class="separator:a6932a9da42e58fd52b2fd10bc531339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplParams" colspan="2"><a id="adceecea039ec960f696f284a60f58447"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
 <tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
 <tr class="separator:adceecea039ec960f696f284a60f58447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplParams" colspan="2"><a id="a9926c9d7d5ed8e1b882c4a8bbbd677c4"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; check::EqualsExists&lt; T, S &gt;::value &gt; *  = nullptr&gt; </td></tr>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
 <tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const T &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
 <tr class="separator:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplParams" colspan="2"><a id="a948a0e5e3738c8aa6692ad55e813865f"></a>
@@ -208,6 +214,13 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a6e689c62a5329b664d0cbaf5e4c4d769">make_none</a> ()</td></tr>
 <tr class="memdesc:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement for calling <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html#a94dfb87ea2a17082576f88cf7cbaf2d2" title="Creates a None variant Option. ">Option&lt;T&gt;::none()</a> <br /></td></tr>
 <tr class="separator:a6e689c62a5329b664d0cbaf5e4c4d769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca69afd43f78a73b229f0d252254892"><td class="memTemplParams" colspan="2"><a id="a2ca69afd43f78a73b229f0d252254892"></a>
+template&lt;typename T , std::size_t  = sizeof(T)&gt; </td></tr>
+<tr class="memitem:a2ca69afd43f78a73b229f0d252254892"><td class="memTemplItemLeft" align="right" valign="top">std::true_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is_defined_impl</b> (T *)</td></tr>
+<tr class="separator:a2ca69afd43f78a73b229f0d252254892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae083dd10af80e5faf157a19a55255a35"><td class="memItemLeft" align="right" valign="top"><a id="ae083dd10af80e5faf157a19a55255a35"></a>
+std::false_type&#160;</td><td class="memItemRight" valign="bottom"><b>is_defined_impl</b> (...)</td></tr>
+<tr class="separator:ae083dd10af80e5faf157a19a55255a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="memItemLeft" align="right" valign="top"><a id="a9ad5fe63f14dd42c0db25d71e101e85c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a9ad5fe63f14dd42c0db25d71e101e85c">starts_with</a> (crstring str, crstring prefix)</td></tr>
 <tr class="memdesc:a9ad5fe63f14dd42c0db25d71e101e85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if str starts with prefix. <br /></td></tr>
@@ -246,10 +259,42 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#aaa025ad45973ff6dc3a33800ccea72f0">in_range</a> (T val, T min, T max)</td></tr>
 <tr class="memdesc:aaa025ad45973ff6dc3a33800ccea72f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns whether or not min &lt;= val &lt;= max <br /></td></tr>
 <tr class="separator:aaa025ad45973ff6dc3a33800ccea72f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8b500aa5946d96420fc10b7c1f9f3010"><td class="memTemplParams" colspan="2"><a id="a8b500aa5946d96420fc10b7c1f9f3010"></a>
+template&lt;typename T , typename  = std::void_t&lt;&gt;&gt; </td></tr>
+<tr class="memitem:a8b500aa5946d96420fc10b7c1f9f3010"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>can_cout</b> = false</td></tr>
+<tr class="separator:a8b500aa5946d96420fc10b7c1f9f3010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae659887677804fbfb48fc5d15e77aaa4"><td class="memTemplParams" colspan="2"><a id="ae659887677804fbfb48fc5d15e77aaa4"></a>
+template&lt;typename T , typename U , typename  = std::void_t&lt;&gt;&gt; </td></tr>
+<tr class="memitem:ae659887677804fbfb48fc5d15e77aaa4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>can_check_equality</b> = false</td></tr>
+<tr class="separator:ae659887677804fbfb48fc5d15e77aaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for classes/functionality not necessarily specific to game/opengl development. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="d6/dfc/structnta_1_1utils_1_1Formatter" id="d6/dfc/structnta_1_1utils_1_1Formatter"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#d6/dfc/structnta_1_1utils_1_1Formatter">&#9670;&nbsp;</a></span>nta::utils::Formatter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct nta::utils::Formatter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><h3>template&lt;typename T, typename Enable = void&gt;<br />
+struct nta::utils::Formatter&lt; T, Enable &gt;</h3>
+
+<p>Specialize this struct to use custom types with format. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00023">23</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
+</div>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a45ca37968c440dd99e663ddce270616d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45ca37968c440dd99e663ddce270616d">&#9670;&nbsp;</a></span>format()</h2>
 
@@ -281,7 +326,7 @@ template&lt;typename... Args&gt; </div>
 <p>Use {} as a placeholder for arguments</p>
 <p>e.g. format("Hello {}!", "World"); </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d0a/format_8h_source.html#l00088">88</a> of file <a class="el" href="../../d0/d0a/format_8h_source.html">format.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="../../dd/da4/Logger_8h_source.html#l00025">nta::Logger::unuseSecondLog()</a>.</p>
 
