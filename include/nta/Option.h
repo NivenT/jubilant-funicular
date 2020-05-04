@@ -116,16 +116,16 @@ namespace nta {
         void Option<T>::map(std::function<void(T)> func) {
             if (m_some) func(get());
         }
-        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>, void*> = nullptr>
         bool operator==(const Option<T>& lhs, const S& rhs) {
             return lhs.is_some() && lhs.unwrap() == rhs;
         }
-        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>, void*> = nullptr>
         bool operator==(const Option<T>& lhs, const Option<S>& rhs) {
             return (lhs.is_none() && rhs.is_none()) ||
                    (lhs && rhs && lhs.unwarp() == rhs.unwarp());
         }
-        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>, void*> = nullptr>
         bool operator==(const T& lhs, const Option<S>& rhs) {
             return rhs.is_some() && lhs == rhs.unwrap();
         }

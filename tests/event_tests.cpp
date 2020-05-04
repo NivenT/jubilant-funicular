@@ -36,9 +36,9 @@ void test_scenario1() {
         assert(p.level == prev_level + 1);
 
         Enemy e = { .power = power };
-        // This will do nothing because the function just define_ford cannot be
-        // applied to enemies
-        level_up.enact<EntityType::PLAYER>(e);
+        // This won't compile since the type and enum don't match up
+        //level_up.enact<EntityType::PLAYER>(e);
+
         // This will do nothing because nothing has been define_ford to ENEMY
         level_up.enact<EntityType::ENEMY>(e);
 

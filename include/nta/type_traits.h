@@ -20,7 +20,7 @@ namespace nta {
             std::declval<std::ostream&>()<<std::declval<const T&>()
         )>> = true;
 
-        template<typename T, typename U, typename = std::void_t<>>
+        template<typename T, typename  = T, typename = std::void_t<>>
         inline constexpr bool can_check_equality = false;
         template<typename T, typename U>
         inline constexpr bool can_check_equality<T, U, std::void_t<decltype(
