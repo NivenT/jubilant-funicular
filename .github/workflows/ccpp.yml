@@ -35,6 +35,8 @@ jobs:
     - name: make
       run: cd build && make
     - name: check directory
-      run: ls -lhR build
+      run: ls -lhR
+      working-directory: build
     - name: make test
-      run: cd build && make test
+      run: make test
+      working-directory: build
