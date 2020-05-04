@@ -29,6 +29,11 @@ namespace nta {
 			return delete_entity(owner);
 		}, false);
 	}
+	std::size_t ECS::num_components() const {
+		std::size_t num = 0;
+		for (const auto& rec : m_registry) num += rec.second.num_components(m_components);
+		return num;
+	}
 	bool ECS::delete_component(ComponentID cmpn) {
 		if (m_cmpn_gen.is_free(cmpn)) return false;
 

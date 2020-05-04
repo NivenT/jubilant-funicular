@@ -36,7 +36,6 @@ namespace nta {
     /// A store of every Component type in use by an ECS
     class ComponentRegistry {
     public:
-        /// \todo Reduce the number of functions this needs to store
         struct Record {
         private:
             Record() {}
@@ -67,6 +66,10 @@ namespace nta {
                     auto& list = map.find<ComponentList<T>>();
                     return list[e];
                 };
+                ret.num_components = [](const utils::TypeMap& map) -> std::size_t {
+                    if (!map.contains<ComponentList<T>>()) return 0;
+                    return map.find<ComponentList<T>>().size();
+                };
                 ret.clear = [](const utils::TypeMap& map) {
                     if (!map.contains<ComponentList<T>>()) return;
                     map.find<ComponentList<T>>().clear();
@@ -78,6 +81,7 @@ namespace nta {
             std::function<void(const utils::TypeMap&, utils::IDFactory<ComponentID>&, Entity)> delete_entity;
             std::function<bool(const utils::TypeMap&, ComponentID, Entity)> delete_component;
             std::function<utils::Option<Component&>(const utils::TypeMap&, Entity)> get_component;
+            std::function<std::size_t(const utils::TypeMap&)> num_components;
             std::function<void(const utils::TypeMap&)> clear;
         };
 
@@ -171,6 +175,7 @@ namespace nta {
         /// Returns the number of components of the given type
         template<typename T>
         std::size_t num_components() const { return get_component_list<T>().size(); }
+        std::size_t num_components() const;
 
         /// Adds the given Component to the given Entity.
         ///
@@ -181,10 +186,14 @@ namespace nta {
         /// Returns the id of the created Component (or None on failure).
         template<typename T, typename... Args>
         utils::Option<ComponentID> add_component(Entity entity, Args&&... args);
+        template<typename T, typename... Args>
+        utils::Option<ComponentID> add_sibling(ComponentID cmpn, Args&&... args);
         /// Attempts to delete the given Component
         ///
         /// Returns false on failure
         bool delete_component(ComponentID cmpn);
+        template<typename T>
+        bool delete_component(Entity entity);
 
         /// Returns true if the given Entity has a Component of type T
         template<typename T>
@@ -245,7 +254,6 @@ namespace nta {
             return utils::make_none<ComponentID>();
         }
         T& cmpn = list[entity].unwrap();
-        //cmpn.m_ecs = this;
         cmpn.m_id = m_cmpn_gen();
 
         m_component_info.reserve(cmpn.m_id.idx+1);
@@ -254,6 +262,17 @@ namespace nta {
             assert(false && "This should never happen");
         }
         return utils::make_some(cmpn.m_id);
+    }
+    template<typename T, typename... Args>
+    utils::Option<ComponentID> ECS::add_sibling(ComponentID cmpn, Args&&... args) {
+        return get_owner(cmpn).map<ComponentID>([&](Entity e) {
+            return add_component<T>(e, std::forward<Args>(args)...);
+        });
+    }
+    template<typename T>
+    bool ECS::delete_component(Entity entity) {
+        auto maybe_cmpn = get_component<T>(entity);
+        return maybe_cmpn ? delete_component(maybe_cmpn.unwrap().get_id()) : false;
     }
     template<typename T>
     bool ECS::has_component(Entity entity) const {

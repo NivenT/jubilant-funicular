@@ -139,6 +139,8 @@ namespace nta {
 
             gen_type get_curr_gen(index_type idx) const { return idx < m_cap ? m_slots[idx].gen : 0; }
             gen_type get_curr_gen(Key k) const { return get_curr_gen(k.idx); }
+            Key get_curr_key(index_type idx) const { return {.idx = idx, .gen = get_curr_gen(idx)}; }
+            Key get_curr_key(Key k) const { return get_curr_key(k.idx); }
             bool is_free(index_type key_idx) const;
             bool is_free(Key k) const { return is_free(k.idx); }
 

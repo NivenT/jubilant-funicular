@@ -116,10 +116,15 @@ namespace nta {
         void Option<T>::map(std::function<void(T)> func) {
             if (m_some) func(get());
         }
-        template<typename T, typename std::enable_if_t<check::LShiftExists<std::ostream, T>::value>* = nullptr>
+        template<typename T>
         std::ostream& operator<<(std::ostream& lhs, const Option<T>& rhs) {
             if (rhs.is_some()) {
-                return lhs<<"Some("<<rhs.unwrap()<<")";
+                using decayed = typename std::decay<T>::type;
+                if constexpr (check::LShiftExists<std::ostream, decayed>::value) {
+                    return lhs<<"Some("<<rhs.unwrap()<<")";
+                } else {
+                    return lhs<<"Some";
+                }
             } else {
                 return lhs<<"None";
             }

@@ -56,11 +56,12 @@ namespace nta {
     private:
         /// The sheet holding the sprites used by the animation
         SpriteSheet m_sheet;
-        /// how far along in the animation we are
+        /// how far along in the animation we are.
+        /// Essentially only defined modulo m_length
         float m_time;
         /// how quickly the animation advances when step is called
         float m_speed;
-        /// A single animation spans m_length continuous sprite indices begging with m_start_index
+        /// A single animation spans m_length continuous sprite indices beginning with m_start_index
         std::size_t m_start_index, m_length;
     public:
         Animation2D() {}
