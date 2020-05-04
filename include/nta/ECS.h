@@ -156,7 +156,7 @@ namespace nta {
         /// The various Component types in use
         ///
         /// This registry should not change after it's associated to an ECS
-        const ComponentRegistry& m_registry;
+        const ComponentRegistry m_registry;
     public:
         ECS(const ComponentRegistry& registry);
         ~ECS() { clear(); }

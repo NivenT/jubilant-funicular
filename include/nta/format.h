@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "nta/MyEngine.h"
+#include "nta/type_traits.h"
 
 namespace nta {
     namespace utils {
@@ -18,9 +19,12 @@ namespace nta {
         std::string format(const std::string& fmt, Args&&... args);
 
         /// Specialize this struct to use custom types with format
+        template<typename T, typename Enable = void>
+        struct Formatter {};
+        /// Specialization for types you can cout
         template<typename T>
-        struct Formatter {
-            std::string operator()(const T& arg) {
+        struct Formatter<T, typename std::enable_if_t<can_cout<T>>> {
+           std::string operator()(const T& arg) {
                 std::ostringstream os;
                 os<<arg;
                 return os.str();

@@ -53,6 +53,9 @@ namespace nta {
 
         template<RecipientEnum e, typename... Args>
         void enact(Args&&... args) const {
+            static_assert(std::is_invocable_v<decltype(std::get<std::size_t(e)>(m_actions).get()),
+                                              Args...>,
+                          "EventTemplate: Tried calling enact with mismatched enum/args");
             enact_helper<std::size_t(e)>(std::forward<Args>(args)...);
         }
 

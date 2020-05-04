@@ -31,7 +31,9 @@ namespace nta {
 	}
 	std::size_t ECS::num_components() const {
 		std::size_t num = 0;
-		for (const auto& rec : m_registry) num += rec.second.num_components(m_components);
+		for (auto it = m_registry.cbegin(); it != m_registry.cend(); ++it) {
+			num += it->second.num_components(m_components);
+		}
 		return num;
 	}
 	bool ECS::delete_component(ComponentID cmpn) {

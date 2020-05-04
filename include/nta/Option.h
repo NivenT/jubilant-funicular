@@ -4,7 +4,7 @@
 #include <functional>
 
 #include "nta/MyEngine.h"
-#include "nta/Wrapper.h"
+#include "nta/format.h"
 
 namespace nta {
     namespace utils {
@@ -49,7 +49,7 @@ namespace nta {
             /// Creates a None variant Option
             static Option none() { return Option<T>(); }
             /// Same as is_some
-            operator bool() const { return m_some; }
+            explicit operator bool() const { return m_some; }
             /// Does this hold some data
             bool is_some() const { return m_some; }
             /// Does this hold nothing?
@@ -116,29 +116,16 @@ namespace nta {
         void Option<T>::map(std::function<void(T)> func) {
             if (m_some) func(get());
         }
-        template<typename T>
-        std::ostream& operator<<(std::ostream& lhs, const Option<T>& rhs) {
-            if (rhs.is_some()) {
-                using decayed = typename std::decay<T>::type;
-                if constexpr (check::LShiftExists<std::ostream, decayed>::value) {
-                    return lhs<<"Some("<<rhs.unwrap()<<")";
-                } else {
-                    return lhs<<"Some";
-                }
-            } else {
-                return lhs<<"None";
-            }
-        }
-        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
         bool operator==(const Option<T>& lhs, S& rhs) {
             return lhs.is_some() && lhs.unwrap() == rhs;
         }
-        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
         bool operator==(const Option<T>& lhs, Option<S>& rhs) {
             return (lhs.is_none() && rhs.is_none()) ||
                    (lhs && rhs && lhs.unwarp() == rhs.unwarp());
         }
-        template<typename T, typename S, typename std::enable_if_t<check::EqualsExists<T, S>::value>* = nullptr>
+        template<typename T, typename S, typename std::enable_if_t<can_check_equality<T, S>>>
         bool operator==(const T& lhs, Option<S>& rhs) {
             return rhs.is_some() && lhs == rhs.unwrap();
         }
@@ -152,6 +139,21 @@ namespace nta {
         Option<T> make_none() {
             return Option<T>::none();
         }
+        template<typename T>
+        struct Formatter<Option<T>> {
+            std::string operator()(const Option<T>& arg) {
+                using decayed = typename std::decay<T>::type;
+                if (arg.is_some()) {
+                    if constexpr (std::is_invocable_v<Formatter<decayed>, decayed>)  {
+                        return format("Some({})", arg.unwrap());
+                    } else {
+                        return "Some";
+                    }
+                } else {
+                    return "None";
+                }
+            }
+        };
     }
 };
 
