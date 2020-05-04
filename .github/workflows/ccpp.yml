@@ -38,5 +38,5 @@ jobs:
       run: ls -lhR
       working-directory: build
     - name: make test
-      run: make test
-      working-directory: build
+      run: make -C ../../../ test
+      working-directory: build/utilities/tests_bin/path
