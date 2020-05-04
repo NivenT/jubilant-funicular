@@ -46,4 +46,13 @@ namespace nta {
     void Logger::unindent(size_t tab_size) {
         if (m_tabs >= tab_size) m_tabs -= tab_size;
     }
+
+    ScopeLog::ScopeLog(crstring entry, crstring exit) : on_exit(exit) {
+        Logger::writeToLog(entry);
+        Logger::indent();
+    }
+    ScopeLog::~ScopeLog() {
+        Logger::unindent();
+        Logger::writeToLog(on_exit);
+    }
 }

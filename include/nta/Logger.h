@@ -29,7 +29,7 @@ namespace nta {
         static void writeToLog(crstring entry, Args&&... args) { 
             writeToLog(utils::format(entry, std::forward<Args>(args)...)); 
         }
-        /// writes entry in log and then exits program
+        /// writes entry in log and then notifies ErrorManager
         static Error writeErrorToLog(crstring error, ErrorType type = OTHER);
         template<typename... Args>
         static Error writeErrorToLog(ErrorType type, crstring err, Args&&... args) {
@@ -39,6 +39,14 @@ namespace nta {
         static void indent(size_t tab_size = TAB_SIZE);
         /// unindents entries
         static void unindent(size_t tab_size = TAB_SIZE);
+    };
+    /// Simple RAII type for logging entry/exit of scope
+    class ScopeLog {
+    private:
+        const std::string on_exit;
+    public:
+        ScopeLog(crstring entry, crstring exit);
+        ~ScopeLog();
     };
 }
 
