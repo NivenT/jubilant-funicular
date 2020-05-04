@@ -192,18 +192,18 @@ template&lt;typename... Args&gt; </td></tr>
 template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a225d0276f9a4fc0823d2debeebe39091"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>println</b> (const std::string &amp;fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a225d0276f9a4fc0823d2debeebe39091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplParams" colspan="2"><a id="a6932a9da42e58fd52b2fd10bc531339e"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
-<tr class="memitem:a6932a9da42e58fd52b2fd10bc531339e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, S &amp;rhs)</td></tr>
-<tr class="separator:a6932a9da42e58fd52b2fd10bc531339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplParams" colspan="2"><a id="adceecea039ec960f696f284a60f58447"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
-<tr class="memitem:adceecea039ec960f696f284a60f58447"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
-<tr class="separator:adceecea039ec960f696f284a60f58447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplParams" colspan="2"><a id="a9926c9d7d5ed8e1b882c4a8bbbd677c4"></a>
-template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;&gt; &gt; </td></tr>
-<tr class="memitem:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const T &amp;lhs, <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
-<tr class="separator:a9926c9d7d5ed8e1b882c4a8bbbd677c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130d579608851e9625d779e4c8bea9cf"><td class="memTemplParams" colspan="2"><a id="a130d579608851e9625d779e4c8bea9cf"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;, void *&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a130d579608851e9625d779e4c8bea9cf"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, const S &amp;rhs)</td></tr>
+<tr class="separator:a130d579608851e9625d779e4c8bea9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d538a24793ae789cda0170916072aff"><td class="memTemplParams" colspan="2"><a id="a0d538a24793ae789cda0170916072aff"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;, void *&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a0d538a24793ae789cda0170916072aff"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt; &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
+<tr class="separator:a0d538a24793ae789cda0170916072aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85f8ce3d29a102c89b5fd66913e6038"><td class="memTemplParams" colspan="2"><a id="ad85f8ce3d29a102c89b5fd66913e6038"></a>
+template&lt;typename T , typename S , typename std::enable_if_t&lt; can_check_equality&lt; T, S &gt;, void *&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad85f8ce3d29a102c89b5fd66913e6038"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const T &amp;lhs, const <a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; S &gt; &amp;rhs)</td></tr>
+<tr class="separator:ad85f8ce3d29a102c89b5fd66913e6038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplParams" colspan="2"><a id="a948a0e5e3738c8aa6692ad55e813865f"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a948a0e5e3738c8aa6692ad55e813865f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d2b/classnta_1_1utils_1_1Option.html">Option</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d33/namespacenta_1_1utils.html#a948a0e5e3738c8aa6692ad55e813865f">make_some</a> (const T &amp;data)</td></tr>
@@ -267,7 +267,7 @@ template&lt;typename T , typename  = std::void_t&lt;&gt;&gt; </td></tr>
 <tr class="memitem:a8b500aa5946d96420fc10b7c1f9f3010"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>can_cout</b> = false</td></tr>
 <tr class="separator:a8b500aa5946d96420fc10b7c1f9f3010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae659887677804fbfb48fc5d15e77aaa4"><td class="memTemplParams" colspan="2"><a id="ae659887677804fbfb48fc5d15e77aaa4"></a>
-template&lt;typename T , typename U , typename  = std::void_t&lt;&gt;&gt; </td></tr>
+template&lt;typename T , typename  = T, typename  = std::void_t&lt;&gt;&gt; </td></tr>
 <tr class="memitem:ae659887677804fbfb48fc5d15e77aaa4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>can_check_equality</b> = false</td></tr>
 <tr class="separator:ae659887677804fbfb48fc5d15e77aaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
