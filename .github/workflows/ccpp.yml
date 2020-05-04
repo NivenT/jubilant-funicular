@@ -37,6 +37,3 @@ jobs:
     - name: check directory
       run: ls -lhR
       working-directory: build
-    - name: make test
-      run: make -C ../../../ test
-      working-directory: build/utilities/tests_bin/path
