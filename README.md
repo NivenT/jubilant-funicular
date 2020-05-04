@@ -1,6 +1,5 @@
 # jubilant-funicular
-[![Build Status](https://travis-ci.org/NivenT/jubilant-funicular.svg?branch=master)](https://travis-ci.org/NivenT/jubilant-funicular) (This is only failing because I barely know how TravisCI works)
-# Description
+
 This is a library to aid in the creation of (2D) games using OpenGL and SDL2. It was originally created while following tutorials on the [MakingGamesWithBen](https://www.youtube.com/channel/UCL5m1_llmeiAdZMo_ZanIvg) youtube channel, but it has since grown into its own library, and so has many differences from [the one](https://github.com/Barnold1953/GraphicsTutorials) written in that series. This library is here for me to learn a little about game development.
 
 ~~I am using this library to write [this game](https://github.com/NivenT/Planet).~~
