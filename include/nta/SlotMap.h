@@ -103,18 +103,28 @@ namespace nta {
         template<typename T, typename IndexType = std::size_t, typename GenType = uint16_t>
         class SlotMap {
         public:
+            using value_type = T;
+            using iterator = T*;
+            using const_iterator = const T*;
+            using reverse_iterator = std::reverse_iterator<iterator>;
+            using const_reverse_iterator = std::reverse_iterator<const_iterator>;
+            using reference = T&;
+            using const_reference = const T&;
             using index_type = IndexType;
             using size_type = IndexType;
             using gen_type = GenType;
             using Key = SlotMapKey<IndexType, GenType>;
+            using storage_type = typename std::aligned_storage_t<sizeof(T), alignof(T)>;
         private:
             void grow() { reserve(m_cap == 0 ? DEFAULT_CAP : m_cap << 1); }
             void remove_impl(Key k, bool gen_bump);
+            Option<reference> at_impl(Key k) const;
+            reference _get_raw(index_type idx) const { 
+                return reinterpret_cast<T*>(std::launder(&m_data[0]))[idx];
+            }
 
-            // Should these be aligned storage?
-            // m_data probably should be. TODO: Fix later...
             Key* m_slots{};
-            T* m_data{};
+            storage_type* m_data{};
             index_type* m_slot_idxes{};
 
             size_type m_size{};
@@ -133,9 +143,12 @@ namespace nta {
             bool is_empty() const { return m_size == 0; }
             bool empty() const { return is_empty(); }
 
-            Option<T&> at(Key k) const;
-            Option<T&> operator[](Key k) const { return at(k); }
-            T& at_unsafe(Key k) const { return at(k).unwrap(); }
+            Option<reference> at(Key k) { return at_impl(k); }
+            Option<const_reference> at(Key k) const  { return at_impl(k); }
+            Option<reference> operator[](Key k) { return at(k); }
+            Option<const_reference> operator[](Key k) const { return at(k); }
+            T& at_unsafe(Key k) { return at(k).unwrap(); }
+            const T& at_unsafe(Key k) const { return at(k).unwrap(); }
 
             gen_type get_curr_gen(index_type idx) const { return idx < m_cap ? m_slots[idx].gen : 0; }
             gen_type get_curr_gen(Key k) const { return get_curr_gen(k.idx); }
@@ -164,12 +177,20 @@ namespace nta {
             void erase(Key k) { remove(k); }
             void clear();
 
-            T* begin() { return &m_data[0]; }
-            const T* begin() const  { return &m_data[0]; }
-            T* end() { return &m_data[m_size]; }
-            const T* end() const { return &m_data[m_size]; }
-            const T* cbegin() const { return &m_data[0]; }
-            const T* cend() const { return &m_data[m_size]; }
+            iterator begin() { return &_get_raw(0); }
+            const_iterator begin() const { return cbegin(); }
+            iterator end() { return begin() + m_size; }
+            const_iterator end() const { return cend(); }
+            const_iterator cbegin() const { 
+                return reinterpret_cast<const T*>(std::launder(&m_data[0])); 
+            }
+            const_iterator cend() const { return cbegin() + m_size; }
+            reverse_iterator rbegin() { return reverse_iterator(end()); }
+            const_reverse_iterator rbegin() const { return crbegin(); }
+            reverse_iterator rend() { return reverse_iterator(begin()); }
+            const_reverse_iterator rend() const { return crend(); }
+            const_reverse_iterator crbegin() { return const_reverse_iterator(cend()); }
+            const_reverse_iterator crend() { return const_reverse_iterator(cbegin()); }
         };
         // These type names are hideous
         template<typename T, typename IndexType, typename GenType>
@@ -192,24 +213,28 @@ namespace nta {
             return false;
         }
         template<typename T, typename IndexType, typename GenType>
-        Option<T&> SlotMap<T, IndexType, GenType>::at(SlotMap<T, IndexType, GenType>::Key k) const {
+        Option<T&> SlotMap<T, IndexType, GenType>::at_impl(SlotMap<T, IndexType, GenType>::Key k) const {
             if (k.idx >= m_cap) return Option<T&>::none();
             const Key& key = m_slots[k.idx];
             if (key.gen != k.gen) return Option<T&>::none();
             if (is_free(k.idx)) return Option<T&>::none();
-            return Option<T&>::some(m_data[key.idx]);
+            return Option<T&>::some(_get_raw(key.idx));
         }
         template<typename T, typename IndexType, typename GenType>
         void SlotMap<T, IndexType, GenType>::reserve(size_type new_cap) {
             if (new_cap <= m_cap) return;
 
-            T* new_data = static_cast<T*>(std::aligned_alloc(alignof(T), 
-                                                             sizeof(T) * new_cap));
-            Key* new_slots = static_cast<Key*>(std::aligned_alloc(alignof(Key), 
-                                                                  sizeof(Key) * new_cap));
-            index_type* new_idxes = static_cast<index_type*>(std::aligned_alloc(alignof(index_type),
-                                                                               sizeof(index_type) * new_cap));
+            storage_type* new_data;
+            Key*          new_slots;
+            index_type*   new_idxes;
 
+            new_data = static_cast<storage_type*>(std::aligned_alloc(alignof(T), 
+                                                                     sizeof(T) * new_cap));
+            new_slots = static_cast<Key*>(std::aligned_alloc(alignof(Key), 
+                                                             sizeof(Key) * new_cap));
+            new_idxes = static_cast<index_type*>(std::aligned_alloc(alignof(index_type),
+                                                                    sizeof(index_type) * new_cap));
+    
             std::uninitialized_copy(m_data, m_data + m_size, new_data);
             std::uninitialized_copy(m_slots, m_slots + m_cap, new_slots);
             std::uninitialized_copy(m_slot_idxes, m_slot_idxes + m_size, new_idxes);
@@ -291,7 +316,7 @@ namespace nta {
             if (is_free(k.idx)) return;
 
             m_size--;
-            m_data[key.idx].~T();
+            _get_raw(key.idx).~T();
 
             std::swap(m_data[key.idx], m_data[m_size]);
 

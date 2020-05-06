@@ -56,7 +56,7 @@ namespace nta {
 		return m_entity_gen.is_in_use(entity);
 	}
 	utils::Option<Entity> ECS::get_owner(ComponentID cmpn) const {
-		return m_component_info[cmpn].map<Entity>([](ComponentInfo& info) { return info.owner; });
+		return m_component_info[cmpn].map<Entity>([](const ComponentInfo& info) { return info.owner; });
 	}
 	utils::Option<Component&> ECS::get_component(ComponentID cmpn) const {
 		auto maybe_info = m_component_info[cmpn];

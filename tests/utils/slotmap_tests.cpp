@@ -23,25 +23,44 @@ int main(int argc, char* argv[]) {
     using Key = SlotMapKey<>;
 
     auto key = map.add({1});
+
+    println("Added an element");
+
     assert(map.size() == 1);
     assert(!map.is_empty());
     assert(map.capacity() >= map.size());
 
+    println("Checked size");
+
     auto maybe = map[key];
+
+    println("Retrieved an element");
+
     assert(maybe.is_some());
     assert(maybe.unwrap().val == 1);
+
+    println("Checked value");
 
     maybe.unwrap().val = 10;
     assert(map.at_unsafe(key).val == 10);
     map.remove(key);
+
+    println("Removed an element");
+
     assert(map.empty());
     assert(map[key].is_none());
 
+    println("Confirmed map is empty");
+
     vector<pair<Key, bool>> keys;
     for (int round = 0; round < 4; ++round) {
+        println("Starting round {} of {}", round + 1, 4);
+
         for (int i = 0; i < 100; i++) keys.emplace_back(map.emplace(keys.size()), true);
         assert(map.capacity() >= map.size());
         auto cap = map.capacity();
+
+        println("  Added new values");
 
         for (int i = 0; i < keys.size(); i++) {
             if (rand()%2) {
@@ -51,11 +70,15 @@ int main(int argc, char* argv[]) {
         }
         assert(map.capacity() == cap);
 
+        println("  Removed some values");
+
         for (int i = 0; i < keys.size(); i++) {
             auto maybe = map[keys[i].first];
             assert(maybe.is_some() == keys[i].second);
             if (maybe.is_some()) assert(maybe.unwrap().val == i);
         }
+
+        println(" Checked consistency");
 
         for (int i = 0; i < keys.size(); i++) {
             if (!keys[i].second && rand()%10 == 0) {
@@ -69,6 +92,8 @@ int main(int argc, char* argv[]) {
             }
         }
 
+        println("  Inserted some values back");
+
         int count = 0;
         for (auto& p : map) {
             assert(0 <= p.val && p.val < keys.size());
@@ -81,6 +106,8 @@ int main(int argc, char* argv[]) {
             if (k.second) count++;
         }
         assert(count == map.size());
+
+        println("  Compared counts");
     }
 
     vector<bool> removed(map.capacity(), true);

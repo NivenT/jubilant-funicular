@@ -42,6 +42,8 @@ namespace nta {
         public:
             template<typename T>
             static const Record get() {
+                static_assert(std::is_base_of_v<nta::Component, T>,
+                              "ComponentRegistry: Can only register types deriving from nta::Component");
                 Record ret;
                 
                 ret.create_list = [](utils::TypeMap& map) {

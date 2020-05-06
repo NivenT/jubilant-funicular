@@ -18,11 +18,13 @@ namespace nta {
     enum MouseWheelMotion{STATIONARY = 0, SCROLL_UP = 1, SCROLL_DOWN = -1};
     /// keeps track of all input
     class InputManager {
+    public:
+        using key_type = unsigned int;
     private:
         /// stores whether each key is pressed or not
-        std::unordered_map<unsigned int, bool> m_keyMap;
+        std::unordered_map<key_type, bool> m_keyMap;
         /// stores whether the key was pressed last frame or not
-        std::unordered_map<unsigned int, bool> m_prevKeyMap;
+        std::unordered_map<key_type, bool> m_prevKeyMap;
         /// stores the location of the mouse in mouse coordinates
         glm::vec2 m_mouseCoords;
         /// stores the motion of the mouse wheel
@@ -36,15 +38,15 @@ namespace nta {
         /// returns the mouse wheel's motion
         MouseWheelMotion getMouseWheelMotion() const;
         /// returns whether or not specified key is pressed
-        bool isPressed(unsigned int key) const;
+        bool isPressed(key_type key) const;
         /// returns whether or not the key was just pressed this frame
-        bool justPressed(unsigned int key) const;
+        bool justPressed(key_type key) const;
         /// returns whether or not the key was just released this frame
-        bool justReleased(unsigned int key) const;
+        bool justReleased(key_type key) const;
         /// tells InputManager that specified key was pressed
-        void pressKey(unsigned int key);
+        void pressKey(key_type key);
         /// tells InputManager that specified key was released
-        void releaseKey(unsigned int key);
+        void releaseKey(key_type key);
         /// tells InputManager where the mouse is
         void setMouseCoords(float x, float y);
         /// tells InputManager how the wheel is rolling
