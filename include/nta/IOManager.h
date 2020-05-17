@@ -1,14 +1,13 @@
-#ifndef IOMANAGER_H_INCLUDED
-#define IOMANAGER_H_INCLUDED
+#ifndef NTA_IOMANAGER_H_INCLUDED
+#define NTA_IOMANAGER_H_INCLUDED
 
 #include <vector>
 #include <fstream>
 
 #include "MyEngine.h"
 
-typedef std::vector<unsigned char> FileBuffer;
-
 namespace nta {
+    typedef std::vector<unsigned char> FileBuffer;
     /// Handles binary file operations
     class IOManager {
     public:
@@ -50,4 +49,4 @@ namespace nta {
     };
 }
 
-#endif // IOMANAGER_H_INCLUDED
+#endif // NTA_IOMANAGER_H_INCLUDED

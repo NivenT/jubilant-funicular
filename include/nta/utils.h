@@ -9,6 +9,8 @@
 #include "nta/MyEngine.h"
 
 namespace nta {
+	/// Reexporting everything from utilities is dumb
+	/// \todo Figure out a nice sub-library solution and implement it
 	namespace utils {
 		/// Checks if str starts with prefix
 		extern bool starts_with(crstring str, crstring prefix);
@@ -24,6 +26,8 @@ namespace nta {
 		extern std::vector<std::string> split(crstring str, char delim);
 		/// Rotates a point (about the origin) by the given angle
     	extern glm::vec2 rotate(crvec2 pt, float angle);
+    	/// Reads the contents of a file into a string
+    	extern std::string read_file(const std::string_view path);
 
 		/// converts input to a std::string
 	    template<class T>
