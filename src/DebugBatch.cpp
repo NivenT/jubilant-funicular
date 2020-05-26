@@ -50,6 +50,8 @@ namespace nta {
     void DebugBatch::addLine(crvec2 start, crvec2 end, crvec4 color, int num_pieces) {
         const int start_index = m_vertices.size();
         const glm::vec2 diff = end - start;
+        m_vertices.reserve(start_index + num_pieces + 1);
+        m_indices.reserve(m_indices.size() + 2*num_pieces);
         for (int i = 0; i <= num_pieces; i++) {
             m_vertices.emplace_back(start + (float)i*diff/(float)num_pieces, color);
             if (i > 0) {

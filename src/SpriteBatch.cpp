@@ -98,8 +98,8 @@ namespace nta {
         glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     void SpriteBatch::addGlyph(crvec4 posRect, GLuint texture, crvec4 uvRect, 
-                               crvec4 color, float angle, float depth) {
-        addGlyph(posRect, uvRect, texture, color, angle, depth);
+                               crvec4 color, float depth) {
+        m_glyphs.emplace_back(posRect, uvRect, texture, depth, color);
     }
     void SpriteBatch::addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, float depth,
                                crvec4 color) {

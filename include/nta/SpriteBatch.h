@@ -119,7 +119,6 @@ namespace nta {
         void addGlyph(crvec4 posRect, GLuint texture = 0, 
                       crvec4 uvRect = glm::vec4(0,0,1,1), 
                       crvec4 color = glm::vec4(1),
-                      float angle = 0,
                       float depth = NTA_DEFAULT_DEPTH);
         void addGlyph(crvec4 posRect, crvec4 uvRect, GLuint texture, 
                       float depth = NTA_DEFAULT_DEPTH, crvec4 color = glm::vec4(1));
