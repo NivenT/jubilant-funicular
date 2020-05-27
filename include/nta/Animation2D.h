@@ -19,6 +19,14 @@ namespace nta {
         std::size_t num_sprites() const {
             return num_rows * num_cols;
         }
+        glm::vec2 sprite_dims() const {
+            return glm::vec2(tex.width/num_cols, tex.height/num_rows);
+        }
+        // Not sure how I feel about this
+        std::size_t sprite_area() const {
+            auto dims = sprite_dims();
+            return dims.x*dims.y;
+        }
         /// Gets UV-coordinates of specific sprite in the sheet
         ///
         /// The topleft sprite is index 0 and indices increase moving to the right
@@ -40,6 +48,10 @@ namespace nta {
         glm::vec2 get_frame_dims() const {
             return glm::vec2(tex.width/num_cols, tex.height/num_rows);
         }
+        /// Reads pixels of one sprite into buffer specified by pixels
+        ///
+        /// pixels will contain RGB values, so should be size >= sprite_area()*3
+        void read_sprite_pixels(GLubyte* pixels, std::size_t index) const;
         /// The texture holding all the sprites
         GLTexture tex;
         /// The dimensions of the sheet (rows x cols)
