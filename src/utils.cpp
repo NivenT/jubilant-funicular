@@ -23,6 +23,9 @@ namespace nta {
         std::string read_file(const std::string_view path) {
             return ::utils::read_file(path);
         }
+        std::size_t hash_combine(std::size_t lhs, std::size_t rhs) {
+            return ::utils::hash_combine(lhs, rhs);
+        }
         glm::vec2 rotate(crvec2 pt, float angle) {
         return glm::vec2(glm::cos(angle)*pt.x - glm::sin(angle)*pt.y,
                              glm::sin(angle)*pt.x + glm::cos(angle)*pt.y);

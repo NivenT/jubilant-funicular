@@ -4,6 +4,7 @@
 #include "nta/Option.h"
 #include "nta/IDFactory.h"
 #include "nta/format.h"
+#include "nta/utils.h"
 
 namespace nta {
     namespace utils {
@@ -23,9 +24,9 @@ namespace nta {
             index_type idx;
             gen_type gen;
         };
-        template<>
-        struct Formatter<SlotMapKey<>> {
-            std::string operator()(const SlotMapKey<>& arg) {
+        template<typename IndexType, typename GenType>
+        struct Formatter<SlotMapKey<IndexType, GenType>> {
+            std::string operator()(const SlotMapKey<IndexType, GenType>& arg) {
                 return format("{ .idx = {}, .gen = {} }", arg.idx, arg.gen);
             }
         };
@@ -341,5 +342,15 @@ namespace nta {
         }  
     }
 }
+
+namespace std {
+    template<typename IndexType, typename GenType>
+    struct hash<nta::utils::SlotMapKey<IndexType, GenType>> {
+        std::size_t operator()(const nta::utils::SlotMapKey<IndexType, GenType> key) const {
+            return nta::utils::hash_combine(std::hash<IndexType>()(key.idx),
+                                            std::hash<GenType>()(key.gen));
+        }
+    };
+};
 
 #endif // NTA_SLOTMAP_H_INCLUDED
