@@ -1,2 +1,5 @@
 <map id="nta::CallbackManager::event" name="nta::CallbackManager::event">
+<area shape="rect" id="node1" title="A function to run at a certain time with some regularity." alt="" coords="33,124,197,165"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="105,5,271,32"/>
 </map>

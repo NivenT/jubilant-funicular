@@ -1,3 +1,6 @@
 <map id="nta::Compressor" name="nta::Compressor">
-<area shape="rect" id="node3" href="$da/dbb/classnta_1_1HuffmanNode.html" title="A node in a Huffman tree. " alt="" coords="172,102,301,129"/>
+<area shape="rect" id="node1" title="Static class for compressing byte buffers." alt="" coords="92,199,221,225"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,161,136"/>
+<area shape="rect" id="node3" href="$da/dbb/classnta_1_1HuffmanNode.html" title="A node in a Huffman tree." alt="" coords="185,102,328,129"/>
+<area shape="rect" id="node4" title=" " alt="" coords="237,5,276,32"/>
 </map>

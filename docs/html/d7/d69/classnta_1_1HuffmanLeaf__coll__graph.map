@@ -1,3 +1,6 @@
 <map id="nta::HuffmanLeaf" name="nta::HuffmanLeaf">
-<area shape="rect" id="node2" href="$da/dbb/classnta_1_1HuffmanNode.html" title="A node in a Huffman tree. " alt="" coords="5,96,135,123"/>
+<area shape="rect" id="node1" title="represents a leaf in a Huffman tree" alt="" coords="187,187,323,213"/>
+<area shape="rect" id="node2" href="$da/dbb/classnta_1_1HuffmanNode.html" title="A node in a Huffman tree." alt="" coords="5,96,148,123"/>
+<area shape="rect" id="node3" title=" " alt="" coords="57,5,96,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="259,96,372,123"/>
 </map>

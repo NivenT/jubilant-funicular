@@ -1,4 +1,12 @@
 <map id="nta::Glyph" name="nta::Glyph">
-<area shape="rect" id="node4" href="$d5/d07/structnta_1_1Vertex2D.html" title="represents a vertex in 2 dimensions " alt="" coords="149,228,252,255"/>
-<area shape="rect" id="node5" href="$df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer) " alt="" coords="302,124,419,151"/>
+<area shape="rect" id="node1" title="represents what is essentially a sprite" alt="" coords="19,361,108,388"/>
+<area shape="rect" id="node2" title=" " alt="" coords="59,124,111,151"/>
+<area shape="rect" id="node4" href="$d5/d07/structnta_1_1Vertex2D.html" title="represents a vertex in 2 dimensions" alt="" coords="158,228,270,255"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,5,102,32"/>
+<area shape="rect" id="node5" href="$df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer)" alt="" coords="320,124,450,151"/>
+<area shape="rect" id="node6" title=" " alt="" coords="230,5,321,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="346,5,424,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="449,5,518,32"/>
+<area shape="rect" id="node9" title=" " alt="" coords="165,124,218,151"/>
+<area shape="rect" id="node10" title=" " alt="" coords="242,124,296,151"/>
 </map>

@@ -1,2 +1,8 @@
 <map id="nta::Window" name="nta::Window">
+<area shape="rect" id="node1" title="Represent a window." alt="" coords="152,109,255,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="82,5,141,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="165,5,293,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="325,5,389,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="462,5,579,32"/>
 </map>

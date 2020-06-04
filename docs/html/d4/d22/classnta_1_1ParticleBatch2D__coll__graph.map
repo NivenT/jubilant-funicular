@@ -1,3 +1,9 @@
 <map id="nta::ParticleBatch2D" name="nta::ParticleBatch2D">
-<area shape="rect" id="node2" href="$d5/d1a/structnta_1_1Particle2D.html" title="Represents a simple 2d particle. " alt="" coords="114,118,224,145"/>
+<area shape="rect" id="node1" title="Represents a batch of particles of the same &quot;type&quot;." alt="" coords="188,231,342,257"/>
+<area shape="rect" id="node2" href="$d5/d1a/structnta_1_1Particle2D.html" title="Represents a simple 2d particle." alt="" coords="119,118,238,145"/>
+<area shape="rect" id="node3" title=" " alt="" coords="42,5,94,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="129,5,182,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="213,5,266,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="261,111,426,152"/>
+<area shape="rect" id="node7" title=" " alt="" coords="466,118,504,145"/>
 </map>

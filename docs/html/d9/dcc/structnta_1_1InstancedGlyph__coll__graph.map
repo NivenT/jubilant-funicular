@@ -1,2 +1,6 @@
 <map id="nta::InstancedGlyph" name="nta::InstancedGlyph">
+<area shape="rect" id="node1" title="Represents a Glyph to be drawn multiple times with slight variations." alt="" coords="107,109,259,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="164,5,203,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="227,5,297,32"/>
 </map>

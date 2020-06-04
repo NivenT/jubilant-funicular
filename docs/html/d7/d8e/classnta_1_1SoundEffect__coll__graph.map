@@ -1,2 +1,4 @@
 <map id="nta::SoundEffect" name="nta::SoundEffect">
+<area shape="rect" id="node1" title="Represents a sound effect or short audio clip." alt="" coords="5,95,135,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,5,123,32"/>
 </map>

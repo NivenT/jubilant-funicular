@@ -1,3 +1,5 @@
 <map id="nta::utils::LinkedNode&lt; T &gt;::iterator" name="nta::utils::LinkedNode&lt; T &gt;::iterator">
-<area shape="rect" id="node2" href="$d5/dc6/structnta_1_1utils_1_1LinkedNode.html" title="A generic linked list. " alt="" coords="5,95,187,121"/>
+<area shape="rect" id="node1" title="Custom iterator for looping over the data in the linked list." alt="" coords="25,184,187,225"/>
+<area shape="rect" id="node2" href="$d5/dc6/structnta_1_1utils_1_1LinkedNode.html" title="A generic linked list." alt="" coords="5,95,207,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="87,5,125,32"/>
 </map>

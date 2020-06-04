@@ -1,2 +1,6 @@
 <map id="nta::InputManager" name="nta::InputManager">
+<area shape="rect" id="node1" title="keeps track of all input" alt="" coords="195,124,337,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,156,39"/>
+<area shape="rect" id="node3" title=" " alt="" coords="185,5,347,47"/>
+<area shape="rect" id="node4" title=" " alt="" coords="375,13,429,39"/>
 </map>

@@ -1,3 +1,11 @@
 <map id="nta::Vertex2D" name="nta::Vertex2D">
-<area shape="rect" id="node2" href="$df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer) " alt="" coords="123,124,241,151"/>
+<area shape="rect" id="node1" title="represents a vertex in 2 dimensions" alt="" coords="309,228,421,255"/>
+<area shape="rect" id="node2" href="$df/d9d/structnta_1_1VertexAttrib.html" title="represents an attribute of a vertex (e.g. a call to glVertexAttribPointer)" alt="" coords="131,124,261,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="131,5,170,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="194,5,273,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="297,5,367,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="286,124,338,151"/>
+<area shape="rect" id="node8" title=" " alt="" coords="392,124,445,151"/>
+<area shape="rect" id="node9" title=" " alt="" coords="469,124,523,151"/>
 </map>

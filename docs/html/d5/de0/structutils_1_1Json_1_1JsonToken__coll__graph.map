@@ -1,2 +1,5 @@
 <map id="utils::Json::JsonToken" name="utils::Json::JsonToken">
+<area shape="rect" id="node1" title="Used for tokenizing strings before parsing them into Json objects." alt="" coords="58,95,215,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="146,5,277,32"/>
 </map>

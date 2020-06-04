@@ -1,2 +1,6 @@
 <map id="nta::DebugBatch" name="nta::DebugBatch">
+<area shape="rect" id="node1" title="A collection of debug primitives (outlines of shapes) to be drawn." alt="" coords="118,124,249,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="164,5,203,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="227,5,409,32"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="nta::Timer" name="nta::Timer">
-<area shape="rect" id="node2" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value " alt="" coords="5,80,119,107"/>
+<area shape="rect" id="node1" title="represents a timer" alt="" coords="22,5,110,32"/>
+<area shape="rect" id="node2" href="$d7/d1f/classnta_1_1FPSLimiter.html" title="used to cap the fps of the program at a specific value" alt="" coords="5,80,127,107"/>
 </map>

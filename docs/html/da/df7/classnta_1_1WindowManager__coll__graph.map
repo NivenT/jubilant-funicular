@@ -1,2 +1,4 @@
 <map id="nta::WindowManager" name="nta::WindowManager">
+<area shape="rect" id="node1" title="Manages Windows (or GL contexts if you prefer)" alt="" coords="5,109,165,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,165,47"/>
 </map>

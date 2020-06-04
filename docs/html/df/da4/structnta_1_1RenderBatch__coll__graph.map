@@ -1,2 +1,4 @@
 <map id="nta::RenderBatch" name="nta::RenderBatch">
+<area shape="rect" id="node1" title="stores information about batches of vertices with the same texture in a vertex buffer object" alt="" coords="5,139,140,165"/>
+<area shape="rect" id="node2" title=" " alt="" coords="53,5,92,32"/>
 </map>

@@ -1,2 +1,4 @@
 <map id="nta::Music" name="nta::Music">
+<area shape="rect" id="node1" title="Represents a longer piece of music." alt="" coords="12,95,101,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,108,32"/>
 </map>

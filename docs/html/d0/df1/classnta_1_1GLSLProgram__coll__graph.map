@@ -1,3 +1,7 @@
 <map id="nta::GLSLProgram" name="nta::GLSLProgram">
-<area shape="rect" id="node4" href="$d9/d63/classutils_1_1Path.html" title="A (case&#45;sensitive) Path in a file system. " alt="" coords="213,95,295,121"/>
+<area shape="rect" id="node1" title="represents a program written in GLSL comprised of a vertex shader and a fragment shader" alt="" coords="103,228,242,255"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,44,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="147,95,198,121"/>
+<area shape="rect" id="node4" href="$d9/d63/classutils_1_1Path.html" title="A (case&#45;sensitive) Path in a file system." alt="" coords="237,95,324,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="251,5,310,32"/>
 </map>

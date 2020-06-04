@@ -51,7 +51,7 @@ namespace nta {
 
         friend SpriteFont;
     };
-    /// Loads in a .ttf file, creates a font texture from it, and is then used to render text
+    /// Loads in a .ttf file, creates a font texture from it which is then used to render text
     class SpriteFont {
     private:
         /// Initializes the SpriteFont
@@ -70,6 +70,9 @@ namespace nta {
         ~SpriteFont() { destroy(); }
         /// returns the dimensions of the rectangle containing the text
         glm::vec2 measure(crstring text) const;
+        /// returns m_fontHeight
+        int font_height() const { return m_fontHeight; }
+        /// Returns the (id of) the texture used for rendering font
         GLuint getTexture() const { return m_texId; }
         /// renders text with specified location, color, scale, etc.
         void drawText(SpriteBatch& batch, crstring text, crvec2 topLeft, crvec2 scale,

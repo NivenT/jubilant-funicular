@@ -1,10 +1,19 @@
 <map id="nta::ECS" name="nta::ECS">
-<area shape="rect" id="node2" href="$d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS. " alt="" coords="805,35,969,61"/>
-<area shape="rect" id="node4" href="$d6/d89/classutils_1_1TypeMap.html" title="utils::TypeMap" alt="" coords="833,100,941,127"/>
-<area shape="rect" id="node6" href="$dd/d7a/classnta_1_1utils_1_1SlotMap.html" title="nta::utils::SlotMap\l\&lt; nta::ECS::ComponentInfo \&gt;" alt="" coords="788,315,985,357"/>
-<area shape="rect" id="node7" href="$db/da0/classnta_1_1ECS.html#d7/def/structnta_1_1ECS_1_1ComponentInfo" title="Info directly attached to a ComponentID. " alt="" coords="465,233,638,260"/>
-<area shape="rect" id="node8" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="nta::utils::SlotMapKey\&lt;\&gt;" alt="" coords="148,165,315,192"/>
-<area shape="rect" id="node15" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; SlotMapKey\&lt;\&gt; \&gt;" alt="" coords="482,151,621,193"/>
-<area shape="rect" id="node12" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index. " alt="" coords="467,462,635,503"/>
-<area shape="rect" id="node17" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title="nta::utils::IDFactory\l\&lt; nta::utils::SlotMapKey \&gt;" alt="" coords="799,473,974,514"/>
+<area shape="rect" id="node1" title=" " alt="" coords="928,188,1004,215"/>
+<area shape="rect" id="node2" href="$d6/d90/classnta_1_1ComponentRegistry.html" title="A store of every Component type in use by an ECS." alt="" coords="553,32,733,59"/>
+<area shape="rect" id="node3" title=" " alt="" coords="157,5,392,61"/>
+<area shape="rect" id="node4" href="$d6/d89/classutils_1_1TypeMap.html" title=" " alt="" coords="585,105,701,132"/>
+<area shape="rect" id="node5" title=" " alt="" coords="191,86,358,127"/>
+<area shape="rect" id="node6" href="$dd/d7a/classnta_1_1utils_1_1SlotMap.html" title=" " alt="" coords="536,306,751,347"/>
+<area shape="rect" id="node7" title=" " alt="" coords="222,387,327,413"/>
+<area shape="rect" id="node8" title=" " alt="" coords="215,285,334,312"/>
+<area shape="rect" id="node9" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title="A generational index." alt="" coords="183,219,366,261"/>
+<area shape="rect" id="node16" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title=" " alt="" coords="546,181,741,222"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,269,80,296"/>
+<area shape="rect" id="node14" href="$d0/dfd/structnta_1_1utils_1_1SlotMapKey.html" title=" " alt="" coords="181,529,368,556"/>
+<area shape="rect" id="node11" title=" " alt="" coords="13,468,73,495"/>
+<area shape="rect" id="node12" title=" " alt="" coords="179,336,371,363"/>
+<area shape="rect" id="node13" href="$d6/d62/classnta_1_1utils_1_1IDFactory.html" title=" " alt="" coords="568,522,719,563"/>
+<area shape="rect" id="node15" title=" " alt="" coords="179,580,371,607"/>
+<area shape="rect" id="node17" title=" " alt="" coords="207,151,342,193"/>
 </map>

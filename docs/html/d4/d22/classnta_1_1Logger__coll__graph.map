@@ -1,2 +1,6 @@
 <map id="nta::Logger" name="nta::Logger">
+<area shape="rect" id="node1" title="stores program information in internal and external logs" alt="" coords="96,109,191,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="113,5,173,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="197,5,284,32"/>
 </map>

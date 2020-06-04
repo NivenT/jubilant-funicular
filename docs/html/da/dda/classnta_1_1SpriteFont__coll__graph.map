@@ -1,3 +1,8 @@
 <map id="nta::SpriteFont" name="nta::SpriteFont">
-<area shape="rect" id="node3" href="$d4/d51/namespacenta.html#d4/d26/structnta_1_1CharGlyph" title="represents a single char in the texture " alt="" coords="83,95,193,121"/>
+<area shape="rect" id="node1" title="Loads in a .ttf file, creates a font texture from it which is then used to render text." alt="" coords="90,199,207,225"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,44,121"/>
+<area shape="rect" id="node3" href="$d4/d51/namespacenta.html#d4/d26/structnta_1_1CharGlyph" title="represents a single char in the texture" alt="" coords="89,95,208,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="83,5,137,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="161,5,214,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="247,95,307,121"/>
 </map>

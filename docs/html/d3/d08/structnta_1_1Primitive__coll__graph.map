@@ -1,2 +1,6 @@
 <map id="nta::Primitive" name="nta::Primitive">
+<area shape="rect" id="node1" title="represents a primitive (point, line, triangle, etc.)" alt="" coords="48,95,159,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,57,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="84,5,123,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="147,5,329,32"/>
 </map>

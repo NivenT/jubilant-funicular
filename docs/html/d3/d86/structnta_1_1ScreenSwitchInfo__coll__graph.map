@@ -1,2 +1,5 @@
 <map id="nta::ScreenSwitchInfo" name="nta::ScreenSwitchInfo">
+<area shape="rect" id="node1" title="Info passed to Screen::onFocus." alt="" coords="5,95,168,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,5,55,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="108,5,169,32"/>
 </map>
