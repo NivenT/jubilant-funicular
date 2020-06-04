@@ -80,7 +80,8 @@ if(${NTA_USE_IMGUI})
     add_library(imgui deps/imgui/imgui.cpp
                       deps/imgui/imgui_draw.cpp
                       deps/imgui/imgui_impl_sdl_gl3.cpp
-                      deps/imgui/imgui_tabs.cpp)
+                      deps/imgui/imgui_tabs.cpp
+                      deps/imgui/imgui_demo.cpp)
     set(NTA_LIBRARIES ${NTA_LIBRARIES} imgui CACHE INTERNAL "")
 else()
     message(STATUS "Not using Imgui")

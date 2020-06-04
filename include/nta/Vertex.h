@@ -7,6 +7,7 @@
 
 #define NUM_VERTEX_ATTRIBS 4
 
+/// \todo Have first-class support for arbitrary (i.e. user-defined) vertex types
 namespace nta {
     /// represents an attribute of a vertex (e.g. a call to glVertexAttribPointer)
     struct VertexAttrib {
