@@ -11,7 +11,8 @@
 
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
-    #include <imgui/imgui_impl_sdl_gl3.h>
+    #include <imgui/imgui_impl_sdl.h>
+    #include <imgui/imgui_impl_opengl3.h>
 #endif
 
 #include "nta/MyEngine.h"
@@ -36,6 +37,7 @@ namespace nta {
         Logger::createLog();
         Logger::writeToLog("Initializing Engine...");
         Logger::indent();
+        Logger::writeToLog("Initializing SDL2...");
         if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
             Logger::writeErrorToLog("Failed to initialize SDL: " + utils::to_string(SDL_GetError()),
                                     SDL_FAILURE);
@@ -46,11 +48,13 @@ namespace nta {
         SDL_SetCursor(SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_CROSSHAIR));
         TTF_Init();
         #ifdef NTA_USE_IMGUI
+            Logger::writeToLog("Initializing imgui...");
             IMGUI_CHECKVERSION();
             ImGui::CreateContext();
             ImGui::StyleColorsDark();
         #endif
         #ifdef NTA_USE_DEVIL
+            Logger::writeToLog("Initializing DevIL");
             ilInit();
             iluInit();
         #endif
@@ -64,7 +68,8 @@ namespace nta {
     }
     void cleanup() {
         #ifdef NTA_USE_IMGUI
-            ImGui_ImplSdlGL3_Shutdown();
+            ImGui_ImplOpenGL3_Shutdown();
+            ImGui_ImplSDL2_Shutdown();
             ImGui::DestroyContext();
         #endif
         ResourceManager::destroy();

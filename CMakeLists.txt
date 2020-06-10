@@ -77,12 +77,9 @@ else()
 endif()
 if(${NTA_USE_IMGUI})
     message(STATUS "Using Imgui")
-    add_library(imgui deps/imgui/imgui.cpp
-                      deps/imgui/imgui_draw.cpp
-                      deps/imgui/imgui_impl_sdl_gl3.cpp
-                      deps/imgui/imgui_tabs.cpp
-                      deps/imgui/imgui_demo.cpp)
-    set(NTA_LIBRARIES ${NTA_LIBRARIES} imgui CACHE INTERNAL "")
+    add_subdirectory(deps/imgui)
+    set(NTA_LIBRARIES ${NTA_LIBRARIES} ${IMGUI_LIBRARIES} CACHE INTERNAL "")
+    set(NTA_INCLUDE_DIR ${NTA_INCLUDE_DIR} ${IMGUI_INCLUDE_DIR} CACHE INTERNAL "")
 else()
     message(STATUS "Not using Imgui")
 endif()

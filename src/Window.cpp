@@ -3,7 +3,8 @@
 
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
-    #include <imgui/imgui_impl_sdl_gl3.h>
+    #include <imgui/imgui_impl_sdl.h>
+    #include <imgui/imgui_impl_opengl3.h>
 #endif
 
 #include "nta/Window.h"
@@ -92,7 +93,8 @@ namespace nta {
         m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
                                     m_width, m_height, sdlFlags);
         check_error();
-        if (!SDL_GL_CreateContext(m_window)) {
+        auto context = SDL_GL_CreateContext(m_window);
+        if (!context) {
             Logger::writeErrorToLog("Failed to create an OpenGL context:\n\t"
                                     + utils::to_string(SDL_GetError()),
                                     GL_FAILURE);
@@ -109,7 +111,8 @@ namespace nta {
         //SDL_GL_SetSwapInterval(1);
         check_error();
         #ifdef NTA_USE_IMGUI
-            ImGui_ImplSdlGL3_Init(m_window);
+            ImGui_ImplOpenGL3_Init();
+            ImGui_ImplSDL2_InitForOpenGL(m_window, context);
         #endif
 
         Logger::writeToLog("The window's ID is " + utils::to_string(getID()));
@@ -120,7 +123,7 @@ namespace nta {
     void Window::swapBuffers() const {
         #ifdef NTA_USE_IMGUI
             ImGui::Render();
-            ImGui_ImplSdlGL3_RenderDrawData(ImGui::GetDrawData());
+            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         #endif
         SDL_GL_SwapWindow(m_window);
     }

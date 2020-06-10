@@ -4,7 +4,8 @@
 
 #ifdef NTA_USE_IMGUI
     #include <imgui/imgui.h>
-    #include <imgui/imgui_impl_sdl_gl3.h>
+    #include <imgui/imgui_impl_sdl.h>
+    #include <imgui/imgui_impl_opengl3.h>
 #endif
 
 #include "nta/ScreenManager.h"
@@ -125,7 +126,7 @@ namespace nta {
 
             m_input.update(e);
             #ifdef NTA_USE_IMGUI
-                ImGui_ImplSdlGL3_ProcessEvent(&e);
+                ImGui_ImplSDL2_ProcessEvent(&e);
             #endif
         }
         while (!skipped_events.empty()) {
@@ -152,7 +153,9 @@ namespace nta {
                 update_input();
                 currScreen->update();
                 #ifdef NTA_USE_IMGUI
-                    ImGui_ImplSdlGL3_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
+                    ImGui_ImplOpenGL3_NewFrame();
+                    ImGui_ImplSDL2_NewFrame(m_window->getSDLWindow(GetSDLWindowKey()));
+                    ImGui::NewFrame();
                 #endif
                 currScreen->render();
                 check_error();

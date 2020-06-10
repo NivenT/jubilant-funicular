@@ -42,5 +42,5 @@ if(${NTA_USE_AUDIO})
   set(NTA_LIBRARY_SRC ${NTA_LIBRARY_SRC} ${CMAKE_CURRENT_SOURCE_DIR}/AudioManager.cpp)
 endif()
 
-add_library(${NTA_LIBRARIES} ${NTA_LIBRARY_SRC})
-target_include_directories(${NTA_LIBRARIES} PUBLIC ${NTA_INCLUDE_DIR})
+add_library(nta ${NTA_LIBRARY_SRC})
+target_include_directories(nta PUBLIC ${NTA_INCLUDE_DIR})
