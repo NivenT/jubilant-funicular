@@ -19,6 +19,7 @@ namespace nta {
         std::size_t num_sprites() const {
             return num_rows * num_cols;
         }
+        /// The (width, height) of the sprite
         glm::vec2 sprite_dims() const {
             return glm::vec2(tex.width/num_cols, tex.height/num_rows);
         }
@@ -50,8 +51,10 @@ namespace nta {
         }
         /// Reads pixels of one sprite into buffer specified by pixels
         ///
-        /// pixels will contain RGB values, so should be size >= sprite_area()*3
-        void read_sprite_pixels(GLubyte* pixels, std::size_t index) const;
+        /// By default, pixels will contain RGB values, 
+        /// so should be size >= sprite_area()*3 (unless you change format)
+        void read_sprite_pixels(GLubyte* pixels, std::size_t index, 
+                                GLenum format = GL_RGB) const;
         /// The texture holding all the sprites
         GLTexture tex;
         /// The dimensions of the sheet (rows x cols)

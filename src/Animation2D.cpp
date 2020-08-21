@@ -8,7 +8,8 @@ namespace nta {
     SpriteSheet::SpriteSheet(ContextData& context, crstring file_path, crivec2 dims) : dims(dims) {
         tex = context.getTexture(file_path).get_data_or(GLTexture::no_texture());
     }
-    void SpriteSheet::read_sprite_pixels(GLubyte* pixels, std::size_t index) const {
+    void SpriteSheet::read_sprite_pixels(GLubyte* pixels, std::size_t index, 
+                                         GLenum format) const {
         const std::size_t r = index/num_cols;
         const std::size_t c = index%num_cols;
         const glm::ivec2 dims = sprite_dims();
@@ -22,7 +23,7 @@ namespace nta {
         glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D,
                                tex.id, 0);
         glReadBuffer(GL_COLOR_ATTACHMENT0);
-        glReadPixels(left, top, dims.x, dims.y, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+        glReadPixels(left, top, dims.x, dims.y, format, GL_UNSIGNED_BYTE, pixels);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glDeleteFramebuffers(1, &fbo);
     }
