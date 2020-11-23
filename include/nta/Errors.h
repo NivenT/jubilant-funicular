@@ -18,6 +18,7 @@ namespace nta {
         DEVIL_FAILURE,
         IMPOSSIBLE_BEHAVIOR,
         UNWRAP_WRONG_RESULT_VARIANT,
+        NOT_YET_IMPLEMENTED,
         OTHER
     };
     /// Something went wrong

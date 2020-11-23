@@ -4,6 +4,7 @@
 #include <GL/glew.h>
 
 #include "nta/Errors.h"
+#include "nta/Path.h"
 
 namespace nta {
     /// A loaded image (not tied to any specific GL context)
@@ -54,6 +55,9 @@ namespace nta {
         GLTexture operator*(const GLTexture& rhs) const {
             return combine_vertical(*this, rhs);
         }
+        /// Note: performs a heap allocation, need to delete[] .data of returned value.
+        RawTexture get_pixel_data() const;
+        void save_image(const utils::Path& path, bool overwrite = true) const;
 
         /// Deletes this texture
         void destroy() { glDeleteTextures(1, &id); }
@@ -61,7 +65,7 @@ namespace nta {
         /// the id of the texture
         GLuint id;
         /// the width and height, respectively, of the texture
-        GLint width, height;
+        GLuint width, height;
     };
     /// loads images as GLTextures
     class ImageLoader {

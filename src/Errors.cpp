@@ -47,22 +47,15 @@ namespace nta {
 
 	std::string get_errortype_string(ErrorType t) {
         switch(t) {
-        case MISSING_RESOURCE:
-            return "Missing Resource";
-        case INVALID_VALUE:
-            return "Invalid value";
-        case GL_FAILURE:
-            return "GL Failure";
-        case SDL_FAILURE:
-            return "SDL Failure";
-        case DEVIL_FAILURE:
-            return "DevIL Failure";
-        case IMPOSSIBLE_BEHAVIOR:
-        	return "Impossible Behavior";
-        case UNWRAP_WRONG_RESULT_VARIANT:
-        	return "Unwrapped wrong result variant";
-        case OTHER:
-            return "Other";
+        case MISSING_RESOURCE:              return "Missing Resource";
+        case INVALID_VALUE:                 return "Invalid value";
+        case GL_FAILURE:                    return "GL Failure";
+        case SDL_FAILURE:                   return "SDL Failure";
+        case DEVIL_FAILURE:                 return "DevIL Failure";
+        case IMPOSSIBLE_BEHAVIOR:           return "Impossible Behavior";
+        case UNWRAP_WRONG_RESULT_VARIANT:   return "Unwrapped wrong result variant";
+        case NOT_YET_IMPLEMENTED:           return "Not yet implemented";
+        case OTHER:                         return "Other";
         }
         return "";
     }

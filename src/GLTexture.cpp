@@ -128,6 +128,39 @@ namespace nta {
 
         return ret;
     }
+    RawTexture GLTexture::get_pixel_data() const {
+        RawTexture ret = {.width = width, .height = height, .format = GL_RGBA};
+        ret.data = new GLubyte[width*height*4];
+
+        glBindTexture(GL_TEXTURE_2D, id);
+        glGetTexImage(GL_TEXTURE_2D, 0, GL_RGBA, GL_UNSIGNED_BYTE, ret.data);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        return ret;
+    }
+    void GLTexture::save_image(const utils::Path& path, bool overwrite) const {
+        ScopeLog _(utils::format("Saving texture with id {} to file \"{}\"...",
+                                 id, path),
+                   "File saved");
+        RawTexture raw = get_pixel_data();
+        #ifdef NTA_USE_DEVIL
+            ILuint imgID = 0;
+            ilGenImages(1, &imgID);
+            ilBindImage(imgID);
+            ilTexImage(width, height, 1, 4, IL_RGBA, IL_UNSIGNED_BYTE, raw.data);
+            iluFlipImage();
+            if (overwrite) {
+                ilEnable(IL_FILE_OVERWRITE);
+            } else {
+                ilDisable(IL_FILE_OVERWRITE);
+            }
+            ilSaveImage(path.to_cstr());
+        #else
+            Logger::writeErrorToLog(NOT_YET_IMPLEMENTED,
+                                    "jubilant-funicular cannot save images using CImg");
+        #endif
+
+        delete[] raw.data;
+    }
 
     Result<RawTexture> ImageLoader::readImage(crstring filePath, crvec2 dimensions) {
         Logger::writeToLog("Loading image \"" + filePath + "\" into RawTexture...");
@@ -138,7 +171,7 @@ namespace nta {
             ilBindImage(imgID);
             if (ilLoadImage(filePath.c_str()) == IL_FALSE) {
                 ILenum error = ilGetError();
-                // This is some jank identing
+                // This is some jank indenting
                 auto err = Logger::writeErrorToLog(
                             "DevIL failed to load image with error " +
                                 utils::to_string(error) + ": " + iluErrorString(error),
