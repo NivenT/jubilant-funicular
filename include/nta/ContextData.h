@@ -42,7 +42,9 @@ namespace nta {
         /// Uses name as the key in the map
         GLSLProgram* getGLSLProgram(crstring name, const utils::Path& vert, const utils::Path& frag);
         /// Gets a GLTexture representing the image at the given path
-        Result<GLTexture> getTexture(const utils::Path& path, crvec2 dimensions = glm::vec2(0));
+        Result<GLTexture> getTexture(const utils::Path& path, crvec2 dimensions = glm::vec2(0),
+                                     GLint minFilt = GL_LINEAR_MIPMAP_LINEAR, 
+                                     GLint magFilt = GL_LINEAR);
         /// Gets the name of the file used the create tex
         Result<utils::Path> getTextureFile(GLTexture tex);
         /// Gets SpriteFont created from the given font with the given size

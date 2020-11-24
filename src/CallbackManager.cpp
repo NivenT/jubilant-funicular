@@ -1,10 +1,10 @@
 #include "nta/CallbackManager.h"
 #include "nta/Logger.h"
-
+/*
 namespace nta {
     std::map<uint64_t, CallbackManager::event>                  CallbackManager::m_active;
     std::map<uint64_t, std::vector<CallbackManager::event*>>    CallbackManager::m_queue;
-    utils::ThreadPool                                           CallbackManager::m_pool(8);
+    utils::ThreadPool                                           CallbackManager::m_pool;
     std::thread                                                 CallbackManager::m_dispatcher;
     std::atomic<uint64_t>                                       CallbackManager::m_next(0);
     std::mutex                                                  CallbackManager::m_mutex;
@@ -48,6 +48,7 @@ namespace nta {
     }
     void CallbackManager::init() {
         Logger::writeToLog("Initializing CallbackManager...");
+        m_pool.init(8);
         m_dispatcher = std::thread([&]{dispatch();});
         m_next = m_curr_frame = 0;
         m_working = true;
@@ -126,3 +127,4 @@ namespace nta {
         if (!m_queue.empty() && m_queue.begin()->first < m_curr_frame) m_cv.notify_one();
     }
 }
+*/

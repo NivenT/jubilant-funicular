@@ -12,8 +12,12 @@ namespace nta {
         }
         SpriteSheet(const GLTexture& tex, crivec2 dims) : tex(tex), dims(dims) {
         }
-        SpriteSheet(ContextData& context, crstring file_path, crivec2 dims);
-        SpriteSheet(ContextData& context, crstring file_path, int num_cols) : SpriteSheet(context, file_path, glm::ivec2(1, num_cols)) {
+        SpriteSheet(ContextData& context, crstring file_path, crivec2 dims,
+                    GLint minFilt = GL_LINEAR_MIPMAP_LINEAR, 
+                    GLint magFilt = GL_LINEAR);
+        SpriteSheet(ContextData& context, crstring file_path, int num_cols,
+                    GLint minFilt = GL_LINEAR_MIPMAP_LINEAR, 
+                    GLint magFilt = GL_LINEAR) : SpriteSheet(context, file_path, glm::ivec2(1, num_cols), minFilt, magFilt) {
         }
         /// Returns the number of sprites in this sheet
         std::size_t num_sprites() const {

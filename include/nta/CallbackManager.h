@@ -4,7 +4,7 @@
 #include <map>
 
 #include "nta/ThreadPool.h"
-
+/*
 namespace nta {
     /// Allows scheduling of functions to be called at a later point in time
     /// \todo Add ability to base timing off of actual time instead of frames
@@ -65,5 +65,5 @@ namespace nta {
         static void destroy();
     };
 }
-
+*/
 #endif // CALLBACKMANAGER_H_INCLUDED

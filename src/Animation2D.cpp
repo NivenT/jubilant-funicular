@@ -5,8 +5,10 @@
 #define INVALID_IDX_MSG "Animation2D Error: Tried creating animation start with nonexistent index"
 
 namespace nta {
-    SpriteSheet::SpriteSheet(ContextData& context, crstring file_path, crivec2 dims) : dims(dims) {
-        tex = context.getTexture(file_path).get_data_or(GLTexture::no_texture());
+    SpriteSheet::SpriteSheet(ContextData& context, crstring file_path, crivec2 dims,
+                             GLint minFilt, GLint magFilt) : dims(dims) {
+        tex = context.getTexture(file_path, glm::vec2(0), minFilt, magFilt)
+                     .get_data_or(GLTexture::no_texture());
     }
     void SpriteSheet::read_sprite_pixels(GLubyte* pixels, std::size_t index, 
                                          GLenum format) const {

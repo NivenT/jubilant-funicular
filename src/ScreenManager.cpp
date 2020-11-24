@@ -149,7 +149,7 @@ namespace nta {
             // This while loop used to be neat
             while (currScreen->getState() == ScreenState::RUNNING) {
                 m_limiter.begin();
-                CallbackManager::increment_frame();
+                //CallbackManager::increment_frame();
                 update_input();
                 currScreen->update();
                 #ifdef NTA_USE_IMGUI

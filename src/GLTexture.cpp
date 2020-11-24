@@ -146,7 +146,7 @@ namespace nta {
             ILuint imgID = 0;
             ilGenImages(1, &imgID);
             ilBindImage(imgID);
-            ilTexImage(width, height, 1, 4, IL_RGBA, IL_UNSIGNED_BYTE, raw.data);
+            ilTexImage(width, height, 0, 4, IL_RGBA, IL_UNSIGNED_BYTE, raw.data);
             iluFlipImage();
             if (overwrite) {
                 ilEnable(IL_FILE_OVERWRITE);

@@ -19,7 +19,8 @@ namespace nta {
         }
         return &m_glslMap[name];
     }
-    Result<GLTexture> ContextData::getTexture(const utils::Path& path, crvec2 dimensions) {
+    Result<GLTexture> ContextData::getTexture(const utils::Path& path, crvec2 dimensions, 
+                                              GLint minFilt, GLint magFilt) {
         utils::Path full_path = m_texture_folder + path;
         if (m_textureMap.find(full_path) == m_textureMap.end()) {
             std::string path_str = full_path.to_string();
@@ -27,7 +28,7 @@ namespace nta {
             // I really like this bit
             return raw.map<GLTexture>([&](const RawTexture& raw) {
                 Logger::writeToLog("RawTexture \"" + path_str + "\" doesn't have a GLTexture in this context.");
-                return m_textureMap[full_path] = GLTexture(raw);
+                return m_textureMap[full_path] = GLTexture(raw, minFilt, magFilt);
             });
         }
         return Result<GLTexture>::new_ok(m_textureMap[full_path]);

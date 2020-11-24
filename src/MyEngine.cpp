@@ -62,7 +62,7 @@ namespace nta {
         #ifdef NTA_USE_AUDIO
             AudioManager::init();
         #endif
-        CallbackManager::init();
+        //CallbackManager::init();
         Logger::unindent();
         Logger::writeToLog("Initialized Engine");
     }
@@ -77,7 +77,7 @@ namespace nta {
         #ifdef NTA_USE_AUDIO
             AudioManager::destroy();
         #endif
-        CallbackManager::destroy();
+        //CallbackManager::destroy();
         TTF_Quit();
         SDL_Quit();
     }
