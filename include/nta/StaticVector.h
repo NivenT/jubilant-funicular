@@ -38,6 +38,9 @@ namespace nta {
             StaticVector(const std::initializer_list<T>& data) : m_size(0) {
                 for (const T& elem : data) push_back(elem);
             }
+            StaticVector(iterator beg, iterator end) : m_size(0) {
+                for (auto& it = beg; it != end; ++it) push_back(*it);
+            }
             ~StaticVector() { clear(); }
 
             constexpr std::size_t capacity() const { return Cap; }
@@ -56,6 +59,9 @@ namespace nta {
 
             T& operator[](std::size_t idx) { return at(idx); }
             T& at(std::size_t idx) { return *(data() + idx); }
+
+            const T& operator[](std::size_t idx) const { return at(idx); }
+            const T& at(std::size_t idx) const { return *(cbegin() + idx); }
 
             void clear() { while (m_size > 0) pop_back(); }
             void pop_back() { at(--m_size).~T(); }

@@ -116,6 +116,10 @@ int main(int argc, char* argv[]) {
     *w.front().a = 10;
     assert(a == 10);
 
+    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    StaticVector<int, 10> v4(arr, arr + 10);
+    for (int i = 0; i < 10; i++) assert(v4[i] == i+1);
+
     cout<<"Tests passed"<<endl;
     return 0;
 }
